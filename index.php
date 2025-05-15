@@ -17,6 +17,7 @@
         echo '<p>No posts found.</p>';
     endif;
     ?>
+    <!-- hello -->
     <?php wp_footer(); ?>
 </body>
 </html>
