@@ -19,7 +19,7 @@
                     <?php if ( get_field('hero-header') || get_field('hero-header-details') || get_field('her-background') ) : ?>
                         <div class="relative mb-4 rounded-lg overflow-hidden">
                             <?php
-                            $hero_image = get_field('her-background');
+                            $hero_image = get_field('hero-background');
                             if ( $hero_image ) :
                             ?>
                                 <img src="<?php echo esc_url($hero_image['url']); ?>"
