@@ -1,29 +1,70 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-center mb-10 text-blue-700">My Custom Theme is Working!</h1>
+<div class="w-screen mx-auto px-4 pb-8">
 
-    <?php if ( have_posts() ) : ?>
+    <?php
+    // Custom Query for 'home' post type
+    $homes_query = new WP_Query([
+        'post_type' => 'home',
+        'posts_per_page' => 10,
+        'paged' => get_query_var('paged') ? get_query_var('paged') : 1
+    ]);
+
+    if ( $homes_query->have_posts() ) : ?>
         <div class="space-y-10">
-            <?php while ( have_posts() ) : the_post(); ?>
-                <article class="bg-white p-6 shadow-md hover:shadow-lg transition-shadow mx-auto max-w-3xl text-center">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-2"><?php the_title(); ?></h2>
+            <?php while ( $homes_query->have_posts() ) : $homes_query->the_post(); ?>
+                <article class="p-6 bg-red-600 shadow rounded-lg transition hover:shadow-lg">
 
-                    <?php
-                    $subtitle = get_field('subtitle');
-                    if ($subtitle) : ?>
-                        <h3 class="text-lg text-gray-600 mb-4 italic"><?php echo esc_html($subtitle); ?></h3>
+                    <!-- Hero Section -->
+                    <?php if ( get_field('hero-header') || get_field('hero-header-details') || get_field('her-background') ) : ?>
+                        <div class="relative mb-4 rounded-lg overflow-hidden">
+                            <?php
+                            $hero_image = get_field('her-background');
+                            if ( $hero_image ) :
+                            ?>
+                                <img src="<?php echo esc_url($hero_image['url']); ?>"
+                                    alt="<?php echo esc_attr($hero_image['alt']); ?>"
+                                    class="w-full h-auto object-cover">
+                            <?php endif; ?>
+
+                            <!-- Absolute content over image -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/40">
+                                <?php if ( get_field('hero-header') ) : ?>
+                                    <h3 class="text-3xl font-bold text-white drop-shadow">
+                                        <?php the_field('hero-header'); ?>
+                                    </h3>
+                                <?php endif; ?>
+
+                                <?php if ( get_field('hero-header-details') ) : ?>
+                                    <p class="mt-2 text-white text-lg drop-shadow">
+                                        <?php the_field('hero-header-details'); ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     <?php endif; ?>
 
-                    <div class="prose max-w-none mx-auto">
-                        <?php the_content(); ?>
+                    <div class="text-gray-700">
+                        <?php the_excerpt(); ?>
                     </div>
-                </article>
 
+                </article>
             <?php endwhile; ?>
         </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 text-center">
+            <?php
+            echo paginate_links([
+                'total' => $homes_query->max_num_pages
+            ]);
+            ?>
+        </div>
+
+        <?php wp_reset_postdata(); ?>
+
     <?php else : ?>
-        <p class="text-center text-gray-500 mt-4">No posts found.</p>
+        <p class="text-center text-gray-500">No homes found.</p>
     <?php endif; ?>
 </div>
 
