@@ -5,10 +5,6 @@ if ( $home_page ) :
     $event = get_field('event_section', $page_id);
 
     if ( $event ) :
-        $img1 = $event['image_1'];
-        $img2 = $event['image_2'];
-        $img3 = $event['image_3'];
-        $img4 = $event['image_4'];
         $header = $event['header'];
         $details = $event['header_details'];
 ?>
@@ -24,20 +20,23 @@ if ( $home_page ) :
             <?php endif; ?>
         </div>
     </div>
-    <div class="flex gap-3 py-6">
-       <?php if ( $img1 ) : ?>
-            <img src="<?php echo esc_url($img1['url']); ?>" alt="" class="w-[209px] h-auto object-cover">
-        <?php endif; ?>
-       <?php if ( $img2 ) : ?>
-            <img src="<?php echo esc_url($img2['url']); ?>" alt="" class="w-[209px] h-auto object-cover">
-        <?php endif; ?>
-       <?php if ( $img3 ) : ?>
-            <img src="<?php echo esc_url($img3['url']); ?>" alt="" class="w-[209px] h-auto object-cover">
-        <?php endif; ?>
-       <?php if ( $img4 ) : ?>
-            <img src="<?php echo esc_url($img4['url']); ?>" alt="" class="w-[209px] h-auto object-cover">
-        <?php endif; ?>
-    </div>
+
+
+    <?php 
+    $image_highlights = $event['image_highlights'];
+    if ( $image_highlights ) : ?>
+        <div class="flex flex-wrap gap-6 justify-center py-4">
+            <?php foreach ( $image_highlights as $row ) :
+                $img = $row['image'];
+                if ( $img ) :
+            ?>
+                <img src="<?php echo esc_url($img['url']); ?>" alt=""
+                    class="w-[209px] h-auto object-cover rounded shadow">
+            <?php endif; endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+
 </div>
 
 <?php endif; endif; ?>

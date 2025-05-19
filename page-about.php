@@ -1,19 +1,8 @@
-<?php
-/* Template Name: About Page */
+<?php get_header(); ?>
 
-get_header();
-?>
-
-<div class="container mx-auto px-4 py-12 bg-white rounded-lg shadow-md">
-  <h1 class="text-4xl font-bold mb-6 text-red-400"><?php the_title(); ?></h1>
-  
-  <div class="prose max-w-none text-gray-700">
-    <?php
-    while (have_posts()) : the_post();
-      the_content();
-    endwhile;
-    ?>
-  </div>
+<div class="w-full max-w-screen overflow-x-hidden min-h-screen flex flex-col justify-start items-center px-4 py-8">
+    <?php get_template_part('about-page/hero-section'); ?>
+    <?php get_template_part('about-page/story-section'); ?>
 </div>
 
 <?php get_footer(); ?>
