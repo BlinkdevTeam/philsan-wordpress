@@ -6,8 +6,8 @@ get_header();
     the_post();
 ?>
 
-<div class="w-[1080px]">
-    <div class="flex w-[100%]">
+<div class="mx-auto w-[1280px]">
+    <div class="flex w-[100%] py-[20px]">
         <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
             <div class="flex flex-col gap-[20px]">
                 <h2 class="text-[38px]">Philsan</h2>
@@ -15,7 +15,7 @@ get_header();
                 <p class="text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
-         <div class="w-[100%]">
+         <div class="w-[50%]">
             <div class="text-black flex flex-col justify-center">
                 <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
                 <div class="flex flex-col">
