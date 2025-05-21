@@ -27,6 +27,7 @@ get_header();
                             placeholder="Email address"
                             class="w-full p-3 border"
                         />
+                          <input type="hidden" name="code" id="code" />
                     </div>
                     <div>
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
@@ -45,10 +46,19 @@ get_header();
     emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
   })();
 
+function generateCode() {
+    return Math.floor(100000 + Math.random() * 900000); // 6-digit
+  }
+
+
+
   document.getElementById('email-verification').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_1qkyi2i', 'template_uhqzes4', this)
+    const code = generateCode();
+    document.getElementById("code").value = code;
+
+    emailjs.sendForm('service_1qkyi2i', 'template_uhqzes4', '#email-verification')
       .then(function() {
         alert('Email sent successfully!');
       }, function(error) {
