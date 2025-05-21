@@ -16,11 +16,24 @@ get_header();
             </div>
         </div>
          <div class="w-[50%]">
-            <?php if( !isset($_GET['code']) ) { ?>
-                <?php get_template_part("template_part/annual_reg/email_verification"); ?>
-            <?php } else { ?>
-                <?php get_template_part("template_part/annual_reg/code_verification"); ?>
-            <?php } ?>
+            <form id="email-verification" class="text-black flex flex-col justify-center">
+                <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
+                    <div class="flex flex-col">
+                        <p class="sub-bi-heading text-[#344054]">Your email</p>
+                        <input
+                            name="email"
+                            type="email"
+                            required
+                            placeholder="Email address"
+                            class="w-full p-3 border"
+                        />
+                        <input type="hidden" name="code" id="code" />
+                    </div>
+                    <div>
+                        <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -47,6 +60,17 @@ function generateCode() {
     document.getElementById("code").value = code;
 
     console.log("email,", document.getElementById("code").value);
+
+    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+      method: 'POST',
+      headers: {
+        'apikey': 'your-anon-key',
+        'Authorization': 'Bearer your-anon-key',
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email, token })
+    });
 
     // emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
     //   .then(function() {
