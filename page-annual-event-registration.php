@@ -39,7 +39,7 @@ function generateCode() {
 
 
 
-  document.getElementById('email-verification').addEventListener('submit', function(e) {
+    document.getElementById('email-verification').addEventListener('submit', function(e) {
     e.preventDefault();
 
 
