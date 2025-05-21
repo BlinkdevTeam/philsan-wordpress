@@ -673,6 +673,10 @@ video {
   width: 100px;
 }
 
+.w-\[1080px\] {
+  width: 1080px;
+}
+
 .w-\[200px\] {
   width: 200px;
 }
