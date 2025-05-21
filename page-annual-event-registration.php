@@ -6,7 +6,7 @@ get_header();
     the_post();
 ?>
 
-<div>
+<div class="w-[1080px]">
     <p>Hello</p>
 </div>
 
