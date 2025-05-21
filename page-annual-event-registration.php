@@ -79,6 +79,7 @@ get_header();
       },
       body: JSON.stringify({ email, token })
     }).then(response => {
+        console.log("response", response)
       if (response.ok) {
         // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
         emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
