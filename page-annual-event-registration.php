@@ -55,10 +55,12 @@ function generateCode() {
   document.getElementById('email-verification').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    console.log("email:" document.getElementById("email").value)
+
     const code = generateCode();
     document.getElementById("code").value = code;
 
-    emailjs.sendForm('service_1qkyi2i', 'template_uhqzes4', '#email-verification')
+    emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
       .then(function() {
         alert('Email sent successfully!');
       }, function(error) {
