@@ -55,7 +55,7 @@ function generateCode() {
   document.getElementById('email-verification').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    console.log("email:" document.getElementById("email").value)
+    conosle.log("trigger")
 
     const code = generateCode();
     document.getElementById("code").value = code;
