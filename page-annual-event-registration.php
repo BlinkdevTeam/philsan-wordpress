@@ -56,7 +56,7 @@ function generateCode() {
     e.preventDefault();
 
 
-    const code = generateCode();
+    const token = generateCode();
     const email = document.getElementById("email").value
 
 
