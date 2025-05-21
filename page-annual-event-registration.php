@@ -46,9 +46,15 @@ get_header();
     emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
   })();
 
-function generateCode() {
-    return Math.floor(100000 + Math.random() * 900000); // 6-digit
-  }
+    function generateToken(length = 16) {
+        const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let token = '';
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            token += charset[randomIndex];
+        }
+        return token;
+    }
 
 
 
@@ -56,10 +62,11 @@ function generateCode() {
     e.preventDefault();
 
 
-    const token = generateCode();
+    const token = generateToken(16);
     const email = document.getElementById("email").value
 
     console.log("email", email)
+    console.log("Generated Token:", token);
 
 
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
@@ -71,6 +78,19 @@ function generateCode() {
         'Prefer': 'return=minimal'
       },
       body: JSON.stringify({ email, token })
+    }).then(response => {
+      if (response.ok) {
+        // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
+        emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
+            .then(function() {
+                alert('Email sent successfully!');
+            }, function(error) {
+                console.error('FAILED...', error);
+                alert('Email failed to send!');
+      });
+      } else {
+        alert('Failed to store code.');
+      }
     });
 
     // emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
