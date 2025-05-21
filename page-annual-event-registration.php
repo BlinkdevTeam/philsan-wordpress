@@ -21,13 +21,13 @@ get_header();
                     <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
                         <input
+                            id="email"
                             name="email"
                             type="email"
                             required
                             placeholder="Email address"
                             class="w-full p-3 border"
                         />
-                        <!-- <input type="hidden" name="token" id="token" /> -->
                     </div>
                     <div>
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
