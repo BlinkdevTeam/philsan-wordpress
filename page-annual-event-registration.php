@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <div class="mx-auto w-[1280px]">
-    <div class="flex w-[100%] py-[20px]">
+    <div class="flex w-[100%] py-[20px] h-[100vh]">
         <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
             <div class="flex flex-col gap-[20px]">
                 <h2 class="text-[38px]">Philsan</h2>
