@@ -82,7 +82,10 @@ get_header();
         console.log("response", response)
       if (response.ok) {
         // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
-        emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
+        emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+            email: email,
+            verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration/t=" + token
+        })
             .then(function() {
                 alert('Email sent successfully!');
             }, function(error) {
@@ -93,14 +96,6 @@ get_header();
         alert('Failed to store code.');
       }
     });
-
-    // emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
-    //   .then(function() {
-    //     alert('Email sent successfully!');
-    //   }, function(error) {
-    //     console.error('FAILED...', error);
-    //     alert('Email failed to send!');
-    //   });
   });
 </script>
 
