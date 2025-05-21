@@ -57,9 +57,8 @@ function generateCode() {
 
 
     const code = generateCode();
-    document.getElementById("token").value = code;
+    const email = document.getElementById("email").value
 
-    console.log("email,", document.getElementById("token").value);
 
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
       method: 'POST',
