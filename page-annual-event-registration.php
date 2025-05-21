@@ -29,7 +29,7 @@ get_header();
                         />
                     </div>
                     <div>
-                        <button type="Verify Email" onClick={handleSubmit} class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                        <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
                     </div>
                 </div>
             </form>
