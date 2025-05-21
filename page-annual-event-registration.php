@@ -59,7 +59,7 @@ function generateCode() {
     const code = generateCode();
     document.getElementById("code").value = code;
 
-    conosle.log("email,", document.getElementById("code").value);
+    console.log("email,", document.getElementById("code").value);
 
     emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
       .then(function() {
