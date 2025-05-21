@@ -16,27 +16,47 @@ get_header();
             </div>
         </div>
          <div class="w-[50%]">
-            <div class="text-black flex flex-col justify-center">
+            <form id="email-verification" class="text-black flex flex-col justify-center">
                 <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                <div class="flex flex-col">
-                    <p class="sub-bi-heading text-[#344054]">Your email</p>
-                    <input
-                        name="email"
-                        type="email"
-                        required
-                        placeholder="Email address"
-                        class="w-full p-3 border"
-                    />
+                    <div class="flex flex-col">
+                        <p class="sub-bi-heading text-[#344054]">Your email</p>
+                        <input
+                            name="email"
+                            type="email"
+                            required
+                            placeholder="Email address"
+                            class="w-full p-3 border"
+                        />
+                    </div>
+                    <div>
+                        <button type="Verify Email" onClick={handleSubmit} class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                    </div>
                 </div>
-                
-                <div>
-                    <button type="Verify Email" onClick={handleSubmit} class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+  (function(){
+    emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
+  })();
+
+  document.getElementById('email-verification').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1qkyi2i', 'template_uhqzes4', this)
+      .then(function() {
+        alert('Email sent successfully!');
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert('Email failed to send!');
+      });
+  });
+</script>
 
 <?php 
         }
