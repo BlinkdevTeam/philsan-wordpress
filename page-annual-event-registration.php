@@ -16,7 +16,11 @@ get_header();
             </div>
         </div>
          <div class="w-[50%]">
-            <?php get_template_part("template_part/annual_reg/email_verification"); ?>
+            <?php if( !isset($_GET['code']) ) { ?>
+                <?php get_template_part("template_part/annual_reg/email_verification"); ?>
+            <?php } else { ?>
+                <?php get_template_part("template_part/annual_reg/code_verification"); ?>
+            <?php } ?>
         </div>
     </div>
 </div>
@@ -44,13 +48,13 @@ function generateCode() {
 
     console.log("email,", document.getElementById("code").value);
 
-    emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
-      .then(function() {
-        alert('Email sent successfully!');
-      }, function(error) {
-        console.error('FAILED...', error);
-        alert('Email failed to send!');
-      });
+    // emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
+    //   .then(function() {
+    //     alert('Email sent successfully!');
+    //   }, function(error) {
+    //     console.error('FAILED...', error);
+    //     alert('Email failed to send!');
+    //   });
   });
 </script>
 
