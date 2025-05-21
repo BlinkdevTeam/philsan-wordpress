@@ -55,10 +55,11 @@ function generateCode() {
   document.getElementById('email-verification').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    conosle.log("trigger")
 
     const code = generateCode();
     document.getElementById("code").value = code;
+
+    conosle.log("email,", document.getElementById("code").value);
 
     emailjs.sendForm('service_1qkyi2i', 'template_d71x79v', '#email-verification')
       .then(function() {
