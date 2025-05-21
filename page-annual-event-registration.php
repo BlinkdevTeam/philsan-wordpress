@@ -27,7 +27,7 @@ get_header();
                             placeholder="Email address"
                             class="w-full p-3 border"
                         />
-                        <input type="hidden" name="token" id="token" />
+                        <!-- <input type="hidden" name="token" id="token" /> -->
                     </div>
                     <div>
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
@@ -58,6 +58,8 @@ function generateCode() {
 
     const token = generateCode();
     const email = document.getElementById("email").value
+
+    console.log("email", email)
 
 
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
