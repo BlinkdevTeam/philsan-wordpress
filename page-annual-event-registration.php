@@ -292,6 +292,16 @@ get_header();
         sponsor
      })
     })
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(error => { throw error });
+    }
+        alert("Successfully registered!");
+    })
+    .catch(error => {
+        console.error("Supabase error:", error);
+        alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
+    });
     // .then(response => {
     //   if (response.ok) {
     //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
