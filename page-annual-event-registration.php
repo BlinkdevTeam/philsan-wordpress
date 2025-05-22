@@ -176,23 +176,23 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Who's your sponsor?</p>
                                 <div class="flex flex-col gap-[10px]">
                                     <div>
-                                        <input type="radio" id="a_company" name="sponsored" value="A Company" required>
+                                        <input type="radio" id="a_company" name="sponsor" value="A Company" required>
                                         <label for="a_company">A Company</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="b_company" name="sponsored" value="B Company">
+                                        <input type="radio" id="b_company" name="sponsor" value="B Company">
                                         <label for="b_company">B Company</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="c_company" name="sponsored" value="C Company">
+                                        <input type="radio" id="c_company" name="sponsor" value="C Company">
                                         <label for="c_company">C Company</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="d_company" name="sponsored" value="D Company">
+                                        <input type="radio" id="d_company" name="sponsor" value="D Company">
                                         <label for="d_company">D Company</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="e_company" name="sponsored" value="E Company">
+                                        <input type="radio" id="e_company" name="sponsor" value="E Company">
                                         <label for="e_company">E Company</label>
                                     </div>
                                 </div>
@@ -245,6 +245,7 @@ get_header();
     const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
     const certificateNeeded = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
     const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
+    const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
     console.log("PHILSAN Member:", philsanMember);
     console.log("Souvenir:", souvenir);
