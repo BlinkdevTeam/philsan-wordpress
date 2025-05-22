@@ -278,18 +278,18 @@ get_header();
         'Prefer': 'return=minimal'
       },
       body: JSON.stringify({ 
-        first_name,
-        last_name,
-        middle_name,
-        mobile,
-        company,
-        position,
-        agri_license,
-        member,
-        souvenir,
-        certificate_needed,
-        soponsored,
-        sponsor
+        // first_name,
+        // last_name,
+        // middle_name,
+        // mobile,
+        // company,
+        // position,
+        // agri_license,
+        // member,
+        // souvenir,
+        // certificate_needed,
+        // soponsored,
+        // sponsor
      })
     })
     // .then(response => {
