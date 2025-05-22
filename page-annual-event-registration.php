@@ -174,7 +174,7 @@ get_header();
                             <!-- Sponsors -->
                             <div class="flex flex-col pb-[20px]">
                                 <p class="sub-bi-heading text-[#344054]">Who's your sponsor?</p>
-                                <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-col gap-[10px]">
                                     <div>
                                         <input type="radio" id="a_company" name="sponsored" value="A Company">
                                         <label for="a_company">A Company</label>
