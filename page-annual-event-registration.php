@@ -8,171 +8,185 @@ get_header();
 
 <div class="mx-auto w-[1280px]">
     <div class="flex w-[100%] py-[20px]">
-        <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
+        <!-- <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
             <div class="flex flex-col gap-[20px]">
                 <h2 class="text-[38px]">Philsan</h2>
                 <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
                 <p class="text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-        </div>
-        <div class="w-[50%]">
-          <form id="email-verification" class="text-black flex flex-col justify-center">
-              <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Your email</p>
-                      <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          placeholder="Email address"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                   <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">First Name</p>
-                      <input
-                          id="first_name"
-                          name="first_name"
-                          type="text"
-                          required
-                          placeholder="First Name"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Middle Name</p>
-                      <input
-                          id="middle_name"
-                          name="middle_name"
-                          type="text"
-                          required
-                          placeholder="Middle Name"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Last Name</p>
-                      <input
-                          id="first_name"
-                          name="first_name"
-                          type="text"
-                          required
-                          placeholder="First Name"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Mobile Number</p>
-                      <input
-                          id="mobile"
-                          name="mobile"
-                          type="text"
-                          required
-                          placeholder="Mobile NUmber"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Company</p>
-                      <input
-                          id="company"
-                          name="company"
-                          type="text"
-                          required
-                          placeholder="Company"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Position Title</p>
-                      <input
-                          id="position_title"
-                          name="position_title"
-                          type="text"
-                          required
-                          placeholder="Position/Title"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                      <p class="sub-bi-heading text-[#344054]">Agricultural Licence Number</p>
-                      <input
-                          id="agri_licence"
-                          name="agri_licence"
-                          type="text"
-                          required
-                          placeholder="Agricultural Licence Number"
-                          class="w-full p-3 border"
-                      />
-                  </div>
-                  <div class="flex flex-col">
-                        <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
-                        <div class="flex gap-[20px]">
-                            <div>
-                                <input type="radio" id="html" name="philsan_member" value="member">
-                                <label for="html">Yes</label><br>
+        </div> -->
+        <div class="w-[100%]">
+            <form id="form-registration" class="text-black flex flex-col justify-center">
+                <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Your email</p>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                    placeholder="Email address"
+                                    class="w-full p-3 border"
+                                />
                             </div>
-                            <div>
-                                <input type="radio" id="css" name="philsan_member" value="non-member">
-                                <label for="css">No</label><br>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">First Name</p>
+                                <input
+                                    id="first_name"
+                                    name="first_name"
+                                    type="text"
+                                    required
+                                    placeholder="First Name"
+                                    class="w-full p-3 border"
+                                />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Middle Name</p>
+                                <input
+                                    id="middle_name"
+                                    name="middle_name"
+                                    type="text"
+                                    required
+                                    placeholder="Middle Name"
+                                    class="w-full p-3 border"
+                                />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Last Name</p>
+                                <input
+                                    id="first_name"
+                                    name="first_name"
+                                    type="text"
+                                    required
+                                    placeholder="First Name"
+                                    class="w-full p-3 border"
+                                />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Mobile Number</p>
+                                <input
+                                    id="mobile"
+                                    name="mobile"
+                                    type="text"
+                                    required
+                                    placeholder="Mobile NUmber"
+                                    class="w-full p-3 border"
+                                />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Company</p>
+                                <input
+                                    id="company"
+                                    name="company"
+                                    type="text"
+                                    required
+                                    placeholder="Company"
+                                    class="w-full p-3 border"
+                                />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Position Title</p>
+                                <input
+                                    id="position_title"
+                                    name="position_title"
+                                    type="text"
+                                    required
+                                    placeholder="Position/Title"
+                                    class="w-full p-3 border"
+                                />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Agricultural Licence Number</p>
+                                <input
+                                    id="agri_licence"
+                                    name="agri_licence"
+                                    type="text"
+                                    required
+                                    placeholder="Agricultural Licence Number"
+                                    class="w-full p-3 border"
+                                />
                             </div>
                         </div>
-                  </div>
-                  <div class="flex flex-col">
-                        <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
-                        <div class="flex gap-[20px]">
-                            <div>
-                                <input type="radio" id="html" name="sponsored" value="member">
-                                <label for="html">Yes</label><br>
+                        <!-- checkbox section -->
+                        <div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
+                                <div class="flex gap-[20px]">
+                                    <div>
+                                        <input type="radio" id="html" name="philsan_member" value="member">
+                                        <label for="html">Yes</label><br>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="css" name="philsan_member" value="non-member">
+                                        <label for="css">No</label><br>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <input type="radio" id="css" name="sponsored" value="non-member">
-                                <label for="css">No</label><br>
+                            <div class="flex flex-col">
+                                    <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
+                                    <div class="flex gap-[20px]">
+                                        <div>
+                                            <input type="radio" id="html" name="souvenir" value="member">
+                                            <label for="html">Yes</label><br>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="css" name="souvenir" value="non-member">
+                                            <label for="css">No</label><br>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
+                                <div class="flex gap-[20px]">
+                                    <div>
+                                        <input type="radio" id="html" name="philsan_member" value="member">
+                                        <label for="html">Yes</label><br>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="css" name="philsan_member" value="non-member">
+                                        <label for="css">No</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
+                                <div class="flex gap-[20px]">
+                                    <div>
+                                        <input type="radio" id="html" name="sponsored" value="member">
+                                        <label for="html">Yes</label><br>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="css" name="sponsored" value="non-member">
+                                        <label for="css">No</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
+                                <div class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px]">
+                                    <span>Upload</span>
+                                </div>
                             </div>
                         </div>
-                  </div>
-                  <div class="flex flex-col">
-                        <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
-                        <div class="flex gap-[20px]">
-                            <div>
-                                <input type="radio" id="html" name="souvenir" value="member">
-                                <label for="html">Yes</label><br>
-                            </div>
-                            <div>
-                                <input type="radio" id="css" name="souvenir" value="non-member">
-                                <label for="css">No</label><br>
-                            </div>
+                    </div>
+                    <!-- agreement section -->
+                    <div class="flex">
+                        <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
+                        <div>
+                            <input
+                                id="first_name"
+                                name="first_name"
+                                type="checkbox"
+                                required
+                                class="w-full p-3 border"
+                            />
                         </div>
-                  </div>
-                   <div class="flex flex-col">
-                        <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
-                        <div class="flex gap-[20px]">
-                            <div>
-                                <input type="radio" id="html" name="philsan_member" value="member">
-                                <label for="html">Yes</label><br>
-                            </div>
-                            <div>
-                                <input type="radio" id="css" name="philsan_member" value="non-member">
-                                <label for="css">No</label><br>
-                            </div>
-                        </div>
-                  </div>
-                  <div class="flex">
-                      <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
-                      <div>
-                        <input
-                            id="first_name"
-                            name="first_name"
-                            type="checkbox"
-                            required
-                            class="w-full p-3 border"
-                        />
-                      </div>
-                  </div>
-                  <div>
-                      <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                  </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                    </div>
               </div>
           </form>
         </div>

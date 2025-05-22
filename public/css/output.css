@@ -893,6 +893,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
 .border {
   border-width: 1px;
 }
