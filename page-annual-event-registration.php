@@ -110,9 +110,9 @@ get_header();
                             </div>
                         </div>
                         <!-- checkbox section -->
-                        <div class="w-[100%] flex flex-col gap-[10px]">
+                        <div class="w-[100%] flex flex-col gap-[15px]">
                             <!-- PHILSAN Member -->
-                            <div class="flex flex-col pb-[20px]">
+                            <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
@@ -127,7 +127,7 @@ get_header();
                             </div>
 
                             <!-- Souvenir Program -->
-                            <div class="flex flex-col pb-[20px]">
+                            <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
                                 <div class="flex gap-[20px]">
                                     <div>
@@ -142,7 +142,7 @@ get_header();
                             </div>
 
                             <!-- Certificate of Attendance -->
-                            <div class="flex flex-col pb-[20px]">
+                            <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
@@ -172,7 +172,7 @@ get_header();
                             </div>
 
                             <!-- Sponsors -->
-                            <div class="flex flex-col pb-[20px]">
+                            <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Who's your sponsor?</p>
                                 <div class="flex flex-col gap-[10px]">
                                     <div>
