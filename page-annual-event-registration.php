@@ -255,7 +255,7 @@ get_header();
     const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
     const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
-    console.log("PHILSAN Member:", philsanMember);
+    console.log("PHILSAN Member:", member);
     console.log("Souvenir:", souvenir);
     console.log("Certificate Needed:", certificateNeeded);
     console.log("Sponsored Registration:", sponsored);
