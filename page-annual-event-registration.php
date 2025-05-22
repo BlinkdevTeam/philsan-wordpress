@@ -108,13 +108,12 @@ get_header();
                   </div>
                   <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
-                      <input
-                          id="first_name"
-                          name="first_name"
-                          type="checkbox"
-                          required
-                          class="w-full p-3 border"
-                      />
+                      <div>
+                        <input type="radio" id="html" name="philsan_member" value="HTML">
+                        <label for="html">Yes</label><br>
+                        <input type="radio" id="css" name="philsan_member" value="CSS">
+                        <label for="css">No</label><br>
+                      </div>
                   </div>
                   <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
