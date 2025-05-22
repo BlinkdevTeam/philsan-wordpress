@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <div class="mx-auto w-[1280px]">
-    <div class="flex w-[100%] py-[20px] h-[100vh]">
+    <div class="flex w-[100%] py-[20px]">
         <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
             <div class="flex flex-col gap-[20px]">
                 <h2 class="text-[38px]">Philsan</h2>
@@ -43,11 +43,11 @@ get_header();
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Middle Name</p>
                       <input
-                          id="first_name"
-                          name="first_name"
+                          id="middle_name"
+                          name="middle_name"
                           type="text"
                           required
-                          placeholder="First Name"
+                          placeholder="Middle Name"
                           class="w-full p-3 border"
                       />
                   </div>
@@ -65,44 +65,44 @@ get_header();
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Mobile Number</p>
                       <input
-                          id="first_name"
-                          name="first_name"
+                          id="mobile"
+                          name="mobile"
                           type="text"
                           required
-                          placeholder="First Name"
+                          placeholder="Mobile NUmber"
                           class="w-full p-3 border"
                       />
                   </div>
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Company</p>
                       <input
-                          id="first_name"
-                          name="first_name"
+                          id="company"
+                          name="company"
                           type="text"
                           required
-                          placeholder="First Name"
+                          placeholder="Company"
                           class="w-full p-3 border"
                       />
                   </div>
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Position Title</p>
                       <input
-                          id="first_name"
-                          name="first_name"
+                          id="position_title"
+                          name="position_title"
                           type="text"
                           required
-                          placeholder="First Name"
+                          placeholder="Position/Title"
                           class="w-full p-3 border"
                       />
                   </div>
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Agricultural Licence Number</p>
                       <input
-                          id="first_name"
-                          name="first_name"
+                          id="agri_licence"
+                          name="agri_licence"
                           type="text"
                           required
-                          placeholder="First Name"
+                          placeholder="Agricultural Licence Number"
                           class="w-full p-3 border"
                       />
                   </div>
@@ -120,33 +120,33 @@ get_header();
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
                       <input
-                          id="first_name"
-                          name="first_name"
-                          type="text"
+                          id="sponsored"
+                          name="sponsored"
+                          type="checkbox"
                           required
-                          placeholder="First Name"
+                          placeholder="Sponsored Registration"
                           class="w-full p-3 border"
                       />
                   </div>
                   <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
                       <input
-                          id="first_name"
-                          name="first_name"
-                          type="text"
+                          id="souvenir"
+                          name="souvenir"
+                          type="checkbox"
                           required
-                          placeholder="First Name"
+                          placeholder="Souvenir Program"
                           class="w-full p-3 border"
                       />
                   </div>
                    <div class="flex flex-col">
                       <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                       <input
-                          id="first_name"
-                          name="first_name"
-                          type="text"
+                          id="certificate"
+                          name="certificate"
+                          type="checkbox"
                           required
-                          placeholder="First Name"
+                          placeholder="Do you need a Certificate of Attendance"
                           class="w-full p-3 border"
                       />
                   </div>
