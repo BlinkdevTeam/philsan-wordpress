@@ -56,11 +56,11 @@ get_header();
                             <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Last Name</p>
                                 <input
-                                    id="first_name"
-                                    name="first_name"
+                                    id="last_name"
+                                    name="last_name"
                                     type="text"
                                     required
-                                    placeholder="First Name"
+                                    placeholder="Last Name"
                                     class="w-full p-3 border"
                                 />
                             </div>
@@ -219,8 +219,8 @@ get_header();
                         <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                         <div>
                             <input
-                                id="first_name"
-                                name="first_name"
+                                id="agreement"
+                                name="agreement"
                                 type="checkbox"
                                 required
                                 class="w-full p-3 border"
@@ -278,18 +278,18 @@ get_header();
         'Prefer': 'return=minimal'
       },
       body: JSON.stringify({ 
-        // first_name,
-        // last_name,
-        // middle_name,
-        // mobile,
-        // company,
-        // position,
-        // agri_license,
-        // member,
-        // souvenir,
-        // certificate_needed,
-        // soponsored,
-        // sponsor
+        first_name,
+        last_name,
+        middle_name,
+        mobile,
+        company,
+        position,
+        agri_license,
+        membership,
+        souvenir,
+        certificate_needed,
+        sponsored,
+        sponsor
      })
     })
     // .then(response => {
