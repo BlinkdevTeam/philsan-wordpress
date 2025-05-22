@@ -89,8 +89,8 @@ get_header();
                             <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Position Title</p>
                                 <input
-                                    id="position_title"
-                                    name="position_title"
+                                    id="position"
+                                    name="position"
                                     type="text"
                                     required
                                     placeholder="Position/Title"
@@ -246,13 +246,12 @@ get_header();
     const last_name = document.getElementById("last_name").value
     const mobile = document.getElementById("mobile").value
     const company = document.getElementById("company").value
-    const position_title = document.getElementById("position_title").value
-    const company = document.getElementById("company").value
+    const position = document.getElementById("position").value
     const agri_licence = document.getElementById("agri_licence").value
 
-    const philsanMember = document.querySelector('input[name="philsan_member"]:checked')?.value || null;
+    const member = document.querySelector('input[name="philsan_member"]:checked')?.value || null;
     const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
-    const certificateNeeded = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
+    const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
     const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
     const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
@@ -262,16 +261,29 @@ get_header();
     console.log("Sponsored Registration:", sponsored);
 
 
-    // fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
-    //   method: 'POST',
-    //   headers: {
-    //     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-    //     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-    //     'Content-Type': 'application/json',
-    //     'Prefer': 'return=minimal'
-    //   },
-    //   body: JSON.stringify({ email, token })
-    // })
+    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+      method: 'POST',
+      headers: {
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ 
+        first_name,
+        last_name,
+        middle_name,
+        mobile,
+        company,
+        position,
+        agri_license,
+        member,
+        souvenir,
+        certificate_needed,
+        soponsored,
+        sponsor
+     })
+    })
     // .then(response => {
     //   if (response.ok) {
     //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
