@@ -106,58 +106,53 @@ get_header();
                           class="w-full p-3 border"
                       />
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
                       <input
                           id="first_name"
                           name="first_name"
-                          type="text"
+                          type="checkbox"
                           required
-                          placeholder="First Name"
                           class="w-full p-3 border"
                       />
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
                       <input
                           id="sponsored"
                           name="sponsored"
                           type="checkbox"
                           required
-                          placeholder="Sponsored Registration"
                           class="w-full p-3 border"
                       />
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
                       <input
                           id="souvenir"
                           name="souvenir"
                           type="checkbox"
                           required
-                          placeholder="Souvenir Program"
                           class="w-full p-3 border"
                       />
                   </div>
-                   <div class="flex flex-col">
+                   <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                       <input
                           id="certificate"
                           name="certificate"
                           type="checkbox"
                           required
-                          placeholder="Do you need a Certificate of Attendance"
                           class="w-full p-3 border"
                       />
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                       <input
                           id="first_name"
                           name="first_name"
                           type="checkbox"
                           required
-                          placeholder="First Name"
                           class="w-full p-3 border"
                       />
                   </div>
