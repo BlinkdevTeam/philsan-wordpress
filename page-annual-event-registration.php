@@ -106,9 +106,9 @@ get_header();
                           class="w-full p-3 border"
                       />
                   </div>
-                  <div class="flex">
+                  <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
-                        <div>
+                        <div class="flex gap-[20px]">
                             <div>
                                 <input type="radio" id="html" name="philsan_member" value="member">
                                 <label for="html">Yes</label><br>
@@ -119,9 +119,9 @@ get_header();
                             </div>
                         </div>
                   </div>
-                  <div class="flex">
+                  <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
-                        <div>
+                        <div class="flex gap-[20px]">
                             <div>
                                 <input type="radio" id="html" name="sponsored" value="member">
                                 <label for="html">Yes</label><br>
@@ -132,9 +132,9 @@ get_header();
                             </div>
                         </div>
                   </div>
-                  <div class="flex">
+                  <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
-                        <div>
+                        <div class="flex gap-[20px]">
                             <div>
                                 <input type="radio" id="html" name="souvenir" value="member">
                                 <label for="html">Yes</label><br>
@@ -145,9 +145,9 @@ get_header();
                             </div>
                         </div>
                   </div>
-                   <div class="flex">
+                   <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
-                        <div>
+                        <div class="flex gap-[20px]">
                             <div>
                                 <input type="radio" id="html" name="philsan_member" value="member">
                                 <label for="html">Yes</label><br>
