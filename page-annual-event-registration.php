@@ -116,12 +116,20 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="philsan_yes" name="philsan_member" value="yes" required>
-                                        <label for="philsan_yes">Yes</label>
+                                        <input type="radio" id="member_regular" name="membership" value="regular">
+                                        <label for="member_regular">Regular</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="philsan_no" name="philsan_member" value="no">
-                                        <label for="philsan_no">No</label>
+                                        <input type="radio" id="member_associate" name="membership" value="associate">
+                                        <label for="member_associate">Associate</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="member_donor" name="membership" value="Donor">
+                                        <label for="member_donor">Donor</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="non_member" name="membership" value="non_member" required>
+                                        <label for="non_member">Not a member</label>
                                     </div>
                                 </div>
                             </div>
@@ -249,15 +257,15 @@ get_header();
     const position = document.getElementById("position").value
     const agri_licence = document.getElementById("agri_licence").value
 
-    const member = document.querySelector('input[name="philsan_member"]:checked')?.value || null;
+    const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
     const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
     const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
     const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
     const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
-    console.log("PHILSAN Member:", member);
+    console.log("PHILSAN Member:", membership);
     console.log("Souvenir:", souvenir);
-    console.log("Certificate Needed:", certificateNeeded);
+    console.log("Certificate Needed:", certificate_needed);
     console.log("Sponsored Registration:", sponsored);
 
 
