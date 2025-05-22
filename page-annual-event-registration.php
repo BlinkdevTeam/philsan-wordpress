@@ -118,43 +118,51 @@ get_header();
                   </div>
                   <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
-                      <input
-                          id="sponsored"
-                          name="sponsored"
-                          type="checkbox"
-                          required
-                          class="w-full p-3 border"
-                      />
+                      <div>
+                        <input
+                            id="sponsored"
+                            name="sponsored"
+                            type="checkbox"
+                            required
+                            class="w-full p-3 border"
+                        />
+                      </div>
                   </div>
                   <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
-                      <input
-                          id="souvenir"
-                          name="souvenir"
-                          type="checkbox"
-                          required
-                          class="w-full p-3 border"
-                      />
+                      <div>
+                        <input
+                            id="souvenir"
+                            name="souvenir"
+                            type="checkbox"
+                            required
+                            class="w-full p-3 border"
+                        />
+                      </div>
                   </div>
                    <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
-                      <input
-                          id="certificate"
-                          name="certificate"
-                          type="checkbox"
-                          required
-                          class="w-full p-3 border"
-                      />
+                     <div>
+                        <input
+                            id="certificate"
+                            name="certificate"
+                            type="checkbox"
+                            required
+                            class="w-full p-3 border"
+                        />
+                     </div>
                   </div>
                   <div class="flex">
                       <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
-                      <input
-                          id="first_name"
-                          name="first_name"
-                          type="checkbox"
-                          required
-                          class="w-full p-3 border"
-                      />
+                      <div>
+                        <input
+                            id="first_name"
+                            name="first_name"
+                            type="checkbox"
+                            required
+                            class="w-full p-3 border"
+                        />
+                      </div>
                   </div>
                   <div>
                       <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
