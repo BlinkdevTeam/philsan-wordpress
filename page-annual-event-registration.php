@@ -255,7 +255,7 @@ get_header();
     const mobile = document.getElementById("mobile").value
     const company = document.getElementById("company").value
     const position = document.getElementById("position").value
-    const agri_licence = document.getElementById("agri_licence").value
+    const agri_license = document.getElementById("agri_license").value
 
     const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
     const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
