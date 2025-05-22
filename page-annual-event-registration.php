@@ -98,13 +98,13 @@ get_header();
                                 />
                             </div>
                             <div class="flex flex-col">
-                                <p class="sub-bi-heading text-[#344054]">Agricultural Licence Number</p>
+                                <p class="sub-bi-heading text-[#344054]">Agricultural License Number</p>
                                 <input
-                                    id="agri_licence"
-                                    name="agri_licence"
+                                    id="agri_license"
+                                    name="agri_license"
                                     type="text"
                                     required
-                                    placeholder="Agricultural Licence Number"
+                                    placeholder="Agricultural License Number"
                                     class="w-full p-3 border"
                                 />
                             </div>
@@ -240,6 +240,15 @@ get_header();
 
     document.getElementById('form-registration').addEventListener('submit', function(e) {
     e.preventDefault();
+
+    const first_name = document.getElementById("first_name").value
+    const middle_name = document.getElementById("middle_name").value
+    const last_name = document.getElementById("last_name").value
+    const mobile = document.getElementById("mobile").value
+    const company = document.getElementById("company").value
+    const position_title = document.getElementById("position_title").value
+    const company = document.getElementById("company").value
+    const agri_licence = document.getElementById("agri_licence").value
 
     const philsanMember = document.querySelector('input[name="philsan_member"]:checked')?.value || null;
     const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
