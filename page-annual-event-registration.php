@@ -75,8 +75,7 @@ get_header();
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
         'Content-Type': 'application/json',
         'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({ email, token })
+      }
     }).then(response => {
         console.log("getting the response")
     })
