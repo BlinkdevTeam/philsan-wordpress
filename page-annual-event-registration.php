@@ -116,7 +116,7 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="philsan_yes" name="philsan_member" value="yes">
+                                        <input type="radio" id="philsan_yes" name="philsan_member" value="yes" required>
                                         <label for="philsan_yes">Yes</label>
                                     </div>
                                     <div>
@@ -131,7 +131,7 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="sv_printed" name="souvenir" value="printed">
+                                        <input type="radio" id="sv_printed" name="souvenir" value="printed" required>
                                         <label for="sv_printed">Printed (First 400 only)</label>
                                     </div>
                                     <div>
@@ -146,7 +146,7 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="cert_yes" name="certificate_needed" value="yes">
+                                        <input type="radio" id="cert_yes" name="certificate_needed" value="yes" required>
                                         <label for="cert_yes">Yes</label>
                                     </div>
                                     <div>
@@ -161,7 +161,7 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Sponsored Registration?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="sponsored_yes" name="sponsored" value="yes">
+                                        <input type="radio" id="sponsored_yes" name="sponsored" value="yes" required>
                                         <label for="sponsored_yes">Yes</label>
                                     </div>
                                     <div>
@@ -176,7 +176,7 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Who's your sponsor?</p>
                                 <div class="flex flex-col gap-[10px]">
                                     <div>
-                                        <input type="radio" id="a_company" name="sponsored" value="A Company">
+                                        <input type="radio" id="a_company" name="sponsored" value="A Company" required>
                                         <label for="a_company">A Company</label>
                                     </div>
                                     <div>
