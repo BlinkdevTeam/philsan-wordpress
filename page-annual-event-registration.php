@@ -77,7 +77,7 @@ get_header();
         'Prefer': 'return=minimal'
       }
     }).then(response => {
-        console.log("getting the response")
+        console.log("getting the response", response)
     })
 
 
