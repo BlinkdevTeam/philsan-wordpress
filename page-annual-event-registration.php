@@ -15,25 +15,157 @@ get_header();
                 <p class="text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
-         <div class="w-[50%]">
-            <form id="email-verification" class="text-black flex flex-col justify-center">
-                <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                    <div class="flex flex-col">
-                        <p class="sub-bi-heading text-[#344054]">Your email</p>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            required
-                            placeholder="Email address"
-                            class="w-full p-3 border"
-                        />
-                    </div>
-                    <div>
-                        <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                    </div>
-                </div>
-            </form>
+        <div class="w-[50%]">
+          <form id="email-verification" class="text-black flex flex-col justify-center">
+              <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Your email</p>
+                      <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          required
+                          placeholder="Email address"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                   <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">First Name</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Middle Name</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Last Name</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Mobile Number</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Company</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Position Title</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Agricultural Licence Number</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                   <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="text"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div class="flex flex-col">
+                      <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
+                      <input
+                          id="first_name"
+                          name="first_name"
+                          type="checkbox"
+                          required
+                          placeholder="First Name"
+                          class="w-full p-3 border"
+                      />
+                  </div>
+                  <div>
+                      <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                  </div>
+              </div>
+          </form>
         </div>
     </div>
 </div>
@@ -68,6 +200,7 @@ get_header();
     console.log("email", email)
     console.log("Generated Token:", token);
 
+    //this will be used to filter the email from the regsitration database
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
       method: 'GET',
       headers: {
@@ -83,6 +216,7 @@ get_header();
     .catch(error => {
     console.error("Error fetching data:", error);
     });
+    //---------------------------------------------
 
 
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
@@ -95,23 +229,21 @@ get_header();
       },
       body: JSON.stringify({ email, token })
     }).then(response => {
-        console.log("response", response)
-        console.log("response", response.body)
-    //   if (response.ok) {
-    //     // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
-    //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
-    //         email: email,
-    //         verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
-    //     })
-    //         .then(function() {
-    //             alert('Email sent successfully!');
-    //         }, function(error) {
-    //             console.error('FAILED...', error);
-    //             alert('Email failed to send!');
-    //         });
-    //   } else {
-    //     alert('Failed to store code.');
-    //   }
+      if (response.ok) {
+        // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
+        emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+            email: email,
+            verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
+        })
+            .then(function() {
+                alert('Email sent successfully!');
+            }, function(error) {
+                console.error('FAILED...', error);
+                alert('Email failed to send!');
+            });
+      } else {
+        alert('Failed to store code.');
+      }
     });
   });
 </script>
