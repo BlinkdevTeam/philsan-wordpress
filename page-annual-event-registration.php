@@ -111,58 +111,93 @@ get_header();
                         </div>
                         <!-- checkbox section -->
                         <div class="w-[100%] flex flex-col gap-[10px]">
-                            <div class="flex flex-col">
-                                <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
+                            <!-- PHILSAN Member -->
+                            <div class="flex flex-col pb-[20px]">
+                                <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="html" name="philsan_member" value="member">
-                                        <label for="html">Yes</label><br>
+                                    <input type="radio" id="philsan_yes" name="philsan_member" value="yes">
+                                    <label for="philsan_yes">Yes</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="css" name="philsan_member" value="non-member">
-                                        <label for="css">No</label><br>
+                                    <input type="radio" id="philsan_no" name="philsan_member" value="no">
+                                    <label for="philsan_no">No</label>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Souvenir Program -->
                             <div class="flex flex-col pb-[20px]">
-                                    <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
-                                    <div class="flex gap-[20px]">
-                                        <div>
-                                            <input type="radio" id="html" name="souvenir" value="member">
-                                            <label for="html">Yes</label><br>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="css" name="souvenir" value="non-member">
-                                            <label for="css">No</label><br>
-                                        </div>
+                                <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
+                                <div class="flex gap-[20px]">
+                                    <div>
+                                    <input type="radio" id="sv_printed" name="souvenir" value="printed">
+                                    <label for="sv_printed">Printed (First 400 only)</label>
                                     </div>
+                                    <div>
+                                    <input type="radio" id="sv_digital" name="souvenir" value="digital">
+                                    <label for="sv_digital">Digital</label>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Certificate of Attendance -->
                             <div class="flex flex-col pb-[20px]">
                                 <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="html" name="philsan_member" value="member">
-                                        <label for="html">Yes</label><br>
+                                    <input type="radio" id="cert_yes" name="certificate_needed" value="yes">
+                                    <label for="cert_yes">Yes</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="css" name="philsan_member" value="non-member">
-                                        <label for="css">No</label><br>
+                                    <input type="radio" id="cert_no" name="certificate_needed" value="no">
+                                    <label for="cert_no">No</label>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Sponsored Registration -->
                             <div class="flex flex-col pb-[20px]">
-                                <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
+                                <p class="sub-bi-heading text-[#344054]">Sponsored Registration?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                        <input type="radio" id="html" name="sponsored" value="member">
-                                        <label for="html">Yes</label><br>
+                                    <input type="radio" id="sponsored_yes" name="sponsored" value="yes">
+                                    <label for="sponsored_yes">Yes</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="css" name="sponsored" value="non-member">
-                                        <label for="css">No</label><br>
+                                    <input type="radio" id="sponsored_no" name="sponsored" value="no">
+                                    <label for="sponsored_no">No</label>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Sponsors -->
+                            <div class="flex flex-col pb-[20px]">
+                                <p class="sub-bi-heading text-[#344054]">Who's your sponsor?</p>
+                                <div class="flex flex-col gap-[20px]">
+                                    <div>
+                                        <input type="radio" id="a_company" name="sponsored" value="A Company">
+                                        <label for="a_company">A Company</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="b_company" name="sponsored" value="B Company">
+                                        <label for="b_company">B Company</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="c_company" name="sponsored" value="C Company">
+                                        <label for="c_company">C Company</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="d_company" name="sponsored" value="D Company">
+                                        <label for="d_company">D Company</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="e_company" name="sponsored" value="E Company">
+                                        <label for="e_company">E Company</label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
                                 <div class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1]">
