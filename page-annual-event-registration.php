@@ -18,8 +18,8 @@ get_header();
         <div class="w-[100%]">
             <form id="form-registration" class="text-black flex flex-col justify-center">
                 <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                    <div class="flex justify-between">
-                        <div>
+                    <div class="flex justify-between gap-[40px]">
+                        <div class="w-[100%] flex flex-col gap-[10px]">
                             <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Your email</p>
                                 <input
@@ -110,7 +110,7 @@ get_header();
                             </div>
                         </div>
                         <!-- checkbox section -->
-                        <div>
+                        <div class="w-[100%] flex flex-col gap-[10px]">
                             <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Are you a Philsan Member</p>
                                 <div class="flex gap-[20px]">
@@ -124,7 +124,7 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col">
+                            <div class="flex flex-col pb-[20px]">
                                     <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
                                     <div class="flex gap-[20px]">
                                         <div>
@@ -137,7 +137,7 @@ get_header();
                                         </div>
                                     </div>
                             </div>
-                            <div class="flex flex-col">
+                            <div class="flex flex-col pb-[20px]">
                                 <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
@@ -150,7 +150,7 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col">
+                            <div class="flex flex-col pb-[20px]">
                                 <p class="sub-bi-heading text-[#344054]">Sponsored Registration</p>
                                 <div class="flex gap-[20px]">
                                     <div>
@@ -165,7 +165,7 @@ get_header();
                             </div>
                             <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
-                                <div class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px]">
+                                <div class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1]">
                                     <span>Upload</span>
                                 </div>
                             </div>
