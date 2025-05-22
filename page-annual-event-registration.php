@@ -116,12 +116,12 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                    <input type="radio" id="philsan_yes" name="philsan_member" value="yes">
-                                    <label for="philsan_yes">Yes</label>
+                                        <input type="radio" id="philsan_yes" name="philsan_member" value="yes">
+                                        <label for="philsan_yes">Yes</label>
                                     </div>
                                     <div>
-                                    <input type="radio" id="philsan_no" name="philsan_member" value="no">
-                                    <label for="philsan_no">No</label>
+                                        <input type="radio" id="philsan_no" name="philsan_member" value="no">
+                                        <label for="philsan_no">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -131,12 +131,12 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                    <input type="radio" id="sv_printed" name="souvenir" value="printed">
-                                    <label for="sv_printed">Printed (First 400 only)</label>
+                                        <input type="radio" id="sv_printed" name="souvenir" value="printed">
+                                        <label for="sv_printed">Printed (First 400 only)</label>
                                     </div>
                                     <div>
-                                    <input type="radio" id="sv_digital" name="souvenir" value="digital">
-                                    <label for="sv_digital">Digital</label>
+                                        <input type="radio" id="sv_digital" name="souvenir" value="digital">
+                                        <label for="sv_digital">Digital</label>
                                     </div>
                                 </div>
                             </div>
@@ -146,27 +146,27 @@ get_header();
                                 <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                    <input type="radio" id="cert_yes" name="certificate_needed" value="yes">
-                                    <label for="cert_yes">Yes</label>
+                                        <input type="radio" id="cert_yes" name="certificate_needed" value="yes">
+                                        <label for="cert_yes">Yes</label>
                                     </div>
                                     <div>
-                                    <input type="radio" id="cert_no" name="certificate_needed" value="no">
-                                    <label for="cert_no">No</label>
+                                        <input type="radio" id="cert_no" name="certificate_needed" value="no">
+                                        <label for="cert_no">No</label>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Sponsored Registration -->
-                            <div class="flex flex-col pb-[20px]">
+                            <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Sponsored Registration?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
-                                    <input type="radio" id="sponsored_yes" name="sponsored" value="yes">
-                                    <label for="sponsored_yes">Yes</label>
+                                        <input type="radio" id="sponsored_yes" name="sponsored" value="yes">
+                                        <label for="sponsored_yes">Yes</label>
                                     </div>
                                     <div>
-                                    <input type="radio" id="sponsored_no" name="sponsored" value="no">
-                                    <label for="sponsored_no">No</label>
+                                        <input type="radio" id="sponsored_no" name="sponsored" value="no">
+                                        <label for="sponsored_no">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -232,77 +232,52 @@ get_header();
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script>
-  (function(){
-    emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
-  })();
-
-    function generateToken(length = 16) {
-        const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let token = '';
-        for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * charset.length);
-            token += charset[randomIndex];
-        }
-        return token;
-    }
+    (function(){
+        emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
+    })();
 
 
 
-    document.getElementById('email-verification').addEventListener('submit', function(e) {
+    document.getElementById('form-registration').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    const philsanMember = document.querySelector('input[name="philsan_member"]:checked')?.value || null;
+    const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
+    const certificateNeeded = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
+    const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
 
-    const token = generateToken(16);
-    const email = document.getElementById("email").value
-
-    console.log("email", email)
-    console.log("Generated Token:", token);
-
-    //this will be used to filter the email from the regsitration database
-    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
-      method: 'GET',
-      headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Content-Type': 'application/json',
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-    console.log("Matching data:", data);
-    })
-    .catch(error => {
-    console.error("Error fetching data:", error);
-    });
-    //---------------------------------------------
+    console.log("PHILSAN Member:", philsanMember);
+    console.log("Souvenir:", souvenir);
+    console.log("Certificate Needed:", certificateNeeded);
+    console.log("Sponsored Registration:", sponsored);
 
 
-    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
-      method: 'POST',
-      headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({ email, token })
-    }).then(response => {
-      if (response.ok) {
-        // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
-        emailjs.send('service_1qkyi2i', 'template_d71x79v', {
-            email: email,
-            verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
-        })
-            .then(function() {
-                alert('Email sent successfully!');
-            }, function(error) {
-                console.error('FAILED...', error);
-                alert('Email failed to send!');
-            });
-      } else {
-        alert('Failed to store code.');
-      }
-    });
+    // fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+    //   method: 'POST',
+    //   headers: {
+    //     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+    //     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+    //     'Content-Type': 'application/json',
+    //     'Prefer': 'return=minimal'
+    //   },
+    //   body: JSON.stringify({ email, token })
+    // })
+    // .then(response => {
+    //   if (response.ok) {
+    //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+    //         email: email,
+    //         verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
+    //     })
+    //         .then(function() {
+    //             alert('Email sent successfully!');
+    //         }, function(error) {
+    //             console.error('FAILED...', error);
+    //             alert('Email failed to send!');
+    //         });
+    //   } else {
+    //     alert('Failed to store code.');
+    //   }
+    // });
   });
 </script>
 
