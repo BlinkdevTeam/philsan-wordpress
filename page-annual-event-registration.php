@@ -257,6 +257,8 @@ get_header();
         .then(data => {
             const matchData = data.find(i => i.token === token);
             if(matchData) {
+                document.querySelector('input[name="email"]').value = matchData.email;
+                
                 document.getElementById('form-registration').addEventListener('submit', async function(e) {
                     e.preventDefault();
 
@@ -278,8 +280,6 @@ get_header();
                     const file = fileInput.files[0];
 
                     let filePath = null;
-
-                    document.querySelector('input[name="email"]').value = matchData.email;
 
                     // Upload file to storage
                     if (file) {
