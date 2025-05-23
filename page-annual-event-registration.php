@@ -346,7 +346,7 @@ get_header();
                                     'Content-Type': 'application/json',
                                 }
                             })
-                            alert('Email sent successfully!');
+                            window.location.href = "https://beige-fly-587526.hostingersite.com/registration-successful";
                         }, function(error) {
                             console.error('FAILED...', error);
                             alert('Email failed to send!');
