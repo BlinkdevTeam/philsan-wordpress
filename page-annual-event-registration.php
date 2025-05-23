@@ -206,11 +206,13 @@ get_header();
                                 </div>
                             </div>
 
-                            <div class="flex flex-col">
+                            <div id="upload-area" class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
                                 <div class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1]">
-                                    <span>Upload</span>
+                                    <span id="upload-text">Upload</span>
                                 </div>
+                                  <!-- Hidden file input -->
+                                <input type="file" id="file-input" class="hidden" accept="image/*" />
                             </div>
                         </div>
                     </div>
@@ -267,6 +269,26 @@ get_header();
     console.log("Souvenir:", souvenir);
     console.log("Certificate Needed:", certificate_needed);
     console.log("Sponsored Registration:", sponsored);
+
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('file-input');
+    const uploadText = document.getElementById('upload-text');
+
+    console.log('uploadArea', uploadArea)
+    console.log('fileInput', fileInput)
+    console.log('uploadText', uploadText)
+
+    uploadArea.addEventListener('click', () => {
+        fileInput.click(); // trigger file selector
+    });
+
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
+        } else {
+            uploadText.textContent = "Upload";
+        }
+    });
 
 
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
