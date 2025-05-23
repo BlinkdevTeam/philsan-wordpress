@@ -246,8 +246,6 @@ get_header();
         emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
     })();
 
-
-
     document.getElementById('form-registration').addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -265,33 +263,58 @@ get_header();
         const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
         const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
+        const fileInput = document.getElementById('file-input');
+        const file = fileInput.files[0];
+
+        let filePath = null;
+
         console.log("PHILSAN Member:", membership);
         console.log("Souvenir:", souvenir);
         console.log("Certificate Needed:", certificate_needed);
         console.log("Sponsored Registration:", sponsored);
 
+        if (file) {
+            const uniqueFileName = `${Date.now()}_${file.name}`;
+            filePath = `proofs/${uniqueFileName}`;
+
+            const { data, error } = await fetch("https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/philsan-proof-of-payments/" + uniqueFileName, {
+            method: 'POST',
+            headers: {
+                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Content-Type': file.type
+        },body: file})
+        .then(res => res.json());
+            if (error || data?.error) {
+                console.error('Upload failed:', error || data.error);
+                alert("File upload failed.");
+                return;
+            }
+        }
+
+
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
-        method: 'POST',
-        headers: {
-            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-            'Content-Type': 'application/json',
-            'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify({ 
-            first_name,
-            last_name,
-            middle_name,
-            mobile,
-            company,
-            position,
-            agri_license,
-            membership,
-            souvenir,
-            certificate_needed,
-            sponsored,
-            sponsor
-        })
+            method: 'POST',
+            headers: {
+                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({ 
+                first_name,
+                last_name,
+                middle_name,
+                mobile,
+                company,
+                position,
+                agri_license,
+                membership,
+                souvenir,
+                certificate_needed,
+                sponsored,
+                sponsor
+            })
         })
         .then(response => {
             if (!response.ok) {
