@@ -80,6 +80,7 @@ get_header();
       })
       .then(response => response.json())
       .then(data => {
+          console.log("Matching data:", data);
           const matchData = data.find(i => i.email === email);
           console.log("matchData", matchData)
           if(matchData) {
