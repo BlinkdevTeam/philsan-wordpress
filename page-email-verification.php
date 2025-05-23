@@ -81,7 +81,8 @@ get_header();
       .then(response => response.json())
       .then(data => {
           const matchData = data.find(i => i.email === email);
-          if(!matchData) {
+          console.log("matchData", matchData)
+          if(matchData) {
             const elem = document.querySelector(".email-exist");
             if (elem) {
               elem.classList.remove("hidden");
