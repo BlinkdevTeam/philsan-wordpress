@@ -83,7 +83,10 @@ get_header();
           const matchData = data.find(i => i.email === email);
           if(!matchData) {
             const elem = document.querySelector(".email-exist");
-            if (elem) el.classList.remove("hidden");
+            if (elem) {
+              elem.classList.remove("hidden");
+              return;
+            }
             return;
           }
           //send POST request to email verification database
