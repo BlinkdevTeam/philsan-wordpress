@@ -241,6 +241,7 @@ get_header();
 
     const params = new URLSearchParams(window.location.search);
     const token = params.get('t');
+    console.log("token", token)
 
     //Filter the email from the registration database
     fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
