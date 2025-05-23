@@ -332,7 +332,7 @@ get_header();
                         if (!response.ok) {
                             return response.json().then(error => { throw error });
                     }
-                        emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+                        emailjs.send('service_1qkyi2i', 'template_f6qckle', {
                             email: matchData.email,
                         })
                         .then(function() {
