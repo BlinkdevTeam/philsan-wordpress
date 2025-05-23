@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <div class="mx-auto w-[1280px]">
     <div class="flex w-[100%] py-[20px]">
         <div class="w-[100%]">
@@ -5,3 +7,5 @@
         </div>
     </div>
 </div>
+
+<?php get_footer(); ?>
