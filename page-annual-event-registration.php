@@ -206,9 +206,9 @@ get_header();
                                 </div>
                             </div>
 
-                            <div id="upload-area" class="flex flex-col">
+                            <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
-                                <div class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1]">
+                                <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
                                     <span id="upload-text">Upload</span>
                                 </div>
                                   <!-- Hidden file input -->
@@ -279,6 +279,7 @@ get_header();
     console.log('uploadText', uploadText)
 
     uploadArea.addEventListener('click', () => {
+        console.log("You are attempting to upload an image")
         fileInput.click(); // trigger file selector
     });
 
