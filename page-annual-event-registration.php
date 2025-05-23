@@ -246,7 +246,7 @@ get_header();
         emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
     })();
 
-    document.getElementById('form-registration').addEventListener('submit', function(e) {
+    document.getElementById('form-registration').addEventListener('submit', async function(e) {
         e.preventDefault();
 
         const first_name = document.getElementById("first_name").value
@@ -313,7 +313,8 @@ get_header();
                 souvenir,
                 certificate_needed,
                 sponsored,
-                sponsor
+                sponsor,
+                payment: filePath
             })
         })
         .then(response => {
