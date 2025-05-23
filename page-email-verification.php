@@ -83,13 +83,11 @@ get_header();
           console.log("Matching data:", data);
           const matchData = data.find(i => i.email === email);
           console.log("matchData", matchData)
-          if(matchData) {
+          if(matchData.length > 0) {
             const elem = document.querySelector(".email-exist");
             if (elem) {
-              elem.classList.remove("hidden");
+              elem.classList.remove("hidden");            }
               return;
-            }
-            return;
           }
           //send POST request to email verification database
           fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
