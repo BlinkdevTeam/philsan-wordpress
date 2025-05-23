@@ -249,28 +249,79 @@ get_header();
 
 
     document.getElementById('form-registration').addEventListener('submit', function(e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    const first_name = document.getElementById("first_name").value
-    const middle_name = document.getElementById("middle_name").value
-    const last_name = document.getElementById("last_name").value
-    const mobile = document.getElementById("mobile").value
-    const company = document.getElementById("company").value
-    const position = document.getElementById("position").value
-    const agri_license = document.getElementById("agri_license").value
+        const first_name = document.getElementById("first_name").value
+        const middle_name = document.getElementById("middle_name").value
+        const last_name = document.getElementById("last_name").value
+        const mobile = document.getElementById("mobile").value
+        const company = document.getElementById("company").value
+        const position = document.getElementById("position").value
+        const agri_license = document.getElementById("agri_license").value
 
-    const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
-    const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
-    const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
-    const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
-    const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
+        const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
+        const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
+        const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
+        const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
+        const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
-    console.log("PHILSAN Member:", membership);
-    console.log("Souvenir:", souvenir);
-    console.log("Certificate Needed:", certificate_needed);
-    console.log("Sponsored Registration:", sponsored);
+        console.log("PHILSAN Member:", membership);
+        console.log("Souvenir:", souvenir);
+        console.log("Certificate Needed:", certificate_needed);
+        console.log("Sponsored Registration:", sponsored);
 
-    document.addEventListener("DOMContentLoaded", () => {
+        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
+        method: 'POST',
+        headers: {
+            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ 
+            first_name,
+            last_name,
+            middle_name,
+            mobile,
+            company,
+            position,
+            agri_license,
+            membership,
+            souvenir,
+            certificate_needed,
+            sponsored,
+            sponsor
+        })
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(error => { throw error });
+        }
+            alert("Successfully registered!");
+        })
+        .catch(error => {
+            console.error("Supabase error:", error);
+            alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
+        });
+        // .then(response => {
+        //   if (response.ok) {
+        //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+        //         email: email,
+        //         verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
+        //     })
+        //         .then(function() {
+        //             alert('Email sent successfully!');
+        //         }, function(error) {
+        //             console.error('FAILED...', error);
+        //             alert('Email failed to send!');
+        //         });
+        //   } else {
+        //     alert('Failed to store code.');
+        //   }
+        // });
+    });
+
+     document.addEventListener("DOMContentLoaded", () => {
         const uploadArea = document.getElementById('upload-area');
         const fileInput = document.getElementById('file-input');
         const uploadText = document.getElementById('upload-text');
@@ -293,57 +344,6 @@ get_header();
         });
     });
 
-
-    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
-      method: 'POST',
-      headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({ 
-        first_name,
-        last_name,
-        middle_name,
-        mobile,
-        company,
-        position,
-        agri_license,
-        membership,
-        souvenir,
-        certificate_needed,
-        sponsored,
-        sponsor
-     })
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(error => { throw error });
-    }
-        alert("Successfully registered!");
-    })
-    .catch(error => {
-        console.error("Supabase error:", error);
-        alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
-    });
-    // .then(response => {
-    //   if (response.ok) {
-    //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
-    //         email: email,
-    //         verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
-    //     })
-    //         .then(function() {
-    //             alert('Email sent successfully!');
-    //         }, function(error) {
-    //             console.error('FAILED...', error);
-    //             alert('Email failed to send!');
-    //         });
-    //   } else {
-    //     alert('Failed to store code.');
-    //   }
-    // });
-  });
 </script>
 
 <?php 
