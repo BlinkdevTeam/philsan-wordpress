@@ -20,6 +20,7 @@ get_header();
                                     name="email"
                                     type="email"
                                     required
+                                    readonly
                                     placeholder="Email address"
                                     class="w-full p-3 border"
                                 />
@@ -254,7 +255,6 @@ get_header();
         })
         .then(res => res.json())
         .then(data => {
-            console.log("Matching data:", data);
             const matchData = data.find(i => i.token === token);
             if(matchData) {
                 document.getElementById('form-registration').addEventListener('submit', async function(e) {
@@ -278,6 +278,8 @@ get_header();
                     const file = fileInput.files[0];
 
                     let filePath = null;
+
+                    document.querySelector('input[name="email"]').value = matchData.email;
 
                     // Upload file to storage
                     if (file) {
