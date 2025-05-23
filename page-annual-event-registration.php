@@ -241,145 +241,149 @@ get_header();
 
     const params = new URLSearchParams(window.location.search);
     const token = params.get('t');
-    console.log("token", token)
 
-    //Filter the email from the registration database
-    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
-        method: 'GET',
-        headers: {
-            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-            'Content-Type': 'application/json',
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Matching data:", data);
-    })
-    .catch(error => {
-        console.error("Error fetching data:", error);
-    });
-
-    document.getElementById('form-registration').addEventListener('submit', async function(e) {
-        e.preventDefault();
-
-        const first_name = document.getElementById("first_name").value
-        const middle_name = document.getElementById("middle_name").value
-        const last_name = document.getElementById("last_name").value
-        const mobile = document.getElementById("mobile").value
-        const company = document.getElementById("company").value
-        const position = document.getElementById("position").value
-        const agri_license = document.getElementById("agri_license").value
-
-        const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
-        const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
-        const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
-        const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
-        const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
-
-        const fileInput = document.getElementById('file-input');
-        const file = fileInput.files[0];
-
-        let filePath = null;
-
-        // Upload file to storage
-        if (file) {
-            const uniqueFileName = `${Date.now()}_${file.name}`;
-            filePath = `proofs/${uniqueFileName}`;
-
-            const { data, error } = await fetch("https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/philsan-proof-of-payments/proofs/" + uniqueFileName, {
-            method: 'POST',
-            headers: {
-                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                'Content-Type': file.type
-        },body: file})
-        .then(res => res.json());
-            if (error || data?.error) {
-                console.error('Upload failed:', error || data.error);
-                alert("File upload failed.");
-                return;
-            }
-        }
-
-        // Post form data to table
-        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
-            method: 'POST',
+    if(token) {
+        //Filter the email from the registration database
+        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+            method: 'GET',
             headers: {
                 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                 'Content-Type': 'application/json',
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({ 
-                first_name,
-                last_name,
-                middle_name,
-                mobile,
-                company,
-                position,
-                agri_license,
-                membership,
-                souvenir,
-                certificate_needed,
-                sponsored,
-                sponsor,
-                payment: filePath,
-                reg_request: new Date().toISOString(),
-                reg_status: "pending"
-            })
+            }
         })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(error => { throw error });
-        }
-            alert("Successfully registered!");
+        .then(response => response.json())
+        .then(data => {
+            console.log("Matching data:", data);
         })
         .catch(error => {
-            console.error("Supabase error:", error);
-            alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
-        });
-        // .then(response => {
-        //   if (response.ok) {
-        //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
-        //         email: email,
-        //         verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
-        //     })
-        //         .then(function() {
-        //             alert('Email sent successfully!');
-        //         }, function(error) {
-        //             console.error('FAILED...', error);
-        //             alert('Email failed to send!');
-        //         });
-        //   } else {
-        //     alert('Failed to store code.');
-        //   }
-        // });
-    });
-
-    // Custom Upload field
-    document.addEventListener("DOMContentLoaded", () => {
-        const uploadArea = document.getElementById('upload-area');
-        const fileInput = document.getElementById('file-input');
-        const uploadText = document.getElementById('upload-text');
-
-        console.log('uploadArea', uploadArea)
-        console.log('fileInput', fileInput)
-        console.log('uploadText', uploadText)
-
-        uploadArea.addEventListener('click', () => {
-            console.log("You are attempting to upload an image")
-            fileInput.click(); 
+            console.error("Error fetching data:", error);
         });
 
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files.length > 0) {
-                uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
-            } else {
-                uploadText.textContent = "Upload";
+        document.getElementById('form-registration').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const first_name = document.getElementById("first_name").value
+            const middle_name = document.getElementById("middle_name").value
+            const last_name = document.getElementById("last_name").value
+            const mobile = document.getElementById("mobile").value
+            const company = document.getElementById("company").value
+            const position = document.getElementById("position").value
+            const agri_license = document.getElementById("agri_license").value
+
+            const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
+            const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
+            const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
+            const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
+            const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
+
+            const fileInput = document.getElementById('file-input');
+            const file = fileInput.files[0];
+
+            let filePath = null;
+
+            // Upload file to storage
+            if (file) {
+                const uniqueFileName = `${Date.now()}_${file.name}`;
+                filePath = `proofs/${uniqueFileName}`;
+
+                const { data, error } = await fetch("https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/philsan-proof-of-payments/proofs/" + uniqueFileName, {
+                method: 'POST',
+                headers: {
+                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'Content-Type': file.type
+            },body: file})
+            .then(res => res.json());
+                if (error || data?.error) {
+                    console.error('Upload failed:', error || data.error);
+                    alert("File upload failed.");
+                    return;
+                }
             }
+
+            // Post form data to table
+            fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
+                method: 'POST',
+                headers: {
+                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify({ 
+                    first_name,
+                    last_name,
+                    middle_name,
+                    mobile,
+                    company,
+                    position,
+                    agri_license,
+                    membership,
+                    souvenir,
+                    certificate_needed,
+                    sponsored,
+                    sponsor,
+                    payment: filePath,
+                    reg_request: new Date().toISOString(),
+                    reg_status: "pending"
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(error => { throw error });
+            }
+                alert("Successfully registered!");
+            })
+            .catch(error => {
+                console.error("Supabase error:", error);
+                alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
+            });
+            // .then(response => {
+            //   if (response.ok) {
+            //     emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+            //         email: email,
+            //         verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
+            //     })
+            //         .then(function() {
+            //             alert('Email sent successfully!');
+            //         }, function(error) {
+            //             console.error('FAILED...', error);
+            //             alert('Email failed to send!');
+            //         });
+            //   } else {
+            //     alert('Failed to store code.');
+            //   }
+            // });
         });
-    });
+
+        // Custom Upload field
+        document.addEventListener("DOMContentLoaded", () => {
+            const uploadArea = document.getElementById('upload-area');
+            const fileInput = document.getElementById('file-input');
+            const uploadText = document.getElementById('upload-text');
+
+            console.log('uploadArea', uploadArea)
+            console.log('fileInput', fileInput)
+            console.log('uploadText', uploadText)
+
+            uploadArea.addEventListener('click', () => {
+                console.log("You are attempting to upload an image")
+                fileInput.click(); 
+            });
+
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length > 0) {
+                    uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
+                } else {
+                    uploadText.textContent = "Upload";
+                }
+            });
+        });
+    } else {
+        window.location.href = "https://beige-fly-587526.hostingersite.com/404";
+    }
+
 
 </script>
 
