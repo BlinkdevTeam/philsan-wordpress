@@ -100,7 +100,7 @@ get_header();
         // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
         emailjs.send('service_1qkyi2i', 'template_d71x79v', {
             email: email,
-            verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token + email
+            verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?email="email"&t=" + token + email
         })
             .then(function() {
                 // alert('Email sent successfully!');
