@@ -366,6 +366,29 @@ get_header();
         window.location.href = "https://beige-fly-587526.hostingersite.com/404";
     }
 
+    // Custom Upload field
+    document.addEventListener("DOMContentLoaded", () => {
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const uploadText = document.getElementById('upload-text');
+
+        console.log('uploadArea', uploadArea)
+        console.log('fileInput', fileInput)
+        console.log('uploadText', uploadText)
+
+        uploadArea.addEventListener('click', () => {
+            console.log("You are attempting to upload an image")
+            fileInput.click(); 
+        });
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
+            } else {
+                uploadText.textContent = "Upload";
+            }
+        });
+    });
 
 </script>
 
