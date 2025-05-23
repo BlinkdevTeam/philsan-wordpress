@@ -22,7 +22,7 @@ get_header();
                                     required
                                     readonly
                                     placeholder="Email address"
-                                    class="w-full p-3 border"
+                                    class="w-full p-3 border bg-[beige] text-[#a9a9a9] text-[bolder] italic border-[2px] border-[#9e9e47]"
                                 />
                             </div>
                             <div class="flex flex-col">
@@ -258,7 +258,7 @@ get_header();
             const matchData = data.find(i => i.token === token);
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
-                
+
                 document.getElementById('form-registration').addEventListener('submit', async function(e) {
                     e.preventDefault();
 
