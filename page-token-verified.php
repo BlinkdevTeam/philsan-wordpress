@@ -30,11 +30,8 @@ get_header();
         return token;
     }
 
-
-
     document.getElementById('email-verification').addEventListener('submit', function(e) {
     e.preventDefault();
-
 
     const token = generateToken(16);
     const email = document.getElementById("email").value

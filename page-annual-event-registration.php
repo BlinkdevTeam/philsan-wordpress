@@ -255,6 +255,8 @@ get_header();
         .then(response => response.json())
         .then(data => {
             console.log("Matching data:", data);
+            const participant = data.find(i => i.token === token);
+            console.log("participant", participant)
         })
         .catch(error => {
             console.error("Error fetching data:", error);

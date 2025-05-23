@@ -76,44 +76,44 @@ get_header();
           'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
           'Content-Type': 'application/json',
         }
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log("Matching data:", data);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Matching data:", data);
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error);
+      });
 
-    //send POST request to email verification database
-    fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
-      method: 'POST',
-      headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({ email, token: token+email })
-    }).then(response => {
-      if (response.ok) {
-        // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
-        emailjs.send('service_1qkyi2i', 'template_d71x79v', {
-            email: email,
-            verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token + email
-        })
-            .then(function() {
-                // alert('Email sent successfully!');
-                window.location.href = "https://beige-fly-587526.hostingersite.com/visit-email";
-            }, function(error) {
-                console.error('FAILED...', error);
-                alert('Email failed to send!');
-            });
-      } else {
-        alert('Failed to store code.');
-      }
+      //send POST request to email verification database
+      fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+        method: 'POST',
+        headers: {
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, token: token+email })
+      }).then(response => {
+        if (response.ok) {
+          // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
+          emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+              email: email,
+              verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token + email
+          })
+              .then(function() {
+                  // alert('Email sent successfully!');
+                  window.location.href = "https://beige-fly-587526.hostingersite.com/visit-email";
+              }, function(error) {
+                  console.error('FAILED...', error);
+                  alert('Email failed to send!');
+              });
+        } else {
+          alert('Failed to store code.');
+        }
+      });
     });
-  });
 </script>
 
 <?php 
