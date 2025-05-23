@@ -5,7 +5,7 @@
   <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>
-<body <?php body_class('bg-gray-100 text-gray-900'); ?>>
+<body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col'); ?>>
 
 <header class="bg-white shadow-md">
   <div class="container mx-auto flex items-center justify-between px-4 py-4">
