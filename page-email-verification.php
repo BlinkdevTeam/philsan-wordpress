@@ -104,7 +104,8 @@ get_header();
             verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token
         })
             .then(function() {
-                alert('Email sent successfully!');
+                // alert('Email sent successfully!');
+                window.location.href = "https://beige-fly-587526.hostingersite.com/visit-email";
             }, function(error) {
                 console.error('FAILED...', error);
                 alert('Email failed to send!');

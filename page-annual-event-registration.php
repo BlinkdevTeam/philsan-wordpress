@@ -8,13 +8,6 @@ get_header();
 
 <div class="mx-auto w-[1280px]">
     <div class="flex w-[100%] py-[20px]">
-        <!-- <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
-            <div class="flex flex-col gap-[20px]">
-                <h2 class="text-[38px]">Philsan</h2>
-                <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
-                <p class="text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div> -->
         <div class="w-[100%]">
             <form id="form-registration" class="text-black flex flex-col justify-center">
                 <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
@@ -243,7 +236,7 @@ get_header();
 </script>
 <script>
     (function(){
-        emailjs.init("sOTpCYbD5KllwgbCD"); // Replace with your Public Key
+        emailjs.init("sOTpCYbD5KllwgbCD"); 
     })();
 
     document.getElementById('form-registration').addEventListener('submit', async function(e) {
@@ -268,11 +261,7 @@ get_header();
 
         let filePath = null;
 
-        console.log("PHILSAN Member:", membership);
-        console.log("Souvenir:", souvenir);
-        console.log("Certificate Needed:", certificate_needed);
-        console.log("Sponsored Registration:", sponsored);
-
+        // Upload file to storage
         if (file) {
             const uniqueFileName = `${Date.now()}_${file.name}`;
             filePath = `proofs/${uniqueFileName}`;
@@ -292,7 +281,7 @@ get_header();
             }
         }
 
-
+        // Post form data to table
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
             method: 'POST',
             headers: {
@@ -314,7 +303,9 @@ get_header();
                 certificate_needed,
                 sponsored,
                 sponsor,
-                payment: filePath
+                payment: filePath,
+                reg_request: new Date().toISOString(),
+                reg_status: "pending"
             })
         })
         .then(response => {
@@ -345,7 +336,8 @@ get_header();
         // });
     });
 
-     document.addEventListener("DOMContentLoaded", () => {
+    // Custom Upload field
+    document.addEventListener("DOMContentLoaded", () => {
         const uploadArea = document.getElementById('upload-area');
         const fileInput = document.getElementById('file-input');
         const uploadText = document.getElementById('upload-text');
@@ -356,7 +348,7 @@ get_header();
 
         uploadArea.addEventListener('click', () => {
             console.log("You are attempting to upload an image")
-            fileInput.click(); // trigger file selector
+            fileInput.click(); 
         });
 
         fileInput.addEventListener('change', () => {
