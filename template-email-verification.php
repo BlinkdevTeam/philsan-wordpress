@@ -1,12 +1,13 @@
 <?php 
 /*
 *Template Name: Verify Email
+*Template Post Type: 38th-convention* Template Post Type: country
 */
 
 get_header();
 
     while (have_posts()) {
-        
+
     the_post();
 ?>
 
