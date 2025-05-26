@@ -111,11 +111,11 @@ get_header();
               // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
               emailjs.send('service_1qkyi2i', 'template_d71x79v', {
                   email: email,
-                  verification_link: "https://beige-fly-587526.hostingersite.com/annual-event-registration?t=" + token + email
+                  verification_link: "https://philsan.org/annual-event-registration?t=" + token + email
               })
                   .then(function() {
                       // alert('Email sent successfully!');
-                      window.location.href = "https://beige-fly-587526.hostingersite.com/visit-email";
+                      window.location.href = "https://philsan.org/visit-email";
                   }, function(error) {
                       console.error('FAILED...', error);
                       alert('Email failed to send!');
