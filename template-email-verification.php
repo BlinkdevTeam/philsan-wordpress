@@ -1,7 +1,7 @@
 <?php 
 /*
 *Template Name: Verify Email
-*Template Post Type: 38th-convention* Template Post Type: country
+*Template Post Type: 38th-convention
 */
 
 get_header();
