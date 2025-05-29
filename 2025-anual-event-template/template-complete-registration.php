@@ -350,7 +350,7 @@ get_header();
                                     'Content-Type': 'application/json',
                                 }
                             })
-                            window.location.href = "https://beige-fly-587526.hostingersite.com/registration-successful";
+                            window.location.href = "https://philsan.org/38th-convention/registration-successful";
                         }, function(error) {
                             console.error('FAILED...', error);
                             alert('Email failed to send!');
@@ -362,14 +362,14 @@ get_header();
                     });
                 });
             } else {
-                window.location.href = "https://beige-fly-587526.hostingersite.com/invalid-email";
+                window.location.href = "https://philsan.org/38th-convention/invalid-email";
             }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
         });
     } else {
-        window.location.href = "https://beige-fly-587526.hostingersite.com/404";
+        window.location.href = "https://philsan.org/404";
     }
 
     // Custom Upload field
