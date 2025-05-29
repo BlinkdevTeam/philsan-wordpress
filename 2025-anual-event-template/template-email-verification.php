@@ -18,7 +18,7 @@ get_header();
             <div class="flex flex-col gap-[20px]">
                 <h2 class="text-[38px]">Philsan</h2>
                 <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
-                <p class="text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="text-[18px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
             </div>
         </div>
          <div class="w-[50%]">
