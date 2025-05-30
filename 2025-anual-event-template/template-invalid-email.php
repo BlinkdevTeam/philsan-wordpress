@@ -11,7 +11,7 @@ get_header();
 <div class="mx-auto w-[1280px] flex-grow">
     <div class="flex w-[100%] py-[20px]">
         <div class="w-[100%]">
-            <h2>"Oops, this something wento wrong, Your email is invalid"</h2>
+            <h2 class="text-[red]">"Oops, this something wento wrong, Your email is invalid"</h2>
         </div>
     </div>
 </div>

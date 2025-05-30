@@ -331,7 +331,8 @@ get_header();
                             sponsor,
                             payment: filePath,
                             reg_request: new Date().toISOString(),
-                            reg_status: "pending"
+                            reg_status: "pending",
+                            token: matchData.token
                         })
                     })
                     .then(response => {

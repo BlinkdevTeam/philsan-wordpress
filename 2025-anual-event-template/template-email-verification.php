@@ -115,7 +115,7 @@ get_header();
               })
                   .then(function() {
                       // alert('Email sent successfully!');
-                      window.location.href = "https://philsan.org/visit-email";
+                      window.location.href = "https://philsan.org/38th-convention/visit-email";
                   }, function(error) {
                       console.error('FAILED...', error);
                       alert('Email failed to send!');
