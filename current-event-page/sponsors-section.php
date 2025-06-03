@@ -17,7 +17,6 @@ if ( $home_page ) :
         </div>
     </div>
 
-
     <?php 
     $sponsors = $sponsors_section['sponsors'];
     if ( $sponsors ) : ?>
@@ -31,8 +30,6 @@ if ( $home_page ) :
             <?php endif; endforeach; ?>
         </div>
     <?php endif; ?>
-
-
 </div>
 
 <?php endif; endif; ?>

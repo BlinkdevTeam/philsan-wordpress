@@ -12,10 +12,10 @@ if ( $home_page ) :
         $date_time = $hero['date_time'];
         $location = $hero['location'];
 ?>
-<div class="w-full bg-[#349544] grid grid-cols-1 md:grid-cols-[65%_35%] gap-8 text-white py-7">
+<div class="w-full bg-gradient-to-r from-[#176524] via-[#269739] to-[#91DF47] grid grid-cols-1 md:grid-cols-[65%_35%] gap-8 text-white py-7">
     <div>
         <?php if ( $img ) : ?>
-            <img src="<?php echo esc_url($img['url']); ?>" alt="" class="w-full h-auto object-cover rounded-lg shadow">
+            <img src="<?php echo esc_url($img['url']); ?>" alt="" class="w-full h-auto object-cover rounded-lg">
         <?php endif; ?>
     </div>
     <div class="flex flex-col justify-center items-start text-start px-8 gap-6">
