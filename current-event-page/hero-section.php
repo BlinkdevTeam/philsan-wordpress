@@ -20,19 +20,19 @@ if ( $home_page ) :
     </div>
     <div class="flex flex-col justify-center items-start text-start px-8 gap-6">
         <?php if ( $header ) : ?>
-            <h2 class="text-xl font-bold mb-2"><?php echo esc_html($header); ?></h2>
+            <h2 class="text-md md:text-xl font-bold mb-2"><?php echo esc_html($header); ?></h2>
         <?php endif; ?>
         <?php if ( $theme_header ) : ?>
-            <p class="text-6xl font-bold"><?php echo wp_kses_post($theme_header); ?></p>
+            <p class="text-4xl md:text-6xl font-bold"><?php echo wp_kses_post($theme_header); ?></p>
         <?php endif; ?>
         <?php if ( $theme_sub_header ) : ?>
-            <p class="text-xl font-bold"><?php echo wp_kses_post($theme_sub_header); ?></p>
+            <p class="text-md md:text-xl font-bold"><?php echo wp_kses_post($theme_sub_header); ?></p>
         <?php endif; ?>
         <?php if ( $date_time ) : ?>
             <p class="text-lg font-semibold"><?php echo wp_kses_post($date_time); ?></p>
         <?php endif; ?>
         <?php if ( $location ) : ?>
-            <p class="text-xl font-semibold"><?php echo wp_kses_post($location); ?></p>
+            <p class="text-md md:text-xl font-semibold"><?php echo wp_kses_post($location); ?></p>
         <?php endif; ?>
     </div>
 </div>

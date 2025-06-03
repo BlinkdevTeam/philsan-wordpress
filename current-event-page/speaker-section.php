@@ -25,10 +25,22 @@ if ($home_page) :
     </div>
 
     <?php
-    $speakers_data = [
-        ['title' => $speaker_titles_1, 'profiles' => $speaker_profile_1],
-        ['title' => $speaker_titles_2, 'profiles' => $speaker_profile_2],
-    ];
+    $speakers_data = [];
+
+    foreach ($speaker as $key => $value) {
+        if (strpos($key, 'speaker_titles_') === 0) {
+            $index = str_replace('speaker_titles_', '', $key);
+            $profiles_key = 'speaker_profile_' . $index;
+
+            if (!empty($value) && isset($speaker[$profiles_key]) && is_array($speaker[$profiles_key])) {
+                $speakers_data[] = [
+                    'title' => $value,
+                    'profiles' => $speaker[$profiles_key],
+                ];
+            }
+        }
+    }
+
     foreach ($speakers_data as $group) :
         if ($group['profiles']) :
     ?>
@@ -78,7 +90,7 @@ if ($home_page) :
 
 <!-- Modal -->
 <div id="speakerModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-lg shadow-lg w-full max-w-[1350px] p-6 flex flex-col md:flex justify-center items-center relative gap-4">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-[1350px] p-6 flex flex-col lg:flex-row justify-center items-center relative gap-4">
         <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
         <div class="relative w-[303px] h-[373px] text-center overflow-hidden">
             <div class="absolute bottom-0 left-0 w-full h-[330px] bg-[#efefef] z-10 rounded-tl-[30px] rounded-br-[30px]"></div>
@@ -88,7 +100,7 @@ if ($home_page) :
                 <p id="modalPosition" class="text-sm mb-4"></p>
             </div>
         </div>
-        <div class="w-[840px] h-full p-8">
+        <div class="max-w-[840px] h-full p-4">
             <p id="modalDetails" class="text-sm text-gray-600 whitespace-pre-line"></p>
         </div>
     </div>

@@ -34,7 +34,7 @@ if ( $home_page ) :
     ?>
     <div class="w-full flex flex-col justify-center items-center gap-8">
         <?php if ($group['schedule']) : ?>
-            <h2 class="text-2xl md:text-4xl text-black font-bold mb-2 text-center"><?php echo esc_html($group['schedule']); ?></h2>
+            <h2 class="text-2xl md:text-4xl text-[#349544] font-bold mb-2 text-center"><?php echo esc_html($group['schedule']); ?></h2>
         <?php endif; ?>
         <div class="flex flex-col gap-6 w-full">
             <?php foreach ($group['program'] as $row) :
