@@ -288,7 +288,7 @@ get_header();
 
                     // Upload file to storage
                     if (file) {
-                        const uniqueFileName = `${Date.now()}_${file.name}`;
+                        const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, "_")}`;
                         filePath = `proofs/${uniqueFileName}`;
 
                         const uploadResponse = await fetch("https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/philsan-proof-of-payments/proofs/" + uniqueFileName, {
