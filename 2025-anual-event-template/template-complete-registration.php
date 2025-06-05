@@ -340,7 +340,7 @@ get_header();
                         if (!response.ok) {
                             return response.json().then(error => { throw error });
                             window.location.href = "https://philsan.org/38th-convention/registration-successful";
-                    }
+                        }
                     // emailjs.send('service_1qkyi2i', 'template_f6qckle', {
                     //     email: matchData.email,
                     // })
