@@ -210,7 +210,7 @@ get_header();
                                     <span id="upload-text">Upload</span>
                                 </div>
                                   <!-- Hidden file input -->
-                                <input type="file" id="file-input" class="hidden" accept="image/*" />
+                                <input type="file" id="file-input" class="hidden" accept="image/*" required/>
                             </div>
                         </div>
                     </div>
