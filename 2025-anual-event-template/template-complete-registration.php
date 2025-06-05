@@ -260,6 +260,7 @@ get_header();
         .then(res => res.json())
         .then(data => {
             const matchData = data.find(i => i.token === token);
+            
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
 
@@ -338,24 +339,25 @@ get_header();
                     .then(response => {
                         if (!response.ok) {
                             return response.json().then(error => { throw error });
-                    }
-                        emailjs.send('service_1qkyi2i', 'template_f6qckle', {
-                            email: matchData.email,
-                        })
-                        .then(function() {
-                            fetch(`https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification?token=eq.${matchData.token}`, {
-                                method: 'DELETE',
-                                headers: {
-                                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                                    'Content-Type': 'application/json',
-                                }
-                            })
                             window.location.href = "https://philsan.org/38th-convention/registration-successful";
-                        }, function(error) {
-                            console.error('FAILED...', error);
-                            alert('Email failed to send!');
-                        });
+                    }
+                    // emailjs.send('service_1qkyi2i', 'template_f6qckle', {
+                    //     email: matchData.email,
+                    // })
+                    // .then(function() {
+                    //     fetch(`https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification?token=eq.${matchData.token}`, {
+                    //         method: 'DELETE',
+                    //         headers: {
+                    //             'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    //             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    //             'Content-Type': 'application/json',
+                    //         }
+                    //     })
+                    //     window.location.href = "https://philsan.org/38th-convention/registration-successful";
+                    // }, function(error) {
+                    //     console.error('FAILED...', error);
+                    //     alert('Email failed to send!');
+                    // });
                     })
                     .catch(error => {
                         console.error("Supabase error:", error);
