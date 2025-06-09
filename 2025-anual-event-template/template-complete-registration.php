@@ -259,10 +259,10 @@ get_header();
         })
         .then(response => response.json())
         .then(data => {
-          console.log("Matching data:", data);
-            document.querySelector('input[name="email"]').value = matchData.email;
-
+            console.log("Matching data:", data);
+            
             const matchData = data.find(i => i.email === email);
+            document.querySelector('input[name="email"]').value = matchData.email;
 
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
