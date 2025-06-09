@@ -95,11 +95,11 @@ get_header();
 
           console.log("matchData", matchData)
           
-          if (matchData["reg_status"] === "approved") {
+          if (matchData && matchData["reg_status"] === "approved") {
             emailExistEl.classList.remove("hidden");
             emailPendingEl.classList.add("hidden");
             return
-          } else if (matchData["reg_status"] === "pending") {
+          } else if (matchData && matchData["reg_status"] === "pending") {
             emailExistEl.classList.add("hidden");
             emailPendingEl.classList.remove("hidden");
 
