@@ -34,7 +34,8 @@ get_header();
                             placeholder="Email address"
                             class="w-full p-3 border"
                         />
-                        <p class="email-exist hidden text-[red]">Email already in use</p>
+                        <p class="email-exist hidden">This email is already approved.</p>
+                        <p class="email-pending hidden">This email already has a pending registration.</p>
                     </div>
                     <div>
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
@@ -89,12 +90,10 @@ get_header();
           console.log("Matching data:", data);
           const matchData = data.find(i => i.email === email);
           console.log("matchData", matchData)
-          if(matchData) {
-            const elem = document.querySelector(".email-exist");
-            if (elem) {
-              elem.classList.remove("hidden");            
-            }
-              return;
+          if (matchData.reg_status === "approved") {
+            document.querySelector(".email-exist").classList.remove("hidden");
+          } else if (matchData.reg_status === "pending") {
+            document.querySelector(".email-pending").classList.remove("hidden");
           }
           //send POST request to email verification database
           fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
