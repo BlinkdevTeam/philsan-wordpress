@@ -21,8 +21,8 @@ get_header();
                 <p class="text-[18px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
             </div>
         </div>
-         <div class="w-[50%]">
-            <form id="email-verification" class="text-black flex flex-col justify-center">
+        <div class="flex w-[50%]">
+            <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
                 <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
                     <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
