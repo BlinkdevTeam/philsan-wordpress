@@ -178,7 +178,7 @@ get_header();
                             </div>
 
                             <!-- Sponsors -->
-                             asdf
+                            
                             <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>
                             
 
