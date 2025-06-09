@@ -88,26 +88,18 @@ get_header();
       .then(response => response.json())
       .then(data => {
           console.log("Matching data:", data);
+          
           const matchData = data.find(i => i.email === email);
-          console.log("matchData", matchData)
-          if(matchData[reg_status] === "approved") {
-            const elem = document.querySelector(".email-exist").classList.remove("hidden");
-            if (elem) {
-              elem.classList.remove("hidden");            
-            }
-            return;
-          }
-
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
 
           console.log("matchData", matchData)
           
-          if (matchData[reg_status] === "approved") {
+          if (matchData["reg_status"] === "approved") {
             emailExistEl.classList.remove("hidden");
             emailPendingEl.classList.add("hidden");
             return
-          } else if (matchData[reg_status] === "pending") {
+          } else if (matchData["reg_status"] === "pending") {
             emailExistEl.classList.add("hidden");
             emailPendingEl.classList.remove("hidden");
 
