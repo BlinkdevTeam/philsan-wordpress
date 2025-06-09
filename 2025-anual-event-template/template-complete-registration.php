@@ -178,7 +178,8 @@ get_header();
                             </div>
 
                             <!-- Sponsors -->
-                            <?php get_template_part('./fields/sponsors-fields'); ?>
+                             asdf
+                            <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>
                             
 
                             <div class="flex flex-col">
