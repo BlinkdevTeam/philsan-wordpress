@@ -363,10 +363,6 @@ get_header();
         const fileInput = document.getElementById('file-input');
         const uploadText = document.getElementById('upload-text');
 
-        console.log('uploadArea', uploadArea)
-        console.log('fileInput', fileInput)
-        console.log('uploadText', uploadText)
-
         uploadArea.addEventListener('click', () => {
             console.log("You are attempting to upload an image")
             fileInput.click(); 
