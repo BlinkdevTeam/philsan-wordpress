@@ -248,151 +248,132 @@ get_header();
     const token = params.get('t');
 
     if(token) {
-        //Filter the email from the registration database
-        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
+        
+        //FILTER EMAIL FROM VERFICAITION DATABASE
+        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
             method: 'GET',
             headers: {
-            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-            'Content-Type': 'application/json',
+                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Content-Type': 'application/json',
             }
         })
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-            console.log("Matching data:", data);
+            const matchData = data.find(i => i.token === token);
             
-            const matchData = data.find(i => i.email === email);
-            document.querySelector('input[name="email"]').value = matchData.email;
-
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
-                window.location.href = "https://philsan.org/38th-convention/invalid-email";
-            } else {
-                fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+
+                //Filter the email from the registration database
+                fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
                     method: 'GET',
                     headers: {
-                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                        'Content-Type': 'application/json',
+                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'Content-Type': 'application/json',
                     }
                 })
-                .then(res => res.json())
+                .then(response => response.json())
                 .then(data => {
-                    const matchData = data.find(i => i.token === token);
-                    
-                    if(matchData) {
-                        document.querySelector('input[name="email"]').value = matchData.email;
+                    const alreadyInregistration = data.find(i => i.email === matchData.email);
 
+                    if(alreadyInregistration) {
+                        window.location.href = "https://philsan.org/38th-convention/invalid-email";
+                    } else { //else if email is not in registration meaning the user haven't submit a complete registration
                         document.getElementById('form-registration').addEventListener('submit', async function(e) {
-                            e.preventDefault();
+                        e.preventDefault();
 
-                            const first_name = document.getElementById("first_name").value
-                            const middle_name = document.getElementById("middle_name").value
-                            const last_name = document.getElementById("last_name").value
-                            const mobile = document.getElementById("mobile").value
-                            const company = document.getElementById("company").value
-                            const position = document.getElementById("position").value
-                            const agri_license = document.getElementById("agri_license").value
+                        const first_name = document.getElementById("first_name").value
+                        const middle_name = document.getElementById("middle_name").value
+                        const last_name = document.getElementById("last_name").value
+                        const mobile = document.getElementById("mobile").value
+                        const company = document.getElementById("company").value
+                        const position = document.getElementById("position").value
+                        const agri_license = document.getElementById("agri_license").value
 
-                            const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
-                            const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
-                            const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
-                            const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
-                            const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
+                        const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
+                        const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
+                        const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
+                        const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
+                        const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
-                            const fileInput = document.getElementById('file-input');
-                            const file = fileInput.files[0];
+                        const fileInput = document.getElementById('file-input');
+                        const file = fileInput.files[0];
 
-                            let filePath = null;
+                        let filePath = null;
 
-                            // Upload file to storage
-                            if (file) {
-                                const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, "_")}`;
-                                filePath = `proofs/${uniqueFileName}`;
+                        // Upload file to storage
+                        if (file) {
+                            const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, "_")}`;
+                            filePath = `proofs/${uniqueFileName}`;
 
-                                const uploadResponse = await fetch("https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/philsan-proof-of-payments/proofs/" + uniqueFileName, {
-                                    method: 'POST',
-                                    headers: {
-                                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                                        'Content-Type': file.type
-                                    },
-                                    body: file
-                                })
-                            
-                                if (!uploadResponse.ok) {
-                                    alert("File upload failed.");
-                                    return;
-                                }
-                            }
-
-                            // Post form data to table
-                            fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
+                            const uploadResponse = await fetch("https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/philsan-proof-of-payments/proofs/" + uniqueFileName, {
                                 method: 'POST',
                                 headers: {
                                     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                                     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                                    'Content-Type': 'application/json',
-                                    'Prefer': 'return=minimal'
+                                    'Content-Type': file.type
                                 },
-                                body: JSON.stringify({ 
-                                    email: matchData.email,
-                                    first_name,
-                                    last_name,
-                                    middle_name,
-                                    mobile,
-                                    company,
-                                    position,
-                                    agri_license,
-                                    membership,
-                                    souvenir,
-                                    certificate_needed,
-                                    sponsored,
-                                    sponsor,
-                                    payment: filePath,
-                                    reg_request: new Date().toISOString(),
-                                    reg_status: "pending",
-                                    token: matchData.token
-                                })
+                                body: file
                             })
-                            .then(response => {
-                                if (!response.ok) {
-                                    return response.json().then(error => { throw error });
-                                }
-                                console.log("response", response)
-                                window.location.href = "https://philsan.org/38th-convention/registration-successful";
-                            // emailjs.send('service_1qkyi2i', 'template_f6qckle', {
-                            //     email: matchData.email,
-                            // })
-                            // .then(function() {
-                            //     fetch(`https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification?token=eq.${matchData.token}`, {
-                            //         method: 'DELETE',
-                            //         headers: {
-                            //             'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                            //             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                            //             'Content-Type': 'application/json',
-                            //         }
-                            //     })
-                            //     window.location.href = "https://philsan.org/38th-convention/registration-successful";
-                            // }, function(error) {
-                            //     console.error('FAILED...', error);
-                            //     alert('Email failed to send!');
-                            // });
+                        
+                            if (!uploadResponse.ok) {
+                                alert("File upload failed.");
+                                return;
+                            }
+                        }
+
+                        // Post form data to table
+                        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
+                            method: 'POST',
+                            headers: {
+                                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                                'Content-Type': 'application/json',
+                                'Prefer': 'return=minimal'
+                            },
+                            body: JSON.stringify({ 
+                                email: matchData.email,
+                                first_name,
+                                last_name,
+                                middle_name,
+                                mobile,
+                                company,
+                                position,
+                                agri_license,
+                                membership,
+                                souvenir,
+                                certificate_needed,
+                                sponsored,
+                                sponsor,
+                                payment: filePath,
+                                reg_request: new Date().toISOString(),
+                                reg_status: "pending",
+                                token: matchData.token
                             })
-                            .catch(error => {
-                                console.error("Supabase error:", error);
-                                alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
-                            });
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                return response.json().then(error => { throw error });
+                            }
+                            console.log("response", response)
+                            window.location.href = "https://philsan.org/38th-convention/registration-successful";
+                        })
+                        .catch(error => {
+                            console.error("Supabase error:", error);
+                            alert("Failed to submit form: " + (error.message || JSON.stringify(error)));
                         });
-                    } else {
-                        window.location.href = "https://philsan.org/38th-convention/invalid-email";
+                    });
                     }
                 })
-                .catch(error => {
-                    console.error("Error fetching data:", error);
-                });
+            } else {
+                window.location.href = "https://philsan.org/38th-convention/invalid-email";
             }
         })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+        });
         
     } else {
         window.location.href = "https://philsan.org/404";
