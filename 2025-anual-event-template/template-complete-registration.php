@@ -338,6 +338,7 @@ get_header();
                     })
                     .then(response => {
                         if (!response.ok) {
+                            console.log("registration sent")
                             return response.json().then(error => { throw error });
                             window.location.href = "https://philsan.org/38th-convention/registration-successful";
                         }
