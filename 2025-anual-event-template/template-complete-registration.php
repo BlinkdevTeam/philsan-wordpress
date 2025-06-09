@@ -279,7 +279,7 @@ get_header();
                     const alreadyInregistration = data.find(i => i.email === matchData.email);
 
                     if(alreadyInregistration) {
-                        window.location.href = "https://philsan.org/38th-convention/invalid-email";
+                        window.location.href = "https://philsan.org/38th-convention/session-expired/";
                     } else { //else if email is not in registration meaning the user haven't submit a complete registration
                         document.getElementById('form-registration').addEventListener('submit', async function(e) {
                         e.preventDefault();
@@ -368,7 +368,7 @@ get_header();
                     }
                 })
             } else {
-                window.location.href = "https://philsan.org/38th-convention/invalid-email";
+                window.location.href = "https://philsan.org/38th-convention/session-expired/";
             }
         })
         .catch(error => {
