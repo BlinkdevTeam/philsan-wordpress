@@ -338,10 +338,10 @@ get_header();
                     })
                     .then(response => {
                         if (!response.ok) {
-                            console.log("registration sent")
                             return response.json().then(error => { throw error });
-                            window.location.href = "https://philsan.org/38th-convention/registration-successful";
                         }
+                        console.log("response", response)
+                        window.location.href = "https://philsan.org/38th-convention/registration-successful";
                     // emailjs.send('service_1qkyi2i', 'template_f6qckle', {
                     //     email: matchData.email,
                     // })

@@ -34,8 +34,8 @@ get_header();
                             placeholder="Email address"
                             class="w-full p-3 border"
                         />
-                        <p class="email-exist hidden">This email is already approved.</p>
-                        <p class="email-pending hidden">This email already has a pending registration.</p>
+                        <p class="email-exist hidden">This email is already registered</p>
+                        <p class="email-pending hidden">This email already has a pending registration</p>
                     </div>
                     <div>
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
@@ -88,7 +88,7 @@ get_header();
       .then(response => response.json())
       .then(data => {
           console.log("Matching data:", data);
-          
+
           const matchData = data.find(i => i.email === email);
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
