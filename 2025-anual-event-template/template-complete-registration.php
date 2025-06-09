@@ -176,9 +176,9 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Sponsors -->
-                            <?php get_template_part('fields/sponsors-fields'); ?>
+                            <?php get_template_part('./fields/sponsors-fields'); ?>
                             
 
                             <div class="flex flex-col">
