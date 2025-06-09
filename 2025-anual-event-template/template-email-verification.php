@@ -89,11 +89,21 @@ get_header();
       .then(data => {
           console.log("Matching data:", data);
           const matchData = data.find(i => i.email === email);
+          const emailExistEl = document.querySelector(".email-exist");
+          const emailPendingEl = document.querySelector(".email-pending");
+
           console.log("matchData", matchData)
+          
           if (matchData.reg_status === "approved") {
-            document.querySelector(".email-exist").classList.remove("hidden");
+            emailExistEl.classList.remove("hidden");
+            emailPendingEl.classList.add("hidden");
           } else if (matchData.reg_status === "pending") {
-            document.querySelector(".email-pending").classList.remove("hidden");
+            emailExistEl.classList.add("hidden");
+            emailPendingEl.classList.remove("hidden");
+          } else {
+            // Optionally hide both if status is unexpected
+            emailExistEl.classList.add("hidden");
+            emailPendingEl.classList.add("hidden");
           }
           //send POST request to email verification database
           fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
