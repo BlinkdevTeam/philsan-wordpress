@@ -89,6 +89,15 @@ get_header();
       .then(data => {
           console.log("Matching data:", data);
           const matchData = data.find(i => i.email === email);
+          console.log("matchData", matchData)
+          if(matchData[reg_status] === "approved") {
+            const elem = document.querySelector(".email-exist").classList.remove("hidden");
+            if (elem) {
+              elem.classList.remove("hidden");            
+            }
+            return;
+          }
+
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
 
@@ -97,42 +106,42 @@ get_header();
           if (matchData.reg_status === "approved") {
             emailExistEl.classList.remove("hidden");
             emailPendingEl.classList.add("hidden");
+            return
           } else if (matchData.reg_status === "pending") {
             emailExistEl.classList.add("hidden");
             emailPendingEl.classList.remove("hidden");
+
+            return
           } else {
-            // Optionally hide both if status is unexpected
-            emailExistEl.classList.add("hidden");
-            emailPendingEl.classList.add("hidden");
+            //send POST request to email verification database
+            fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+              method: 'POST',
+              headers: {
+                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+              },
+              body: JSON.stringify({ email, token: token+email })
+            }).then(response => {
+              if (response.ok) {
+                // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
+                emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+                    email: email,
+                    verification_link: " https://philsan.org/38th-convention/complete-registration?t=" + token + email
+                })
+                    .then(function() {
+                        // alert('Email sent successfully!');
+                        window.location.href = "https://philsan.org/38th-convention/visit-email";
+                    }, function(error) {
+                        console.error('FAILED...', error);
+                        alert('Email failed to send!');
+                    });
+              } else {
+                alert('Failed to store code.');
+              }
+            });
           }
-          //send POST request to email verification database
-          fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
-            method: 'POST',
-            headers: {
-              'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-              'Content-Type': 'application/json',
-              'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({ email, token: token+email })
-          }).then(response => {
-            if (response.ok) {
-              // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
-              emailjs.send('service_1qkyi2i', 'template_d71x79v', {
-                  email: email,
-                  verification_link: " https://philsan.org/38th-convention/complete-registration?t=" + token + email
-              })
-                  .then(function() {
-                      // alert('Email sent successfully!');
-                      window.location.href = "https://philsan.org/38th-convention/visit-email";
-                  }, function(error) {
-                      console.error('FAILED...', error);
-                      alert('Email failed to send!');
-                  });
-            } else {
-              alert('Failed to store code.');
-            }
-          });
       })
       .catch(error => {
         console.error("Error fetching data:", error);
