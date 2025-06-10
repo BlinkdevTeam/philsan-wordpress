@@ -356,22 +356,22 @@ get_header();
     const params = new URLSearchParams(window.location.search);
     const token = params.get('t');
 
-    const radios = document.querySelectorAll('input[name="sponsor"]');
-    const agreementContainer = document.getElementById("upload-field");
-    const agreementInput = document.getElementById("upload-input");
+    // const radios = document.querySelectorAll('input[name="sponsor"]');
+    // const agreementContainer = document.getElementById("upload-field");
+    // const agreementInput = document.getElementById("upload-input");
 
-    radios.forEach(radio => {
-        radio.addEventListener("change", () => {
-        if (radio.id === "no-sponsor" && radio.checked) {
-            agreementContainer.classList.remove("hidden");
-            agreementInput.setAttribute("required", "true");
-        } else {
-            agreementContainer.classList.add("hidden");
-            agreementInput.removeAttribute("required");
-            agreementInput.checked = false; // optional: reset it
-        }
-        });
-    });
+    // radios.forEach(radio => {
+    //     radio.addEventListener("change", () => {
+    //     if (radio.id === "no-sponsor" && radio.checked) {
+    //         agreementContainer.classList.remove("hidden");
+    //         agreementInput.setAttribute("required", "true");
+    //     } else {
+    //         agreementContainer.classList.add("hidden");
+    //         agreementInput.removeAttribute("required");
+    //         agreementInput.checked = false; // optional: reset it
+    //     }
+    //     });
+    // });
 
     if(token) {
         //FILTER EMAIL FROM VERFICAITION DATABASE
