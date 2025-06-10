@@ -187,7 +187,7 @@ get_header();
                                     <span id="upload-text">Upload</span>
                                 </div>
                                     <!-- Hidden file input -->
-                                <input id="upload-input" type="file" id="file-input" class="hidden" accept="image/*" required/>
+                                <input id="file-input"  type="file" class="hidden" accept="image/*" required/>
                             </div>
 
                             <!-- <div class="flex flex-col">
@@ -369,19 +369,22 @@ get_header();
         //for hdding the upload input and vice versa
         const radios = document.querySelectorAll('input[name="sponsor"]');
         const agreementContainer = document.getElementById("upload-field");
-        const agreementInput = document.getElementById("upload-input");
+
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const uploadText = document.getElementById('upload-text');
 
         if(radios) {
             radios.forEach(radio => {
                 radio.addEventListener("change", () => {
                 if (radio.id === "no-sponsor" && radio.checked) {
-                    agreementContainer.classList.remove("opacity-[0.5]");
-                    agreementInput.removeAttribute("required");
-                    agreementInput.addAttribute("disabled");
+                    agreementContainer.classList.add("opacity-[0.5]");
+                    fileInput.removeAttribute("required", "true");
+                    fileInput.addAttribute("disabled");
                 } else {
-                    agreementContainer.classList.remove("hiddenopacity-[0.5]");
-                    agreementInput.removeAttribute("disabled");
-                    agreementInput.checked = false; // optional: reset it
+                    agreementContainer.classList.remove("opacity-[0.5]");
+                    fileInput.removeAttribute("disabled");
+                    fileInput.checked = false; // optional: reset it
                 }
                 });
             });
@@ -389,9 +392,6 @@ get_header();
 
 
         //for uploading of file
-        const uploadArea = document.getElementById('upload-area');
-        const fileInput = document.getElementById('file-input');
-        const uploadText = document.getElementById('upload-text');
 
         if(uploadArea) {
             uploadArea.addEventListener('click', () => {
