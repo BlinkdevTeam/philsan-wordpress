@@ -208,7 +208,7 @@ get_header();
                                 id="agreement"
                                 name="agreement"
                                 type="checkbox"
-                                required
+                                disabled
                                 class="w-full p-3 border"
                             />
                         </div>
