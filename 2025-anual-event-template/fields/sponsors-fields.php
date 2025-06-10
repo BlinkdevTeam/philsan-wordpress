@@ -124,7 +124,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-6">
         <div>
-            <input type="radio" id="no-sponsor" name="sponsor" value="No Sponsor" required />
+            <input type="radio" id="no-sponsor" name="sponsor" value="No Sponsor" required  checked/>
             <label for="no-sponsor">No Sponsor</label>
         </div>
         <div>
