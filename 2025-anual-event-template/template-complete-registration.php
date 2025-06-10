@@ -366,12 +366,34 @@ get_header();
 
     // Custom Upload field
     document.addEventListener("DOMContentLoaded", () => {
+        //for hdding the upload input and vice versa
+        const radios = document.querySelectorAll('input[name="sponsor"]');
+        const agreementContainer = document.getElementById("upload-field");
+        const agreementInput = document.getElementById("upload-input");
+
+        if(radios) {
+            radios.forEach(radio => {
+                radio.addEventListener("change", () => {
+                if (radio.id === "no-sponsor" && radio.checked) {
+                    agreementContainer.classList.remove("opacity-[0.5]");
+                    agreementInput.removeAttribute("required");
+                    agreementInput.addAttribute("disabled");
+                } else {
+                    agreementContainer.classList.remove("hiddenopacity-[0.5]");
+                    agreementInput.removeAttribute("disabled");
+                    agreementInput.checked = false; // optional: reset it
+                }
+                });
+            });
+        }
+
+
         //for uploading of file
         const uploadArea = document.getElementById('upload-area');
         const fileInput = document.getElementById('file-input');
         const uploadText = document.getElementById('upload-text');
 
-        if(uploadText) {
+        if(uploadArea) {
             uploadArea.addEventListener('click', () => {
                 console.log("You are attempting to upload an image")
                 fileInput.click(); 
@@ -385,26 +407,6 @@ get_header();
                 } else {
                     uploadText.textContent = "Upload";
                 }
-            });
-        }
-
-        //for hdding the upload input and vice versa
-        const radios = document.querySelectorAll('input[name="sponsor"]');
-        const agreementContainer = document.getElementById("upload-field");
-        const agreementInput = document.getElementById("upload-input");
-
-        if(radios) {
-            radios.forEach(radio => {
-                radio.addEventListener("change", () => {
-                if (radio.id === "no-sponsor" && radio.checked) {
-                    agreementContainer.classList.add("hidden");
-                    agreementInput.setAttribute("required", "true");
-                } else {
-                    agreementContainer.classList.remove("hidden");
-                    agreementInput.removeAttribute("required");
-                    agreementInput.checked = false; // optional: reset it
-                }
-                });
             });
         }
     });
