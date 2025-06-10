@@ -182,14 +182,14 @@ get_header();
                             <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>
                             
 
-                            <div class="flex flex-col">
+                            <!-- <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
                                 <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
                                     <span id="upload-text">Upload</span>
-                                </div>
+                                </div> -->
                                   <!-- Hidden file input -->
-                                <input type="file" id="file-input" class="hidden" accept="image/*" required/>
-                            </div>
+                                <!-- <input type="file" id="file-input" class="hidden" accept="image/*" required/>
+                            </div> -->
                         </div>
                     </div>
                     <!-- agreement section -->
