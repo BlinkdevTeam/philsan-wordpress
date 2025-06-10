@@ -73,7 +73,7 @@ get_header();
       e.preventDefault();
 
       const spinner = document.getElementById('spinner');
-      const submitButton = docucment.getElementById('submit-buttom')
+      const submitButton = document.getElementById('submit-buttom')
       const token = generateToken(16);
       const email = document.getElementById("email").value
 
