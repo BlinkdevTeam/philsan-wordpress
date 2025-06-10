@@ -371,12 +371,12 @@ get_header();
                 radio.addEventListener("change", () => {
                 if (radio.id === "no-sponsor" && radio.checked) {
                     agreementContainer.classList.remove("opacity-[0.5]");
-                    fileInput.setAttribute("required");
-                    fileInput.removeAttribute("disabled", "true");
+                    fileInput.setAttribute("required", "true");
+                    fileInput.removeAttribute("disabled");
                 } else {
                     agreementContainer.classList.add("opacity-[0.5]");
-                    fileInput.removeAttribute("required", "true");
-                    fileInput.setAttribute("disabled");
+                    fileInput.removeAttribute("required");
+                    fileInput.setAttribute("disabled", "true");
                 }
                 });
             });
