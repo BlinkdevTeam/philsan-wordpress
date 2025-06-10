@@ -367,22 +367,22 @@ get_header();
     // Custom Upload field
     document.addEventListener("DOMContentLoaded", () => {
         //for uploading of file
-        const uploadArea = document.getElementById('upload-area');
-        const fileInput = document.getElementById('file-input');
-        const uploadText = document.getElementById('upload-text');
+        // const uploadArea = document.getElementById('upload-area');
+        // const fileInput = document.getElementById('file-input');
+        // const uploadText = document.getElementById('upload-text');
 
-        uploadArea.addEventListener('click', () => {
-            console.log("You are attempting to upload an image")
-            fileInput.click(); 
-        });
+        // uploadArea.addEventListener('click', () => {
+        //     console.log("You are attempting to upload an image")
+        //     fileInput.click(); 
+        // });
 
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files.length > 0) {
-                uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
-            } else {
-                uploadText.textContent = "Upload";
-            }
-        });
+        // fileInput.addEventListener('change', () => {
+        //     if (fileInput.files.length > 0) {
+        //         uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
+        //     } else {
+        //         uploadText.textContent = "Upload";
+        //     }
+        // });
 
         //for hdding the upload input and vice versa
         const radios = document.querySelectorAll('input[name="sponsor"]');
