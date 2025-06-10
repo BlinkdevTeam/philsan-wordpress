@@ -181,7 +181,7 @@ get_header();
                             
                             <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
                             
-                            <div id="upload-field" class="flex flex-col hidden">
+                            <div id="upload-field" class="flex flex-col opacity-[0.5]">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
                                 <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
                                     <span id="upload-text">Upload</span>
