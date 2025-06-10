@@ -181,7 +181,7 @@ get_header();
                             
                             <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
                             
-                            <div id="upload-field" class="flex flex-col opacity-[0.5]">
+                            <div id="upload-field" class="flex flex-col opacity-[0.5] transition-all duration-200 ease">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
                                 <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
                                     <span id="upload-text">Upload</span>
@@ -190,14 +190,6 @@ get_header();
                                 <input id="file-input"  type="file" class="hidden" accept="image/*" disabled/>
                             </div>
 
-                            <!-- <div class="flex flex-col">
-                                <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
-                                <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
-                                    <span id="upload-text">Upload</span>
-                                </div> -->
-                                  <!-- Hidden file input -->
-                                <!-- <input type="file" id="file-input" class="hidden" accept="image/*" required/>
-                            </div> -->
                         </div>
                     </div>
                     <!-- agreement section -->
@@ -380,11 +372,11 @@ get_header();
                 if (radio.id === "no-sponsor" && radio.checked) {
                     agreementContainer.classList.add("opacity-[0.5]");
                     fileInput.removeAttribute("required");
-                    fileInput.addAttribute("disabled", "true");
+                    fileInput.setAttribute("disabled", "true");
                 } else {
                     agreementContainer.classList.remove("opacity-[0.5]");
-                    fileInput.removeAttribute("disabled");
                     fileInput.addAttribute("required", "true");
+                    fileInput.removeAttribute("disabled");
                     fileInput.checked = false; // optional: reset it
                 }
                 });
