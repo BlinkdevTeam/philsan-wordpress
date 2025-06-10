@@ -234,23 +234,6 @@ get_header();
     const token = params.get('t');
 
     if(token) {
-        const radios = document.querySelectorAll('input[name="sponsor"]');
-        const agreementContainer = document.getElementById("upload-field");
-        const agreementInput = document.getElementById("upload-input");
-
-        radios.forEach(radio => {
-            radio.addEventListener("change", () => {
-            if (radio.id === "no-sponsor" && radio.checked) {
-                agreementContainer.classList.remove("hidden");
-                agreementInput.setAttribute("required", "true");
-            } else {
-                agreementContainer.classList.add("hidden");
-                agreementInput.removeAttribute("required");
-                agreementInput.checked = false; // optional: reset it
-            }
-            });
-        });
-        
         //FILTER EMAIL FROM VERFICAITION DATABASE
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
             method: 'GET',
