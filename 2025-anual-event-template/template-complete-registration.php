@@ -163,7 +163,7 @@ get_header();
                             </div>
 
                             <!-- Sponsored Registration -->
-                            <div class="flex flex-col">
+                            <!-- <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Sponsored Registration?</p>
                                 <div class="flex gap-[20px]">
                                     <div>
@@ -175,7 +175,7 @@ get_header();
                                         <label for="sponsored_no">No</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- Sponsors -->
                             
