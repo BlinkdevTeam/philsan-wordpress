@@ -264,7 +264,7 @@
 
     radios.forEach(radio => {
         radio.addEventListener("change", () => {
-        if (radio.id === "no-sponsor" && !radio.checked) {
+        if (radio.id === "no-sponsor" && radio.checked) {
             agreementContainer.classList.remove("hidden");
             agreementInput.setAttribute("required", "true");
         } else {
