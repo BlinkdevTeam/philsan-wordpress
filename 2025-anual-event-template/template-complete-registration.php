@@ -187,7 +187,7 @@ get_header();
                                     <span id="upload-text">Upload</span>
                                 </div>
                                     <!-- Hidden file input -->
-                                <input id="file-input"  type="file" class="hidden" accept="image/*" required/>
+                                <input id="file-input"  type="file" class="hidden" accept="image/*" disabled/>
                             </div>
 
                             <!-- <div class="flex flex-col">
@@ -208,7 +208,7 @@ get_header();
                                 id="agreement"
                                 name="agreement"
                                 type="checkbox"
-                                disabled
+                                required
                                 class="w-full p-3 border"
                             />
                         </div>
