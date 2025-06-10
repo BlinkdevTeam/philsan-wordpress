@@ -371,40 +371,42 @@ get_header();
         const fileInput = document.getElementById('file-input');
         const uploadText = document.getElementById('upload-text');
 
-        console.log("uploadArea:", uploadArea);
+        if(uploadText) {
+            uploadArea.addEventListener('click', () => {
+                console.log("You are attempting to upload an image")
+                fileInput.click(); 
+            });
+        }
 
-        // uploadArea.addEventListener('click', () => {
-        //     console.log("You are attempting to upload an image")
-        //     fileInput.click(); 
-        // });
-
-        // fileInput.addEventListener('change', () => {
-        //     if (fileInput.files.length > 0) {
-        //         uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
-        //     } else {
-        //         uploadText.textContent = "Upload";
-        //     }
-        // });
+        if(fileInput) {
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length > 0) {
+                    uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
+                } else {
+                    uploadText.textContent = "Upload";
+                }
+            });
+        }
 
         //for hdding the upload input and vice versa
         const radios = document.querySelectorAll('input[name="sponsor"]');
         const agreementContainer = document.getElementById("upload-field");
         const agreementInput = document.getElementById("upload-input");
 
-        console.log("radios:", radios);
-
-        // radios.forEach(radio => {
-        //     radio.addEventListener("change", () => {
-        //     if (radio.id === "no-sponsor" && radio.checked) {
-        //         agreementContainer.classList.remove("hidden");
-        //         agreementInput.setAttribute("required", "true");
-        //     } else {
-        //         agreementContainer.classList.add("hidden");
-        //         agreementInput.removeAttribute("required");
-        //         agreementInput.checked = false; // optional: reset it
-        //     }
-        //     });
-        // });
+        if(radios) {
+            radios.forEach(radio => {
+                radio.addEventListener("change", () => {
+                if (radio.id === "no-sponsor" && radio.checked) {
+                    agreementContainer.classList.remove("hidden");
+                    agreementInput.setAttribute("required", "true");
+                } else {
+                    agreementContainer.classList.add("hidden");
+                    agreementInput.removeAttribute("required");
+                    agreementInput.checked = false; // optional: reset it
+                }
+                });
+            });
+        }
     });
 
 </script>
