@@ -181,6 +181,14 @@ get_header();
                             
                             <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>
                             
+                            <div id="upload-field" class="flex flex-col hidden">
+                                <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
+                                <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
+                                    <span id="upload-text">Upload</span>
+                                </div>
+                                    <!-- Hidden file input -->
+                                <input id="upload-input" type="file" id="file-input" class="hidden" accept="image/*" required/>
+                            </div>
 
                             <!-- <div class="flex flex-col">
                                 <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
@@ -226,6 +234,22 @@ get_header();
     const token = params.get('t');
 
     if(token) {
+        const radios = document.querySelectorAll('input[name="sponsor"]');
+        const agreementContainer = document.getElementById("upload-field");
+        const agreementInput = document.getElementById("upload-input");
+
+        radios.forEach(radio => {
+            radio.addEventListener("change", () => {
+            if (radio.id === "no-sponsor" && radio.checked) {
+                agreementContainer.classList.remove("hidden");
+                agreementInput.setAttribute("required", "true");
+            } else {
+                agreementContainer.classList.add("hidden");
+                agreementInput.removeAttribute("required");
+                agreementInput.checked = false; // optional: reset it
+            }
+            });
+        });
         
         //FILTER EMAIL FROM VERFICAITION DATABASE
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
