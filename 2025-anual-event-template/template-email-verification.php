@@ -38,6 +38,9 @@ get_header();
                         <p class="email-pending hidden">This email already has a pending registration</p>
                     </div>
                     <div>
+                        <div id="spinner" class="hidden flex items-center justify-center">
+                          <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-green-600 border-t-green-600"></div>
+                        </div>
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
                     </div>
                 </div>
@@ -69,12 +72,11 @@ get_header();
     document.getElementById('email-verification').addEventListener('submit', function(e) {
       e.preventDefault();
 
-
+      const spinner = document.getElementById('spinner');
       const token = generateToken(16);
       const email = document.getElementById("email").value
 
-      console.log("email", email)
-      console.log("Generated Token:", token);
+      spinner.classList.remove("hidden");
 
       //Filter the email from the registration database
       fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
@@ -125,6 +127,7 @@ get_header();
                 })
                     .then(function() {
                         // alert('Email sent successfully!');
+                        spinner.classList.add("hidden");
                         window.location.href = "https://philsan.org/38th-convention/visit-email";
                     }, function(error) {
                         console.error('FAILED...', error);
