@@ -244,7 +244,7 @@
     </div>
     </div>
 
-    <div id="upload-field" class="flex flex-col hidden absolute bottom-[0px] right-0">
+    <div id="upload-field" class="flex flex-col hidden">
         <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment</p>
         <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
             <span id="upload-text">Upload</span>
