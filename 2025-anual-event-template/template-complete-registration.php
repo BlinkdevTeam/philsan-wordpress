@@ -279,7 +279,7 @@ get_header();
                         const membership = document.querySelector('input[name="membership"]:checked')?.value || null;
                         const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
                         const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
-                        const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
+                        // const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
                         const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
 
                         const fileInput = document.getElementById('file-input');
@@ -331,7 +331,7 @@ get_header();
                                 membership,
                                 souvenir,
                                 certificate_needed,
-                                sponsored,
+                                sponsored: null,
                                 sponsor,
                                 payment: filePath,
                                 reg_request: new Date().toISOString(),
