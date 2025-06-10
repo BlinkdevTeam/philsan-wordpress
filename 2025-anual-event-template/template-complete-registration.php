@@ -262,10 +262,12 @@ get_header();
 
                     if(alreadyInregistration) {
                         window.location.href = "https://philsan.org/38th-convention/session-expired/";
-                    } else { //else if email is not in registration meaning the user haven't submit a complete registration
+                    } else { 
+                        //this is the trigger of submit
+                        //else if email is not in registration meaning the user haven't submit a complete registration
                         document.getElementById('form-registration').addEventListener('submit', async function(e) {
                         e.preventDefault();
-
+                        
                         const first_name = document.getElementById("first_name").value
                         const middle_name = document.getElementById("middle_name").value
                         const last_name = document.getElementById("last_name").value
@@ -284,7 +286,7 @@ get_header();
                         const file = fileInput.files[0];
 
                         let filePath = null;
-
+                        
                         // Upload file to storage
                         if (file) {
                             const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, "_")}`;
@@ -299,14 +301,16 @@ get_header();
                                 },
                                 body: file
                             })
-                        
+                            
+                            //trigger spinner
+                            spinner.classList.remove("hidden");
                             if (!uploadResponse.ok) {
                                 alert("File upload failed.");
                                 return;
                             }
                         }
 
-                        // Post form data to table
+                        // Post the form data to table
                         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_registration_2025', {
                             method: 'POST',
                             headers: {
@@ -339,7 +343,7 @@ get_header();
                             if (!response.ok) {
                                 return response.json().then(error => { throw error });
                             }
-                            console.log("response", response)
+                            spinner.classList.add("hidden");
                             window.location.href = "https://philsan.org/38th-convention/registration-successful";
                         })
                         .catch(error => {
