@@ -242,24 +242,3 @@
     </div>
     </div>
 
-<script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script>
-    const radios = document.querySelectorAll('input[name="sponsor"]');
-    const agreementContainer = document.getElementById("upload-field");
-    const agreementInput = document.getElementById("upload-input");
-
-    radios.forEach(radio => {
-        radio.addEventListener("change", () => {
-        if (radio.id === "no-sponsor" && radio.checked) {
-            agreementContainer.classList.remove("hidden");
-            agreementInput.setAttribute("required", "true");
-        } else {
-            agreementContainer.classList.add("hidden");
-            agreementInput.removeAttribute("required");
-            agreementInput.checked = false; // optional: reset it
-        }
-        });
-    });
-</script>
