@@ -367,27 +367,31 @@ get_header();
     // Custom Upload field
     document.addEventListener("DOMContentLoaded", () => {
         //for uploading of file
-        // const uploadArea = document.getElementById('upload-area');
-        // const fileInput = document.getElementById('file-input');
-        // const uploadText = document.getElementById('upload-text');
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const uploadText = document.getElementById('upload-text');
 
-        // uploadArea.addEventListener('click', () => {
-        //     console.log("You are attempting to upload an image")
-        //     fileInput.click(); 
-        // });
+        console.log("uploadArea:", uploadArea);
 
-        // fileInput.addEventListener('change', () => {
-        //     if (fileInput.files.length > 0) {
-        //         uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
-        //     } else {
-        //         uploadText.textContent = "Upload";
-        //     }
-        // });
+        uploadArea.addEventListener('click', () => {
+            console.log("You are attempting to upload an image")
+            fileInput.click(); 
+        });
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                uploadText.textContent = `Selected: ${fileInput.files[0].name}`;
+            } else {
+                uploadText.textContent = "Upload";
+            }
+        });
 
         //for hdding the upload input and vice versa
         const radios = document.querySelectorAll('input[name="sponsor"]');
         const agreementContainer = document.getElementById("upload-field");
         const agreementInput = document.getElementById("upload-input");
+
+        console.log("radios:", radios);
 
         radios.forEach(radio => {
             radio.addEventListener("change", () => {
