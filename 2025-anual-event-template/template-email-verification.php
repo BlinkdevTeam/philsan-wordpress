@@ -37,11 +37,11 @@ get_header();
                         <p class="email-exist hidden">This email is already registered</p>
                         <p class="email-pending hidden">This email already has a pending registration</p>
                     </div>
-                    <div>
+                    <div class="flex gap-[20px] items-center ">
+                        <button id="submit-button" type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
                         <div id="spinner" class="hidden flex items-center justify-center">
-                          <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-green-600 border-t-green-600"></div>
+                          <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                         </div>
-                        <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
                     </div>
                 </div>
             </form>
@@ -73,6 +73,7 @@ get_header();
       e.preventDefault();
 
       const spinner = document.getElementById('spinner');
+      const submitButton = docucment.getElementById('submit-buttom')
       const token = generateToken(16);
       const email = document.getElementById("email").value
 
@@ -89,13 +90,10 @@ get_header();
       })
       .then(response => response.json())
       .then(data => {
-          console.log("Matching data:", data);
 
           const matchData = data.find(i => i.email === email);
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
-
-          console.log("matchData", matchData)
           
           if(matchData) {
             if (matchData["reg_status"] === "approved") {

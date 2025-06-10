@@ -205,8 +205,11 @@ get_header();
                             />
                         </div>
                     </div>
-                    <div>
+                    <div class="flex gap-[20px]">
                         <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                        <div id="spinner" class="hidden flex items-center justify-center">
+                          <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                        </div>
                     </div>
               </div>
           </form>
@@ -224,8 +227,10 @@ get_header();
 
     const params = new URLSearchParams(window.location.search);
     const token = params.get('t');
+    const spinner = document.getElementById('spinner');
 
     if(token) {
+        console.log("token", token)
         //FILTER EMAIL FROM VERFICAITION DATABASE
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
             method: 'GET',
