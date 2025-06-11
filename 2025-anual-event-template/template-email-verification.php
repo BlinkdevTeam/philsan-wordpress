@@ -95,6 +95,7 @@ get_header();
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
           
+          console.log("matchData", matchData)
           if(matchData) {
             if (matchData["reg_status"] === "approved") {
               emailExistEl.classList.remove("hidden");
