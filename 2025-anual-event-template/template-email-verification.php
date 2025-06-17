@@ -15,11 +15,12 @@ get_header();
 <div class="mx-auto w-[1280px]">
     <div class="flex w-[100%] py-[20px] h-[100vh]">
         <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
-            <div class="flex flex-col gap-[20px]">
+            <!-- <div class="flex flex-col gap-[20px]">
                 <h2 class="text-[38px]">Philsan</h2>
                 <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
                 <p class="text-[18px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
-            </div>
+            </div> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/PHILSAN_LOGO.png" alt="Logo" class="mx-auto" />
         </div>
         <div class="flex w-[50%]">
             <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
