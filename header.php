@@ -9,7 +9,8 @@
 
 <header class="bg-white shadow-md">
   <div class="container mx-auto flex items-center justify-between px-4 py-4">
-
+  
+  <?php if (!is_page_template('template-email-verification.php')) : ?>
     <!-- Logo -->
     <div class="flex-shrink-0">
       <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -30,4 +31,5 @@
     </nav>
 
   </div>
+  <?php endif; ?>
 </header>

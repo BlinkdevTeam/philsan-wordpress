@@ -20,7 +20,7 @@ get_header();
                 <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
                 <p class="text-[18px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
             </div> -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/PHILSAN_LOGO.png" alt="Logo" class="mx-auto" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/convention_logo.png" alt="Logo" class="mx-auto" />
         </div>
         <div class="flex w-[50%]">
             <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
