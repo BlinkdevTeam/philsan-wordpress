@@ -18,7 +18,7 @@ $templates_to_hide = [
   'template-visit-email.php'
 ];
 
-$slugs_to_hide = ['login', 'signup', 'verify-email']; // include CPT slugs too
+$slugs_to_hide = ['login', 'signup', 'verify-email', 'registration-successful', 'invalid-email', 'session-expired', 'visit-email']; // include CPT slugs too
 $post_types_to_check = ['page', '38th-convention']; // 'convention' is your CPT name
 
 $current_template = get_page_template_slug();
@@ -56,7 +56,6 @@ if (!$should_hide_nav_or_footer) :
       </div>
 
       <!-- Navigation Menu -->
-       <p>Edited</p>
       <nav>
         <?php
         wp_nav_menu(array(

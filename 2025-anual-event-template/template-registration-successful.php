@@ -16,9 +16,9 @@ get_header();
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center px-[50px]">
                   <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                     <div class="">
-                        <img src="https://philsan.org/wp-content/uploads/2025/06/Sent-Philsan-1.png" alt="">
+                        <img src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Icon-1.png" alt="">
                     </div>  
-                    <p className="text-[22px] font-poppins">A verification link has been sent to your email. Please check your inbox (and spam folder) to complete your registration</p>
+                    <p class="text-[22px] font-poppins"><strong class="text-[#1F773A] font-bold">PHILSAN will review your registration.</strong> Once approved, you will receive a confirmation email along with your QR code.</p>
                   </div>
               </form>
           </div>
