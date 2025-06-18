@@ -11,7 +11,7 @@ get_header();
     the_post();
 ?>
 
-<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] overflow-hidden w-full relative flex- flex-col">
+<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] overflow-hidden w-full relative flex flex-col gap-[20px]">
   <div class="mx-auto w-[90%] xl:w-[1280px] h-[100vh] flex items-center">
       <div class="flex w-[100%] h-max">
           <div class="w-[50%] px-[50px] flex flex-col gap-[20px] justify-center items-center text-center">
