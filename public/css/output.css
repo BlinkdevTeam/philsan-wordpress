@@ -749,6 +749,10 @@ video {
   height: 100%;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1161,6 +1165,10 @@ video {
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'https\:\/\/philsan\.org\/wp-content\/uploads\/2025\/06\/17580-1-scaled\.png\'\)\] {
+  background-image: url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png');
 }
 
 .from-\[\#176524\] {

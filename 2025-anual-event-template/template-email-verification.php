@@ -12,7 +12,7 @@ get_header();
 ?>
 
 
-<div class="mx-auto w-[1280px]">
+<div class="mx-auto w-[1280px] bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-64 w-full">
     <div class="flex w-[100%] py-[20px] h-[100vh]">
         <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
             <!-- <div class="flex flex-col gap-[20px]">
@@ -20,7 +20,7 @@ get_header();
                 <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
                 <p class="text-[18px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
             </div> -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/convention_logo.png" alt="Logo" class="mx-auto" />
+            <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
         </div>
         <div class="flex w-[50%]">
             <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
@@ -48,6 +48,9 @@ get_header();
             </form>
         </div>
     </div>
+</div>
+<div>
+  <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
 </div>
 
 <script type="text/javascript"
