@@ -19,16 +19,16 @@ get_header();
               <div class="flex flex-col justify-center items-center text-center gap-[20px]">
                   <p class="text-[22px] text-center">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
                   <p class="text-[38px] font-bold text-[#1F773A]">September 30, 2025</p>
-                  <div class="bg-gradient-to-r from-[#1F773A] to-[#EDB221] w-max px-[50px] py-[10px] rounded-tl-full rounded-br-full">
+                  <div class="bg-gradient-to-r from-[#1F773A] to-[#EDB221] w-max px-[50px] py-[10px] rounded-tl-[40px] rounded-br-[40px]">
                     <p class="text-[22px] text-[#ffffff]">Okada Manila Paranaque City, Philippines</p>
                   </div>
               </div>
           </div>
           <div class="flex w-[50%]">
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
-                  <div class="w-auto h-auto flex flex-col justify-center px-[10px] py-[10px] rounded text-start bg-gradient-to-b from-[#ffffff] to-[#CBF9B6] shadow-lg">
+                  <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-gradient-to-b from-[#ffffff] to-[#CBF9B6] shadow-lg">
                     <h2 class="text-[38px] text-[#1F773A]">Register</h2>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col py-[20px]">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
                         <input
                             id="email"
@@ -42,7 +42,7 @@ get_header();
                         <p class="email-pending hidden">This email already has a pending registration</p>
                     </div>
                     <div class="flex gap-[20px] items-center ">
-                        <button id="submit-button" type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                        <button id="submit-button" type="submit" class="py-[20px] px-[30px]  w-[148px] h-[60px] submit bg-[#EDB221] hover:bg-[#32bd49] text-[#ffffff] cursor-pointer rounded-tl-[40px] rounded-br-[40px]">Submit</button>
                         <div id="spinner" class="hidden flex items-center justify-center">
                           <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                         </div>
