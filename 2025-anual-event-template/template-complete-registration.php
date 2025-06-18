@@ -10,11 +10,11 @@ get_header();
     the_post();
 ?>
 
-<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] overflow-hidden w-full relative flex flex-col gap-[20px]">
+<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] w-full relative flex flex-col gap-[20px]">
     <div class="mx-auto w-[1280px]">
         <div class="flex w-[100%] py-[20px]">
             <div class="w-[100%]">
-                <div class="py-[50px]">
+                <div class="py-[50px] w-[200px]">
                     <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
                 </div>
                 <form id="form-registration" class="text-black flex flex-col justify-center">
