@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,css}", // if you have JS or CSS in a src folder
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        corben: ['corben', 'sans-serif'], // use as font-shrikhand
+      },
+    },
   },
   plugins: [],
 };
