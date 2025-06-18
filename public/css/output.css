@@ -839,6 +839,10 @@ video {
   width: 90%;
 }
 
+.w-\[150px\] {
+  width: 150px;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -1005,6 +1009,10 @@ video {
 
 .gap-\[40px\] {
   gap: 40px;
+}
+
+.gap-\[30px\] {
+  gap: 30px;
 }
 
 .gap-x-6 {
@@ -1381,6 +1389,10 @@ video {
 
 .pl-8 {
   padding-left: 2rem;
+}
+
+.pb-\[30px\] {
+  padding-bottom: 30px;
 }
 
 .text-center {
