@@ -1074,6 +1074,14 @@ video {
   border-top-left-radius: 30px;
 }
 
+.rounded-br-full {
+  border-bottom-right-radius: 9999px;
+}
+
+.rounded-tl-full {
+  border-top-left-radius: 9999px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1307,6 +1315,11 @@ video {
   padding-bottom: 10px;
 }
 
+.px-\[50px\] {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1476,6 +1489,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#1F773A\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 119 58 / var(--tw-text-opacity, 1));
 }
 
 .underline {

@@ -14,13 +14,13 @@ get_header();
 <div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] overflow-hidden w-full relative">
   <div class="mx-auto w-[1280px]">
       <div class="flex w-[100%] py-[20px]">
-          <div class="w-[50%] p-[50px] flex flex-col gap-[20px] justify-center items-center">
+          <div class="w-[50%] p-[50px] flex flex-col gap-[20px] justify-center items-center text-center">
               <img width="60%" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
-              <div class="flex flex-col gap-[20px]">
-                  <p class="text-[22px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
-                  <h2 class="text-[38px] font-bold">September 30, 2025</h2>
-                  <div class="bg-gradient-to-r from-blue-500 to-green-500 w-max px-[10px] py-[10px]">
-                    <p class="text-[22px]">Okada Manila Paranaque City, Philippines</p>
+              <div class="flex flex-col justify-center items-center text-center gap-[20px]">
+                  <p class="text-[22px] text-center">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
+                  <p class="text-[38px] font-bold text-[#1F773A]">September 30, 2025</p>
+                  <div class="bg-gradient-to-r from-blue-500 to-green-500 w-max px-[50px] py-[10px] rounded-tl-full rounded-br-full">
+                    <p class="text-[22px] text-[#ffffff]">Okada Manila Paranaque City, Philippines</p>
                   </div>
               </div>
           </div>
