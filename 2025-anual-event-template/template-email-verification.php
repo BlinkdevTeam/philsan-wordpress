@@ -11,45 +11,48 @@ get_header();
     the_post();
 ?>
 
-
-<div class="mx-auto w-[1280px] bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-64 w-full">
-    <div class="flex w-[100%] py-[20px] h-[100vh]">
-        <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
-            <!-- <div class="flex flex-col gap-[20px]">
-                <h2 class="text-[38px]">Philsan</h2>
-                <h1 class="text-[48px] font-bold">Philippine Society of Animal Nutritionists' 38ᵗʰ ANNUAL CONVENTION</h1>
-                <p class="text-[18px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
-            </div> -->
-            <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
-        </div>
-        <div class="flex w-[50%]">
-            <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
-                <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                    <div class="flex flex-col">
-                        <p class="sub-bi-heading text-[#344054]">Your email</p>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            required
-                            placeholder="Email address"
-                            class="w-full p-3 border"
-                        />
-                        <p class="email-exist hidden">This email is already registered</p>
-                        <p class="email-pending hidden">This email already has a pending registration</p>
-                    </div>
-                    <div class="flex gap-[20px] items-center ">
-                        <button id="submit-button" type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                        <div id="spinner" class="hidden flex items-center justify-center">
-                          <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-full w-full">
+  <div class="mx-auto w-[1280px]">
+      <div class="flex w-[100%] py-[20px] h-[100vh]">
+          <div class="bg-[#F6F5F3] w-[50%] p-[50px] flex justify-center items-center">
+              <img width="60%" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
+              <div class="flex flex-col gap-[20px]">
+                  <p class="text-[38px]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
+                  <h1 class="text-[48px] font-bold">September 30, 2025</h1>
+                  <div class="">
+                    <p class="text-[18px]">Okada Manila Paranaque City, Philippines</p>
+                  </div>
+              </div>
+          </div>
+          <div class="flex w-[50%]">
+              <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
+                  <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
+                      <div class="flex flex-col">
+                          <p class="sub-bi-heading text-[#344054]">Your email</p>
+                          <input
+                              id="email"
+                              name="email"
+                              type="email"
+                              required
+                              placeholder="Email address"
+                              class="w-full p-3 border"
+                          />
+                          <p class="email-exist hidden">This email is already registered</p>
+                          <p class="email-pending hidden">This email already has a pending registration</p>
+                      </div>
+                      <div class="flex gap-[20px] items-center ">
+                          <button id="submit-button" type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                          <div id="spinner" class="hidden flex items-center justify-center">
+                            <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
 </div>
-<div>
+<div class="absolute bottom-[-120px]">
   <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
 </div>
 

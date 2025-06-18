@@ -628,6 +628,10 @@ video {
   top: 0.5rem;
 }
 
+.bottom-\[-120px\] {
+  bottom: -120px;
+}
+
 .z-0 {
   z-index: 0;
 }
