@@ -11,9 +11,9 @@ get_header();
     the_post();
 ?>
 
-<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-full w-full">
+<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] overflow-hidden w-full relative">
   <div class="mx-auto w-[1280px]">
-      <div class="flex w-[100%] py-[20px] h-[100vh]">
+      <div class="flex w-[100%] py-[20px]">
           <div class="w-[50%] p-[50px] flex flex-col gap-[20px] justify-center items-center">
               <img width="60%" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
               <div class="flex flex-col gap-[20px]">
@@ -52,9 +52,9 @@ get_header();
           </div>
       </div>
   </div>
-</div>
-<div class="absolute bottom-[-120px]">
-  <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
+  <div class="absolute bottom-[-120px]">
+    <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
+  </div>
 </div>
 
 <script type="text/javascript"
