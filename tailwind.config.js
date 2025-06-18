@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         corben: ['corben', 'sans-serif'], // use as font-shrikhand
+        fraunces: ['fraunces', 'sans-serif'],
+        poppins: ['poppins', 'sans-serif'],
       },
     },
   },

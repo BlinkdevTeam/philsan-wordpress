@@ -17,17 +17,17 @@ get_header();
           <div class="w-[50%] p-[50px] flex flex-col gap-[20px] justify-center items-center text-center">
               <img width="60%" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
               <div class="flex flex-col justify-center items-center text-center gap-[20px]">
-                  <p class="text-[22px] text-center">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
-                  <p class="text-[38px] font-bold text-[#1F773A] font-corben">September 30, 2025</p>
+                  <p class="text-[22px] text-center font-poppins">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
+                  <p class="text-[38px] font-bold text-[#1F773A] font-fraunces">September 30, 2025</p>
                   <div class="bg-gradient-to-r from-[#1F773A] to-[#EDB221] w-max px-[50px] py-[10px] rounded-tl-[40px] rounded-br-[40px]">
-                    <p class="text-[22px] text-[#ffffff]">Okada Manila Paranaque City, Philippines</p>
+                    <p class="text-[22px] text-[#ffffff] font-fraunces">Okada Manila Paranaque City, Philippines</p>
                   </div>
               </div>
           </div>
           <div class="flex w-[50%]">
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
-                  <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-gradient-to-b from-[#ffffff] to-[#CBF9B6] shadow-lg">
-                    <h2 class="text-[38px] text-[#1F773A]">Register</h2>
+                  <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg">
+                    <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                     <div class="flex flex-col py-[20px]">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
                         <input
@@ -42,7 +42,7 @@ get_header();
                         <p class="email-pending hidden">This email already has a pending registration</p>
                     </div>
                     <div class="flex gap-[20px] items-center ">
-                        <button id="submit-button" type="submit" class="py-[20px] px-[30px]  w-[148px] h-[60px] submit bg-[#32bd49] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[40px] rounded-br-[40px]">Submit</button>
+                        <button id="submit-button" type="submit" class="py-[20px] px-[30px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
                         <div id="spinner" class="hidden flex items-center justify-center">
                           <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                         </div>
