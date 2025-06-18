@@ -41,9 +41,7 @@ get_header();
           </div>
       </div>
   </div>
-  <div class="mb-[-170px]">
-    <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
-  </div>
+  <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
 </div>
 
 <script type="text/javascript"

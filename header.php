@@ -6,6 +6,7 @@
   <?php wp_head(); ?>
 </head>
 
+<body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col'); ?>>
 
 <?php
 $templates_to_hide = [
@@ -35,12 +36,6 @@ $hide_by_slug_and_type = in_array($current_type, $post_types_to_check) && in_arr
 // Final condition
 $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type;
 ?>
-
-<?php if (!$should_hide_nav_or_footer): ?>
-  <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col'); ?>>
-<?php else: ?>
-  <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col overflow-x-hidden'); ?>>
-<?php endif; ?>
 
 <?php
 if (!$should_hide_nav_or_footer) :
