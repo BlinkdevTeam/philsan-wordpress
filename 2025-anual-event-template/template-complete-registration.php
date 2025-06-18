@@ -14,9 +14,11 @@ get_header();
     <div class="mx-auto w-[1280px]">
         <div class="flex w-[100%] py-[20px]">
             <div class="w-[100%]">
+                <img width="60%" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
                 <form id="form-registration" class="text-black flex flex-col justify-center">
-                    <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                        <div class="flex justify-between gap-[40px]">
+                    <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
+                        <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
+                        <div class="flex justify-between gap-[40px] pt-[20px]">
 
                             <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
                             <!-- checkbox section -->
@@ -62,6 +64,9 @@ get_header();
             </form>
             </div>
         </div>
+    </div>
+    <div class="mb-[-170px]">
+        <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
     </div>
 </div>
 
