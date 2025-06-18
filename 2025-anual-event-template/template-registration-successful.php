@@ -12,7 +12,7 @@ get_header();
           <div class="flex w-[50%]">
                 <div id="email-verification" class="w-[100%] text-black flex flex-col justify-center px-[50px]">
                     <div class="w-auto flex flex-col gap-[50px] justify-start h-auto px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
-                        <div class="flex flex-col justify-center item-center gap-[30px]">
+                        <div class="flex flex-col justify-center items-center gap-[30px]">
                             <div class="w-[150px]">
                                 <img src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Icon-1.png" alt="">
                             </div>  
