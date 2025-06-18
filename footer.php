@@ -9,20 +9,22 @@ $templates_to_hide = [
   'template-visit-email.php'
 ];
 
-// Optional: Slugs where nav/footer should also be hidden (only for pages)
-$slugs_to_hide = ['login', 'signup'];
+$slugs_to_hide = ['login', 'signup', 'verify-email']; // include CPT slugs too
+$post_types_to_check = ['page', '38th-convention']; // 'convention' is your CPT name
 
-// Get current template slug
 $current_template = get_page_template_slug();
-
-// Check if current template is in the list
 $hide_by_template = in_array($current_template, $templates_to_hide);
 
-// Check if it's a page and its slug matches
-$hide_by_slug = is_page() && in_array(get_post_field('post_name', get_post()), $slugs_to_hide);
+// Get slug and post type
+$current_post = get_post();
+$current_slug = get_post_field('post_name', $current_post);
+$current_type = get_post_type($current_post);
 
-// FINAL condition
-$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug;
+// Match if post type is in list and slug is in hidden list
+$hide_by_slug_and_type = in_array($current_type, $post_types_to_check) && in_array($current_slug, $slugs_to_hide);
+
+// Final condition
+$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type;
 
 if (!$should_hide_nav_or_footer) :
 ?>
