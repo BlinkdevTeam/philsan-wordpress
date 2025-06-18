@@ -632,6 +632,10 @@ video {
   top: 0.5rem;
 }
 
+.bottom-\[-170px\] {
+  bottom: -170px;
+}
+
 .z-0 {
   z-index: 0;
 }
