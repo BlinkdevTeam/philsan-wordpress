@@ -831,6 +831,10 @@ video {
   width: max-content;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -1357,6 +1361,11 @@ video {
   padding-bottom: 50px;
 }
 
+.px-\[90px\] {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1707,5 +1716,11 @@ video {
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-\[1280px\] {
+    width: 1280px;
   }
 }
