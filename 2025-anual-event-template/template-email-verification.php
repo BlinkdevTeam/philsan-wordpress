@@ -19,15 +19,15 @@ get_header();
               <div class="flex flex-col justify-center items-center text-center gap-[20px]">
                   <p class="text-[22px] text-center">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
                   <p class="text-[38px] font-bold text-[#1F773A]">September 30, 2025</p>
-                  <div class="bg-gradient-to-r from-blue-500 to-green-500 w-max px-[50px] py-[10px] rounded-tl-full rounded-br-full">
+                  <div class="bg-gradient-to-r from-[#1F773A] to-[#EDB221] w-max px-[50px] py-[10px] rounded-tl-full rounded-br-full">
                     <p class="text-[22px] text-[#ffffff]">Okada Manila Paranaque City, Philippines</p>
                   </div>
               </div>
           </div>
           <div class="flex w-[50%]">
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center">
-                  <div class="w-auto h-auto flex flex-col justify-center px-[10px] py-[10px] rounded space-y-6 text-start">
-                    <h2>Register</h2>
+                  <div class="w-auto h-auto flex flex-col justify-center px-[10px] py-[10px] rounded text-start bg-gradient-to-b from-[#ffffff] to-[#CBF9B6] shadow-lg">
+                    <h2 class="text-[38px] text-[#1F773A]">Register</h2>
                     <div class="flex flex-col">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
                         <input
