@@ -10,55 +10,57 @@ get_header();
     the_post();
 ?>
 
-<div class="mx-auto w-[1280px]">
-    <div class="flex w-[100%] py-[20px]">
-        <div class="w-[100%]">
-            <form id="form-registration" class="text-black flex flex-col justify-center">
-                <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
-                    <div class="flex justify-between gap-[40px]">
+<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] overflow-hidden w-full relative flex flex-col gap-[20px]">
+    <div class="mx-auto w-[1280px]">
+        <div class="flex w-[100%] py-[20px]">
+            <div class="w-[100%]">
+                <form id="form-registration" class="text-black flex flex-col justify-center">
+                    <div class="w-auto h-auto flex flex-col justify-center px-8 md:px-20 lg:px-24 py-12 rounded space-y-6 text-start">
+                        <div class="flex justify-between gap-[40px]">
 
-                        <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
-                        <!-- checkbox section -->
-                        <div class="w-[100%] flex flex-col gap-[15px]">
+                            <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
+                            <!-- checkbox section -->
+                            <div class="w-[100%] flex flex-col gap-[15px]">
 
-                            <?php get_template_part('2025-anual-event-template/fields/other-checkboxes'); ?>  
+                                <?php get_template_part('2025-anual-event-template/fields/other-checkboxes'); ?>  
 
-                            <!-- Sponsors -->
-                            
-                            <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
-                            
-                            <div id="upload-field" class="flex flex-col transition-all duration-200 ease">
-                                <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
-                                <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
-                                    <span id="upload-text">Upload</span>
+                                <!-- Sponsors -->
+                                
+                                <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
+                                
+                                <div id="upload-field" class="flex flex-col transition-all duration-200 ease">
+                                    <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
+                                    <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
+                                        <span id="upload-text">Upload</span>
+                                    </div>
+                                        <!-- Hidden file input -->
+                                    <input id="file-input"  type="file" class="hidden" accept="image/*" required/>
                                 </div>
-                                    <!-- Hidden file input -->
-                                <input id="file-input"  type="file" class="hidden" accept="image/*" required/>
-                            </div>
 
+                            </div>
                         </div>
-                    </div>
-                    <!-- agreement section -->
-                    <div class="flex">
-                        <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
-                        <div>
-                            <input
-                                id="agreement"
-                                name="agreement"
-                                type="checkbox"
-                                required
-                                class="w-full p-3 border"
-                            />
+                        <!-- agreement section -->
+                        <div class="flex">
+                            <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
+                            <div>
+                                <input
+                                    id="agreement"
+                                    name="agreement"
+                                    type="checkbox"
+                                    required
+                                    class="w-full p-3 border"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex gap-[20px]">
-                        <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                        <div id="spinner" class="hidden flex items-center justify-center">
-                          <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                        <div class="flex gap-[20px]">
+                            <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                            <div id="spinner" class="hidden flex items-center justify-center">
+                            <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                            </div>
                         </div>
-                    </div>
-              </div>
-          </form>
+                </div>
+            </form>
+            </div>
         </div>
     </div>
 </div>
