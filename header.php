@@ -9,8 +9,7 @@
 
 
 <?php
-// List of page templates where you want to HIDE the nav/header
-$templates_to_hide_nav = [
+$templates_to_hide = [
   'template-complete-registration.php',
   'template-email-verification.php',
   'template-invalid-email.php',
@@ -20,15 +19,23 @@ $templates_to_hide_nav = [
   'template-visit-email.php'
 ];
 
-$hide_nav = false;
-foreach ($templates_to_hide_nav as $template) {
-  if (is_page_template($template)) {
-    $hide_nav = true;
-    break;
-  }
-}
+// Optional: Slugs where nav/footer should also be hidden (only for pages)
+$slugs_to_hide = ['login', 'signup'];
 
-if (!$hide_nav) :
+// Get current template slug
+$current_template = get_page_template_slug();
+
+// Check if current template is in the list
+$hide_by_template = in_array($current_template, $templates_to_hide);
+
+// Check if it's a page and its slug matches
+$hide_by_slug = is_page() && in_array(get_post_field('post_name', get_post()), $slugs_to_hide);
+
+// FINAL condition
+$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug;
+
+
+if (!$should_hide_nav_or_footer) :
 ?>
   <header class="bg-white shadow-md">
     <div class="container mx-auto flex items-center justify-between px-4 py-4">
