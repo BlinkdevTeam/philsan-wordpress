@@ -19,7 +19,7 @@ get_header();
                             <p class="text-[22px] font-poppins"><strong class="text-[#1F773A] font-bold">PHILSAN will review your registration.</strong> Once approved, you will receive a confirmation email along with your QR code.</p>
                         </div>
                         <div class="flex gap-[20px] items-center ">
-                            <button id="submit-button" type="submit" class="py-[10px] px-[40px] w-max h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Start New Registration</button>
+                            <a href="https://philsan.org/38th-convention/register/" class="py-[10px] px-[40px] w-max h-[60px] bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Start New Registration</a>
                             <div id="spinner" class="hidden flex items-center justify-center">
                                 <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                             </div>
