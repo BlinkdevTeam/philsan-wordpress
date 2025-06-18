@@ -39,7 +39,7 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type;
 <?php if (!$should_hide_nav_or_footer): ?>
   <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col'); ?>>
 <?php else: ?>
-  <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col overflow-hidden'); ?>>
+  <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col overflow-x-hidden'); ?>>
 <?php endif; ?>
 
 <?php
