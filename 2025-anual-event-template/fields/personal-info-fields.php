@@ -12,7 +12,7 @@
         />
     </div>
     <div class="flex justify-between gap-[20px]">
-        <div class="flex flex-col">
+        <div class="flex flex-col w-[100%]">
             <p class="sub-bi-heading text-[#344054]">First Name</p>
             <input
                 id="first_name"
@@ -23,7 +23,7 @@
                 class="w-full p-3 border"
             />
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col w-[100%]">
             <p class="sub-bi-heading text-[#344054]">Middle Name</p>
             <input
                 id="middle_name"
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="flex justify-between gap-[20px]">
-        <div class="flex flex-col">
+        <div class="flex flex-col w-[100%]">
             <p class="sub-bi-heading text-[#344054]">Last Name</p>
             <input
                 id="last_name"
@@ -47,7 +47,7 @@
                 class="w-full p-3 border"
             />
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col w-[100%]">
             <p class="sub-bi-heading text-[#344054]">Mobile Number</p>
             <input
                 id="mobile"
