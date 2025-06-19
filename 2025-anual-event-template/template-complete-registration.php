@@ -14,12 +14,14 @@ get_header();
     <div class="mx-auto w-[1280px]">
         <div class="flex w-[100%] py-[20px]">
             <div class="w-[100%]">
-                <div class="py-[50px] w-[200px]">
-                    <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
-                </div>
                 <form id="form-registration" class="text-black flex flex-col justify-center">
-                    <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
-                        <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
+                    <div class="relative w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
+                        <div class="flex justify-between">
+                            <div class="py-[50px] w-[200px]">
+                                <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
+                            </div>
+                            <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
+                        </div>
                         <div class="flex justify-between gap-[40px] pt-[20px]">
 
                             <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
@@ -62,12 +64,12 @@ get_header();
                             <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                             </div>
                         </div>
+                    <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
                 </div>
             </form>
             </div>
         </div>
     </div>
-    <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
 </div>
 
 <script type="text/javascript"
