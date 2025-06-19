@@ -56,25 +56,26 @@ get_header();
                                     <input name="upload-input-field" id="file-input"  type="file" class="absolute opacity-[0] bottom-[20px] z-[-1]" accept="image/*" required/>
                                 </div>
 
+                                <!-- agreement section now-->
+                                <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
+                                    <input
+                                        id="agreement"
+                                        name="agreement"
+                                        type="checkbox"
+                                        required
+                                        class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
+                                    />
+                                    <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
+                                </div>
+                                <div class="flex gap-[20px] z-[1]">
+                                    <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                                    <div id="spinner" class="hidden flex items-center justify-center">
+                                        <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <!-- agreement section now-->
-                            <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
-                                <input
-                                    id="agreement"
-                                    name="agreement"
-                                    type="checkbox"
-                                    required
-                                    class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
-                                />
-                                <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
-                            </div>
-                            <div class="flex gap-[20px] z-[1]">
-                                <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                                <div id="spinner" class="hidden flex items-center justify-center">
-                                    <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
-                                </div>
-                            </div>
                         </div>
                         <!-- agreement section before it started here -->
                         
