@@ -1783,6 +1783,10 @@ video {
     flex-direction: row;
   }
 
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:rounded-none {
     border-radius: 0px;
   }
@@ -1853,6 +1857,10 @@ video {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[1280px\] {
+    width: 1280px;
   }
 
   .lg\:grid-cols-3 {

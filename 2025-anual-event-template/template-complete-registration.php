@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] min-h-screen bg-center w-full relative flex flex-col gap-[20px]">
-    <div class="mx-auto w-[1280px]">
+    <div class="mx-auto w-[90%] lg:w-[1280px]">
         <div class="flex w-[100%] py-[50px]">
             <div class="w-[100%]">
                 <form id="form-registration" class="text-black flex flex-col justify-center">
@@ -22,7 +22,7 @@ get_header();
                             </div>
                             <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                         </div>
-                        <div class="flex justify-between gap-[40px] pt-[20px]">
+                        <div class="flex flex-col md:flex-row justify-between gap-[40px] pt-[20px]">
 
                             <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
                             <!-- checkbox section -->
@@ -67,7 +67,7 @@ get_header();
                                     />
                                     <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                                 </div>
-                                <div class="flex gap-[20px] items-center z-[1] justify-center lg:justify-start">
+                                <div class="flex gap-[20px] items-center z-[1] justify-center md:justify-start">
                                     <button id="submit-button" type="submit" class="py-[10px] px-[40px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
                                     <div id="spinner" class="hidden flex items-center justify-center">
                                     <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
