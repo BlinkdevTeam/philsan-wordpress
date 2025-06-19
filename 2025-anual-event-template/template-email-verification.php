@@ -15,7 +15,7 @@ get_header();
 <?php get_template_part('2025-anual-event-template/components/convention-details'); ?>  
           <div class="flex w-[50%]">
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center px-[50px]">
-                  <div class="w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
+                  <div class="relative w-auto h-auto flex flex-col justify-center px-[50px] pb-[110px] pt-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                     <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                     <div class="flex flex-col py-[20px]">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
@@ -36,12 +36,12 @@ get_header();
                           <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                         </div>
                     </div>
+                    <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
                   </div>
               </form>
           </div>
       </div>
   </div>
-  <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
 </div>
 
 <script type="text/javascript"
