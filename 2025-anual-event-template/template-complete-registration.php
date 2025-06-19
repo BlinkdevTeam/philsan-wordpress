@@ -225,28 +225,25 @@ get_header();
 
     // Custom Upload field
     document.addEventListener("DOMContentLoaded", () => {
-        //for hdding the upload input and vice versa
-        const radios = document.querySelectorAll('input[name="sponsor"]');
-        const agreementContainer = document.getElementById("upload-field");
+         const uploadArea = document.getElementById('upload-area');
+         const uploadText = document.getElementById('upload-text');
+         const fileInput = document.getElementById('file-input');
 
-        const uploadArea = document.getElementById('upload-area');
-        const fileInput = document.getElementById('file-input');
-        const uploadText = document.getElementById('upload-text');
+        const sponsorSelect = document.getElementById('sponsor-select');
+        const agreementContainer = document.getElementById('upload-field');
 
-        if(radios) {
-            radios.forEach(radio => {
-                radio.addEventListener("change", () => {
-                if (radio.id === "no-sponsor" && radio.checked) {
-                    agreementContainer.classList.remove("opacity-[0.5]");
-                    fileInput.setAttribute("required", "true");
-                    fileInput.removeAttribute("disabled");
-                } else {
-                    agreementContainer.classList.add("opacity-[0.5]");
-                    fileInput.removeAttribute("required");
-                    fileInput.setAttribute("disabled", "true");
-                }
-                });
-            });
+        if (sponsorSelect) {
+        sponsorSelect.addEventListener('change', () => {
+            if (sponsorSelect.value === 'no-sponsor') {
+            agreementContainer.classList.remove('opacity-[0.5]');
+            fileInput.setAttribute('required', 'true');
+            fileInput.removeAttribute('disabled');
+            } else {
+            agreementContainer.classList.add('opacity-[0.5]');
+            fileInput.removeAttribute('required');
+            fileInput.setAttribute('disabled', 'true');
+            }
+        });
         }
 
 
