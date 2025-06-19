@@ -1,6 +1,6 @@
 <?php 
 /*
-*Template Name: Registration Successful
+*Template Name: Visit Email
 *Template Post Type: page, 38th-convention
 */
 
