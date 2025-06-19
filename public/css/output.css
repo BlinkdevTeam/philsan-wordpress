@@ -640,6 +640,10 @@ video {
   top: 0.5rem;
 }
 
+.bottom-\[0px\] {
+  bottom: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1419,6 +1423,10 @@ video {
 
 .pb-\[110px\] {
   padding-bottom: 110px;
+}
+
+.pb-\[125px\] {
+  padding-bottom: 125px;
 }
 
 .text-center {

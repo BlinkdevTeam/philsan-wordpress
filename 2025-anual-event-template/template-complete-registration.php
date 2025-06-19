@@ -75,7 +75,9 @@ get_header();
                             <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                             </div>
                         </div>
-                    <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
+                    <div class="poster-image absolute bottom-[-135px] w-[100%] left-[0px]">
+                        <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
+                    </div>
                 </div>
             </form>
             </div>
