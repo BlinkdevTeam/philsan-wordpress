@@ -34,7 +34,7 @@ get_header();
                                 
                                 <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
                                 
-                                <div id="specify-sponsor" class="flex flex-col w-[100%]">
+                                <div id="specify-sponsor" class="flex flex-col w-[100%] opacity-[0.5]">
                                     <p class="sub-bi-heading text-[#344054]">Please Specify your sponsor if it's not on the list</p>
                                     <input
                                         id="other-sponsor"
@@ -48,7 +48,7 @@ get_header();
                                 </div>
                                 
                                 <div id="upload-field" class="relative flex flex-col transition-all duration-200 ease">
-                                    <p id="upload-heading" class="opacity-[0.5] sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
+                                    <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
                                     <div id="upload-area" class="flex items-center justify-center w-[100%] p-[14px] rounded-md border-dashed border-[1px] border-[#339544] bg-[#ffffff] cursor-pointer">
                                         <span id="upload-text">Upload</span>
                                     </div>
@@ -265,7 +265,7 @@ get_header();
                 otherSponsor.removeAttribute('required');
                 otherSponsor.classList.add('opacity-[0.5]');
                 otherSponsor.setAttribute('disabled', 'true');
-                upload-heading.classList.add('opacity-[0.5]');
+                specify-sponsor.classList.add('opacity-[0.5]');
             } else if (sponsorSelect.value === 'Others') {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
@@ -273,7 +273,7 @@ get_header();
                 otherSponsor.setAttribute('required', 'true');
                 otherSponsor.classList.remove('opacity-[0.5]');
                 otherSponsor.removeAttribute('disabled');
-                upload-heading.classList.remove('opacity-[0.5]');
+                specify-sponsor.classList.remove('opacity-[0.5]');
             } else {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
@@ -281,7 +281,7 @@ get_header();
                 otherSponsor.removeAttribute('required');
                 otherSponsor.classList.add('opacity-[0.5]');
                 otherSponsor.setAttribute('disabled', 'true');
-                upload-heading.classList.add('opacity-[0.5]');
+                specify-sponsor.classList.add('opacity-[0.5]');
             }
         });
         }
