@@ -33,7 +33,8 @@ get_header();
                                 <!-- Sponsors -->
                                 
                                 <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
-                                <div class="flex flex-col w-[100%]">
+                                
+                                <div id="specify-sponsor" class="flex flex-col w-[100%]">
                                     <p class="sub-bi-heading text-[#344054]">Please Specify your sponsor</p>
                                     <input
                                         id="other_sponsor"
@@ -45,13 +46,13 @@ get_header();
                                     />
                                 </div>
                                 
-                                <div id="upload-field" class="flex flex-col transition-all duration-200 ease">
+                                <div id="upload-field" class="relative flex flex-col transition-all duration-200 ease">
                                     <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
                                     <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
                                         <span id="upload-text">Upload</span>
                                     </div>
                                         <!-- Hidden file input -->
-                                    <input name="upload-input-field" id="file-input"  type="file" class="hidden" accept="image/*" required/>
+                                    <input name="upload-input-field" id="file-input"  type="file" class="absolute opacity-[0] bottom-20px" accept="image/*" required/>
                                 </div>
 
                             </div>
@@ -148,32 +149,12 @@ get_header();
                         // const sponsor = document.querySelector('#sponsor')?.value || null;
                         const sponsor = document.getElementById('sponsor-select')?.value || null;
 
-                        const uploadArea = document.getElementById('upload-area');
-                        const uploadHeading = document.getElementById('upload-heading');
-
                         const fileInput = document.getElementById('file-input');
                         const file = fileInput.files[0];
 
                         let filePath = null;
-
-                        if (sponsor) {
-                            sponsor.addEventListener('change', () => {
-                                if (sponsor.value === 'No Sponsor') {
-                                    uploadArea.remove('border-[2px] border-color-[red]');
-                                    uploadHeading.remove('color-[red]');
-                                } else {
-                                    if(!file) {
-                                        console.log("file", file)
-                                        uploadArea.add('border-[2px] border-color-[red]');
-                                        uploadHeading.add('color-[red]');
-                                    } else {
-                                        uploadArea.remove('border-[2px] border-color-[red]');
-                                        uploadHeading.remove('color-[red]');
-                                    }
-                                }
-                            });
-                        }
                         
+                        spinner.classList.remove("hidden");
                         // Upload file to storage
                         if (file) {
                             const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, "_")}`;
