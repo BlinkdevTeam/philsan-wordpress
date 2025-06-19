@@ -59,15 +59,13 @@ get_header();
                         <!-- agreement section -->
                         <div class="flex pt-[20px] items-center gap-[10px]">
                             <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
-                            <div>
-                                <input
-                                    id="agreement"
-                                    name="agreement"
-                                    type="checkbox"
-                                    required
-                                    class="w-[50px] h-[50px] p-3 border"
-                                />
-                            </div>
+                            <input
+                                id="agreement"
+                                name="agreement"
+                                type="checkbox"
+                                required
+                                class="w-[20px] h-[20px] p-3 border"
+                            />
                         </div>
                         <div class="flex gap-[20px]">
                             <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
