@@ -128,7 +128,7 @@
 <div class="flex flex-col">
   <label for="sponsor" class="sub-bi-heading text-[#344054] mb-4">Who's your sponsor?</label>
   
-  <select name="sponsor" id="sponsor" required class="border border-gray-300 rounded-md p-2 w-full max-w-md">
+  <select name="sponsor" id="sponsor-select" required class="border border-gray-300 rounded-md p-2 w-full max-w-md">
     <option value="No Sponsor" selected>No Sponsor</option>
     <option value="Alltech">Alltech</option>
     <option value="Ariela">Ariela</option>
