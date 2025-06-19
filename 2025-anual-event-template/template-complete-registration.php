@@ -42,7 +42,7 @@ get_header();
                                         type="text"
                                         required
                                         placeholder="Enter your sponsor"
-                                        class="w-full p-3 border-[1px] border-[#339544]"
+                                        class="w-full p-3 border-[1px] border-[#339544] rounded-md"
                                         disabled
                                     />
                                 </div>
@@ -67,13 +67,12 @@ get_header();
                                     />
                                     <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                                 </div>
-                                <div class="flex gap-[20px] z-[1]">
-                                    <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                                <div class="flex gap-[20px] items-center z-[1] justify-center lg:justify-start">
+                                    <button id="submit-button" type="submit" class="py-[10px] px-[40px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
                                     <div id="spinner" class="hidden flex items-center justify-center">
-                                        <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                                    <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
