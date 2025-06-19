@@ -51,7 +51,7 @@ get_header();
                                         <span id="upload-text">Upload</span>
                                     </div>
                                         <!-- Hidden file input -->
-                                    <input id="file-input"  type="file" class="hidden" accept="image/*" required/>
+                                    <input name="upload-input-field" id="file-input"  type="file" class="hidden" accept="image/*" required/>
                                 </div>
 
                             </div>
@@ -163,6 +163,7 @@ get_header();
                                     uploadHeading.remove('color-[red]');
                                 } else {
                                     if(!file) {
+                                        console.log("file", file)
                                         uploadArea.add('border-[2px] border-color-[red]');
                                         uploadHeading.add('color-[red]');
                                     } else {
