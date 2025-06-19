@@ -1,4 +1,4 @@
- <div class="registration-middle-content bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] min-h-screen bg-center w-full relative flex flex-col gap-[20px]">
+ <div class="registration-middle-content bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] justify-center min-h-screen bg-center w-full relative flex flex-col gap-[20px]">
   <div class="mx-auto w-[90%] xl:w-[1280px] flex items-center py-[60px]">
       <div class="flex w-[100%] h-max">
         <div class="w-[50%] px-[50px] flex flex-col gap-[20px] justify-start items-center text-center">
