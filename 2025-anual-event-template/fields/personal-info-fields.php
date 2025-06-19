@@ -8,7 +8,7 @@
             required
             readonly
             placeholder="Email address"
-            class="w-full p-3 border bg-[beige] text-[#a9a9a9] text-[bolder] italic border-[2px] border-[#9e9e47]"
+            class="w-full p-3 border bg-[beige] text-[#a9a9a9] text-[bolder] italic border-[2px] rounded-md border-[#9e9e47]"
         />
     </div>
     <div class="flex justify-between gap-[20px]">
@@ -20,7 +20,7 @@
                 type="text"
                 required
                 placeholder="First Name"
-                class="w-full p-3 border-[1px] border-[#339544]"
+                class="w-full p-3 rounded-md border-[1px] border-[#339544]"
             />
         </div>
         <div class="flex flex-col w-[100%]">
@@ -31,7 +31,7 @@
                 type="text"
                 required
                 placeholder="Middle Name"
-                class="w-full p-3 border-[1px] border-[#339544]"
+                class="w-full p-3 rounded-md border-[1px] border-[#339544]"
             />
         </div>
     </div>
@@ -44,7 +44,7 @@
                 type="text"
                 required
                 placeholder="Last Name"
-                class="w-full p-3 border-[1px] border-[#339544]"
+                class="w-full p-3 rounded-md border-[1px] border-[#339544]"
             />
         </div>
         <div class="flex flex-col w-[100%]">
@@ -55,7 +55,7 @@
                 type="text"
                 required
                 placeholder="Mobile NUmber"
-                class="w-full p-3 border-[1px] border-[#339544]"
+                class="w-full p-3 rounded-md border-[1px] border-[#339544]"
             />
         </div>
     </div>
@@ -67,7 +67,7 @@
             type="text"
             required
             placeholder="Company"
-            class="w-full p-3 border-[1px] border-[#339544]"
+            class="w-full p-3 rounded-md border-[1px] border-[#339544]"
         />
     </div>
     <div class="flex flex-col">
@@ -78,7 +78,7 @@
             type="text"
             required
             placeholder="Position/Title"
-            class="w-full p-3 border-[1px] border-[#339544]"
+            class="w-full p-3 rounded-md border-[1px] border-[#339544]"
         />
     </div>
     <div class="flex flex-col">
@@ -89,7 +89,7 @@
             type="text"
             required
             placeholder="Agricultural License Number"
-            class="w-full p-3 border-[1px] border-[#339544]"
+            class="w-full p-3 rounded-md border-[1px] border-[#339544]"
         />
     </div>
 </div>

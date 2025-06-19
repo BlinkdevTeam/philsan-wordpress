@@ -49,7 +49,7 @@ get_header();
                                 
                                 <div id="upload-field" class="relative flex flex-col transition-all duration-200 ease">
                                     <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
-                                    <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
+                                    <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-md border-[1px] border-[#339544] bg-[#e2e1e1] cursor-pointer">
                                         <span id="upload-text">Upload</span>
                                     </div>
                                         <!-- Hidden file input -->
@@ -60,7 +60,6 @@ get_header();
                         </div>
                         <!-- agreement section -->
                         <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
-                            <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                             <input
                                 id="agreement"
                                 name="agreement"
@@ -68,6 +67,7 @@ get_header();
                                 required
                                 class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
                             />
+                            <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                         </div>
                         <div class="flex gap-[20px] z-[1]">
                             <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
