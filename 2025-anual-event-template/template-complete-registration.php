@@ -90,10 +90,12 @@ get_header();
     (function(){
         emailjs.init("sOTpCYbD5KllwgbCD"); 
     })();
-
+    
     const params = new URLSearchParams(window.location.search);
     const token = params.get('t');
     const spinner = document.getElementById('spinner');
+    
+    console.log("token", token)
 
     if(token) {
         console.log("token", token)
