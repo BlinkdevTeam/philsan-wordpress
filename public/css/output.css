@@ -1816,6 +1816,10 @@ video {
     flex-direction: row;
   }
 
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -1823,6 +1827,10 @@ video {
 
   .lg\:pb-\[160px\] {
     padding-bottom: 160px;
+  }
+
+  .lg\:text-left {
+    text-align: left;
   }
 
   .lg\:text-\[38px\] {
