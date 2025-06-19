@@ -782,6 +782,10 @@ video {
   height: max-content;
 }
 
+.h-\[25px\] {
+  height: 25px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -853,6 +857,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[25px\] {
+  width: 25px;
 }
 
 .max-w-\[1350px\] {

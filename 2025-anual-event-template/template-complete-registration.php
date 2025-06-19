@@ -35,10 +35,10 @@ get_header();
                                 <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
                                 
                                 <div id="specify-sponsor" class="flex flex-col w-[100%]">
-                                    <p class="sub-bi-heading text-[#344054]">Please Specify your sponsor</p>
+                                    <p class="sub-bi-heading text-[#344054]">Please Specify your sponsor if it's not on the list</p>
                                     <input
-                                        id="other_sponsor"
-                                        name="other_sponsor"
+                                        id="other-sponsor"
+                                        name="other-sponsor"
                                         type="text"
                                         required
                                         placeholder="Enter your sponsor"
@@ -65,7 +65,7 @@ get_header();
                                 name="agreement"
                                 type="checkbox"
                                 required
-                                class="w-[30px] h-[30px] "
+                                class="w-[25px] h-[25px]"
                             />
                         </div>
                         <div class="flex gap-[20px]">
@@ -239,20 +239,34 @@ get_header();
          const uploadText = document.getElementById('upload-text');
          const fileInput = document.getElementById('file-input');
          const uploadHeading = document.getElementById('upload-heading');
+         const otherSponsor = document.getElementById('other-sponsor');
 
         const sponsorSelect = document.getElementById('sponsor-select');
         const agreementContainer = document.getElementById('upload-field');
 
         if (sponsorSelect) {
         sponsorSelect.addEventListener('change', () => {
-            if (sponsorSelect.value === 'No Sponsor') {
+            if (sponsorSelect.value === 'Non-Sponsored') {
                 agreementContainer.classList.remove('opacity-[0.5]');
                 fileInput.setAttribute('required', 'true');
                 fileInput.removeAttribute('disabled');
+                otherSponsor.removeAttribute('required');
+                otherSponsor.classList.add('opacity-[0.5]');
+                otherSponsor.setAttribute('disabled', 'true');
+            } else if (sponsorSelect.value === 'Others') {
+                agreementContainer.classList.add('opacity-[0.5]');
+                fileInput.removeAttribute('required');
+                fileInput.setAttribute('disabled', 'true');
+                otherSponsor.setAttribute('required', 'true');
+                otherSponsor.classList.remove('opacity-[0.5]');
+                otherSponsor.removeAttribute('disabled');
             } else {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
                 fileInput.setAttribute('disabled', 'true');
+                otherSponsor.removeAttribute('required');
+                otherSponsor.classList.add('opacity-[0.5]');
+                otherSponsor.setAttribute('disabled', 'true');
             }
         });
         }

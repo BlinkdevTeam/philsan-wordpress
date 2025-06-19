@@ -4,8 +4,8 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-6">
         <div>
-            <input type="radio" id="no-sponsor" name="sponsor" value="No Sponsor" required  checked/>
-            <label for="no-sponsor">No Sponsor</label>
+            <input type="radio" id="no-sponsor" name="sponsor" value="Non-Sponsored" required  checked/>
+            <label for="no-sponsor">Non-Sponsored</label>
         </div>
         <div>
             <input type="radio" id="alltech" name="sponsor" value="Alltech" />
@@ -129,7 +129,8 @@
   <label for="sponsor" class="sub-bi-heading text-[#344054] mb-4">Who's your sponsor?</label>
   
   <select name="sponsor" id="sponsor-select" required class="border border-gray-300 rounded-md p-2 w-full max-w-md">
-    <option value="No Sponsor" selected>No Sponsor</option>
+    <option value="Non-Sponsored" selected>Non-Sponsored</option>
+    <option value="Others" selected>Others</option>
     <option value="Alltech">Alltech</option>
     <option value="Ariela">Ariela</option>
     <option value="AWAP">AWAP</option>
