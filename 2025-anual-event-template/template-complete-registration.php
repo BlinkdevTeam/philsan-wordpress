@@ -94,8 +94,6 @@ get_header();
     const params = new URLSearchParams(window.location.search);
     const token = params.get('t');
     const spinner = document.getElementById('spinner');
-    
-    console.log("token", token)
 
     if(token) {
         console.log("token", token)
@@ -161,20 +159,21 @@ get_header();
                         let filePath = null;
 
                         if (sponsor) {
-                        sponsor.addEventListener('change', () => {
-                            if (sponsor.value === 'No Sponsor') {
-                                uploadArea.remove('border-[2px] border-color-[red]');
-                                uploadHeading.remove('color-[red]');
-                            } else {
-                                if(!file) {
-                                    uploadArea.add('border-[2px] border-color-[red]');
-                                    uploadHeading.add('color-[red]');
-                                } else {
+                            sponsor.addEventListener('change', () => {
+                                if (sponsor.value === 'No Sponsor') {
                                     uploadArea.remove('border-[2px] border-color-[red]');
                                     uploadHeading.remove('color-[red]');
+                                } else {
+                                    if(!file) {
+                                        uploadArea.add('border-[2px] border-color-[red]');
+                                        uploadHeading.add('color-[red]');
+                                    } else {
+                                        uploadArea.remove('border-[2px] border-color-[red]');
+                                        uploadHeading.remove('color-[red]');
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        }
                         
                         // Upload file to storage
                         if (file) {
