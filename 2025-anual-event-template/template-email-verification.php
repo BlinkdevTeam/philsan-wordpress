@@ -17,7 +17,7 @@ get_header();
           <?php get_template_part('2025-anual-event-template/components/convention-details'); ?>  
           <div class="flex flex w-[100%] lg:w-[50%]">
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center lg:px-[50px]">
-                  <div class="relative overflow-hidden pb-[250px] pb-[125px] lg:pb-[160px] pt-[50px] px-[50px] w-auto h-auto flex flex-col justify-center rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
+                  <div class="relative overflow-hidden pb-[250px] pb-[125px] lg:pb-[160px] pt-[50px] px-[20px] md:px-[50px] w-auto h-auto flex flex-col justify-center rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                     <?php get_template_part('2025-anual-event-template/components/mobile-convention-details'); ?>  
                     <h2 class="text-center lg:text-left text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                     <div class="flex flex-col py-[20px]">
@@ -28,7 +28,7 @@ get_header();
                             type="email"
                             required
                             placeholder="Email address"
-                            class="w-full p-3 border rounded-md border-[#339544]"
+                            class="w-[100%] md:w-[65%] lg:w-full p-3 border rounded-md border-[#339544] mx-auto"
                         />
                         <p class="email-exist hidden">This email is already registered</p>
                         <p class="email-pending hidden">This email already has a pending registration</p>
