@@ -18,6 +18,7 @@ get_header();
           <div class="flex flex w-[80%] lg:w-[50%]">
               <form id="email-verification" class="w-[100%] text-black flex flex-col justify-center px-[50px]">
                   <div class="relative overflow-hidden pb-[250px] pb-[125px] lg:pb-[160px] pt-[50px] px-[50px] w-auto h-auto flex flex-col justify-center rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
+                    <?php get_template_part('2025-anual-event-template/components/mobile-convention-details'); ?>  
                     <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                     <div class="flex flex-col py-[20px]">
                         <p class="sub-bi-heading text-[#344054]">Your email</p>
