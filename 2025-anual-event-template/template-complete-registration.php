@@ -15,7 +15,7 @@ get_header();
         <div class="flex w-[100%] py-[50px]">
             <div class="w-[100%]">
                 <form id="form-registration" class="text-black flex flex-col justify-center">
-                    <div class="relative  w-auto h-auto flex flex-col justify-center px-[50px] pt-[50px] pb-[200px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
+                    <div class="relative overflow-hidden  w-auto h-auto flex flex-col justify-center px-[50px] pt-[50px] pb-[200px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                         <div class="flex justify-between items-center">
                             <div class="w-[200px]">
                                 <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Logo" class="mx-auto" />
