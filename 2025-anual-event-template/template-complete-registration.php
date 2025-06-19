@@ -147,7 +147,9 @@ get_header();
                         // const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
                         // const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
                         // const sponsor = document.querySelector('#sponsor')?.value || null;
-                        const sponsor = document.getElementById('sponsor-select')?.value || null;
+                        const othersSponsor = document.getElementById('other-sponsor')?.value || null;
+                        const sponsorValue = document.getElementById('sponsor-select');
+                        const sponsor = sponsorValue === "Others" ? othersSponsor : sponsorValue.value ;
 
                         const fileInput = document.getElementById('file-input');
                         const file = fileInput.files[0];

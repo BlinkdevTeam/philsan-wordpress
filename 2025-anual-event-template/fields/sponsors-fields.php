@@ -130,7 +130,7 @@
   
   <select name="sponsor" id="sponsor-select" required class="border border-gray-300 rounded-md p-2 w-full max-w-md">
     <option value="Non-Sponsored" selected>Non-Sponsored</option>
-    <option value="Others" selected>Others</option>
+    <option value="Others">Others</option>
     <option value="Alltech">Alltech</option>
     <option value="Ariela">Ariela</option>
     <option value="AWAP">AWAP</option>
