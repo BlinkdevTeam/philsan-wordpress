@@ -43,6 +43,7 @@ get_header();
                                         required
                                         placeholder="Enter your sponsor"
                                         class="w-full p-3 border"
+                                        disabled
                                     />
                                 </div>
                                 
