@@ -879,6 +879,10 @@ video {
   width: max-content;
 }
 
+.w-\[25\%\] {
+  width: 25%;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -1772,6 +1776,10 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:gap-\[20px\] {
+    gap: 20px;
   }
 
   .md\:rounded-none {

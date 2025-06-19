@@ -11,7 +11,7 @@
             class="w-full p-3 border bg-[beige] text-[#a9a9a9] text-[bolder] italic border-[2px] rounded-md border-[#9e9e47]"
         />
     </div>
-    <div class="flex justify-between gap-[20px]">
+    <div class="flex flex-col md:flex-row gap-[15px] md:gap-[20px] justify-between">
         <div class="flex flex-col w-[100%]">
             <p class="sub-bi-heading text-[#344054]">First Name</p>
             <input
@@ -35,7 +35,7 @@
             />
         </div>
     </div>
-    <div class="flex justify-between gap-[20px]">
+    <div class="flex flex-col md:flex-row gap-[15px] md:gap-[20px] justify-between">
         <div class="flex flex-col w-[100%]">
             <p class="sub-bi-heading text-[#344054]">Last Name</p>
             <input
