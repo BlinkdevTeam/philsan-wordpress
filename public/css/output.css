@@ -875,6 +875,10 @@ video {
   width: 60%;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -1764,6 +1768,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:visible {
+    visibility: visible;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:w-\[50\%\] {
     width: 50%;
   }
