@@ -13,9 +13,9 @@ get_header();
           <div class="flex w-[70%] ">
             <div class="w-[100%] text-black flex flex-col justify-center px-[50px]">
                 <div class="relative overflow-hidden pb-[125px] pt-[50px] w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
-                    <img width="60%" src="https://philsan.org/wp-content/uploads/2025/06/PHILSAN_LOGO.png" alt="Logo" class="mx-auto" />    
-                    <p class="text-[22px] font-poppins text-center z-[1]">"Oops! Something went wrong. Your session may have expired, or the email may have already been registered."</p>
-                    <div class="flex gap-[20px] items-center z-[1]">
+                    <img class="w-[45%] lg:w-[60%] mx-auto" src="https://philsan.org/wp-content/uploads/2025/06/PHILSAN_LOGO.png" alt="Logo" />    
+                    <p class="text-[22px] font-poppins text-center z-[1] py-[50px]">"Oops! Something went wrong. Your session may have expired, or the email may have already been registered."</p>
+                    <div class="flex gap-[20px] items-center z-[1] justify-center">
                         <a href="https://philsan.org/38th-convention/register/" class="flex items-center py-[10px] px-[40px] w-max h-[60px] bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Start New Registration</a>
                     </div>
                 </div>
