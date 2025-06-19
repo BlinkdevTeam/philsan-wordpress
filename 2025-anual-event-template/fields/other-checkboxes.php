@@ -2,19 +2,19 @@
     <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
     <div class="flex gap-[20px]">
         <div>
-            <input type="radio" id="member_regular" name="membership" value="regular">
+            <input class="border-[1px] border-[#339544]" type="radio" id="member_regular" name="membership" value="regular">
             <label for="member_regular">Regular</label>
         </div>
         <div>
-            <input type="radio" id="member_associate" name="membership" value="associate">
+            <input class="border-[1px] border-[#339544]" type="radio" id="member_associate" name="membership" value="associate">
             <label for="member_associate">Associate</label>
         </div>
         <div>
-            <input type="radio" id="member_donor" name="membership" value="Donor">
+            <input class="border-[1px] border-[#339544]" type="radio" id="member_donor" name="membership" value="Donor">
             <label for="member_donor">Donor</label>
         </div>
         <div>
-            <input type="radio" id="non_member" name="membership" value="non_member" required>
+            <input class="border-[1px] border-[#339544]" type="radio" id="non_member" name="membership" value="non_member" required>
             <label for="non_member">Not a member</label>
         </div>
     </div>
@@ -25,11 +25,11 @@
     <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
     <div class="flex gap-[20px]">
         <div>
-            <input type="radio" id="sv_printed" name="souvenir" value="printed" required>
+            <input class="border-[1px] border-[#339544]" type="radio" id="sv_printed" name="souvenir" value="printed" required>
             <label for="sv_printed">Printed (First 400 only)</label>
         </div>
         <div>
-            <input type="radio" id="sv_digital" name="souvenir" value="digital">
+            <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">Digital</label>
         </div>
     </div>

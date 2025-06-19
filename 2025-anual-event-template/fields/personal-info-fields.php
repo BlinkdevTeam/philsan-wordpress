@@ -20,7 +20,7 @@
                 type="text"
                 required
                 placeholder="First Name"
-                class="w-full p-3 border"
+                class="w-full p-3 border-[1px] border-[#339544]"
             />
         </div>
         <div class="flex flex-col w-[100%]">
@@ -31,7 +31,7 @@
                 type="text"
                 required
                 placeholder="Middle Name"
-                class="w-full p-3 border"
+                class="w-full p-3 border-[1px] border-[#339544]"
             />
         </div>
     </div>
@@ -44,7 +44,7 @@
                 type="text"
                 required
                 placeholder="Last Name"
-                class="w-full p-3 border"
+                class="w-full p-3 border-[1px] border-[#339544]"
             />
         </div>
         <div class="flex flex-col w-[100%]">
@@ -55,7 +55,7 @@
                 type="text"
                 required
                 placeholder="Mobile NUmber"
-                class="w-full p-3 border"
+                class="w-full p-3 border-[1px] border-[#339544]"
             />
         </div>
     </div>
@@ -67,7 +67,7 @@
             type="text"
             required
             placeholder="Company"
-            class="w-full p-3 border"
+            class="w-full p-3 border-[1px] border-[#339544]"
         />
     </div>
     <div class="flex flex-col">
@@ -78,7 +78,7 @@
             type="text"
             required
             placeholder="Position/Title"
-            class="w-full p-3 border"
+            class="w-full p-3 border-[1px] border-[#339544]"
         />
     </div>
     <div class="flex flex-col">
@@ -89,7 +89,7 @@
             type="text"
             required
             placeholder="Agricultural License Number"
-            class="w-full p-3 border"
+            class="w-full p-3 border-[1px] border-[#339544]"
         />
     </div>
 </div>

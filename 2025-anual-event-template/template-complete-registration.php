@@ -42,7 +42,7 @@ get_header();
                                         type="text"
                                         required
                                         placeholder="Enter your sponsor"
-                                        class="w-full p-3 border"
+                                        class="w-full p-3 border-[1px] border-[#339544]"
                                         disabled
                                     />
                                 </div>
@@ -66,7 +66,7 @@ get_header();
                                 name="agreement"
                                 type="checkbox"
                                 required
-                                class="w-[25px] h-[25px]"
+                                class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
                             />
                         </div>
                         <div class="flex gap-[20px] z-[1]">
