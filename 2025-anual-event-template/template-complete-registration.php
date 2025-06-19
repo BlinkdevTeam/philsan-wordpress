@@ -150,7 +150,10 @@ get_header();
                         // const sponsor = document.querySelector('#sponsor')?.value || null;
                         const othersSponsor = document.getElementById('other-sponsor')?.value || null;
                         const sponsorValue = document.getElementById('sponsor-select');
-                        const sponsor = sponsorValue === "Others" ? othersSponsor : sponsorValue.value ;
+                        const sponsor = sponsorValue.value === "Others" ? othersSponsor : sponsorValue.value ;
+
+                        console.log("others", othersSponsor)
+                        console.log("sponsor", sponsor)
 
                         const fileInput = document.getElementById('file-input');
                         const file = fileInput.files[0];
