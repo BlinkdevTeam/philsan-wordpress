@@ -33,9 +33,20 @@ get_header();
                                 <!-- Sponsors -->
                                 
                                 <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
+                                <div class="flex flex-col w-[100%]">
+                                    <p class="sub-bi-heading text-[#344054]">Please Specify your sponsor</p>
+                                    <input
+                                        id="other_sponsor"
+                                        name="other_sponsor"
+                                        type="text"
+                                        required
+                                        placeholder="Enter your sponsor"
+                                        class="w-full p-3 border"
+                                    />
+                                </div>
                                 
                                 <div id="upload-field" class="flex flex-col transition-all duration-200 ease">
-                                    <p class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
+                                    <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
                                     <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-[20px] bg-[#e2e1e1] cursor-pointer">
                                         <span id="upload-text">Upload</span>
                                     </div>
@@ -46,7 +57,7 @@ get_header();
                             </div>
                         </div>
                         <!-- agreement section -->
-                        <div class="flex">
+                        <div class="flex pt-[20px] items-center gap-[10px]">
                             <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                             <div>
                                 <input
@@ -54,7 +65,7 @@ get_header();
                                     name="agreement"
                                     type="checkbox"
                                     required
-                                    class="w-full p-3 border"
+                                    class="w-[50px] h-[50px] p-3 border"
                                 />
                             </div>
                         </div>
@@ -139,12 +150,15 @@ get_header();
                         // const sponsor = document.querySelector('#sponsor')?.value || null;
                         const sponsor = document.getElementById('sponsor-select')?.value || null;
 
+                        const uploadArea = document.getElementById('upload-area');
+                        const uploadHeading = document.getElementById('upload-heading');
+
                         const fileInput = document.getElementById('file-input');
                         const file = fileInput.files[0];
 
                         let filePath = null;
 
-                        console.log("sponosor", sponsor)
+                        
                         
                         // Upload file to storage
                         if (file) {
@@ -229,20 +243,21 @@ get_header();
          const uploadArea = document.getElementById('upload-area');
          const uploadText = document.getElementById('upload-text');
          const fileInput = document.getElementById('file-input');
+         const uploadHeading = document.getElementById('upload-heading');
 
         const sponsorSelect = document.getElementById('sponsor-select');
         const agreementContainer = document.getElementById('upload-field');
 
         if (sponsorSelect) {
         sponsorSelect.addEventListener('change', () => {
-            if (sponsorSelect.value === 'no-sponsor') {
-            agreementContainer.classList.remove('opacity-[0.5]');
-            fileInput.setAttribute('required', 'true');
-            fileInput.removeAttribute('disabled');
+            if (sponsorSelect.value === 'No Sponsor') {
+                agreementContainer.classList.remove('opacity-[0.5]');
+                fileInput.setAttribute('required', 'true');
+                fileInput.removeAttribute('disabled');
             } else {
-            agreementContainer.classList.add('opacity-[0.5]');
-            fileInput.removeAttribute('required');
-            fileInput.setAttribute('disabled', 'true');
+                agreementContainer.classList.add('opacity-[0.5]');
+                fileInput.removeAttribute('required');
+                fileInput.setAttribute('disabled', 'true');
             }
         });
         }
