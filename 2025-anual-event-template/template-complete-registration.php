@@ -59,7 +59,7 @@ get_header();
                             </div>
                         </div>
                         <!-- agreement section -->
-                        <div class="flex pt-[20px] items-center gap-[10px]">
+                        <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
                             <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
                             <input
                                 id="agreement"
@@ -69,13 +69,13 @@ get_header();
                                 class="w-[25px] h-[25px]"
                             />
                         </div>
-                        <div class="flex gap-[20px]">
+                        <div class="flex gap-[20px] z-[1]">
                             <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
                             <div id="spinner" class="hidden flex items-center justify-center">
                             <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                             </div>
                         </div>
-                    <div class="poster-image absolute bottom-[-135px] w-[100%] left-[0px]">
+                    <div class="poster-image absolute bottom-[-135px] w-[100%] left-[0px] z-[0]">
                         <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
                     </div>
                 </div>

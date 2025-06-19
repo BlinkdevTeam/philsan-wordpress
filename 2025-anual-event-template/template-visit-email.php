@@ -15,7 +15,7 @@ get_header();
                     <div class="pb-[30px]">
                         <img src="https://philsan.org/wp-content/uploads/2025/06/Sent-Philsan-1.png" alt="">
                     </div>  
-                    <p class="text-[22px] font-poppins text-center">A verification link has been sent to your email. Please <strong class="text-[#1F773A]">check your inbox</strong> (and spam folder) to complete your registration</p>
+                    <p class="text-[22px] font-poppins text-center z-[1]">A verification link has been sent to your email. Please <strong class="text-[#1F773A]">check your inbox</strong> (and spam folder) to complete your registration</p>
                     <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
                 </div>
             </div>
