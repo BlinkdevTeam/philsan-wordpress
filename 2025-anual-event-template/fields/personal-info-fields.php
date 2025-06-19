@@ -1,4 +1,4 @@
-<div class="w-[100%] flex flex-col gap-[10px]">
+<div class="w-[100%] flex flex-col gap-[15px]">
     <div class="flex flex-col">
         <p class="sub-bi-heading text-[#344054]">Your email</p>
         <input

@@ -48,8 +48,8 @@ get_header();
                                 </div>
                                 
                                 <div id="upload-field" class="relative flex flex-col transition-all duration-200 ease">
-                                    <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
-                                    <div id="upload-area" class="flex items-center justify-center w-[100%] p-[50px] rounded-md border-[1px] border-[#339544] bg-[#e2e1e1] cursor-pointer">
+                                    <p id="upload-heading" class="opacity-[0.5] sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
+                                    <div id="upload-area" class="flex items-center justify-center w-[100%] p-[14px] rounded-md border-dashed border-[1px] border-[#339544] bg-[#ffffff] cursor-pointer">
                                         <span id="upload-text">Upload</span>
                                     </div>
                                         <!-- Hidden file input -->
@@ -57,24 +57,27 @@ get_header();
                                 </div>
 
                             </div>
-                        </div>
-                        <!-- agreement section -->
-                        <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
-                            <input
-                                id="agreement"
-                                name="agreement"
-                                type="checkbox"
-                                required
-                                class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
-                            />
-                            <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
-                        </div>
-                        <div class="flex gap-[20px] z-[1]">
-                            <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
-                            <div id="spinner" class="hidden flex items-center justify-center">
-                            <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+
+                            <!-- agreement section now-->
+                            <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
+                                <input
+                                    id="agreement"
+                                    name="agreement"
+                                    type="checkbox"
+                                    required
+                                    class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
+                                />
+                                <p class="sub-bi-heading text-[#344054]">* Include a Data Privacy Statement and Photo/Video Consent agreement</p>
+                            </div>
+                            <div class="flex gap-[20px] z-[1]">
+                                <button type="submit" class="hover:bg-[#32bd49] py-3 w-[148px] h-[60px] submit bg-[#959595] rounded-[8px] text-[#ffffff] cursor-pointer">Submit</button>
+                                <div id="spinner" class="hidden flex items-center justify-center">
+                                    <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                                </div>
                             </div>
                         </div>
+                        <!-- agreement section before it started here -->
+                        
                     <div class="poster-image absolute bottom-[-135px] w-[100%] left-[0px] z-[0]">
                         <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
                     </div>
@@ -261,6 +264,7 @@ get_header();
                 otherSponsor.removeAttribute('required');
                 otherSponsor.classList.add('opacity-[0.5]');
                 otherSponsor.setAttribute('disabled', 'true');
+                upload-heading.classList.add('opacity-[0.5]');
             } else if (sponsorSelect.value === 'Others') {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
@@ -268,6 +272,7 @@ get_header();
                 otherSponsor.setAttribute('required', 'true');
                 otherSponsor.classList.remove('opacity-[0.5]');
                 otherSponsor.removeAttribute('disabled');
+                upload-heading.classList.remove('opacity-[0.5]');
             } else {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
@@ -275,6 +280,7 @@ get_header();
                 otherSponsor.removeAttribute('required');
                 otherSponsor.classList.add('opacity-[0.5]');
                 otherSponsor.setAttribute('disabled', 'true');
+                upload-heading.classList.add('opacity-[0.5]');
             }
         });
         }

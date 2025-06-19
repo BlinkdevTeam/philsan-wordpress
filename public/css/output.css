@@ -1171,6 +1171,10 @@ video {
   border-style: solid;
 }
 
+.border-dashed {
+  border-style: dashed;
+}
+
 .border-\[\#339544\] {
   --tw-border-opacity: 1;
   border-color: rgb(51 149 68 / var(--tw-border-opacity, 1));
@@ -1246,6 +1250,11 @@ video {
 }
 
 .bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
@@ -1330,6 +1339,10 @@ video {
 
 .p-\[50px\] {
   padding: 50px;
+}
+
+.p-\[14px\] {
+  padding: 14px;
 }
 
 .px-4 {
