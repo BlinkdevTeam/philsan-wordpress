@@ -135,7 +135,8 @@ get_header();
                         const souvenir = document.querySelector('input[name="souvenir"]:checked')?.value || null;
                         const certificate_needed = document.querySelector('input[name="certificate_needed"]:checked')?.value || null;
                         // const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || null;
-                        const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
+                        // const sponsor = document.querySelector('input[name="sponsor"]:checked')?.value || null;
+                        const sponsor = document.querySelector('#sponsor')?.value || null;
 
                         const fileInput = document.getElementById('file-input');
                         const file = fileInput.files[0];

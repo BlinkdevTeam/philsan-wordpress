@@ -95,10 +95,12 @@ get_header();
             if (matchData["reg_status"] === "approved") {
               emailExistEl.classList.remove("hidden");
               emailPendingEl.classList.add("hidden");
+              spinner.classList.add("hidden");
               return;
             } else if (matchData["reg_status"] === "pending") {
               emailExistEl.classList.add("hidden");
               emailPendingEl.classList.remove("hidden");
+              spinner.classList.add("hidden");
               return;
             }
           } else {
