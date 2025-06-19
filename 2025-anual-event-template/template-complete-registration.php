@@ -141,6 +141,8 @@ get_header();
                         const file = fileInput.files[0];
 
                         let filePath = null;
+
+                        console.log("sponosor", sponsor)
                         
                         // Upload file to storage
                         if (file) {
