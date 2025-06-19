@@ -12,8 +12,8 @@ get_header();
     <div class="mx-auto w-[90%] xl:w-[1280px] flex items-center py-[60px]">
         <div class="flex w-[100%] h-max justify-center">
             <?php get_template_part('2025-anual-event-template/components/convention-details'); ?>  
-            <div class="flex flex w-[80%] lg:w-[50%]">
-                <div id="email-verification" class="w-[100%] text-black flex flex-col justify-center px-[50px]">
+            <div class="flex flex w-[100%] lg:w-[50%]">
+                <div id="email-verification" class="w-[100%] text-black flex flex-col justify-center lg:px-[50px]">
                     <div class="relative overflow-hidden pb-[250px] lg:pb-[160px] pt-[50px] w-auto h-auto flex flex-col justify-center px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                         <?php get_template_part('2025-anual-event-template/components/mobile-convention-details'); ?>  
                         <div class="pb-[30px]">

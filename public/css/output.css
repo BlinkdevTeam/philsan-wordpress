@@ -1825,6 +1825,11 @@ video {
     padding-right: 6rem;
   }
 
+  .lg\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .lg\:pb-\[160px\] {
     padding-bottom: 160px;
   }
