@@ -1417,6 +1417,11 @@ video {
   padding-bottom: 60px;
 }
 
+.px-\[0px\] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1764,6 +1769,11 @@ video {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .md\:text-4xl {
