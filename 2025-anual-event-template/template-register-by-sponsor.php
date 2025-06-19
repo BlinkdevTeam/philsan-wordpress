@@ -1,7 +1,7 @@
 <?php 
 /*
 *Template Name: Register By Sponsor
-*Template Post Type: 38th-convention
+*Template Post Type: page, 38th-convention
 */
 
 get_header(); 
