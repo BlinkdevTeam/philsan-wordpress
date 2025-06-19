@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+// get_header(); 
+?>
 
 <div class="container">
   <h1>Oops! Page not found.</h1>
@@ -6,4 +8,6 @@
   <a href="<?php echo home_url(); ?>">Return to homepage</a>
 </div>
 
-<?php get_footer(); ?>
+<?php 
+// get_footer(); 
+?>
