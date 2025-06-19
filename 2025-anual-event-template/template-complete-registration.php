@@ -52,7 +52,7 @@ get_header();
                                         <span id="upload-text">Upload</span>
                                     </div>
                                         <!-- Hidden file input -->
-                                    <input name="upload-input-field" id="file-input"  type="file" class="absolute opacity-[0] bottom-[20px]" accept="image/*" required/>
+                                    <input name="upload-input-field" id="file-input"  type="file" class="absolute opacity-[0] bottom-[20px] z-[-1]" accept="image/*" required/>
                                 </div>
 
                             </div>
@@ -65,7 +65,7 @@ get_header();
                                 name="agreement"
                                 type="checkbox"
                                 required
-                                class="w-[20px] h-[20px] p-3 border"
+                                class="w-[30px] h-[30px] "
                             />
                         </div>
                         <div class="flex gap-[20px]">
