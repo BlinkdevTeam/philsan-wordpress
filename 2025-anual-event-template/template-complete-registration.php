@@ -10,7 +10,7 @@ get_header();
     the_post();
 ?>
 
-<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-cover bg-center h-[100vh] w-full relative flex flex-col gap-[20px]">
+<div class="bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] bg-center w-full relative flex flex-col gap-[20px]">
     <div class="mx-auto w-[1280px]">
         <div class="flex w-[100%] py-[50px]">
             <div class="w-[100%]">
