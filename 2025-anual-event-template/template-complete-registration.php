@@ -22,7 +22,7 @@ get_header();
                             </div>
                             <h2 class="text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                         </div>
-                        <div class="flex flex-col md:flex-row justify-between gap-[40px] pt-[20px]">
+                        <div class="flex flex-col lg:flex-row justify-between gap-[40px] pt-[20px]">
 
                             <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
                             <!-- checkbox section -->
