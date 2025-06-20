@@ -10,6 +10,9 @@
 <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col'); ?>>
 
 <?php
+
+$parent_ids_to_hide = [279]; // Add parent page IDs whose children should also hide header/footer
+
 $templates_to_hide = [
   'template-complete-registration.php',
   'template-email-verification.php',
@@ -20,22 +23,24 @@ $templates_to_hide = [
   'template-visit-email.php'
 ];
 
-$slugs_to_hide = ['login', 'signup', 'register', 'registration-successful', 'invalid-email', 'session-expired', 'visit-email', 'complete-registration']; // include CPT slugs too
-$post_types_to_check = ['page', '38th-convention']; // 'convention' is your CPT name
+$slugs_to_hide = [
+  'login', 'signup', 'register', 'registration-successful',
+  'invalid-email', 'session-expired', 'visit-email', 'complete-registration'
+];
 
-$current_template = get_page_template_slug();
-$hide_by_template = in_array($current_template, $templates_to_hide);
+$post_types_to_check = ['page', '38th-convention']; // e.g., CPT slug
 
-// Get slug and post type
 $current_post = get_post();
+$current_template = get_page_template_slug();
 $current_slug = get_post_field('post_name', $current_post);
 $current_type = get_post_type($current_post);
+$current_parent_id = $current_post->post_parent ?? 0;
 
-// Match if post type is in list and slug is in hidden list
+$hide_by_template = in_array($current_template, $templates_to_hide);
 $hide_by_slug_and_type = in_array($current_type, $post_types_to_check) && in_array($current_slug, $slugs_to_hide);
+$hide_by_parent = in_array($current_parent_id, $parent_ids_to_hide);
 
-// Final condition
-$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type;
+$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hide_by_parent;
 ?>
 
 <?php
