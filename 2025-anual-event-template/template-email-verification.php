@@ -122,7 +122,7 @@ get_header();
                 // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
                 emailjs.send('service_1qkyi2i', 'template_d71x79v', {
                     email: email,
-                    verification_link: " https://philsan.org/38th-annual-convention/complete-registration?t=" + token + email
+                    verification_link: "https://philsan.org/38th-annual-convention/complete-registration?t=" + token + email
                 })
                     .then(function() {
                         // alert('Email sent successfully!');
