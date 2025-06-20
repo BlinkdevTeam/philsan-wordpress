@@ -11,7 +11,7 @@
 
 <?php
 
-$parent_ids_to_hide = [279]; // Add parent page IDs whose children should also hide header/footer
+$parent_ids_to_hide = [214]; // Add parent page IDs whose children should also hide header/footer
 
 $templates_to_hide = [
   'template-complete-registration.php',
