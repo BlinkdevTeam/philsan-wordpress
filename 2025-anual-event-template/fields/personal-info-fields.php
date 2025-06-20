@@ -1,6 +1,6 @@
 <div class="w-[100%] flex flex-col gap-[15px]">
     <div class="flex flex-col">
-        <p class="sub-bi-heading text-[#344054]">Your email</p>
+        <p class="sub-bi-heading text-[#344054] font-poppins">Your email</p>
         <input
             id="email"
             name="email"
@@ -13,7 +13,7 @@
     </div>
     <div class="flex flex-col md:flex-row gap-[15px] md:gap-[20px] justify-between">
         <div class="flex flex-col w-[100%]">
-            <p class="sub-bi-heading text-[#344054]">First Name</p>
+            <p class="sub-bi-heading text-[#344054] font-poppins">First Name</p>
             <input
                 id="first_name"
                 name="first_name"
@@ -24,7 +24,7 @@
             />
         </div>
         <div class="flex flex-col w-[100%]">
-            <p class="sub-bi-heading text-[#344054]">Middle Name</p>
+            <p class="sub-bi-heading text-[#344054] font-poppins">Middle Name</p>
             <input
                 id="middle_name"
                 name="middle_name"
@@ -37,7 +37,7 @@
     </div>
     <div class="flex flex-col md:flex-row gap-[15px] md:gap-[20px] justify-between">
         <div class="flex flex-col w-[100%]">
-            <p class="sub-bi-heading text-[#344054]">Last Name</p>
+            <p class="sub-bi-heading text-[#344054] font-poppins">Last Name</p>
             <input
                 id="last_name"
                 name="last_name"
@@ -48,7 +48,7 @@
             />
         </div>
         <div class="flex flex-col w-[100%]">
-            <p class="sub-bi-heading text-[#344054]">Mobile Number</p>
+            <p class="sub-bi-heading text-[#344054] font-poppins">Mobile Number</p>
             <input
                 id="mobile"
                 name="mobile"
@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="flex flex-col">
-        <p class="sub-bi-heading text-[#344054]">Company</p>
+        <p class="sub-bi-heading text-[#344054] font-poppins">Company</p>
         <input
             id="company"
             name="company"
@@ -71,7 +71,7 @@
         />
     </div>
     <div class="flex flex-col">
-        <p class="sub-bi-heading text-[#344054]">Position Title</p>
+        <p class="sub-bi-heading text-[#344054] font-poppins">Position Title</p>
         <input
             id="position"
             name="position"
@@ -82,7 +82,7 @@
         />
     </div>
     <div class="flex flex-col">
-        <p class="sub-bi-heading text-[#344054]">Agricultural License Number</p>
+        <p class="sub-bi-heading text-[#344054] font-poppins">Agricultural License Number <span class="italic">(Enter "N/A" if not applicable)</span></p>
         <input
             id="agri_license"
             name="agri_license"
