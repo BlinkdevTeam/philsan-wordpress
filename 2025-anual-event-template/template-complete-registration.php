@@ -336,7 +336,8 @@ get_header();
             .catch(error => console.error("Error fetching sponsors:", error));
         }
 
-
+        //this overidees the specify function
+        window.specify = function () {};
     });
 
 </script>
