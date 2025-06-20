@@ -327,6 +327,7 @@ get_header();
                 `;
 
                 filtered.forEach(sponsor => {
+                    console.log("sponsor", sponsor)
                     const option = document.createElement("option");
                     option.value = sponsor.sponsor_name;
                     option.textContent = sponsor.sponsor_name;
