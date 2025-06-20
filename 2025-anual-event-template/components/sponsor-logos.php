@@ -24,14 +24,14 @@
     <div class="swiper-pagination"></div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
   <!-- Initialize Swiper -->
-  <script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
       },
     });
-  </script>
+  });
+</script>
