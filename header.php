@@ -38,9 +38,10 @@ $current_parent_id = $current_post->post_parent ?? 0;
 
 $hide_by_template = in_array($current_template, $templates_to_hide);
 $hide_by_slug_and_type = in_array($current_type, $post_types_to_check) && in_array($current_slug, $slugs_to_hide);
-$hide_by_parent = in_array($current_parent_id, $parent_ids_to_hide);
+// $hide_by_parent = in_array($current_parent_id, $parent_ids_to_hide);
+$hide_by_child_of_parent = $current_parent_id && in_array($current_parent_id, $parent_ids_to_hide); // ✅ only hide child
 
-$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hide_by_parent;
+$should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hide_by_child_of_parent;
 ?>
 
 <?php
