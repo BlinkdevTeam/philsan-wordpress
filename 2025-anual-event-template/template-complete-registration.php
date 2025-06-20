@@ -25,8 +25,6 @@ get_header();
                         <div class="flex flex-col lg:flex-row justify-between gap-[40px] pt-[20px]">
 
                             <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
-                            <?php get_template_part('2025-anual-event-template/fields/sponsor-logos'); ?>  
-                            INSERT LOGOS HERE
                             <!-- checkbox section -->
                             <div class="w-[100%] flex flex-col gap-[15px]">
 
