@@ -132,7 +132,7 @@ get_header();
                     const alreadyInregistration = data.find(i => i.email === matchData.email);
 
                     if(alreadyInregistration) {
-                        window.location.href = "https://philsan.org/38th-convention/session-expired/";
+                        window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
                     } else { 
                         //this is the trigger of submit
                         //else if email is not in registration meaning the user haven't submit a complete registration
@@ -223,7 +223,7 @@ get_header();
                                 return response.json().then(error => { throw error });
                             }
                             spinner.classList.add("hidden");
-                            window.location.href = "https://philsan.org/38th-convention/registration-successful";
+                            window.location.href = "https://philsan.org/38th-annual-convention/registration-successful/";
                         })
                         .catch(error => {
                             console.error("Supabase error:", error);
@@ -233,7 +233,7 @@ get_header();
                     }
                 })
             } else {
-                window.location.href = "https://philsan.org/38th-convention/session-expired/";
+                 window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
             }
         })
         .catch(error => {
