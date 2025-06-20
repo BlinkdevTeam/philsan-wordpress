@@ -12,4 +12,3 @@
                     </div>
                 </div>
             </div>
-            <?php get_template_part('2025-anual-event-template/fields/sponsor-logos'); ?>  
