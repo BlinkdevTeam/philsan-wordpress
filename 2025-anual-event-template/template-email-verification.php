@@ -21,7 +21,7 @@ get_header();
                     <?php get_template_part('2025-anual-event-template/components/mobile-convention-details'); ?>  
                     <h2 class="text-center lg:text-left text-[38px] text-[#1F773A] font-fraunces font-bold">Register</h2>
                     <div class="flex flex-col py-[20px]">
-                        <p class="sub-bi-heading text-[#344054] w-[100%] md:w-[65%] mx-auto">Your email</p>
+                        <p class="sub-bi-heading text-[#344054] w-[100%] md:w-[65%] lg:w-full mx-auto">Your email</p>
                         <input
                             id="email"
                             name="email"
