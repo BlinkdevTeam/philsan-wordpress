@@ -304,8 +304,7 @@ get_header();
                 }
             });
         }
-
-        const sponsorSelect = document.getElementById('sponsor-select');
+        
         if (sponsorSelect) {
             fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_2025_sponsors', {
                 headers: {
