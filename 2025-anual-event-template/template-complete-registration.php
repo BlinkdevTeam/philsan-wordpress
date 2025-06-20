@@ -316,9 +316,11 @@ get_header();
             })
             .then(res => res.json())
             .then(data => {
-                const filtered = data.filter(item =>
-                    item.name !== "Non-Sponsored" && item.name !== "Others"
-                );
+                const filtered = data
+                    .filter(item =>
+                        item.name !== "Non-Sponsored" && item.name !== "Others"
+                    )
+                    .sort((a, b) => a.sponsor_name.localeCompare(b.sponsor_name)); // ✅ Sort alphabetically
 
                 sponsorSelect.innerHTML = `
                     <option value="Non-Sponsored" selected>Non-Sponsored</option>
@@ -332,14 +334,12 @@ get_header();
                     sponsorSelect.appendChild(option);
                 });
 
-                // ✅ Add event listener after population
+                // ✅ Event listener stays the same
                 sponsorSelect.addEventListener("change", (e) => {
                     const selectedSponsor = e.target.value;
                     console.log("Selected sponsor:", selectedSponsor);
-                    // Add any logic here if needed
                 });
             })
-            .catch(error => console.error("Error fetching sponsors:", error));
         }
     });
 
