@@ -308,15 +308,14 @@ get_header();
         if (sponsorSelect) {
             fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_2025_sponsors', {
                 headers: {
-                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
-                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
+                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
                     'Content-Type': 'application/json',
                     'Prefer': 'return=minimal'
                 }
             })
             .then(res => res.json())
             .then(data => {
-                console.log("dataaaaa", data)
                 const filtered = data.filter(item =>
                     item.name !== "Non-Sponsored" && item.name !== "Others"
                 );
@@ -327,23 +326,22 @@ get_header();
                 `;
 
                 filtered.forEach(sponsor => {
-                    console.log("sponsor", sponsor)
                     const option = document.createElement("option");
                     option.value = sponsor.sponsor_name;
                     option.textContent = sponsor.sponsor_name;
-                    sponsorSelect.appendChild(option); // ✅ FIXED HERE
+                    sponsorSelect.appendChild(option);
+                });
+
+                // ✅ Add event listener after population
+                sponsorSelect.addEventListener("change", (e) => {
+                    const selectedSponsor = e.target.value;
+                    console.log("Selected sponsor:", selectedSponsor);
+                    // Add any logic here if needed
                 });
             })
             .catch(error => console.error("Error fetching sponsors:", error));
         }
 
-        window.specify = function () {
-             //this overidees the specify function
-        };
-
-        window.sponsor = function () {
-        // Override to prevent error
-        };
     });
 
 </script>
