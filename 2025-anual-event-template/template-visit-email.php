@@ -11,7 +11,7 @@ get_header();
 <div class="registration-middle-content bg-[url('https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png')] justify-center min-h-screen bg-center w-full relative flex flex-col gap-[20px]">
     <div class="mx-auto w-[90%] xl:w-[1280px] flex items-center py-[60px]">
         <div class="flex w-[100%] h-max justify-center">
-            <div class="flex flex-col gap-[10px] justify-center">
+            <div class="w-[50%] flex flex-col gap-[10px] justify-center">
                 <?php get_template_part('2025-anual-event-template/components/convention-details'); ?>  
                 <div class="relative">
                     <?php get_template_part('2025-anual-event-template/components/sponsor-logos'); ?>  
