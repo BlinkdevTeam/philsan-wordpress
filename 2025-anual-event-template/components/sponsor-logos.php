@@ -31,10 +31,31 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".mySwiper", {
-      pagination: {
+
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true, // optional: for continuous loop
+    autoplay: {
+        delay: 3000, // time in milliseconds between slides (3 seconds here)
+        disableOnInteraction: false, // keeps autoplay after user interacts
+    },
+    pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
-      },
+    },
+    breakpoints: {
+        640: {
+        slidesPerView: 1
+        },
+        768: {
+        slidesPerView: 2
+        },
+        1024: {
+        slidesPerView: 3
+        }
+    }
+    
     });
+
   });
 </script>
