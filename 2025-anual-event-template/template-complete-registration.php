@@ -304,14 +304,15 @@ get_header();
                 }
             });
         }
-        
-        if(sponsorSelect) {
+
+        const sponsorSelect = document.getElementById('sponsor-select');
+        if (sponsorSelect) {
             fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_2025_sponsors', {
                 headers: {
                     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                     'Content-Type': 'application/json',
-                    'Prefer': 'return=minimal'             
+                    'Prefer': 'return=minimal'
                 }
             })
             .then(res => res.json())
@@ -320,22 +321,21 @@ get_header();
                     item.name !== "Non-Sponsored" && item.name !== "Others"
                 );
 
-                // Clear existing options (optional)
                 sponsorSelect.innerHTML = `
                     <option value="Non-Sponsored" selected>Non-Sponsored</option>
                     <option value="Others">Others</option>
                 `;
 
-                // Add Supabase sponsor options
                 filtered.forEach(sponsor => {
                     const option = document.createElement("option");
                     option.value = sponsor.name;
                     option.textContent = sponsor.name;
-                    select.appendChild(option);
+                    sponsorSelect.appendChild(option); // ✅ FIXED HERE
                 });
             })
             .catch(error => console.error("Error fetching sponsors:", error));
         }
+
 
     });
 
