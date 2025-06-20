@@ -304,7 +304,7 @@ get_header();
                 }
             });
         }
-        
+
         if (sponsorSelect) {
             fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_2025_sponsors', {
                 headers: {
@@ -328,8 +328,8 @@ get_header();
 
                 filtered.forEach(sponsor => {
                     const option = document.createElement("option");
-                    option.value = sponsor.name;
-                    option.textContent = sponsor.name;
+                    option.value = sponsor.sponsor_name;
+                    option.textContent = sponsor.sponsor_name;
                     sponsorSelect.appendChild(option); // ✅ FIXED HERE
                 });
             })
