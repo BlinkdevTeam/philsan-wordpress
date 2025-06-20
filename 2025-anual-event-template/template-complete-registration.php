@@ -317,6 +317,7 @@ get_header();
             })
             .then(res => res.json())
             .then(data => {
+                console.log("dataaaaa", data)
                 const filtered = data.filter(item =>
                     item.name !== "Non-Sponsored" && item.name !== "Others"
                 );
