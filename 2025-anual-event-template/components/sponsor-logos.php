@@ -1,30 +1,30 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-        <div class="swiper-slide p-[20px] shadow-lg">
+        <div class="swiper-slide p-[20px]">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-[xl] rounded-br-[xl]">
                 <p class="font-fraunces font-bold text-[#ffffff]">Diamond</p>
             </div>
             <img class="w-[50%]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226337.png" alt="">
         </div>
-        <div class="swiper-slide p-[20px] shadow-lg">
+        <div class="swiper-slide p-[20px]">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-[xl] rounded-br-[xl]">
                 <p class="font-fraunces font-bold text-[#ffffff]">Gold</p>
             </div>
-            <img class="w-[50%]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226338.png" alt="">
+            <img class="w-[50%] mt-[20px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226338.png" alt="">
         </div>
-        <div class="swiper-slide p-[20px] shadow-lg">
+        <div class="swiper-slide p-[20px]">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-[xl] rounded-br-[xl]">
                 <p class="font-fraunces font-bold text-[#ffffff]">Event Sponsors</p>
             </div>
             <img class="w-[80%]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226341-scaled.png" alt="">
         </div>
-        <div class="swiper-slide p-[20px] shadow-lg">
+        <div class="swiper-slide p-[20px]">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-[xl] rounded-br-[xl]">
                 <p class="font-fraunces font-bold text-[#ffffff]">Event Sponsors</p>
             </div>
             <img class="w-[80%] mt-[-20px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226340-1-scaled.png" alt="">
         </div>
-        <div class="swiper-slide p-[20px] shadow-sm">
+        <div class="swiper-slide p-[20px]">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-[xl] rounded-br-[xl]">
                 <p class="font-fraunces font-bold text-[#ffffff]">Platinum</p>
             </div>
