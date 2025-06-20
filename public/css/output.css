@@ -1327,6 +1327,10 @@ video {
   padding: 14px;
 }
 
+.p-\[20px\] {
+  padding: 20px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1689,7 +1693,6 @@ video {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #444;
   display: flex;
   justify-content: center;
   align-items: center;
