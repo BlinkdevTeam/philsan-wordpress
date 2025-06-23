@@ -3,17 +3,21 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Open Graph for Facebook and others -->
+
+  <!-- ✅ Open Graph Meta Tags -->
   <meta property="og:title" content="PHILSAN 38th Annual Convention" />
   <meta property="og:description" content="Register now for the PHILSAN 38th Annual Convention! Join us in Innovating for a Sustainable Future." />
   <meta property="og:image" content="https://philsan.org/wp-content/uploads/2024/06/philsan-logo.png" />
-  <meta property="og:url" content="https://philsan.org/38th-annual-convention/registration/" />
+  <meta property="og:url" content="<?php echo get_permalink(); ?>" />
   <meta property="og:type" content="website" />
+
+  <!-- ✅ Your Swiper CSS (keep this if you need it) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <title><?php wp_title(); ?></title>
+
+  <title><?php wp_title('|', true, 'right'); ?></title>
   <?php wp_head(); ?>
 </head>
+
 
 <body <?php body_class('bg-gray-100 text-gray-900 min-h-screen flex flex-col'); ?>>
 
