@@ -1103,6 +1103,10 @@ video {
   gap: 50px;
 }
 
+.gap-\[5px\] {
+  gap: 5px;
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -1530,6 +1534,22 @@ video {
 
 .pt-\[120px\] {
   padding-top: 120px;
+}
+
+.pb-\[15px\] {
+  padding-bottom: 15px;
+}
+
+.pt-\[10px\] {
+  padding-top: 10px;
+}
+
+.pb-\[10px\] {
+  padding-bottom: 10px;
+}
+
+.pt-\[15px\] {
+  padding-top: 15px;
 }
 
 .text-center {
