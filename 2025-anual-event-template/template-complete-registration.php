@@ -85,7 +85,7 @@ get_header();
                                             <li class="text-[14px] font-[300]">CPD units certificate (to be confirmed before the convention)</li>
                                         </ol>
                                     </div>
-                                    <div class="w-[100%] flex flex-col gap-[1px] pt-[15px] pb-[10px]">
+                                    <div class="w-[100%] flex flex-col gap-[3px] pt-[15px] pb-[10px]">
                                         <p class="sub-bi-heading text-[#344054]">Account name: <strong class="font-[600]">Philippine Society of Animal Nutritionists Inc.</strong></p>
                                         <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Bank: <strong class="font-[600]">Bank of the Philippine Islands (BPI)</strong></p>
                                         <div>
