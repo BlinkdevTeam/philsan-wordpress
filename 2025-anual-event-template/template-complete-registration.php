@@ -34,7 +34,7 @@ get_header();
                                 
                                 <?php get_template_part('2025-anual-event-template/fields/sponsors-fields'); ?>  
                                 
-                                <div id="specify-sponsor" class="flex flex-col w-[100%] opacity-[0.5]">
+                                <div id="specify-sponsor" class="flex flex-col w-[100%] opacity-[0.4]">
                                     <p class="sub-bi-heading text-[#344054]">Please Specify your sponsor if it's not on the list</p>
                                     <input
                                         id="other-sponsor"
@@ -264,29 +264,29 @@ get_header();
         if (sponsorSelect) {
         sponsorSelect.addEventListener('change', () => {
             if (sponsorSelect.value === 'Non-Sponsored') {
-                agreementContainer.classList.remove('opacity-[0.5]');
+                agreementContainer.classList.remove('opacity-[0.4]');
                 fileInput.setAttribute('required', 'true');
                 fileInput.removeAttribute('disabled');
                 otherSponsor.removeAttribute('required');
-                otherSponsor.classList.add('opacity-[0.5]');
+                otherSponsor.classList.add('opacity-[0.4]');
                 otherSponsor.setAttribute('disabled', 'true');
-                specifySponsor.classList.add('opacity-[0.5]');
+                specifySponsor.classList.add('opacity-[0.4]');
             } else if (sponsorSelect.value === 'Others') {
-                agreementContainer.classList.add('opacity-[0.5]');
+                agreementContainer.classList.add('opacity-[0.4]');
                 fileInput.removeAttribute('required');
                 fileInput.setAttribute('disabled', 'true');
                 otherSponsor.setAttribute('required', 'true');
-                otherSponsor.classList.remove('opacity-[0.5]');
+                otherSponsor.classList.remove('opacity-[0.4]');
                 otherSponsor.removeAttribute('disabled');
-                specifySponsor.classList.remove('opacity-[0.5]');
+                specifySponsor.classList.remove('opacity-[0.4]');
             } else {
-                agreementContainer.classList.add('opacity-[0.5]');
+                agreementContainer.classList.add('opacity-[0.4]');
                 fileInput.removeAttribute('required');
                 fileInput.setAttribute('disabled', 'true');
                 otherSponsor.removeAttribute('required');
-                otherSponsor.classList.add('opacity-[0.5]');
+                otherSponsor.classList.add('opacity-[0.4]');
                 otherSponsor.setAttribute('disabled', 'true');
-                specifySponsor.classList.add('opacity-[0.5]');
+                specifySponsor.classList.add('opacity-[0.4]');
             }
         });
         }
