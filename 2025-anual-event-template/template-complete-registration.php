@@ -57,7 +57,7 @@ get_header();
                                 <div id="upload-field" class="pt-[20px] relative flex flex-col transition-all duration-200 ease">
                                     <div class="flex gap-[10px] justify-between">
                                         <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pr-[10px]">
-                                            <p class="sub-bi-heading text-[#344054]"><strong>EARLY BIRD RATE:</strong></p>
+                                            <p class="sub-bi-heading text-[#344054]"><strong class="font-[700]">EARLY BIRD RATE:</strong></p>
                                             <p class="sub-bi-heading text-[#344054] pb-[5px] italic">Deadline of Payment June 30, 2025</p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 5,600.00/pax </strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 6,000.00/pax </strong></p>
@@ -65,7 +65,7 @@ get_header();
                                         </div>
 
                                         <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pl-[10px]">
-                                            <p class="sub-bi-heading text-[#344054] pb-[5px]"><strong>REGULAR RATE:</strong></p>
+                                            <p class="sub-bi-heading text-[#344054] pb-[5px]"><strong class="font-[700]">REGULAR RATE:</strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 6,500.00/pax</strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 7,000.00/pax</p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner: <strong class="font-[600]">USD 125.00/pax</strong></p>
@@ -73,7 +73,7 @@ get_header();
                                         </div>
                                     </div>
                                     <div>
-                                        <p><strong>Agriculture or VetMed Student ID *Rates are exclusive of tax</strong></p>
+                                        <p><strong class="font-[700]">Agriculture or VetMed Student ID *Rates are exclusive of tax</strong></p>
                                         <p>Convention Registration Fee includes:</p>
                                         <ol>
                                             <li class="text-[14px] font-[300]">Convention ID Badge</li>
@@ -86,7 +86,7 @@ get_header();
                                         </ol>
                                     </div>
                                     <div class="w-[100%] flex flex-col gap-[3px] pt-[15px] pb-[10px]">
-                                        <p class="sub-bi-heading text-[#344054]">Account name: <strong class="font-[600]">Philippine Society of Animal Nutritionists Inc.</strong></p>
+                                        <p class="sub-bi-heading text-[#344054]">Account name: <strong class="font-[700]">Philippine Society of Animal Nutritionists Inc.</strong></p>
                                         <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Bank: <strong class="font-[600]">Bank of the Philippine Islands (BPI)</strong></p>
                                         <div>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Account number:</p>

@@ -1688,6 +1688,10 @@ video {
   font-weight: 600;
 }
 
+.font-\[700\] {
+  font-weight: 700;
+}
+
 .italic {
   font-style: italic;
 }
