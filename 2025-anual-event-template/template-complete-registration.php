@@ -48,18 +48,20 @@ get_header();
                                 </div>
                                 
                                 <div id="upload-field" class="pt-[20px]relative flex flex-col transition-all duration-200 ease">
-                                    <div class="flex flex-col gap-[5px] pb-[10px]">
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]"><strong>EARLY BIRD RATE: Deadline of Payment June 30, 2025</strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]">PHILSAN Members: <strong>PHP 5,600.00/pax </strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]">Non-PHILSAN Members: <strong>PHP 6,000.00/pax </strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]">Foreigner:	<strong>USD 110.00/pax</strong></p>
-                                    </div>
+                                    <div>
+                                        <div class="flex flex-col gap-[5px] pb-[10px]">
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]"><strong>EARLY BIRD RATE: Deadline of Payment June 30, 2025</strong></p>
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]">PHILSAN Members: <strong>PHP 5,600.00/pax </strong></p>
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]">Non-PHILSAN Members: <strong>PHP 6,000.00/pax </strong></p>
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]">Foreigner:	<strong>USD 110.00/pax</strong></p>
+                                        </div>
 
-                                    <div class="flex flex-col gap-[5px] pb-[10px]">
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]"><strong>REGULAR RATE:</strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]">PHILSAN Members: <strong>PHP 6,500.00/pax</strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]">Non-PHILSAN Members: <strong>PHP 7,000.00/pax</p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054]">Foreigner:	<strong>USD 125.00/pax</p>
+                                        <div class="flex flex-col gap-[5px] pb-[10px]">
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]"><strong>REGULAR RATE:</strong></p>
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]">PHILSAN Members: <strong>PHP 6,500.00/pax</strong></p>
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]">Non-PHILSAN Members: <strong>PHP 7,000.00/pax</p>
+                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]">Foreigner:	<strong>USD 125.00/pax</p>
+                                        </div>
                                     </div>
                                     <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
                                     <div id="upload-area" class="flex items-center justify-center w-[100%] p-[14px] rounded-md border-dashed border-[1px] border-[#339544] bg-[#ffffff] cursor-pointer">
