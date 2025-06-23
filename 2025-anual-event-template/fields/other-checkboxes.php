@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col pt-[12px]">
     <p class="sub-bi-heading text-[#344054]">Are you a PHILSAN Member?</p>
     <div class="flex gap-[20px]">
         <div>
@@ -21,18 +21,18 @@
 </div>
 
 <!-- Souvenir Program -->
-<div class="flex flex-col">
+<div class="flex flex-col pt-[12px]">
     <p class="sub-bi-heading text-[#344054]">Do wish to get a souvenir program copy?</p>
     <div class="flex gap-[20px]">
-        <div>
+        <div class="w-[33.3%]">
             <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">No</label>
         </div>
-        <div>
+        <div class="w-[33.3%]">
             <input class="border-[1px] border-[#339544]" type="radio" id="sv_printed" name="souvenir" value="printed" required>
             <label for="sv_printed">Printed (First 300 only)</label>
         </div>
-        <div>
+        <div class="w-[33.3%]">
             <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">Digital Copy in USB drive (limited slots only)</label>
         </div>
@@ -40,7 +40,7 @@
 </div>
 
 <!-- Certificate of Attendance -->
-<div class="flex flex-col">
+<div class="flex flex-col pt-[12px]">
     <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
     <p class="sub-bi-heading text-[#344054 italic font-[300]">Your name, as entered during registration, will appear on the certificate.</p>
     <div class="flex gap-[20px]">
