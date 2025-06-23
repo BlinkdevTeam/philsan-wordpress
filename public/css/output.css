@@ -1512,6 +1512,10 @@ video {
   padding-top: 50px;
 }
 
+.pb-\[100px\] {
+  padding-bottom: 100px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1901,6 +1905,10 @@ video {
 
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
+  }
+
+  .md\:pb-\[200px\] {
+    padding-bottom: 200px;
   }
 
   .md\:text-4xl {
