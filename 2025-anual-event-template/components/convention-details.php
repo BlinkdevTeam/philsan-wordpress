@@ -13,7 +13,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative">
+                <div class="relative hidden lg:block px-[50px]">
                     <?php get_template_part('2025-anual-event-template/components/sponsor-logos'); ?>  
                 </div>
             </div>
