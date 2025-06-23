@@ -259,6 +259,7 @@ get_header();
 
         const sponsorSelect = document.getElementById('sponsor-select');
         const agreementContainer = document.getElementById('upload-field');
+        const specifySponsor = document.getElementById('specify-sponsor');
 
         if (sponsorSelect) {
         sponsorSelect.addEventListener('change', () => {
@@ -269,7 +270,7 @@ get_header();
                 otherSponsor.removeAttribute('required');
                 otherSponsor.classList.add('opacity-[0.5]');
                 otherSponsor.setAttribute('disabled', 'true');
-                specify-sponsor.classList.add('opacity-[0.5]');
+                specifySponsor.classList.add('opacity-[0.5]');
             } else if (sponsorSelect.value === 'Others') {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
@@ -277,7 +278,7 @@ get_header();
                 otherSponsor.setAttribute('required', 'true');
                 otherSponsor.classList.remove('opacity-[0.5]');
                 otherSponsor.removeAttribute('disabled');
-                specify-sponsor.classList.remove('opacity-[0.5]');
+                specifySponsor.classList.remove('opacity-[0.5]');
             } else {
                 agreementContainer.classList.add('opacity-[0.5]');
                 fileInput.removeAttribute('required');
@@ -285,7 +286,7 @@ get_header();
                 otherSponsor.removeAttribute('required');
                 otherSponsor.classList.add('opacity-[0.5]');
                 otherSponsor.setAttribute('disabled', 'true');
-                specify-sponsor.classList.add('opacity-[0.5]');
+                specifySponsor.classList.add('opacity-[0.5]');
             }
         });
         }
