@@ -32,6 +32,10 @@
             <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">Digital Copy in USB drive (limited slots only)</label>
         </div>
+        <div>
+            <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
+            <label for="sv_digital">No</label>
+        </div>
     </div>
 </div>
 

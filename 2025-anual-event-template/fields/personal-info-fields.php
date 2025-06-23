@@ -71,24 +71,24 @@
         />
     </div>
     <div class="flex flex-col">
-        <p class="sub-bi-heading text-[#344054] font-poppins">Position Title</p>
+        <p class="sub-bi-heading text-[#344054] font-poppins">Company Position/Title</p>
         <input
             id="position"
             name="position"
             type="text"
             required
-            placeholder="Position/Title"
+            placeholder="Company Position/Title"
             class="w-full p-3 rounded-md border-[1px] border-[#339544]"
         />
     </div>
     <div class="flex flex-col">
-        <p class="sub-bi-heading text-[#344054] font-poppins">Agricultural License Number <span class="italic">(Enter "N/A" if not applicable)</span></p>
+        <p class="sub-bi-heading text-[#344054] font-poppins">Agriculturist License Number <span class="italic">(Enter "N/A" if not applicable)</span></p>
         <input
             id="agri_license"
             name="agri_license"
             type="text"
             required
-            placeholder="Agricultural License Number"
+            placeholder="Agriculturist License Number"
             class="w-full p-3 rounded-md border-[1px] border-[#339544]"
         />
     </div>
