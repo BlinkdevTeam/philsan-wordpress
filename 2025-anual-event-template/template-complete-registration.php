@@ -57,15 +57,15 @@ get_header();
                                 </div>
 
                                 <!-- agreement section now-->
-                                <div class="flex pt-[20px] items-center gap-[10px] z-[1]">
+                                <div class="flex pt-[20px] items-start gap-[10px] z-[1]">
                                     <input
                                         id="agreement"
                                         name="agreement"
                                         type="checkbox"
                                         required
-                                        class="w-[25px] h-[25px]  border-[1px] border-[#339544]" 
+                                        class="w-[28px] h-[28px]  border-[1px] border-[#339544]" 
                                     />
-                                    <p class="sub-bi-heading text-[#344054]">* I understand that my participation in the 38th PHILSAN Annual Convention is voluntary, and I may choose not to proceed. I confirm that the personal information I provide is true and correct. This information will be kept confidential and used only for the PHILSAN Convention and PRC CPD unit application. I agree to the processing of my personal data based on the PHILSAN Data Privacy Statement and the Data Privacy Act of 2012. I also allow PHILSAN to take and use photos and videos of me during the event and use for purposes related to the convention only.</p>
+                                    <p class="sub-bi-heading text-[#344054] font-[200]">* I understand that my participation in the 38th PHILSAN Annual Convention is voluntary, and I may choose not to proceed.</br> I confirm that the personal information I provide is true and correct. This information will be kept confidential and used only for the PHILSAN Convention and PRC CPD unit application.</br> I agree to the processing of my personal data based on the PHILSAN Data Privacy Statement and the Data Privacy Act of 2012.</br> I also allow PHILSAN to take and use photos and videos of me during the event and use for purposes related to the convention only.</p>
                                 </div>
                                 <div class="flex gap-[20px] items-center z-[1] justify-center md:justify-start">
                                     <button id="submit-button" type="submit" class="py-[10px] px-[40px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
