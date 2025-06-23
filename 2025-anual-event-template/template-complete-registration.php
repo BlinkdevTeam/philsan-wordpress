@@ -98,7 +98,7 @@ get_header();
                                         <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Address: <strong class="font-[600]">Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala Alabang, Muntinlupa, 1780, Metro Manila, Philippines</strong></p>
                                         <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">SWIFT Code: <strong class="font-[600]">BOPIPHMM</strong></p>
                                     </div>
-                                    <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
+                                    <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor.</p>
                                     <div id="upload-area" class="flex items-center justify-center w-[100%] p-[14px] rounded-md border-dashed border-[1px] border-[#339544] bg-[#ffffff] cursor-pointer">
                                         <span id="upload-text">Upload</span>
                                     </div>
