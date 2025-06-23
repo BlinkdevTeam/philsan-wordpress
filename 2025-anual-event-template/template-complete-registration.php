@@ -24,14 +24,14 @@ get_header();
                         </div>
                         <div class="flex flex-col lg:flex-row justify-between gap-[40px] pt-[20px]">
 
-                            <div class="w-[50%]">
+                            <div class="w-[100%]">
                                 <?php get_template_part('2025-anual-event-template/fields/personal-info-fields'); ?>  
 
                                 <?php get_template_part('2025-anual-event-template/fields/other-checkboxes'); ?>  
                             </div>
                             
                             <!-- checkbox section -->
-                            <div class="w-[50%] flex flex-col gap-[15px]">
+                            <div class="w-[100%] flex flex-col gap-[15px]">
 
                                 <?php 
                                 // get_template_part('2025-anual-event-template/fields/other-checkboxes'); 
@@ -95,7 +95,7 @@ get_header();
                                                 <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">001594-0469-07 (USD Account)</p>
                                             </div>
                                         </div>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Address: <strong>Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala Alabang, Muntinlupa, 1780, Metro Manila, Philippines</strong></p>
+                                        <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Address: <strong class="font-[600]">Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala Alabang, Muntinlupa, 1780, Metro Manila, Philippines</strong></p>
                                         <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">SWIFT Code: <strong class="font-[600]">BOPIPHMM</strong></p>
                                     </div>
                                     <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
