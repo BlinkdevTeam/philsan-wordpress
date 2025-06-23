@@ -63,13 +63,13 @@ get_header();
                                         name="agreement"
                                         type="checkbox"
                                         required
-                                        class="w-[40px] h-[40px]  border-[1px] border-[#339544]" 
+                                        class="w-[40px] h-[30px]  border-[1px] border-[#339544]" 
                                     />
                                     <div class="flex flex-col gap-[10px]">
-                                        <p class="sub-bi-heading text-[#344054] font-[200] font-[14px]">* I understand that my participation in the 38th PHILSAN Annual Convention is voluntary, and I may choose not to proceed.</p>
-                                        <p class="sub-bi-heading text-[#344054] font-[200] font-[14px]">I confirm that the personal information I provide is true and correct. This information will be kept confidential and used only for the PHILSAN Convention and PRC CPD unit application.</p>
-                                        <p class="sub-bi-heading text-[#344054] font-[200] font-[14px]">I agree to the processing of my personal data based on the PHILSAN Data Privacy Statement and the Data Privacy Act of 2012.</p>
-                                        <p class="sub-bi-heading text-[#344054] font-[200] font-[14px]">I also allow PHILSAN to take and use photos and videos of me during the event and use for purposes related to the convention only.</p>
+                                        <p class="sub-bi-heading text-[#344054] font-[200] text-[14px]">* I understand that my participation in the 38th PHILSAN Annual Convention is voluntary, and I may choose not to proceed.</p>
+                                        <p class="sub-bi-heading text-[#344054] font-[200] text-[14px]">I confirm that the personal information I provide is true and correct. This information will be kept confidential and used only for the PHILSAN Convention and PRC CPD unit application.</p>
+                                        <p class="sub-bi-heading text-[#344054] font-[200] text-[14px]">I agree to the processing of my personal data based on the PHILSAN Data Privacy Statement and the Data Privacy Act of 2012.</p>
+                                        <p class="sub-bi-heading text-[#344054] font-[200] text-[14px]">I also allow PHILSAN to take and use photos and videos of me during the event and use for purposes related to the convention only.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-[20px] items-center z-[1] justify-center md:justify-start">

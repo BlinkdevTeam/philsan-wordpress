@@ -806,6 +806,10 @@ video {
   height: 40px;
 }
 
+.h-\[30px\] {
+  height: 30px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1578,6 +1582,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
 }
 
 .font-bold {
