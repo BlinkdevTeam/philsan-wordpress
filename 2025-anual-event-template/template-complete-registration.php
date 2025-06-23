@@ -83,7 +83,7 @@ get_header();
                         </div>
                         <!-- agreement section before it started here -->
                         
-                    <div class="poster-image absolute bottom-[-135px] w-[100%] left-[0px] z-[0]">
+                    <div class="poster-image absolute bottom-[-135px] w-[100%] left-[0px] z-[0] opacity-[0.5]">
                         <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
                     </div>
                 </div>
