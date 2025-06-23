@@ -1939,6 +1939,10 @@ video {
     padding-bottom: 200px;
   }
 
+  .md\:pb-\[250px\] {
+    padding-bottom: 250px;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
