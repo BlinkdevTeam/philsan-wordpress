@@ -17,7 +17,7 @@ get_header();
                     <div class="relative overflow-hidden pb-[100px] md:pb-[200px] lg:pb-[160px] pt-[50px] w-auto flex flex-col gap-[50px] justify-start h-auto px-[20px] md:px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                         <?php get_template_part('2025-anual-event-template/components/mobile-convention-details'); ?>  
                         <div class="flex flex-col justify-center items-center gap-[30px]">
-                            <div class="w-[100px] lg:w-[150px]">
+                            <div class="w-[100px] lg:w-[150px] m-auto">
                                 <img src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Icon-1.png" alt="">
                             </div>  
                             <p class="text-[22px] text-center lg:text-[left] font-poppins"><strong class="text-[#1F773A] font-bold">PHILSAN will review your registration.</strong> Once approved, you will receive a confirmation email along with your QR code.</p>

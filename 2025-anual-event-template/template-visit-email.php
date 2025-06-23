@@ -34,7 +34,7 @@ get_header();
                 <div id="email-verification" class="w-[100%] text-black flex flex-col justify-center lg:px-[50px]">
                     <div class="relative overflow-hidden pb-[250px] lg:pb-[160px] pt-[50px] w-auto h-auto flex flex-col justify-center px-[20px] md:px-[50px] py-[50px] rounded text-start bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] shadow-lg rounded-lg">
                         <?php get_template_part('2025-anual-event-template/components/mobile-convention-details'); ?>  
-                        <div class="pb-[30px]">
+                        <div class="pb-[30px] w-[80%] md:w-[100%]">
                             <img src="https://philsan.org/wp-content/uploads/2025/06/Sent-Philsan-1.png" alt="">
                         </div>  
                         <p class="text-[22px] font-poppins text-center z-[1]">A verification link has been sent to your email. Please <strong class="text-[#1F773A]">check your inbox</strong> (and spam folder) to complete your registration</p>
