@@ -25,15 +25,15 @@
     <p class="sub-bi-heading text-[#344054]">Do wish to get a souvenir program copy?</p>
     <div class="flex gap-[20px]">
         <div class="flex gap-[5px] items-start">
-            <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
+            <input class="mt-[5px] border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">No</label>
         </div>
         <div class="flex gap-[5px] items-start">
-            <input class="border-[1px] border-[#339544]" type="radio" id="sv_printed" name="souvenir" value="printed" required>
+            <input class="mt-[5px] border-[1px] border-[#339544]" type="radio" id="sv_printed" name="souvenir" value="printed" required>
             <label for="sv_printed">Printed (First 300 only)</label>
         </div>
         <div class="flex gap-[5px] items-start">
-            <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
+            <input class="mt-[5px] border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">Digital Copy in USB drive (limited slots only)</label>
         </div>
     </div>
