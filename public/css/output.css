@@ -1894,6 +1894,11 @@ video {
     padding-right: 50px;
   }
 
+  .md\:px-\[30px\] {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
   }
@@ -1951,6 +1956,10 @@ video {
     width: 100%;
   }
 
+  .lg\:w-\[150px\] {
+    width: 150px;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1983,6 +1992,10 @@ video {
 
   .lg\:text-\[38px\] {
     font-size: 38px;
+  }
+
+  .lg\:text-\[left\] {
+    color: left;
   }
 }
 
