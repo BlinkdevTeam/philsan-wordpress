@@ -68,8 +68,8 @@ get_header();
                                             <p class="sub-bi-heading text-[#344054] pb-[5px]"><strong>REGULAR RATE:</strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 6,500.00/pax</strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 7,000.00/pax</p>
-                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 125.00/pax</p>
-                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Students:	<strong class="font-[600]">PHP 3,500.00/pax with valid Agriculture or VetMed Student ID</p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner: <strong class="font-[600]">USD 125.00/pax</strong></p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Students: <strong class="font-[600]">PHP 3,500.00/pax with valid Agriculture or VetMed Student ID</strong></p>
                                         </div>
                                     </div>
                                     <div>
@@ -91,8 +91,8 @@ get_header();
                                         <div>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Account number:</p>
                                             <div class="flex flex-col">
-                                                <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">1593-0964-98 (Philippine Peso Account)</p>
-                                                <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">001594-0469-07 (USD Account)</p>
+                                                <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">1593-0964-98 (Philippine Peso Account)</strong></p>
+                                                <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">001594-0469-07 (USD Account</strong>)</p>
                                             </div>
                                         </div>
                                         <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Address: <strong class="font-[600]">Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala Alabang, Muntinlupa, 1780, Metro Manila, Philippines</strong></p>
