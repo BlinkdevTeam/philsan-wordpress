@@ -57,19 +57,19 @@ get_header();
                                 <div id="upload-field" class="pt-[20px] relative flex flex-col transition-all duration-200 ease">
                                     <div class="flex gap-[10px] justify-between">
                                         <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pr-[10px]">
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054]"><strong>EARLY BIRD RATE:</strong></p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] pb-[5px] italic">Deadline of Payment June 30, 2025</p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 5,600.00/pax </strong></p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 6,000.00/pax </strong></p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 110.00/pax</strong></p>
+                                            <p class="sub-bi-heading text-[#344054]"><strong>EARLY BIRD RATE:</strong></p>
+                                            <p class="sub-bi-heading text-[#344054] pb-[5px] italic">Deadline of Payment June 30, 2025</p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 5,600.00/pax </strong></p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 6,000.00/pax </strong></p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 110.00/pax</strong></p>
                                         </div>
 
                                         <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pl-[10px]">
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] pb-[5px]"><strong>REGULAR RATE:</strong></p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 6,500.00/pax</strong></p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 7,000.00/pax</p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 125.00/pax</p>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Students:	<strong class="font-[600]">PHP 3,500.00/pax with valid Agriculture or VetMed Student ID</p>
+                                            <p class="sub-bi-heading text-[#344054] pb-[5px]"><strong>REGULAR RATE:</strong></p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 6,500.00/pax</strong></p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 7,000.00/pax</p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 125.00/pax</p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Students:	<strong class="font-[600]">PHP 3,500.00/pax with valid Agriculture or VetMed Student ID</p>
                                         </div>
                                     </div>
                                     <div>
@@ -85,18 +85,18 @@ get_header();
                                             <li class="text-[14px] font-[300]">CPD units certificate (to be confirmed before the convention)</li>
                                         </ol>
                                     </div>
-                                    <div class="w-[100%] flex flex-col gap-[5px] pt-[15px] pb-[10px]">
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054] pb-[5px]">Account name: <strong class="font-[600]">Philippine Society of Animal Nutritionists Inc.</strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Bank: <strong class="font-[600]">Bank of the Philippine Islands (BPI)</strong></p>
+                                    <div class="w-[100%] flex flex-col gap-[1px] pt-[15px] pb-[10px]">
+                                        <p class="sub-bi-heading text-[#344054]">Account name: <strong class="font-[600]">Philippine Society of Animal Nutritionists Inc.</strong></p>
+                                        <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Bank: <strong class="font-[600]">Bank of the Philippine Islands (BPI)</strong></p>
                                         <div>
-                                            <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Account number:</p>
+                                            <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Account number:</p>
                                             <div class="flex flex-col">
-                                                <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">1593-0964-98 (Philippine Peso Account)</p>
-                                                <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">001594-0469-07 (USD Account)</p>
+                                                <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">1593-0964-98 (Philippine Peso Account)</p>
+                                                <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]"><strong class="font-[600]">001594-0469-07 (USD Account)</p>
                                             </div>
                                         </div>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Address: <strong class="font-[600]">Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala Alabang, Muntinlupa, 1780, Metro Manila, Philippines</strong></p>
-                                        <p id="upload-heading" class="sub-bi-heading text-[#344054] font-[300] text-[14px]">SWIFT Code: <strong class="font-[600]">BOPIPHMM</strong></p>
+                                        <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Address: <strong class="font-[600]">Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala Alabang, Muntinlupa, 1780, Metro Manila, Philippines</strong></p>
+                                        <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">SWIFT Code: <strong class="font-[600]">BOPIPHMM</strong></p>
                                     </div>
                                     <p id="upload-heading" class="sub-bi-heading text-[#344054]">Please upload your proof of payment if you don't have sponsor</p>
                                     <div id="upload-area" class="flex items-center justify-center w-[100%] p-[14px] rounded-md border-dashed border-[1px] border-[#339544] bg-[#ffffff] cursor-pointer">
