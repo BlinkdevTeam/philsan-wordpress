@@ -22,15 +22,15 @@
 
 <!-- Souvenir Program -->
 <div class="flex flex-col">
-    <p class="sub-bi-heading text-[#344054]">Souvenir Program</p>
+    <p class="sub-bi-heading text-[#344054]">Do wish to get a souvenir program copy?</p>
     <div class="flex gap-[20px]">
         <div>
             <input class="border-[1px] border-[#339544]" type="radio" id="sv_printed" name="souvenir" value="printed" required>
-            <label for="sv_printed">Printed (First 400 only)</label>
+            <label for="sv_printed">Printed (First 300 only)</label>
         </div>
         <div>
             <input class="border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
-            <label for="sv_digital">Digital</label>
+            <label for="sv_digital">Digital Copy in USB drive (limited slots only)</label>
         </div>
     </div>
 </div>
@@ -38,6 +38,7 @@
 <!-- Certificate of Attendance -->
 <div class="flex flex-col">
     <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
+    <p class="sub-bi-heading text-[#344054]">Your name, as entered during registration, will appear on the certificate.</p>
     <div class="flex gap-[20px]">
         <div>
             <input type="radio" id="cert_yes" name="certificate_needed" value="yes" required>

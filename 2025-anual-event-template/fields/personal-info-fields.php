@@ -54,7 +54,7 @@
                 name="mobile"
                 type="text"
                 required
-                placeholder="Mobile NUmber"
+                placeholder="Mobile Number"
                 class="w-full p-3 rounded-md border-[1px] border-[#339544]"
             />
         </div>
