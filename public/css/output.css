@@ -1960,6 +1960,10 @@ video {
     width: 150px;
   }
 
+  .lg\:w-\[40\%\] {
+    width: 40%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
