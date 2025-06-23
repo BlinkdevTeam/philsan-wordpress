@@ -38,7 +38,7 @@
 <!-- Certificate of Attendance -->
 <div class="flex flex-col">
     <p class="sub-bi-heading text-[#344054]">Do you need a Certificate of Attendance?</p>
-    <p class="sub-bi-heading text-[#344054]">Your name, as entered during registration, will appear on the certificate.</p>
+    <p class="sub-bi-heading text-[#344054 italic font-[300]">Your name, as entered during registration, will appear on the certificate.</p>
     <div class="flex gap-[20px]">
         <div>
             <input type="radio" id="cert_yes" name="certificate_needed" value="yes" required>

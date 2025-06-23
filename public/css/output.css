@@ -1608,6 +1608,14 @@ video {
   font-weight: 14px;
 }
 
+.font-\[400\] {
+  font-weight: 400;
+}
+
+.font-\[300\] {
+  font-weight: 300;
+}
+
 .italic {
   font-style: italic;
 }
