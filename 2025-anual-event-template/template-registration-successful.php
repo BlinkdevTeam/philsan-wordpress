@@ -25,7 +25,7 @@ get_header();
                         <div class="flex gap-[20px] items-center z-[1] justify-center">
                             <a href="https://philsan.org/38th-annual-convention/register/" class="flex items-center py-[10px] px-[40px] w-max h-[60px] bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Start New Registration</a>
                         </div>
-                        <div class="relative lg:hidden">
+                        <div class="relative lg:hidden pt-[120px]">
                             <?php get_template_part('2025-anual-event-template/components/sponsor-logos'); ?>  
                         </div>
                         <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  

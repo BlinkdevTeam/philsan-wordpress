@@ -33,13 +33,13 @@ get_header();
                         <p class="email-exist hidden">This email is already registered</p>
                         <p class="email-pending hidden">This email already has a pending registration</p>
                     </div>
-                    <div class="flex gap-[20px] items-center z-[1] justify-center lg:justify-start pb-[120px]">
+                    <div class="flex gap-[20px] items-center z-[1] justify-center lg:justify-start">
                         <button id="submit-button" type="submit" class="py-[10px] px-[40px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
                         <div id="spinner" class="hidden flex items-center justify-center">
                           <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
                         </div>
                     </div>
-                    <div class="relative lg:hidden">
+                    <div class="relative pt-[120px] lg:hidden">
                         <?php get_template_part('2025-anual-event-template/components/sponsor-logos'); ?>  
                     </div>
                     <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  

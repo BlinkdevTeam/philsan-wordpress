@@ -38,7 +38,7 @@ get_header();
                             <img src="https://philsan.org/wp-content/uploads/2025/06/Sent-Philsan-1.png" alt="">
                         </div>  
                         <p class="text-[22px] font-poppins text-center z-[1]">A verification link has been sent to your email. Please <strong class="text-[#1F773A]">check your inbox</strong> (and spam folder) to complete your registration</p>
-                        <div class="relative lg:hidden">
+                        <div class="relative lg:hidden pt-[120px]">
                             <?php get_template_part('2025-anual-event-template/components/sponsor-logos'); ?>  
                         </div>
                         <?php get_template_part('2025-anual-event-template/components/poster-image'); ?>  
