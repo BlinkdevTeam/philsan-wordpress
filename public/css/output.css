@@ -802,6 +802,10 @@ video {
   height: 28px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -901,6 +905,10 @@ video {
 
 .w-\[28px\] {
   width: 28px;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .max-w-\[1350px\] {
@@ -1586,6 +1594,10 @@ video {
 
 .font-\[200\] {
   font-weight: 200;
+}
+
+.font-\[14px\] {
+  font-weight: 14px;
 }
 
 .italic {
