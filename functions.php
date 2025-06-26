@@ -63,5 +63,9 @@ add_action('admin_head', function () {
         .acf-field-685ce3012b0c1 {
             background-color: #CAD1E0;
         }
+
+        .acf-field-685cebb38f69f {
+            background-color: #dee6ee;
+        }
     </style>';
 });
