@@ -1594,6 +1594,10 @@ video {
   padding-bottom: 50px;
 }
 
+.pt-\[10px\] {
+  padding-top: 10px;
+}
+
 .text-center {
   text-align: center;
 }

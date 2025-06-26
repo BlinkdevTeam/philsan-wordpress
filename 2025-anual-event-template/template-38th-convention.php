@@ -32,17 +32,17 @@ the_post();
                             <span class="font-bold text-[28px]" id="days">00</span>
                             <div class="text-sm">Days</div>
                         </div>
-                        <div>:</div>
+                        <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
                             <span class="font-bold text-[28px]" id="hours">00</span>
                             <div class="text-sm">Hours</div>
                         </div>
-                        <div>:</div>
+                        <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
                             <span class="font-bold text-[28px]" id="minutes">00</span>
                             <div class="text-sm">Minutes</div>
                         </div>
-                        <div>:</div>
+                        <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
                             <span class="font-bold text-[28px]" id="seconds">00</span>
                             <div class="text-sm">Seconds</div>

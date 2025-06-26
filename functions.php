@@ -47,3 +47,14 @@ function philsan_theme_setup() {
     add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
 }
 add_action('after_setup_theme', 'philsan_theme_setup');
+
+
+//acf styles
+add_action('admin_head', function () {
+    echo '<style>
+        /* Target entire field group */
+        #acf-group_685cdba81ccc2 {
+            background-color: #CBF9B6;
+        }
+    </style>';
+});
