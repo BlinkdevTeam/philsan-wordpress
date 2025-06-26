@@ -56,16 +56,12 @@ add_action('admin_head', function () {
             background-color: #CAD1E0;
         }
 
-        .acf-field-685ce2a9c591b {
+        .acf-accordion-title {
             background-color: #dee6ee;
         }
 
-        .acf-field-685ce3012b0c1 {
-            background-color: #dee6ee;
-        }
-
-        .acf-field-685cebb38f69f {
-            background-color: #dee6ee;
+        .acf-accordion-content {
+            background-color: #e6e6e6;
         }
     </style>';
 });
