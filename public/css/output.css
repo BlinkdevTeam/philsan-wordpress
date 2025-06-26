@@ -1079,6 +1079,10 @@ video {
   gap: 40px;
 }
 
+.gap-\[50px\] {
+  gap: 50px;
+}
+
 .gap-\[5px\] {
   gap: 5px;
 }
@@ -1769,6 +1773,10 @@ video {
 
 .duration-200 {
   transition-duration: 200ms;
+}
+
+body {
+  margin: 0;
 }
 
 .swiper {
