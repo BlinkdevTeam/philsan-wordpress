@@ -79,13 +79,13 @@ the_post();
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
-      const milliseconds = diff % 1000;
+    //   const milliseconds = diff % 1000;
 
       document.getElementById("days").innerText = pad(days);
       document.getElementById("hours").innerText = pad(hours);
       document.getElementById("minutes").innerText = pad(minutes);
       document.getElementById("seconds").innerText = pad(seconds);
-      document.getElementById("milliseconds").innerText = pad(milliseconds, 3);
+    //   document.getElementById("milliseconds").innerText = pad(milliseconds, 3);
     }
 
     // ⚡ Update every 50ms for smoother milliseconds display
