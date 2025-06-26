@@ -24,32 +24,34 @@ the_post();
         <div class="relative w-[50%] pb-[50px]">
             <img class="z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
             <img class="absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
-            <div class="flex flex-col justify-end items-end">
-                <p class="text-[#1F773A] text-center">Event Starts at:</p>
-                <div id="countdown" class="flex gap-4 text-2xl font-mono text-[#1F773A]">
-                    <div class="flex flex-col font-bold itmes-center justify-center">
-                        <span id="days">00</span>
-                        <div class="text-sm">Days</div>
+            <div class="flex flex-col justify-end items-end pt-[50px]">
+                <div class="flex items-center gap-[10px]">
+                    <p class="text-[#1F773A] text-center font-bold">Event Starts at:</p>
+                    <div id="countdown" class="flex gap-4 text-2xl font-mono text-[#1F773A]">
+                        <div class="flex flex-col font-bold itmes-center justify-center">
+                            <span id="days">00</span>
+                            <div class="text-sm">Days</div>
+                        </div>
+                        <div>:</div>
+                        <div class="flex flex-col font-bold itmes-center justify-center">
+                            <span id="hours">00</span>
+                            <div class="text-sm">Hours</div>
+                        </div>
+                        <div>:</div>
+                        <div class="flex flex-col font-bold itmes-center justify-center">
+                            <span id="minutes">00</span>
+                            <div class="text-sm">Minutes</div>
+                        </div>
+                        <div>:</div>
+                        <div class="flex flex-col font-bold itmes-center justify-center">
+                            <span id="seconds">00</span>
+                            <div class="text-sm">Seconds</div>
+                        </div>
+                        <!-- <div class="flex flex-col itmes-center justify-center">
+                            <span id="milliseconds">000</span>
+                            <div class="text-sm">Milliseconds</div>
+                        </div> -->
                     </div>
-                    <div>:</div>
-                    <div class="flex flex-col font-bold itmes-center justify-center">
-                        <span id="hours">00</span>
-                        <div class="text-sm">Hours</div>
-                    </div>
-                    <div>:</div>
-                    <div class="flex flex-col font-bold itmes-center justify-center">
-                        <span id="minutes">00</span>
-                        <div class="text-sm">Minutes</div>
-                    </div>
-                    <div>:</div>
-                    <div class="flex flex-col font-bold itmes-center justify-center">
-                        <span id="seconds">00</span>
-                        <div class="text-sm">Seconds</div>
-                    </div>
-                    <!-- <div class="flex flex-col itmes-center justify-center">
-                        <span id="milliseconds">000</span>
-                        <div class="text-sm">Milliseconds</div>
-                    </div> -->
                 </div>
             </div>
         </div>
