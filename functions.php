@@ -56,13 +56,12 @@ add_action('admin_head', function () {
             background-color: #CBF9B6;
         }
 
-        /* Target specific accordion field */
         .acf-field-685ce2a9c591b {
-            border-left: 4px solid #EAFFD2;
+            background-color: #EAFFD2;
         }
 
         .acf-field-685ce3012b0c1 {
-            border-left: 4px solid #FFFFD2;
+            background-color: #FFFFD2;
         }
     </style>';
 });
