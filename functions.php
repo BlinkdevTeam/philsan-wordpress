@@ -53,15 +53,15 @@ add_action('admin_head', function () {
     echo '<style>
         /* Target entire field group */
         #acf-group_685cdba81ccc2 {
-            background-color: #9CBFFF;
+            background-color: #B5B9C1;
         }
 
         .acf-field-685ce2a9c591b {
-            background-color: #B0CCFF;
+            background-color: #BBC1CC;
         }
 
         .acf-field-685ce3012b0c1 {
-            background-color: #C1D7FF;
+            background-color: #CAD1E0;
         }
     </style>';
 });
