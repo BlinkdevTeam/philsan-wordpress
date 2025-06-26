@@ -19,7 +19,7 @@ the_post();
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[28px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
+            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[38px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
         </div>
         <div class="relative w-[50%] pb-[50px]">
             <img class="z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
@@ -29,22 +29,22 @@ the_post();
                     <p class="text-[#1F773A] text-center font-bold">Event Starts at:</p>
                     <div id="countdown" class="flex gap-4 text-[#1F773A]">
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[28px]" id="days">00</span>
+                            <span class="font-bold text-[42px]" id="days">00</span>
                             <div class="text-sm">Days</div>
                         </div>
                         <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[28px]" id="hours">00</span>
+                            <span class="font-bold text-[42px]" id="hours">00</span>
                             <div class="text-sm">Hours</div>
                         </div>
                         <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[28px]" id="minutes">00</span>
+                            <span class="font-bold text-[42px]" id="minutes">00</span>
                             <div class="text-sm">Minutes</div>
                         </div>
                         <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[28px]" id="seconds">00</span>
+                            <span class="font-bold text-[42px]" id="seconds">00</span>
                             <div class="text-sm">Seconds</div>
                         </div>
                         <!-- <div class="flex flex-col itmes-center justify-center">
