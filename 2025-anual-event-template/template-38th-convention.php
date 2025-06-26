@@ -29,22 +29,22 @@ the_post();
                     <p class="text-[#1F773A] text-center font-bold">Event Starts at:</p>
                     <div id="countdown" class="flex gap-4 text-[#1F773A]">
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[42px]" id="days">00</span>
+                            <span class="font-[800] text-[42px]" id="days">00</span>
                             <div class="text-sm">Days</div>
                         </div>
                         <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[42px]" id="hours">00</span>
+                            <span class="font-[800] text-[42px]" id="hours">00</span>
                             <div class="text-sm">Hours</div>
                         </div>
                         <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[42px]" id="minutes">00</span>
+                            <span class="font-[800] text-[42px]" id="minutes">00</span>
                             <div class="text-sm">Minutes</div>
                         </div>
                         <div class="pt-[10px] text-[22px] font-bold">:</div>
                         <div class="flex flex-col items-center justify-center">
-                            <span class="font-bold text-[42px]" id="seconds">00</span>
+                            <span class="font-[800] text-[42px]" id="seconds">00</span>
                             <div class="text-sm">Seconds</div>
                         </div>
                         <!-- <div class="flex flex-col itmes-center justify-center">
