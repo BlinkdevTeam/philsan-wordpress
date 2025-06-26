@@ -9,12 +9,13 @@ $templates_to_hide = [
   'template-register-by-sponsor.php',
   'template-registration-successful.php',
   'template-session-expired.php',
-  'template-visit-email.php'
+  'template-visit-email.php',
+  'template-38th-convention'
 ];
 
 $slugs_to_hide = [
   'login', 'signup', 'register', 'registration-successful',
-  'invalid-email', 'session-expired', 'visit-email', 'complete-registration'
+  'invalid-email', 'session-expired', 'visit-email', 'complete-registration', '38th-convention-test-page'
 ];
 
 $post_types_to_check = ['page', '38th-convention'];

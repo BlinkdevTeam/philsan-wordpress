@@ -19,15 +19,55 @@ the_post();
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <a class="w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[28px] py-[10px] px-[50px] rounded-tl-[80px] rounded-br-[80px]" href="">Register</a>
+            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[28px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
         </div>
-        <div class="relative w-[50%]">
+        <div class="relative w-[50%] pb-[50px]">
             <img class="z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
             <img class="absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            <div id="countdown" class="flex gap-4 text-2xl font-mono">
+                <div><span id="days">00</span><div class="text-sm">Days</div></div>
+                <div><span id="hours">00</span><div class="text-sm">Hours</div></div>
+                <div><span id="minutes">00</span><div class="text-sm">Minutes</div></div>
+                <div><span id="seconds">00</span><div class="text-sm">Seconds</div></div>
+                <div><span id="milliseconds">000</span><div class="text-sm">Milliseconds</div></div>
+            </div>
         </div>
     </div>
 </div>
 
+<script>
+    // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
+    const eventDate = new Date("2025-12-25T00:00:00").getTime();
+
+    function pad(num, size = 2) {
+      return num.toString().padStart(size, "0");
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "🎉 The event has started!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      const milliseconds = diff % 1000;
+
+      document.getElementById("days").innerText = pad(days);
+      document.getElementById("hours").innerText = pad(hours);
+      document.getElementById("minutes").innerText = pad(minutes);
+      document.getElementById("seconds").innerText = pad(seconds);
+      document.getElementById("milliseconds").innerText = pad(milliseconds, 3);
+    }
+
+    // ⚡ Update every 50ms for smoother milliseconds display
+    setInterval(updateCountdown, 50);
+  </script>
 <?php 
         }
 

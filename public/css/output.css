@@ -1578,6 +1578,10 @@ video {
   padding-top: 60px;
 }
 
+.pb-\[50px\] {
+  padding-bottom: 50px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1592,6 +1596,10 @@ video {
 
 .font-poppins {
   font-family: poppins, sans-serif;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .text-2xl {
