@@ -1706,6 +1706,10 @@ video {
   font-weight: 600;
 }
 
+.font-\[28px\] {
+  font-weight: 28px;
+}
+
 .italic {
   font-style: italic;
 }
