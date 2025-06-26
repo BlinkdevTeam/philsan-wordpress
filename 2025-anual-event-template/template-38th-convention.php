@@ -1,5 +1,10 @@
 <?php 
  /* Template Name: 38th Convention */
+
+get_header(); 
+
+while (have_posts()) {
+the_post();
 ?>
 
 <div class="hero-section bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)]">
@@ -13,3 +18,10 @@
         </div>
     </div>
 </div>
+
+<?php 
+        }
+
+get_footer(); 
+
+?>
