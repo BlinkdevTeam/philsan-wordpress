@@ -49,12 +49,20 @@ function philsan_theme_setup() {
 add_action('after_setup_theme', 'philsan_theme_setup');
 
 
-//acf styles
 add_action('admin_head', function () {
     echo '<style>
         /* Target entire field group */
         #acf-group_685cdba81ccc2 {
             background-color: #CBF9B6;
+        }
+
+        /* Target specific accordion field */
+        .acf-field-685ce2a9c591b {
+            border-left: 4px solid #EAFFD2;
+        }
+
+        .acf-field-685ce3012b0c1 {
+            border-left: 4px solid #FFFFD2;
         }
     </style>';
 });
