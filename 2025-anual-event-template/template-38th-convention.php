@@ -87,18 +87,18 @@ $page = get_page_by_title('38th convention Test Page');
                 </div>
             </div>
             
-            <div class="flex justify-between">
+            <div class="flex justify-between gap-[20px]">
                 <?php if (get_field("about_video", $page->ID)) : ?> 
-                    <video id="sde" loop autoplay muted class="w-[80%] h-auto">
+                    <video id="sde" loop autoplay muted class="w-[80%] h-auto shadow-lg">
                         <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
-                <div class="flex flex-col justify-between">
-                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] bg-[#EDB221] font-bold h-[50%] w-[100%]">
+                <div class="flex flex-col justify-between w-[100%] gap-[20px]">
+                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] text-[40px] bg-[#EDB221] font-bold h-[50%] w-[100%]">
                         <p>+15</p>
                         <p>Speakers</p>
                     </div>
-                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] bg-[#1F773A] font-bold h-[50%] w-[100%]">
+                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] text-[40px] bg-[#1F773A] font-bold h-[50%] w-[100%]">
                         <p>1</p>
                         <p>Day Event</p>
                     </div>
@@ -111,9 +111,9 @@ $page = get_page_by_title('38th convention Test Page');
             ?>
 
             <?php if ($gallery) : ?>
-                <div class="about-gallery flex justify-between mt-[20px]">
+                <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
                     <?php foreach ($gallery as $image) : ?>
-                        <div class="w-[50%] shadow-lg">
+                        <div class="shadow-lg">
                             <img 
                                 src="<?php echo esc_url($image['url']); ?>" 
                                 alt="<?php echo esc_attr($image['alt']); ?>" 
