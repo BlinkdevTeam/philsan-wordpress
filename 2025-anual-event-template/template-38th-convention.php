@@ -169,15 +169,23 @@ $page = get_page_by_title('38th convention Test Page');
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
                         <!-- Loop through each row in the 'about_description' repeater -->
                             <p class="text-center"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
-                        <?php if (have_rows('speaker', $page->ID)) : ?>
-                            <?php while (have_rows('speaker', $page->ID)) : the_row(); ?>
-                                <!-- Loop through each row in the 'about_description' repeater -->
-                                    <img src="<?php echo esc_html(get_sub_field('speaker_image')); ?>" alt="">
-                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
-                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
-                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_description')); ?></p>
-                            <?php endwhile; ?>
-                        <?php endif; ?> 
+                            <div class="flex gap-[10px] flex-wrap">
+                                <?php if (have_rows('speaker', $page->ID)) : ?>
+                                    <?php while (have_rows('speaker', $page->ID)) : the_row(); ?>
+                                        <!-- Loop through each row in the 'about_description' repeater -->
+                                        <div class="flex flex-col items-center justify-center">
+                                            <div class="p-[20px]rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
+                                                <img src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
+                                            </div>
+                                            <div class="flex flex-col items-center justify-center gagp-[10px] py-[20px] px-[50px] bg-[#1F773A]">
+                                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
+                                            </div>
+                                            <!-- <p class="text-center"><?php //echo esc_html(get_sub_field('speaker_description')); ?></p> -->
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?> 
+                           </div>
                     <?php endwhile; ?>
                 <?php endif; ?> 
             </div>
