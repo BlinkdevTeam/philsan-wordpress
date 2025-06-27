@@ -1901,12 +1901,12 @@ video {
 }
 
 .animate-flipY1 {
-  animation: flipY 2s linear infinite;
+  animation: flipY 5s linear infinite;
   transform-style: preserve-3d;
 }
 
 .animate-flipY2 {
-  animation: flipY 4s linear infinite;
+  animation: flipY 7s linear infinite;
   transform-style: preserve-3d;
 }
 
