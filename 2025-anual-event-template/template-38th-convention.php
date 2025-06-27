@@ -133,7 +133,7 @@ while (have_posts()) {
     <img class="absolute top-[0] w-full h-full object-cover z-[-1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
 </div>
 
-<div class="speaker-convention relative ">
+<div class="speaker-convention relative bg-[#ffffff]">
     <div class="w-[1280px] mx-auto pt-[60px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
@@ -168,8 +168,8 @@ while (have_posts()) {
                             <?php if (have_rows('speaker')) : ?>
                                 <?php while (have_rows('speaker')) : the_row(); ?>
                                     <div class="flex flex-col items-center justify-center">
-                                        <div class="p-[20px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
-                                            <img src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
+                                        <div class="rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
+                                            <img class="w-[50%]" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
                                         </div>
                                         <div class="flex flex-col items-center justify-center gap-[10px] py-[20px] px-[50px] bg-[#1F773A] text-white">
                                             <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
