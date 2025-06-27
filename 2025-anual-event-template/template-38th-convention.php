@@ -76,7 +76,7 @@ $page = get_page_by_title('38th convention Test Page');
             <?php endif; ?> 
             
             <?php if (get_field("about_video", $page->ID)) : ?> 
-                 <video id="sde" loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                 <video id="sde" loop autoplay muted class="w-[50%] h-[50%]">
                     <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
                 </video>
             <?php endif; ?>
