@@ -167,9 +167,10 @@ while (have_posts()) {
                         <div class="flex gap-[10px] flex-wrap">
                             <?php if (have_rows('speaker')) : ?>
                                 <?php while (have_rows('speaker')) : the_row(); ?>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <div class="rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
-                                            <img class="w-[50%]" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
+                                    <div class="relative flex flex-col items-center justify-center">
+                                        <div class="absolute z-[-1] top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden"></div>
+                                        <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-xl overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                         </div>
                                         <div class="flex flex-col items-center justify-center gap-[10px] py-[20px] px-[50px] bg-[#1F773A] text-white">
                                             <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
