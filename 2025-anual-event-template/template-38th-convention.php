@@ -66,8 +66,8 @@ $page = get_page_by_title('38th convention Test Page');
             ACF requires the post ID to know where to get the custom field from.  -->
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("about_title", $page->ID)) : ?> 
-                    <div class="flex gap-[20px]">
-                        <svg class="w-[53px] h-[78px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex items-center justify-center gap-[20px]">
+                        <svg class="w-[33px] h-[58px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
                             <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
                             <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
@@ -94,11 +94,11 @@ $page = get_page_by_title('38th convention Test Page');
                     </video>
                 <?php endif; ?>
                 <div class="flex flex-col justify-between w-[100%] gap-[20px]">
-                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] text-[40px] bg-[#EDB221] font-bold h-[50%] w-[100%]">
+                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%]">
                         <p>+15</p>
                         <p>Speakers</p>
                     </div>
-                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] text-[40px] bg-[#1F773A] font-bold h-[50%] w-[100%]">
+                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%]">
                         <p>1</p>
                         <p>Day Event</p>
                     </div>
