@@ -4,9 +4,9 @@
 get_header(); 
 
 while (have_posts()) {
-the_post();
+    the_post();
 
-$page = get_page_by_title('38th convention Test Page');
+    $page = get_page_by_title('38th convention Test Page');
 ?>
 
 <div class="hero-section relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
@@ -59,6 +59,7 @@ $page = get_page_by_title('38th convention Test Page');
         </div>
     </div>
 </div>
+
 <div class="about-convention relative ">
     <div class="w-[1280px] mx-auto pt-[60px]">
        <?php if ($page) : ?>
@@ -168,7 +169,7 @@ $page = get_page_by_title('38th convention Test Page');
                                 <?php while (have_rows('speaker')) : the_row(); ?>
                                     <div class="flex flex-col items-center justify-center">
                                         <div class="p-[20px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
-                                            <img src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
+                                            <!-- <img src="<?php //echo esc_url(get_sub_field('speaker_image')); ?>" alt=""> -->
                                         </div>
                                         <div class="flex flex-col items-center justify-center gap-[10px] py-[20px] px-[50px] bg-[#1F773A] text-white">
                                             <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
