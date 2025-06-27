@@ -67,7 +67,7 @@ $page = get_page_by_title('38th convention Test Page');
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("about_title", $page->ID)) : ?> 
                     <div class="flex gap-[20px]">
-                        <svg class="w-[63px] h-[88px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-[53px] h-[78px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
                             <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
                             <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
@@ -87,11 +87,23 @@ $page = get_page_by_title('38th convention Test Page');
                 </div>
             </div>
             
-            <?php if (get_field("about_video", $page->ID)) : ?> 
-                 <video id="sde" loop autoplay muted class="w-[50%] h-[50%]">
-                    <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
-                </video>
-            <?php endif; ?>
+            <div class="flex justify-between">
+                <?php if (get_field("about_video", $page->ID)) : ?> 
+                    <video id="sde" loop autoplay muted class="w-[80%] h-auto">
+                        <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
+                    </video>
+                <?php endif; ?>
+                <div class="flex flex-col justify-between">
+                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] bg-[#EDB221] font-bold h-[50%] w-[100%]">
+                        <p>+15</p>
+                        <p>Speakers</p>
+                    </div>
+                    <div class="flex flex-col shadow-lg items-center justify-center gap-[10px] text-[#ffffff] bg-[#1F773A] font-bold h-[50%] w-[100%]">
+                        <p>1</p>
+                        <p>Day Event</p>
+                    </div>
+                </div>
+            </div>
 
             <?php 
                 // Get the gallery array from the specific page
@@ -99,13 +111,13 @@ $page = get_page_by_title('38th convention Test Page');
             ?>
 
             <?php if ($gallery) : ?>
-                <div class="about-gallery flex gap-[10px]">
+                <div class="about-gallery flex justify-between mt-[20px]">
                     <?php foreach ($gallery as $image) : ?>
-                        <div>
+                        <div class="w-[50%] shadow-lg">
                             <img 
                                 src="<?php echo esc_url($image['url']); ?>" 
                                 alt="<?php echo esc_attr($image['alt']); ?>" 
-                                class="w-[50%] h-auto object-cover rounded"
+                                class="w-full h-auto object-cover rounded"
                             />
                         </div>
                     <?php endforeach; ?>

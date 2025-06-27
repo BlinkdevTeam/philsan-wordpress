@@ -834,6 +834,10 @@ video {
   height: 88px;
 }
 
+.h-\[78px\] {
+  height: 78px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -933,6 +937,10 @@ video {
 
 .w-\[63px\] {
   width: 63px;
+}
+
+.w-\[53px\] {
+  width: 53px;
 }
 
 .max-w-\[1350px\] {
@@ -1325,6 +1333,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#EDB221\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
