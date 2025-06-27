@@ -79,24 +79,7 @@ $page = get_page_by_title('38th convention Test Page');
                 </video>
             <?php endif; ?>
 
-            <?php 
-                // Get the gallery array from the specific page
-                $gallery = get_field('about_image_group', $page->ID); 
-            ?>
-
-            <?php if ($gallery) : ?>
-                <div class="about-gallery grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-                    <?php foreach ($gallery as $image) : ?>
-                        <div>
-                            <img 
-                                src="<?php echo esc_url($image['url']); ?>" 
-                                alt="<?php echo esc_attr($image['alt']); ?>" 
-                                class="w-full h-auto object-cover rounded"
-                            />
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
+           
         <?php endif; ?>
     </div>
     <img class="absolute top-[0] w-full h-full object-cover z-[1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
