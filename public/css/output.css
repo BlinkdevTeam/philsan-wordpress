@@ -947,6 +947,10 @@ video {
   width: 320px;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -2027,6 +2031,10 @@ body {
 
   .md\:h-\[320px\] {
     height: 320px;
+  }
+
+  .md\:h-\[400px\] {
+    height: 400px;
   }
 
   .md\:w-\[100\%\] {
