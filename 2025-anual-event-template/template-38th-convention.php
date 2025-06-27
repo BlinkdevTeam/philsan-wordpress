@@ -135,20 +135,16 @@ $page = get_page_by_title('38th convention Test Page');
 <div class="speaker-convention relative ">
     <div class="w-[1280px] mx-auto pt-[60px]">
        <?php if ($page) : ?>
-            <!--  Use $page->ID to get the ID of the page we fetched above.
-            ACF requires the post ID to know where to get the custom field from.  -->
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("speaker_container_title", $page->ID)) : ?> 
                     <div class="flex items-center justify-center gap-[20px]">
                         <div class="w-max">
-                            <div>
-                                <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
-                                </svg>
-                            </div>
+                            <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
+                                <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
+                                <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
+                                <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                            </svg>
                         </div>
                         <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
                     </div>
@@ -157,8 +153,7 @@ $page = get_page_by_title('38th convention Test Page');
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('speaker_container_description', $page->ID)) : ?>
                         <?php while (have_rows('speaker_container_description', $page->ID)) : the_row(); ?>
-                        <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
-                            <!-- Loop through each row in the 'about_description' repeater -->
+                            <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
@@ -167,31 +162,29 @@ $page = get_page_by_title('38th convention Test Page');
             <div class="flex flex-col gap-[10px]">
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
-                        <!-- Loop through each row in the 'about_description' repeater -->
-                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
-                            <div class="flex gap-[10px] flex-wrap">
-                                <?php if (have_rows('speaker', $page->ID)) : ?>
-                                    <?php while (have_rows('speaker', $page->ID)) : the_row(); ?>
-                                        <!-- Loop through each row in the 'about_description' repeater -->
-                                        <div class="flex flex-col items-center justify-center">
-                                            <div class="p-[20px]rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
-                                                <img src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
-                                            </div>
-                                            <div class="flex flex-col items-center justify-center gagp-[10px] py-[20px] px-[50px] bg-[#1F773A]">
-                                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
-                                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
-                                            </div>
-                                            <!-- <p class="text-center"><?php //echo esc_html(get_sub_field('speaker_description')); ?></p> -->
+                        <p class="text-center font-bold text-lg"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
+                        <div class="flex gap-[10px] flex-wrap">
+                            <?php if (have_rows('speaker')) : ?>
+                                <?php while (have_rows('speaker')) : the_row(); ?>
+                                    <div class="flex flex-col items-center justify-center">
+                                        <div class="p-[20px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
+                                            <img src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="">
                                         </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?> 
-                           </div>
+                                        <div class="flex flex-col items-center justify-center gap-[10px] py-[20px] px-[50px] bg-[#1F773A] text-white">
+                                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?> 
+                        </div>
                     <?php endwhile; ?>
                 <?php endif; ?> 
             </div>
         <?php endif; ?>
     </div>
 </div>
+
 
 <script>
     // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
