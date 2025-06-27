@@ -5,6 +5,8 @@ get_header();
 
 while (have_posts()) {
 the_post();
+
+$page = get_page_by_title('38th convention Test Page');
 ?>
 
 <div class="hero-section relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
@@ -56,6 +58,18 @@ the_post();
             </div>
         </div>
     </div>
+</div>
+<div class="about-convention relative ">
+    <div>
+        <?php if ($page) : ?>
+            <!--  Use $page->ID to get the ID of the page we fetched above.
+            ACF requires the post ID to know where to get the custom field from.  -->
+            <?php if (get_field("about_title", $page->ID)) : ?> 
+                <h6><?php echo get_field("about_title", $page->ID); ?></h6>
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
+    <img class="absolute top-[0] w-full h-full object-cover z-[1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
 </div>
 
 <script>
