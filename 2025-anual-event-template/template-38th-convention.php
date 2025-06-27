@@ -60,20 +60,32 @@ $page = get_page_by_title('38th convention Test Page');
     </div>
 </div>
 <div class="about-convention relative ">
-    <div>
+    <div class="flex gap-[50px] w-[1280px] mx-auto pt-[60px]">
        <?php if ($page) : ?>
             <!--  Use $page->ID to get the ID of the page we fetched above.
             ACF requires the post ID to know where to get the custom field from.  -->
-            <?php if (get_field("about_title", $page->ID)) : ?> 
-                <h6><?php echo get_field("about_title", $page->ID); ?></h6>
-            <?php endif; ?>
+            <div class="flex flex-col gap-[20px] pb-[40px]">
+                <?php if (get_field("about_title", $page->ID)) : ?> 
+                    <div class="flex gap-[20px]">
+                        <svg class="w-[63px] h-[88px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
+                            <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
+                            <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
+                            <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                        </svg>
+                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("about_title", $page->ID); ?></h6>
+                    </div>
+                <?php endif; ?>
 
-            <?php if (have_rows('about_description', $page->ID)) : ?>
-                <?php while (have_rows('about_description', $page->ID)) : the_row(); ?>
-                    <!-- Loop through each row in the 'about_description' repeater -->
-                    <p><?php echo esc_html(get_sub_field('description')); ?></p>
-                <?php endwhile; ?>
-            <?php endif; ?> 
+                <div class="flex flex-col gap-[10px]">
+                    <?php if (have_rows('about_description', $page->ID)) : ?>
+                        <?php while (have_rows('about_description', $page->ID)) : the_row(); ?>
+                            <!-- Loop through each row in the 'about_description' repeater -->
+                            <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
+                        <?php endwhile; ?>
+                    <?php endif; ?> 
+                </div>
+            </div>
             
             <?php if (get_field("about_video", $page->ID)) : ?> 
                  <video id="sde" loop autoplay muted class="w-[50%] h-[50%]">
@@ -87,13 +99,13 @@ $page = get_page_by_title('38th convention Test Page');
             ?>
 
             <?php if ($gallery) : ?>
-                <div class="about-gallery grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                <div class="about-gallery flex gap-[10px]">
                     <?php foreach ($gallery as $image) : ?>
                         <div>
                             <img 
                                 src="<?php echo esc_url($image['url']); ?>" 
                                 alt="<?php echo esc_attr($image['alt']); ?>" 
-                                class="w-full h-auto object-cover rounded"
+                                class="w-[50%] h-auto object-cover rounded"
                             />
                         </div>
                     <?php endforeach; ?>
