@@ -93,16 +93,16 @@ $page = get_page_by_title('38th convention Test Page');
             
             <div class="flex justify-between gap-[20px]">
                 <?php if (get_field("about_video", $page->ID)) : ?> 
-                    <video id="sde" loop autoplay muted class="w-[80%] h-auto shadow-xl rounded-lg">
+                    <video id="sde" loop autoplay muted class="w-[80%] h-auto shadow rounded-lg">
                         <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
                 <div class="flex flex-col justify-between w-[100%] gap-[20px]">
-                    <div class="flex flex-col shadow-xl items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
+                    <div class="flex flex-col shadow items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>+15</p>
                         <p>Speakers</p>
                     </div>
-                    <div class="flex flex-col shadow-xl items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
+                    <div class="flex flex-col shadow items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>1</p>
                         <p>Day Event</p>
                     </div>
@@ -117,7 +117,7 @@ $page = get_page_by_title('38th convention Test Page');
             <?php if ($gallery) : ?>
                 <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
                     <?php foreach ($gallery as $image) : ?>
-                        <div class="shadow-xl">
+                        <div class="shadow">
                             <img 
                                 src="<?php echo esc_url($image['url']); ?>" 
                                 alt="<?php echo esc_attr($image['alt']); ?>" 
