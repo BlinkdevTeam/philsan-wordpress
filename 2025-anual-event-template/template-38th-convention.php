@@ -73,13 +73,6 @@ $page = get_page_by_title('38th convention Test Page');
                 <p><?php echo esc_html(get_sub_field('description', $page->ID))); ?></p>
             <?php endif; ?>    
             
-            <?php if (get_field("about_video", $page->ID)) : ?> 
-                 <video id="sde" loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                    <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
-                </video>
-            <?php endif; ?>
-
-           
         <?php endif; ?>
     </div>
     <img class="absolute top-[0] w-full h-full object-cover z-[1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
