@@ -1900,6 +1900,16 @@ video {
   }
 }
 
+.animate-flipY1 {
+  animation: flipY 2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.animate-flipY2 {
+  animation: flipY 4s linear infinite;
+  transform-style: preserve-3d;
+}
+
 body {
   margin: 0;
 }
@@ -1955,11 +1965,6 @@ body {
 .focus\:ring-\[\#349544\]:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(52 149 68 / var(--tw-ring-opacity, 1));
-}
-
-.group:hover .group-hover\:animate-flipY {
-  animation: flipY 2s linear infinite;
-  transform-style: preserve-3d;
 }
 
 @media (min-width: 640px) {

@@ -30,8 +30,13 @@ body {
     100% { transform: rotateY(360deg); }
   }
 
-  .animate-flipY {
+  .animate-flipY1 {
     animation: flipY 2s linear infinite;
+    transform-style: preserve-3d;
+  }
+
+  .animate-flipY2 {
+    animation: flipY 4s linear infinite;
     transform-style: preserve-3d;
   }
 }
