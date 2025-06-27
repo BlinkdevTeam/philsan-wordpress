@@ -943,6 +943,10 @@ video {
   width: 74.6%;
 }
 
+.w-\[320px\] {
+  width: 320px;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -1621,6 +1625,10 @@ video {
 
 .pt-\[60px\] {
   padding-top: 60px;
+}
+
+.pl-\[20px\] {
+  padding-left: 20px;
 }
 
 .text-center {

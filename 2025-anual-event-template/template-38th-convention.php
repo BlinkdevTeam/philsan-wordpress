@@ -168,14 +168,14 @@ while (have_posts()) {
                             <?php if (have_rows('speaker')) : ?>
                                 <?php while (have_rows('speaker')) : the_row(); ?>
                                     <div class="relative flex flex-col items-center justify-center">
-                                        <div class="w-max h-full top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
+                                        <div class="pl-[20px] w-max h-full top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
                                             <div class="h-[200px] md:h-[320px] rounded-xl overflow-hidden">
                                                 <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                             </div>
                                         </div>
-                                        <div class="flex flex-col items-center justify-center gap-[10px] py-[20px] px-[50px] bg-[#1F773A] text-white">
-                                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
-                                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
+                                        <div class="w-[320px] flex flex-col items-center rounded-br-xl justify-center gap-[10px] py-[20px] px-[20px] bg-[#1F773A] text-white">
+                                            <p class="text-center text-[28px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                            <p class="text-center font-[300]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
                                         </div>
                                     </div>
                                 <?php endwhile; ?>
