@@ -931,6 +931,10 @@ video {
   width: max-content;
 }
 
+.w-\[74\.6\%\] {
+  width: 74.6%;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }

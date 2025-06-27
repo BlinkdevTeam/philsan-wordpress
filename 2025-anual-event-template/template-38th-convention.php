@@ -93,7 +93,7 @@ $page = get_page_by_title('38th convention Test Page');
             
             <div class="flex justify-between gap-[20px]">
                 <?php if (get_field("about_video", $page->ID)) : ?> 
-                    <video id="sde" loop autoplay muted class="w-[80%] h-auto shadow rounded-lg">
+                    <video id="sde" loop autoplay muted class="w-[74.6%] h-auto shadow rounded-lg">
                         <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
