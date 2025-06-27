@@ -68,11 +68,37 @@ $page = get_page_by_title('38th convention Test Page');
                 <h6><?php echo get_field("about_title", $page->ID); ?></h6>
             <?php endif; ?>
 
-            <?php if (have_rows('about_description', $page->ID))): ?>
-                <?php while (have_rows('about_description', $page->ID))): the_row(); ?>
-                <p><?php echo esc_html(get_sub_field('description', $page->ID))); ?></p>
-            <?php endif; ?>    
+            <?php if (have_rows('about_description', $page->ID)) : ?>
+                <?php while (have_rows('about_description', $page->ID)) : the_row(); ?>
+                    <!-- Loop through each row in the 'about_description' repeater -->
+                    <p><?php echo esc_html(get_sub_field('description')); ?></p>
+                <?php endwhile; ?>
+            <?php endif; ?> 
             
+            <?php if (get_field("about_video", $page->ID)) : ?> 
+                 <video id="sde" loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                    <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
+                </video>
+            <?php endif; ?>
+
+            <?php 
+                // Get the gallery array from the specific page
+                $gallery = get_field('about_image_group', $page->ID); 
+            ?>
+
+            <?php if ($gallery) : ?>
+                <div class="about-gallery grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                    <?php foreach ($gallery as $image) : ?>
+                        <div>
+                            <img 
+                                src="<?php echo esc_url($image['url']); ?>" 
+                                alt="<?php echo esc_attr($image['alt']); ?>" 
+                                class="w-full h-auto object-cover rounded"
+                            />
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
     <img class="absolute top-[0] w-full h-full object-cover z-[1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
