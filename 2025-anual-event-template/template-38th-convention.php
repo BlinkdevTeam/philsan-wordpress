@@ -101,7 +101,7 @@ $page = get_page_by_title('38th convention Test Page');
             <?php endif; ?>
         <?php endif; ?>
     </div>
-    <img class="absolute top-[0] w-full h-full object-cover z-[1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
+    <img class="absolute top-[0] w-full h-full object-cover z-[-1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
 </div>
 
 <script>
