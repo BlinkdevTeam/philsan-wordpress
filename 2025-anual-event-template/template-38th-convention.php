@@ -150,59 +150,39 @@ $page = get_page_by_title('38th convention Test Page');
                                 </svg>
                             </div>
                         </div>
-                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("about_title", $page->ID); ?></h6>
+                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
                     </div>
                 <?php endif; ?>
-
+                
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('speaker_container_description', $page->ID)) : ?>
                         <?php while (have_rows('speaker_container_description', $page->ID)) : the_row(); ?>
+                        <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
                             <!-- Loop through each row in the 'about_description' repeater -->
-                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
-                            <?php if (have_rows('speaker', $page->ID)) : ?>
-                                <?php while (have_rows('speaker', $page->ID)) : the_row(); ?>
-                                    <!-- Loop through each row in the 'about_description' repeater -->
-                                     <img src="<?php echo esc_html(get_sub_field('speaker_image')); ?>" alt="">
-                                    <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
-                                    <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
-                                    <p class="text-center"><?php echo esc_html(get_sub_field('speaker_description')); ?></p>
-                                <?php endwhile; ?>
-                            <?php endif; ?> 
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
             </div>
-            
+
             <div class="flex flex-col gap-[10px]">
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
                         <!-- Loop through each row in the 'about_description' repeater -->
-                        <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            <p class="text-center"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
+                        <?php if (have_rows('speaker', $page->ID)) : ?>
+                            <?php while (have_rows('speaker', $page->ID)) : the_row(); ?>
+                                <!-- Loop through each row in the 'about_description' repeater -->
+                                    <img src="<?php echo esc_html(get_sub_field('speaker_image')); ?>" alt="">
+                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
+                                <p class="text-center"><?php echo esc_html(get_sub_field('speaker_description')); ?></p>
+                            <?php endwhile; ?>
+                        <?php endif; ?> 
                     <?php endwhile; ?>
                 <?php endif; ?> 
             </div>
-
-            <?php 
-                // Get the gallery array from the specific page
-                $gallery = get_field('about_image_group', $page->ID); 
-            ?>
-
-            <?php if ($gallery) : ?>
-                <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
-                    <?php foreach ($gallery as $image) : ?>
-                        <div class="shadow">
-                            <img 
-                                src="<?php echo esc_url($image['url']); ?>" 
-                                alt="<?php echo esc_attr($image['alt']); ?>" 
-                                class="w-full h-auto object-cover rounded-xl"
-                            />
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
         <?php endif; ?>
     </div>
-    <img class="absolute top-[0] w-full h-full object-cover z-[-1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
 </div>
 
 <script>
