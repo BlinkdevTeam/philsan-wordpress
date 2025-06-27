@@ -60,7 +60,7 @@ $page = get_page_by_title('38th convention Test Page');
     </div>
 </div>
 <div class="about-convention relative ">
-    <div class="flex gap-[50px] w-[1280px] mx-auto pt-[60px]">
+    <div class="w-[1280px] mx-auto pt-[60px]">
        <?php if ($page) : ?>
             <!--  Use $page->ID to get the ID of the page we fetched above.
             ACF requires the post ID to know where to get the custom field from.  -->
