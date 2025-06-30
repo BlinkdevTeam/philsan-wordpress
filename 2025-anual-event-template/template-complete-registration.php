@@ -56,13 +56,13 @@ get_header();
                                 
                                 <div id="upload-field" class="pt-[20px] relative flex flex-col transition-all duration-200 ease">
                                     <div class="flex gap-[10px] justify-between">
-                                        <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pr-[10px]">
+                                        <!-- <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pr-[10px]">
                                             <p class="sub-bi-heading text-[#344054]"><strong class="font-[700]">EARLY BIRD RATE:</strong></p>
                                             <p class="sub-bi-heading text-[#344054] pb-[5px] italic">Deadline of Payment June 30, 2025</p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 5,600.00/pax </strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 6,000.00/pax </strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 110.00/pax</strong></p>
-                                        </div>
+                                        </div> -->
 
                                         <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pl-[10px]">
                                             <p class="sub-bi-heading text-[#344054] pb-[5px]"><strong class="font-[700]">REGULAR RATE:</strong></p>
