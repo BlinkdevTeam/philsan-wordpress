@@ -850,6 +850,14 @@ video {
   height: 150px;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
