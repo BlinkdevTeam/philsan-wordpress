@@ -220,12 +220,12 @@ while (have_posts()) {
             </div>
 
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper flex flex-col gap-[10px]">
+                <div class="swiper-wrapper gap-[10px]">
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
                             <div class="swiper-slide pt-[100px]">
                                 <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
-                                <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
+                                <div class="flex justify-center gap-[40px] flex-wrap pt-[50px] w-[720px] mx-auto">
                                     <?php 
                                         // Correct: get gallery sub field inside the loop
                                         $gallery = get_sub_field('sponsor_logo'); 
@@ -234,7 +234,7 @@ while (have_posts()) {
                                     <?php if ($gallery) : ?>
                                         <div class="sponsor-gallery flex justify-between mt-[20px] gap-[20px]">
                                             <?php foreach ($gallery as $image) : ?>
-                                                <div class="shadow">
+                                                <div class="w-[200px]">
                                                     <img 
                                                         src="<?php echo esc_url($image['url']); ?>" 
                                                         alt="<?php echo esc_attr($image['alt']); ?>" 
