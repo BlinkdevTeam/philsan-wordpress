@@ -164,7 +164,7 @@ while (have_posts()) {
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
                         <div class="pt-[100px]">
-                            <p class="text-center font-bold text-[22px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
+                            <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
@@ -174,9 +174,9 @@ while (have_posts()) {
                                                     <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                                 </div>
                                             </div>
-                                            <div class="w-[400px] flex flex-col items-center rounded-br-xl justify-center gap-[10px] py-[10px] px-[10px] bg-[#1F773A] text-white">
+                                            <div class="w-[400px] flex flex-col items-center rounded-br-xl justify-center gap-[10px] py-[20px] px-[20px] bg-[#1F773A] text-white">
                                                 <p class="text-center text-[22px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
-                                                <div class="h-[50px]">
+                                                <div class="h-[50px] w-[340px]">
                                                     <p class="text-center font-[300]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
                                                 </div>
                                             </div>
