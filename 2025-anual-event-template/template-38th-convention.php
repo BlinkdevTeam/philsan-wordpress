@@ -169,12 +169,12 @@ while (have_posts()) {
                                 <?php while (have_rows('speaker')) : the_row(); ?>
                                     <div class="relative flex flex-col items-center justify-center">
                                         <div class="relative pl-[20px] w-[350px] h-full top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
-                                            <div class="absolute bottom-[0px] h-[200px] md:h-[400px] rounded-xl overflow-hidden">
+                                            <div class="absolute bottom-[0px] h-[200px] md:h-[350px]">
                                                 <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                             </div>
                                         </div>
                                         <div class="w-[400px] flex flex-col items-center rounded-br-xl justify-center gap-[10px] py-[20px] px-[20px] bg-[#1F773A] text-white">
-                                            <p class="text-center text-[28px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                            <p class="text-center text-[22px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
                                             <p class="text-center font-[300]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
                                         </div>
                                     </div>
