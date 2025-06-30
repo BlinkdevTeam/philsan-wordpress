@@ -192,7 +192,7 @@ while (have_posts()) {
     </div>
 </div>
 
-<div class="sponsors relative bg-[#ffffff]">
+<div class="sponsors relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
     <div class="w-[1280px] mx-auto pt-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
@@ -224,7 +224,9 @@ while (have_posts()) {
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
                             <div class="swiper-slide pt-[100px] m-[0px]">
-                                <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
+                                <div class="flex flex-col items-center justify-center p-[20px] rounded-tl-[80px] rounded-br-[80px]">
+                                    <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
+                                </div>
                                 <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                     <?php 
                                         // Correct: get gallery sub field inside the loop
