@@ -224,16 +224,16 @@ while (have_posts()) {
                     <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
                         <div class="pt-[100px]">
                             <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
-                            <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
+                            <div class="swiper">
                                 <?php 
                                     // Correct: get gallery sub field inside the loop
                                     $gallery = get_sub_field('sponsor_logo'); 
                                 ?>
 
                                 <?php if ($gallery) : ?>
-                                    <div class="sponsor-gallery flex flex-wrap justify-center mt-[20px] gap-[20px] items-center">
+                                    <div class="sponsor-gallery swiper-wrapper flex flex-wrap justify-center mt-[20px] gap-[20px] items-center">
                                         <?php foreach ($gallery as $image) : ?>
-                                            <div class="w-[200px]">
+                                            <div class="swiper-slide w-[200px]">
                                                 <img 
                                                     src="<?php echo esc_url($image['url']); ?>" 
                                                     alt="<?php echo esc_attr($image['alt']); ?>" 
@@ -242,6 +242,7 @@ while (have_posts()) {
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
+                                    <div class="swiper-pagination"></div>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -255,37 +256,70 @@ while (have_posts()) {
 
 
 <script>
-    // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
-    const eventDate = new Date("2025-09-30T14:30:00").getTime();
+    document.addEventListener("DOMContentLoaded", function () {
+        // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
+        const eventDate = new Date("2025-09-30T14:30:00").getTime();
 
-    function pad(num, size = 2) {
-      return num.toString().padStart(size, "0");
-    }
+        function pad(num, size = 2) {
+        return num.toString().padStart(size, "0");
+        }
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = eventDate - now;
+        function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
 
-      if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "🎉 The event has started!";
-        return;
-      }
+        if (diff <= 0) {
+            document.getElementById("countdown").innerHTML = "🎉 The event has started!";
+            return;
+        }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-    //   const milliseconds = diff % 1000;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        //   const milliseconds = diff % 1000;
 
-      document.getElementById("days").innerText = pad(days);
-      document.getElementById("hours").innerText = pad(hours);
-      document.getElementById("minutes").innerText = pad(minutes);
-      document.getElementById("seconds").innerText = pad(seconds);
-    //   document.getElementById("milliseconds").innerText = pad(milliseconds, 3);
-    }
+        document.getElementById("days").innerText = pad(days);
+        document.getElementById("hours").innerText = pad(hours);
+        document.getElementById("minutes").innerText = pad(minutes);
+        document.getElementById("seconds").innerText = pad(seconds);
+        //   document.getElementById("milliseconds").innerText = pad(milliseconds, 3);
+        }
 
-    // ⚡ Update every 50ms for smoother milliseconds display
-    setInterval(updateCountdown, 50);
+        // ⚡ Update every 50ms for smoother milliseconds display
+        setInterval(updateCountdown, 50);
+        
+
+
+
+        var swiper = new Swiper(".mySwiper", {
+
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true, // optional: for continuous loop
+        autoplay: {
+            delay: 3000, // time in milliseconds between slides (3 seconds here)
+            disableOnInteraction: false, // keeps autoplay after user interacts
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 1
+            },
+            768: {
+            slidesPerView: 1
+            },
+            1024: {
+            slidesPerView: 1
+            }
+        }
+        
+        });
+
+    });
   </script>
 <?php 
         }
