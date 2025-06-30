@@ -76,6 +76,10 @@ function philsan_swiper_init_script() {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 dynamicBullets: true,
