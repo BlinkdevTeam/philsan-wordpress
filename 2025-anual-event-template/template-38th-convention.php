@@ -67,18 +67,20 @@ while (have_posts()) {
             ACF requires the post ID to know where to get the custom field from.  -->
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("about_title", $page->ID)) : ?> 
-                    <div class="flex items-center justify-center gap-[20px]">
-                        <div class="w-max">
-                            <div>
-                                <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
-                                </svg>
+                    <div class="ml-[-20px]">
+                        <div class="flex items-center justify-center gap-[20px]">
+                            <div class="w-max">
+                                <div>
+                                    <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
+                                        <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
+                                        <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
+                                        <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                    </svg>
+                                </div>
                             </div>
+                            <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("about_title", $page->ID); ?></h6>
                         </div>
-                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("about_title", $page->ID); ?></h6>
                     </div>
                 <?php endif; ?>
 
@@ -138,23 +140,27 @@ while (have_posts()) {
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("speaker_container_title", $page->ID)) : ?> 
-                    <div class="flex items-center justify-center gap-[20px]">
-                        <div class="w-max">
-                            <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
-                            </svg>
+                    <div class="ml-[-20px]">
+                        <div class="flex items-center justify-center gap-[20px]">
+                            <div class="w-max">
+                                <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
+                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
+                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
+                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                </svg>
+                            </div>
+                            <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
                         </div>
-                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
                     </div>
                 <?php endif; ?>
                 
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('speaker_container_description', $page->ID)) : ?>
                         <?php while (have_rows('speaker_container_description', $page->ID)) : the_row(); ?>
-                            <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            <div class="w-[980px] mx-auto">
+                                <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            </div>
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
@@ -197,16 +203,18 @@ while (have_posts()) {
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("sponsor_container_title", $page->ID)) : ?> 
-                    <div class="flex items-center justify-center gap-[20px]">
-                        <div class="w-max">
-                            <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
-                            </svg>
+                    <div class="ml-[-20px]">
+                        <div class="flex items-center justify-center gap-[20px]">
+                            <div class="w-max">
+                                <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
+                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
+                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
+                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                </svg>
+                            </div>
+                            <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
                         </div>
-                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
                     </div>
                 <?php endif; ?>
                 
