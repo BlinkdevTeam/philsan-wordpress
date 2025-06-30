@@ -225,14 +225,14 @@ while (have_posts()) {
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
                             <div class="swiper-slide pt-[100px]">
                                 <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
-                                <div class="flex justify-center gap-[40px] flex-wrap pt-[50px] w-[720px] mx-auto">
+                                <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                     <?php 
                                         // Correct: get gallery sub field inside the loop
                                         $gallery = get_sub_field('sponsor_logo'); 
                                     ?>
 
                                     <?php if ($gallery) : ?>
-                                        <div class="sponsor-gallery flex justify-between mt-[20px] gap-[20px]">
+                                        <div class="sponsor-gallery flex justify-center items-center mt-[20px] gap-[20px] flex-wrap>
                                             <?php foreach ($gallery as $image) : ?>
                                                 <div class="w-[200px]">
                                                     <img 
