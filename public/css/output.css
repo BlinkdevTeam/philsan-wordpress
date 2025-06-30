@@ -700,6 +700,10 @@ video {
   margin: auto;
 }
 
+.m-\[0px\] {
+  margin: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1665,6 +1669,10 @@ video {
 
 .pt-\[100px\] {
   padding-top: 100px;
+}
+
+.pt-\[110px\] {
+  padding-top: 110px;
 }
 
 .text-center {

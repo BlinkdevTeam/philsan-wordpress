@@ -193,7 +193,7 @@ while (have_posts()) {
 </div>
 
 <div class="sponsors relative bg-[#ffffff]">
-    <div class="w-[1280px] mx-auto pt-[60px]">
+    <div class="w-[1280px] mx-auto pt-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("sponsor_container_title", $page->ID)) : ?> 
@@ -206,13 +206,13 @@ while (have_posts()) {
                                 <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
                             </svg>
                         </div>
-                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
+                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
                     </div>
                 <?php endif; ?>
                 
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('sponsor_container_description', $page->ID)) : ?>
-                        <?php while (have_rows('speaker_container_description', $page->ID)) : the_row(); ?>
+                        <?php while (have_rows('sponsor_container_description', $page->ID)) : the_row(); ?>
                             <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
                         <?php endwhile; ?>
                     <?php endif; ?> 
@@ -223,7 +223,7 @@ while (have_posts()) {
                 <div class="swiper-wrapper gap-[10px]">
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
-                            <div class="swiper-slide pt-[100px]">
+                            <div class="swiper-slide pt-[100px] m-[0px]">
                                 <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
                                 <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                     <?php 
