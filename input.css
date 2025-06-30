@@ -21,7 +21,6 @@ body {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-  margin-right: 0px !important;
 }
 
 @layer utilities {
