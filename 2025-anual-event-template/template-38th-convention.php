@@ -219,7 +219,7 @@ while (have_posts()) {
                 </div>
             </div>
 
-            <div class="swipper mySwiper">
+            <div class="swiper mySwiper">
                 <div class="swiper-wrapper flex flex-col gap-[10px]">
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
