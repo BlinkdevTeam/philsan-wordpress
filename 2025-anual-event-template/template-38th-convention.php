@@ -163,9 +163,9 @@ while (have_posts()) {
             <div class="flex flex-col gap-[10px]">
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
-                        <div class="pt-[50px]">
-                            <p class="text-center font-bold text-lg"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
-                            <div class="flex gap-[10px] flex-wrap">
+                        <div class="pt-[100px]">
+                            <p class="text-center font-bold text-[22px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
+                            <div class="flex gap-[10px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
                                         <div class="relative flex flex-col items-center justify-center">
