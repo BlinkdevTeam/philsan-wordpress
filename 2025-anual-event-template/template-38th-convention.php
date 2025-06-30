@@ -99,11 +99,11 @@ while (have_posts()) {
                     </video>
                 <?php endif; ?>
                 <div class="flex flex-col justify-between w-[100%] gap-[20px]">
-                    <div class="flex flex-col shadow items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
+                    <div class="flex flex-col shadow items-center justify-center gap-[5px] text-[#ffffff] text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>+15</p>
                         <p>Speakers</p>
                     </div>
-                    <div class="flex flex-col shadow items-center justify-center gap-[10px] text-[#ffffff] text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
+                    <div class="flex flex-col shadow items-center justify-center gap-[5px] text-[#ffffff] text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>1</p>
                         <p>Day Event</p>
                     </div>
@@ -224,8 +224,8 @@ while (have_posts()) {
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
                             <div class="swiper-slide pt-[100px] m-[0px]">
-                                <div class="flex flex-col items-center justify-center p-[20px] rounded-tl-[80px] rounded-br-[80px]">
-                                    <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
+                                <div class="flex flex-col items-center justify-center p-[20px] rounded-tl-[80px] rounded-br-[80px] bg-[#EDB221]">
+                                    <p class="text-center font-bold text-[28px] text-[#ffffff]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
                                 </div>
                                 <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                     <?php 
