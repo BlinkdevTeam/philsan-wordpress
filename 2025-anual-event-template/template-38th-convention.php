@@ -232,7 +232,7 @@ while (have_posts()) {
                                     ?>
 
                                     <?php if ($gallery) : ?>
-                                        <div class="sponsor-gallery flex justify-center items-center mt-[20px] gap-[20px] flex-wrap>
+                                        <div class="sponsor-gallery flex justify-center items-center mt-[20px] gap-[20px] flex-wrap">
                                             <?php foreach ($gallery as $image) : ?>
                                                 <div class="w-[200px]">
                                                     <img 
