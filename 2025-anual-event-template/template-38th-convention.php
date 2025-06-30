@@ -224,7 +224,7 @@ while (have_posts()) {
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
                             <div class="swiper-slide pt-[100px]">
-                                <div class="flex flex-col items-center justify-center p-[15px] rounded-tl-[80px] rounded-br-[50px] bg-[#EDB221]">
+                                <div class="flex flex-col items-center justify-center p-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
                                     <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
                                 </div>
                                 <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">

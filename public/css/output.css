@@ -1260,8 +1260,8 @@ video {
   border-top-left-radius: 40px;
 }
 
-.rounded-tl-\[80px\] {
-  border-top-left-radius: 80px;
+.rounded-tl-\[50px\] {
+  border-top-left-radius: 50px;
 }
 
 .rounded-tl-xl {
@@ -1466,12 +1466,12 @@ video {
   padding: 14px;
 }
 
-.p-\[20px\] {
-  padding: 20px;
-}
-
 .p-\[15px\] {
   padding: 15px;
+}
+
+.p-\[20px\] {
+  padding: 20px;
 }
 
 .px-4 {
@@ -1723,6 +1723,10 @@ video {
   font-size: 22px;
 }
 
+.text-\[24px\] {
+  font-size: 24px;
+}
+
 .text-\[28px\] {
   font-size: 28px;
 }
@@ -1761,10 +1765,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[24px\] {
-  font-size: 24px;
 }
 
 .font-\[200\] {
@@ -2000,7 +2000,7 @@ body {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-  margin: 0px;
+  margin-right: 0px;
 }
 
 .hover\:bg-\[\#32bd49\]:hover {
