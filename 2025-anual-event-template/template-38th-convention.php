@@ -233,7 +233,7 @@ while (have_posts()) {
                                 <?php if ($gallery) : ?>
                                     <div class="sponsor-gallery flex justify-between mt-[20px] gap-[20px]">
                                         <?php foreach ($gallery as $image) : ?>
-                                            <div class="shadow">
+                                            <div class="w-[200px]">
                                                 <img 
                                                     src="<?php echo esc_url($image['url']); ?>" 
                                                     alt="<?php echo esc_attr($image['alt']); ?>" 
