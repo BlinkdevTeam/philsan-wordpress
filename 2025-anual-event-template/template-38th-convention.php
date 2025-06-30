@@ -290,36 +290,6 @@ while (have_posts()) {
 
         // ⚡ Update every 50ms for smoother milliseconds display
         setInterval(updateCountdown, 50);
-
-    
-
-        var swiper = new Swiper(".mySwiper", {
-
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true, // optional: for continuous loop
-        autoplay: {
-            delay: 3000, // time in milliseconds between slides (3 seconds here)
-            disableOnInteraction: false, // keeps autoplay after user interacts
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-        },
-        breakpoints: {
-            640: {
-            slidesPerView: 1
-            },
-            768: {
-            slidesPerView: 1
-            },
-            1024: {
-            slidesPerView: 1
-            }
-        }
-        
-        });
-
     });
   </script>
 <?php 

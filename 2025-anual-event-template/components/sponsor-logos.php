@@ -33,39 +33,3 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".mySwiper", {
-
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true, // optional: for continuous loop
-    autoplay: {
-        delay: 3000, // time in milliseconds between slides (3 seconds here)
-        disableOnInteraction: false, // keeps autoplay after user interacts
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-    },
-    breakpoints: {
-        640: {
-        slidesPerView: 1
-        },
-        768: {
-        slidesPerView: 1
-        },
-        1024: {
-        slidesPerView: 1
-        }
-    }
-    
-    });
-
-  });
-</script>
