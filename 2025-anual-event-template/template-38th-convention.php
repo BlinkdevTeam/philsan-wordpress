@@ -163,25 +163,27 @@ while (have_posts()) {
             <div class="flex flex-col gap-[10px]">
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
-                        <p class="text-center font-bold text-lg"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
-                        <div class="flex gap-[10px] flex-wrap">
-                            <?php if (have_rows('speaker')) : ?>
-                                <?php while (have_rows('speaker')) : the_row(); ?>
-                                    <div class="relative flex flex-col items-center justify-center">
-                                        <div class="relative pl-[20px] w-[350px] h-[350px] top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
-                                            <div class="absolute bottom-[0px] right-[0px] h-[200px] md:h-[350px]">
-                                                <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
+                        <div class="pt-[50px]">
+                            <p class="text-center font-bold text-lg"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
+                            <div class="flex gap-[10px] flex-wrap">
+                                <?php if (have_rows('speaker')) : ?>
+                                    <?php while (have_rows('speaker')) : the_row(); ?>
+                                        <div class="relative flex flex-col items-center justify-center">
+                                            <div class="relative pl-[20px] w-[350px] h-[350px] top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
+                                                <div class="absolute bottom-[0px] right-[0px] h-[200px] md:h-[350px]">
+                                                    <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
+                                                </div>
+                                            </div>
+                                            <div class="w-[400px] flex flex-col items-center rounded-br-xl justify-center gap-[10px] py-[20px] px-[20px] bg-[#1F773A] text-white">
+                                                <p class="text-center text-[22px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                                <div class="h-[50px]">
+                                                    <p class="text-center font-[300]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="w-[400px] flex flex-col items-center rounded-br-xl justify-center gap-[10px] py-[20px] px-[20px] bg-[#1F773A] text-white">
-                                            <p class="text-center text-[22px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
-                                            <div class="h-[50px]">
-                                                <p class="text-center font-[300]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?> 
+                                    <?php endwhile; ?>
+                                <?php endif; ?> 
+                            </div>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?> 
