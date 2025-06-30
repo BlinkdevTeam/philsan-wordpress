@@ -243,7 +243,6 @@ while (have_posts()) {
                                         <?php endforeach; ?>
                                     </div>
                                 <?php endif; ?>
-                                <?php endif; ?> 
                             </div>
                         </div>
                     <?php endwhile; ?>
