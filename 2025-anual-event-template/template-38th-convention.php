@@ -225,27 +225,24 @@ while (have_posts()) {
                         <div class="pt-[100px]">
                             <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
-                                 <?php if (have_rows('sponsor_group_logos', $page->ID)) : ?>
-                                    <?php while (have_rows('sponsor_group_logos', $page->ID)) : the_row(); ?>
-                                        <?php 
-                                            // Get the gallery array from the specific page
-                                            $gallery = get_field('sponsor_logo', $page->ID); 
-                                        ?>
+                                 <?php 
+                                    // Get the gallery array from the specific page
+                                    $gallery = get_field('sponsor_logo', $page->ID); 
+                                ?>
 
-                                        <?php if ($gallery) : ?>
-                                            <div class="sponsor-gallery flex justify-between mt-[20px] gap-[20px]">
-                                                <?php foreach ($gallery as $image) : ?>
-                                                    <div class="shadow">
-                                                        <img 
-                                                            src="<?php echo esc_url($image['url']); ?>" 
-                                                            alt="<?php echo esc_attr($image['alt']); ?>" 
-                                                            class="w-full h-auto object-cover rounded-xl"
-                                                        />
-                                                    </div>
-                                                <?php endforeach; ?>
+                                <?php if ($gallery) : ?>
+                                    <div class="sponsor-gallery flex justify-between mt-[20px] gap-[20px]">
+                                        <?php foreach ($gallery as $image) : ?>
+                                            <div class="shadow">
+                                                <img 
+                                                    src="<?php echo esc_url($image['url']); ?>" 
+                                                    alt="<?php echo esc_attr($image['alt']); ?>" 
+                                                    class="w-full h-auto object-cover rounded-xl"
+                                                />
                                             </div>
-                                        <?php endif; ?>
-                                    <?php endwhile; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
                                 <?php endif; ?> 
                             </div>
                         </div>
