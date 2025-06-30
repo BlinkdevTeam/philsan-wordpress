@@ -225,9 +225,9 @@ while (have_posts()) {
                         <div class="pt-[100px]">
                             <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
-                                 <?php 
-                                    // Get the gallery array from the specific page
-                                    $gallery = get_field('sponsor_logo', $page->ID); 
+                                <?php 
+                                    // Correct: get gallery sub field inside the loop
+                                    $gallery = get_sub_field('sponsor_logo'); 
                                 ?>
 
                                 <?php if ($gallery) : ?>
@@ -248,6 +248,7 @@ while (have_posts()) {
                     <?php endwhile; ?>
                 <?php endif; ?> 
             </div>
+
         <?php endif; ?>
     </div>
 </div>
