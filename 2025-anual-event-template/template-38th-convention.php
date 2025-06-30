@@ -206,7 +206,7 @@ while (have_posts()) {
                                 <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
                             </svg>
                         </div>
-                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
+                        <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
                     </div>
                 <?php endif; ?>
                 
@@ -219,35 +219,37 @@ while (have_posts()) {
                 </div>
             </div>
 
-            <div class="flex flex-col gap-[10px]">
-                <?php if (have_rows('sponsor_group', $page->ID)) : ?>
-                    <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
-                        <div class="pt-[100px]">
-                            <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
-                            <div class="swiper">
-                                <?php 
-                                    // Correct: get gallery sub field inside the loop
-                                    $gallery = get_sub_field('sponsor_logo'); 
-                                ?>
+            <div class="swipper">
+                <div class="swiper-wrapper flex flex-col gap-[10px]">
+                    <?php if (have_rows('sponsor_group', $page->ID)) : ?>
+                        <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>
+                            <div class="swiper-slide pt-[100px]">
+                                <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('sponsor_group_title')); ?></p>
+                                <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
+                                    <?php 
+                                        // Correct: get gallery sub field inside the loop
+                                        $gallery = get_sub_field('sponsor_logo'); 
+                                    ?>
 
-                                <?php if ($gallery) : ?>
-                                    <div class="sponsor-gallery swiper-wrapper flex flex-wrap justify-center mt-[20px] gap-[20px] items-center">
-                                        <?php foreach ($gallery as $image) : ?>
-                                            <div class="swiper-slide w-[200px]">
-                                                <img 
-                                                    src="<?php echo esc_url($image['url']); ?>" 
-                                                    alt="<?php echo esc_attr($image['alt']); ?>" 
-                                                    class="w-full h-auto object-cover rounded-xl"
-                                                />
-                                            </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                <?php endif; ?>
+                                    <?php if ($gallery) : ?>
+                                        <div class="sponsor-gallery flex justify-between mt-[20px] gap-[20px]">
+                                            <?php foreach ($gallery as $image) : ?>
+                                                <div class="shadow">
+                                                    <img 
+                                                        src="<?php echo esc_url($image['url']); ?>" 
+                                                        alt="<?php echo esc_attr($image['alt']); ?>" 
+                                                        class="w-full h-auto object-cover rounded-xl"
+                                                    />
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?> 
+                        <?php endwhile; ?>
+                    <?php endif; ?> 
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
 
         <?php endif; ?>
@@ -288,9 +290,8 @@ while (have_posts()) {
 
         // ⚡ Update every 50ms for smoother milliseconds display
         setInterval(updateCountdown, 50);
-        
 
-
+    
 
         var swiper = new Swiper(".mySwiper", {
 
@@ -327,3 +328,5 @@ while (have_posts()) {
 get_footer(); 
 
 ?>
+
+
