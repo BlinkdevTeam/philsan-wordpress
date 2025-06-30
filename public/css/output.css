@@ -656,6 +656,10 @@ video {
   top: 0px;
 }
 
+.right-\[0px\] {
+  right: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -836,6 +840,14 @@ video {
 .h-max {
   height: -moz-max-content;
   height: max-content;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[150px\] {
+  height: 150px;
 }
 
 .min-h-screen {
