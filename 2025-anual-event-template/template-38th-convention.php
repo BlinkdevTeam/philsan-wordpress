@@ -11,12 +11,21 @@ while (have_posts()) {
 
 <div class="hero-section relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
     <div class="flex gap-[50px] w-[90%] lg:w-[1280px] mx-auto pt-[60px]">
-        <div class="flex flex-col w-[50%] gap-[40px]">
+        <div class="hidden md:block flex flex-col w-[50%] gap-[40px]">
             <img class="w-[80px] ml-[-15px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226390.png" alt="">
             <div class="flex flex-col gap-[10px] pt-[50px]">
                 <img class="w-[80%]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226387-1.png" alt="">
                 <p class="font-bold text-[#000000]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
             </div>
+            <div class="flex flex-col">
+                <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
+                <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
+            </div>
+            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[38px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
+        </div>
+        <div class="block md:hidden">
+            <img class="w-[70%]" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="">
+            <p class="font-bold text-[#000000]">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
             <div class="flex flex-col">
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>

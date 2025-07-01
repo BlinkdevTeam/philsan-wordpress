@@ -2127,6 +2127,14 @@ body {
     grid-row: span 2 / span 2;
   }
 
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-\[350px\] {
     height: 350px;
   }
