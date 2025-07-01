@@ -64,7 +64,7 @@ get_header();
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Foreigner:	<strong class="font-[600]">USD 110.00/pax</strong></p>
                                         </div> -->
 
-                                        <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pl-[10px]">
+                                        <div class="w-[100%] flex flex-col gap-[5px] pb-[20px]">
                                             <p class="sub-bi-heading text-[#344054] pb-[5px]"><strong class="font-[700]">REGULAR RATE:</strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">PHILSAN Members: <strong class="font-[600]">PHP 6,500.00/pax</strong></p>
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Non-PHILSAN Members: <strong class="font-[600]">PHP 7,000.00/pax</p>
