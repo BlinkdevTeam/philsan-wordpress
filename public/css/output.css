@@ -1340,6 +1340,10 @@ video {
   border-top-right-radius: 80px;
 }
 
+.rounded-tr-\[20px\] {
+  border-top-right-radius: 20px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -2331,6 +2335,14 @@ body {
 
   .md\:rounded-br-\[30px\] {
     border-bottom-right-radius: 30px;
+  }
+
+  .md\:rounded-tr-\[80px\] {
+    border-top-right-radius: 80px;
+  }
+
+  .md\:rounded-bl-\[0px\] {
+    border-bottom-left-radius: 0px;
   }
 
   .md\:bg-\[\#1F773A\] {
