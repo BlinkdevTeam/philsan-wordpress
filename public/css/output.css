@@ -2260,6 +2260,16 @@ body {
     border-bottom-right-radius: 30px;
   }
 
+  .md\:bg-\[\#1F773A\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 119 58 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:bg-\[\#EDB221\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
+  }
+
   .md\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -2320,6 +2330,10 @@ body {
 
   .md\:text-\[40px\] {
     font-size: 40px;
+  }
+
+  .md\:text-\[22px\] {
+    font-size: 22px;
   }
 
   .md\:text-\[\#ffffff\] {

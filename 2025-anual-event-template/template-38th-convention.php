@@ -78,7 +78,7 @@ while (have_posts()) {
                     <?php if (have_rows('about_description', $page->ID)) : ?>
                         <?php while (have_rows('about_description', $page->ID)) : the_row(); ?>
                             <!-- Loop through each row in the 'about_description' repeater -->
-                            <p class="text-center text-[14px] text-[16px]"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            <p class="text-center text-[14px] md:text-[16px]"><?php echo esc_html(get_sub_field('description')); ?></p>
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
@@ -90,12 +90,12 @@ while (have_posts()) {
                         <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
-                <div class="flex flex-col justify-between w-[100%] gap-[20px]">
-                    <div class="flex flex-rpw md:flex-col md:shadow items-center justify-center gap-[5px] text-[#000000] md:text-[#ffffff] text-[16px] md:text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
+                <div class="flex flex-col justify-between w-[100%] md:gap-[20px]">
+                    <div class="flex flex-rpw md:flex-col md:shadow items-center justify-center gap-[5px] text-[#000000] md:text-[#ffffff] text-[16px] md:text-[32px] md:bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>+15</p>
                         <p>Speakers</p>
                     </div>
-                    <div class="flex flex-rpw md:flex-col md:shadow items-center justify-center gap-[5px] text-[#000000] md:text-[#ffffff] text-[16px] md:text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
+                    <div class="flex flex-rpw md:flex-col md:shadow items-center justify-center gap-[5px] text-[#000000] md:text-[#ffffff] text-[16px] md:text-[32px] md:bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>1</p>
                         <p>Day Event</p>
                     </div>
@@ -162,20 +162,20 @@ while (have_posts()) {
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
                         <div class="pt-[100px]">
-                            <p class="text-center font-bold text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
+                            <p class="text-center font-bold text-[24px] md:text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
-                                        <div class="relative flex flex-col items-center justify-center">
-                                            <div class="relative pl-[20px] w-[320px] md:w-[350px] h-[350px] top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
+                                        <div class="relative flex flex-row md:flex-col items-center justify-center">
+                                            <div class="relative pl-[20px] w-[200px] md:w-[350px] h-[200px] md:h-[350px] top-[0px] rounded-tr-[80px] bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
                                                 <div class="absolute bottom-[0px] right-[0px] h-100% md:h-[350px]">
                                                     <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                                 </div>
                                             </div>
                                             <div class="w-[100%] md:w-[400px] flex flex-col items-center rounded-br-[50px] justify-center gap-[10px] py-[20px] px-[20px] bg-[#1F773A] text-white">
-                                                <p class="text-center text-[22px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
+                                                <p class="text-center text-[18px] md:text-[22px] font-bold"><?php echo esc_html(get_sub_field('speaker_name')); ?></p>
                                                 <div class="h-[50px] w-[100%] md:w-[340px]">
-                                                    <p class="text-center font-[300] text-[14px] md:text-[16px]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
+                                                    <p class="text-center font-[300] text-[12px] md:text-[16px]"><?php echo esc_html(get_sub_field('speaker_title')); ?></p>
                                                 </div>
                                             </div>
                                         </div>
