@@ -37,7 +37,7 @@ while (have_posts()) {
         </div>
         <div class="relative w-[100%] md:w-[50%] pb-[50px]">
             <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
-            <img class="block md:hidden absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            <img class="hidden md:block absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
             
             <img class="block md:hidden" src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
                 <div class="hidden md:block">
