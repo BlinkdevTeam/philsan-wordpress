@@ -30,11 +30,15 @@ while (have_posts()) {
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <?php get_template_part('2025-anual-event-template/components/count-down'); ?>  
+            <?php 
+                // get_template_part('2025-anual-event-template/components/count-down'); 
+                ?>  
             <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[18px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
         </div>
         <div class="hidden md:block">
-            <?php get_template_part('2025-anual-event-template/components/count-down'); ?>  
+            <?php 
+                // get_template_part('2025-anual-event-template/components/count-down'); 
+                ?>  
         </div>
     </div>
 </div>
