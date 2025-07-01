@@ -26,7 +26,7 @@ while (have_posts()) {
         <div class="flex flex-col items-center gap-[20px] md:hidden">
             <img class="w-[70%]" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="">
             <p class="font-bold text-[#000000] text-center">Innovating for a Sustainable Future: Harnessing Technology and Alternative Solutions in Animal Nutrition and Health</p>
-            <div class="flex flex-col items-center justify-center">
+            <div class="flex flex-col text-center items-center justify-center">
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
@@ -84,42 +84,44 @@ while (have_posts()) {
                 </div>
             </div>
             
-            <div class="flex justify-between gap-[20px]">
+            <div class="flex flex-col-reverse md:flex-row justify-between gap-[20px]">
                 <?php if (get_field("about_video", $page->ID)) : ?> 
-                    <video id="sde" loop autoplay muted class="w-[74.6%] h-auto shadow rounded-lg">
+                    <video id="sde" loop autoplay muted class="w-[100%] md:w-[74.6%] h-auto shadow rounded-lg">
                         <source src="<?php echo get_field("about_video", $page->ID);; ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
-                <div class="flex flex-col justify-between w-[100%] gap-[20px]">
-                    <div class="flex flex-col shadow items-center justify-center gap-[5px] text-[#ffffff] text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
+                <div class="flex flex-row md:flex-col justify-between w-[100%] gap-[20px]">
+                    <div class="flex flex-rpw md:flex-col shadow items-center justify-center gap-[5px] text-[#ffffff] text-[16px] md:text-[32px] bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>+15</p>
                         <p>Speakers</p>
                     </div>
-                    <div class="flex flex-col shadow items-center justify-center gap-[5px] text-[#ffffff] text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
+                    <div class="flex flex-rpw md:flex-col shadow items-center justify-center gap-[5px] text-[#ffffff] text-[16px] md:text-[32px] bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
                         <p>1</p>
                         <p>Day Event</p>
                     </div>
                 </div>
             </div>
 
-            <?php 
-                // Get the gallery array from the specific page
-                $gallery = get_field('about_image_group', $page->ID); 
-            ?>
+            <div class="hidden md:block">
+                <?php 
+                    // Get the gallery array from the specific page
+                    $gallery = get_field('about_image_group', $page->ID); 
+                ?>
 
-            <?php if ($gallery) : ?>
-                <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
-                    <?php foreach ($gallery as $image) : ?>
-                        <div class="shadow">
-                            <img 
-                                src="<?php echo esc_url($image['url']); ?>" 
-                                alt="<?php echo esc_attr($image['alt']); ?>" 
-                                class="w-full h-auto object-cover rounded-xl"
-                            />
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
+                <?php if ($gallery) : ?>
+                    <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
+                        <?php foreach ($gallery as $image) : ?>
+                            <div class="shadow">
+                                <img 
+                                    src="<?php echo esc_url($image['url']); ?>" 
+                                    alt="<?php echo esc_attr($image['alt']); ?>" 
+                                    class="w-full h-auto object-cover rounded-xl"
+                                />
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         <?php endif; ?>
     </div>
     <img class="absolute top-[0] w-full h-full object-cover z-[-1]" src="https://philsan.org/wp-content/uploads/2025/06/17580-1-scaled.png" alt="">
