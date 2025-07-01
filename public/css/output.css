@@ -995,6 +995,10 @@ video {
   width: 95%;
 }
 
+.w-\[93\%\] {
+  width: 93%;
+}
+
 .max-w-\[1350px\] {
   max-width: 1350px;
 }
@@ -1306,6 +1310,14 @@ video {
 
 .rounded-tr-\[80px\] {
   border-top-right-radius: 80px;
+}
+
+.rounded-bl-\[50px\] {
+  border-bottom-left-radius: 50px;
+}
+
+.rounded-tr-\[50px\] {
+  border-top-right-radius: 50px;
 }
 
 .border {
@@ -1724,6 +1736,10 @@ video {
 
 .pr-\[20px\] {
   padding-right: 20px;
+}
+
+.pl-\[95px\] {
+  padding-left: 95px;
 }
 
 .text-center {
