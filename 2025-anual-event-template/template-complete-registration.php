@@ -72,10 +72,10 @@ get_header();
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Students: <strong class="font-[600]">PHP 3,500.00/pax with valid Agriculture or VetMed Student ID</strong></p>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-[5px] md:gap-[0px]">
+                                    <div class="">
                                         <p><strong class="font-[700]">Agriculture or VetMed Student ID *Rates are exclusive of tax</strong></p>
                                         <p>Convention Registration Fee includes:</p>
-                                        <ol class="flex flex-col gap-[5px] md:gap-[0px]">
+                                        <ol class="">
                                             <li class="text-[14px] font-[300]">Convention ID Badge</li>
                                             <li class="text-[14px] font-[300]">Certificate of Attendance</li>
                                             <li class="text-[14px] font-[300]">Convention Bag</li>
@@ -85,7 +85,7 @@ get_header();
                                             <li class="text-[14px] font-[300]">CPD units certificate (to be confirmed before the convention)</li>
                                         </ol>
                                     </div>
-                                    <div class="w-[100%] flex flex-col gap-[3px] pt-[15px] pb-[10px]">
+                                    <div class="w-[100%] flex flex-col gap-[6px] md:gap-[5px] pt-[15px] pb-[10px]">
                                         <p class="sub-bi-heading text-[#344054]">Account name: <strong class="font-[700]">Philippine Society of Animal Nutritionists Inc.</strong></p>
                                         <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Bank: <strong class="font-[600]">Bank of the Philippine Islands (BPI)</strong></p>
                                         <div>
