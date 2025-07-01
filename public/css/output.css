@@ -1639,6 +1639,11 @@ video {
   padding-bottom: 60px;
 }
 
+.py-\[0px\] {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1741,6 +1746,10 @@ video {
 
 .pt-\[60px\] {
   padding-top: 60px;
+}
+
+.pb-\[0px\] {
+  padding-bottom: 0px;
 }
 
 .text-center {
@@ -2238,6 +2247,10 @@ body {
     padding-bottom: 250px;
   }
 
+  .md\:pb-\[50px\] {
+    padding-bottom: 50px;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2315,6 +2328,16 @@ body {
   .lg\:px-\[50px\] {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .lg\:py-\[0px\] {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .lg\:py-\[60px\] {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .lg\:pb-\[160px\] {
