@@ -72,10 +72,10 @@ get_header();
                                             <p class="sub-bi-heading text-[#344054] font-[300] text-[14px]">Students: <strong class="font-[600]">PHP 3,500.00/pax with valid Agriculture or VetMed Student ID</strong></p>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="flex flex-col gap-[5px] md:gap-[0px]">
                                         <p><strong class="font-[700]">Agriculture or VetMed Student ID *Rates are exclusive of tax</strong></p>
                                         <p>Convention Registration Fee includes:</p>
-                                        <ol>
+                                        <ol class="flex flex-col gap-[5px] md:gap-[0px]">
                                             <li class="text-[14px] font-[300]">Convention ID Badge</li>
                                             <li class="text-[14px] font-[300]">Certificate of Attendance</li>
                                             <li class="text-[14px] font-[300]">Convention Bag</li>
