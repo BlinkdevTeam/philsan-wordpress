@@ -664,6 +664,10 @@ video {
   left: 20px;
 }
 
+.top-\[10px\] {
+  top: 10px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -767,6 +771,10 @@ video {
 
 .mr-\[-50px\] {
   margin-right: -50px;
+}
+
+.ml-\[auto\] {
+  margin-left: auto;
 }
 
 .block {
@@ -981,6 +989,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[95\%\] {
+  width: 95%;
 }
 
 .max-w-\[1350px\] {
