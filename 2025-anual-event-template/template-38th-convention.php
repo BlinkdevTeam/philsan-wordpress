@@ -303,37 +303,27 @@ while (have_posts()) {
                         <?php if (have_rows('program', $page->ID)) : ?>
                             <?php while (have_rows('program', $page->ID)) : the_row(); ?>
                                 <div class="pt-[100px]">
-                                    <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
-                                        <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
-                                        <?php if (have_rows('program_title', $page->ID)) : ?>
-                                            <?php while (have_rows('program_title', $page->ID)) : the_row(); ?>
-                                                <div class="pt-[100px]">
-                                                    <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
-                                                        <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>                        
-                                                    </div>
-                                                </div>
-                                            <?php endwhile; ?>
-                                        <?php endif; ?> 
-                                        <?php if (have_rows('program_speaker', $page->ID)) : ?>
-                                            <?php while (have_rows('program_speaker', $page->ID)) : the_row(); ?>
-                                                <div class="pt-[100px]">
-                                                    <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
-                                                        <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
-                                                        
-                                                    </div>
-                                                </div>
-                                            <?php endwhile; ?>
-                                        <?php endif; ?> 
-                                        <?php if (have_rows('program_description', $page->ID)) : ?>
-                                            <?php while (have_rows('program_description', $page->ID)) : the_row(); ?>
-                                                <div class="pt-[100px]">
-                                                    <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
-                                                        <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
-                                                        
-                                                    </div>
-                                                </div>
-                                            <?php endwhile; ?>
-                                        <?php endif; ?> 
+                                    <div>
+                                        <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
+                                            <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
+                                        </div>
+                                        <div class="flex flex-col p-[20px] gap-[10px] rounded-[20px] bg-[#1f773a]">
+                                            <?php if (have_rows('program_title', $page->ID)) : ?>
+                                                <?php while (have_rows('program_title', $page->ID)) : the_row(); ?>
+                                                    <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
+                                                <?php endwhile; ?>
+                                            <?php endif; ?> 
+                                            <?php if (have_rows('program_speaker', $page->ID)) : ?>
+                                                <?php while (have_rows('program_speaker', $page->ID)) : the_row(); ?>
+                                                    <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?> 
+                                            <?php if (have_rows('program_description', $page->ID)) : ?>
+                                                <?php while (have_rows('program_description', $page->ID)) : the_row(); ?>
+                                                    <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?> 
+                                        </div>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
