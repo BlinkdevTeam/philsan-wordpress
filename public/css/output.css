@@ -761,6 +761,10 @@ video {
   margin-top: 5px;
 }
 
+.mr-\[-50px\] {
+  margin-right: -50px;
+}
+
 .block {
   display: block;
 }
@@ -1696,6 +1700,10 @@ video {
 
 .pb-\[20px\] {
   padding-bottom: 20px;
+}
+
+.pl-\[50px\] {
+  padding-left: 50px;
 }
 
 .text-center {
