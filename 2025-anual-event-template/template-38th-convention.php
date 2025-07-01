@@ -296,28 +296,27 @@ while (have_posts()) {
             </div>
             <?php if (have_rows('program_group', $page->ID)) : ?>
                 <?php while (have_rows('program_group', $page->ID)) : the_row(); ?>
-                    <div class="swiper-slide pt-[100px]">
+                    <div class="pt-[100px]">
                         <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
-                            <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_group')); ?></p>
+                            <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_group_title')); ?></p>
                         </div>
                         <?php if (have_rows('program', $page->ID)) : ?>
                             <?php while (have_rows('program', $page->ID)) : the_row(); ?>
-                                <div class="swiper-slide pt-[100px]">
+                                <div class="pt-[100px]">
                                     <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
                                         <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
                                         <?php if (have_rows('program_title', $page->ID)) : ?>
                                             <?php while (have_rows('program_title', $page->ID)) : the_row(); ?>
-                                                <div class="swiper-slide pt-[100px]">
+                                                <div class="pt-[100px]">
                                                     <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
-                                                        <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>
-                                                        
+                                                        <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>                        
                                                     </div>
                                                 </div>
                                             <?php endwhile; ?>
                                         <?php endif; ?> 
                                         <?php if (have_rows('program_speaker', $page->ID)) : ?>
                                             <?php while (have_rows('program_speaker', $page->ID)) : the_row(); ?>
-                                                <div class="swiper-slide pt-[100px]">
+                                                <div class="pt-[100px]">
                                                     <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
                                                         <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
                                                         
@@ -327,7 +326,7 @@ while (have_posts()) {
                                         <?php endif; ?> 
                                         <?php if (have_rows('program_description', $page->ID)) : ?>
                                             <?php while (have_rows('program_description', $page->ID)) : the_row(); ?>
-                                                <div class="swiper-slide pt-[100px]">
+                                                <div class="pt-[100px]">
                                                     <div class="flex flex-col items-center justify-center px-[20px] py-[15px] rounded-tl-[50px] rounded-br-[50px] bg-[#EDB221]">
                                                         <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
                                                         
