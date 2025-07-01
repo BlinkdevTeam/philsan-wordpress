@@ -61,7 +61,7 @@ while (have_posts()) {
 </div>
 
 <div class="about-convention relative ">
-    <div class="w-[1280px] mx-auto py-[60px]">
+    <div class="w-[1280px] mx-auto py-[120px]">
        <?php if ($page) : ?>
             <!--  Use $page->ID to get the ID of the page we fetched above.
             ACF requires the post ID to know where to get the custom field from.  -->
@@ -136,7 +136,7 @@ while (have_posts()) {
 </div>
 
 <div class="speaker-convention relative bg-[#ffffff]">
-    <div class="w-[1280px] mx-auto pt-[60px]">
+    <div class="w-[1280px] mx-auto pt-[120px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("speaker_container_title", $page->ID)) : ?> 
@@ -199,7 +199,7 @@ while (have_posts()) {
 </div>
 
 <div class="sponsors relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
-    <div class="w-[1280px] mx-auto py-[110px]">
+    <div class="w-[1280px] mx-auto pt-[200px] pb-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("sponsor_container_title", $page->ID)) : ?> 
