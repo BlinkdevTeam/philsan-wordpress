@@ -1789,6 +1789,10 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
