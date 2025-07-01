@@ -660,6 +660,10 @@ video {
   top: 0px;
 }
 
+.left-\[20px\] {
+  left: 20px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1706,6 +1710,10 @@ video {
   padding-left: 50px;
 }
 
+.pr-\[20px\] {
+  padding-right: 20px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1937,6 +1945,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#1f773a\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 119 58 / var(--tw-text-opacity, 1));
 }
 
 .underline {
