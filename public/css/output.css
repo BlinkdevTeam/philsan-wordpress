@@ -2271,6 +2271,10 @@ body {
     width: 100%;
   }
 
+  .lg\:w-\[980px\] {
+    width: 980px;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }

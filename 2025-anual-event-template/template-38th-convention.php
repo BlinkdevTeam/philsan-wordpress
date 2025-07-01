@@ -158,7 +158,7 @@ while (have_posts()) {
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('speaker_container_description', $page->ID)) : ?>
                         <?php while (have_rows('speaker_container_description', $page->ID)) : the_row(); ?>
-                            <div class="w-[980px] mx-auto">
+                            <div class="w-[100%] lg:w-[980px] mx-auto">
                                 <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
                             </div>
                         <?php endwhile; ?>
