@@ -1,4 +1,4 @@
-<div class="countdown-block flex flex-col justify-end items-end pt-[50px]">
+<div class="countdown-block flex flex-col justify-end items-end">
   <div class="flex flex-col items-center gap-[10px]">
     <p class="text-[#1F773A] text-center font-bold">Event Starts at:</p>
     <div class="flex gap-4 text-[#1F773A]">
