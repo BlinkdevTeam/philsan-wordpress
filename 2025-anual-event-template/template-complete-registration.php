@@ -55,7 +55,7 @@ get_header();
                                 </div>
                                 
                                 <div id="upload-field" class="pt-[20px] relative flex flex-col transition-all duration-200 ease">
-                                    <div class="flex gap-[10px] justify-between">
+                                    <div class="flex flex-col gap-[10px] justify-between">
                                         <!-- <div class="w-[50%] flex flex-col gap-[5px] pb-[10px] pr-[10px]">
                                             <p class="sub-bi-heading text-[#344054]"><strong class="font-[700]">EARLY BIRD RATE:</strong></p>
                                             <p class="sub-bi-heading text-[#344054] pb-[5px] italic">Deadline of Payment June 30, 2025</p>
@@ -107,7 +107,7 @@ get_header();
                                 </div>
 
                                 <!-- agreement section now-->
-                                <div class="flex pt-[20px] items-start gap-[10px] z-[1]">
+                                <div class="flex py-[30px] items-start gap-[10px] z-[1]">
                                     <input
                                         id="agreement"
                                         name="agreement"
