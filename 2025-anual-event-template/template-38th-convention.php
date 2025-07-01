@@ -31,14 +31,20 @@ while (have_posts()) {
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
             <?php 
-                // get_template_part('2025-anual-event-template/components/count-down'); 
-                ?>  
+                get_template_part('2025-anual-event-template/components/count-down'); 
+            ?>  
             <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[18px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
         </div>
-        <div class="hidden md:block">
-            <?php 
-                // get_template_part('2025-anual-event-template/components/count-down'); 
-                ?>  
+        <div class="relative w-[100%] md:w-[50%] pb-[50px]">
+            <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            <img class="block md:hidden absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            
+            <img class="block md:hidden" src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
+                <div class="hidden md:block">
+                <?php 
+                    get_template_part('2025-anual-event-template/components/count-down'); 
+                ?> 
+            </div>
         </div>
     </div>
 </div>
