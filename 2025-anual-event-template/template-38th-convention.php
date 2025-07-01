@@ -307,7 +307,7 @@ while (have_posts()) {
                                         <div class="left-[20px] top-[10px] absolute z-[1] flex flex-col items-center justify-center px-[20px] py-[10px] w-max rounded-tr-[35px] rounded-bl-[35px] bg-[#EDB221]">
                                             <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
                                         </div>
-                                        <div class="flex flex-col py-[20px] pl-[95px] pr-[20px] gap-[5px] rounded-[20px] bg-[#1f773a] w-[93%] ml-[auto]">
+                                        <div class="flex flex-col py-[20px] pl-[95px] pr-[20px] rounded-[20px] bg-[#1f773a] w-[93%] ml-[auto]">
                                             <?php if (have_rows('program_title', $page->ID)) : ?>
                                                 <?php while (have_rows('program_title', $page->ID)) : the_row(); ?>
                                                     <p class="font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
