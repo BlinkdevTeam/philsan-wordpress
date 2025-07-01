@@ -1011,6 +1011,14 @@ video {
   max-width: 36rem;
 }
 
+.max-w-\[980px\] {
+  max-width: 980px;
+}
+
+.max-w-\[1280px\] {
+  max-width: 1280px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2165,6 +2173,10 @@ body {
 
   .md\:w-\[65\%\] {
     width: 65%;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
   }
 
   .md\:grid-cols-2 {

@@ -10,7 +10,7 @@ while (have_posts()) {
 ?>
 
 <div class="hero-section relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
-    <div class="flex flex-col md:flex-row gap-[50px] w-[90%] lg:w-[1280px] mx-auto pt-[60px]">
+    <div class="flex flex-col md:flex-row gap-[50px] w-[90%] max-w-[1280px] mx-auto pt-[60px]">
         <div class="hidden md:flex flex-col w-[50%] gap-[40px]">
             <img class="w-[80px] ml-[-15px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226390.png" alt="">
             <div class="flex flex-col gap-[10px] pt-[50px]">
@@ -32,9 +32,11 @@ while (have_posts()) {
             </div>
             <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[38px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
         </div>
-        <div class="relative w-[50%] pb-[50px]">
-            <img class="z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
-            <img class="absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+        <div class="relative w-[100%] md:w-[50%] pb-[50px]">
+            <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            <img class="block md:hidden absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            
+            <img class="block md:hidden" src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
             <div class="flex flex-col justify-end items-end pt-[50px]">
                 <div class="flex flex-col items-center gap-[10px]">
                     <p class="text-[#1F773A] text-center font-bold">Event Starts at:</p>
@@ -70,7 +72,7 @@ while (have_posts()) {
 </div>
 
 <div class="about-convention relative ">
-    <div class="w-[90%] lg:w-[1280px] mx-auto py-[120px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto py-[120px]">
        <?php if ($page) : ?>
             <!--  Use $page->ID to get the ID of the page we fetched above.
             ACF requires the post ID to know where to get the custom field from.  -->
@@ -145,7 +147,7 @@ while (have_posts()) {
 </div>
 
 <div class="speaker-convention relative bg-[#ffffff]">
-    <div class="w-[90%] lg:w-[1280px] mx-auto pt-[120px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto pt-[120px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("speaker_container_title", $page->ID)) : ?> 
@@ -167,7 +169,7 @@ while (have_posts()) {
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('speaker_container_description', $page->ID)) : ?>
                         <?php while (have_rows('speaker_container_description', $page->ID)) : the_row(); ?>
-                            <div class="w-[100%] lg:w-[980px] mx-auto">
+                            <div class="w-[100%] max-w-[980px] mx-auto">
                                 <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
                             </div>
                         <?php endwhile; ?>
@@ -208,7 +210,7 @@ while (have_posts()) {
 </div>
 
 <div class="sponsors relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
-    <div class="w-[90%] lg:w-[1280px] mx-auto pt-[200px] pb-[110px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto pt-[200px] pb-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("sponsor_container_title", $page->ID)) : ?> 
@@ -276,7 +278,7 @@ while (have_posts()) {
 </div>
 
 <div class="Program relative overflow-hidden">
-    <div class="w-[90%] lg:w-[1280px] mx-auto pt-[110px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto pt-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("program_title", $page->ID)) : ?> 
