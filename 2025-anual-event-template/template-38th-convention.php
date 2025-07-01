@@ -11,7 +11,7 @@ while (have_posts()) {
 
 <div class="hero-section relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
     <div class="flex gap-[50px] w-[90%] lg:w-[1280px] mx-auto pt-[60px]">
-        <div class="hidden md:block flex flex-col w-[50%] gap-[40px]">
+        <div class="hidden md:flex flex-col w-[50%] gap-[40px]">
             <img class="w-[80px] ml-[-15px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226390.png" alt="">
             <div class="flex flex-col gap-[10px] pt-[50px]">
                 <img class="w-[80%]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226387-1.png" alt="">
