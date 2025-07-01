@@ -319,7 +319,7 @@ while (have_posts()) {
 </div>
 
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
         // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
         const eventDate = new Date("2025-09-30T14:30:00").getTime();
@@ -353,7 +353,7 @@ while (have_posts()) {
         // ⚡ Update every 50ms for smoother milliseconds display
         setInterval(updateCountdown, 50);
     });
-  </script>
+  </script> -->
 <?php 
         }
 

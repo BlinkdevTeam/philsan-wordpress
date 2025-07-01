@@ -34,3 +34,39 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
+        const eventDate = new Date("2025-09-30T14:30:00").getTime();
+
+        function pad(num, size = 2) {
+        return num.toString().padStart(size, "0");
+        }
+
+        function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+
+        if (diff <= 0) {
+            document.getElementById("countdown").innerHTML = "🎉 The event has started!";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        //   const milliseconds = diff % 1000;
+
+        document.getElementById("days").innerText = pad(days);
+        document.getElementById("hours").innerText = pad(hours);
+        document.getElementById("minutes").innerText = pad(minutes);
+        document.getElementById("seconds").innerText = pad(seconds);
+        //   document.getElementById("milliseconds").innerText = pad(milliseconds, 3);
+        }
+
+        // ⚡ Update every 50ms for smoother milliseconds display
+        setInterval(updateCountdown, 50);
+    });
+  </script>
