@@ -10,7 +10,7 @@ while (have_posts()) {
 ?>
 
 <div class="relative hero-section flex items-center bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
-    <div class="flex flex-col md:flex-row gap-[50px] w-[90%] max-w-[1280px] mx-auto py-[120px] lg:py-[0px] pt-[60px]">
+    <div class="relative z-[1] flex flex-col md:flex-row gap-[50px] w-[90%] max-w-[1280px] mx-auto py-[120px] lg:py-[0px] pt-[60px]">
         <div class="hidden md:flex flex-col w-[50%] gap-[40px]">
             <img class="w-[80px] ml-[-15px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226390.png" alt="">
             <div class="flex flex-col gap-[10px] pt-[50px]">
@@ -45,7 +45,7 @@ while (have_posts()) {
             </div> 
         </div>
     </div>
-    <div class="absolute bottom-[0px] left-[0px] transform scale-[1.3] opacity-[0.05]">
+    <div class="absolute bottom-[0px] left-[0px] transform scale-[1.3] opacity-[0.3]">
         <img class="block md:hidden" src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
     </div>
 </div>
