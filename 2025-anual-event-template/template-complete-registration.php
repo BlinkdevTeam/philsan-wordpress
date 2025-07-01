@@ -73,7 +73,7 @@ get_header();
                                         </div>
                                     </div>
                                     <div class="">
-                                        <p><strong class="font-[300] text-[10px]">*Rates are exclusive of tax</strong></p>
+                                        <p><strong class="font-[300] text-[12px]">*Rates are exclusive of tax</strong></p>
                                         <p>Convention Registration Fee includes:</p>
                                         <ol class="">
                                             <li class="text-[14px] font-[300]">Convention ID Badge</li>
