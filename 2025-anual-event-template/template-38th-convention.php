@@ -174,7 +174,7 @@ while (have_posts()) {
                                         >
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
-                                            <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] rouned-bl-[20px] md:rounded-bl-[0px] rounded-tr-[20px] md:rounded-tr-[80px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
+                                            <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] rounded-bl-[20px] md:rounded-bl-[0px] rounded-tr-[20px] md:rounded-tr-[80px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
                                                 <div class="absolute bottom-0 right-0 w-full h-full">
                                                     <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                                 </div>
