@@ -169,14 +169,14 @@ while (have_posts()) {
                                         <div class="relative flex flex-row md:flex-col items-end md:items-center justify-center w-full md:w-auto">
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
-                                            <div class="relative pl-5 w-[130px] md:w-[300px] lg:w-[350px] h-[130px] md:h-[350px] rouned-bl-[20px] md:rounded-bl-[0px] rounded-tr-[20px] md:rounded-tr-[80px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
+                                            <div class="relative pl-5 w-[100%] h-[130px] md:h-[350px] rouned-bl-[20px] md:rounded-bl-[0px] rounded-tr-[20px] md:rounded-tr-[80px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
                                                 <div class="absolute bottom-0 right-0 w-full h-full">
                                                     <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
                                                 </div>
                                             </div>
 
                                             <!-- Right / Bottom Panel: Speaker Info -->
-                                            <div class="flex-1 w-full md:w-[320px] lg:w-[400px] flex flex-col items-center rounded-br-[50px] justify-center gap-2.5 py-5 px-5 bg-[#1F773A] text-white">
+                                            <div class="flex-1 w-full flex flex-col items-center rounded-br-[50px] justify-center gap-2.5 py-5 px-5 bg-[#1F773A] text-white">
                                                 <p class="text-center text-[18px] md:text-[22px] font-bold">
                                                     <?php echo esc_html(get_sub_field('speaker_name')); ?>
                                                 </p>
