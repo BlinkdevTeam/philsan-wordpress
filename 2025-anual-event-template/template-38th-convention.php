@@ -355,7 +355,9 @@ while (have_posts()) {
         <div class="w-[50%] flex-col gap-[10px]">
             <h2 id="modalTitle" class="text-[18px] lg:text-[22px] font-bold">Title Here</h2>
             <p id="modalContent" class="text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
-            <p id="modalDescription" class="text-[14px] lg:text-[18px]">Description Here</p>
+            <div class="h-[100%] max-h-[350px] overflow-y-scroll">
+                <p id="modalDescription" class="text-[14px] lg:text-[18px]">Description Here</p>
+            </div>
         </div>
     </div>
   </div>

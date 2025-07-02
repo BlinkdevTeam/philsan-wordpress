@@ -874,6 +874,10 @@ video {
   height: 150px;
 }
 
+.max-h-\[350px\] {
+  max-height: 350px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1229,6 +1233,10 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .whitespace-pre-line {
