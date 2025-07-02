@@ -1,31 +1,24 @@
 class SpeakerModal {
     constructor() {}
 
-    handleFaqAcc(elementId, index) {
-        const accElement = document.getElementById(elementId)
+    openModal({ title, image, content }) {
+        const modal = document.getElementById('dynamicModal');
+        modal.querySelector('#modalTitle').textContent = title;
+        modal.querySelector('#modalImage').src = image;
+        modal.querySelector('#modalContent').textContent = content;
+        modal.classList.remove('hidden');
+    }
 
-        const height = accElement.offsetHeight;
-
-        console.log(height)
-        for(let i = 0; i < 6; i++) {
-            if(index !== i) {
-                document.getElementById(`answer-container-${i}`).style.height = 0;
-                document.getElementById(`faq-group-${i}`).classList.remove("active-faq")
-            } else {
-                document.getElementById(`answer-container-${i}`).style.height = height+"px";
-                document.getElementById(`faq-group-${i}`).classList.add("active-faq")
-            }
-        }
-
-        // if( accContainer.classList.contains("active") ) {
-        //     accContainer.style.height = 0
-        //     accContainer.classList.remove("active")
-        //     accHead.style.paddingBottom = 0
-        // } else {
-        //     accContainer.style.height = height+"px"
-        //     accContainer.classList.add("active")
-        //     accHead.style.paddingBottom = "10px"
-        // }
+    handleModal() {
+        document.querySelectorAll('.speaker-item').forEach((card) => {
+            card.addEventListener('click', () => {
+                this.openModal({
+                    title: card.dataset.name,
+                    image: card.dataset.image,
+                    content: card.dataset.title, // or whatever you want to show
+                });
+            });
+        });
     }
 }
 
