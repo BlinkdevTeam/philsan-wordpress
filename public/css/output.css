@@ -2496,6 +2496,10 @@ body {
     font-size: 18px;
   }
 
+  .lg\:text-\[28px\] {
+    font-size: 28px;
+  }
+
   .lg\:text-\[left\] {
     color: left;
   }
