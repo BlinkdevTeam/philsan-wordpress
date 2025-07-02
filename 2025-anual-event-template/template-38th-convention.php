@@ -343,6 +343,9 @@ while (have_posts()) {
 </div>
 
 
+<div id="react-modal-root"></div>
+
+
 <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
         // 🎯 Set your event date here (YYYY-MM-DDTHH:MM:SS)
