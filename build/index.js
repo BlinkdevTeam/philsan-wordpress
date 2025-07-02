@@ -1,1 +1,129 @@
-(()=>{"use strict";const e=class{constructor(){this.modal=document.getElementById("dynamicModal")}openModal({title:e,image:t,content:o}){console.log("modal",this.modal),this.modal.querySelector("#modalTitle").textContent=e,this.modal.querySelector("#modalImage").src=t,this.modal.querySelector("#modalContent").textContent=o,this.modal.classList.remove("hidden")}closeModal(){this.modal.classList.add("hidden")}handleModal(){document.getElementById("closeModal").addEventListener("click",()=>{this.closeModal()}),document.querySelectorAll(".speaker-item").forEach(e=>{console.log("card",e),e.addEventListener("click",()=>{this.openModal({title:e.dataset.name,image:e.dataset.image,content:e.dataset.title})})})}};document.addEventListener("DOMContentLoaded",function(){console.log("JS Running!!!");const t=new e;document.querySelector(".speaker-item")&&t.handleModal()})})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./javascripts/38thSpeakerModal.js":
+/*!*****************************************!*\
+  !*** ./javascripts/38thSpeakerModal.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class SpeakerModal {
+  constructor() {
+    this.modal = document.getElementById('dynamicModal');
+  }
+  openModal({
+    title,
+    image,
+    content
+  }) {
+    console.log("modal", this.modal);
+    this.modal.querySelector('#modalTitle').textContent = title;
+    this.modal.querySelector('#modalImage').src = image;
+    this.modal.querySelector('#modalContent').textContent = content;
+    this.modal.classList.remove('hidden');
+  }
+  closeModal() {
+    this.modal.classList.add('hidden');
+  }
+  handleModal() {
+    document.getElementById("closeModal").addEventListener('click', () => {
+      this.closeModal();
+    });
+    document.querySelectorAll('.speaker-item').forEach(card => {
+      console.log("card", card);
+      card.addEventListener('click', () => {
+        this.openModal({
+          title: card.dataset.name,
+          image: card.dataset.image,
+          content: card.dataset.title
+        });
+      });
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SpeakerModal);
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../javascripts/38thSpeakerModal */ "./javascripts/38thSpeakerModal.js");
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("JS Running!!!");
+  const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  if (document.querySelector(".speaker-item")) {
+    annualSpeakerModal.handleModal();
+  }
+});
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=index.js.map
