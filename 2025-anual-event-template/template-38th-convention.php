@@ -343,7 +343,15 @@ while (have_posts()) {
 </div>
 
 
-<div id="react-modal-root"></div>
+<!-- 🔄 Reusable Modal -->
+<div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
+  <div class="bg-white p-6 rounded-xl w-[90%] max-w-[500px] relative">
+    <button id="closeModal" class="absolute top-2 right-3 text-2xl">&times;</button>
+    <h2 id="modalTitle" class="text-xl font-bold mb-2">Title Here</h2>
+    <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
+    <p id="modalContent" class="text-sm text-gray-700">Content goes here...</p>
+  </div>
+</div>
 
 
 <!-- <script>
