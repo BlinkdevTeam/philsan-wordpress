@@ -171,6 +171,7 @@ while (have_posts()) {
                                             data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
                                             data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
                                             data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
+                                            data-desc="<?php echo esc_attr(get_sub_field('speaker_description')); ?>"
                                         >
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
@@ -347,9 +348,14 @@ while (have_posts()) {
 <div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
   <div class="bg-white p-6 rounded-xl w-[90%] max-w-[500px] relative">
     <button id="closeModal" class="absolute top-2 right-3 text-2xl">&times;</button>
-    <h2 id="modalTitle" class="text-xl font-bold mb-2">Title Here</h2>
-    <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
-    <p id="modalContent" class="text-sm text-gray-700">Content goes here...</p>
+    <div class="flex gap-[20px]">
+        <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
+        <div class="flex-col gap-[10px]">
+            <h2 id="modalTitle" class="text-[18px] lg:text-[22px] font-bold">Title Here</h2>
+            <p id="modalContent" class="text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
+            <p id="modalDescription" class="text-[14px] lg:text-[18px]">Description Here</p>
+        </div>
+    </div>
   </div>
 </div>
 
