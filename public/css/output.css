@@ -588,6 +588,10 @@ video {
   }
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1314,6 +1318,10 @@ video {
 
 .rounded-bl-\[5px\] {
   border-bottom-left-radius: 5px;
+}
+
+.rounded-bl-\[8px\] {
+  border-bottom-left-radius: 8px;
 }
 
 .border {
