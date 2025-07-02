@@ -1,8 +1,10 @@
 class SpeakerModal {
-    constructor() {}
+    constructor() {
+        this.modal = document.getElementById('dynamicModal');
+    }
     
     openModal({ title, image, content }) {
-        const modal = document.getElementById('dynamicModal');
+        console.log("modal", modal);
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalImage').src = image;
         modal.querySelector('#modalContent').textContent = content;
@@ -10,7 +12,6 @@ class SpeakerModal {
     }
 
     closeModal(){
-        const modal = document.getElementById('dynamicModal');
         modal.classList.add('hidden');
     }
 
@@ -21,6 +22,8 @@ class SpeakerModal {
         });
 
         document.querySelectorAll('.speaker-item').forEach((card) => {
+            console.log("card", card)
+
             card.addEventListener('click', () => {
                 console.log("modal trigerring")
                 this.openModal({

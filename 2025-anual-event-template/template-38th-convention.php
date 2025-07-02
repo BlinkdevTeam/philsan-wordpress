@@ -168,9 +168,9 @@ while (have_posts()) {
                                     <?php while (have_rows('speaker')) : the_row(); ?>
                                         <div 
                                             class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group-hover rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
-                                            image="<?php get_sub_field('speaker_image') ?>"
-                                            name="<?php get_sub_field('speaker_name') ?>"
-                                            title="<?php get_sub_field('speake_title') ?>"
+                                            data-image="<?php get_sub_field('speaker_image') ?>"
+                                            data-name="<?php get_sub_field('speaker_name') ?>"
+                                            data-title="<?php get_sub_field('speake_title') ?>"
                                         >
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
