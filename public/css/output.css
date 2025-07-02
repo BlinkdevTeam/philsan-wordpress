@@ -2180,6 +2180,11 @@ body {
   --tw-ring-color: rgb(52 149 68 / var(--tw-ring-opacity, 1));
 }
 
+.group:hover .group-hover\:bg-\[\#EDB221\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
+}
+
 @media (min-width: 640px) {
   .sm\:w-\[280px\] {
     width: 280px;

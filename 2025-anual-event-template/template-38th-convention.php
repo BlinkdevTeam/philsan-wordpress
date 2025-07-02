@@ -167,7 +167,7 @@ while (have_posts()) {
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
                                         <div 
-                                            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group-hover rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
+                                            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
                                             data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
                                             data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
                                             data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
@@ -182,7 +182,7 @@ while (have_posts()) {
                                             </div>
 
                                             <!-- Right / Bottom Panel: Speaker Info -->
-                                            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] hover:bg-[#EDB221] text-white">
+                                            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white">
                                                 <p class="text-center text-[18px] lg:text-[22px] font-bold">
                                                     <?php echo esc_html(get_sub_field('speaker_name')); ?>
                                                 </p>
