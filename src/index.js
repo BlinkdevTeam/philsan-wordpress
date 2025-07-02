@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const annualSpeakerModal = new SpeakerModal();
 
-    if(document.getElementById("speaker-item")) {
-        annualSpeakerModal.handleModal()
-    } 
+    if (document.querySelector(".speaker-item")) {
+        annualSpeakerModal.handleModal();
+    }
 });
