@@ -166,7 +166,7 @@ while (have_posts()) {
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
-                                        <div class="relative flex flex-row md:flex-col items-end md:items-center justify-center w-full md:w-[350px]">
+                                        <div class="relative flex flex-row md:flex-col items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px]">
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
                                             <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] rouned-bl-[20px] md:rounded-bl-[0px] rounded-tr-[20px] md:rounded-tr-[80px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
@@ -177,11 +177,11 @@ while (have_posts()) {
 
                                             <!-- Right / Bottom Panel: Speaker Info -->
                                             <div class="flex-1 w-full flex flex-col items-center rounded-br-[50px] justify-center gap-2.5 py-5 px-5 bg-[#1F773A] text-white">
-                                                <p class="text-center text-[18px] md:text-[22px] font-bold">
+                                                <p class="text-center text-[18px] lg:text-[22px] font-bold">
                                                     <?php echo esc_html(get_sub_field('speaker_name')); ?>
                                                 </p>
                                                 <div class="w-full">
-                                                    <p class="text-center font-light text-[12px] md:text-[16px]">
+                                                    <p class="text-center font-light text-[12px] lg:text-[16px]">
                                                         <?php echo esc_html(get_sub_field('speaker_title')); ?>
                                                     </p>
                                                 </div>
