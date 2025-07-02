@@ -349,8 +349,10 @@ while (have_posts()) {
   <div class="bg-white p-6 rounded-xl w-[70%] relative">
     <button id="closeModal" class="absolute top-2 right-3 text-2xl">&times;</button>
     <div class="flex gap-[20px]">
-        <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
-        <div class="flex-col gap-[10px]">
+        <div class="w-[50%]">
+            <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
+        </div>
+        <div class="w-[50%] flex-col gap-[10px]">
             <h2 id="modalTitle" class="text-[18px] lg:text-[22px] font-bold">Title Here</h2>
             <p id="modalContent" class="text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
             <p id="modalDescription" class="text-[14px] lg:text-[18px]">Description Here</p>

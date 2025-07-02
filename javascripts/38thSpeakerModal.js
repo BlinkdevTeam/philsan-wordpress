@@ -3,11 +3,11 @@ class SpeakerModal {
         this.modal = document.getElementById('dynamicModal');
     }
 
-    openModal({ title, image, content }) {
-        console.log("modal", this.modal);
+    openModal({ title, image, content, description }) {
         this.modal.querySelector('#modalTitle').textContent = title;
         this.modal.querySelector('#modalImage').src = image;
         this.modal.querySelector('#modalContent').textContent = content;
+        this.modal.querySelector('#modalDescription').textContent = description;
         this.modal.classList.remove('hidden');
     }
 
@@ -21,12 +21,12 @@ class SpeakerModal {
         });
 
         document.querySelectorAll('.speaker-item').forEach((card) => {
-            console.log("card", card)
             card.addEventListener('click', () => {
                 this.openModal({
                     title: card.dataset.name,
                     image: card.dataset.image,
                     content: card.dataset.title,
+                    desciption: card.dataset.desc
                 });
             });
         });

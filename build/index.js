@@ -19,12 +19,13 @@ class SpeakerModal {
   openModal({
     title,
     image,
-    content
+    content,
+    description
   }) {
-    console.log("modal", this.modal);
     this.modal.querySelector('#modalTitle').textContent = title;
     this.modal.querySelector('#modalImage').src = image;
     this.modal.querySelector('#modalContent').textContent = content;
+    this.modal.querySelector('#modalDescription').textContent = description;
     this.modal.classList.remove('hidden');
   }
   closeModal() {
@@ -35,12 +36,12 @@ class SpeakerModal {
       this.closeModal();
     });
     document.querySelectorAll('.speaker-item').forEach(card => {
-      console.log("card", card);
       card.addEventListener('click', () => {
         this.openModal({
           title: card.dataset.name,
           image: card.dataset.image,
-          content: card.dataset.title
+          content: card.dataset.title,
+          desciption: card.dataset.desc
         });
       });
     });
