@@ -41,7 +41,7 @@ class SpeakerModal {
           title: card.dataset.name,
           image: card.dataset.image,
           content: card.dataset.title,
-          desciption: card.dataset.desc
+          description: card.dataset.desc
         });
       });
     });
