@@ -21,6 +21,7 @@ class SpeakerModal {
         });
 
         document.querySelectorAll('.speaker-item').forEach((card) => {
+            console.log("card", card)
             card.addEventListener('click', () => {
                 this.openModal({
                     title: card.dataset.name,
