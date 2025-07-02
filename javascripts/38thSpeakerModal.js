@@ -12,6 +12,7 @@ class SpeakerModal {
     handleModal() {
         document.querySelectorAll('.speaker-item').forEach((card) => {
             card.addEventListener('click', () => {
+                console.log("modal trigerring")
                 this.openModal({
                     title: card.dataset.name,
                     image: card.dataset.image,
