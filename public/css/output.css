@@ -1308,6 +1308,14 @@ video {
   border-bottom-left-radius: 20px;
 }
 
+.rounded-bl-\[3px\] {
+  border-bottom-left-radius: 3px;
+}
+
+.rounded-bl-\[5px\] {
+  border-bottom-left-radius: 5px;
+}
+
 .border {
   border-width: 1px;
 }
