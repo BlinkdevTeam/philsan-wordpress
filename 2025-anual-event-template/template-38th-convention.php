@@ -182,7 +182,7 @@ while (have_posts()) {
                                             </div>
 
                                             <!-- Right / Bottom Panel: Speaker Info -->
-                                            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white">
+                                            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white transition-all duration-300 ease-in-out">
                                                 <p class="text-center text-[18px] lg:text-[22px] font-bold">
                                                     <?php echo esc_html(get_sub_field('speaker_name')); ?>
                                                 </p>
