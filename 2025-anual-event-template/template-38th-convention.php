@@ -167,7 +167,7 @@ while (have_posts()) {
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
                                         <div 
-                                            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group-hover rouned-bl-[10px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
+                                            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group-hover rouned-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
                                             data-image="<?php get_sub_field('speaker_image') ?>"
                                             data-name="<?php get_sub_field('speaker_name') ?>"
                                             data-title="<?php get_sub_field('speake_title') ?>"
