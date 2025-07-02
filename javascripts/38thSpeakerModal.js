@@ -1,6 +1,6 @@
 class SpeakerModal {
     constructor() {}
-
+    
     openModal({ title, image, content }) {
         const modal = document.getElementById('dynamicModal');
         modal.querySelector('#modalTitle').textContent = title;
@@ -10,6 +10,7 @@ class SpeakerModal {
     }
 
     closeModal(){
+        const modal = document.getElementById('dynamicModal');
         modal.classList.add('hidden');
     }
 
