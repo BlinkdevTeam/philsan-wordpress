@@ -9,7 +9,16 @@ class SpeakerModal {
         modal.classList.remove('hidden');
     }
 
+    closeModal(){
+        modal.classList.add('hidden');
+    }
+
     handleModal() {
+        document.getElementById("closeModal").addEventListener('click', () => {
+            console.log("modal trigerring")
+            this.closeModal();
+        });
+
         document.querySelectorAll('.speaker-item').forEach((card) => {
             card.addEventListener('click', () => {
                 console.log("modal trigerring")
