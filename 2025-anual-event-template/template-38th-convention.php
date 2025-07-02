@@ -166,7 +166,7 @@ while (have_posts()) {
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); ?>
-                                        <div class="relative flex flex-row md:flex-col items-end md:items-center justify-center w-full md:w-auto">
+                                        <div class="relative flex flex-row md:flex-col items-end md:items-center justify-center w-full md:w-[350px]">
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
                                             <div class="relative pl-5 w-[100%] h-[130px] md:h-[350px] rouned-bl-[20px] md:rounded-bl-[0px] rounded-tr-[20px] md:rounded-tr-[80px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
