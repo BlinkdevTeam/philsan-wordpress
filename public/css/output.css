@@ -2019,6 +2019,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#ffedc0\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 237 192 / var(--tw-text-opacity, 1));
+}
+
 .underline {
   text-decoration-line: underline;
 }

@@ -323,7 +323,7 @@ while (have_posts()) {
                                             <?php endif; ?> 
                                             <?php if (have_rows('program_speaker', $page->ID)) : ?>
                                                 <?php while (have_rows('program_speaker', $page->ID)) : the_row(); ?>
-                                                    <p class="font-bold text-[14px] lg:text-[16px] text-[#EDB221]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
+                                                    <p class="font-bold text-[14px] lg:text-[16px] text-[#ffedc0]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
                                                 <?php endwhile; ?>
                                             <?php endif; ?> 
                                             <?php if (have_rows('program_description', $page->ID)) : ?>
