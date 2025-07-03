@@ -371,7 +371,7 @@ while (have_posts()) {
                 <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
                 <p id="modalContent" class="text-[#ffedc0] text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
                 <div class="h-[100%] max-h-[200px] overflow-y-scroll mt-[20px] scrollbar-custom">
-                    <p id="modalDescription" class="text-[14px] lg:text-[16px] font-[200]">Description Here</p>
+                    <p id="modalDescription" class="text-[14px] lg:text-[16px] font-[200] scrollbar-custom">Description Here</p>
                 </div>
             </div>
         </div>
