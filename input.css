@@ -27,6 +27,24 @@ body.modal-open {
   overflow: hidden;
 }
 
+.scrollbar-custom::-webkit-scrollbar {
+    width: 4px !important;
+  }
+  
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+}
+  
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #0a875a !important;
+    border-radius: 4px !important;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #0a875a !important
+}
+
+
 @layer utilities {
   @keyframes flipY {
     0% { transform: rotateY(0deg); }
