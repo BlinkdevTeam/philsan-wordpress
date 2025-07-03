@@ -315,7 +315,7 @@ while (have_posts()) {
                                         <div class="hidden md:block left-[20px] top-[10px] absolute z-[1] flex flex-col items-center justify-center px-[20px] py-[10px] w-max rounded-tr-[35px] rounded-bl-[35px] bg-[#EDB221]">
                                             <p class="text-center font-bold text-[18px] lg:text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
                                         </div>
-                                        <div class="flex flex-col py-[20px] pl-[20px] md:pl-[95px] pr-[20px] rounded-[20px] bg-[#1f773a] w-[] lg:w-[93%] lg:ml-[auto]">
+                                        <div class="flex flex-col py-[20px] pl-[20px] md:pl-[95px] pr-[20px] rounded-[20px] bg-[#1f773a] w-[100%] lg:w-[93%] lg:ml-[auto]">
                                             <div class="md:hidden py-[6px] px-[10px] w-max ounded-tr-[8px] rounded-bl-[8px] bg-[#EDB221]">
                                                 <p class="text-center font-bold text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
                                             </div>
