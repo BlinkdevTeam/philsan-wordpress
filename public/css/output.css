@@ -2455,6 +2455,10 @@ body.modal-open {
     flex-direction: row;
   }
 
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
   .lg\:justify-start {
     justify-content: flex-start;
   }
