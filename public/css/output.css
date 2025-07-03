@@ -2451,6 +2451,10 @@ body.modal-open {
     width: 100%;
   }
 
+  .lg\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
