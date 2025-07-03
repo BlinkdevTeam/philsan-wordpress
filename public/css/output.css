@@ -2165,11 +2165,11 @@ body.modal-open {
 }
 
 .scrollbar-custom::-webkit-scrollbar {
-  width: 4px !important;
+  width: 3px !important;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: #f1f1f1 !important;
+  background: #1F773A !important;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
