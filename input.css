@@ -23,6 +23,10 @@ body {
   text-align: center;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 @layer utilities {
   @keyframes flipY {
     0% { transform: rotateY(0deg); }
