@@ -172,7 +172,7 @@ while (have_posts()) {
                                         if (have_rows('speaker_description')) {
                                             while (have_rows('speaker_description')) {
                                                 the_row();
-                                                $description .= get_sub_field('description') . "\n"; // or add <br> if you want HTML breaks
+                                                $description .= get_sub_field('description') . "<br>"; // or add <br> if you want HTML breaks
                                             }
                                         }
                                     ?>
