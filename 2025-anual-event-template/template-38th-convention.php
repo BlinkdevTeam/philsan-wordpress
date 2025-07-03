@@ -359,9 +359,9 @@ while (have_posts()) {
 
 <!-- 🔄 Reusable Modal -->
 <div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-white/50 flex items-center justify-center">
-    <div class="relative w-[100%]">
+    <div class="relative w-[980px]">
         <!-- <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button> -->
-        <div class="flex flex-col md:flex-row items-center w-[980px] mx-auto">
+        <div class="flex flex-col md:flex-row items-center w-[100%] mx-auto">
             <div class="w-[100%] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-[50px]">
                 <div class="w-[90%] ml-[auto]">
                     <img id="modalImage" class="w-full h-auto" src="" alt="">
@@ -371,7 +371,7 @@ while (have_posts()) {
                 <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
                 <p id="modalContent" class="text-[#ffedc0] text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
                 <div class="h-[100%] max-h-[200px] overflow-y-scroll mt-[20px] scrollbar-custom">
-                    <p id="modalDescription" class="text-[14px] lg:text-[16px] font-[200] scrollbar-custom">Description Here</p>
+                    <p id="modalDescription" class="text-[14px] lg:text-[16px] font-[200] scrollbar-custom pr-[20px]">Description Here</p>
                 </div>
             </div>
         </div>
