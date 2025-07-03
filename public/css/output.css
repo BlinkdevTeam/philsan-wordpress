@@ -1328,6 +1328,10 @@ video {
   border-bottom-left-radius: 8px;
 }
 
+.rounded-tr-\[8px\] {
+  border-top-right-radius: 8px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -2500,6 +2504,10 @@ body {
 
   .lg\:pb-\[160px\] {
     padding-bottom: 160px;
+  }
+
+  .lg\:pl-\[95px\] {
+    padding-left: 95px;
   }
 
   .lg\:text-left {
