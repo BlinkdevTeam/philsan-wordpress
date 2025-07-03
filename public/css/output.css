@@ -1357,6 +1357,10 @@ video {
   border-top-right-radius: 80px;
 }
 
+.rounded-bl-\[80px\] {
+  border-bottom-left-radius: 80px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -2547,6 +2551,10 @@ body.modal-open {
 
   .lg\:rounded-tr-\[30px\] {
     border-top-right-radius: 30px;
+  }
+
+  .lg\:rounded-bl-\[0px\] {
+    border-bottom-left-radius: 0px;
   }
 
   .lg\:px-24 {

@@ -25,6 +25,7 @@ class SpeakerModal {
   }) {
     this.modal.querySelector('#modalTitle').textContent = title;
     this.modal.querySelector('#modalImage').src = image;
+    this.modal.querySelector('#modalImage-mobile').src = image;
     this.modal.querySelector('#modalContent').textContent = content;
     this.modal.querySelector('#modalDescription').textContent = description;
     this.modal.classList.remove('hidden');
