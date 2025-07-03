@@ -369,8 +369,8 @@ while (have_posts()) {
             </div>
             <div class="bg-[#1F773A] w-[100%] flex-col gap-[10px] p-[50px] rounded-bl-[80px] lg:rounded-bl-[0px] rounded-tr-[80px] lg:rounded-tr-[30px] rounded-br-[0px] lg:rounded-br-[30px] text-[#ffffff]">
                 <div class="flex md:gap-[20px] gap-[0px]">
-                    <div class="block lg:hidden w-[100px] h-[100px] rounded-full overflow-hidden">
-                        <img id="modalImage-mobile" class="w-full h-auto" src="" alt="">
+                    <div class="block lg:hidden w-[100px] h-[100px] rounded-full overflow-hidden bg-white relative">
+                        <img id="modalImage-mobile" class="w-full h-full object-cover" src="" alt="">
                     </div>
                     <div>
                         <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
