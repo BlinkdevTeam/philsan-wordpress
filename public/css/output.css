@@ -2486,6 +2486,10 @@ body.modal-open {
     padding-left: 95px;
   }
 
+  .lg\:pt-\[100px\] {
+    padding-top: 100px;
+  }
+
   .lg\:text-left {
     text-align: left;
   }

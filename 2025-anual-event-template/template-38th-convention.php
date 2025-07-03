@@ -161,7 +161,7 @@ while (have_posts()) {
             <div class="flex flex-col gap-[10px]">
                 <?php if (have_rows('speaker_group', $page->ID)) : ?>
                     <?php while (have_rows('speaker_group', $page->ID)) : the_row(); ?>
-                        <div class="pt-[100px]">
+                        <div class="pt-[50px] lg:pt-[100px]">
                             <p class="text-center font-bold text-[24px] md:text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
@@ -304,7 +304,7 @@ while (have_posts()) {
             </div>
             <?php if (have_rows('program_group', $page->ID)) : ?>
                 <?php while (have_rows('program_group', $page->ID)) : the_row(); ?>
-                    <div class="pt-[100px]">
+                    <div class="pt-[50px] lg:pt-[100px]">
                         <div class="flex flex-col items-center justify-center py-[15px] text-[#1f773a]">
                             <p class="text-center font-bold text-[24px]"><?php echo esc_html(get_sub_field('program_group_title')); ?></p>
                         </div>
@@ -349,7 +349,6 @@ while (have_posts()) {
 
 <!-- 🔄 Reusable Modal -->
 <div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
-    <div></div>
     <div class="bg-white p-6 rounded-xl w-[70%] relative">
         <button id="closeModal" class="absolute top-2 right-3 text-[38px]">&times;</button>
         <div class="flex items-center gap-[20px]">
