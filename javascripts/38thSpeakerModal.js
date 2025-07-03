@@ -10,6 +10,7 @@ class SpeakerModal {
         this.modal.querySelector('#modalContent').textContent = content;
         this.modal.querySelector('#modalDescription').textContent = description;
         this.modal.classList.remove('hidden');
+        document.body.classList.add('modal-open'); // ⛔ Prevent scroll
     }
 
     closeModal() {
