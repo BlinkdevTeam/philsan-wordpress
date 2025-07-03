@@ -1361,6 +1361,14 @@ video {
   border-bottom-left-radius: 80px;
 }
 
+.rounded-bl-\[20px\] {
+  border-bottom-left-radius: 20px;
+}
+
+.rounded-tr-\[20px\] {
+  border-top-right-radius: 20px;
+}
+
 .border {
   border-width: 1px;
 }
