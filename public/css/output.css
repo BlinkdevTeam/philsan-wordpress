@@ -1324,6 +1324,10 @@ video {
   border-top-right-radius: 35px;
 }
 
+.rounded-bl-\[8px\] {
+  border-bottom-left-radius: 8px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1683,6 +1687,11 @@ video {
 .py-\[80px\] {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .pb-8 {
