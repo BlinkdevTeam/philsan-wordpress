@@ -357,7 +357,7 @@ while (have_posts()) {
                     <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
                 </div>
             </div>
-            <div class="bg-[#ffffff] w-[100%] md:w-[50%] flex-col gap-[10px]">
+            <div class="bg-[#ffffff] w-[100%] md:w-[50%] flex-col gap-[10px] p-[20px] rounded-r-[20px]">
                 <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
                 <p id="modalContent" class="text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
                 <div class="h-[100%] max-h-[350px] overflow-y-scroll pt-[20px]">
