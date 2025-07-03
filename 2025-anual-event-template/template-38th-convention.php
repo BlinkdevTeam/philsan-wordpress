@@ -360,7 +360,7 @@ while (have_posts()) {
 <!-- 🔄 Reusable Modal -->
 <div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-white/50 flex items-center justify-center">
     <div class="relative w-[90%] lg:w-[70%]">
-        <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button>
+        <!-- <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button> -->
         <div class="flex flex-col md:flex-row items-center">
             <div class="w-[100%] md:w-[550px] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-[50px]">
                 <div class="w-[90%] ml-[auto]">
