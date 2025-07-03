@@ -51,7 +51,7 @@ while (have_posts()) {
 </div>
 
 <div class="about-convention relative ">
-    <div class="w-[90%] max-w-[1280px] mx-auto py-[120px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto py-[80px] md:py-[120px]">
        <?php if ($page) : ?>
             <!--  Use $page->ID to get the ID of the page we fetched above.
             ACF requires the post ID to know where to get the custom field from.  -->
@@ -128,7 +128,7 @@ while (have_posts()) {
 </div>
 
 <div class="speaker-convention relative bg-[#ffffff]">
-    <div class="w-[90%] max-w-[1280px] mx-auto pt-[120px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto pt-[80px] md:pt-[120px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("speaker_container_title", $page->ID)) : ?> 
@@ -207,7 +207,7 @@ while (have_posts()) {
 </div>
 
 <div class="sponsors relative bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_10%,#CBF9B6_100%)] overflow-hidden">
-    <div class="w-[90%] max-w-[1280px] mx-auto pt-[200px] pb-[110px]">
+    <div class="w-[90%] max-w-[1280px] mx-auto pt-[110px] md:pt-[200px] pb-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("sponsor_container_title", $page->ID)) : ?> 
@@ -221,7 +221,7 @@ while (have_posts()) {
                                     <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
                                 </svg>
                             </div>
-                            <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
+                            <h6 class="font-bold text-[#1F773A] text-[28px] md:text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -229,7 +229,7 @@ while (have_posts()) {
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('sponsor_container_description', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_container_description', $page->ID)) : the_row(); ?>
-                            <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            <p class="text-center text-[14px] md:text-[16px]"><?php echo esc_html(get_sub_field('description')); ?></p>
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
@@ -274,12 +274,12 @@ while (have_posts()) {
     </div>
 </div>
 
-<div class="Program relative overflow-hidden">
-    <div class="w-[90%] max-w-[1280px] mx-auto pt-[110px]">
+<div class="program relative overflow-hidden">
+    <div class="w-[90%] max-w-[1280px] mx-auto pt-[80px] pt-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
                 <?php if (get_field("program_title", $page->ID)) : ?> 
-                    <div class="ml-[-20px]">
+                    <div class="">
                         <div class="flex items-center justify-center gap-[20px]">
                             <div class="w-max">
                                 <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -289,7 +289,7 @@ while (have_posts()) {
                                     <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
                                 </svg>
                             </div>
-                            <h6 class="font-bold text-[#1F773A] text-[40px]"><?php echo get_field("program_title", $page->ID); ?></h6>
+                            <h6 class="font-bold text-[#1F773A] text-[28px] md:text-[40px]"><?php echo get_field("program_title", $page->ID); ?></h6>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -297,7 +297,7 @@ while (have_posts()) {
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('program_description', $page->ID)) : ?>
                         <?php while (have_rows('program_description', $page->ID)) : the_row(); ?>
-                            <p class="text-center"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            <p class="text-center text-[14px] md:text-[16px]"><?php echo esc_html(get_sub_field('description')); ?></p>
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
@@ -313,22 +313,22 @@ while (have_posts()) {
                                 <div class="pt-[20px]">
                                     <div class="flex relative">
                                         <div class="left-[20px] top-[10px] absolute z-[1] flex flex-col items-center justify-center px-[20px] py-[10px] w-max rounded-tr-[35px] rounded-bl-[35px] bg-[#EDB221]">
-                                            <p class="text-center font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
+                                            <p class="text-center font-bold text-[18px] md:text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
                                         </div>
                                         <div class="flex flex-col py-[20px] pl-[95px] pr-[20px] rounded-[20px] bg-[#1f773a] w-[93%] ml-[auto]">
                                             <?php if (have_rows('program_title', $page->ID)) : ?>
                                                 <?php while (have_rows('program_title', $page->ID)) : the_row(); ?>
-                                                    <p class="font-bold text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
+                                                    <p class="font-bold text-[18px] md:text-[24px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
                                                 <?php endwhile; ?>
                                             <?php endif; ?> 
                                             <?php if (have_rows('program_speaker', $page->ID)) : ?>
                                                 <?php while (have_rows('program_speaker', $page->ID)) : the_row(); ?>
-                                                    <p class="font-bold text-[16px] text-[#ffffff]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
+                                                    <p class="font-bold text-[14px] md:text-[16px] text-[#ffffff]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
                                                 <?php endwhile; ?>
                                             <?php endif; ?> 
                                             <?php if (have_rows('program_description', $page->ID)) : ?>
                                                 <?php while (have_rows('program_description', $page->ID)) : the_row(); ?>
-                                                    <p class="font-[200] text-[16px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
+                                                    <p class="font-[200] text-[14px] md:text-[16px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
                                                 <?php endwhile; ?>
                                             <?php endif; ?> 
                                         </div>
