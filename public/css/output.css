@@ -2235,6 +2235,10 @@ body.modal-open {
     width: 768px;
   }
 
+  .sm\:w-\[640px\] {
+    width: 640px;
+  }
+
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
