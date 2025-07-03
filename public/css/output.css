@@ -983,6 +983,10 @@ video {
   width: max-content;
 }
 
+.w-\[768px\] {
+  width: 768px;
+}
+
 .max-w-\[1280px\] {
   max-width: 1280px;
 }
@@ -2227,6 +2231,10 @@ body.modal-open {
     width: 280px;
   }
 
+  .sm\:w-\[768px\] {
+    width: 768px;
+  }
+
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2288,6 +2296,10 @@ body.modal-open {
 
   .md\:w-\[74\.6\%\] {
     width: 74.6%;
+  }
+
+  .md\:w-\[980px\] {
+    width: 980px;
   }
 
   .md\:grid-cols-2 {
@@ -2434,6 +2446,10 @@ body.modal-open {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[14px\] {
+    font-size: 14px;
   }
 
   .md\:text-\[\#ffffff\] {
