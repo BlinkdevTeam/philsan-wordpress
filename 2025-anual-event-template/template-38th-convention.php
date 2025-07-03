@@ -351,9 +351,11 @@ while (have_posts()) {
 <div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
     <div class="relative w-[90%] lg:w-[70%]">
         <button id="closeModal" class="absolute top-2 right-3 text-[38px]">&times;</button>
-        <div class="flex flex-col lg:flex-row items-center gap-[20px]">
-            <div class="bg-[#ffffff] w-[100%] md:w-[50%] bg-gradient-to-b from-white via-white to-[#CBF9B6]">
-                <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
+        <div class="flex flex-col lg:flex-row items-center">
+            <div class="w-[100%] md:w-[50%] bg-gradient-to-b from-white via-white to-[#CBF9B6]">
+                <div class="w-[80%]">
+                    <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
+                </div>
             </div>
             <div class="bg-[#ffffff] w-[100%] md:w-[50%] flex-col gap-[10px]">
                 <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
