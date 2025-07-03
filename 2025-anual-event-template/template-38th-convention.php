@@ -166,11 +166,13 @@ while (have_posts()) {
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
                                     <?php while (have_rows('speaker')) : the_row(); 
+                                        
                                         $description = '';
+                                        
                                         if (have_rows('speaker_description')) {
                                             while (have_rows('speaker_description')) {
                                                 the_row();
-                                                $description .= get_sub_field('paragraph') . "\n"; // or add <br> if you want HTML breaks
+                                                $description .= get_sub_field('description') . "\n"; // or add <br> if you want HTML breaks
                                             }
                                         }
                                     ?>
