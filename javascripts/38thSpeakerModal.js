@@ -15,6 +15,7 @@ class SpeakerModal {
 
     closeModal() {
         this.modal.classList.add('hidden');
+        document.body.classList.remove('modal-open'); // ⛔ Remove Prevent scroll
     }
 
     handleModal() {
