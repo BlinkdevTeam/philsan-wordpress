@@ -352,12 +352,12 @@ while (have_posts()) {
     <div class="relative w-[90%] lg:w-[70%]">
         <button id="closeModal" class="absolute top-2 right-3 text-[38px]">&times;</button>
         <div class="flex flex-col lg:flex-row items-center">
-            <div class="w-[100%] md:w-[50%] py-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6]">
-                <div class="w-[80%] ml-[auto]">
-                    <img id="modalImage" class="w-full h-auto mb-3 rounded" src="" alt="">
+            <div class="w-[100%] md:w-[50%] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6]">
+                <div class="w-[90%] ml-[auto]">
+                    <img id="modalImage" class="w-full h-auto" src="" alt="">
                 </div>
             </div>
-            <div class="bg-[#1F773A] w-[100%] md:w-[50%] flex-col gap-[10px] p-[50px] rounded-r-[20px]">
+            <div class="bg-[#1F773A] w-[100%] md:w-[50%] flex-col gap-[10px] p-[50px] rounded-r-[20px] text-[#ffffff]">
                 <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
                 <p id="modalContent" class="text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
                 <div class="h-[100%] max-h-[350px] overflow-y-scroll pt-[20px]">
