@@ -20,9 +20,9 @@ class SpeakerModal {
 
     handleModal() {
         // Close button
-        document.getElementById("closeModal").addEventListener('click', () => {
-            this.closeModal();
-        });
+        // document.getElementById("closeModal").addEventListener('click', () => {
+        //     this.closeModal();
+        // });
 
         // Click on backdrop
         this.modal.addEventListener('click', (e) => {
