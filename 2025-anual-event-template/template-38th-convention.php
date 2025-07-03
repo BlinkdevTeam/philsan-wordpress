@@ -165,13 +165,21 @@ while (have_posts()) {
                             <p class="text-center font-bold text-[24px] md:text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
-                                    <?php while (have_rows('speaker')) : the_row(); ?>
+                                    <?php while (have_rows('speaker')) : the_row(); 
+                                        $description = '';
+                                        if (have_rows('speaker_description')) {
+                                            while (have_rows('speaker_description')) {
+                                                the_row();
+                                                $description .= get_sub_field('paragraph') . "\n"; // or add <br> if you want HTML breaks
+                                            }
+                                        }
+                                    ?>
                                         <div 
                                             class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
                                             data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
                                             data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
                                             data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
-                                            data-desc="<?php echo esc_attr(get_sub_field('speaker_description')); ?>"
+                                            data-desc="<?php echo esc_attr($description); ?>"
                                         >
     
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->

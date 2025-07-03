@@ -15,6 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 class SpeakerModal {
   constructor() {
     this.modal = document.getElementById('dynamicModal');
+    this.backdrop = this.modal; // for backdrop click
   }
   openModal({
     title,
@@ -27,26 +28,24 @@ class SpeakerModal {
     this.modal.querySelector('#modalContent').textContent = content;
     this.modal.querySelector('#modalDescription').textContent = description;
     this.modal.classList.remove('hidden');
-    document.body.classList.add('modal-open'); // ⛔ Prevent scroll
   }
   closeModal() {
     this.modal.classList.add('hidden');
-    document.body.classList.remove('modal-open'); // ✅ Allow scroll again
   }
   handleModal() {
-    // Close when clicking the close button
+    // Close button
     document.getElementById("closeModal").addEventListener('click', () => {
       this.closeModal();
     });
 
-    // Close when clicking the background (not content)
-    this.modal.addEventListener('click', event => {
-      if (event.target === this.modal) {
+    // Click on backdrop
+    this.modal.addEventListener('click', e => {
+      if (e.target === this.modal) {
         this.closeModal();
       }
     });
 
-    // Open modal on speaker click
+    // Card click
     document.querySelectorAll('.speaker-item').forEach(card => {
       card.addEventListener('click', () => {
         this.openModal({
