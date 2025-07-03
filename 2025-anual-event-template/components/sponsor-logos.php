@@ -10,7 +10,7 @@
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">
                 <p class="font-fraunces font-bold text-[#ffffff]">Gold</p>
             </div>
-            <img class="w-[100%] md:w-[40%] mt-[20px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226338.png" alt="">
+            <img class="w-[100%] md:w-[40%] mt-[20px]" src="https://philsan.org/wp-content/uploads/2025/07/Frame-2147226337-scaled.png" alt="">
         </div>
         <div class="swiper-slide p-[20px] event-sponsor-1">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">
