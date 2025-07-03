@@ -362,14 +362,21 @@ while (have_posts()) {
     <div class="relative w-[90%] sm:w-[640px] lg:w-[980px]">
         <!-- <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button> -->
         <div class="flex flex-col md:flex-row items-center w-[100%] mx-auto">
-            <div class="w-[100%] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-[50px]">
+            <div class="hidden lg:block w-[100%] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-[50px]">
                 <div class="w-[90%] ml-[auto]">
                     <img id="modalImage" class="w-full h-auto" src="" alt="">
                 </div>
             </div>
             <div class="bg-[#1F773A] w-[100%] flex-col gap-[10px] p-[50px] rounded-r-[30px] text-[#ffffff]">
-                <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
-                <p id="modalContent" class="text-[#ffedc0] text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
+                <div class="flex md:gap-[20px] gap-[0px]">
+                    <div class="block lg:hidden w-[100px] h-auto rounded-full overflow-hidden">
+                        <img id="modalImage" class="w-full h-auto" src="" alt="">
+                    </div>
+                    <div>
+                        <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
+                        <p id="modalContent" class="text-[#ffedc0] text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
+                    </div>
+                </div>
                 <div class="h-[100%] max-h-[200px] overflow-y-scroll mt-[20px] scrollbar-custom">
                     <p id="modalDescription" class="text-[12px] md:text-[14px] lg:text-[16px] font-[200] scrollbar-custom pr-[20px]">Description Here</p>
                 </div>
