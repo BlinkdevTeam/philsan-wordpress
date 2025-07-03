@@ -2310,6 +2310,11 @@ body {
     padding-right: 50px;
   }
 
+  .md\:py-\[15px\] {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   .md\:pb-\[200px\] {
     padding-bottom: 200px;
   }
@@ -2320,6 +2325,10 @@ body {
 
   .md\:pb-\[50px\] {
     padding-bottom: 50px;
+  }
+
+  .md\:pt-\[100px\] {
+    padding-top: 100px;
   }
 
   .md\:text-4xl {
@@ -2355,6 +2364,10 @@ body {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[24px\] {
+    font-size: 24px;
   }
 
   .md\:text-\[\#ffffff\] {
