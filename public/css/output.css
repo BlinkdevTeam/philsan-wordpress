@@ -1730,6 +1730,11 @@ video {
   padding-bottom: 80px;
 }
 
+.py-\[100px\] {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
