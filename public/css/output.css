@@ -2494,6 +2494,11 @@ body.modal-open {
     padding-bottom: 50px;
   }
 
+  .md\:py-\[30px\] {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .md\:pb-\[200px\] {
     padding-bottom: 200px;
   }

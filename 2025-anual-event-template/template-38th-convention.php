@@ -357,14 +357,14 @@ while (have_posts()) {
 </div>
 <div class="footer-temporary relative overflow-hidden">
     <div class="w-[95%] md:w-[100%] ml-auto  md:mx-auto pt-[80px] pt-[110px]">
-        <div class="flex flex-col md:flex-row gap-[50px] justify-between">
+        <div class="flex flex-col md:flex-row gap-[10px] md:ap-[50px] justify-between">
             <div class="w-[100%] md:w-[50%] pr-[20px]">
                 <div class="w-[100%] md:w-[90%] ml-[auto]">
                     <div class="w-[30%] lg:w-[50%]">
                         <img src="https://philsan.org/wp-content/uploads/2025/06/PHILSAN_LOGO.png" alt="">
                     </div>
                     <div class="pt-[5px]">
-                        <p>Ever growing and innovative, PHILSAN undoubtedly plays a key role in propelling animal nutrition in the Philippines into the mainstream of global development and advances.</p>
+                        <p class="text-[14px] md:text-[16px] w-max">Ever growing and innovative, PHILSAN undoubtedly plays a key role in propelling animal nutrition in the Philippines into the mainstream of global development and advances.</p>
                     </div>
                 </div>
             </div>
@@ -403,7 +403,7 @@ while (have_posts()) {
             </div>
         </div>
     </div>
-    <div class="flex flex-col py-[30px] text-center items-center justify-center font-[200] text-[12px]">
+    <div class="flex flex-col py-[10px] md:py-[30px] text-center items-center justify-center font-[200] text-[12px]">
         <span>PHILSAN © 2023. All rights reserved.</span>
         <span>Powered by BLINK CREATIVE STUDIO</span>
     </div>
