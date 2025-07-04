@@ -356,7 +356,7 @@ while (have_posts()) {
     </div>
 </div>
 <div class="footer-temporary relative overflow-hidden">
-    <div class="w-[100%] mx-auto pt-[80px] pt-[110px]">
+    <div class="w-[90%] mx-auto pt-[80px] pt-[110px]">
         <div class="flex gap-[50px] justify-between">
             <div class="w-[50%]">
                 <div class="w-[50%]">
@@ -370,16 +370,16 @@ while (have_posts()) {
                 <h6 class="text-[32px] font-bold">Contact Us</h6>
                 <div>
                     <p>To learn more don't hesitate to get in touch</p>
-                    <ul class="pt-[20px] pl-[40px]">
+                    <ul class="pt-[10px] pl-[10px]">
                         <li class="flex gap-[20px] items-center">
-                            <div class="flex justify-center items-center p-[20px] rounded-full">
+                            <div class="flex justify-center items-center p-[10px] rounded-full bg-[#ffffff]">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.98026 6.75516C6.6162 8.07969 7.48312 9.32109 8.58101 10.419C9.67891 11.5169 10.9203 12.3838 12.2448 13.0197C12.3588 13.0744 12.4157 13.1018 12.4878 13.1228C12.744 13.1975 13.0585 13.1438 13.2755 12.9885C13.3365 12.9448 13.3888 12.8926 13.4932 12.7881C13.8126 12.4687 13.9724 12.309 14.133 12.2045C14.7387 11.8107 15.5195 11.8107 16.1252 12.2045C16.2858 12.309 16.4455 12.4687 16.765 12.7881L16.943 12.9662C17.4286 13.4518 17.6714 13.6945 17.8033 13.9553C18.0656 14.4739 18.0656 15.0863 17.8033 15.6049C17.6714 15.8657 17.4286 16.1084 16.943 16.594L16.799 16.7381C16.3151 17.222 16.0731 17.4639 15.7441 17.6487C15.3791 17.8538 14.8121 18.0012 14.3935 18C14.0162 17.9989 13.7583 17.9257 13.2425 17.7793C10.4709 16.9926 7.85553 15.5083 5.6736 13.3264C3.49168 11.1445 2.00738 8.52911 1.22071 5.75746C1.07432 5.24172 1.00113 4.98385 1.00001 4.60653C0.998762 4.18785 1.1462 3.6209 1.35126 3.25587C1.53605 2.92691 1.77801 2.68494 2.26193 2.20102L2.40597 2.05699C2.89155 1.57141 3.13434 1.32861 3.3951 1.19672C3.91369 0.934425 4.52611 0.934425 5.0447 1.19672C5.30546 1.32861 5.54825 1.5714 6.03383 2.05699L6.21189 2.23504C6.53133 2.55448 6.69104 2.7142 6.79547 2.87481C7.18927 3.4805 7.18927 4.26134 6.79547 4.86703C6.69105 5.02764 6.53133 5.18736 6.21189 5.5068C6.10744 5.61125 6.05521 5.66347 6.0115 5.72452C5.85616 5.94146 5.80252 6.25601 5.8772 6.51218C5.89821 6.58426 5.92556 6.64123 5.98026 6.75516Z" stroke="#1f773a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <p>09171169043</p></li>
                         <li class="flex gap-[20px] items-center">
-                            <div class="flex justify-center items-center p-[20px] rounded-full">
+                            <div class="flex justify-center items-center p-[10px] rounded-full bg-[#ffffff]">
                                 <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 2L9.77212 8.04498C10.4943 8.60671 11.5057 8.60671 12.2279 8.04498L20 2M4.2 17H17.8C18.9201 17 19.4802 17 19.908 16.782C20.2843 16.5903 20.5903 16.2843 20.782 15.908C21 15.4802 21 14.9201 21 13.8V4.2C21 3.0799 21 2.51984 20.782 2.09202C20.5903 1.71569 20.2843 1.40973 19.908 1.21799C19.4802 1 18.9201 1 17.8 1H4.2C3.07989 1 2.51984 1 2.09202 1.21799C1.71569 1.40973 1.40973 1.71569 1.21799 2.09202C1 2.51984 1 3.07989 1 4.2V13.8C1 14.9201 1 15.4802 1.21799 15.908C1.40973 16.2843 1.71569 16.5903 2.09202 16.782C2.51984 17 3.0799 17 4.2 17Z" stroke="#1f773a" stroke-width="2"/>
                                 </svg>
@@ -387,7 +387,7 @@ while (have_posts()) {
                             <p>admin@philsan.org</p>
                         </li>
                         <li class="flex gap-[20px] items-center">
-                            <div class="flex justify-center items-center p-[20px] rounded-full">
+                            <div class="flex justify-center items-center p-[10px] rounded-full bg-[#ffffff]">
                                 <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.11999 3.32H11V0.139999C10.0897 0.0453465 9.17514 -0.0013848 8.25999 -6.53468e-07C5.53999 -6.53468e-07 3.67999 1.66 3.67999 4.7V7.32H0.609985V10.88H3.67999V20H7.35998V10.88H10.42L10.88 7.32H7.35998V5.05C7.35998 4 7.63999 3.32 9.11999 3.32Z" fill="#1f773a"/>
                                 </svg>
@@ -399,7 +399,7 @@ while (have_posts()) {
             </div>
         </div>
     </div>
-    <div class="flex py-[40px] text-center items-center justify-center">
+    <div class="flex flex-col gap-[10px] py-[40px] text-center items-center justify-center">
         <span>PHILSAN © 2023. All rights reserved.</span>
         <span>Powered by BLINK CREATIVE STUDIO</span>
     </div>
