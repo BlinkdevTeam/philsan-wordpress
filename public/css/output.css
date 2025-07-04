@@ -1760,6 +1760,11 @@ video {
   padding-bottom: 40px;
 }
 
+.py-\[35px\] {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1870,6 +1875,10 @@ video {
 
 .pt-\[5px\] {
   padding-top: 5px;
+}
+
+.pl-\[50px\] {
+  padding-left: 50px;
 }
 
 .text-center {
@@ -2109,6 +2118,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .underline {
@@ -2467,6 +2480,11 @@ body.modal-open {
     padding-bottom: 15px;
   }
 
+  .md\:py-\[50px\] {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .md\:pb-\[200px\] {
     padding-bottom: 200px;
   }
@@ -2489,6 +2507,10 @@ body.modal-open {
 
   .md\:pt-\[200px\] {
     padding-top: 200px;
+  }
+
+  .md\:pt-\[110px\] {
+    padding-top: 110px;
   }
 
   .md\:text-4xl {
