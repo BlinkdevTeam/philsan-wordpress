@@ -403,7 +403,7 @@ while (have_posts()) {
             </div>
         </div>
     </div>
-    <div class="flex flex-col gap-[5px] py-[30px] text-center items-center justify-center font-[200] text-[12px]">
+    <div class="flex flex-col py-[30px] text-center items-center justify-center font-[200] text-[12px]">
         <span>PHILSAN © 2023. All rights reserved.</span>
         <span>Powered by BLINK CREATIVE STUDIO</span>
     </div>
