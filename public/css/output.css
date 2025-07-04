@@ -1582,6 +1582,14 @@ video {
   padding: 50px;
 }
 
+.p-\[30px\] {
+  padding: 30px;
+}
+
+.p-\[35px\] {
+  padding: 35px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2309,6 +2317,10 @@ body.modal-open {
     width: 74.6%;
   }
 
+  .md\:w-\[100px\] {
+    width: 100px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2345,6 +2357,10 @@ body.modal-open {
     gap: 5px;
   }
 
+  .md\:gap-\[0px\] {
+    gap: 0px;
+  }
+
   .md\:rounded-none {
     border-radius: 0px;
   }
@@ -2365,6 +2381,10 @@ body.modal-open {
   .md\:bg-\[\#EDB221\] {
     --tw-bg-opacity: 1;
     background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:p-\[50px\] {
+    padding: 50px;
   }
 
   .md\:px-20 {
