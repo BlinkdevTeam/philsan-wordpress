@@ -769,6 +769,10 @@ video {
   margin-top: 5px;
 }
 
+.mr-\[auto\] {
+  margin-right: auto;
+}
+
 .block {
   display: block;
 }
@@ -1850,6 +1854,10 @@ video {
 
 .pl-\[10px\] {
   padding-left: 10px;
+}
+
+.pt-\[5px\] {
+  padding-top: 5px;
 }
 
 .text-center {
