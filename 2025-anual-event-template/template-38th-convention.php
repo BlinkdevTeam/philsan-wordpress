@@ -356,8 +356,8 @@ while (have_posts()) {
     </div>
 </div>
 <div class="footer-temporary relative overflow-hidden">
-    <div class="w-[100%] mx-auto pt-[80px] pt-[110px]">
-        <div class="flex gap-[50px] justify-between">
+    <div class="w-[95%] md:w-[100%] ml-auto  md:mx-auto pt-[80px] pt-[110px]">
+        <div class="flex flex-col md:flex-row gap-[50px] justify-between">
             <div class="w-[50%]">
                 <div class="w-[90%] ml-[auto]">
                     <div class="w-[50%]">
