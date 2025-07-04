@@ -358,8 +358,8 @@ while (have_posts()) {
 <div class="footer-temporary relative overflow-hidden">
     <div class="w-[95%] md:w-[100%] ml-auto  md:mx-auto pt-[80px] pt-[110px]">
         <div class="flex flex-col md:flex-row gap-[50px] justify-between">
-            <div class="w-[50%]">
-                <div class="w-[90%] ml-[auto]">
+            <div class="w-[100%] md:w-[50%]">
+                <div class="w-[100%] md:w-[90%] ml-[auto]">
                     <div class="w-[50%]">
                         <img src="https://philsan.org/wp-content/uploads/2025/06/PHILSAN_LOGO.png" alt="">
                     </div>
@@ -368,8 +368,8 @@ while (have_posts()) {
                     </div>
                 </div>
             </div>
-            <div class="w-[50%] bg-[#1F773A] py-[50px] px-[50px] rounded-bl-[80px] text-[#ffffff]">
-                <div class="w-[50%] mr-[auto]">
+            <div class="w-[100%] md:w-[50%] bg-[#1F773A] py-[50px] px-[50px] rounded-bl-[80px] text-[#ffffff]">
+                <div class="w-[100%] md:w-[50%] mr-[auto]">
                     <h6 class="text-[32px] font-bold">Contact Us</h6>
                     <div>
                         <p>To learn more don't hesitate to get in touch</p>
