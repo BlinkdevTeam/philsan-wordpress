@@ -1213,6 +1213,10 @@ video {
   gap: 6px;
 }
 
+.gap-\[8px\] {
+  gap: 8px;
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -1763,6 +1767,11 @@ video {
 .py-\[35px\] {
   padding-top: 35px;
   padding-bottom: 35px;
+}
+
+.px-\[30px\] {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .pb-8 {
