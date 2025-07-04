@@ -364,13 +364,13 @@ while (have_posts()) {
                         <img src="https://philsan.org/wp-content/uploads/2025/06/PHILSAN_LOGO.png" alt="">
                     </div>
                     <div class="pt-[5px]">
-                        <p class="text-[14px] md:text-[16px] w-max">Ever growing and innovative, PHILSAN undoubtedly plays a key role in propelling animal nutrition in the Philippines into the mainstream of global development and advances.</p>
+                        <p class="text-[14px] md:text-[16px]">Ever growing and innovative, PHILSAN undoubtedly plays a key role in propelling animal nutrition in the Philippines into the mainstream of global development and advances.</p>
                     </div>
                 </div>
             </div>
             <div class="w-[100%] md:w-[50%] bg-[#1F773A] py-[35px] md:py-[50px] px-[30px] md:px-[50px] rounded-bl-[80px] text-[#ffffff]">
-                <div class="w-[100%] md:w-[50%] mr-[auto]">
-                    <h6 class="text-[28px] md:text-[32px] font-bold">Contact Us</h6>
+                <div class="w-[100%] mr-[auto]">
+                    <h6 class="text-[24px] md:text-[32px] font-bold">Contact Us</h6>
                     <div>
                         <p class="text-[14px] md:text-[16px]">To learn more don't hesitate to get in touch</p>
                         <ul class="flex flex-col pt-[10px] pl-[10px] gap-[5px]">
