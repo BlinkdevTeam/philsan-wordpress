@@ -442,7 +442,7 @@ while (have_posts()) {
                         <img id="modalImage-mobile" class="w-full h-full object-cover" src="" alt="">
                     </div> -->
                     <div class="w-[30%] md:w-[100px] h-[100px] overflow-hidden bg-gradient-to-b from-white via-white to-[#CBF9B6] relative rounded-bl-[20px] rounded-tr-[20px]">
-                        <img id="modalImage-mobile" class="w-full h-full object-cover" src="" alt="">
+                        <img id="modalImage" class="w-full h-full object-cover" src="" alt="">
                     </div>
                     <div class="w-[70%] md:w-[100%]">
                         <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
