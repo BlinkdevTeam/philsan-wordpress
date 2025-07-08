@@ -138,6 +138,7 @@ while (have_posts()) {
                             </div>
                         <?php endif; ?>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         <?php endif; ?>
