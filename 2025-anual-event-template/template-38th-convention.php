@@ -239,7 +239,7 @@ while (have_posts()) {
                 <div class="flex flex-col gap-[10px]">
                     <?php if (have_rows('sponsor_container_description', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_container_description', $page->ID)) : the_row(); ?>
-                            <p class="text-center text-[14px] md:text-[16px] w-[100%] md:w-[70%] lg:w-[50%]"><?php echo esc_html(get_sub_field('description')); ?></p>
+                            <p class="text-center text-[14px] md:text-[16px] w-[100%] md:w-[70%] lg:w-[50%] mx-auto"><?php echo esc_html(get_sub_field('description')); ?></p>
                         <?php endwhile; ?>
                     <?php endif; ?> 
                 </div>
