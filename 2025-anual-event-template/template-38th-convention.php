@@ -108,19 +108,19 @@ while (have_posts()) {
                     $gallery = get_field('about_image_group', $page->ID); 
                 ?>
 
-                <?php if ($gallery) : ?>
+                <!-- <?php //if ($gallery) : ?>
                     <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
-                        <?php foreach ($gallery as $image) : ?>
+                        <?php //foreach ($gallery as $image) : ?>
                             <div class="shadow">
                                 <img 
-                                    src="<?php echo esc_url($image['url']); ?>" 
-                                    alt="<?php echo esc_attr($image['alt']); ?>" 
+                                    src="<?php //echo esc_url($image['url']); ?>" 
+                                    alt="<?php //echo esc_attr($image['alt']); ?>" 
                                     class="w-full h-auto object-cover rounded-xl"
                                 />
                             </div>
-                        <?php endforeach; ?>
+                        <?php //endforeach; ?>
                     </div>
-                <?php endif; ?>
+                <?php //endif; ?> -->
 
                 <?php if ($gallery) : ?>
                     <div class="swiper aboutSwiper">
@@ -135,7 +135,6 @@ while (have_posts()) {
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <div class="swiper-pagination mt-4"></div>
                     </div>
                 <?php endif; ?>
 
