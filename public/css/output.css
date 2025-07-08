@@ -2483,6 +2483,10 @@ body.modal-open {
     padding-top: 200px;
   }
 
+  .md\:pt-\[70px\] {
+    padding-top: 70px;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;

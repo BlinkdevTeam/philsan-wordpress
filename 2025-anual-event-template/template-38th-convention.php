@@ -102,7 +102,7 @@ while (have_posts()) {
                 </div>
             </div>
 
-            <div class="hidden md:block">
+            <div class="hidden md:block pt-[20px]">
                 <?php 
                     // Get the gallery array from the specific page
                     $gallery = get_field('about_image_group', $page->ID); 
