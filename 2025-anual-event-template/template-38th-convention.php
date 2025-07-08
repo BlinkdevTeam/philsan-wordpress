@@ -121,6 +121,28 @@ while (have_posts()) {
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
+
+                <div class="swiper aboutSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide md:pt-[100px]">
+                            
+                            <?php if ($gallery) : ?>
+                                <div class="about-gallery flex justify-between mt-[20px] gap-[20px]">
+                                    <?php foreach ($gallery as $image) : ?>
+                                        <div class="shadow">
+                                            <img 
+                                                src="<?php echo esc_url($image['url']); ?>" 
+                                                alt="<?php echo esc_attr($image['alt']); ?>" 
+                                                class="w-full h-auto object-cover rounded-xl"
+                                            />
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         <?php endif; ?>
     </div>
