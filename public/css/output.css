@@ -777,10 +777,6 @@ video {
   margin-top: 5px;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .block {
   display: block;
 }
@@ -2198,7 +2194,6 @@ body {
 
 .swiper {
   width: 100%;
-  max-width: 1200px;
   height: auto;
   margin: 0 auto;
 }
@@ -2208,7 +2203,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   border-radius: 8px;
   text-align: center;
 }
@@ -2352,16 +2346,16 @@ body.modal-open {
     width: 65%;
   }
 
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .md\:w-\[74\.6\%\] {
     width: 74.6%;
   }
 
   .md\:w-\[90\%\] {
     width: 90%;
-  }
-
-  .md\:w-\[70\%\] {
-    width: 70%;
   }
 
   .md\:grid-cols-2 {
