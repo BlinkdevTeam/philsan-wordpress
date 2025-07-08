@@ -431,14 +431,17 @@ while (have_posts()) {
     <div class="relative w-[90%] sm:w-[640px] lg:w-[980px]">
         <!-- <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button> -->
         <div class="flex flex-col md:flex-row items-center w-[100%] mx-auto">
-            <div class="hidden lg:block w-[100%] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-[50px]">
+            <!-- <div class="hidden lg:block w-[100%] pt-[20px] bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-[50px]">
                 <div class="w-[90%] ml-[auto]">
                     <img id="modalImage" class="w-full h-auto" src="" alt="">
                 </div>
-            </div>
+            </div> -->
             <div class="bg-[#1F773A] w-[100%] flex-col gap-[10px] p-[35px] md:p-[50px] rounded-bl-[80px] lg:rounded-bl-[0px] rounded-tr-[80px] lg:rounded-tr-[30px] rounded-br-[0px] lg:rounded-br-[30px] text-[#ffffff]">
                 <div class="flex gap-[20px]">
-                    <div class="block lg:hidden w-[30%] md:w-[100px] h-[100px] overflow-hidden bg-gradient-to-b from-white via-white to-[#CBF9B6] relative rounded-bl-[20px] rounded-tr-[20px]">
+                    <!-- <div class="block lg:hidden w-[30%] md:w-[100px] h-[100px] overflow-hidden bg-gradient-to-b from-white via-white to-[#CBF9B6] relative rounded-bl-[20px] rounded-tr-[20px]">
+                        <img id="modalImage-mobile" class="w-full h-full object-cover" src="" alt="">
+                    </div> -->
+                    <div class="w-[30%] md:w-[100px] h-[100px] overflow-hidden bg-gradient-to-b from-white via-white to-[#CBF9B6] relative rounded-bl-[20px] rounded-tr-[20px]">
                         <img id="modalImage-mobile" class="w-full h-full object-cover" src="" alt="">
                     </div>
                     <div class="w-[70%] md:w-[100%]">
