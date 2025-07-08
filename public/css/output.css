@@ -2607,6 +2607,10 @@ body.modal-open {
     border-top-right-radius: 30px;
   }
 
+  .lg\:rounded-bl-\[30px\] {
+    border-bottom-left-radius: 30px;
+  }
+
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
