@@ -428,7 +428,7 @@ while (have_posts()) {
 </div>
 
 <!-- 🔄 Reusable Modal -->
-<div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-white/50 flex items-center justify-center">
+<div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-white/50 flex items-center justify-center overflow-y-auto">
     <div class="relative w-[90%] sm:w-[640px] lg:w-[980px]">
         <!-- <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button> -->
         <div class="flex flex-col md:flex-row items-center w-[100%] mx-auto">
