@@ -182,47 +182,48 @@ while (have_posts()) {
                             <p class="text-center font-bold text-[24px] md:text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
-                                    <?php while (have_rows('speaker')) : the_row(); 
-                                        
-                                        $description = '';
+    <?php while (have_rows('speaker')) : the_row(); 
+        
+        $description = '';
 
-                                        if (have_rows('speaker_description')) {
-                                            while (have_rows('speaker_description')) {
-                                                the_row();
-                                                $description .= get_sub_field('description') . '<br>'; // your original intent
-                                            }
-                                        }
-                                    ?>
-                                        <div 
-                                            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
-                                            data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
-                                            data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
-                                            data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
-                                            data-desc="<?php echo htmlspecialchars($description, ENT_QUOTES); ?>"
-                                        >
+        if (have_rows('speaker_description')) {
+            while (have_rows('speaker_description')) {
+                the_row();
+                $description .= get_sub_field('description') . '<br>';
+            }
+        }
+    ?>
+        <div 
+            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
+            data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
+            data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
+            data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
+            data-desc="<?php echo htmlspecialchars($description, ENT_QUOTES); ?>"
+        >
 
-                                            <!-- Left / Top Panel: Speaker Image Wrapper -->
-                                            <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
-                                                <div class="absolute bottom-0 right-0 w-full h-full">
-                                                    <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
-                                                </div>
-                                            </div>
+            <!-- Left / Top Panel: Speaker Image Wrapper -->
+            <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
+                <div class="absolute bottom-0 right-0 w-full h-full">
+                    <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
+                </div>
+            </div>
 
-                                            <!-- Right / Bottom Panel: Speaker Info -->
-                                            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white transition-all duration-300 ease-in-out">
-                                                <p class="text-center text-[18px] lg:text-[22px] font-bold">
-                                                    <?php echo esc_html(get_sub_field('speaker_name')); ?>
-                                                </p>
-                                                <div class="w-full">
-                                                    <p class="text-center font-light text-[12px] lg:text-[16px]">
-                                                        <?php echo esc_html(get_sub_field('speaker_title')); ?>
-                                                    </p>
-                                                </div>
-                                            </div>
+            <!-- Right / Bottom Panel: Speaker Info -->
+            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white transition-all duration-300 ease-in-out">
+                <p class="text-center text-[18px] lg:text-[22px] font-bold">
+                    <?php echo esc_html(get_sub_field('speaker_name')); ?>
+                </p>
+                <div class="w-full">
+                    <p class="text-center font-light text-[12px] lg:text-[16px]">
+                        <?php echo esc_html(get_sub_field('speaker_title')); ?>
+                    </p>
+                </div>
+            </div>
 
-                                        </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
+
 
                             </div>
                         </div>
