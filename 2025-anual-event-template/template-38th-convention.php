@@ -92,7 +92,7 @@ while (have_posts()) {
                 <?php endif; ?>
                 <div class="flex flex-col justify-between w-[100%] md:gap-[20px]">
                     <div class="flex flex-rpw md:flex-col md:shadow items-center justify-center gap-[5px] text-[#000000] md:text-[#ffffff] text-[16px] md:text-[32px] md:bg-[#EDB221] font-bold h-[50%] w-[100%] rounded-lg">
-                        <p>+15</p>
+                        <p>+16</p>
                         <p>Speakers</p>
                     </div>
                     <div class="flex flex-rpw md:flex-col md:shadow items-center justify-center gap-[5px] text-[#000000] md:text-[#ffffff] text-[16px] md:text-[32px] md:bg-[#1F773A] font-bold h-[50%] w-[100%] rounded-lg">
