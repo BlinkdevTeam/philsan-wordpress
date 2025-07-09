@@ -185,11 +185,11 @@ while (have_posts()) {
                                     <?php while (have_rows('speaker')) : the_row(); 
                                         
                                         $description = '';
-                                        
+
                                         if (have_rows('speaker_description')) {
                                             while (have_rows('speaker_description')) {
                                                 the_row();
-                                                $description .= get_sub_field('description') . '<br>'; // or add <br> if you want HTML breaks
+                                                $description .= get_sub_field('description') . '<br>'; // your original intent
                                             }
                                         }
                                     ?>
@@ -198,9 +198,9 @@ while (have_posts()) {
                                             data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
                                             data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
                                             data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
-                                            data-desc="<?php echo esc_attr($description); ?>"
+                                            data-desc="<?php echo htmlspecialchars($description, ENT_QUOTES); ?>"
                                         >
-    
+
                                             <!-- Left / Top Panel: Speaker Image Wrapper -->
                                             <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
                                                 <div class="absolute bottom-0 right-0 w-full h-full">
@@ -221,9 +221,9 @@ while (have_posts()) {
                                             </div>
 
                                         </div>
-
                                     <?php endwhile; ?>
-                                <?php endif; ?> 
+                                <?php endif; ?>
+
                             </div>
                         </div>
                     <?php endwhile; ?>

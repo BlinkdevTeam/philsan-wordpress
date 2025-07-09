@@ -1308,10 +1308,6 @@ video {
   border-bottom-left-radius: 8px;
 }
 
-.rounded-br-\[0px\] {
-  border-bottom-right-radius: 0px;
-}
-
 .rounded-br-\[30px\] {
   border-bottom-right-radius: 30px;
 }
@@ -2595,20 +2591,12 @@ body.modal-open {
     gap: 0px;
   }
 
-  .lg\:rounded-bl-\[0px\] {
-    border-bottom-left-radius: 0px;
-  }
-
-  .lg\:rounded-br-\[30px\] {
-    border-bottom-right-radius: 30px;
+  .lg\:rounded-bl-\[30px\] {
+    border-bottom-left-radius: 30px;
   }
 
   .lg\:rounded-tr-\[30px\] {
     border-top-right-radius: 30px;
-  }
-
-  .lg\:rounded-bl-\[30px\] {
-    border-bottom-left-radius: 30px;
   }
 
   .lg\:px-24 {
