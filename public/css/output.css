@@ -668,10 +668,6 @@ video {
   top: 10px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .z-0 {
   z-index: 0;
 }
@@ -715,11 +711,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-\[50px\] {
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .-mt-8 {
@@ -1244,10 +1235,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1266,10 +1253,6 @@ video {
 
 .rounded-\[20px\] {
   border-radius: 20px;
-}
-
-.rounded-\[50px\] {
-  border-radius: 50px;
 }
 
 .rounded-\[8px\] {
@@ -1488,10 +1471,6 @@ video {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-white\/60 {
-  background-color: rgb(255 255 255 / 0.6);
 }
 
 .bg-opacity-50 {
@@ -1759,11 +1738,6 @@ video {
 .py-\[80px\] {
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pb-8 {
@@ -2208,6 +2182,7 @@ video {
 
 body {
   margin: 0;
+  overflow: scroll;
 }
 
 .swiper {
@@ -2376,10 +2351,6 @@ body.modal-open {
     width: 90%;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2440,10 +2411,6 @@ body.modal-open {
 
   .md\:p-\[50px\] {
     padding: 50px;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
   }
 
   .md\:px-20 {

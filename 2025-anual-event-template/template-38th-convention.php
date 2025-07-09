@@ -427,32 +427,28 @@ while (have_posts()) {
     </div>
 </div>
 
-<!-- 🧊 Modal Overlay Wrapper (does not block body scroll) -->
-<div id="dynamicModal" class="absolute top-0 left-0 right-0 z-50 hidden bg-white/60 w-full min-h-screen flex justify-center py-10 px-4 overflow-y-auto">
-  <div class="bg-[#1F773A] w-full max-w-[980px] rounded-bl-[80px] lg:rounded-bl-[30px] rounded-tr-[80px] lg:rounded-tr-[30px] text-white p-6 md:p-10">
-
-    <!-- Header Row -->
-    <div class="flex gap-[20px]">
-      <!-- Speaker Image -->
-      <div class="w-[30%] md:w-[100px] h-[100px] overflow-hidden bg-gradient-to-b from-white via-white to-[#CBF9B6] rounded-bl-[20px] rounded-tr-[20px]">
-        <img id="modalImage" class="w-full h-full object-cover" src="" alt="">
-      </div>
-
-      <!-- Speaker Name & Title -->
-      <div class="w-[70%] md:w-full">
-        <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
-        <p id="modalContent" class="text-[#ffedc0] text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
-      </div>
+<!-- 🔄 Reusable Modal -->
+<div id="dynamicModal" class="fixed inset-0 z-50 hidden bg-white/50 flex items-center justify-center">
+    <div class="relative w-[90%] sm:w-[640px] lg:w-[980px]">
+        <!-- <button id="closeModal" class="absolute flex justify-center items-center w-[50px] h-[50px] bg-[#ffffff] text-[38px]">&times;</button> -->
+        <div class="flex flex-col md:flex-row items-center w-[100%] mx-auto">
+            <div class="bg-[#1F773A] w-[100%] flex-col gap-[10px] p-[35px] md:p-[50px] rounded-bl-[80px] lg:rounded-bl-[30px] rounded-tr-[80px] lg:rounded-tr-[30px] text-[#ffffff]">
+                <div class="flex gap-[20px]">
+                    <div class="w-[30%] md:w-[100px] h-[100px] overflow-hidden bg-gradient-to-b from-white via-white to-[#CBF9B6] relative rounded-bl-[20px] rounded-tr-[20px]">
+                        <img id="modalImage" class="w-full h-full object-cover" src="" alt="">
+                    </div>
+                    <div class="w-[70%] md:w-[100%]">
+                        <h2 id="modalTitle" class="text-[18px] lg:text-[28px] font-bold">Title Here</h2>
+                        <p id="modalContent" class="text-[#ffedc0] text-[14px] lg:text-[18px] font-bold">Content goes here...</p>
+                    </div>
+                </div>
+                <div class="h-[100%] max-h-[200px] overflow-y-scroll mt-[20px] scrollbar-custom">
+                    <p id="modalDescription" class="text-[12px] md:text-[14px] lg:text-[16px] font-[200] scrollbar-custom pr-[20px]">Description Here</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Description Scrollable Area -->
-    <div class="max-h-[200px] overflow-y-auto mt-[20px] pr-[10px] scrollbar-custom">
-      <p id="modalDescription" class="text-[12px] md:text-[14px] lg:text-[16px] font-[200]">Description Here</p>
-    </div>
-
-  </div>
 </div>
-
 
 
 <!-- <script>
