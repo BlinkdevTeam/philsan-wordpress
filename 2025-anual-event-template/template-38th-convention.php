@@ -61,11 +61,11 @@ while (have_posts()) {
                         <div class="flex items-center justify-center gap-[20px]">
                             <div class="w-max">
                                 <div>
-                                    <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]"viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                        <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                        <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                        <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                    <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M63 33C63 49.5685 49.5685 63 33 63L33 53C33 41.9543 41.9543 33 53 33L63 33Z" fill="#1F773A"/>
+                                        <path d="M-5.24537e-06 58C-2.34843e-06 74.5685 13.4315 88 30 88L30 53C30 41.9543 21.0457 33 9.99999 33L-9.61651e-06 33L-5.24537e-06 58Z" fill="#EDB221"/>
+                                        <path d="M63 30C63 13.4315 49.5685 2.34843e-06 33 5.24537e-06L33 10C33 21.0457 41.9543 30 53 30L63 30Z" fill="#1F773A"/>
+                                        <path d="M5.24537e-06 30C2.34843e-06 13.4315 13.4315 -2.34843e-06 30 -5.24537e-06L30 9.99999C30 21.0457 21.0457 30 10 30L5.24537e-06 30Z" fill="#1F773A"/>
                                     </svg>
                                 </div>
                             </div>
@@ -153,10 +153,10 @@ while (have_posts()) {
                         <div class="flex items-center justify-center gap-[20px]">
                             <div class="w-max">
                                 <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                    <path d="M63 33C63 49.5685 49.5685 63 33 63L33 53C33 41.9543 41.9543 33 53 33L63 33Z" fill="#1F773A"/>
+                                    <path d="M-5.24537e-06 58C-2.34843e-06 74.5685 13.4315 88 30 88L30 53C30 41.9543 21.0457 33 9.99999 33L-9.61651e-06 33L-5.24537e-06 58Z" fill="#EDB221"/>
+                                    <path d="M63 30C63 13.4315 49.5685 2.34843e-06 33 5.24537e-06L33 10C33 21.0457 41.9543 30 53 30L63 30Z" fill="#1F773A"/>
+                                    <path d="M5.24537e-06 30C2.34843e-06 13.4315 13.4315 -2.34843e-06 30 -5.24537e-06L30 9.99999C30 21.0457 21.0457 30 10 30L5.24537e-06 30Z" fill="#1F773A"/>
                                 </svg>
                             </div>
                             <h6 class="font-bold text-[#1F773A] text-[28px] md:text-[40px]"><?php echo get_field("speaker_container_title", $page->ID); ?></h6>
@@ -182,47 +182,47 @@ while (have_posts()) {
                             <p class="text-center font-bold text-[24px] md:text-[32px]"><?php echo esc_html(get_sub_field('speaker_group_title')); ?></p>
                             <div class="flex justify-center gap-[40px] flex-wrap pt-[50px]">
                                 <?php if (have_rows('speaker')) : ?>
-    <?php while (have_rows('speaker')) : the_row(); 
-        
-        $description = '';
+                                    <?php while (have_rows('speaker')) : the_row(); 
+                                        
+                                        $description = '';
 
-        if (have_rows('speaker_description')) {
-            while (have_rows('speaker_description')) {
-                the_row();
-                $description .= get_sub_field('description');
-            }
-        }
-    ?>
-        <div 
-            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
-            data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
-            data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
-            data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
-            data-desc="<?php echo htmlspecialchars($description, ENT_QUOTES); ?>"
-        >
+                                        if (have_rows('speaker_description')) {
+                                            while (have_rows('speaker_description')) {
+                                                the_row();
+                                                $description .= get_sub_field('description');
+                                            }
+                                        }
+                                    ?>
+                                        <div 
+                                            class="speaker-item relative flex flex-row md:flex-col h-[150px] md:h-[auto] items-end md:items-center justify-center w-full sm:w-[280px] lg:w-[350px] group rounded-bl-[5px] md:rounded-bl-[0px] rounded-br-[50px] overflow-hidden"
+                                            data-image="<?php echo esc_attr(get_sub_field('speaker_image')); ?>"
+                                            data-name="<?php echo esc_attr(get_sub_field('speaker_name')); ?>"
+                                            data-title="<?php echo esc_attr(get_sub_field('speaker_title')); ?>"
+                                            data-desc="<?php echo htmlspecialchars($description, ENT_QUOTES); ?>"
+                                        >
 
-            <!-- Left / Top Panel: Speaker Image Wrapper -->
-            <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
-                <div class="absolute bottom-0 right-0 w-full h-full">
-                    <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
-                </div>
-            </div>
+                                            <!-- Left / Top Panel: Speaker Image Wrapper -->
+                                            <div class="relative pl-5 w-[30%] md:w-[100%] h-[100%] md:h-[400px] bg-gradient-to-b from-white via-white to-[#CBF9B6] overflow-hidden">
+                                                <div class="absolute bottom-0 right-0 w-full h-full">
+                                                    <img class="w-full h-full object-cover" src="<?php echo esc_url(get_sub_field('speaker_image')); ?>" alt="<?php the_title(); ?>">
+                                                </div>
+                                            </div>
 
-            <!-- Right / Bottom Panel: Speaker Info -->
-            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white transition-all duration-300 ease-in-out">
-                <p class="text-center text-[18px] lg:text-[22px] font-bold">
-                    <?php echo esc_html(get_sub_field('speaker_name')); ?>
-                </p>
-                <div class="w-full">
-                    <p class="text-center font-light text-[12px] lg:text-[16px]">
-                        <?php echo esc_html(get_sub_field('speaker_title')); ?>
-                    </p>
-                </div>
-            </div>
+                                            <!-- Right / Bottom Panel: Speaker Info -->
+                                            <div class="flex-1 w-full flex flex-col items-center h-[100%] md:h-auto justify-center gap-2.5 py-5 px-5 bg-[#1F773A] group-hover:bg-[#EDB221] text-white transition-all duration-300 ease-in-out">
+                                                <p class="text-center text-[18px] lg:text-[22px] font-bold">
+                                                    <?php echo esc_html(get_sub_field('speaker_name')); ?>
+                                                </p>
+                                                <div class="w-full">
+                                                    <p class="text-center font-light text-[12px] lg:text-[16px]">
+                                                        <?php echo esc_html(get_sub_field('speaker_title')); ?>
+                                                    </p>
+                                                </div>
+                                            </div>
 
-        </div>
-    <?php endwhile; ?>
-<?php endif; ?>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
 
 
                             </div>
@@ -243,10 +243,10 @@ while (have_posts()) {
                         <div class="flex items-center justify-center gap-[20px]">
                             <div class="w-max">
                                 <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                    <path d="M63 33C63 49.5685 49.5685 63 33 63L33 53C33 41.9543 41.9543 33 53 33L63 33Z" fill="#1F773A"/>
+                                    <path d="M-5.24537e-06 58C-2.34843e-06 74.5685 13.4315 88 30 88L30 53C30 41.9543 21.0457 33 9.99999 33L-9.61651e-06 33L-5.24537e-06 58Z" fill="#EDB221"/>
+                                    <path d="M63 30C63 13.4315 49.5685 2.34843e-06 33 5.24537e-06L33 10C33 21.0457 41.9543 30 53 30L63 30Z" fill="#1F773A"/>
+                                    <path d="M5.24537e-06 30C2.34843e-06 13.4315 13.4315 -2.34843e-06 30 -5.24537e-06L30 9.99999C30 21.0457 21.0457 30 10 30L5.24537e-06 30Z" fill="#1F773A"/>
                                 </svg>
                             </div>
                             <h6 class="font-bold text-[#1F773A] text-[28px] md:text-[40px]"><?php echo get_field("sponsor_container_title", $page->ID); ?></h6>
@@ -311,10 +311,10 @@ while (have_posts()) {
                         <div class="flex items-center justify-center gap-[20px]">
                             <div class="w-max">
                                 <svg class="animate-flipY1 transition-transform w-[33px] h-[58px]" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 55C0 38.4315 13.4315 25 30 25V35C30 46.0457 21.0457 55 10 55H0Z" fill="#1F773A"/>
-                                    <path d="M63 30C63 13.4315 49.5685 0 33 0V35C33 46.0457 41.9543 55 53 55H63V30Z" fill="#EDB221"/>
-                                    <path d="M0 58C0 74.5685 13.4315 88 30 88V78C30 66.9543 21.0457 58 10 58H0Z" fill="#1F773A"/>
-                                    <path d="M63 58C63 74.5685 49.5685 88 33 88V78C33 66.9543 41.9543 58 53 58H63Z" fill="#1F773A"/>
+                                    <path d="M63 33C63 49.5685 49.5685 63 33 63L33 53C33 41.9543 41.9543 33 53 33L63 33Z" fill="#1F773A"/>
+                                    <path d="M-5.24537e-06 58C-2.34843e-06 74.5685 13.4315 88 30 88L30 53C30 41.9543 21.0457 33 9.99999 33L-9.61651e-06 33L-5.24537e-06 58Z" fill="#EDB221"/>
+                                    <path d="M63 30C63 13.4315 49.5685 2.34843e-06 33 5.24537e-06L33 10C33 21.0457 41.9543 30 53 30L63 30Z" fill="#1F773A"/>
+                                    <path d="M5.24537e-06 30C2.34843e-06 13.4315 13.4315 -2.34843e-06 30 -5.24537e-06L30 9.99999C30 21.0457 21.0457 30 10 30L5.24537e-06 30Z" fill="#1F773A"/>
                                 </svg>
                             </div>
                             <h6 class="font-bold text-[#1F773A] text-[28px] md:text-[40px]"><?php echo get_field("program_title", $page->ID); ?></h6>
