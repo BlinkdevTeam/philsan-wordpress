@@ -2153,12 +2153,26 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .ease-in-out {
@@ -2232,6 +2246,10 @@ body.modal-open {
 .hover\:bg-\[\#EDB221\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[linear-gradient\(to_top\2c \#ffffff_0\%\2c \#ffffff_60\%\2c \#CBF9B6_100\%\)\]:hover {
+  background-image: linear-gradient(to top,#ffffff 0%,#ffffff 60%,#CBF9B6 100%);
 }
 
 .hover\:text-gray-800:hover {

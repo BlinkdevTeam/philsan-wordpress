@@ -9,7 +9,11 @@ while (have_posts()) {
     $page = get_page_by_title('38th Annual Convention');
 ?>
 
-<div class="relative hero-section flex items-center bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
+<div class="relative hero-section flex items-center 
+    bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] 
+    hover:bg-[linear-gradient(to_top,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] 
+    transition-colors duration-700 ease-in-out overflow-hidden"
+>
     <div class="relative z-[1] flex flex-col md:flex-row gap-[50px] w-[90%] max-w-[1280px] mx-auto py-[120px] lg:py-[0px] pt-[60px]">
         <div class="hidden md:flex flex-col w-[50%] gap-[40px]">
             <img class="w-[80px] ml-[-15px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226390.png" alt="">
