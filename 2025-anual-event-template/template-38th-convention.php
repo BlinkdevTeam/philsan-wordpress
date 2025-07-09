@@ -43,7 +43,17 @@ while (have_posts()) {
             <?php 
                 get_template_part('2025-anual-event-template/components/count-down'); 
             ?>  
-            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[18px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
+            <a href="https://philsan.org/38th-annual-convention/registration/"
+                class="font-bold w-max
+                    bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                    bg-[length:200%_100%] bg-[position:left_center]
+                    hover:bg-[position:right_center]
+                    transition-[background-position] duration-700 ease-in-out
+                    text-[#ffffff] text-[18px]
+                    py-[10px] px-[50px]
+                    rounded-tl-[40px] rounded-br-[40px]">
+                Register
+            </a>
         </div>
         <div class="relative w-[100%] md:w-[50%] pb-[0px] md:pb-[50px]">
             <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
