@@ -22,12 +22,13 @@ while (have_posts()) {
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
             <a href="https://philsan.org/38th-annual-convention/registration/"
-                class="font-bold w-max 
-                        bg-gradient-to-r from-[#1F773A] to-[#EDB221] 
-                        hover:bg-gradient-to-l 
-                        transition-all duration-500 ease-in-out
-                        text-[#ffffff] text-[24px] lg:text-[38px] 
-                        py-[10px] px-[50px] 
+                class="font-bold w-max
+                        bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                        bg-[length:200%_100%] bg-[position:left_center]
+                        hover:bg-[position:right_center]
+                        transition-[background-position] duration-700 ease-in-out
+                        text-white text-[24px] lg:text-[38px]
+                        py-[10px] px-[50px]
                         rounded-tl-[40px] rounded-br-[40px]">
                 Register
             </a>

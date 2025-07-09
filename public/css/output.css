@@ -1549,8 +1549,16 @@ video {
   background-size: cover;
 }
 
+.bg-\[length\:200\%_100\%\] {
+  background-size: 200% 100%;
+}
+
 .bg-center {
   background-position: center;
+}
+
+.bg-\[position\:left_center\] {
+  background-position: left center;
 }
 
 .bg-no-repeat {
@@ -2159,6 +2167,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-\[background-position\] {
+  transition-property: background-position;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -2254,6 +2268,10 @@ body.modal-open {
 
 .hover\:bg-gradient-to-l:hover {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.hover\:bg-\[position\:right_center\]:hover {
+  background-position: right center;
 }
 
 .hover\:text-gray-800:hover {
