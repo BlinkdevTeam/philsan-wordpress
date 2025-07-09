@@ -7,23 +7,16 @@ class SpeakerModal {
     openModal({ title, image, content, description }) {
         this.modal.querySelector('#modalTitle').textContent = title;
         this.modal.querySelector('#modalImage').src = image;
-        //this.modal.querySelector('#modalImage-mobile').src = image;
         this.modal.querySelector('#modalContent').textContent = content;
         this.modal.querySelector('#modalDescription').textContent = description;
         this.modal.classList.remove('hidden');
-        document.body.classList.add('modal-open'); // ⛔ Prevent scroll
     }
 
     closeModal() {
         this.modal.classList.add('hidden');
-        document.body.classList.remove('modal-open'); // ⛔ Remove Prevent scroll
     }
 
     handleModal() {
-        // Close button
-        // document.getElementById("closeModal").addEventListener('click', () => {
-        //     this.closeModal();
-        // });
 
         // Click on backdrop
         this.modal.addEventListener('click', (e) => {
