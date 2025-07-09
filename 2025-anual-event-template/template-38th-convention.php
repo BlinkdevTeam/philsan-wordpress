@@ -6,7 +6,7 @@ get_header();
 while (have_posts()) {
     the_post();
 
-    $page = get_page_by_title('38th convention Test Page');
+    $page = get_page_by_title('38th Annual Convention');
 ?>
 
 <div class="relative hero-section flex items-center bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
@@ -21,7 +21,7 @@ while (have_posts()) {
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[24px] lg:text-[38px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="">Register</a>
+            <a class="font-bold w-max bg-gradient-to-r from-[#1F773A] to-[#EDB221] text-[#ffffff] text-[24px] lg:text-[38px] py-[10px] px-[50px] rounded-tl-[40px] rounded-br-[40px]" href="https://philsan.org/38th-annual-convention/registration/">Register</a>
         </div>
         <div class="flex flex-col items-center gap-[20px] md:hidden">
             <img class="w-[70%]" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="">
