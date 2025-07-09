@@ -6,7 +6,7 @@ get_header();
 while (have_posts()) {
     the_post();
 
-    $page = get_page_by_title('38th Annual Convention');
+    $page = get_page_by_title('38th convention Test Page');
 ?>
 
 <div class="relative hero-section flex items-center bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
