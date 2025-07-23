@@ -10,19 +10,19 @@
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">
                 <p class="font-fraunces font-bold text-[#ffffff]">Gold</p>
             </div>
-            <img class="w-[100%] md:w-[100%]" src="https://philsan.org/wp-content/uploads/2025/07/GOLD-scaled.png" alt="">
+            <img class="w-[100%] md:w-[100%]" src="https://philsan.org/wp-content/uploads/2025/07/GOLD-1-scaled.png" alt="">
         </div>
         <div class="swiper-slide p-[20px] event-sponsor-1">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">
                 <p class="font-fraunces font-bold text-[#ffffff]">Event Sponsors</p>
             </div>
-            <img class="w-[100%] md:w-[100%]" src="https://philsan.org/wp-content/uploads/2025/07/EVENT-SPONSORS-I-scaled.png" alt="">
+            <img class="w-[100%] md:w-[100%]" src="https://philsan.org/wp-content/uploads/2025/07/EVENT-SPONSORS-I-1-scaled.png" alt="">
         </div>
         <div class="swiper-slide p-[20px] event-sponsor-2">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">
                 <p class="font-fraunces font-bold text-[#ffffff]">Event Sponsors</p>
             </div>
-            <img class="w-[100%] md:w-[100%]" src="https://philsan.org/wp-content/uploads/2025/07/EVENT-SPONSORS-II-scaled.png" alt="">
+            <img class="w-[100%] md:w-[100%]" src="https://philsan.org/wp-content/uploads/2025/07/EVENT-SPONSORS-II-1-scaled.png" alt="">
         </div>
         <div class="swiper-slide p-[20px] platinum-sponsor">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">
