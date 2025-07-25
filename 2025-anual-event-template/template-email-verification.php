@@ -123,7 +123,7 @@ get_header();
             }).then(response => {
               if (response.ok) {
                 // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
-                emailjs.send('service_1qkyi2i', 'template_d71x79v', {
+                emailjs.send('service_02hek52', 'template_d71x79v', {
                     email: email,
                     verification_link: "https://philsan.org/38th-annual-convention/complete-registration?t=" + token + email
                 })
