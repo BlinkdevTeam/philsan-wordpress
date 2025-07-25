@@ -91,12 +91,14 @@ get_header();
       })
       .then(response => response.json())
       .then(data => {
-
+          console.log("data", data)
+          
           const matchData = data.find(i => i.email === email);
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
           
           console.log("matchData", matchData)
+
           if(matchData) {
             if (matchData["reg_status"] === "approved") {
               emailExistEl.classList.remove("hidden");
@@ -105,7 +107,7 @@ get_header();
               return;
             } else if (matchData["reg_status"] === "pending") {
               emailExistEl.classList.add("hidden");
-              emailPendingEl.classList.remove("hidden");
+              emailPendingEl.classList.remove("hidden");ß
               spinner.classList.add("hidden");
               return;
             }
