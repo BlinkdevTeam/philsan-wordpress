@@ -14,13 +14,20 @@ $templates_to_hide = [
 ];
 
 $slugs_to_hide = [
-  'login', 'signup', 'register', 'registration-successful',
-  'invalid-email', 'session-expired', 'visit-email', 'complete-registration', '38th-convention-test-page',
+  'login', 
+  'signup', 
+  'register', 
+  'registration-successful',
+  'invalid-email', 
+  'session-expired', 
+  'visit-email', 
+  'complete-registration', 
+  '38th-convention-test-page',
   '38th-annual-convention'
 ];
 
 $post_types_to_check = ['page', '38th-convention'];
-
+ß
 $current_post = get_post();
 $current_id = $current_post->ID ?? 0;
 $current_template = get_page_template_slug();
