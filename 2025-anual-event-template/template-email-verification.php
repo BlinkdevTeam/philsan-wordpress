@@ -91,7 +91,7 @@ get_header();
       })
       .then(response => response.json())
       .then(data => {
-
+          console.log("data", data)
           const matchData = data.find(i => i.email === email);
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
@@ -123,6 +123,8 @@ get_header();
             }).then(response => {
               if (response.ok) {
                 // window.location.href = `/code-verification/?email=${encodeURIComponent(email)}`;
+                console.log("email", email);
+                
                 emailjs.send('service_02hek52', 'template_d71x79v', {
                     email: email,
                     verification_link: "https://philsan.org/38th-annual-convention/complete-registration?t=" + token + email
