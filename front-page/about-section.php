@@ -18,10 +18,8 @@
             <?php if ( !empty($group['items']) && is_array($group['items']) ) : ?>
                 <?php foreach ( $group['items'] as $item ) : ?>
                     <?php 
-                        var_dump($item);
+                        $image = $item['item_image']; // Replace 'image' with your sub field name
                     ?>
-                       
-                    <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
