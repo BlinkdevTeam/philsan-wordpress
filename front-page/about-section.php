@@ -1,97 +1,20 @@
-<?php
-$home_page = get_page_by_title('Home');
-if ( $home_page ) :
-    $page_id = $home_page->ID;
-    $about = get_field('about_section', $page_id);
+<div class="about-section h-[500px] lg:h-[720px]">
+    <?php if ( have_rows('hero_section') ): ?>
+        <?php while ( have_rows('hero_section') ): the_row(); ?>
 
-    if ( $about ) :
-        $title = $about['about_header'];
-        $desc = $about['header_details'];
-        $img = $about['about_image_section'];
-?>
-
-<section class="bg-gray-100 w-full flex flex-col justify-center items-center p-6 rounded-lg shadow mb-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-            <?php if ( $title ) : ?>
-                <h2 class="text-2xl font-semibold mb-4"><?php echo esc_html($title); ?></h2>
+            <?php if ( get_row_layout() == 'hero_item_group' ): ?>
+                <div class="flex space-between h-full w-full relative y-thumbnail">
+                    <div class="container py-[100px] mx-auto z-[2]">
+                        <div class="w-[50%] flex flex-col justify-center h-[100%]">
+                            <h1 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                            <p class="text-[18px] xl:text-[24px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-b from-[rgba(11,83,4,0.3)] to-[rgba(11,83,4,1)] w-full h-full absolute top-0 left-0 z-[1]"></div>
+                    <img class="absolute w-full h-full object-cover" src="<?php echo get_sub_field('hero_image'); ?>" alt="hero-image">
+                </div>
             <?php endif; ?>
-        </div>
 
-        <div class="grid grid-rows-2 gap-6">
-            <div>
-                <?php if ( $desc ) : ?>
-                    <div class="text-gray-700 mb-4"><?php echo wp_kses_post($desc); ?></div>
-                <?php endif; ?>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- First Number Details -->
-                <div>
-                    <?php
-                    if ( have_rows('about_section', $page_id) ) :
-                        while ( have_rows('about_section', $page_id) ) : the_row();
-                            if ( have_rows('first_number_details') ) :
-                                echo '<ul class="space-y-4">';
-                                while ( have_rows('first_number_details') ) : the_row();
-                                    $num = get_sub_field('number');
-                                    $num_detail = get_sub_field('number_details');
-                    ?>
-                                    <li class="bg-white p-4 rounded shadow text-gray-800">
-                                        <?php if ( $num ) : ?>
-                                            <p class="text-lg font-bold"><?php echo esc_html($num); ?></p>
-                                        <?php endif; ?>
-                                        <?php if ( $num_detail ) : ?>
-                                            <p class="text-sm text-gray-600"><?php echo esc_html($num_detail); ?></p>
-                                        <?php endif; ?>
-                                    </li>
-                    <?php
-                                endwhile;
-                                echo '</ul>';
-                            endif;
-                        endwhile;
-                    endif;
-                    ?>
-                </div>
-
-                <!-- Second Number Details -->
-                <div>
-                    <?php
-                    if ( have_rows('about_section', $page_id) ) :
-                        while ( have_rows('about_section', $page_id) ) : the_row();
-                            if ( have_rows('second_number_details') ) :
-                                echo '<ul class="space-y-4">';
-                                while ( have_rows('second_number_details') ) : the_row();
-                                    $num = get_sub_field('number');
-                                    $num_detail = get_sub_field('number_details');
-                    ?>
-                                    <li class="bg-white p-4 rounded shadow text-gray-800">
-                                        <?php if ( $num ) : ?>
-                                            <p class="text-lg font-bold"><?php echo esc_html($num); ?></p>
-                                        <?php endif; ?>
-                                        <?php if ( $num_detail ) : ?>
-                                            <p class="text-sm text-gray-600"><?php echo esc_html($num_detail); ?></p>
-                                        <?php endif; ?>
-                                    </li>
-                    <?php
-                                endwhile;
-                                echo '</ul>';
-                            endif;
-                        endwhile;
-                    endif;
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w-full py-6">
-        <?php if ( $img ) : ?>
-            <img src="<?php echo esc_url($img['url']); ?>" alt="" class="w-full h-auto object-cover">
-        <?php endif; ?>
-    </div>
-</section>
-
-<?php
-    endif;
-endif;
-?>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
