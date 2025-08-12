@@ -1,6 +1,6 @@
 <div class="home-hero-section">
-    <?php if ( have_rows('hero_blocks') ): ?>
-        <?php while ( have_rows('hero_blocks') ): the_row(); ?>
+    <?php if ( have_rows('hero_section') ): ?>
+        <?php while ( have_rows('hero_section') ): the_row(); ?>
 
             <?php if ( get_row_layout() == 'hero_item_group' ): ?>
                 <div class="hero">
