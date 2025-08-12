@@ -9,7 +9,7 @@
             <?php endif; ?>
             <div class="pt-[10px]">
                 <?php if (!empty($group['description'])) : ?>
-                    <p class="text-[34px] font-[600] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
+                    <p class="text-[34px] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
                 <?php endif; ?>
             </div>
             <div class="pt-[40px]">
@@ -21,7 +21,7 @@
         <div class="w-[60%]">
             <div class="w-[25%] image-container">
                 <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
-                    <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt); ?>">
+                    <img class="w-full h-full object-cover" src="<?php echo esc_html($group['item_image']) ?>" alt="<?php echo esc_attr($alt); ?>">
                 </div>
             </div>
         </div>

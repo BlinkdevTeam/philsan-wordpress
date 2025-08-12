@@ -9,7 +9,7 @@
             <?php endif; ?>
             <div class="pt-[10px]">
                 <?php if (!empty($group['description'])) : ?>
-                    <p class="text-[34px] font-[600] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
+                    <p class="text-[34px] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
                 <?php endif; ?>
             </div>
             <div class="pt-[40px]">
