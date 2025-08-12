@@ -2812,4 +2812,8 @@ body.modal-open {
   .xl\:w-\[1280px\] {
     width: 1280px;
   }
+
+  .xl\:text-\[72px\] {
+    font-size: 72px;
+  }
 }
