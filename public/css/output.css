@@ -668,6 +668,10 @@ video {
   top: 10px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -777,6 +781,10 @@ video {
   margin-top: 5px;
 }
 
+.mb-\[100px\] {
+  margin-bottom: 100px;
+}
+
 .block {
   display: block;
 }
@@ -868,6 +876,10 @@ video {
 .h-max {
   height: -moz-max-content;
   height: max-content;
+}
+
+.h-\[500px\] {
+  height: 500px;
 }
 
 .max-h-\[200px\] {
@@ -1505,6 +1517,10 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
 .from-\[\#176524\] {
   --tw-gradient-from: #176524 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(23 101 36 / 0) var(--tw-gradient-to-position);
@@ -1520,6 +1536,12 @@ video {
 .from-white {
   --tw-gradient-from: #fff var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[rgba\(0\2c 0\2c 0\2c 0\.2\)\] {
+  --tw-gradient-from: rgba(0,0,0,0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(0, 0, 0, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1543,6 +1565,10 @@ video {
 
 .to-\[\#EDB221\] {
   --tw-gradient-to: #EDB221 var(--tw-gradient-to-position);
+}
+
+.to-\[rgba\(0\2c 0\2c 0\2c 0\.7\)\] {
+  --tw-gradient-to: rgba(0,0,0,0.7) var(--tw-gradient-to-position);
 }
 
 .bg-\[length\:200\%_100\%\] {
@@ -2376,6 +2402,10 @@ body.modal-open {
     width: 90%;
   }
 
+  .md\:w-\[768px\] {
+    width: 768px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2569,6 +2599,10 @@ body.modal-open {
     display: none;
   }
 
+  .lg\:h-\[650px\] {
+    height: 650px;
+  }
+
   .lg\:w-\[1280px\] {
     width: 1280px;
   }
@@ -2599,6 +2633,10 @@ body.modal-open {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[1024px\] {
+    width: 1024px;
   }
 
   .lg\:flex-row {
