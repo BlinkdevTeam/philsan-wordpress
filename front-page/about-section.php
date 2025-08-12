@@ -19,7 +19,16 @@
                 <?php foreach ( $group['items'] as $item ) : ?>
                     <?php 
                         $image = $item['item_image']; // Replace 'image' with your sub field name
+                        if ( !empty($image) ) :
+                            $image_url = is_array($image) ? $image['url'] : $image;
+                            $alt = is_array($image) && !empty($image['alt']) ? $image['alt'] : get_the_title();
                     ?>
+                        <div class="w-[100%] lg:w-[50%] image-container">
+                            <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt); ?>">
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
