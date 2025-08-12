@@ -2066,6 +2066,10 @@ video {
   font-size: 72px;
 }
 
+.text-\[34px\] {
+  font-size: 34px;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
