@@ -19,13 +19,8 @@
                 <?php foreach ( $group['items'] as $item ) : ?>
                     <?php 
                         var_dump($item);
-                        $image = $item['item_image']; // Replace 'image' with your sub field name
                     ?>
-                        <!-- <div class="w-[100%] lg:w-[50%] image-container">
-                            <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-lg overflow-hidden">
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($alt); ?>">
-                            </div>
-                        </div> -->
+                       
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
