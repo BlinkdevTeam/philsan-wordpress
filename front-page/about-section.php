@@ -14,7 +14,7 @@
             </div>
             <div class="pt-[40px]">
                 <?php if (!empty($group['button_title'])) : ?>
-                    <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[24px] bg-[#FFC200] py-[20px] px-[50px] rounded-tl-2xl rounded-br-2xl"><?php echo esc_html($group['button_title']) ?></a>
+                    <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl"><?php echo esc_html($group['button_title']) ?></a>
                 <?php endif; ?>
             </div>
         </div>
