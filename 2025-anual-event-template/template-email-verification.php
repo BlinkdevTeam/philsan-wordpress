@@ -32,6 +32,8 @@ get_header();
                         />
                         <p class="email-exist hidden">This email is already registered</p>
                         <p class="email-pending hidden">This email already has a pending registration</p>
+                        <p class="email-canceled hidden">This email ahs already been registered but was canceled</p>
+                        <p class="email-canceled hidden">Please check this email and contact <span>philsan.org</span></p>
                     </div>
                     <div class="flex gap-[20px] items-center z-[1] justify-center lg:justify-start">
                         <button id="submit-button" type="submit" class="py-[10px] px-[40px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
@@ -95,8 +97,10 @@ get_header();
           const matchData = data.find(i => i.email === email);
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
+          const emailCanceledEl = document.querySelector(".email-canceled");
           
           console.log("matchData", matchData)
+
           if(matchData) {
             if (matchData["reg_status"] === "approved") {
               emailExistEl.classList.remove("hidden");
@@ -106,6 +110,12 @@ get_header();
             } else if (matchData["reg_status"] === "pending") {
               emailExistEl.classList.add("hidden");
               emailPendingEl.classList.remove("hidden");
+              spinner.classList.add("hidden");
+              return;
+            } else if (matchData["reg_status"] === "canceled") {
+              emailExistEl.classList.add("hidden");
+              emailPendingEl.classList.add("hidden");
+              emailCanceledEl.classList.remove("hidden");
               spinner.classList.add("hidden");
               return;
             }
