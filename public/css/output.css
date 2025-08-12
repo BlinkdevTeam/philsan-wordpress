@@ -2041,6 +2041,10 @@ video {
   font-size: 58px;
 }
 
+.text-\[72px\] {
+  font-size: 72px;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
@@ -2083,6 +2087,10 @@ video {
 
 .leading-none {
   line-height: 1;
+}
+
+.leading-normal {
+  line-height: 1.5;
 }
 
 .text-\[\#000000\] {
@@ -2674,6 +2682,10 @@ body.modal-open {
 
   .lg\:h-\[650px\] {
     height: 650px;
+  }
+
+  .lg\:h-\[720px\] {
+    height: 720px;
   }
 
   .lg\:w-\[1280px\] {

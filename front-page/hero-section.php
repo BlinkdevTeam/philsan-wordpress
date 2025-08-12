@@ -1,12 +1,12 @@
-<div class="home-hero-section h-[500px] lg:h-[650px]">
+<div class="home-hero-section h-[500px] lg:h-[720px]">
     <?php if ( have_rows('hero_section') ): ?>
         <?php while ( have_rows('hero_section') ): the_row(); ?>
 
             <?php if ( get_row_layout() == 'hero_item_group' ): ?>
                 <div class="flex space-between h-full w-full relative y-thumbnail">
                     <div class="w-[80%] py-[100px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto z-[2]">
-                        <div class="w-[50%]">
-                            <h1 class="text-[58px] font-[600] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                        <div class="w-[50%] leading-normal">
+                            <h1 class="text-[72px] font-[600] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[24px] font-[600] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                         </div>
                     </div>
