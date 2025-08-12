@@ -7,12 +7,14 @@
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[24px] font-[600]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
-            <?php if (!empty($group['description'])) : ?>
-                <p class="text-[34px] text-[#1F773A] font-[700] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
-            <?php endif; ?>
-            <div class="pt-[20px]">
+            <div class="pt-[10px]">
+                <?php if (!empty($group['description'])) : ?>
+                    <p class="text-[34px] text-[#1F773A] font-[700] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="pt-[40px]">
                 <?php if (!empty($group['button_title'])) : ?>
-                    <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold bg-[#FFC200] p-[20px] rounded-tl-[80px] rounded-br-[80px]"><?php echo esc_html($group['button_title']) ?></a>
+                    <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[24px] bg-[#FFC200] py-[20px] px-[50px] rounded-tl-2xl rounded-br-2xl"><?php echo esc_html($group['button_title']) ?></a>
                 <?php endif; ?>
             </div>
         </div>
@@ -27,7 +29,7 @@
                                 $alt = is_array($image) && !empty($image['alt']) ? $image['alt'] : get_the_title();
                         ?>
                             <div class="w-[25%] image-container">
-                                <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-xl rounded-br-xl overflow-hidden">
+                                <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                     <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt); ?>">
                                 </div>
                             </div>

@@ -1400,6 +1400,14 @@ video {
   border-top-left-radius: 80px;
 }
 
+.rounded-br-2xl {
+  border-bottom-right-radius: 1rem;
+}
+
+.rounded-tl-2xl {
+  border-top-left-radius: 1rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1972,6 +1980,10 @@ video {
 
 .pt-\[80px\] {
   padding-top: 80px;
+}
+
+.pt-\[40px\] {
+  padding-top: 40px;
 }
 
 .text-center {
