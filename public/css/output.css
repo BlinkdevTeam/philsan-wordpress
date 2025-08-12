@@ -1493,6 +1493,10 @@ video {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-\[1F773A\] {
+  background-color: 1F773A;
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -2204,6 +2208,10 @@ video {
 .text-\[\#ffc200\] {
   --tw-text-opacity: 1;
   color: rgb(255 194 0 / var(--tw-text-opacity, 1));
+}
+
+.text-\[1F773A\] {
+  color: 1F773A;
 }
 
 .underline {
