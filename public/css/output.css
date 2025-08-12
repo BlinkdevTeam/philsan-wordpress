@@ -2813,6 +2813,10 @@ body.modal-open {
     width: 1280px;
   }
 
+  .xl\:w-\[1536px\] {
+    width: 1536px;
+  }
+
   .xl\:text-\[72px\] {
     font-size: 72px;
   }
