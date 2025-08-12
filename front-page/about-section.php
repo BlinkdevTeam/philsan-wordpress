@@ -18,7 +18,7 @@
             <?php if ( !empty($group['items']) && is_array($group['items']) ) : ?>
                 <?php foreach ( $group['items'] as $item ) : ?>
                     <?php 
-                        $image = $item['image']; // Replace 'image' with your sub field name
+                        $image = $item['item_image']; // Replace 'image' with your sub field name
                     ?>
                         <div class="w-[100%] lg:w-[50%] image-container">
                             <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-lg overflow-hidden">
