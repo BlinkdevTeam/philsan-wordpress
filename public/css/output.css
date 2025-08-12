@@ -1567,6 +1567,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[rgba\(255\2c 255\2c 255\2c 0\.3\)\] {
+  --tw-gradient-from: rgba(255,255,255,0.3) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-\[\#269739\] {
   --tw-gradient-to: rgb(38 151 57 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #269739 var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1599,6 +1605,14 @@ video {
 
 .to-\[rgba\(11\2c 83\2c 4\2c 0\.8\)\] {
   --tw-gradient-to: rgba(11,83,4,0.8) var(--tw-gradient-to-position);
+}
+
+.to-\[rgba\(11\2c 83\2c 4\2c 0\.9\)\] {
+  --tw-gradient-to: rgba(11,83,4,0.9) var(--tw-gradient-to-position);
+}
+
+.to-\[rgba\(11\2c 83\2c 4\2c 1\)\] {
+  --tw-gradient-to: rgba(11,83,4,1) var(--tw-gradient-to-position);
 }
 
 .bg-\[length\:200\%_100\%\] {
@@ -2011,6 +2025,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[48px\] {
+  font-size: 48px;
 }
 
 .font-\[200\] {
