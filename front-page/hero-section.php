@@ -6,11 +6,11 @@
                 <div class="flex space-between h-full w-full relative y-thumbnail">
                     <div class="w-[80%] py-[100px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto z-[2]">
                         <div class="">
-                            <h1><?php the_sub_field('hero_title'); ?></h1>
-                            <p><?php the_sub_field('hero_sub'); ?></p>
+                            <h1 class="font-[600] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                            <p class="font-[600] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                         </div>
                     </div>
-                    <div class="bg-gradient-to-b from-[rgba(255,255,255,0.8)] to-[rgba(11,83,4,0.8)] w-full h-full absolute top-0 left-0 z-[1]"></div>
+                    <div class="bg-gradient-to-b from-[rgba(255,255,255,0.0)] to-[rgba(11,83,4,0.8)] w-full h-full absolute top-0 left-0 z-[1]"></div>
                     <img class="absolute w-full h-full object-cover" src="<?php echo get_sub_field('hero_image'); ?>" alt="hero-image">
                 </div>
             <?php endif; ?>
