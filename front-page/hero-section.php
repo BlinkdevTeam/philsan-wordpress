@@ -1,4 +1,4 @@
-<div class="home-hero-section">
+<div class="home-hero-section relative">
     <?php if ( have_rows('hero_section') ): ?>
         <?php while ( have_rows('hero_section') ): the_row(); ?>
 
