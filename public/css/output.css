@@ -2268,6 +2268,10 @@ video {
   color: 1F773A;
 }
 
+.text-\[500\] {
+  color: 500;
+}
+
 .underline {
   text-decoration-line: underline;
 }
