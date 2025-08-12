@@ -10,7 +10,7 @@
                             <p><?php the_sub_field('hero_sub'); ?></p>
                         </div>
                     </div>
-                    <div class="bg-gradient-to-l from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.7)] w-full h-full absolute top-0 left-0 z-[1]"></div>
+                    <div class="bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.7)] w-full h-full absolute top-0 left-0 z-[1]"></div>
                     <img class="absolute w-full h-full object-cover" src="<?php echo get_sub_field('hero_image'); ?>" alt="hero-image">
                 </div>
             <?php endif; ?>
