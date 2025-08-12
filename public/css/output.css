@@ -1380,6 +1380,14 @@ video {
   border-top-right-radius: 8px;
 }
 
+.rounded-br-\[80px\] {
+  border-bottom-right-radius: 80px;
+}
+
+.rounded-tl-\[80px\] {
+  border-top-left-radius: 80px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1499,6 +1507,11 @@ video {
 
 .bg-\[1F773A\] {
   background-color: 1F773A;
+}
+
+.bg-\[\#FFC200\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 194 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
