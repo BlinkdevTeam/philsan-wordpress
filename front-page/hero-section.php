@@ -4,7 +4,7 @@
 
             <?php if ( get_row_layout() == 'hero_item_group' ): ?>
                 <div class="flex space-between h-full w-full relative y-thumbnail">
-                    <div class="w-[80%] mb-[100px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto z-[2]">
+                    <div class="w-[80%] py-[100px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto z-[2]">
                         <div class="">
                             <h1><?php the_sub_field('hero_title'); ?></h1>
                             <p><?php the_sub_field('hero_sub'); ?></p>
