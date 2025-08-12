@@ -22,7 +22,7 @@
                     ?>
                         <div class="w-[100%] lg:w-[50%] image-container">
                             <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-lg overflow-hidden">
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="About items image">
+                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="About items">
                             </div>
                         </div>
                     <?php endif; ?>
