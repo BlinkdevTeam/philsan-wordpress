@@ -1,15 +1,15 @@
 <?php 
     $group = get_field('about_section');
 ?>
-<div class="about-section pt-[50px]">
+<div class="about-section pt-[100px]">
     <div class="flex container mx-auto gap-[50px]">
         <div class="w-[40%]">
             <?php if (!empty($group['title'])) : ?>
-                <h2 class="text-[24px] font-[600]"><?php echo esc_html($group['title']) ?></h2>
+                <h2 class="text-[24px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
             <div class="pt-[10px]">
                 <?php if (!empty($group['description'])) : ?>
-                    <p class="text-[34px] text-[#1F773A] font-[700] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
+                    <p class="text-[34px] font-[600] leading-[normal]"><?php echo esc_html($group['description']) ?></p>
                 <?php endif; ?>
             </div>
             <div class="pt-[40px]">
