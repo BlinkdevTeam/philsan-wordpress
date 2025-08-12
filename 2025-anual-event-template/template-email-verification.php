@@ -32,8 +32,7 @@ get_header();
                         />
                         <p class="email-exist hidden">This email is already registered</p>
                         <p class="email-pending hidden">This email already has a pending registration</p>
-                        <p class="email-canceled hidden">This email ahs already been registered but was canceled</p>
-                        <p class="email-canceled hidden">Please check this email and contact <span>philsan.org</span></p>
+                        <p class="email-canceled hidden">This email ahs already been registered but was canceled<br> Please check this email and contact <span>philsan.org</span></p>
                     </div>
                     <div class="flex gap-[20px] items-center z-[1] justify-center lg:justify-start">
                         <button id="submit-button" type="submit" class="py-[10px] px-[40px]  w-[148px] h-[60px] submit bg-[#1F773A] hover:bg-[#EDB221] text-[#ffffff] cursor-pointer rounded-tl-[30px] rounded-br-[30px] font-fraunces">Submit</button>
