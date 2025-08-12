@@ -1019,6 +1019,10 @@ video {
   width: 55%;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .max-w-\[1280px\] {
   max-width: 1280px;
 }
