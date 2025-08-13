@@ -9,8 +9,8 @@
     <div>
         <div class="flex justify-between items-start">
             <div>
-                <h2>Our Recent Events</h2>
-                <p>Find stories through a selection of our key strategic topics</p>
+                <h2 class="text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
+                <p class="text-[24px] text-center font-[600]">Find stories through a selection of our key strategic topics</p>
             </div>
             <div class="pt-[40px]">
                 <?php if (!empty($group['button_title'])) : ?>
@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- Second row -->
-                <div class="flex gap-[50px]">
+                <div class="flex gap-[50px] pt-[20px]">
                     <?php foreach ($row2 as $event) : ?>
                         <div class="flex flex-col gap-[20px] w-1/3">
                             <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
