@@ -28,8 +28,8 @@
                                 $image_url = is_array($image) ? $image['url'] : $image;
                                 $alt = is_array($image) && !empty($image['alt']) ? $image['alt'] : get_the_title();
                         ?>
-                            <div class="w-[450px] image-container">
-                                <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                            <div class="image-container">
+                                <div class="w-[350px] h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                     <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt); ?>">
                                 </div>
                             </div>
