@@ -49,8 +49,10 @@
                             <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                             </div>
-                            <h2 class="text-[24px] font-[300]"><?php the_title(); ?></h2>
-                            <p class="text-[34px] font-[600]"><?php echo $event['description']; ?></p>
+                            <div class="flex gap-[10px]">
+                                <h2 class="text-[24px] font-[300]"><?php the_title(); ?></h2>
+                                <p class="text-[34px] font-[600] leading-normal"><?php echo $event['description']; ?></p>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -62,8 +64,10 @@
                             <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                             </div>
-                            <h2 class="text-[24px] font-[300]"><?php the_title(); ?></h2>
-                            <p class="text-[34px] font-[600]"><?php echo $event['description']; ?></p>
+                            <div class="flex gap-[10px]">
+                                <h2 class="text-[24px] font-[300]"><?php the_title(); ?></h2>
+                                <p class="text-[34px] font-[600] leading-normal"><?php echo $event['description']; ?></p>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
