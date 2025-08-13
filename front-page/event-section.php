@@ -25,9 +25,9 @@
                 $row2 = [];
                 $count = 0;
 
-                while ($events->have_posts()) {ß
+                while ($events->have_posts()) {
                     $events->the_post();
-                    $location = get_field("location");ß
+                    $location = get_field("location");
                     $image = get_field("image");
                     $date = get_field("date");
                     $description = get_field("description");
