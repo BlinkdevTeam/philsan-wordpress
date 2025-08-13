@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="w-[60%]">
-            <div class="w-[25%] image-container">
+            <div class="w-[100%] image-container">
                 <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                     <img class="w-full h-full object-cover" src="<?php echo esc_html($group['image']) ?>" alt="<?php echo esc_attr($alt); ?>">
                 </div>
