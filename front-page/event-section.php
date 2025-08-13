@@ -1,6 +1,6 @@
 <?php
     $events = new WP_Query(array(
-        "post_type" => "events",
+        "post_type" => "event",
         // "tax_query" => array(
         //     array(
         //         "taxonomy" => "km_category",
