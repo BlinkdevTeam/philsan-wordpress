@@ -17,25 +17,16 @@
         <?php if ($events->have_posts()) : ?>
             <?php while ($events->have_posts()): ?>
                 <?php 
-                    $event->the_post();
-                    $index = (int) $event->current_post;
-                    $location = get_field("location");
-                    $image = get_field("image");
-                    $date = get_field("date");
-                    $description = get_field("description");
-                    $event_id = get_the_ID();
-
-                    // if ($date) {
-                    //     // Convert to timestamp
-                    //     $timestamp = strtotime($date);
-
-                    //     // Format parts
-                    //     $month = date('M', $timestamp); // e.g., "Jul"
-                    //     $day   = date('d', $timestamp); // e.g., "17"
-                    // }
+                    // $event->the_post();
+                    // $index = (int) $event->current_post;
+                    // $location = get_field("location");
+                    // $image = get_field("image");
+                    // $date = get_field("date");
+                    // $description = get_field("description");
+                    // $event_id = get_the_ID();
                 ?>
                 <h2 class=""><?php the_title(); ?></h2>
-                <p><?php echo $description; ?></p>
+                <p><?php //echo $description; ?></p>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
