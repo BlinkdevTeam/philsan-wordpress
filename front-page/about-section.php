@@ -1,7 +1,7 @@
 <?php 
     $group = get_field('about_section');
 ?>
-<div class="about-section pt-[100px]">
+<div class="about-section pt-[100px] pb-[50px]">
     <div class="flex container mx-auto gap-[50px]">
         <div class="w-[40%]">
             <?php if (!empty($group['title'])) : ?>
