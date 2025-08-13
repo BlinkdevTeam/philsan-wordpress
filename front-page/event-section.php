@@ -47,7 +47,7 @@
                     <?php foreach ($row1 as $event) : ?>
                         <div class="flex flex-col gap-[20px] w-1/2">
                             <div class="relative w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 z-[1]"></div>
+                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                             </div>
                             <div class="flex flex-col gap-[10px]">
@@ -63,7 +63,7 @@
                     <?php foreach ($row2 as $event) : ?>
                         <div class="flex flex-col gap-[20px] w-1/2">
                             <div class="relative w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute top-0 left-0 z-[1]"></div>
+                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                             </div>
                             <div class="flex flex-col gap-[10px]">
