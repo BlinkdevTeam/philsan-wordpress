@@ -1,6 +1,8 @@
 <?php
     $events = new WP_Query(array(
         "post_type" => "event",
+        "posts_per_page" => 5,
+        'order' => 'ASC',     
         // "tax_query" => array(
         //     array(
         //         "taxonomy" => "km_category",
@@ -14,9 +16,26 @@
     <div class="flex container mx-auto gap-[50px]">
         <?php if ($events->have_posts()) : ?>
             <?php while ($events->have_posts()): ?>
-                <?php $events->the_post(); ?>
+                <?php 
+                    $event->the_post();
+                    $index = (int) $event->current_post;
+                    $location = get_field("location");
+                    $thumbnail = get_field("image");
+                    $date = get_field("date");
+                    $description = get_field("description");
+
+                    if ($date) {
+                        // Convert to timestamp
+                        $timestamp = strtotime($date);
+
+                        // Format parts
+                        $month = date('M', $timestamp); // e.g., "Jul"
+                        $day   = date('d', $timestamp); // e.g., "17"
+                    }
+                ?>
                 <?php $event_id = get_the_ID(); ?>
-                <?php var_dump($event_id); ?>
+                <h2 class=""><?php the_title(); ?></h2>
+                <p><?php echo $description; ?></p>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
