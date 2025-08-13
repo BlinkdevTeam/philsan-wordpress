@@ -33,10 +33,11 @@
             <!-- First row -->
             <div class="flex gap-[50px]">
                 <?php foreach ($row1 as $event) : ?>
-                    <div class="w-1/2">
+                    <div class="flex flex-col gap-[20px] w-1/2">
                         <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                             <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                         </div>
+                        <h2><?php the_title(); ?></h2>
                         <p><?php echo $event['description']; ?></p>
                     </div>
                 <?php endforeach; ?>
@@ -45,10 +46,11 @@
             <!-- Second row -->
             <div class="flex gap-[50px]">
                 <?php foreach ($row2 as $event) : ?>
-                    <div class="w-1/3">
+                    <div class="flex flex-col gap-[20px] w-1/3">
                         <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                             <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                         </div>
+                        <h2><?php the_title(); ?></h2>
                         <p><?php echo $event['description']; ?></p>
                     </div>
                 <?php endforeach; ?>
