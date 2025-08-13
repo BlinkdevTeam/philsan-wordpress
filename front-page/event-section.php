@@ -18,8 +18,17 @@
                     $description = get_field("description");
                     $event_id = get_the_ID();
                 ?>
-                <h2 class=""><?php the_title(); ?></h2>
-                <p><?php echo $description; ?></p>
+                <div>
+                    <div class="image-container">
+                        <div class="w-[100%] h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                            <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class=""><?php the_title(); ?></h2>
+                        <p><?php echo $description; ?></p>
+                    </div>
+                </div>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
