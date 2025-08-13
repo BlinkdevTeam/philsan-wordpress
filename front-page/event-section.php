@@ -1,8 +1,8 @@
 <?php
     $events = new WP_Query(array(
         "post_type" => "event",
-        "posts_per_page" => 5,
-        'order' => 'ASC',     
+        // "posts_per_page" => 5,
+        // 'order' => 'ASC',     
         // "tax_query" => array(
         //     array(
         //         "taxonomy" => "km_category",
