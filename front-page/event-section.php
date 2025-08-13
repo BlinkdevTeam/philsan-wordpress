@@ -24,9 +24,12 @@
                             <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                         </div>
                     </div>
-                    <div>
+                    <div class="flex flex-col gap-[20px] py-[20px]">
                         <h2 class=""><?php the_title(); ?></h2>
                         <p><?php echo $description; ?></p>
+                        <div>
+                            <a href="">See More</a>
+                        </div>
                     </div>
                 </div>
             <?php endwhile; ?>
