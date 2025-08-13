@@ -20,20 +20,20 @@
                     $event->the_post();
                     $index = (int) $event->current_post;
                     $location = get_field("location");
-                    $thumbnail = get_field("image");
+                    $image = get_field("image");
                     $date = get_field("date");
                     $description = get_field("description");
+                    $event_id = get_the_ID();
 
-                    if ($date) {
-                        // Convert to timestamp
-                        $timestamp = strtotime($date);
+                    // if ($date) {
+                    //     // Convert to timestamp
+                    //     $timestamp = strtotime($date);
 
-                        // Format parts
-                        $month = date('M', $timestamp); // e.g., "Jul"
-                        $day   = date('d', $timestamp); // e.g., "17"
-                    }
+                    //     // Format parts
+                    //     $month = date('M', $timestamp); // e.g., "Jul"
+                    //     $day   = date('d', $timestamp); // e.g., "17"
+                    // }
                 ?>
-                <?php $event_id = get_the_ID(); ?>
                 <h2 class=""><?php the_title(); ?></h2>
                 <p><?php echo $description; ?></p>
             <?php endwhile; ?>
