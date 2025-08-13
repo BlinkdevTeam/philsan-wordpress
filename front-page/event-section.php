@@ -18,16 +18,16 @@
                 <?php endif; ?>
             </div>
         </div>
-        <div class="flex flex-col gap-[50px]">
+        <div class="flex flex-col gap-[50px] pt-[50px]">
             <?php if ($events->have_posts()) : ?>
                 <?php 
                 $row1 = [];
                 $row2 = [];
                 $count = 0;
 
-                while ($events->have_posts()) {
+                while ($events->have_posts()) {ß
                     $events->the_post();
-                    $location = get_field("location");
+                    $location = get_field("location");ß
                     $image = get_field("image");
                     $date = get_field("date");
                     $description = get_field("description");
@@ -58,12 +58,12 @@
                 <!-- Second row -->
                 <div class="flex gap-[50px] pt-[20px]">
                     <?php foreach ($row2 as $event) : ?>
-                        <div class="flex flex-col gap-[20px] w-1/3">
+                        <div class="flex flex-col gap-[20px] w-1/2">
                             <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($event['image']); ?>" alt="event image">
                             </div>
-                            <h2><?php the_title(); ?></h2>
-                            <p><?php echo $event['description']; ?></p>
+                            <h2 class="test-[24px] font-[300]"><?php the_title(); ?></h2>
+                            <p class="text-[24px] font-[600]"><?php echo $event['description']; ?></p>
                         </div>
                     <?php endforeach; ?>
                 </div>
