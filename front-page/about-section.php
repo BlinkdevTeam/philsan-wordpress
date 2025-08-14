@@ -2,7 +2,7 @@
     $group = get_field('about_section');
 ?>
 <div class="about-section pt-[100px] pb-[50px]">
-    <div class="flex container mx-auto gap-[50px]">
+    <div class="flex custom-container mx-auto gap-[50px]">
         <div class="w-[40%]">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[24px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>

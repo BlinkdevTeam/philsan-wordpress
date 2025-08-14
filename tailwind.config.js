@@ -13,5 +13,24 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    ({ addComponents }) => {
+      addComponents({
+        '.custom-container': {
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            width: '90%',
+            '@screen xl': {
+              width: '1280px',
+            },
+            '@screen lg': {
+              width: '1080px',
+            },
+            '@screen md': {
+              width: '720px',
+            }
+        },
+      })
+    },
+  ],
 };
