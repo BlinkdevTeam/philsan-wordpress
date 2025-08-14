@@ -47,7 +47,7 @@ if (!$should_hide_nav_or_footer) :
   <footer class="bg-[#101010]">
     <div class="custom-container">
       <div class="image-container">
-          <div class="w-[350px] h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+          <div class="w-[350px]">
               <img class="w-full h-full object-cover" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
           </div>
       </div>
