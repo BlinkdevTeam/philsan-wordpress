@@ -17,7 +17,7 @@
                   <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">More Topics</a>
               </div>
           </div>
-          <div class="flex flex-col gap-[50px] pt-[50px]">
+          <div class="flex gap-[50px] pt-[50px]">
               <?php if ($news->have_posts()) : ?>
                   <?php while ($news->have_posts()) : $news->the_post(); ?>
                       <?php
@@ -27,8 +27,8 @@
 
                       <div class="p-[40px] rounded-xl bg-[#ffffff]">
                         <div class="flex flex-col gap-[20px]">
-                            <div class="flex justify-between">
-                              <h2 class="text-[24px] font-[300]"><?php the_title(); ?></h2>
+                            <div class="flex justify-between items-center pb-[20px]">
+                              <h2 class="text-[34px] font-[300] text-[#1f773a]"><?php the_title(); ?></h2>
                               <div class="pt-[40px]">
                                 <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">Learn More</a>
                               </div>
