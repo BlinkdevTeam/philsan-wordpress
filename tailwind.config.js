@@ -17,18 +17,18 @@ module.exports = {
     ({ addComponents }) => {
       addComponents({
         '.custom-container': {
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            width: '90%',
-            '@screen xl': {
-              width: '1280px',
-            },
-            '@screen lg': {
-              width: '1080px',
-            },
-            '@screen md': {
-              width: '720px',
-            }
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          width: '90%',
+          '@screen md': {
+            width: '720px',
+          },
+          '@screen lg': {
+            width: '1080px',
+          },
+          '@screen xl': {
+            width: '1280px',
+          },
         },
       })
     },
