@@ -25,7 +25,7 @@
                           $description = get_field("description");
                       ?>
 
-                      <div class="p-[40px] rounded-xl bg-[#ffffff]">
+                      <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex justify-between items-center pb-[20px]">
                               <div class="w-[60%]">

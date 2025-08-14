@@ -44,8 +44,14 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
 <?php
 if (!$should_hide_nav_or_footer) :
 ?>
-  <footer class="bg-gray-200 mt-16 py-6 text-center text-gray-600">
-    &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
+  <footer class="bg-[#101010]">
+    <div class="custom-container">
+      <div class="image-container">
+          <div class="w-[350px] h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+              <img class="w-full h-full object-cover" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
+          </div>
+      </div>
+    </div>
   </footer>
 <?php endif; ?>
 
