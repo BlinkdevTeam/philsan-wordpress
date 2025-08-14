@@ -13,7 +13,7 @@
                   <h2 class="text-[48px] text-[#1F773A] font-[700]">Our Latest News</h2>
                   <p class="text-[24px] text-center font-[600]">Find stories through a selection of our key strategic topics</p>
               </div>
-              <div class="pt-[40px]">
+              <div class="">
                   <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">More Topics</a>
               </div>
           </div>
@@ -31,7 +31,7 @@
                               <div class="w-[60%]">
                                 <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
                               </div>
-                              <div class="pt-[40px]">
+                              <div class="">
                                 <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">Learn More</a>
                               </div>
                             </div>
