@@ -46,9 +46,35 @@ if (!$should_hide_nav_or_footer) :
 ?>
   <footer class="bg-[#101010]">
     <div class="custom-container">
-      <div class="image-container">
-          <div class="w-[350px]">
+      <div class="flex gap-[50px] justify-between">
+          <div class="logo-container w-[350px]">
               <img class="w-full h-full object-cover" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
+          </div>
+          <div class="flex justify-between">
+            <div class="flex flex-col gap-[10px]">
+              <h6>Education</h6>
+              <ul class="flex flex-col gap-[5px]">
+                <li>Email Marketing</li>
+                <li>Social Media Markeitng</li>
+                <li>Search Engine Optimization</li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h6>Business</h6>
+              <ul class="flex flex-col gap-[5px]">
+                <li>Digital Marketing Agency</li>
+                <li>SEO Agency</li>
+                <li>PRC Agency</li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h6>Developer & IT</h6>
+              <ul class="flex flex-col gap-[5px]">
+                <li>Internet Marketing</li>
+                <li>Content Markeitng</li>
+                <li>Social Media</li>
+              </ul>
+            </div>
           </div>
       </div>
     </div>
