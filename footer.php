@@ -44,32 +44,32 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
 <?php
 if (!$should_hide_nav_or_footer) :
 ?>
-  <footer class="bg-[#101010]">
+  <footer class="bg-[#101010] py-[50px]">
     <div class="custom-container">
-      <div class="flex gap-[50px] justify-between">
+      <div class="flex gap-[50px] justify-between pb-[20px] border-b-[1px] border-[#ffffff]">
           <div class="logo-container w-[350px]">
               <img class="w-full h-full" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
           </div>
           <div class="flex gap-[20px] justify-between text-[#ffffff]">
-            <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-col gap-[10px] text-[18px] font-[700]">
               <h6>Education</h6>
-              <ul class="flex flex-col gap-[5px]">
+              <ul class="flex flex-col gap-[5px] text-[18px]">
                 <li>Email Marketing</li>
                 <li>Social Media Markeitng</li>
                 <li>Search Engine Optimization</li>
               </ul>
             </div>
-            <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-col gap-[10px] text-[18px] font-[700]">
               <h6>Business</h6>
-              <ul class="flex flex-col gap-[5px]">
+              <ul class="flex flex-col gap-[5px] text-[18px]">
                 <li>Digital Marketing Agency</li>
                 <li>SEO Agency</li>
                 <li>PRC Agency</li>
               </ul>
             </div>
-            <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-col gap-[10px] text-[18px] font-[700]">
               <h6>Developer & IT</h6>
-              <ul class="flex flex-col gap-[5px]">
+              <ul class="flex flex-col gap-[5px] text-[18px]">
                 <li>Internet Marketing</li>
                 <li>Content Markeitng</li>
                 <li>Social Media</li>
