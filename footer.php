@@ -48,9 +48,9 @@ if (!$should_hide_nav_or_footer) :
     <div class="custom-container">
       <div class="flex gap-[50px] justify-between">
           <div class="logo-container w-[350px]">
-              <img class="w-full h-full object-cover" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
+              <img class="w-full h-full" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
           </div>
-          <div class="flex justify-between">
+          <div class="flex gap-[20px] justify-between text-[#ffffff]">
             <div class="flex flex-col gap-[10px]">
               <h6>Education</h6>
               <ul class="flex flex-col gap-[5px]">
