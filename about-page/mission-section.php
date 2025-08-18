@@ -1,6 +1,5 @@
 <?php 
-    $group = get_field('misson_section');
-    var_dump($group);
+    $group = get_field('mission_section');
 ?>
 <div class="mission-section custom-container py-[50px]">
     <div class="flex space-between">
