@@ -12,7 +12,7 @@
             </div>
 
             <?php if ( have_rows('member') ): ?> 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] mt-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[50px] mt-8">
                     <?php 
                         // define your pool of background colors
                         $colors = [
