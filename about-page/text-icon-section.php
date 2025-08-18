@@ -16,7 +16,7 @@
     </div>
     <!-- Repeater section -->
     <?php if( !empty($group['text_icon_section']) && is_array($group['text_icon_section']) ): ?>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div class="flex gap-[20px] justify-center">
             <?php foreach( $group['text_icon_section'] as $item ): ?>
                 <div class="flex flex-col gap-[20px] items-start">
                     <?php if( !empty($item['icon']) ): ?>
