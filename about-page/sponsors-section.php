@@ -19,7 +19,7 @@
     <div class="pt-[50px]">
         <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
             <div class="swiper sponsorSwiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper justify-center items-center">
                     <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                         <?php 
                             $image_url   = $row['logo'];
