@@ -35,7 +35,7 @@
                             </div>
                             <div class="flex flex-col gap-[10px]">
                                 <h2 class="text-[24px] font-[300]"><?php the_title(); ?></h2>
-                                <p class="text-[34px] font-[600] leading-normal"><?php echo esc_html($description); ?></p>
+                                <p class="text-[34px] font-[600] leading-[34px]"><?php echo esc_html($description); ?></p>
                             </div>
                         </div>
 

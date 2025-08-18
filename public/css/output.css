@@ -2106,6 +2106,10 @@ video {
   line-height: 1.5;
 }
 
+.leading-\[34px\] {
+  line-height: 34px;
+}
+
 .text-\[\#000000\] {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));

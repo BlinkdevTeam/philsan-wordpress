@@ -9,7 +9,7 @@
             <?php endif; ?>
             <div class="pt-[18px]">
                 <?php if (!empty($group['sub'])) : ?>
-                    <p class="text-[34px] text-[500] leading-[normal]"><?php echo esc_html($group['sub']) ?></p>
+                    <p class="text-[34px] text-[500] leading-[34px]"><?php echo esc_html($group['sub']) ?></p>
                 <?php endif; ?>
             </div>
         </div>
