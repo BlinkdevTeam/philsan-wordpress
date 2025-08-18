@@ -27,7 +27,7 @@
 
                     <div class="flex flex-col gap-[20px]">
                         <?php if( !empty($item['title']) ): ?>
-                            <h3 class="text-lg font-bold text-gray-800">
+                            <h3 class="text-[24px] font-bold">
                                 <?php echo esc_html($item['title']); ?>
                             </h3>
                         <?php endif; ?>
