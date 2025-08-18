@@ -1,7 +1,8 @@
 <?php 
     $group = get_field('misson_section');
+    var_dump($group);
 ?>
-<div class="mission-section custom-container">
+<div class="mission-section custom-container py-[50px]">
     <div class="flex space-between">
         <div class="">
             <?php if (!empty($group['title'])) : ?>

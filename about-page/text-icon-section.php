@@ -1,13 +1,13 @@
 <?php 
     $group = get_field('text_icon_section');
 ?>
-<div class="text-icon-section custom-container">
+<div class="text-icon-section custom-container py-[50px]">
     <div class="flex space-between">
         <div class="">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[24px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
-            <div class="pt-[10px]">
+            <div class="pt-[18px]">
                 <?php if (!empty($group['sub'])) : ?>
                     <p class="text-[34px] text-[500] leading-[normal]"><?php echo esc_html($group['sub']) ?></p>
                 <?php endif; ?>
@@ -18,7 +18,7 @@
     <?php if( !empty($group['text_icon_section']) && is_array($group['text_icon_section']) ): ?>
         <div class="flex gap-[20px] justify-center">
             <?php foreach( $group['text_icon_section'] as $item ): ?>
-                <div class="flex flex-col gap-[20px] items-start">
+                <div class="flex flex-col gap-[20px] items-start w-[25%]">
                     <?php if( !empty($item['icon']) ): ?>
                         <div class="bg-[#CBF9B6] p-[20px]">
                             <img src="<?php echo esc_url($item['icon']['url']); ?>" alt="icon image" class="w-10 h-10 object-contain" />
