@@ -11,32 +11,5 @@
         <?php endif; ?>
     </div>
     
-    <!-- Repeater section -->
-    <?php if( !empty($group['sponsor_repeater']) && is_array($group['sponsor_repeater']) ): ?>
-        <div class="flex gap-[20px] justify-center">
-            <?php foreach( $group['sponsor_repeater'] as $item ): ?>
-                <div class="flex flex-col gap-[20px] items-start w-[25%]">
-                    <?php if( !empty($item['logo']) ): ?>
-                        <div class="bg-[#CBF9B6] p-[20px]">
-                            <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="sponsor logo" class="w-10 h-10 object-contain" />
-                        </div>
-                    <?php endif; ?>
-
-                    <div class="flex flex-col gap-[20px]">
-                        <?php if( !empty($item['name']) ): ?>
-                            <h3 class="text-[24px] font-bold">
-                                <?php echo esc_html($item['name']); ?>
-                            </h3>
-                        <?php endif; ?>
-
-                        <?php if( !empty($item['description']) ): ?>
-                            <p class="text-gray-600">
-                                <?php echo esc_html($item['description']); ?>
-                            </p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
+   
 </div>
