@@ -18,13 +18,10 @@
                     $image_url = get_sub_field('image');
                     $name = get_sub_field('name');
                     $descipriotn = get_sub_field('description');
-                    
-                    // pick a random color from the list
-                    $bg_color = $colors[array_rand($colors)];
                 ?>
                 <div class="flex gap-[20px] items-start justify-start">
                     <!-- Perfect circle image with random background -->
-                    <div class="aspect-square w-[150px] rounded-full overflow-hidden pt-[15px]" style="background-color: <?php echo $bg_color; ?>;">
+                    <div class="w-[200px]">
                         <img class="w-full h-auto object-cover" 
                             src="<?php echo esc_url($image_url); ?>" 
                             alt="member image">
