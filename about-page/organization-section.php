@@ -19,12 +19,14 @@
                             $name = get_sub_field('name');
                             $job_title = get_sub_field('job_title');
                         ?>
-                        <div class="image-container text-center">
+                        <div class="flex gap-[20px] items-start justify-start">
                             <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="member image">
                             </div>
-                            <p class="text-[20px] font-[600] mt-2"><?php echo esc_html($name); ?></p>
-                            <p class="text-[16px] text-gray-600"><?php echo esc_html($job_title); ?></p>
+                            <div class="flex flex-col gap-[20px]">
+                                <p class="text-[20px] font-[600] mt-2"><?php echo esc_html($name); ?></p>
+                                <p class="text-[16px] text-gray-600"><?php echo esc_html($job_title); ?></p>
+                            </div>
                         </div>
                     <?php endwhile; ?> 
                 </div>
