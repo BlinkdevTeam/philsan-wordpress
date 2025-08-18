@@ -1,5 +1,6 @@
 <?php 
     $group = get_field('two-column-section');
+    var_dump($group);
 ?>
 <div class="two-col-section custom-container">
     <div class="flex space-between">
