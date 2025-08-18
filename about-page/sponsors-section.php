@@ -17,7 +17,7 @@
     <?php endif; ?>
     
     <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
-        <div class="flex flex-col gap-[20px] mt-8">
+        <div class="flex gap-[20px]">
             <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                 <?php 
                     $image_url   = $row['logo'];
