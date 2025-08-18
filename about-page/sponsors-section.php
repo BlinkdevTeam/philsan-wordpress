@@ -28,11 +28,7 @@
                     <div class="w-[200px]">
                         <img class="w-full h-auto object-cover" 
                              src="<?php echo esc_url($image_url); ?>" 
-                             alt="<?php echo esc_attr($name); ?>">
-                    </div>
-                    <div class="flex flex-col pt-[20px]">
-                        <p class="text-[24px] font-[600]"><?php echo esc_html($name); ?></p>
-                        <p class="text-[18px] text-gray-600"><?php echo esc_html($description); ?></p>
+                             alt="sponsor logo">
                     </div>
                 </div>
             <?php endforeach; ?> 
