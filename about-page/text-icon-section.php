@@ -18,14 +18,14 @@
     <?php if( !empty($group['text_icon_section']) && is_array($group['text_icon_section']) ): ?>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             <?php foreach( $group['text_icon_section'] as $item ): ?>
-                <div class="flex items-start space-x-4">
+                <div class="flex flex-col gap-[20px] items-start">
                     <?php if( !empty($item['icon']) ): ?>
-                        <img src="<?php echo esc_url($item['icon']['url']); ?>" 
-                             alt="icon image" 
-                             class="w-10 h-10 object-contain" />
+                        <div class="bg-[CBF9B6] p-[20px]">
+                            <img src="<?php echo esc_url($item['icon']['url']); ?>" alt="icon image" class="w-10 h-10 object-contain" />
+                        </div>
                     <?php endif; ?>
 
-                    <div>
+                    <div class="flex flex-col gap-[20px]">
                         <?php if( !empty($item['title']) ): ?>
                             <h3 class="text-lg font-bold text-gray-800">
                                 <?php echo esc_html($item['title']); ?>

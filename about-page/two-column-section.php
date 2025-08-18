@@ -1,9 +1,8 @@
 <?php 
     $group = get_field('two_column_section');
-    var_dump($group);
 ?>
 <div class="two-col-section custom-container">
-    <div class="flex space-between">
+    <div class="flex space-between gap-[50px]">
         <div class="w-[60%]">
             <div class="w-[100%] image-container">
                 <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-2xl overflow-hidden">
@@ -17,7 +16,7 @@
             <?php endif; ?>
             <div class="pt-[10px]">
                 <?php if (!empty($group['sub'])) : ?>
-                    <p class="text-[34px] text-[500] leading-[normal]"><?php echo esc_html($group['sub']) ?></p>
+                    <p class="text-[18px] leading-[normal]"><?php echo esc_html($group['sub']) ?></p>
                 <?php endif; ?>
             </div>
         </div>
