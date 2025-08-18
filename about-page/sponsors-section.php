@@ -11,32 +11,31 @@
         <?php endif; ?>
     </div>
     
-    <!-- Repeater section -->
-    <?php if( !empty($group['sponsor_repeater']) && is_array($group['sponsor_repeater']) ): ?>
-        <div class="flex gap-[20px] justify-center">
-            <?php foreach( $group['sponsor_repeater'] as $item ): ?>
-                <div class="flex flex-col gap-[20px] items-start w-[25%]">
-                    <?php if( !empty($item['logo']) ): ?>
-                        <div class="bg-[#CBF9B6] p-[20px]">
-                            <img src="<?php echo esc_url($item['logo']['url']); ?>" alt="sponsor logo" class="w-10 h-10 object-contain" />
-                        </div>
-                    <?php endif; ?>
-
-                    <div class="flex flex-col gap-[20px]">
-                        <?php if( !empty($item['name']) ): ?>
-                            <h3 class="text-[24px] font-bold">
-                                <?php echo esc_html($item['name']); ?>
-                            </h3>
-                        <?php endif; ?>
-
-                        <?php if( !empty($item['description']) ): ?>
-                            <p class="text-gray-600">
-                                <?php echo esc_html($item['description']); ?>
-                            </p>
-                        <?php endif; ?>
+    <?php if ( have_rows('sponsor_speaker') ): ?> 
+        <div class="flex gap-[20px]">
+            <?php while ( have_rows('sponsor_speaker') ): the_row(); ?>
+                <?php 
+                    $image_url = get_sub_field('image');
+                    $name = get_sub_field('name');
+                    $descipriotn = get_sub_field('description');
+                    
+                    // pick a random color from the list
+                    $bg_color = $colors[array_rand($colors)];
+                ?>
+                <div class="flex gap-[20px] items-start justify-start">
+                    <!-- Perfect circle image with random background -->
+                    <div class="aspect-square w-[150px] rounded-full overflow-hidden pt-[15px]" style="background-color: <?php echo $bg_color; ?>;">
+                        <img class="w-full h-auto object-cover" 
+                            src="<?php echo esc_url($image_url); ?>" 
+                            alt="member image">
+                    </div>
+                    <div class="flex flex-col pt-[20px]">
+                        <p class="text-[24px] font-[600]"><?php echo esc_html($name); ?></p>
+                        <p class="text-[18px] text-gray-600"><?php echo esc_html($descipriotn); ?></p>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endwhile; ?> 
         </div>
     <?php endif; ?>
+
 </div>
