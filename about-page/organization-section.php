@@ -6,8 +6,20 @@
                 <p class="text-[24px] text-center font-[600]"><?php the_sub_field("sub") ?></p>
             </div>
 
-            
+            <?php if ( have_rows('member') ): ?>
+                <?php while ( have_rows('member') ): the_row(); ?>
+                <?php 
+                    $image_url = get_sub_field('image');
+                    $name = get_sub_field('name');
+                    $job_title = get_sub_field('job_title');
+                ?>
+                    <div class="image-container">
+                        <div class="w-[350px] h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                            <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="member image">
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <?php endwhile; ?>
         <?php endif; ?>
     <?php endwhile; ?>
-</div>ß
-ß
+</div>
