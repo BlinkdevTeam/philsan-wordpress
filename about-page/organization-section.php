@@ -16,12 +16,10 @@
                     <?php 
                         // define your pool of background colors
                         $colors = [
-                            "#E0F7FA", // light cyan
-                            "#FFF3E0", // light orange
-                            "#F3E5F5", // light purple
-                            "#E8F5E9", // light green
-                            "#FFEBEE", // light red/pink
-                            "#E3F2FD"  // light blue
+                            "#58a0a9ff", // light cyan
+                            "#b39564ff", // light orange
+                            "#72b177ff", // light green
+                            "#b0747dff", // light red/pink
                         ];
                     ?>
                     <?php while ( have_rows('member') ): the_row(); ?>
@@ -40,7 +38,7 @@
                                     src="<?php echo esc_url($image_url); ?>" 
                                     alt="member image">
                             </div>
-                            <div class="flex flex-col">
+                            <div class="flex flex-col pt-[20px]">
                                 <p class="text-[24px] font-[600]"><?php echo esc_html($name); ?></p>
                                 <p class="text-[18px] text-gray-600"><?php echo esc_html($job_title); ?></p>
                             </div>
