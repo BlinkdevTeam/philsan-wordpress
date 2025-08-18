@@ -20,7 +20,7 @@
                             $job_title = get_sub_field('job_title');
                         ?>
                         <div class="flex gap-[20px] items-start justify-start">
-                            <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                            <div class="w-[200px] h-[200px] rounded-full overflow-hidden">
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="member image">
                             </div>
                             <div class="flex flex-col gap-[20px]">
