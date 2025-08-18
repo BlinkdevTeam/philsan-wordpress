@@ -15,9 +15,9 @@
         </div>
     </div>
     <!-- Repeater section -->
-    <?php if( !empty($group['text_icon_section']) && is_array($group['text_icon_section']) ): ?>
+    <?php if( !empty($group['member']) && is_array($group['member']) ): ?>
         <div class="flex gap-[20px] justify-center">
-            <?php foreach( $group['text_icon_section'] as $item ): ?>
+            <?php foreach( $group['member'] as $item ): ?>
                 <div class="flex gap-[20px] items-start w-[25%]">
                     <?php if( !empty($item['icon']) ): ?>
                         <div class="bg-[#CBF9B6] p-[20px] rounded-full overflow-hidden">
