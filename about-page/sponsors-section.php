@@ -3,35 +3,39 @@
 ?>
 <div class="sponsors-section custom-container py-[50px]">
     <?php if (!empty($group['title'])) : ?>
-        <h2 class="text-[32px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
+        <h2 class="text-[32px] text-[#1F773A] font-[700]">
+            <?php echo esc_html($group['title']) ?>
+        </h2>
     <?php endif; ?>
-    <div class="pt-[10px]">
-        <?php if (!empty($group['sub'])) : ?>
-            <div class="text-[24px] leading-[34px] flex flex-col gap-[20px]"><?php echo ($group['sub']) ?></div>
-        <?php endif; ?>
-    </div>
+
+    <?php if (!empty($group['sub'])) : ?>
+        <div class="pt-[10px]">
+            <div class="text-[24px] leading-[34px] flex flex-col gap-[20px]">
+                <?php echo wp_kses_post($group['sub']); ?>
+            </div>
+        </div>
+    <?php endif; ?>
     
-    <?php if ( have_rows('sponsor_repeater') ): ?> 
-        <div class="flex gap-[20px]">
-            <?php while ( have_rows('sponsor_repeater') ): the_row(); ?>
+    <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
+        <div class="flex flex-col gap-[20px] mt-8">
+            <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                 <?php 
-                    $image_url = get_sub_field('image');
-                    $name = get_sub_field('name');
-                    $descipriotn = get_sub_field('description');
+                    $image_url   = $row['image'];
+                    $name        = $row['name'];
+                    $description = $row['description'];
                 ?>
                 <div class="flex gap-[20px] items-start justify-start">
-                    <!-- Perfect circle image with random background -->
                     <div class="w-[200px]">
                         <img class="w-full h-auto object-cover" 
-                            src="<?php echo esc_url($image_url); ?>" 
-                            alt="member image">
+                             src="<?php echo esc_url($image_url); ?>" 
+                             alt="<?php echo esc_attr($name); ?>">
                     </div>
                     <div class="flex flex-col pt-[20px]">
                         <p class="text-[24px] font-[600]"><?php echo esc_html($name); ?></p>
-                        <p class="text-[18px] text-gray-600"><?php echo esc_html($descipriotn); ?></p>
+                        <p class="text-[18px] text-gray-600"><?php echo esc_html($description); ?></p>
                     </div>
                 </div>
-            <?php endwhile; ?> 
+            <?php endforeach; ?> 
         </div>
     <?php endif; ?>
 
