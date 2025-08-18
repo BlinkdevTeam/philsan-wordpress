@@ -12,15 +12,15 @@
             </div>
 
             <?php if ( have_rows('member') ): ?> 
-                <div class="flex flex-wrap gap-[20px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] mt-8">
                     <?php while ( have_rows('member') ): the_row(); ?>
                         <?php 
                             $image_url = get_sub_field('image');
                             $name = get_sub_field('name');
                             $job_title = get_sub_field('job_title');
                         ?>
-                        <div class="image-container w-[25%]">
-                            <div class="w-[350px] h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                        <div class="image-container text-center">
+                            <div class="w-full h-[200px] md:h-[320px] lg:h-[450px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image_url); ?>" alt="member image">
                             </div>
                             <p class="text-[20px] font-[600] mt-2"><?php echo esc_html($name); ?></p>
