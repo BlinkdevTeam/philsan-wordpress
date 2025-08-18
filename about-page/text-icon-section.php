@@ -20,7 +20,7 @@
             <?php foreach( $group['text_icon_section'] as $item ): ?>
                 <div class="flex flex-col gap-[20px] items-start w-[25%]">
                     <?php if( !empty($item['icon']) ): ?>
-                        <div class="bg-[#CBF9B6] p-[20px]">
+                        <div class="bg-[#CBF9B6] p-[10px]">
                             <img src="<?php echo esc_url($item['icon']['url']); ?>" alt="icon image" class="w-10 h-10 object-contain" />
                         </div>
                     <?php endif; ?>
