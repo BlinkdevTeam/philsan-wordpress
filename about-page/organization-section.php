@@ -16,10 +16,10 @@
                     <?php 
                         // define your pool of background colors
                         $colors = [
-                            "#a6b9bcff", // light cyan
-                            "#ccbfaaff", // light orange
-                            "#b0cfb3ff", // light green
-                            "#d0a5acff", // light red/pink
+                            "#cfe4e8ff", // light cyan
+                            "#ecdfcaff", // light orange
+                            "#dcf2deff", // light green
+                            "#eacfd4ff", // light red/pink
                         ];
                     ?>
                     <?php while ( have_rows('member') ): the_row(); ?>
