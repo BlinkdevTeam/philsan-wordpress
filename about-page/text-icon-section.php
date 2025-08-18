@@ -21,7 +21,7 @@
                 <div class="flex items-start space-x-4">
                     <?php if( !empty($item['icon']) ): ?>
                         <img src="<?php echo esc_url($item['icon']['url']); ?>" 
-                             alt="<?php echo esc_attr($item['icon']['alt']); ?>" 
+                             alt="icon image" 
                              class="w-10 h-10 object-contain" />
                     <?php endif; ?>
 
