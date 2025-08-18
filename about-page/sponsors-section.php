@@ -17,7 +17,7 @@
     <?php endif; ?>
     
     <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
-        <div class="swiper">
+        <div class="swiper sponsorSwiper">
             <div class="swiper-wrapper">
                 <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                     <?php 
