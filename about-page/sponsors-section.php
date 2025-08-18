@@ -11,9 +11,9 @@
         <?php endif; ?>
     </div>
     
-    <?php if ( have_rows('sponsor_speaker') ): ?> 
+    <?php if ( have_rows('sponsor_repeater') ): ?> 
         <div class="flex gap-[20px]">
-            <?php while ( have_rows('sponsor_speaker') ): the_row(); ?>
+            <?php while ( have_rows('sponsor_repeater') ): the_row(); ?>
                 <?php 
                     $image_url = get_sub_field('image');
                     $name = get_sub_field('name');
