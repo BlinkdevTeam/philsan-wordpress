@@ -20,7 +20,7 @@
         <div class="flex flex-col gap-[20px] mt-8">
             <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                 <?php 
-                    $image_url   = $row['image'];
+                    $image_url   = $row['logo'];
                     $name        = $row['name'];
                     $description = $row['description'];
                 ?>
