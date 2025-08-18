@@ -1,7 +1,7 @@
 <?php 
     $group = get_field('two-column-section');
 ?>
-<div class="two-col-section">
+<div class="two-col-section custom-container">
     <div class="flex space-between">
         <div class="w-[60%]">
             <div class="w-[100%] image-container">

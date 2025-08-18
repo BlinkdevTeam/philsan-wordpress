@@ -1,7 +1,7 @@
 <?php 
     $group = get_field('text-icon-section');
 ?>
-<div class="text-icon-section">
+<div class="text-icon-section custom-container">
     <div class="flex space-between">
         <div class="">
             <?php if (!empty($group['title'])) : ?>
