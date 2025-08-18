@@ -26,10 +26,8 @@
                         $description = $row['description'];
                     ?>
                     <div class="swiper-slide">
-                        <div class="w-[200px]">
-                            <img class="w-full h-auto object-cover" 
-                                src="<?php echo esc_url($image_url); ?>" 
-                                alt="sponsor logo">
+                        <div class="">
+                            <img class="w-full h-auto object-cover" src="<?php echo esc_url($image_url); ?>" alt="sponsor logo">
                         </div>
                     </div>
                 <?php endforeach; ?> 
