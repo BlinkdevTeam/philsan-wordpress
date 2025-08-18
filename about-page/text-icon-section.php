@@ -1,5 +1,5 @@
 <?php 
-    $group = get_field('text-icon-section');
+    $group = get_field('text_icon_section');
 ?>
 <div class="text-icon-section custom-container">
     <div class="flex space-between">
