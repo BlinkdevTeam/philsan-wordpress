@@ -1,23 +1,18 @@
-<?php
-$about_page = get_page_by_title('About');
-if ( $about_page ) :
-    $page_id = $about_page->ID;
-    $hero = get_field('hero_section', $page_id);
+<div class="about-hero-section h-[500px] lg:h-[720px]">
+    <?php if ( have_rows('hero_section') ): ?>
+        <?php while ( have_rows('hero_section') ): the_row(); ?>
 
-    if ( $hero ) :
-        $header = $hero['header'];
-        $details = $hero['sub_header'];
-?>
+            <div class="flex space-between h-full w-full relative y-thumbnail">
+                <div class="custom-container py-[100px] mx-auto z-[2]">
+                    <div class="w-[50%] flex flex-col justify-center h-[100%]">
+                        <h1 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                        <p class="text-[18px] xl:text-[24px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-b from-[rgba(11,83,4,0.3)] to-[rgba(11,83,4,1)] w-full h-full absolute top-0 left-0 z-[1]"></div>
+                <img class="absolute w-full h-full object-cover" src="<?php echo get_sub_field('hero_image'); ?>" alt="hero-image">
+            </div>
 
-<div class="w-full h-[700px] flex flex-col justify-center items-center rounded-lg overflow-hidden shadow-lg mb-12">
-    <div class="flex flex-col justify-center items-center text-center px-4">
-        <?php if ( $details ) : ?>
-            <p class="text-lg max-w-xl"><?php echo wp_kses_post($details); ?></p>
-        <?php endif; ?>
-        <?php if ( $header ) : ?>
-            <h2 class="text-4xl font-bold mb-2"><?php echo esc_html($header); ?></h2>
-        <?php endif; ?>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </div>
-
-<?php endif; endif; ?>
