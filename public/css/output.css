@@ -789,6 +789,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2052,6 +2056,10 @@ video {
 
 .text-\[32px\] {
   font-size: 32px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .font-\[200\] {
