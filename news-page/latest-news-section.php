@@ -17,8 +17,8 @@
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => '', //means that the value is false
-                "compare" => "="
+                "value"   => '1', //means that the value is false
+                "compare" => "!="
             )
         )
     ));
