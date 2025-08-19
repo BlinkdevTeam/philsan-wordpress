@@ -54,6 +54,9 @@
                 <div class="">
                     <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     <div class="pt-[20px]">
+                        <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                            <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
+                        </div>
                         <h2 class="text-[24px] leading-[normal] font-[400] text-[#000000]"><?php the_title(); ?></h2>
                     </div>
                     <a href="https://philsan.org/38th-annual-convention/registration/" class="flex w-fit mt-[20px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">
