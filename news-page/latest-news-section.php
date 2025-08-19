@@ -1,10 +1,31 @@
 <?php
-$news = new WP_Query(array(
-    "post_type"      => "news",
-    "posts_per_page" => 5,
-    "order"          => "ASC",     
-));
+    // 1. Get the featured news (always show if exists)
+    $featured = new WP_Query(array(
+        "post_type"      => "news",
+        "posts_per_page" => 1,
+        "meta_query"     => array(
+            array(
+                "key"     => "featured_news",
+                "value"   => 1,
+                "compare" => "="
+            )
+        )
+    ));
+
+    // 2. Get up to 4 other news (exclude featured)
+    $non_featured = new WP_Query(array(
+        "post_type"      => "news",
+        "posts_per_page" => 4,
+        "meta_query"     => array(
+            array(
+                "key"     => "featured_news",
+                "value"   => 0,
+                "compare" => "="
+            )
+        )
+    ));
 ?>
+
 <div class="custom-container">
     <div class="h-[500px]">
         <div class="flex space-between h-full w-full relative y-thumbnail">
@@ -16,39 +37,41 @@ $news = new WP_Query(array(
     </div>
 
     <div class="flex gap-[50px] pt-[50px]">
-        <?php if ($news->have_posts()) : ?>
-            <?php while ($news->have_posts()) : $news->the_post(); ?>
-                <?php
-                    $image         = get_field("image");
-                    $description   = get_field("description");
-                    $featured_news = get_field("featured_news"); // true/false field
-                ?>
 
-                <?php if($featured_news) : ?>
-                    something here
-                <?php else: ?>
-                    <div class="p-[40px]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex justify-between items-center pb-[20px]">
-                                <div class="w-[60%]">
-                                    <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                                </div>
-                                <div class="">
-                                    <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="relative w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
-                            </div>
-                            <div class="flex flex-col gap-[10px]">
-                                <p class="text-[34px] font-[600] leading-normal"><?php echo esc_html($description); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
+        <?php if ($featured->have_posts()) : ?>
+            <?php while ($featured->have_posts()) : $featured->the_post(); ?>
+                <?php
+                    $image       = get_field("image");
+                    $description = get_field("description");
+                ?>
+                <!-- FEATURED NEWS -->
+                <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
+                    <h2 class="text-[24px] font-[600] text-[#1f773a]">
+                        <?php the_title(); ?> 
+                        <span class="ml-2 px-2 py-1 bg-[#FFC200] text-white text-[14px] rounded">Featured</span>
+                    </h2>
+                    <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                    <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
+                </div>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
         <?php endif; ?>
+
+        <?php if ($non_featured->have_posts()) : ?>
+            <?php while ($non_featured->have_posts()) : $non_featured->the_post(); ?>
+                <?php
+                    $image       = get_field("image");
+                    $description = get_field("description");
+                ?>
+                <!-- NON-FEATURED NEWS -->
+                <div class="p-[40px]">
+                    <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
+                    <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                    <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+
     </div>
 </div>
