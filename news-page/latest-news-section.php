@@ -19,7 +19,7 @@
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => '0',
+                "value"   => '',
                 "compare" => "="
             )
         )
