@@ -2,6 +2,7 @@
     // 1. Get the featured news (always show if exists)
     $featured = new WP_Query(array(
         "post_type"      => "news",
+        "posts_per_page" => -1,
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
@@ -14,6 +15,7 @@
     // 2. Get up to 4 other news (exclude featured)
     $non_featured = new WP_Query(array(
         "post_type"      => "news",
+        "posts_per_page" => -1,
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
@@ -22,6 +24,8 @@
             )
         )
     ));
+    
+    var_dump( get_post_meta( get_the_ID(), 'featured_news', true ) );
 ?>
 
 <div class="custom-container">
