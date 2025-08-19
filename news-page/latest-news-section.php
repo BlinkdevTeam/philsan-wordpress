@@ -7,13 +7,20 @@
                     $description = get_field("description");
                 ?>
                 <!-- FEATURED NEWS -->
-                <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
-                    <h2 class="text-[24px] font-[600] text-[#1f773a]">
-                        <?php the_title(); ?> 
-                        <span class="ml-2 px-2 py-1 bg-[#FFC200] text-white text-[14px] rounded">Featured</span>
-                    </h2>
-                    <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
-                    <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
+                <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
+                    <div>
+                        <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
+                        <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
+                    </div>
+
+                    <div class="pt-[40px]">
+                        <?php if (!empty($group['button_title'])) : ?>
+                            <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
