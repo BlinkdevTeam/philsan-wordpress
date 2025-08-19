@@ -20,8 +20,8 @@
                         <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
                     <div class="w-[60%]">
-                        <div class="py-[5px] px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                            <p><?php echo esc_html($formatted_date); ?></p>
+                        <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                            <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
                         </div>
                         <h2 class="text-[34px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[24px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
