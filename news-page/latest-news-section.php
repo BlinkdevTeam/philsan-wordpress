@@ -5,9 +5,9 @@
         'order' => 'ASC',     
     ));
 ?>
-<div class="latest-news-section h-[500px]">
-    <div class="flex space-between h-full w-full relative y-thumbnail">
-        <div class="custom-container py-[100px] mx-auto z-[2]">
+<div class="custom-container">
+    <div class="h-[500px]">
+        <div class="flex space-between h-full w-full relative y-thumbnail">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
                 <h1 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#1F773A]">Our Latest News</h1>
                 <p class="text-[18px] xl:text-[24px] text-[#000000]">Lorem ipsum dolor sit amet consectetur.</p>
