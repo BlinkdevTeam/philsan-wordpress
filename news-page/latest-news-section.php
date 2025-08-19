@@ -14,8 +14,8 @@
                     <div class="w-[60%]">
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
-                        <div class="pt-[20px]">
-                            <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
+                        <div class="mt-[20px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">
+                            <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px]">View More</a>
                         </div>
                     </div>
                 </div>
@@ -37,8 +37,8 @@
                     <div class="pt-[20px]">
                         <h2 class="text-[24px] leading-[normal] font-[400] text-[#000000]"><?php the_title(); ?></h2>
                     </div>
-                    <div class="pt-[20px]">
-                        <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
+                    <div class="mt-[20px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">
+                        <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px]">View More</a>
                     </div>
                     <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                 </div>
