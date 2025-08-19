@@ -36,17 +36,12 @@
     <div class="h-[500px]">
         <div class="flex space-between h-full w-full relative y-thumbnail">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-                <h1 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#1F773A]">Our Latest News</h1>
+                <h2 class="leading-[normal] text-[48px] xl:text-[32px] font-[700] pb-[20px] text-[#1F773A]">Our Latest News</h2>
                 <p class="text-[18px] xl:text-[24px] text-[#000000]">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
         </div>
     </div>
     
     <?php include locate_template('news-page/latest-news-section.php'); ?>
-
-    <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-        <h1 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#1F773A]">All News</h1>
-    </div>
-
     <?php include locate_template('news-page/all-news-section.php'); ?>
 </div>

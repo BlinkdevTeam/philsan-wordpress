@@ -2846,4 +2846,8 @@ body.modal-open {
   .xl\:text-\[72px\] {
     font-size: 72px;
   }
+
+  .xl\:text-\[32px\] {
+    font-size: 32px;
+  }
 }
