@@ -2136,6 +2136,10 @@ video {
   font-weight: 600;
 }
 
+.font-\[500\] {
+  font-weight: 500;
+}
+
 .italic {
   font-style: italic;
 }
@@ -2154,6 +2158,10 @@ video {
 
 .leading-\[normal\] {
   line-height: normal;
+}
+
+.leading-\[noramal\] {
+  line-height: noramal;
 }
 
 .text-\[\#000000\] {

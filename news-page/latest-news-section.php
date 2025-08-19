@@ -14,10 +14,8 @@
                     <div class="w-[60%]">
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
-                        <div class="pt-[40px]">
-                            <?php if (!empty($group['button_title'])) : ?>
-                                <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
-                            <?php endif; ?>
+                        <div class="pt-[20px]">
+                            <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
                         </div>
                     </div>
                 </div>
@@ -34,9 +32,12 @@
                     $description = get_field("description");
                 ?>
                 <!-- NON-FEATURED NEWS -->
-                <div class="p-[40px] bg-white rounded-lg shadow">
+                <div class="">
                     <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
-                    <h2 class="text-[24px] font-[600] text-[#1f773a] mb-2"><?php the_title(); ?></h2>
+                    <h2 class="text-[24px] leading-[normal] font-[500] text-[#000000]"><?php the_title(); ?></h2>
+                    <div class="pt-[20px]">
+                        <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
+                    </div>
                     <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                 </div>
             <?php endwhile; ?>
