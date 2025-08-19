@@ -5,9 +5,20 @@
                 <?php
                     $image       = get_field("image");
                     $description = get_field("description");
+                    $date        = get_field("date");
+
+                    // Reformat the date
+                    if ($date) {
+                        $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                    } else {
+                        $formatted_date = '';
+                    }
                 ?>
                 <!-- FEATURED NEWS -->
                 <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
+                    <div class="p-[10px] p-[20px]">
+                        <p><?php echo esc_html($formatted_date); ?></p>
+                    </div>
                     <div class="w-[40%]">
                         <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
@@ -30,6 +41,14 @@
                 <?php
                     $image       = get_field("image");
                     $description = get_field("description");
+                    $date        = get_field("date");
+
+                    // Reformat the date
+                    if ($date) {
+                        $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                    } else {
+                        $formatted_date = '';
+                    }
                 ?>
                 <!-- NON-FEATURED NEWS -->
                 <div class="">

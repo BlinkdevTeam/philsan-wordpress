@@ -9,6 +9,14 @@
                     <?php
                         $image       = get_field("image");
                         $description = get_field("description");
+                        $date        = get_field("date");
+
+                        // Reformat the date
+                        if ($date) {
+                            $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                        } else {
+                            $formatted_date = '';
+                        }
                     ?>
                     <div class="">
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
