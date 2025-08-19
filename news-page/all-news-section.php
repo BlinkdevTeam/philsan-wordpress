@@ -37,5 +37,5 @@
         </div>
     </div>
     
-    <?php get_template_part('news-page/latest-news-section'); ?>
+    <?php include locate_template('news-page/latest-news-section.php'); ?>
 </div>
