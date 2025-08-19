@@ -5,7 +5,7 @@
             <div class="flex space-between h-full w-full relative y-thumbnail">
                 <div class="custom-container py-[100px] mx-auto z-[2]">
                     <div class="w-[50%] flex flex-col justify-center h-[100%]">
-                        <h1 class="leading-[34px] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                        <h1 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                         <p class="text-[18px] xl:text-[24px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                     </div>
                 </div>
