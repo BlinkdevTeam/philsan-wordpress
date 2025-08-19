@@ -19,11 +19,9 @@
                 "key"     => "featured_news",
                 "value"   => '0', //means that the value is false
                 "compare" => "!="
-            )
+            )a
         )
     ));
-    
-    var_dump( get_post_meta( get_the_ID(), 'featured_news', true ) );
 ?>
 
 <div class="custom-container">
