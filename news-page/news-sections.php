@@ -50,14 +50,17 @@
                     <input id="search-input" class="pl-[40px] py-[10px] pr-[10px] text-[#000000] w-[100%] border-[1px] border-[#007831] rounded-full" type="text" placeholder="Search">
                 </div>
                 <div class="flex gap-[20px] w-[100%] justify-end pt-[10px]">
-                    <div id="by-title" class="cursor-pointer kp-search-category kp-search-active">
-                        <p>By Title</p>
+                    <div id="by-title" class="cursor-pointer search-category search-active">
+                        <p class="text-[18px]">By Title</p>
                     </div>
                     <div class="text-[#CECECE]">|</div>
-                    <div id="by-keyword" class="cursor-pointer kp-search-category">
-                        <p>By Keyword</p>
+                    <div id="by-keyword" class="cursor-pointer search-category">
+                        <p class="text-[18px]">By Keyword</p>
                     </div>
                     <div class="text-[#CECECE]">|</div>
+                    <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                        <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
+                    </div>
                 </div>
             </div>
         </div>
