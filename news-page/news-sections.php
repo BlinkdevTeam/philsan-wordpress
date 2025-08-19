@@ -34,12 +34,12 @@
 
 <div class="pt-[50px]">
     <div class="custom-container">
-        <div class="flex justify-between gap-[20px]">
+        <div class="">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
                 <h2 class="leading-[normal] text-[48px] xl:text-[72px] font-[700] text-[#1F773A]">Our Latest News</h2>
                 <p class="text-[18px] xl:text-[24px] text-[#000000]">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
-            <div class="flex-col items-right">
+            <div class="flex flex-col items-right w-[80%] mx-auto">
                 <div class="relative flex items-center w-[100%] justify-end">
                     <svg class="absolute left-[10px]" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.8477 21.75C6.19766 21.75 1.59766 17.15 1.59766 11.5C1.59766 5.85 6.19766 1.25 11.8477 1.25C17.4977 1.25 22.0977 5.85 22.0977 11.5C22.0977 17.15 17.4977 21.75 11.8477 21.75ZM11.8477 2.75C7.01766 2.75 3.09766 6.68 3.09766 11.5C3.09766 16.32 7.01766 20.25 11.8477 20.25C16.6777 20.25 20.5977 16.32 20.5977 11.5C20.5977 6.68 16.6777 2.75 11.8477 2.75Z" fill="#444242"/>
