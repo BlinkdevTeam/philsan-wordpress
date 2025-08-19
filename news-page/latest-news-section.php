@@ -24,6 +24,8 @@
             )
         )
     ));
+    
+    var_dump( get_post_meta( get_the_ID(), 'featured_news', true ) );
 ?>
 
 <div class="custom-container">
