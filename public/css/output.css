@@ -910,6 +910,10 @@ video {
   height: auto;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -2138,6 +2142,10 @@ video {
 
 .font-\[500\] {
   font-weight: 500;
+}
+
+.font-\[400\] {
+  font-weight: 400;
 }
 
 .italic {

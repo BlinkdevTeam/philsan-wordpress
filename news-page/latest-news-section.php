@@ -33,8 +33,10 @@
                 ?>
                 <!-- NON-FEATURED NEWS -->
                 <div class="">
-                    <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
-                    <h2 class="text-[24px] leading-[normal] font-[500] text-[#000000]"><?php the_title(); ?></h2>
+                    <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                    <div class="pt-[20px]">
+                        <h2 class="text-[24px] leading-[normal] font-[400] text-[#000000]"><?php the_title(); ?></h2>
+                    </div>
                     <div class="pt-[20px]">
                         <a href="https://philsan.org/38th-annual-convention/registration/" class="text-[#ffffff] text-bold text-[18px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">View More</a>
                     </div>

@@ -12,14 +12,15 @@
         )
     ));
 
-    // 2. Get up to 4 other news (exclude featured)
     $non_featured = new WP_Query(array(
         "post_type"      => "news",
-        "posts_per_page" => -1,
+        "posts_per_page" => 3,  // only 3 latest
+        "orderby"        => "date",
+        "order"          => "DESC", // newest first
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => '1', //means that the value is false
+                "value"   => '1',
                 "compare" => "!="
             )
         )
