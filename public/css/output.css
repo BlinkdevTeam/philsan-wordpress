@@ -805,6 +805,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
 .block {
   display: block;
 }
@@ -1473,6 +1477,11 @@ video {
 .border-\[\#007831\] {
   --tw-border-opacity: 1;
   border-color: rgb(0 120 49 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#000000\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
 .border-t-green-600 {
