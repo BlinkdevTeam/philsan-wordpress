@@ -15,8 +15,8 @@
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[34px] font-[600] leading-normal mt-4"><?php echo esc_html($description); ?></p>
                         <a href="https://philsan.org/38th-annual-convention/registration/" class="mt-[20px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-2xl rounded-br-2xl">
-                            <div class="text-[#ffffff] text-bold text-[18px]">View More</div>
-                    </a>
+                            <span class="text-[#ffffff] text-bold text-[18px]">View More</span>
+                        </a>
                     </div>
                 </div>
             <?php endwhile; ?>
