@@ -6,7 +6,7 @@
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => 1,
+                "value"   => '1',
                 "compare" => "="
             )
         )
@@ -19,7 +19,7 @@
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => 0,
+                "value"   => '0',
                 "compare" => "="
             )
         )
