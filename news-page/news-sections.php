@@ -26,10 +26,11 @@
         )
     ));
 
-    // 2. Get up to 4 other news (exclude featured)
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $all_news = new WP_Query(array(
         "post_type"      => "news",
-        "posts_per_page" => -1,
+        "posts_per_page" => 12, // change per-page limit
+        "paged"          => $paged,
     ));
 ?>
 

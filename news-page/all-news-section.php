@@ -4,7 +4,7 @@
     </div>
     <div class="flex flex-col gap-[50px] pt-[50px]">
         <?php if ($all_news->have_posts()) : ?>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
                 <?php while ($all_news->have_posts()) : $all_news->the_post(); ?>
                     <?php
                         $image       = get_field("image");
@@ -24,6 +24,18 @@
                 <?php wp_reset_postdata(); ?>
             </div>
         <?php endif; ?>
+    </div>
+    <div class="flex justify-center space-x-2 mt-6">
+    <?php
+        echo paginate_links(array(
+            'total'   => $all_news->max_num_pages,
+            'current' => $paged,
+            'prev_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">«</span>',
+            'next_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">»</span>',
+            'before_page_number' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">',
+            'after_page_number'  => '</span>',
+        ));
+        ?>
     </div>
 </div>
 
