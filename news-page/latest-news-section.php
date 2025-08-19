@@ -6,7 +6,7 @@
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => '1',
+                "value"   => '1',  //means that the value is true
                 "compare" => "="
             )
         )
@@ -19,13 +19,12 @@
         "meta_query"     => array(
             array(
                 "key"     => "featured_news",
-                "value"   => '',
+                "value"   => '', //means that the value is false
                 "compare" => "="
             )
         )
     ));
     
-    var_dump( get_post_meta( get_the_ID(), 'featured_news', true ) );
 ?>
 
 <div class="custom-container">
