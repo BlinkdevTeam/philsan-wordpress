@@ -28,6 +28,9 @@ function philsan_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'philsan_enqueue_styles');
 
+//INCLUDES 
+include(get_stylesheet_directory() . '/functions/news_event_api.php');
+
 // Register navigation menus
 function philsan_register_menus() {
     register_nav_menus(array(
