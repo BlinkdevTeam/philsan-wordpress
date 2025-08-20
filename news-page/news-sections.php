@@ -70,6 +70,6 @@
         
         <?php include locate_template('news-page/latest-news-section.php'); ?>
         <?php include locate_template('news-page/all-news-section.php'); ?>
-        <?php get_template_part('filter-sidebar'); ?>
+        <?php get_template_part('template-part/filter-sidebar'); ?>
     </div>
 </div>

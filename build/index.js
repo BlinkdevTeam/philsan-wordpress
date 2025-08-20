@@ -79,6 +79,7 @@ class SidebarFilter {
         sidebar.classList.remove('translate-x-full');
         backdrop.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        console.log("trigger filter");
       };
       const closeSidebar = () => {
         sidebar.classList.add('translate-x-full');
