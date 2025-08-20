@@ -57,6 +57,71 @@ class SpeakerModal {
 
 /***/ }),
 
+/***/ "./javascripts/newsEventSearch.js":
+/*!****************************************!*\
+  !*** ./javascripts/newsEventSearch.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class NewsEventSearch {
+  constructor() {
+    document.addEventListener("DOMContentLoaded", () => {
+      this.init();
+    });
+  }
+  init() {
+    const searchBtn = document.getElementById("searchBtn");
+    if (!searchBtn) return; // safe check
+
+    searchBtn.addEventListener("click", () => {
+      this.fetchResults({
+        postType: this.getValue("postType"),
+        keyword: this.getValue("searchKeyword"),
+        date: this.getValue("filterDate"),
+        // author: this.getValue("filterAuthor"),
+        category: this.getValue("filterCategory")
+      });
+    });
+  }
+  getValue(id) {
+    const el = document.getElementById(id);
+    return el ? el.value : "";
+  }
+  async fetchResults(params) {
+    try {
+      const query = new URLSearchParams(params).toString();
+      const response = await fetch(`/wp-json/global-search/v1/search?${query}`);
+      const data = await response.json();
+      this.renderResults(data);
+    } catch (error) {
+      console.error("Search error:", error);
+    }
+  }
+  renderResults(data) {
+    const resultsContainer = document.getElementById("resultsContainer");
+    if (!resultsContainer) return;
+    if (!data.length) {
+      resultsContainer.innerHTML = "<p>No results found.</p>";
+      return;
+    }
+    resultsContainer.innerHTML = data.map(item => `
+                <div class="search-result">
+                    <h3><a href="${item.link}">${item.title}</a></h3>
+                    <p>${item.excerpt}</p>
+                </div>
+            `).join("");
+  }
+}
+
+// init class
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NewsEventSearch);
+
+/***/ }),
+
 /***/ "./javascripts/sidebarFilter.js":
 /*!**************************************!*\
   !*** ./javascripts/sidebarFilter.js ***!
@@ -164,6 +229,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../javascripts/38thSpeakerModal */ "./javascripts/38thSpeakerModal.js");
 /* harmony import */ var _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascripts/sidebarFilter */ "./javascripts/sidebarFilter.js");
+/* harmony import */ var _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascripts/newsEventSearch */ "./javascripts/newsEventSearch.js");
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -174,6 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (document.querySelector(".with-filters")) {
     new _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__["default"]();
+    new _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__["default"]();
   }
 });
 })();
