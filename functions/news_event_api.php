@@ -1,47 +1,71 @@
 <?php
 // Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
-}
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Register custom REST API endpoint
+// Register global REST API endpoint
 add_action('rest_api_init', function () {
     register_rest_route('global/v1', '/search', array(
         'methods' => 'GET',
         'callback' => 'global_search_handler',
-        'permission_callback' => '__return_true'
+        'permission_callback' => '__return_true',
     ));
 });
 
 function global_search_handler($request) {
+    $keyword = sanitize_text_field($request['keyword'] ?? '');
+    $date    = sanitize_text_field($request['date'] ?? '');
+    $author  = sanitize_text_field($request['author'] ?? '');
+    $category_filters = sanitize_text_field($request['category_filters'] ?? '');
+
     $args = array(
-        'post_type' => array('post', 'event'), // You can extend globally
-        's' => sanitize_text_field($request['keyword'] ?? ''), // Keyword search
+        'post_type'      => array('post', 'event'), // global search
         'posts_per_page' => 10,
+        's'              => $keyword, // default WP search
+        'meta_query'     => array(),
+        'tax_query'      => array('relation' => 'AND'),
     );
 
-    // Filters
-    if (!empty($request['date'])) {
+    // Search in custom fields (ACF)
+    if ($keyword) {
         $args['meta_query'][] = array(
-            'key' => 'date',
-            'value' => sanitize_text_field($request['date']),
+            'relation' => 'OR',
+            array(
+                'key'     => 'description', // ACF field
+                'value'   => $keyword,
+                'compare' => 'LIKE',
+            ),
+            array(
+                'key'     => 'author', // ACF field
+                'value'   => $keyword,
+                'compare' => 'LIKE',
+            ),
+        );
+    }
+
+    // Filter by date
+    if ($date) {
+        $args['meta_query'][] = array(
+            'key'     => 'date',
+            'value'   => $date,
             'compare' => '='
         );
     }
 
-    // if (!empty($request['author'])) {
-    //     $args['tax_query'][] = array(
-    //         'taxonomy' => 'author',
-    //         'field' => 'slug',
-    //         'terms' => sanitize_text_field($request['author']),
-    //     );
-    // }
+    // Filter by author field (ACF)
+    if ($author) {
+        $args['meta_query'][] = array(
+            'key'     => 'author',
+            'value'   => $author,
+            'compare' => '='
+        );
+    }
 
-    if (!empty($request['category_filters'])) {
+    // Filter by category-filters taxonomy
+    if ($category_filters) {
         $args['tax_query'][] = array(
             'taxonomy' => 'category-filters',
-            'field' => 'slug',
-            'terms' => explode(',', sanitize_text_field($request['category_filters'])),
+            'field'    => 'slug',
+            'terms'    => explode(',', $category_filters),
         );
     }
 
@@ -52,11 +76,11 @@ function global_search_handler($request) {
         while ($query->have_posts()) {
             $query->the_post();
             $results[] = [
-                'id'    => get_the_ID(),
-                'title' => get_the_title(),
-                'link'  => get_permalink(),
-                'date'  => get_field('date'),
-                // 'author'=> wp_get_post_terms(get_the_ID(), 'author', ['fields' => 'names']),
+                'id'         => get_the_ID(),
+                'title'      => get_the_title(),
+                'link'       => get_permalink(),
+                'date'       => get_field('date'),
+                'author'     => get_field('author'), // ACF author field
                 'categories' => wp_get_post_terms(get_the_ID(), 'category-filters', ['fields' => 'names']),
             ];
         }
