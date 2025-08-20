@@ -5,7 +5,12 @@ class SidebarFilter {
         // const sidebar = document.getElementById('sidebar');
         const backdrop = document.getElementById('backdrop');
 
-        if (!openBtn || !closeBtn || !sidebar || !backdrop) {
+        // if (!openBtn || !closeBtn || !sidebar || !backdrop) {
+        //     console.warn("Sidebar elements missing");
+        //     return;
+        // }
+
+        if (!openBtn || !backdrop) {
             console.warn("Sidebar elements missing");
             return;
         }
