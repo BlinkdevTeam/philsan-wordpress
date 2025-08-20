@@ -16,13 +16,13 @@ $filter_group = array(
   <?php foreach ($filter_group as $filter): ?>
     <div>
       <div 
-        id="news-side-filter-head-<?php echo $filter['index']; ?>"
+        id="side-filter-head-<?php echo $filter['index']; ?>"
         class="flex gap-[20px] justify-between items-center text-[14px] xl:text-[18px] font-[600] border-b-[1px] border-[#CECECE] py-[10px] cursor-pointer"
       >
         <p class="text-[16px]"><?php echo $filter['key']; ?></p>
       </div>
 
-      <ul id="news-filter-content-<?php echo $filter['index']; ?>" class="relative py-[20px] z-[99] w-[100%] flex flex-col">
+      <ul id="filter-content-<?php echo $filter['index']; ?>" class="relative py-[10px] z-[99] w-[100%] flex flex-col">
         
         <?php if ($filter['type'] === 'taxonomy'): ?>
           <?php 

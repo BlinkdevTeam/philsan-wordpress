@@ -56,7 +56,7 @@
                     <p class="text-[18px] text-[#1F773A]">Filter</p>
                 </div>
             </div>
-            <div id="resultsContainer"></div>
+            <div id="search-results"></div>
             <!-- <div class="flex flex-col items-right w-[90%] lg:w-[80%] xl:w-[800px] mx-auto pt-[20px]">
                 <div class="relative flex items-center w-[100%] justify-end">
                     <svg class="absolute left-[10px]" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
