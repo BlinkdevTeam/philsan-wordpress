@@ -42,6 +42,7 @@ class NewsEventSearch {
             }
 
             results.forEach(item => {
+                console.log("item", item)
                 const div = document.createElement("div");
                 div.classList.add("search-item");
                 div.innerHTML = `
