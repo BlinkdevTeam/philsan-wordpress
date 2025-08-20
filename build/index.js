@@ -69,49 +69,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class NewsEventSearch {
   constructor() {
-    document.addEventListener("DOMContentLoaded", () => {
-      this.init();
-    });
-  }
-  init() {
-    const searchBtn = document.getElementById("searchBtn");
-    if (!searchBtn) return; // safe check
+    this.searchInput = document.querySelector("#news-event-search-input");
+    this.resultsContainer = document.querySelector("#resultsContainer");
+    if (!this.searchInput || !this.resultsContainer) return; // stop if not on a page with search
 
-    searchBtn.addEventListener("click", () => {
+    this.registerEvents();
+  }
+  registerEvents() {
+    this.searchInput.addEventListener("input", () => {
+      const keyword = this.searchInput.value.trim();
       this.fetchResults({
-        postType: this.getValue("postType"),
-        keyword: this.getValue("searchKeyword"),
-        date: this.getValue("filterDate"),
-        // author: this.getValue("filterAuthor"),
-        category: this.getValue("filterCategory")
+        postType: this.detectPostType(),
+        keyword
       });
     });
   }
-  getValue(id) {
-    const el = document.getElementById(id);
-    return el ? el.value : "";
+  detectPostType() {
+    // Detect based on <body> classes (WordPress always adds these)
+    if (document.body.classList.contains("post-type-archive-news")) {
+      return "news";
+    }
+    if (document.body.classList.contains("post-type-archive-event")) {
+      return "event";
+    }
+    // fallback
+    return "post";
   }
   async fetchResults(params) {
+    const query = new URLSearchParams(params).toString();
     try {
-      const query = new URLSearchParams(params).toString();
-      const response = await fetch(`/wp-json/global-search/v1/search?${query}`);
-      const data = await response.json();
-      this.renderResults(data);
+      const response = await fetch(`/wp-json/myplugin/v1/search?${query}`);
+      const results = await response.json();
+      this.renderResults(results);
     } catch (error) {
-      console.error("Search error:", error);
+      console.error("Search failed:", error);
     }
   }
-  renderResults(data) {
-    const resultsContainer = document.getElementById("resultsContainer");
-    if (!resultsContainer) return;
-    if (!data.length) {
-      resultsContainer.innerHTML = "<p>No results found.</p>";
+  renderResults(results) {
+    if (!results || results.length === 0) {
+      this.resultsContainer.innerHTML = `<p>No results found.</p>`;
       return;
     }
-    resultsContainer.innerHTML = data.map(item => `
-                <div class="search-result">
-                    <h3><a href="${item.link}">${item.title}</a></h3>
-                    <p>${item.excerpt}</p>
+    this.resultsContainer.innerHTML = results.map(item => `
+                <div class="search-item">
+                    <a href="${item.link}">${item.title}</a>
                 </div>
             `).join("");
   }
