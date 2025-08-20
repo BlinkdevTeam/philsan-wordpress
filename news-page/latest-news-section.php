@@ -6,6 +6,7 @@
                     $image       = get_field("image");
                     $description = get_field("description");
                     $date        = get_field("date");
+                    $categories = get_the_terms( get_the_ID(), 'category_filter' );
 
                     // Reformat the date
                     if ($date) {
@@ -20,8 +21,41 @@
                         <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
                     <div class="w-[60%]">
-                        <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                            <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
+                        <div>
+                            <?php
+                                if ($categories) {
+                                    $first_category = $categories[0];
+                                    $extra_count = count($categories) - 1;
+                            ?>
+                                    <div class="relative group inline-block">
+                                        <!-- First Category -->
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 text-sm rounded">
+                                            <?php echo esc_html($first_category->name); ?>
+                                        </span>
+
+                                        <!-- Extra count -->
+                                        <?php if ($extra_count > 0): ?>
+                                            <span class="ml-1 px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">
+                                                +<?php echo $extra_count; ?>
+                                            </span>
+
+                                            <!-- Popup with all categories -->
+                                            <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded p-3 text-sm w-max z-10">
+                                                <ul class="space-y-1">
+                                                    <?php foreach ($categories as $cat): ?>
+                                                        <li class="text-gray-800"><?php echo esc_html($cat->name); ?></li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                    <?php
+                                }
+                            ?>
+
+                            <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
+                            </div>
                         </div>
                         <h2 class="text-[34px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[24px] font-[400] leading-normal mt-[20px]"><?php echo esc_html($description); ?></p>
