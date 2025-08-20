@@ -20,9 +20,6 @@ $filter_group = array(
         class="flex gap-[20px] justify-between items-center text-[14px] xl:text-[18px] font-[600] border-b-[1px] border-[#CECECE] py-[10px] cursor-pointer"
       >
         <p class="text-[16px]"><?php echo $filter['key']; ?></p>
-        <svg width="22" height="8" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 2L16 16L2 2" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
       </div>
 
       <ul id="news-filter-content-<?php echo $filter['index']; ?>" class="relative py-[20px] z-[99] w-[100%] flex flex-col">
