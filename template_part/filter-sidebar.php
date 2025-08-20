@@ -36,10 +36,17 @@ $filter_group = array(
           ?>
           <?php if (!is_wp_error($terms)) : ?>
             <?php foreach ($terms as $term) : ?>
-              <li class="flex items-center cursor-pointer"
-                  data-taxonomy="<?php echo $filter['value']; ?>"
-                  data-value="<?php echo esc_attr($term->slug); ?>">
-                <?php echo esc_html($term->name); ?>
+              <li class="flex items-center cursor-pointer gap-2">
+                <input 
+                  type="checkbox" 
+                  class="taxonomy-filter-checkbox"
+                  data-taxonomy="<?php echo esc_attr($filter['value']); ?>"
+                  value="<?php echo esc_attr($term->slug); ?>"
+                  id="<?php echo esc_attr($filter['value'] . '-' . $term->slug); ?>"
+                >
+                <label for="<?php echo esc_attr($filter['value'] . '-' . $term->slug); ?>">
+                  <?php echo esc_html($term->name); ?>
+                </label>
               </li>
             <?php endforeach; ?>
           <?php endif; ?>
@@ -56,10 +63,17 @@ $filter_group = array(
             ");
           ?>
           <?php foreach ($results as $date_val) : ?>
-            <li class="flex items-center cursor-pointer"
+            <li class="flex items-center cursor-pointer gap-2">
+              <input 
+                type="checkbox" 
+                class="date-filter-checkbox"
                 data-meta="date"
-                data-value="<?php echo esc_attr($date_val); ?>">
-              <?php echo esc_html($date_val); ?>
+                value="<?php echo esc_attr($date_val); ?>"
+                id="date-<?php echo esc_attr($date_val); ?>"
+              >
+              <label for="date-<?php echo esc_attr($date_val); ?>">
+                <?php echo esc_html($date_val); ?>
+              </label>
             </li>
           <?php endforeach; ?>
         
