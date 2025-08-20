@@ -45,10 +45,7 @@ class NewsEventSearch {
                 console.log("item", item)
                 const div = document.createElement("div");
                 div.classList.add("search-item");
-                div.innerHTML = `
-                    <h3>${item.title.rendered}</h3>
-                    <a href="${item.link}">Read more</a>
-                `;
+                div.innerHTML = `<h3>${item.title}</h3>`;
                 this.resultsContainer.appendChild(div);
             });
         }
