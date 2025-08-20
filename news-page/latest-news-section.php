@@ -1,4 +1,5 @@
 <div class="flex flex-col gap-[50px] pt-[50px]">
+    <!-- FEATURED NEWS BUT MIGHT NOT BE THE LATEST -->
     <?php if ($featured->have_posts()) : ?>
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
@@ -39,7 +40,8 @@
             <?php wp_reset_postdata(); ?>
         </div>
     <?php endif; ?>
-
+    
+    <!-- NON FEATURED BUT LATEST NEWS -->
     <?php if ($non_featured->have_posts()) : ?>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php while ($non_featured->have_posts()) : $non_featured->the_post(); ?>
@@ -47,6 +49,7 @@
                     $image       = get_field("image");
                     $description = get_field("description");
                     $date        = get_field("date");
+                    $categories = get_the_terms( get_the_ID(), 'category-filters' );
 
                     // Reformat the date
                     if ($date) {
@@ -59,6 +62,7 @@
                 <div class="">
                     <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     <div class="pt-[20px]">
+                        <?php include locate_template('news-page/all-news-section.php'); ?>
                         <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                             <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
                         </div>
