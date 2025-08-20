@@ -55,6 +55,44 @@ class SpeakerModal {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SpeakerModal);
 
+/***/ }),
+
+/***/ "./javascripts/sidebarFilter.js":
+/*!**************************************!*\
+  !*** ./javascripts/sidebarFilter.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class SidebarFilter {
+  constructor() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openFilter');
+      const closeBtn = document.getElementById('closeFilter');
+      const sidebar = document.getElementById('sidebar');
+      const backdrop = document.getElementById('backdrop');
+      if (!openBtn || !closeBtn || !sidebar || !backdrop) return;
+      const openSidebar = () => {
+        sidebar.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      };
+      const closeSidebar = () => {
+        sidebar.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      };
+      openBtn.addEventListener('click', openSidebar);
+      closeBtn.addEventListener('click', closeSidebar);
+      backdrop.addEventListener('click', closeSidebar);
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SidebarFilter);
+
 /***/ })
 
 /******/ 	});
@@ -121,12 +159,17 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../javascripts/38thSpeakerModal */ "./javascripts/38thSpeakerModal.js");
+/* harmony import */ var _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascripts/sidebarFilter */ "./javascripts/sidebarFilter.js");
+
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JS Running!!!");
   const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   if (document.querySelector(".speaker-item")) {
     annualSpeakerModal.handleModal();
+  }
+  if (document.querySelector(".with-filters")) {
+    new _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__["default"]();
   }
 });
 })();

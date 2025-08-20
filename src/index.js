@@ -1,4 +1,5 @@
 import SpeakerModal from "../javascripts/38thSpeakerModal";
+import SidebarFilter from "../javascripts/sidebarFilter";
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JS Running!!!")
@@ -7,5 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (document.querySelector(".speaker-item")) {
         annualSpeakerModal.handleModal();
+    }
+
+    if(document.querySelector(".with-filters")) {
+        new SidebarFilter();
     }
 });
