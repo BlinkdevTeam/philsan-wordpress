@@ -20,7 +20,7 @@ function global_search_handler($request) {
     $category_filters = sanitize_text_field($request['category_filters'] ?? '');
 
     $args = array(
-        'post_type'      => array('post', 'event', 'news'),
+        'post_type'      => array('event', 'news'),
         'posts_per_page' => 10,
         's'              => $keyword, // still needed for relevance
         'meta_query'     => array(),
