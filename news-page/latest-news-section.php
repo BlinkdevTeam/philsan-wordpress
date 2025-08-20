@@ -21,7 +21,7 @@
                         <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
                     <div class="w-[60%]">
-                        <div>
+                        <div class="flex justify-between">
                             <?php
                                 if ($categories) {
                                     $first_category = $categories[0];
@@ -35,7 +35,7 @@
 
                                         <!-- Extra count -->
                                         <?php if ($extra_count > 0): ?>
-                                            <span class="ml-1 px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">
+                                            <span class="ml-1 px-2 py-1 bg-green-100 text-green-800 text-sm rounded">
                                                 +<?php echo $extra_count; ?>
                                             </span>
 
@@ -43,7 +43,7 @@
                                             <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded p-3 text-sm w-max z-10">
                                                 <ul class="space-y-1">
                                                     <?php foreach ($categories as $cat): ?>
-                                                        <li class="text-gray-800"><?php echo esc_html($cat->name); ?></li>
+                                                        <li class="text-gray-800 text-[18px]"><?php echo esc_html($cat->name); ?></li>
                                                     <?php endforeach; ?>
                                                 </ul>
                                             </div>
