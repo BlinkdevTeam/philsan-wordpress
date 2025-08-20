@@ -62,7 +62,7 @@
                 <div class="">
                     <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     <div class="pt-[20px]">
-                        <?php include locate_template('news-page/all-news-section.php'); ?>
+                        <?php include locate_template('news-page/category-element.php'); ?>
                         <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                             <p class="text-[18px]"><?php echo esc_html($formatted_date); ?></p>
                         </div>
