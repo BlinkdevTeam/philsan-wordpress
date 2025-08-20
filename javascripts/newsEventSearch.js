@@ -12,26 +12,26 @@ class NewsEventSearch {
         }
     }
 
-    async handleSearch() {
-        const value = this.searchInput.value.trim();
-        console.log("Search value:", value);
+        async handleSearch() {
+            const value = this.searchInput.value.trim();
+            console.log("Search value:", value);
 
-        if (!value) return;
+            if (!value) return;
 
-        console.log("Search value:", value);
+            console.log("Search value:", value);
 
-        try {
-            // Example: search in "news" post type
-            const res = await fetch(`/wp-json/global/v1/search?keyword=${encodeURIComponent(value)}`);
-            const data = await res.json();
+            try {
+                // Example: search in "news" post type
+                const res = await fetch(`/wp-json/global/v1/search?keyword=${encodeURIComponent(value)}`);
+                const data = await res.json();
 
-            console.log("API Results:", data);
+                console.log("API Results:", data);
 
-            // this.renderResults(data);
-        } catch (error) {
-            console.error("Search error:", error);
+                // this.renderResults(data);
+            } catch (error) {
+                console.error("Search error:", error);
+            }
         }
-    }
     }
 
 // init class

@@ -18,7 +18,7 @@ function global_search_handler($request) {
     $category_filters = sanitize_text_field($request['category_filters'] ?? '');
 
     $args = array(
-        'post_type'      => array('post', 'event'), // global search
+        'post_type'      => array('post', 'event', 'news'), // global search
         'posts_per_page' => 10,
         's'              => $keyword, // default WP search
         'meta_query'     => array(),
