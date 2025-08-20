@@ -12,30 +12,45 @@ add_action('rest_api_init', function () {
 });
 
 function global_search_handler($request) {
+    global $wpdb;
+
     $keyword = sanitize_text_field($request['keyword'] ?? '');
     $date    = sanitize_text_field($request['date'] ?? '');
     $author  = sanitize_text_field($request['author'] ?? '');
     $category_filters = sanitize_text_field($request['category_filters'] ?? '');
 
     $args = array(
-        'post_type'      => array('post', 'event', 'news'), // global search
+        'post_type'      => array('post', 'event', 'news'),
         'posts_per_page' => 10,
-        's'              => $keyword, // default WP search
+        's'              => $keyword, // still needed for relevance
         'meta_query'     => array(),
         'tax_query'      => array('relation' => 'AND'),
     );
+
+    // --- CUSTOM PARTIAL SEARCH HOOK ---
+    if ($keyword) {
+        add_filter('posts_where', function($where) use ($keyword, $wpdb) {
+            // Escape LIKE special chars
+            $like = '%' . $wpdb->esc_like($keyword) . '%';
+            $where .= $wpdb->prepare(
+                " OR {$wpdb->posts}.post_title LIKE %s OR {$wpdb->posts}.post_content LIKE %s ",
+                $like, $like
+            );
+            return $where;
+        });
+    }
 
     // Search in custom fields (ACF)
     if ($keyword) {
         $args['meta_query'][] = array(
             'relation' => 'OR',
             array(
-                'key'     => 'description', // ACF field
+                'key'     => 'description',
                 'value'   => $keyword,
                 'compare' => 'LIKE',
             ),
             array(
-                'key'     => 'author', // ACF field
+                'key'     => 'author',
                 'value'   => $keyword,
                 'compare' => 'LIKE',
             ),
@@ -51,7 +66,7 @@ function global_search_handler($request) {
         );
     }
 
-    // Filter by author field (ACF)
+    // Filter by author
     if ($author) {
         $args['meta_query'][] = array(
             'key'     => 'author',
@@ -60,7 +75,7 @@ function global_search_handler($request) {
         );
     }
 
-    // Filter by category-filters taxonomy
+    // Filter by taxonomy
     if ($category_filters) {
         $args['tax_query'][] = array(
             'taxonomy' => 'category-filters',
@@ -80,12 +95,17 @@ function global_search_handler($request) {
                 'title'      => get_the_title(),
                 'link'       => get_permalink(),
                 'date'       => get_field('date'),
-                'author'     => get_field('author'), // ACF author field
+                'author'     => get_field('author'),
                 'categories' => wp_get_post_terms(get_the_ID(), 'category-filters', ['fields' => 'names']),
             ];
         }
     }
     wp_reset_postdata();
+
+    // Remove the filter after query so it doesn’t affect others
+    if ($keyword) {
+        remove_all_filters('posts_where');
+    }
 
     return $results;
 }
