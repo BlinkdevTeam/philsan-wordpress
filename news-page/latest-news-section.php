@@ -6,7 +6,7 @@
                     $image       = get_field("image");
                     $description = get_field("description");
                     $date        = get_field("date");
-                    $categories = get_the_terms( get_the_ID(), 'category_filter' );
+                    $categories = get_the_terms( get_the_ID(), 'category-filters' );
 
                     // Reformat the date
                     if ($date) {
