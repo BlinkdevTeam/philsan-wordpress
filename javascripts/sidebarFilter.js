@@ -1,7 +1,7 @@
 class SidebarFilter {
     constructor() {
         const openBtn = document.getElementById('openFilter');
-        // const closeBtn = document.getElementById('closeFilter');
+        const closeBtn = document.getElementById('closeFilter');
         const sidebar = document.getElementById('sidebar');
         const backdrop = document.getElementById('backdrop');
 
@@ -9,15 +9,7 @@ class SidebarFilter {
         //     console.warn("Sidebar elements missing");
         //     return;
         // }
-
-        console.log(backdrop)
-        console.log(openBtn)
-
-        if (!openBtn || !backdrop) {
-            console.warn("Sidebar elements missing");
-            return;
-        }
-
+        
         const openSidebar = () => {
             sidebar.classList.remove('translate-x-full');
             backdrop.classList.remove('hidden');
