@@ -79,6 +79,8 @@ class SidebarFilter {
     //     return;
     // }
 
+    console.log(backdrop);
+    console.log(openBtn);
     if (!openBtn || !backdrop) {
       console.warn("Sidebar elements missing");
       return;
