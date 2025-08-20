@@ -6,7 +6,7 @@ class SidebarFilter {
             const sidebar = document.getElementById('sidebar');
             const backdrop = document.getElementById('backdrop');
 
-            if (!openBtn || !closeBtn || !sidebar || !backdrop) return;
+            // if (!openBtn || !closeBtn || !sidebar || !backdrop) return;
 
             const openSidebar = () => {
                 sidebar.classList.remove('translate-x-full');
