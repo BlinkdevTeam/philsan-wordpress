@@ -1,3 +1,4 @@
+<!-- this is the category you will on every news item -->
 <?php
     if ($categories) {
         $first_category = $categories[0];
