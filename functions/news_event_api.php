@@ -20,24 +20,25 @@ function global_search_handler($request) {
     $category_filters = sanitize_text_field($request['category_filters'] ?? '');
 
     $args = array(
-        'post_type'      => array('event', 'news'),
+        'post_type'      => 'news', // ✅ only news posts
         'posts_per_page' => 10,
-        's'              => $keyword, // still needed for relevance
+        's'              => $keyword,
         'meta_query'     => array(),
         'tax_query'      => array('relation' => 'AND'),
     );
 
-    // --- CUSTOM PARTIAL SEARCH HOOK ---
+    // --- CUSTOM SEARCH HOOK (scoped to 'news') ---
     if ($keyword) {
-        add_filter('posts_where', function($where) use ($keyword, $wpdb) {
-            // Escape LIKE special chars
-            $like = '%' . $wpdb->esc_like($keyword) . '%';
-            $where .= $wpdb->prepare(
-                " OR {$wpdb->posts}.post_title LIKE %s OR {$wpdb->posts}.post_content LIKE %s ",
-                $like, $like
-            );
-            return $where;
-        });
+        add_filter('posts_search', function($search, $wp_query) use ($keyword, $wpdb) {
+            if ($wp_query->get('post_type') === 'news') {
+                $like = '%' . $wpdb->esc_like($keyword) . '%';
+                $search .= $wpdb->prepare(
+                    " OR ({$wpdb->posts}.post_title LIKE %s OR {$wpdb->posts}.post_content LIKE %s)",
+                    $like, $like
+                );
+            }
+            return $search;
+        }, 10, 2);
     }
 
     // Search in custom fields (ACF)
@@ -102,9 +103,9 @@ function global_search_handler($request) {
     }
     wp_reset_postdata();
 
-    // Remove the filter after query so it doesn’t affect others
+    // Clean up the filter
     if ($keyword) {
-        remove_all_filters('posts_where');
+        remove_all_filters('posts_search');
     }
 
     return $results;
