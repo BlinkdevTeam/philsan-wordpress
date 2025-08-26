@@ -100,16 +100,21 @@ class NewsEventSearch {
 
         // Add selected dates
         const selectedDates = this.getCheckedValues(".date-filter-checkbox");
+        
         if (selectedDates.length > 0) {
             params.set("date", selectedDates.join(","));
         }
 
         // Add selected categories
         const selectedCategories = this.getCheckedValues(".taxonomy-filter-checkbox");
+        
         if (selectedCategories.length > 0) {
             params.set("category_filters", selectedCategories.join(","));
         }
 
+        console.log("selectedDates", selectedDates)
+        console.log("selectedCategories", selectedCategories)
+        
         try {
             const res = await fetch(`/wp-json/global/v1/search?${params.toString()}`);
             const data = await res.json();

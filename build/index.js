@@ -175,6 +175,8 @@ class NewsEventSearch {
     if (selectedCategories.length > 0) {
       params.set("category_filters", selectedCategories.join(","));
     }
+    console.log("selectedDates", selectedDates);
+    console.log("selectedCategories", selectedCategories);
     try {
       const res = await fetch(`/wp-json/global/v1/search?${params.toString()}`);
       const data = await res.json();
