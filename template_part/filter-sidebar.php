@@ -81,7 +81,7 @@ $filter_group = array(
   <?php endforeach; ?>
 
   <div class="border-t">
-    <button class="w-full py-2 bg-green-600 text-white rounded">Apply Filters</button>
+    <button id="applyFilterBtn" class="w-full py-2 bg-green-600 text-white rounded">Apply Filters</button>
   </div>
 </div>
 
