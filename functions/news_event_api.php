@@ -19,27 +19,14 @@ function global_search_handler($request) {
     $author  = sanitize_text_field($request['author'] ?? '');
     $category_filters = sanitize_text_field($request['category_filters'] ?? '');
 
+    // Base query (force only news)
     $args = array(
-        'post_type'      => 'news', // ✅ only news posts
+        'post_type'      => 'news',   // ✅ only news CPT
         'posts_per_page' => 10,
-        's'              => $keyword,
+        's'              => $keyword, // normal WP search
         'meta_query'     => array(),
         'tax_query'      => array('relation' => 'AND'),
     );
-
-    // --- CUSTOM SEARCH HOOK (scoped to 'news') ---
-    if ($keyword) {
-        add_filter('posts_search', function($search, $wp_query) use ($keyword, $wpdb) {
-            if ($wp_query->get('post_type') === 'news') {
-                $like = '%' . $wpdb->esc_like($keyword) . '%';
-                $search .= $wpdb->prepare(
-                    " OR ({$wpdb->posts}.post_title LIKE %s OR {$wpdb->posts}.post_content LIKE %s)",
-                    $like, $like
-                );
-            }
-            return $search;
-        }, 10, 2);
-    }
 
     // Search in custom fields (ACF)
     if ($keyword) {
@@ -85,6 +72,7 @@ function global_search_handler($request) {
         );
     }
 
+    // Run query
     $query = new WP_Query($args);
 
     $results = [];
@@ -102,11 +90,6 @@ function global_search_handler($request) {
         }
     }
     wp_reset_postdata();
-
-    // Clean up the filter
-    if ($keyword) {
-        remove_all_filters('posts_search');
-    }
 
     return $results;
 }
