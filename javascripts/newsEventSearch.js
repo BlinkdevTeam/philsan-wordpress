@@ -109,6 +109,9 @@ class NewsEventSearch {
             metaFilters[metaKey].push(cb.value);
         });
 
+        console.log("metaFilters", metaFilters)
+        console.log("taxonomyFilters", taxonomyFilters)
+
         // build query string
         const params = new URLSearchParams();
         if (keyword) params.append("keyword", keyword);
