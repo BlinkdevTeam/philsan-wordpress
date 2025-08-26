@@ -66,7 +66,7 @@ class NewsEventSearch {
     }
 
     init() {
-        // Normal search button
+        // Search button
         if (this.searchBtn) {
             this.searchBtn.addEventListener("click", () => this.handleSearch());
         }
@@ -76,7 +76,7 @@ class NewsEventSearch {
             this.filterBtn.addEventListener("click", () => this.handleSearch());
         }
 
-        // Enter key triggers search
+        // Enter key in search input
         if (this.searchInput) {
             this.searchInput.addEventListener("keyup", (e) => {
                 if (e.key === "Enter") {
@@ -87,16 +87,37 @@ class NewsEventSearch {
     }
 
     async handleSearch() {
-        const keyword = this.searchInput.value.trim();
+        const keyword = this.searchInput ? this.searchInput.value.trim() : "";
 
-        // collect selected filters
-        const checkedFilters = [...document.querySelectorAll('#sidebar-filters input[type="checkbox"]:checked')]
-            .map(cb => cb.value);
+        // collect taxonomy filters
+        const taxonomyFilters = {};
+        document.querySelectorAll(".taxonomy-filter-checkbox:checked").forEach(cb => {
+            const taxonomy = cb.dataset.taxonomy;
+            if (!taxonomyFilters[taxonomy]) {
+                taxonomyFilters[taxonomy] = [];
+            }
+            taxonomyFilters[taxonomy].push(cb.value);
+        });
+
+        // collect meta filters (like date)
+        const metaFilters = {};
+        document.querySelectorAll(".date-filter-checkbox:checked").forEach(cb => {
+            const metaKey = cb.dataset.meta;
+            if (!metaFilters[metaKey]) {
+                metaFilters[metaKey] = [];
+            }
+            metaFilters[metaKey].push(cb.value);
+        });
 
         // build query string
         const params = new URLSearchParams();
         if (keyword) params.append("keyword", keyword);
-        if (checkedFilters.length > 0) params.append("filters", checkedFilters.join(","));
+        if (Object.keys(taxonomyFilters).length > 0) {
+            params.append("taxonomies", JSON.stringify(taxonomyFilters));
+        }
+        if (Object.keys(metaFilters).length > 0) {
+            params.append("meta", JSON.stringify(metaFilters));
+        }
 
         try {
             const res = await fetch(`/wp-json/global/v1/search?${params.toString()}`);
