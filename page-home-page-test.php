@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="font-poppins">
+<div class="font-ibmFlexsans">
     <?php get_template_part("front-page/hero-section"); ?>
     <?php get_template_part("front-page/figures-section"); ?>
     <?php get_template_part("front-page/about-section"); ?>

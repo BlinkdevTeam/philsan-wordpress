@@ -9,7 +9,8 @@ module.exports = {
       fontFamily: {
         corben: ['corben', 'sans-serif'], // use as font-shrikhand
         fraunces: ['fraunces', 'sans-serif'],
-        poppins: ['"Poppins"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        ibmFlexsans: ['IBM Plex Sans', 'sans-serif'] 
       },
     },
   },
