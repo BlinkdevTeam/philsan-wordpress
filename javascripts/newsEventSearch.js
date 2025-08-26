@@ -123,7 +123,7 @@ class NewsEventSearch {
         }
 
         try {
-            console.log("params", params)
+            console.log("params", params.toString())
             const res = await fetch(`/wp-json/global/v1/search?${params.toString()}`);
             const data = await res.json();
 
