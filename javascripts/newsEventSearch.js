@@ -60,25 +60,18 @@ class NewsEventSearch {
         this.searchInput = document.getElementById("news-event-search-input");
         this.searchBtn = document.getElementById("searchBtn");
         this.resultsContainer = document.getElementById("search-results");
-        this.applyFiltersBtn = document.querySelector("#sidebar button"); // Apply Filters button
 
         this.init();
     }
 
     init() {
-        // Search button click
         if (this.searchBtn && this.searchInput) {
             this.searchBtn.addEventListener("click", () => this.handleSearch());
         }
 
-        // Apply filters button click
-        if (this.applyFiltersBtn) {
-            this.applyFiltersBtn.addEventListener("click", () => this.handleSearch());
-        }
-
-        // Optional: Enter key in search input
+        // allow pressing "Enter" in the input
         if (this.searchInput) {
-            this.searchInput.addEventListener("keypress", e => {
+            this.searchInput.addEventListener("keyup", (e) => {
                 if (e.key === "Enter") {
                     this.handleSearch();
                 }
@@ -86,47 +79,26 @@ class NewsEventSearch {
         }
     }
 
-    // Helper to get all checked values
-    getCheckedValues(selector) {
-        return Array.from(document.querySelectorAll(selector + ":checked")).map(cb => cb.value);
-    }
-
     async handleSearch() {
-        const value = this.searchInput ? this.searchInput.value.trim() : "";
+        const value = this.searchInput.value.trim();
 
-        // Build query params
-        const params = new URLSearchParams();
-        if (value) params.set("keyword", value);
+        if (!value) return;
 
-        // Add selected dates
-        const selectedDates = this.getCheckedValues(".date-filter-checkbox");
-        
-        if (selectedDates.length > 0) {
-            params.set("date", selectedDates.join(","));
-        }
-
-        // Add selected categories
-        const selectedCategories = this.getCheckedValues(".taxonomy-filter-checkbox");
-        
-        if (selectedCategories.length > 0) {
-            params.set("category_filters", selectedCategories.join(","));
-        }
-
-        console.log("selectedDates", selectedDates)
-        console.log("selectedCategories", selectedCategories)
-        
         try {
-            const res = await fetch(`/wp-json/global/v1/search?${params.toString()}`);
+            // call our REST API endpoint with keyword
+            const res = await fetch(`/wp-json/global/v1/search?keyword=${encodeURIComponent(value)}`);
             const data = await res.json();
 
             console.log("API Results:", data);
 
-            this.renderResults(data);
+            // filter results on the frontend as well (case-insensitive partial match)
+            const filtered = data.filter(item =>
+                item.title.toLowerCase().includes(value.toLowerCase())
+            );
+
+            this.renderResults(filtered);
         } catch (error) {
             console.error("Search error:", error);
-            if (this.resultsContainer) {
-                this.resultsContainer.innerHTML = "<p class='text-red-600'>Error loading results.</p>";
-            }
         }
     }
 
@@ -142,14 +114,8 @@ class NewsEventSearch {
 
         results.forEach(item => {
             const div = document.createElement("div");
-            div.classList.add("search-item", "p-4", "border-b");
-            div.innerHTML = `
-                <h3 class="font-bold text-lg">
-                  <a href="${item.link}" target="_blank">${item.title}</a>
-                </h3>
-                <p class="text-sm text-gray-600">${item.date || ""} — ${item.author || ""}</p>
-                <p class="text-sm text-gray-500">Categories: ${(item.categories || []).join(", ")}</p>
-            `;
+            div.classList.add("search-item");
+            div.innerHTML = `<h3>${item.title}</h3>`;
             this.resultsContainer.appendChild(div);
         });
     }
@@ -157,3 +123,4 @@ class NewsEventSearch {
 
 // init class
 export default NewsEventSearch;
+
