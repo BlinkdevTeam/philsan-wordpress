@@ -12,8 +12,8 @@
                     </h2>
 
                     <div class="flex">
-                        <div class="w-[100%] image-container">
-                            <div  class="w-[300px] h-[200px] md:h-[320px] lg:h-[400px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                        <div class="w-[50%] image-container pr-6">
+                            <div  class="w-[100%] h-[200px] md:h-[320px] lg:h-[400px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                 <img 
                                     class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-300" 
                                     src="<?php echo get_sub_field('image'); ?>" 
@@ -23,7 +23,7 @@
                         </div>
 
                         <?php if ( have_rows('year_group') ): ?>
-                            <ul class="space-y-3 border-l-2 border-[#1F773A] pl-6">
+                            <ul class="w-[50%] space-y-3 border-l-2 border-[#1F773A] pl-6">
                                 <?php while ( have_rows('year_group') ): the_row(); ?>
                                     <li>
                                         <span class="font-bold">
