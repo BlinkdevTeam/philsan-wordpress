@@ -1,6 +1,6 @@
-<div class="bg-[#ffffff] w-[70%]">
+<div class="bg-[#ffffff]">
     <div class="home-figures-section">
-        <div class="flex justify-between gap-[20px] custom-container mx-auto py-[50px]">
+        <div class="flex justify-between gap-[20px] custom-container xl:w-[70%] mx-auto py-[50px]">
             <?php if ( have_rows('figures_section') ): ?>
                 <?php while ( have_rows('figures_section') ): the_row(); ?>
                     <div class="flex flex-col items-center justify-center">

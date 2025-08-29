@@ -3067,6 +3067,10 @@ body.modal-open {
     width: 800px;
   }
 
+  .xl\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .xl\:text-\[18px\] {
     font-size: 18px;
   }
