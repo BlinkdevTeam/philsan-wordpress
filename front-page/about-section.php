@@ -15,7 +15,7 @@
                 </div>
                 <?php if (!empty($group['button_title'])) : ?>
                     <div class="flex pt-[30px]">
-                        <?php echo theme_button(echo esc_html($group['button_title']), "/"); ?>
+                        <?php echo theme_button(esc_html($group['button_title']), "/"); ?>
                     </div>
                 <?php endif; ?>
             </div>
