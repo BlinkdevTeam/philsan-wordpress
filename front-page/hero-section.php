@@ -9,7 +9,9 @@
                             <h1 class="leading-[normal] text-[24px] xl:text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                             <?php if ( $button_name = get_sub_field('hero_button_name') ) : ?>
-                                <button><?php echo esc_html( $button_name ); ?></button>
+                                <div class="flex ">
+                                    <button. class="bg-[#ffc200] px-[20px] py-[10px]"><?php echo esc_html( $button_name ); ?></button>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </div>
