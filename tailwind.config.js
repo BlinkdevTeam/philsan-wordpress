@@ -10,7 +10,9 @@ module.exports = {
         corben: ['corben', 'sans-serif'], // use as font-shrikhand
         fraunces: ['fraunces', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
-        ibmFlexsans: ['IBM Plex Sans', 'sans-serif'] 
+        ibmFlexsans: ['IBM Plex Sans', 'sans-serif'],
+        raleway: ['raleway', 'sans-serif'],
+        inter: ['inter', 'sans-serif'] 
       },
     },
   },

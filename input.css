@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: "Raleway", sans-serif;
+}
+
 .swiper {
   width: 100%;
   height: auto;

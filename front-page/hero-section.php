@@ -1,4 +1,4 @@
-<div class="home-hero-section h-[500px] lg:h-[720px]">
+<div class="home-hero-section h-[700px] lg:h-[800px]">
     <?php if ( have_rows('hero_section') ): ?>
         <?php while ( have_rows('hero_section') ): the_row(); ?>
 
