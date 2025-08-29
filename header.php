@@ -74,7 +74,9 @@ if (!$should_hide_nav_or_footer) :
       <div class="flex-shrink-0">
         <a href="<?php echo esc_url(home_url('/')); ?>">
           <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php //bloginfo('name'); ?>" class="h-10 w-auto"> -->
-           <?php the_custom_logo(); ?>
+          <div class="cursor-pointer flex justify-center">
+            <?php the_custom_logo(); ?>
+          </div>
         </a>
       </div>
 
