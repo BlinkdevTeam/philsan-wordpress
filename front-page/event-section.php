@@ -38,7 +38,11 @@
                         ?>
 
                         <div class="flex flex-col gap-[20px] <?php echo $count < 2 ? 'w-1/2' : 'w-1/3'; ?>">
-                            <div class="flex flex-col gap-[10px]">
+                            <div class="relative w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
+                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
+                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
+                            </div>
+                            <div class="flex gap-[10px]">
                                 <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                     <div class="w-fit">
                                         <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +60,6 @@
                                     </div>
                                     <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
-                            </div>
-                            <div class="relative w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                             </div>
                             <div class="flex flex-col gap-[10px]">
                                 <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
