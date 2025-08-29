@@ -76,7 +76,7 @@ add_action('admin_head', function () {
     </style>';
 });
 
-require_once get_template_directory() . '/functions/button.php';
+require_once get_template_directory() . '/functions/theme_button.php';
 
 function philsan_swiper_init_script() {
     ?>

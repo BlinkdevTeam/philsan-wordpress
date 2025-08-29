@@ -1,5 +1,5 @@
 <?php
-function button($label, $url) {
+function theme_button($label, $url) {
     if (empty($label) || empty($url)) {
         return ''; // don’t render if nothing is set
     }
