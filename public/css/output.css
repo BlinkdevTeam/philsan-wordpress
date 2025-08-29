@@ -2718,6 +2718,10 @@ body.modal-open {
     height: auto;
   }
 
+  .md\:h-\[280px\] {
+    height: 280px;
+  }
+
   .md\:w-\[100\%\] {
     width: 100%;
   }
@@ -2957,6 +2961,10 @@ body.modal-open {
 
   .lg\:h-\[400px\] {
     height: 400px;
+  }
+
+  .lg\:h-\[350px\] {
+    height: 350px;
   }
 
   .lg\:w-\[1280px\] {

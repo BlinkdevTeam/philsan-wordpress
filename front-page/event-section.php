@@ -28,7 +28,7 @@
                             $description    = get_field("description");
                             $location       = get_field("location");
                             $date           = get_field("date");
-                            $max_length     = 15;
+                            $max_length     = 10;
 
                             // Reformat the date
                             if ($date) {
@@ -45,7 +45,7 @@
                         ?>
 
                         <div class="flex flex-col gap-[20px] <?php echo $count < 2 ? 'w-1/2' : 'w-1/3'; ?>">
-                            <div class="relative w-full h-[200px] md:h-[320px] lg:h-[450px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
+                            <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                             </div>
