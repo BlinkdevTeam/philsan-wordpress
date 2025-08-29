@@ -7,7 +7,7 @@
             <?php while ( have_rows('history_repeater') ): the_row(); ?>
                 
                 <div>
-                    <h2 class="text-[16px] font-[700] text-[#1F773A] mb-4">
+                    <h2 class="text-[24px] font-[700] text-[#1F773A] mb-4">
                         <?php the_sub_field("year"); // e.g. "1988" ?>
                     </h2>
 
