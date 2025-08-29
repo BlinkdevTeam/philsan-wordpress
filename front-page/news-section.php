@@ -30,9 +30,9 @@
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex justify-between items-center pb-[20px]">
                                 <div class="w-[60%]">
-                                    <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
+                                    <h2 class="text-[24px] font-[700] text-[#1f773a]"><?php the_title(); ?></h2>
                                 </div>
-                                <div class="flex pt-[30px]">
+                                <div class="flex">
                                     <?php echo theme_button("Learn More", "/"); ?>
                                 </div>
                             </div>
@@ -40,8 +40,16 @@
                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                             </div>
+                            <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
+                                <div class="w-fit">
+                                    <svg width="22" height="23" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
+                            </div>
                             <div class="flex flex-col gap-[10px]">
-                                <p class="text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
+                                <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
                             </div>
                         </div>
                       </div>
