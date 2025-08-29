@@ -1,6 +1,6 @@
 <div class="history-section custom-container mx-auto px-6 py-12">
     <h2 class="text-[42px] font-bold text-[#1F773A] mb-[10px] text-center">Our History</h2>
-    <p class="text-[18px] text-[#1F773A] mb-8 text-center">A glance at the past</p>
+    <p class="text-[18px] font-bold text-[#1F773A] mb-8 text-center">( a glance at the past )</p>
 
     <div class="space-y-12">
         <?php if ( have_rows('history_repeater') ): ?>
