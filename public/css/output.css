@@ -1488,14 +1488,6 @@ video {
   border-top-right-radius: 8px;
 }
 
-.rounded-tl-\[80px\] {
-  border-top-left-radius: 80px;
-}
-
-.rounded-br-\[80px\] {
-  border-bottom-right-radius: 80px;
-}
-
 .border {
   border-width: 1px;
 }
@@ -1633,6 +1625,11 @@ video {
   background-color: rgb(239 239 239 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#ffc200\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 194 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1675,15 +1672,6 @@ video {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-\[\#ffcc200\] {
-  background-color: #ffcc200;
-}
-
-.bg-\[\#ffc200\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 194 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
@@ -2127,6 +2115,10 @@ video {
   padding-top: 20px;
 }
 
+.pt-\[30px\] {
+  padding-top: 30px;
+}
+
 .pt-\[40px\] {
   padding-top: 40px;
 }
@@ -2145,10 +2137,6 @@ video {
 
 .pt-\[80px\] {
   padding-top: 80px;
-}
-
-.pt-\[30px\] {
-  padding-top: 30px;
 }
 
 .text-center {
@@ -2285,10 +2273,6 @@ video {
 
 .font-light {
   font-weight: 300;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-semibold {
@@ -2540,7 +2524,7 @@ body {
   margin: 0;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -2598,14 +2582,14 @@ body.modal-open {
   background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-gray-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-\[\#e6ae00\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(230 174 0 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-gray-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-\[position\:right_center\]:hover {
