@@ -5,11 +5,11 @@
     <div class="flex space-between">
         <div class="">
             <?php if (!empty($group['title'])) : ?>
-                <h2 class="text-[34px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
+                <h2 class="text-[42px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
             <div class="pt-[10px]">
                 <?php if (!empty($group['sub'])) : ?>
-                    <div class="text-[24px] leading-[34px] flex flex-col gap-[20px] font-[300]"><?php echo ($group['sub']) ?></div>
+                    <div class="text-[18px] flex flex-col gap-[20px] font-[300]"><?php echo ($group['sub']) ?></div>
                 <?php endif; ?>
             </div>
         </div>
