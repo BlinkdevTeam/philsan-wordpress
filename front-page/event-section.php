@@ -28,7 +28,7 @@
                             $description    = get_field("description");
                             $location       = get_field("location");
                             $date           = get_field("date");
-                            $max_length     = 30;
+                            $max_length     = 15;
 
                             // Reformat the date
                             if ($date) {
@@ -50,7 +50,7 @@
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                             </div>
                             <div class="flex gap-[10px]">
-                                <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
+                                <div class="relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                     <div class="w-fit">
                                         <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="#646464"/>
@@ -65,7 +65,7 @@
 
                                     <!-- Tooltip on hover -->
                                     <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
-                                        <?php echo esc_html($full_location); ?>
+                                        <?php echo esc_html($location); ?>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
