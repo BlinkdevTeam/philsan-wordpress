@@ -8,7 +8,7 @@
                 
                 <div>
                     <h2 class="text-2xl font-semibold text-green-700 mb-4">
-                        <?php the_sub_field("title"); // e.g. "1988" ?>
+                        <?php the_sub_field("year"); // e.g. "1988" ?>
                     </h2>
 
                     <?php if ( have_rows('year_group') ): ?>
