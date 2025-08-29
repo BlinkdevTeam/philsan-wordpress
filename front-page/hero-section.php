@@ -9,7 +9,7 @@
                             <h1 class="leading-[normal] text-[24px] xl:text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                             <?php if ( !empty($$button_name = get_sub_field('hero_button_name'))) : ?>
-                                <div class="flex">
+                                <div class="flex pt-[30px] rounded-tl-[40px] rounded-br-[40px]">
                                     <?php echo theme_button(get_sub_field('hero_button_name'), get_sub_field('hero_button_name')); ?>
                                 </div>
                             <?php endif; ?>
