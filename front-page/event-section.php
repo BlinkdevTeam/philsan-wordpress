@@ -42,7 +42,7 @@
                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                             </div>
-                            <div class="flex gap-[10px]">
+                            <div class="flex flex-col gap-[10px]">
                                 <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                     <div class="w-fit">
                                         <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,9 @@
                                             <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
                                         </svg>
                                     </div>
-                                    <span class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($location); ?></span>
+                                    <div class="w-[300px] overflow-hidden">
+                                        <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($location); ?></p>
+                                    </div>
                                 </div>
                                 <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                     <div class="w-fit">
@@ -58,7 +60,9 @@
                                             <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </div>
-                                    <span class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></span>
+                                    <div class="w-[300px] overflow-hidden">
+                                        <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-[10px]">
