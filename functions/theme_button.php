@@ -1,9 +1,5 @@
 <?php
 function theme_button($label, $url) {
-    if (empty($label) || empty($url)) {
-        return ''; // don’t render if nothing is set
-    }
-
     ob_start(); ?>
         <a href="<?php echo esc_url($url); ?>" class="bg-[#ffc200] px-[20px] py-[10px] text-[#ffffff] inline-flex items-center gap-[10px] rounded-tl-[80px] rounded-br-[80px] hover:bg-[#e6ae00] transition">
             <?php echo esc_html($label); ?>
