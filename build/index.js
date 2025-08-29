@@ -57,6 +57,47 @@ class SpeakerModal {
 
 /***/ }),
 
+/***/ "./javascripts/headerScrollbehaviour.js":
+/*!**********************************************!*\
+  !*** ./javascripts/headerScrollbehaviour.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class HeaderScrollBehaviour {
+  constructor() {
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+    const triggerHeight = 300;
+    window.addEventListener('scroll', event => {
+      const currentScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScrollTop > triggerHeight) {
+        if (currentScrollTop > lastScrollTop) {
+          header.classList.add('hide-header');
+        } else {
+          header.classList.remove('hide-header');
+        }
+      }
+      lastScrollTop = Math.max(0, currentScrollTop); // Prevent negative values
+
+      //This will close all open modal in the header
+      for (let id in listenerStatus) {
+        const popup = document.getElementById(id);
+        if (listenerStatus[id].isOpen && popup && !popup.contains(event.target)) {
+          popup.style.display = "none"; // Close it
+          listenerStatus[id].isOpen = false;
+        }
+      }
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeaderScrollBehaviour);
+
+/***/ }),
+
 /***/ "./javascripts/newsEventSearch.js":
 /*!****************************************!*\
   !*** ./javascripts/newsEventSearch.js ***!
@@ -67,62 +108,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// class NewsEventSearch {
-//     constructor() {
-//         this.searchInput = document.getElementById("news-event-search-input");
-//         this.searchBtn = document.getElementById("searchBtn");
-//         this.resultsContainer = document.getElementById("search-results");
-
-//         this.init();
-//     }
-
-//     init() {
-//         if (this.searchBtn && this.searchInput) {
-//         this.searchBtn.addEventListener("click", () => this.handleSearch());
-//         }
-//     }
-
-//         async handleSearch() {
-//             const value = this.searchInput.value.trim();
-
-//             if (!value) return;
-
-//             try {
-//                 // Example: search in "news" post type
-//                 const res = await fetch(`/wp-json/global/v1/search?keyword=${encodeURIComponent(value)}`);
-//                 const data = await res.json();
-
-//                 console.log("API Results:", data);
-
-//                 this.renderResults(data);
-//             } catch (error) {
-//                 console.error("Search error:", error);
-//             }
-//         }
-
-//         renderResults(results) {
-//             if (!this.resultsContainer) return;
-
-//             this.resultsContainer.innerHTML = ""; // clear old results
-
-//             if (results.length === 0) {
-//                 this.resultsContainer.innerHTML = "<p>No results found.</p>";
-//                 return;
-//             }
-
-//             results.forEach(item => {
-//                 console.log("item", item)
-//                 const div = document.createElement("div");
-//                 div.classList.add("search-item");
-//                 div.innerHTML = `<h3>${item.title}</h3>`;
-//                 this.resultsContainer.appendChild(div);
-//             });
-//         }
-//     }
-
-// // init class
-// export default NewsEventSearch;
-
 class NewsEventSearch {
   constructor() {
     this.searchInput = document.getElementById("news-event-search-input");
@@ -324,11 +309,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../javascripts/38thSpeakerModal */ "./javascripts/38thSpeakerModal.js");
 /* harmony import */ var _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascripts/sidebarFilter */ "./javascripts/sidebarFilter.js");
 /* harmony import */ var _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascripts/newsEventSearch */ "./javascripts/newsEventSearch.js");
+/* harmony import */ var _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascripts/headerScrollbehaviour */ "./javascripts/headerScrollbehaviour.js");
+
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JS Running!!!");
+  new _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__["default"]();
   const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   if (document.querySelector(".speaker-item")) {
     annualSpeakerModal.handleModal();

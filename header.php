@@ -67,7 +67,7 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
 <?php
 if (!$should_hide_nav_or_footer) :
 ?>
-  <header class="bg-white shadow-md">
+  <header id="header" class="bg-white shadow-md">
     <div class="custom-container mx-auto flex items-center justify-between px-4 py-4">
 
       <!-- Logo -->

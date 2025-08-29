@@ -14,6 +14,10 @@ p {
   font-family: "Inter", sans-serif;
 }
 
+.hide-header {
+    transform: translateY(-100%);
+}
+
 .swiper {
   width: 100%;
   height: auto;

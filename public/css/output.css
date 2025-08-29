@@ -2519,6 +2519,10 @@ p {
   font-family: "Inter", sans-serif;
 }
 
+.hide-header {
+  transform: translateY(-100%);
+}
+
 .swiper {
   width: 100%;
   height: auto;
@@ -3053,11 +3057,11 @@ body.modal-open {
     font-size: 24px;
   }
 
-  .xl\:text-\[72px\] {
-    font-size: 72px;
-  }
-
   .xl\:text-\[48px\] {
     font-size: 48px;
+  }
+
+  .xl\:text-\[72px\] {
+    font-size: 72px;
   }
 }
