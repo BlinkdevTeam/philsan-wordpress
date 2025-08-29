@@ -692,6 +692,10 @@ video {
   top: 10px;
 }
 
+.bottom-full {
+  bottom: 100%;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1122,6 +1126,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .flex-1 {

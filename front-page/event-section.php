@@ -28,12 +28,19 @@
                             $description    = get_field("description");
                             $location       = get_field("location");
                             $date           = get_field("date");
+                            $max_length     = 30;
 
                             // Reformat the date
                             if ($date) {
                                 $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
                             } else {
                                 $formatted_date = '';
+                            }
+
+                            if (strlen($location) > $max_length) {
+                                $short_location = substr($location, 0, $max_length) . '...';
+                            } else {
+                                $short_location = $location;
                             }
                         ?>
 
@@ -42,7 +49,7 @@
                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                 <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
                             </div>
-                            <div class="flex flex-col gap-[10px]">
+                            <div class="flex gap-[10px]">
                                 <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                     <div class="w-fit">
                                         <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,8 +57,17 @@
                                             <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
                                         </svg>
                                     </div>
+                                    
+                                    <!-- Shortened text -->
                                     <div class="w-[300px] overflow-hidden">
-                                        <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($location); ?></p>
+                                        <p class="text-[16px] font-[300] text-[#646464]">
+                                            <?php echo esc_html($short_location); ?>
+                                        </p>
+                                    </div>
+
+                                    <!-- Tooltip on hover -->
+                                    <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
+                                        <?php echo esc_html($full_location); ?>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
