@@ -2,7 +2,7 @@
     <h2 class="text-[42px] font-bold text-[#1F773A] text-center">Our History</h2>
     <p class="text-[18px] font-[600] text-[#1F773A] mb-8 text-center">( a glance at the past )</p>
 
-    <div class="space-y-12 py-[50px]">
+    <div class="flex flex-col gap-[50px] py-[50px]">
         <?php if ( have_rows('history_repeater') ): ?>
             <?php while ( have_rows('history_repeater') ): the_row(); ?>
                 
