@@ -47,17 +47,21 @@
                                 <p class="text-[24px] font-[400]"><?php echo esc_html($description); ?></p>
                             </div>
                             <div class="flex gap-[20px]">
-                                <div class="flex items-center gap-[5px] py-[5px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                    <svg width="14" height="15" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                                <div class="flex items-center gap-[5px] w-[100px] overflow-hidden py-[5px] px-[20px] rounded-full bg-[#F3F3F3]">
+                                    <div class="w-fit">
+                                        <svg width="14" height="15" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
                                     <p><?php echo esc_html($formatted_date); ?></p>
                                 </div>
-                                <div class="flex items-center gap-[5px] py-[5px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                    <svg width="14" height="16" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="black"/>
-                                        <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="black"/>
-                                    </svg>
+                                <div class="flex items-center gap-[5px] w-[100px] overflow-hidden py-[5px] px-[20px] rounded-full bg-[#F3F3F3]">
+                                    <div class="w-fit">
+                                        <svg width="14" height="16" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="black"/>
+                                            <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="black"/>
+                                        </svg>
+                                    </div>
                                     <p><?php echo esc_html($location); ?></p>
                                 </div>
                             </div>
