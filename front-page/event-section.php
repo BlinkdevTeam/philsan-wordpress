@@ -59,11 +59,9 @@
                                     </div>
                                     
                                     <!-- Shortened text -->
-                                    <div class="w-[300px] overflow-hidden">
-                                        <p class="text-[16px] font-[300] text-[#646464]">
-                                            <?php echo esc_html($short_location); ?>
-                                        </p>
-                                    </div>
+                                    <p class="text-[16px] font-[300] text-[#646464]">
+                                        <?php echo esc_html($short_location); ?>
+                                    </p>
 
                                     <!-- Tooltip on hover -->
                                     <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
@@ -76,9 +74,7 @@
                                             <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </div>
-                                    <div class="w-[300px] overflow-hidden">
-                                        <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
-                                    </div>
+                                    <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-[10px]">
