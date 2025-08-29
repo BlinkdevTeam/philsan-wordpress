@@ -732,12 +732,12 @@ video {
   z-index: 2;
 }
 
-.z-\[99\] {
-  z-index: 99;
-}
-
 .z-\[999\] {
   z-index: 999;
+}
+
+.z-\[99\] {
+  z-index: 99;
 }
 
 .m-auto {
@@ -2519,7 +2519,7 @@ h1 {
   font-family: "Raleway", sans-serif;
 }
 
-p {
+p, a {
   font-family: "Inter", sans-serif;
 }
 

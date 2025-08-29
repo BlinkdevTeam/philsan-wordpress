@@ -82,7 +82,7 @@ if (!$should_hide_nav_or_footer) :
         <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
-          'menu_class' => 'flex space-x-6 text-black font-medium',
+          'menu_class' => 'flex space-x-6 text-black text-[18px]',
           'container' => false,
           'fallback_cb' => false,
         ));
