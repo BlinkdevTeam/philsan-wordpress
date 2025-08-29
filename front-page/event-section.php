@@ -79,7 +79,7 @@
                             </div>
                             <div class="flex flex-col gap-[10px]">
                                 <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
-                                <?php if($count > 2 ) : ?>
+                                <?php if($count > 1 ) : ?>
                                     <p class="text-[18px] font-[300]"><?php echo esc_html($description); ?></p>
                                 <?php else: ?>
                                     <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
