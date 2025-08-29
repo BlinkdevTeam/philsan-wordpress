@@ -2,16 +2,16 @@
     $group = get_field('text_icon_section');
 ?>
 <div class="text-icon-section custom-container py-[50px]">
-    <div class="flex space-between">
-        <div class="">
+    <div class="flex space-between justify-center">
+        <div class="pb-[50px]">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[24px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
-            <div class="pt-[18px]">
-                <?php if (!empty($group['sub'])) : ?>
-                    <p class="text-[34px] text-[500] leading-[34px]"><?php echo esc_html($group['sub']) ?></p>
-                <?php endif; ?>
-            </div>
+            <?php if (!empty($group['sub'])) : ?>
+                <div class="pt-[18px]">
+                    <p class="text-[18px] text-[400]"><?php echo esc_html($group['sub']) ?></p>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
     <!-- Repeater section -->
