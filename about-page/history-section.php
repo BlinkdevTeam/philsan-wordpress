@@ -2,12 +2,12 @@
     <h2 class="text-[42px] font-bold text-[#1F773A] text-center">Our History</h2>
     <p class="text-[18px] font-[600] text-[#1F773A] mb-8 text-center">( a glance at the past )</p>
 
-    <div class="space-y-12">
+    <div class="space-y-12 py-[50px]">
         <?php if ( have_rows('history_repeater') ): ?>
             <?php while ( have_rows('history_repeater') ): the_row(); ?>
                 
                 <div>
-                    <h2 class="text-[42px] font-[700] text-[#1F773A] mb-4">
+                    <h2 class="text-[42px] font-[700] text-[#1F773A] mb-4 text-center">
                         <?php the_sub_field("year"); // e.g. "1988" ?>
                     </h2>
 
