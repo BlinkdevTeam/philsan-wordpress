@@ -1,5 +1,5 @@
 <section class="max-w-5xl mx-auto px-6 py-12">
-  <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our History</h2>
+  <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">A glance at the past</h2>
 
   <div class="space-y-12">
 
