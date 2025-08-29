@@ -736,6 +736,10 @@ video {
   z-index: 99;
 }
 
+.z-\[999\] {
+  z-index: 999;
+}
+
 .m-auto {
   margin: auto;
 }
