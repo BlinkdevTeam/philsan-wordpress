@@ -10,7 +10,7 @@
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                             <?php if ( $button_name = get_sub_field('hero_button_name') ) : ?>
                                 <div class="flex ">
-                                    <button. class="bg-[#ffc200] px-[20px] py-[10px]"><?php echo esc_html( $button_name ); ?></button>
+                                    <?php echo button($button_name, get_sub_field('hero_button_link')); ?>
                                 </div>
                             <?php endif; ?>
                         </div>

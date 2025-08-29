@@ -841,6 +841,10 @@ video {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .table {
   display: table;
 }
@@ -1482,6 +1486,14 @@ video {
 
 .rounded-tr-\[8px\] {
   border-top-right-radius: 8px;
+}
+
+.rounded-tl-\[80px\] {
+  border-top-left-radius: 80px;
+}
+
+.rounded-br-\[80px\] {
+  border-bottom-right-radius: 80px;
 }
 
 .border {
@@ -2585,6 +2597,11 @@ body.modal-open {
 .hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#e6ae00\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 174 0 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-\[position\:right_center\]:hover {
