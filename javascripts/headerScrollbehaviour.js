@@ -17,16 +17,6 @@ class HeaderScrollBehaviour {
             }
 
             lastScrollTop = Math.max(0, currentScrollTop); // Prevent negative values
-
-            //This will close all open modal in the header
-            for (let id in listenerStatus) {
-                const popup = document.getElementById(id);
-                
-                if (listenerStatus[id].isOpen && popup && !popup.contains(event.target)) {
-                    popup.style.display = "none"; // Close it
-                    listenerStatus[id].isOpen = false;
-                }
-            }
         });
     }
 }
