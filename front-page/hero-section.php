@@ -8,6 +8,9 @@
                         <div class="w-[50%] flex flex-col justify-center h-[100%]">
                             <h1 class="leading-[normal] text-[24px] xl:text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
+                            <?php if ( $button_name = get_sub_field('hero_button_name') ) : ?>
+                                <button><?php echo esc_html( $button_name ); ?></button>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="bg-gradient-to-b from-[rgba(11,83,4,0.3)] to-[rgba(11,83,4,1)] w-full h-full absolute top-0 left-0 z-[1]"></div>
