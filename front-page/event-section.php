@@ -26,7 +26,7 @@
                         <?php
                             $image          = get_field("image");
                             $description    = get_field("description");
-                            $location       = get_field("location")
+                            $location       = get_field("location");
                             $date           = get_field("date");
 
                             // Reformat the date
