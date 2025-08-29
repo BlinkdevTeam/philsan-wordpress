@@ -24,6 +24,13 @@
                         $image        = get_field("image");
                         $description  = get_field("description");
                         $date         = get_field("date");
+
+                        // Reformat the date
+                        if ($date) {
+                            $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                        } else {
+                            $formatted_date = '';
+                        }
                       ?>
 
                       <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
