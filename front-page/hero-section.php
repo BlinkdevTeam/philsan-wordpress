@@ -8,14 +8,9 @@
                         <div class="w-[50%] flex flex-col justify-center h-[100%]">
                             <h1 class="leading-[normal] text-[24px] xl:text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
-                            <?php if ( !empty($$button_name = get_sub_field('hero_button_name')) && !empty($button_link = get_sub_field('hero_button_link')) ) : ?>
+                            <?php if ( !empty($$button_name = get_sub_field('hero_button_name'))) : ?>
                                 <div class="flex">
-                                    <a href="<?php echo esc_url($button_link); ?>" class="bg-[#ffc200] px-[20px] py-[10px] text-[#ffffff] inline-flex items-center gap-[10px] rounded-tl-[80px] rounded-br-[80px] hover:bg-[#e6ae00] transition">
-                                        <?php echo esc_html($$button_name); ?>
-                                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 7H17M17 7L11 1M17 7L11 13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
+                                    <?php echo theme_button(get_sub_field('hero_button_name'), get_sub_field('hero_button_name')); ?>
                                 </div>
                             <?php endif; ?>
                         </div>
