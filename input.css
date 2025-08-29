@@ -10,6 +10,10 @@ h1 {
   font-family: "Raleway", sans-serif;
 }
 
+p {
+  font-family: "Inter", sans-serif;
+}
+
 .swiper {
   width: 100%;
   height: auto;
