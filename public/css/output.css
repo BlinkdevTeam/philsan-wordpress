@@ -2613,6 +2613,11 @@ body.modal-open {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#1F773A\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 119 58 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[position\:right_center\]:hover {
   background-position: right center;
 }

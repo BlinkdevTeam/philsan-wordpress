@@ -64,7 +64,7 @@
                                     </p>
 
                                     <!-- Tooltip on hover -->
-                                    <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
+                                    <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-white text-black text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
                                         <?php echo esc_html($location); ?>
                                     </div>
                                 </div>
