@@ -8,14 +8,6 @@
                         <div class="w-[50%] flex flex-col justify-center h-[100%]">
                             <h1 class="leading-[normal] text-[24px] xl:text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
-                            <?php if ( $button_name = get_sub_field('hero_button_name') ) : ?>
-                                <div class="flex ">
-                                    <?php 
-
-                            
-                                    ?>
-                                </div>
-                            <?php endif; ?>
                             <?php if ( !empty($$button_name = get_sub_field('hero_button_name')) && !empty($button_link = get_sub_field('hero_button_link')) ) : ?>
                                 <div class="flex">
                                     <?php echo theme_button($$button_name, $button_link); ?>
