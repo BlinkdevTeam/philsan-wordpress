@@ -25,7 +25,7 @@
                         <?php if ( have_rows('year_group') ): ?>
                             <ul class="w-[50%] space-y-3 border-l-2 border-[#1F773A] pl-6">
                                 <?php while ( have_rows('year_group') ): the_row(); ?>
-                                    <li>
+                                    <li class="text-[16px]">
                                         <span class="font-bold">
                                             <?php the_sub_field("title"); // e.g. "June 28" ?>
                                         </span> 
