@@ -73,7 +73,8 @@ if (!$should_hide_nav_or_footer) :
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>" class="h-10 w-auto">
+          <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php //bloginfo('name'); ?>" class="h-10 w-auto"> -->
+           <?php the_custom_logo(); ?>
         </a>
       </div>
 
