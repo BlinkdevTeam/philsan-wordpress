@@ -1317,6 +1317,10 @@ video {
   gap: 8px;
 }
 
+.gap-\[80px\] {
+  gap: 80px;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -3144,6 +3148,10 @@ body.modal-open {
 
   .xl\:w-\[800px\] {
     width: 800px;
+  }
+
+  .xl\:w-\[80\%\] {
+    width: 80%;
   }
 
   .xl\:text-\[18px\] {
