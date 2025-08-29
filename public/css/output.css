@@ -2374,6 +2374,10 @@ video {
   font-weight: 500;
 }
 
+.font-\[18px\] {
+  font-weight: 18px;
+}
+
 .italic {
   font-style: italic;
 }
@@ -2820,6 +2824,10 @@ body.modal-open {
     height: 280px;
   }
 
+  .md\:h-\[250px\] {
+    height: 250px;
+  }
+
   .md\:w-\[100\%\] {
     width: 100%;
   }
@@ -3063,6 +3071,10 @@ body.modal-open {
 
   .lg\:h-\[350px\] {
     height: 350px;
+  }
+
+  .lg\:h-\[300px\] {
+    height: 300px;
   }
 
   .lg\:w-\[1280px\] {

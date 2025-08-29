@@ -20,16 +20,16 @@
             <?php foreach( $group['text_icon_section'] as $item ): ?>
                 <div class="flex flex-col gap-[20px] items-start w-[25%]">
                     <?php if( !empty($item['icon']) ): ?>
-                        <div class="bg-[#CBF9B6] p-[10px]">
+                        <div class="bg-[#CBF9B6] p-[10px] rounded-xl">
                             <img src="<?php echo esc_url($item['icon']['url']); ?>" alt="icon image" class="w-10 h-10 object-contain" />
                         </div>
                     <?php endif; ?>
 
                     <div class="flex flex-col gap-[20px]">
                         <?php if( !empty($item['title']) ): ?>
-                            <h3 class="text-[24px] font-bold">
+                            <h2 class="text-[24px] font-[600]">
                                 <?php echo esc_html($item['title']); ?>
-                            </h3>
+                            </h2>
                         <?php endif; ?>
 
                         <?php if( !empty($item['sub']) ): ?>
