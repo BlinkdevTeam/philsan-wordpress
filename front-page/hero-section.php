@@ -5,8 +5,8 @@
             <?php if ( get_row_layout() == 'hero_item_group' ): ?>
                 <div class="flex space-between h-full w-full relative y-thumbnail">
                     <div class="custom-container py-[100px] mx-auto z-[2]">
-                        <div class="w-[50%] flex flex-col justify-center h-[100%]">
-                            <h1 class="leading-[normal] text-[24px] xl:text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                        <div class="w-[70%] flex flex-col justify-center h-[100%]">
+                            <h1 class="leading-[normal] text-[24px] xl:text-[64px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] xl:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                             <?php if ( !empty($$button_name = get_sub_field('hero_button_name'))) : ?>
                                 <div class="flex pt-[30px]">
