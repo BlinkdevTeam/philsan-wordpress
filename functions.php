@@ -78,6 +78,10 @@ add_action('admin_head', function () {
 
 require_once get_template_directory() . '/functions/theme_button.php';
 
+if (function_exists('theme_button')) {
+    error_log('theme_button is loaded ✅');
+}
+
 function philsan_swiper_init_script() {
     ?>
     <script>
