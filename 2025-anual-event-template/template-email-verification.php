@@ -96,7 +96,7 @@ get_header();
       .then(response => response.json())
       .then(data => {
           console.log("data", data)
-          const matchData = data.find(i => i.email === email);
+          const matchData = data.find(i => i.email.toLowerCase() === email.toLowerCase());
           const emailExistEl = document.querySelector(".email-exist");
           const emailPendingEl = document.querySelector(".email-pending");
           const emailCanceledEl = document.querySelector(".email-canceled");
