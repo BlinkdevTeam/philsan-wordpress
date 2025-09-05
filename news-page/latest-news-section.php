@@ -32,7 +32,7 @@
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
                         <div class="flex pt-[30px]">
-                            <?php echo theme_button(get_sub_field('https://philsan.org/38th-annual-convention/registration/'), get_sub_field('View More')); ?>
+                            <?php echo theme_button(get_sub_field('View More'), get_sub_field('/')); ?>
                         </div>
                     </div>
                 </div>
