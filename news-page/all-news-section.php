@@ -12,8 +12,8 @@
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         
-                        $limit = 30;
-                        $desc_trimmed = mb_strimwidth($description, 0, $limit, "..."); // Trim it properly
+                        $desc_limit = 40;
+                        $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "..."); // Trim it properly
                         // Reformat the date
                         if ($date) {
                             $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
