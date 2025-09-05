@@ -34,7 +34,7 @@
     ));
 ?>
 
-<div class="with-filters pt-[50px]">
+<div class="with-filters pt-[150px]">
     <div class="custom-container">
         <div class="">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
