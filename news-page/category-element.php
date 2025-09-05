@@ -6,13 +6,13 @@
 ?>
         <div class="relative group inline-block">
             <!-- First Category -->
-            <span class="px-2 py-1 bg-green-100 text-green-800 text-[18px] rounded">
+            <span class="px-2 py-1 bg-green-100 text-green-800 text-[14px] rounded">
                 <?php echo esc_html($first_category->name); ?>
             </span>
 
             <!-- Extra count -->
             <?php if ($extra_count > 0): ?>
-                <span class="ml-1 px-2 py-1 bg-green-100 text-green-800 text-[18px] rounded">
+                <span class="ml-1 px-2 py-1 bg-green-100 text-green-800 text-[14px] rounded">
                     +<?php echo $extra_count; ?>
                 </span>
 
