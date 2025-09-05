@@ -2277,6 +2277,10 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[1px\] {
+  font-size: 1px;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
