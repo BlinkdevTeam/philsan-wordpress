@@ -21,11 +21,11 @@
                     <div class="w-[40%]">
                         <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
-                    <div class="w-[60%]">
+                    <div class="flex flex-col gap-[10px] w-[60%]">
                         <div class="flex justify-between items-center">
                             <?php include locate_template('news-page/category-element.php'); ?>
 
-                            <div class="px-[20px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                            <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
                         </div>
