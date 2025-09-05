@@ -31,9 +31,11 @@
                         </div>
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                         <p class="text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
-                        <a href="https://philsan.org/38th-annual-convention/registration/" class="flex w-fit mt-[20px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">
-                            <span class="text-[#ffffff] text-bold text-[18px]">View More</span>
-                        </a>
+                        <?php if ( !empty($$button_name = get_sub_field('hero_button_name'))) : ?>
+                            <div class="flex pt-[30px]">
+                                <?php echo theme_button(get_sub_field('https://philsan.org/38th-annual-convention/registration/'), get_sub_field('View More')); ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endwhile; ?>
