@@ -26,11 +26,11 @@
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
-                            <h2 class="text-[18px] font-[400] text-[#000000]"><?php the_title(); ?></h2>
+                            <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
                         </div>
-                        <a href="https://philsan.org/38th-annual-convention/registration/" class="flex w-fit mt-[20px] bg-[#FFC200] py-[15px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">
-                            <span class="text-[#ffffff] text-bold text-[18px]">View More</span>
-                        </a>
+                        <div class="flex pt-[30px]">
+                            <?php echo theme_button("View More", "/"); ?>
+                        </div>
                         <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                     </div>
                 <?php endwhile; ?>
