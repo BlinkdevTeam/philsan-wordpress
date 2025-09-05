@@ -11,7 +11,9 @@
                         $description = get_field("description");
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
-
+                        
+                        $limit = 30;
+                        $desc_trimmed = mb_strimwidth($description, 0, $limit, "..."); // Trim it properly
                         // Reformat the date
                         if ($date) {
                             $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
@@ -24,10 +26,10 @@
                         <div class="pt-[20px]">
                             <?php include locate_template('news-page/category-element.php'); ?>
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                                <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
+                                <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
                             <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                            <p class="text-[14px] font-[400]"><?php echo esc_html($description); ?></p>
+                            <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                         </div>
                         <div class="flex pt-[30px]">
                             <?php echo theme_button("View More", "/"); ?>

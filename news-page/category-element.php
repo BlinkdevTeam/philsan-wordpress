@@ -17,7 +17,7 @@
                 </span>
 
                 <!-- Popup with all categories -->
-                <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded p-3 text-[18px] w-max z-10">
+                <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded p-3 text-[14px] w-max z-10">
                     <ul class="space-y-1">
                         <?php foreach ($categories as $cat): ?>
                             <li class="text-gray-800 "><?php echo esc_html($cat->name); ?></li>

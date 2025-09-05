@@ -51,6 +51,9 @@
                     $date        = get_field("date");
                     $categories = get_the_terms( get_the_ID(), 'category-filters' );
 
+                    $limit = 30;
+                    $desc_trimmed = mb_strimwidth($description, 0, $limit, "..."); // Trim it properly
+
                     // Reformat the date
                     if ($date) {
                         $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
@@ -67,7 +70,7 @@
                             <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                         </div>
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                        <p class="text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
+                        <p class="text-[18px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                     </div>
                     <div class="flex pt-[30px]">
                         <?php echo theme_button("View More", "/"); ?>
