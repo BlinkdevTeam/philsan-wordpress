@@ -32,12 +32,12 @@
         'posts_per_page' => 3,
         'meta_key'       => 'date', 
         'meta_value'     => $today,
-        'meta_compare'   => '<',            // strictly before today
+        'meta_compare'   => '>',            // strictly before today
         'orderby'        => 'meta_value',
         'order'          => 'DESC',         // most recent past event first
         'meta_type'      => 'DATE'
     ));
-    
+
     // $all_events = new WP_Query(array(
     //     "post_type"      => "event",
     //     "posts_per_page" => 12, // change per-page limit
