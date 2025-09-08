@@ -14,6 +14,8 @@
 
     $today = date('d/m/y'); // format must match how you store event dates (e.g., YYYY-MM-DD)
 
+    var_dump($today);
+
     $upcoming_events = new WP_Query(array(
         'post_type'      => 'event',
         'posts_per_page' => 3,
