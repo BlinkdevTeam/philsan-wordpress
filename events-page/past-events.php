@@ -1,9 +1,9 @@
-<div class="py-[100px]">
-    <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-        <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Past Events</h2>
-    </div>
-    <div class="flex flex-col gap-[50px] pt-[50px]">
-        <?php if ($past_events->have_posts()) : ?>
+ <?php if ($past_events->have_posts()) : ?>
+    <div class="py-[100px]">
+        <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pt-[50px] pb-[150px]">
+            <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Past Events</h2>
+        </div>
+        <div class="flex flex-col gap-[50px] pt-[50px]">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
@@ -39,19 +39,19 @@
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
             </div>
-        <?php endif; ?>
+        </div>
+        <div class="flex justify-center space-x-2 mt-6">
+        <?php
+            echo paginate_links(array(
+                'total'   => $past_events->max_num_pages,
+                'current' => $paged,
+                'prev_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">«</span>',
+                'next_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">»</span>',
+                'before_page_number' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">',
+                'after_page_number'  => '</span>',
+            ));
+            ?>
+        </div>
     </div>
-    <div class="flex justify-center space-x-2 mt-6">
-    <?php
-        echo paginate_links(array(
-            'total'   => $past_events->max_num_pages,
-            'current' => $paged,
-            'prev_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">«</span>',
-            'next_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">»</span>',
-            'before_page_number' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">',
-            'after_page_number'  => '</span>',
-        ));
-        ?>
-    </div>
-</div>
+<?php endif; ?>
 

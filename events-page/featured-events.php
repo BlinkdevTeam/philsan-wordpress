@@ -1,10 +1,8 @@
-<!-- FEATURED  EVENTS BUT MIGHT NOT BE THE LATEST -->
-<div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-    <h2 class="text-[24px] font-[700] text-[#1F773A]">Featured Events</h2>
-</div>
-
-
 <?php if ($featured->have_posts()) : ?>
+    <!-- FEATURED  EVENTS BUT MIGHT NOT BE THE LATEST -->
+    <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pt-[50px] pb-[150px]">
+        <h2 class="text-[24px] font-[700] text-[#1F773A]">Featured Events</h2>
+    </div>
     <div class="swiper featuredEvents">
         <div class="swiper-wrapper">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
@@ -25,7 +23,7 @@
                 <div class="swiper-slide">
                     <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                         <div class="w-[40%]">
-                            <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                            <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                         </div>
                         <div class="flex flex-col gap-[10px] w-[60%]">
                             <div class="flex justify-between items-center">
