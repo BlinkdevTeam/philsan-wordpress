@@ -11,16 +11,15 @@
             )
         )
     ));
-    var_dump($featured);
 
     $today = date('m/d/y'); // format must match how you store event dates (e.g., YYYY-MM-DD)
 
     $upcoming_events = new WP_Query(array(
         'post_type'      => 'event',
         'posts_per_page' => 3,
-        'meta_key'       => 'event_date', // your custom field key
+        'meta_key'       => 'date', // your custom field key
         'meta_value'     => $today,
-        'meta_compare'   => '>=',         // only dates greater than or equal to today
+        'meta_compare'   => '>',         // only dates greater than or equal to today
         'orderby'        => 'meta_value',
         'order'          => 'ASC',        // soonest first
         'meta_type'      => 'DATE'        // tell WP it's a date comparison
@@ -34,7 +33,7 @@
     $past_events = new WP_Query(array(
         'post_type'      => 'event',
         'posts_per_page' => 3,
-        'meta_key'       => 'event_date', 
+        'meta_key'       => 'date', 
         'meta_value'     => $today,
         'meta_compare'   => '<',            // strictly before today
         'orderby'        => 'meta_value',
