@@ -22,7 +22,7 @@
                     }
                 ?>
                 <!-- FEATURED EVENTS -->
-                <div class="swipper-slide">
+                <div class="swiper-slide">
                     <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                         <div class="w-[40%]">
                             <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
