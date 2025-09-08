@@ -59,7 +59,7 @@
             <div id="search-results"></div>
         </div>
         
-        <?php include locate_template('events-page/upcoming-sections.php'); ?>
+        <?php include locate_template('events-page/upcoming-events.php'); ?>
         <?php include locate_template('events-page/past-events.php'); ?>
         <?php get_template_part('template_part/filter-sidebar'); ?>
     </div>
