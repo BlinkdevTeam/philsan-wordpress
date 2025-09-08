@@ -1,7 +1,7 @@
 <?php
     // 1. Get the featured news (always show if exists)
     $featured = new WP_Query(array(
-        "post_type"      => "events",
+        "post_type"      => "event",
         "posts_per_page" => -1,
         "meta_query"     => array(
             array(
@@ -13,7 +13,7 @@
     ));
 
     $non_featured = new WP_Query(array(
-        "post_type"      => "events",
+        "post_type"      => "event",
         "posts_per_page" => 3,  // only 3 latest
         "orderby"        => "date",
         "order"          => "DESC", // newest first
@@ -28,7 +28,7 @@
 
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $all_news = new WP_Query(array(
-        "post_type"      => "events",
+        "post_type"      => "event",
         "posts_per_page" => 12, // change per-page limit
         "paged"          => $paged,
     ));

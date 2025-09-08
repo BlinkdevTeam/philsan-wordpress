@@ -1,4 +1,4 @@
-<!-- this is the category you will on every news item -->
+<!-- this is the category you will on every events item -->
 <?php
     if ($categories) {
         $first_category = $categories[0];

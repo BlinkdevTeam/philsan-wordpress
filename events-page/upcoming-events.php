@@ -1,5 +1,5 @@
 <div class="flex flex-col gap-[50px] pt-[50px]">
-    <!-- FEATURED NEWS BUT MIGHT NOT BE THE LATEST -->
+    <!-- FEATURED  EVENTS BUT MIGHT NOT BE THE LATEST -->
     <?php if ($featured->have_posts()) : ?>
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
@@ -16,14 +16,14 @@
                         $formatted_date = '';
                     }
                 ?>
-                <!-- FEATURED NEWS -->
+                <!-- FEATURED EVENTS -->
                 <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                     <div class="w-[40%]">
                         <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
                     <div class="flex flex-col gap-[10px] w-[60%]">
                         <div class="flex justify-between items-center">
-                            <?php include locate_template('news-page/category-element.php'); ?>
+                            <?php include locate_template('events-page/category-element.php'); ?>
 
                             <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
@@ -41,7 +41,7 @@
         </div>
     <?php endif; ?>
     
-    <!-- NON FEATURED BUT LATEST NEWS -->
+    <!-- NON FEATURED BUT LATEST EVENTS -->
     <?php if ($non_featured->have_posts()) : ?>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php while ($non_featured->have_posts()) : $non_featured->the_post(); ?>
@@ -61,11 +61,11 @@
                         $formatted_date = '';
                     }
                 ?>
-                <!-- NON-FEATURED NEWS -->
+                <!-- NON-FEATURED EVENTS -->
                 <div class="">
                     <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     <div class="pt-[20px]">
-                        <?php include locate_template('news-page/category-element.php'); ?>
+                        <?php include locate_template('events-page/category-element.php'); ?>
                         <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                             <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                         </div>
