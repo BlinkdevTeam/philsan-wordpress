@@ -1,3 +1,6 @@
+<div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
+    <h2 class="text-[24px] font-[700] text-[#1F773A]">Upcoming Events</h2>
+</div>
 <?php if ($upcoming_events->have_posts()) : ?>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <?php while ($upcoming_events->have_posts()) : $upcoming_events->the_post(); ?>

@@ -25,8 +25,6 @@
         'meta_type'      => 'DATE'        // tell WP it's a date comparison
     ));
 
-    var_dump($upcoming_events);
-
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
     
@@ -41,7 +39,6 @@
         'meta_type'      => 'DATE'
     ));
     
-     var_dump($past_events);
     // $all_events = new WP_Query(array(
     //     "post_type"      => "event",
     //     "posts_per_page" => 12, // change per-page limit
@@ -53,7 +50,7 @@
     <div class="custom-container">
         <div class="">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-                <h2 class="text-[42px] font-[700] text-[#1F773A]">Featured Events</h2>
+                <h2 class="text-[42px] font-[700] text-[#1F773A]">Events</h2>
                 <p class="text-[24px] text-[#000000]">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
             <div class="flex justify-center gap-[5px] w-[90%] lg:w-[80%] xl:w-[800px] mx-auto pt-[20px]">

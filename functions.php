@@ -142,6 +142,25 @@ function philsan_swiper_init_script() {
                     1024: { slidesPerView: 4 }
                 }
             });
+
+            new Swiper(".featuredEvents", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+                breakpoints: {
+                    640: { slidesPerView: 1 },
+                    768: { slidesPerView: 1 },
+                    1024: { slidesPerView: 1 }
+                }
+            });
         });
     </script>
     <?php
