@@ -27,7 +27,7 @@
     ));
 
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $all_news = new WP_Query(array(
+    $all_events = new WP_Query(array(
         "post_type"      => "event",
         "posts_per_page" => 12, // change per-page limit
         "paged"          => $paged,
