@@ -25,7 +25,6 @@
         'meta_type'      => 'DATE'        // tell WP it's a date comparison
     ));
 
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
     
     $past_events = new WP_Query(array(
@@ -38,11 +37,14 @@
         'order'          => 'DESC',         // most recent past event first
         'meta_type'      => 'DATE'
     ));
+    
     // $all_events = new WP_Query(array(
     //     "post_type"      => "event",
     //     "posts_per_page" => 12, // change per-page limit
     //     "paged"          => $paged,
     // ));
+
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 ?>
 
 <div class="with-filters pt-[150px]">
