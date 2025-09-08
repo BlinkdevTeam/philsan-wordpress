@@ -5,7 +5,7 @@
         "posts_per_page" => -1,
         "meta_query"     => array(
             array(
-                "key"     => "featured_events",
+                "key"     => "featured_event",
                 "value"   => '1',  //means that the value is true
                 "compare" => "="
             )
@@ -19,7 +19,7 @@
         "order"          => "DESC", // newest first
         "meta_query"     => array(
             array(
-                "key"     => "featured_events",
+                "key"     => "featured_event",
                 "value"   => '1',
                 "compare" => "!="
             )
@@ -59,7 +59,7 @@
             <div id="search-results"></div>
         </div>
         
-        <?php include //locate_template('events-page/upcoming-sections.php'); ?>
+        <?php //include locate_template('events-page/upcoming-sections.php'); ?>
         <?php //include locate_template('events-page/past-events.php'); ?>
         <?php get_template_part('template_part/filter-sidebar'); ?>
     </div>
