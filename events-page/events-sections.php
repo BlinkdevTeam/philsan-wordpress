@@ -12,7 +12,7 @@
         )
     ));
 
-    $today = date('m/d/y'); // format must match how you store event dates (e.g., YYYY-MM-DD)
+    $today = date('Ymd'); // format must match how you store event dates (e.g., YYYY-MM-DD)
 
     $upcoming_events = new WP_Query(array(
         'post_type'      => 'event',
