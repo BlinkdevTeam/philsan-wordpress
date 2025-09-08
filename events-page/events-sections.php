@@ -16,7 +16,7 @@
 
     $upcoming_events = new WP_Query(array(
         'post_type'      => 'event',
-        'posts_per_page' => 3,
+        'posts_per_page' => 10,
         'meta_key'       => 'date', // your custom field key
         'meta_value'     => $today,
         'meta_compare'   => '>=',         // only dates greater than or equal to today
