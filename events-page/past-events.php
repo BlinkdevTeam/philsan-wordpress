@@ -3,9 +3,9 @@
         <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Past Events</h2>
     </div>
     <div class="flex flex-col gap-[50px] pt-[50px]">
-        <?php if ($all_events->have_posts()) : ?>
+        <?php if ($past_events->have_posts()) : ?>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
-                <?php while ($all_events->have_posts()) : $all_events->the_post(); ?>
+                <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
                         $image       = get_field("image");
                         $description = get_field("description");
@@ -44,7 +44,7 @@
     <div class="flex justify-center space-x-2 mt-6">
     <?php
         echo paginate_links(array(
-            'total'   => $all_events->max_num_pages,
+            'total'   => $past_events->max_num_pages,
             'current' => $paged,
             'prev_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">«</span>',
             'next_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">»</span>',

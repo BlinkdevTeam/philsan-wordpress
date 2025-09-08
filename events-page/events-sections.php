@@ -12,26 +12,38 @@
         )
     ));
 
-    $non_featured = new WP_Query(array(
-        "post_type"      => "event",
-        "posts_per_page" => 3,  // only 3 latest
-        "orderby"        => "date",
-        "order"          => "DESC", // newest first
-        "meta_query"     => array(
-            array(
-                "key"     => "featured_event",
-                "value"   => '1',
-                "compare" => "!="
-            )
-        )
+    $today = date('Y-m-d'); // format must match how you store event dates (e.g., YYYY-MM-DD)
+
+    $upcoming_events = new WP_Query(array(
+        'post_type'      => 'event',
+        'posts_per_page' => 3,
+        'meta_key'       => 'event_date', // your custom field key
+        'meta_value'     => $today,
+        'meta_compare'   => '>=',         // only dates greater than or equal to today
+        'orderby'        => 'meta_value',
+        'order'          => 'ASC',        // soonest first
+        'meta_type'      => 'DATE'        // tell WP it's a date comparison
     ));
 
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $all_events = new WP_Query(array(
-        "post_type"      => "event",
-        "posts_per_page" => 12, // change per-page limit
-        "paged"          => $paged,
+
+    
+    $past_events = new WP_Query(array(
+        'post_type'      => 'event',
+        'posts_per_page' => 3,
+        'meta_key'       => 'event_date', 
+        'meta_value'     => $today,
+        'meta_compare'   => '<',            // strictly before today
+        'orderby'        => 'meta_value',
+        'order'          => 'DESC',         // most recent past event first
+        'meta_type'      => 'DATE'
     ));
+    
+    // $all_events = new WP_Query(array(
+    //     "post_type"      => "event",
+    //     "posts_per_page" => 12, // change per-page limit
+    //     "paged"          => $paged,
+    // ));
 ?>
 
 <div class="with-filters pt-[150px]">
@@ -58,7 +70,7 @@
             </div>
             <div id="search-results"></div>
         </div>
-        
+        <?php include locate_template('events-page/featured-events.php'); ?>
         <?php include locate_template('events-page/upcoming-events.php'); ?>
         <?php include locate_template('events-page/past-events.php'); ?>
         <?php get_template_part('template_part/filter-sidebar'); ?>
