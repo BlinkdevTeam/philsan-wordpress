@@ -11,6 +11,7 @@
             )
         )
     ));
+    var_dump($featured);
 
     $today = date('m/d/y'); // format must match how you store event dates (e.g., YYYY-MM-DD)
 
@@ -24,6 +25,8 @@
         'order'          => 'ASC',        // soonest first
         'meta_type'      => 'DATE'        // tell WP it's a date comparison
     ));
+
+    var_dump($upcoming_events);
 
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -39,6 +42,7 @@
         'meta_type'      => 'DATE'
     ));
     
+     var_dump($past_events);
     // $all_events = new WP_Query(array(
     //     "post_type"      => "event",
     //     "posts_per_page" => 12, // change per-page limit
