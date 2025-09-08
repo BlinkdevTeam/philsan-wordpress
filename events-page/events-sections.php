@@ -32,7 +32,7 @@
         'posts_per_page' => 3,
         'meta_key'       => 'date', 
         'meta_value'     => $today,
-        'meta_compare'   => '>',            // strictly before today
+        'meta_compare'   => '<',            // strictly before today
         'orderby'        => 'meta_value',
         'order'          => 'DESC',         // most recent past event first
         'meta_type'      => 'DATE'
