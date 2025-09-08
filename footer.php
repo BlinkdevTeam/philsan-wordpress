@@ -51,25 +51,25 @@ if (!$should_hide_nav_or_footer) :
               <img class="w-full h-auto" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
           </div>
           <div class="flex gap-[20px] justify-between text-[#ffffff]">
-            <div class="flex flex-col gap-[10px] text-[18px]">
+            <div class="flex flex-col gap-[10px] text-[16px]">
               <h6 class="font-[700]">Education</h6>
-              <ul class="flex flex-col gap-[5px] text-[18px]">
+              <ul class="flex flex-col gap-[5px] text-[18px] font-[400]">
                 <li>Email Marketing</li>
                 <li>Social Media Markeitng</li>
                 <li>Search Engine Optimization</li>
               </ul>
             </div>
-            <div class="flex flex-col gap-[10px] text-[18px]">
+            <div class="flex flex-col gap-[10px] text-[16px]">
               <h6 class="font-[700]">Business</h6>
-              <ul class="flex flex-col gap-[5px] text-[18px]">
+              <ul class="flex flex-col gap-[5px] text-[16px] font-[400]">
                 <li>Digital Marketing Agency</li>
                 <li>SEO Agency</li>
                 <li>PRC Agency</li>
               </ul>
             </div>
-            <div class="flex flex-col gap-[10px] text-[18px]">
+            <div class="flex flex-col gap-[10px] text-[16px]">
               <h6 class="font-[700]">Developer & IT</h6>
-              <ul class="flex flex-col gap-[5px] text-[18px]">
+              <ul class="flex flex-col gap-[5px] text-[16px] font-[400]">
                 <li>Internet Marketing</li>
                 <li>Content Markeitng</li>
                 <li>Social Media</li>
