@@ -39,6 +39,8 @@
         'meta_type'      => 'DATE'
     ));
     
+    var_dump($past_events);
+
     // $all_events = new WP_Query(array(
     //     "post_type"      => "event",
     //     "posts_per_page" => 12, // change per-page limit
