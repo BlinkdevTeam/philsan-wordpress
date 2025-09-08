@@ -5,7 +5,7 @@
         </div>
         <div class="flex flex-col gap-[50px] pt-[50px]">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
-                <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
+                <?php while ($past_events->have_posts()) : ?>
                     <?php
                         $image       = get_field("image");
                         $description = get_field("description");
