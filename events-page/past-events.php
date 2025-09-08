@@ -1,4 +1,4 @@
- <?php if ($past_events->have_posts()) : ?>
+<?php     var_dump($past_events); if ($past_events->have_posts()) : ?>
     <div class="py-[100px]">
         <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pt-[10px] pb-[50px]">
             <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Past Events</h2>

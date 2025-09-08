@@ -19,7 +19,7 @@
         'posts_per_page' => 3,
         'meta_key'       => 'date', // your custom field key
         'meta_value'     => $today,
-        'meta_compare'   => '>',         // only dates greater than or equal to today
+        'meta_compare'   => '>=',         // only dates greater than or equal to today
         'orderby'        => 'meta_value',
         'order'          => 'ASC',        // soonest first
         'meta_type'      => 'DATE'        // tell WP it's a date comparison
@@ -38,9 +38,6 @@
         'order'          => 'DESC',         // most recent past event first
         'meta_type'      => 'DATE'
     ));
-    
-    var_dump($past_events);
-
     // $all_events = new WP_Query(array(
     //     "post_type"      => "event",
     //     "posts_per_page" => 12, // change per-page limit
