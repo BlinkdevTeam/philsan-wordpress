@@ -3,7 +3,7 @@
         <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pt-[100px] pb-[50px]">
             <h2 class="text-[24px] font-[700] pb-[20px] text-[#1F773A]">Past Events</h2>
         </div>
-        <div class="flex flex-col gap-[50px] pt-[50px]">
+        <div class="flex flex-col gap-[50px]">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php

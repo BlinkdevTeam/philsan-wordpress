@@ -29,7 +29,7 @@
     
     $past_events = new WP_Query(array(
         'post_type'      => 'event',
-        'posts_per_page' => 3,
+        'posts_per_page' => 20,
         'meta_key'       => 'date', 
         'meta_value'     => $today,
         'meta_compare'   => '<',            // strictly before today

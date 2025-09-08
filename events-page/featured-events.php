@@ -28,13 +28,12 @@
                         <div class="flex flex-col gap-[10px] w-[60%]">
                             <div class="flex justify-between items-center">
                                 <?php include locate_template('events-page/category-element.php'); ?>
-
                                 <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                     <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                             </div>
-                            <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-                            <p class="text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
+                            <h2 class="text-[24px] text-left font-[600] text-[#1f773a] text-left"><?php the_title(); ?> </h2>
+                            <p class="text-[18px] text-left font-[400]"><?php echo esc_html($description); ?></p>
                             <div class="flex pt-[30px]">
                                 <?php echo theme_button("View More", "/"); ?>
                             </div>
