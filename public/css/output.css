@@ -1062,6 +1062,10 @@ video {
   width: 50%;
 }
 
+.w-\[500px\] {
+  width: 500px;
+}
+
 .w-\[50px\] {
   width: 50px;
 }
@@ -1843,6 +1847,10 @@ video {
   padding: 40px;
 }
 
+.p-\[50px\] {
+  padding: 50px;
+}
+
 .p-\[5px\] {
   padding: 5px;
 }
@@ -2606,6 +2614,8 @@ body.modal-open {
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
   background: #0a875a !important
 }
+
+/* Contact Form */
 
 .hover\:bg-\[\#1F773A\]:hover {
   --tw-bg-opacity: 1;
