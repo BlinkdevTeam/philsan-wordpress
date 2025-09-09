@@ -2352,6 +2352,11 @@ video {
   color: rgb(31 119 58 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#2F2F2F\] {
+  --tw-text-opacity: 1;
+  color: rgb(47 47 47 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#344054\] {
   --tw-text-opacity: 1;
   color: rgb(52 64 84 / var(--tw-text-opacity, 1));
@@ -2623,6 +2628,11 @@ body.modal-open {
 
 .wpforms-field > label {
   margin-bottom: 2px !important;
+}
+
+.wpforms-field > button {
+  background-color: #FFC200 !important;
+  border-radius: 20px 0px !important;
 }
 
 .hover\:bg-\[\#1F773A\]:hover {

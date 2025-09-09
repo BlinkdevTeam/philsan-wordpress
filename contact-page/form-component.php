@@ -1,7 +1,11 @@
 <?php $form_shortcode = get_field('contact_form'); ?>
 
 <div class="w-[500px] mx-auto">
-    <div class="p-[50px] rounded-2xl bg-[#FCFCF0]">
+    <div class="p-[50px] rounded-2xl bg-[#FCFCF0] flex gap-[20px]">
+        <div>
+            <h2 class="text-[24px] text-[#1F773A]">Get in touch with us. We’re here to assist you.</h2>
+            <p class="text-[18px] text-[#2F2F2F]">Lorem ipsum dolor sit amet consectetur. Sit integer gravida non ullamcorper. Porttitor volutpat commodo auctor nisi nibh sem proin turpis. Velit amet molestie justo massa diam.</p>
+        </div>
         <?php if($form_shortcode): ?>
             <?php echo do_shortcode($form_shortcode); ?>
         <?php endif; ?>
