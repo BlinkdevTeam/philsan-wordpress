@@ -2623,8 +2623,8 @@ body.modal-open {
 /* Contact Form WP_FORMS */
 
 .wpforms-container {
-  margin: 0px;
-  width: 50%;
+  margin: 0px !important;
+  width: 50% !important;
 }
 
 .wpforms-field {
