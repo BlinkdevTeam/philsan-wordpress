@@ -55,6 +55,10 @@ body.modal-open {
 }
 
 /* Contact Form WP_FORMS */
+.wpforms-container {
+  margin: 0px;
+  width: 50%;
+}
 
 .wpforms-field {
   padding-bottom: 0px !important;
@@ -64,7 +68,7 @@ body.modal-open {
   margin-bottom: 2px !important;
 }
 
-.wpforms-field > button {
+.wpforms-submit-container > button {
   background-color: #FFC200 !important;
   border-radius: 20px 0px !important;
 }
