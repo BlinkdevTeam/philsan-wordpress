@@ -54,8 +54,15 @@ body.modal-open {
     background: #0a875a !important
 }
 
-/* Contact Form */
+/* Contact Form WP_FORMS */
 
+.wpforms-field {
+  padding-bottom: 0px !important;
+}
+
+.wpforms-field > label {
+  margin-bottom: 2px !important;
+}
 
 @layer utilities {
   @keyframes flipY {
