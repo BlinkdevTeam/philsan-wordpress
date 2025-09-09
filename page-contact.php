@@ -1,7 +1,4 @@
-<?php $form_shortcode = get_field('contact_form'); ?>
-
 <?php get_header(); ?>
-    <?php if($form_shortcode): ?>
-        <?php echo do_shortcode($form_shortcode); ?>
-    <?php endif; ?>
+    <?php get_template_part("contact-page/hero-section"); ?>
+    <?php get_template_part("contact-page/form-component"); ?>
 <?php get_footer(); ?>
