@@ -1,7 +1,7 @@
 <div id="faq-section" class="w-[900px] mx-auto">
     <div class="pb-[100px]">
-        <div>
-            <h2 class="text-[32px] font-[600] text-[#1F773A] text-center">Frequently Asked Questions</h2>
+        <div class="pb-[30px]">
+            <h2 class="text-[32px] font-[800] text-[#1F773A] text-center">Frequently Asked Questions</h2>
         </div>
         <?php if ( have_rows('faqs') ): ?>
             <?php $faq_index = 0; // initialize counter ?>
@@ -15,7 +15,7 @@
                         onclick="handleFaqAccordion('answer-<?php echo $faq_index; ?>', <?php echo $faq_index; ?>)"   
                         class="flex justify-between items-center cursor-pointer transition-all duration-300 ease group gap-[20px]"
                     >
-                        <h6 class="text-[24px] text-[#000000] font-[600] group-hover:text-[#ceab23] transition-all duration-300 ease">
+                        <h6 class="text-[24px] text-[#000000] font-[600] group-hover:text-[#1F773A] transition-all duration-300 ease">
                             <?php the_sub_field('question'); ?>
                         </h6>
                         <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">

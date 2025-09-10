@@ -2759,6 +2759,11 @@ body.modal-open {
   color: rgb(206 171 35 / var(--tw-text-opacity, 1));
 }
 
+.group:hover .group-hover\:text-\[\#1F773A\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 119 58 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 640px) {
   .sm\:w-\[280px\] {
     width: 280px;
