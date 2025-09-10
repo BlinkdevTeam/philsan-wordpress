@@ -2,29 +2,24 @@ class FaqAcc {
     constructor() {}
 
     handleFaqAcc(elementId, index) {
-        const accElement = document.getElementById(elementId)
+        const accElement = document.getElementById(elementId);
+        if (!accElement) return;
 
-        const height = accElement.offsetHeight;
+        const height = accElement.scrollHeight; // use scrollHeight instead of offsetHeight
 
-        for(let i = 0; i < 6; i++) {
-            if(index !== i) {
-                document.getElementById(`answer-container-${i}`).style.height = 0;
-                document.getElementById(`faq-group-${i}`).classList.remove("active-faq")
+        // Select all answer containers dynamically
+        const allAnswers = document.querySelectorAll("[id^='answer-container-']");
+        const allGroups = document.querySelectorAll("[id^='faq-group-']");
+
+        allAnswers.forEach((container, i) => {
+            if (i + 1 !== index) {
+                container.style.height = 0;
+                allGroups[i]?.classList.remove("active-faq");
             } else {
-                document.getElementById(`answer-container-${i}`).style.height = height+"px";
-                document.getElementById(`faq-group-${i}`).classList.add("active-faq")
+                container.style.height = height + "px";
+                allGroups[i]?.classList.add("active-faq");
             }
-        }
-
-        // if( accContainer.classList.contains("active") ) {
-        //     accContainer.style.height = 0
-        //     accContainer.classList.remove("active")
-        //     accHead.style.paddingBottom = 0
-        // } else {
-        //     accContainer.style.height = height+"px"
-        //     accContainer.classList.add("active")
-        //     accHead.style.paddingBottom = "10px"
-        // }
+        });
     }
 }
 
