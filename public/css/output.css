@@ -744,6 +744,10 @@ video {
   z-index: 99;
 }
 
+.z-\[9\] {
+  z-index: 9;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -835,6 +839,10 @@ video {
 
 .mt-\[5px\] {
   margin-top: 5px;
+}
+
+.mt-\[-200px\] {
+  margin-top: -200px;
 }
 
 .block {
@@ -2178,6 +2186,10 @@ video {
 
 .pt-\[80px\] {
   padding-top: 80px;
+}
+
+.pb-\[80px\] {
+  padding-bottom: 80px;
 }
 
 .text-left {
