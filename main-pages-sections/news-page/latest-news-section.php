@@ -23,7 +23,7 @@
                     </div>
                     <div class="flex flex-col gap-[10px] w-[60%]">
                         <div class="flex justify-between items-center">
-                            <?php include locate_template('news-page/category-element.php'); ?>
+                            <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
 
                             <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>

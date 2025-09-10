@@ -24,7 +24,7 @@
                     <div class="">
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                         <div class="pt-[20px]">
-                            <?php include locate_template('events-page/category-element.php'); ?>
+                            <?php include locate_template('main-pages-sections/events-page/category-element.php'); ?>
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
