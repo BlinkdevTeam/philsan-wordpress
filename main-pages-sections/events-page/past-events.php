@@ -1,5 +1,5 @@
 <?php if ($past_events->have_posts()) : ?>
-    <div class="py-[100px] w-[80%]">
+    <div class="py-[100px] w-[80%] mx-auto">
         <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pb-[50px]">
             <h2 class="text-[24px] font-[700] pb-[20px] text-[#1F773A]">Events</h2>
         </div>
@@ -27,9 +27,11 @@
                         }
                     ?>
                     <div class="flex justify-between gap-[20px] border-b-[1px] border-[#cccccc] pb-[30px]">
-                        <div class="w-[10%] bg-[#1f773a]">
-                            <h6 class="text-[32px]"><?php echo $month ?></h6>
-                            <h6 class="text-[14px]"><?php echo $year ?></h6>
+                        <div class="bg-[#1f773a]">
+                            <div class="flex flex-col items-center pt-[30px] px-[10px]">
+                                <h6 class="text-[24px] text-[#ffffff]"><?php echo $month ?></h6>
+                                <h6 class="text-[16px] text-[#ffffff]"><?php echo $year ?></h6>
+                            </div>
                         </div>
                         <div class="w-[50%] pl-[20px]">
                             <div class="pt-[20px] w-[80%]">
@@ -45,7 +47,7 @@
                             </div>
                             <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                         </div>
-                        <div class="w-[40%]">
+                        <div class="w-[50%]">
                             <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                         </div>
                     </div>
