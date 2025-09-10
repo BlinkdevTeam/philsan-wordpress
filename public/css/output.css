@@ -1128,6 +1128,10 @@ video {
   width: ;
 }
 
+.w-\[10\%\] {
+  width: 10%;
+}
+
 .max-w-\[1280px\] {
   max-width: 1280px;
 }
@@ -1608,6 +1612,11 @@ video {
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#cccccc\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 204 204 / var(--tw-border-opacity, 1));
 }
 
 .border-b-\[\#CCCCCC\] {
