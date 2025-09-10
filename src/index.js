@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if(document.getElementById("faq-section")) {
-        new FaqAcc().handleFaqAcc(elementId, index);
+        window.handleFaqAccordion = function(elementId, index) {
+            new FaqAcc().handleFaqAcc(elementId, index);
+        }
     }
 });

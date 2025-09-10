@@ -359,7 +359,9 @@ document.addEventListener("DOMContentLoaded", function () {
     new _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__["default"]();
   }
   if (document.getElementById("faq-section")) {
-    new _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__["default"]().handleFaqAcc(elementId, index);
+    window.handleFaqAccordion = function (elementId, index) {
+      new _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__["default"]().handleFaqAcc(elementId, index);
+    };
   }
 });
 })();
