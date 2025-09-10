@@ -12,7 +12,7 @@
                     
                     <div 
                         id="faq-head-<?php echo $faq_index; ?>"
-                        onclick="handleFaqAccordion('answer-<?php echo $faq_index; ?>', <?php echo $faq_index; ?>)"   
+                        onclick="handleFaqAcc('answer-<?php echo $faq_index; ?>', <?php echo $faq_index; ?>)"   
                         class="flex justify-between items-center cursor-pointer transition-all duration-300 ease group gap-[20px]"
                     >
                         <h6 class="text-[16px] lg:text-[18px] text-[#ffffff] font-[600] group-hover:text-[#ceab23] transition-all duration-300 ease">
