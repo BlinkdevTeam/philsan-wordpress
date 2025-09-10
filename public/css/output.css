@@ -2620,14 +2620,18 @@ body.modal-open {
   background: #0a875a !important
 }
 
-.wpforms-760-field_2-container,
-.wpforms-760-field_7-container {
+/* Contact Form WP_FORMS */
+
+#wpforms-760-field_2-container,
+#wpforms-760-field_7-container {
   display: inline-block;
   width: 48%;
   vertical-align: top;
 }
 
-/* Contact Form WP_FORMS */
+#wpforms-760-field_2-container {
+  margin-right: 4%
+}
 
 .wpforms-container {
   margin: 0px !important;
