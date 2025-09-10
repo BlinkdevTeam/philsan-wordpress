@@ -825,6 +825,10 @@ video {
   margin-top: -150px;
 }
 
+.mt-\[-200px\] {
+  margin-top: -200px;
+}
+
 .mt-\[100px\] {
   margin-top: 100px;
 }
@@ -839,10 +843,6 @@ video {
 
 .mt-\[5px\] {
   margin-top: 5px;
-}
-
-.mt-\[-200px\] {
-  margin-top: -200px;
 }
 
 .block {
@@ -2096,6 +2096,10 @@ video {
   padding-bottom: 5px;
 }
 
+.pb-\[80px\] {
+  padding-bottom: 80px;
+}
+
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -2186,10 +2190,6 @@ video {
 
 .pt-\[80px\] {
   padding-top: 80px;
-}
-
-.pb-\[80px\] {
-  padding-bottom: 80px;
 }
 
 .text-left {
@@ -2290,6 +2290,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
 }
 
 .font-\[200\] {
@@ -2642,7 +2646,7 @@ body.modal-open {
 }
 
 #wpforms-760-field_2-container {
-  margin-right: 4%
+  margin-right: 3%
 }
 
 .wpforms-container {
