@@ -1,6 +1,6 @@
 <?php if ($past_events->have_posts()) : ?>
-    <div class="py-[100px]">
-        <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pt-[100px] pb-[50px]">
+    <div class="py-[100px] w-[80%]">
+        <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pb-[50px]">
             <h2 class="text-[24px] font-[700] pb-[20px] text-[#1F773A]">Events</h2>
         </div>
         <div class="flex flex-col gap-[50px]">
@@ -12,7 +12,7 @@
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         
-                        $desc_limit = 100;
+                        $desc_limit = 200;
                         $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "..."); // Trim it properly
                         // Reformat the date
                         if ($date) {
@@ -23,7 +23,7 @@
                     ?>
                     <div class="flex justify-between gap-[20px]">
                         <div class="w-[50%]">
-                            <div class="pt-[20px]">
+                            <div class="pt-[20px] w-[80%]">
                                 <?php include locate_template('main-pages-sections/events-page/category-element.php'); ?>
                                 <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                     <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
