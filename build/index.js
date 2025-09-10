@@ -57,6 +57,46 @@ class SpeakerModal {
 
 /***/ }),
 
+/***/ "./javascripts/faqAccordion.js":
+/*!*************************************!*\
+  !*** ./javascripts/faqAccordion.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class FaqAcc {
+  constructor() {}
+  handleFaqAcc(elementId, index) {
+    const accElement = document.getElementById(elementId);
+    const height = accElement.offsetHeight;
+    for (let i = 0; i < 6; i++) {
+      if (index !== i) {
+        document.getElementById(`answer-container-${i}`).style.height = 0;
+        document.getElementById(`faq-group-${i}`).classList.remove("active-faq");
+      } else {
+        document.getElementById(`answer-container-${i}`).style.height = height + "px";
+        document.getElementById(`faq-group-${i}`).classList.add("active-faq");
+      }
+    }
+
+    // if( accContainer.classList.contains("active") ) {
+    //     accContainer.style.height = 0
+    //     accContainer.classList.remove("active")
+    //     accHead.style.paddingBottom = 0
+    // } else {
+    //     accContainer.style.height = height+"px"
+    //     accContainer.classList.add("active")
+    //     accHead.style.paddingBottom = "10px"
+    // }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FaqAcc);
+
+/***/ }),
+
 /***/ "./javascripts/headerScrollbehaviour.js":
 /*!**********************************************!*\
   !*** ./javascripts/headerScrollbehaviour.js ***!
@@ -301,6 +341,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascripts/sidebarFilter */ "./javascripts/sidebarFilter.js");
 /* harmony import */ var _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascripts/newsEventSearch */ "./javascripts/newsEventSearch.js");
 /* harmony import */ var _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascripts/headerScrollbehaviour */ "./javascripts/headerScrollbehaviour.js");
+/* harmony import */ var _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../javascripts/faqAccordion */ "./javascripts/faqAccordion.js");
+
 
 
 
@@ -315,6 +357,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".with-filters")) {
     new _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__["default"]();
     new _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  }
+  if (document.getElementById("faq-section")) {
+    new _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__["default"]().handleFaqAcc(elementId, index);
   }
 });
 })();

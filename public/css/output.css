@@ -1094,6 +1094,10 @@ video {
   width: 90%;
 }
 
+.w-\[900px\] {
+  width: 900px;
+}
+
 .w-\[95\%\] {
   width: 95%;
 }
@@ -1863,6 +1867,10 @@ video {
   padding: 5px;
 }
 
+.p-\[15px\] {
+  padding: 15px;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2260,6 +2268,10 @@ video {
   font-size: 28px;
 }
 
+.text-\[32px\] {
+  font-size: 32px;
+}
+
 .text-\[38px\] {
   font-size: 38px;
 }
@@ -2290,10 +2302,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[32px\] {
-  font-size: 32px;
 }
 
 .font-\[200\] {
@@ -2736,6 +2744,11 @@ body.modal-open {
   background-color: rgb(237 178 33 / var(--tw-bg-opacity, 1));
 }
 
+.group:hover .group-hover\:text-\[\#ceab23\] {
+  --tw-text-opacity: 1;
+  color: rgb(206 171 35 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 640px) {
   .sm\:w-\[280px\] {
     width: 280px;
@@ -2879,6 +2892,10 @@ body.modal-open {
 
   .md\:rounded-none {
     border-radius: 0px;
+  }
+
+  .md\:rounded-xl {
+    border-radius: 0.75rem;
   }
 
   .md\:rounded-bl-\[0px\] {
@@ -3110,12 +3127,20 @@ body.modal-open {
     gap: 0px;
   }
 
+  .lg\:gap-\[20px\] {
+    gap: 20px;
+  }
+
   .lg\:rounded-bl-\[30px\] {
     border-bottom-left-radius: 30px;
   }
 
   .lg\:rounded-tr-\[30px\] {
     border-top-right-radius: 30px;
+  }
+
+  .lg\:p-\[20px\] {
+    padding: 20px;
   }
 
   .lg\:px-24 {
