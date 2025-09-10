@@ -22,21 +22,23 @@
                         }
                     ?>
                     <div class="flex justify-between gap-[20px]">
-                        <div class="">
+                        <div class="w-[50%]">
                             <div class="pt-[20px]">
                                 <?php include locate_template('main-pages-sections/events-page/category-element.php'); ?>
                                 <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                     <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
-                                <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                                <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
+                                <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
+                                <p class="text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                             </div>
                             <div class="flex pt-[30px]">
                                 <?php echo theme_button("View More", "/"); ?>
                             </div>
                             <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                         </div>
-                        <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                        <div class="w-[50%]">
+                            <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                        </div>
                     </div>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
