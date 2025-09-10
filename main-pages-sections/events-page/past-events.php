@@ -27,9 +27,9 @@
                         }
                     ?>
                     <div class="flex justify-between gap-[20px] border-b-[1px] border-[#cccccc] pb-[30px]">
-                        <div class="bg-[#1f773a]">
+                        <div class="bg-[#1f773a] rounded-sm">
                             <div class="flex flex-col items-center pt-[30px] px-[10px]">
-                                <h6 class="text-[24px] text-[#ffffff]"><?php echo $month ?></h6>
+                                <p class="text-[24px] text-[#ffffff]"><?php echo $month ?></p>
                                 <h6 class="text-[16px] text-[#ffffff]"><?php echo $year ?></h6>
                             </div>
                         </div>
