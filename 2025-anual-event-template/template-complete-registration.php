@@ -171,7 +171,7 @@ get_header();
             const matchData = data.flat().find(i => i.token === token);
 
             console.log("match data", matchData)
-            conosle.log("dtaflat", data.flat();)
+            
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
 
