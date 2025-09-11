@@ -1,4 +1,4 @@
-<div class="py-[100px]">
+<div class="py-[50px]">
     <div class="flex flex-col gap-[50px] pt-[50px]">
         <?php if ($all_news->have_posts()) : ?>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
