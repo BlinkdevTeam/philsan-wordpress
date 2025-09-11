@@ -18,7 +18,7 @@
     
     <div class="pt-[50px]">
         <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
-            <div class="swiper sponsorSwiper">
+            <div class="swiper sponsorSwiper w-[100%]">
                 <div class="swiper-wrapper items-center">
                     <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                         <?php 

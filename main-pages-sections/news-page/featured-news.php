@@ -3,7 +3,7 @@
         <h2 class="text-[42px] font-[700] text-[#1F773A]">Featured News</h2>
     </div>
     <?php if ($featured->have_posts()) : ?>
-        <div class="swiper featuredNews mt-[-200px]">
+        <div class="swiper featuredNews mt-[-200px] w-[100%]">
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                     <?php

@@ -143,7 +143,7 @@ while (have_posts()) {
                 <?php //endif; ?> -->
 
                 <?php if ($gallery) : ?>
-                    <div class="swiper aboutSwiper">
+                    <div class="swiper aboutSwiper w-[100%]">
                         <div class="swiper-wrapper">
                             <?php foreach ($gallery as $image) : ?>
                                 <div class="swiper-slide justify-center">
@@ -283,7 +283,7 @@ while (have_posts()) {
                 </div>
             </div>
 
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper w-[100%]">
                 <div class="swiper-wrapper">
                     <?php if (have_rows('sponsor_group', $page->ID)) : ?>
                         <?php while (have_rows('sponsor_group', $page->ID)) : the_row(); ?>

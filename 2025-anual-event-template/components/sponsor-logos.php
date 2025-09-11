@@ -1,4 +1,4 @@
-<div class="swiper mySwiper">
+<div class="swiper mySwiper w-[100%]">
     <div class="swiper-wrapper">
         <div class="swiper-slide justify-center p-[20px] diamond-sponsor">
             <div class="bg-[#1F773A] py-[5px] px-[10px] rounded-tl-xl rounded-br-xl">

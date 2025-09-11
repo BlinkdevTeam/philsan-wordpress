@@ -1,6 +1,6 @@
 <?php if ($featured->have_posts()) : ?>
     <!-- FEATURED  EVENTS BUT MIGHT NOT BE THE LATEST -->
-    <div class="swiper featuredEvents mt-[-200px]">
+    <div class="swiper featuredEvents mt-[-200px] w-[100%]">
         <div class="swiper-wrapper">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                 <?php
