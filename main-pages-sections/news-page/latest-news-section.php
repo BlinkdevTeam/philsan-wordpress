@@ -4,7 +4,7 @@
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                 <?php
-                    $gallery       = get_field("image");
+                    $image       = get_field("image");
                     $description = get_field("description");
                     $date        = get_field("date");
                     $categories = get_the_terms( get_the_ID(), 'category-filters' );
@@ -19,23 +19,7 @@
                 <!-- FEATURED NEWS -->
                 <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                     <div class="w-[40%]">
-                        <!-- <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo //esc_url($image); ?>" alt=""> -->
-                         <?php if ($gallery) : ?>
-                            <div class="swiper aboutSwiper">
-                                <div class="swiper-wrapper">
-                                    <?php foreach ($gallery as $image) : ?>
-                                        <div class="swiper-slide">
-                                            <img 
-                                                src="<?php echo esc_url($image['url']); ?>" 
-                                                alt="<?php echo esc_attr($image['alt']); ?>" 
-                                                class="w-full h-auto object-cover rounded-xl"
-                                            />
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-
+                        <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     </div>
                     <div class="flex flex-col gap-[10px] w-[60%]">
                         <div class="flex justify-between items-center">
@@ -62,7 +46,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php while ($non_featured->have_posts()) : $non_featured->the_post(); ?>
                 <?php
-                    $gallery       = get_field("image");
+                    $image       = get_field("image");
                     $description = get_field("description");
                     $date        = get_field("date");
                     $categories = get_the_terms( get_the_ID(), 'category-filters' );
@@ -79,23 +63,7 @@
                 ?>
                 <!-- NON-FEATURED NEWS -->
                 <div class="">
-                    <!-- <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php //echo esc_url($image); ?>" alt=""> -->
-                     <?php if ($gallery) : ?>
-                    <div class="swiper aboutSwiper">
-                        <div class="swiper-wrapper">
-                            <?php foreach ($gallery as $image) : ?>
-                                <div class="swiper-slide">
-                                    <img 
-                                        src="<?php echo esc_url($image['url']); ?>" 
-                                        alt="<?php echo esc_attr($image['alt']); ?>" 
-                                        class="w-full h-auto object-cover rounded-xl"
-                                    />
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
+                    <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
                     <div class="pt-[20px]">
                         <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
                         <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
