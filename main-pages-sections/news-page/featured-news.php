@@ -1,4 +1,4 @@
-<div class="custom-container pt-[200px]">
+<div class="custom-container pt-[150px]">
     <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
         <h2 class="text-[42px] font-[700] text-[#1F773A]">Featured News</h2>
     </div>
@@ -20,7 +20,7 @@
                         }
                     ?>
                     <!-- FEATURED NEWS -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide justify-start">
                         <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                             <div class="w-[40%]">
                                 <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">

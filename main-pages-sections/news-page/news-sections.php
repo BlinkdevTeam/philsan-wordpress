@@ -35,7 +35,7 @@
 ?>
 
 <?php include locate_template('main-pages-sections/news-page/featured-news.php'); ?>
-<div class="with-filters pt-[80px]">
+<div class="with-filters">
     <div class="custom-container">
         <div class="">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
