@@ -1,6 +1,6 @@
 <div class="custom-container pt-[200px]">
     <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-        <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Featured News</h2>
+        <h2 class="text-[42px] font-[700] text-[#1F773A]">Featured News</h2>
     </div>
     <?php if ($featured->have_posts()) : ?>
         <div class="swiper featuredNews mt-[-200px]">
@@ -33,8 +33,8 @@
                                         <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                                     </div>
                                 </div>
-                                <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-                                <p class="text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
+                                <h2 class="text-[left] text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
+                                <p class="text-[left] text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
                                 <div class="flex pt-[30px]">
                                     <?php echo theme_button("View More", "/"); ?>
                                 </div>
