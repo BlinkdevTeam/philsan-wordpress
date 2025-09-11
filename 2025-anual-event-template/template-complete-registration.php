@@ -169,7 +169,7 @@ get_header();
         .then(res => res.json())
         .then(data => {
             console.log("data", data.map(i => i.token))
-            
+
             const matchData = data.find(i => i.token === token);
             
             if(matchData) {
@@ -291,9 +291,9 @@ get_header();
                     }
                 })
             } 
-            else {
-                 window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
-            }
+            // else {
+            //      window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
+            // }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
