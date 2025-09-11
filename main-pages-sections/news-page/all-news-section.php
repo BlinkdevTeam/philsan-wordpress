@@ -36,7 +36,7 @@
                         <div class="flex pt-[30px]">
                             <?php if($button_link) : ?>
                                 <?php echo theme_button("View More", $button_link); ?>
-                            <?php else ?>
+                            <?php else : ?>
                                 <?php echo theme_button("View More", $permalink); ?>
                             <?php endif; ?>
                         </div>
