@@ -169,7 +169,7 @@ get_header();
         .then(res => res.json())
         .then(data => {
             console.log("data", data)
-            const matchData = data.flat().find(i => i.token === token);
+            const matchData = data.find(i => i.token === token);
 
             console.log("match data", matchData)
 
