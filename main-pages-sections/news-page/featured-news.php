@@ -1,7 +1,4 @@
 <div>
-    <div>
-
-    </div>
      <?php if ($featured->have_posts()) : ?>
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
@@ -32,7 +29,7 @@
                             </div>
                         </div>
                         <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-                        <p class="text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
+                        <p class="text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
                         <div class="flex pt-[30px]">
                             <?php echo theme_button("View More", "/"); ?>
                         </div>
