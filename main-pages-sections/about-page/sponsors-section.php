@@ -26,7 +26,7 @@
                             $name        = $row['name'];
                             $description = $row['description'];
                         ?>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide justify-center">
                             <div class="">
                                 <img class="w-full h-auto object-cover" src="<?php echo esc_url($image_url); ?>" alt="sponsor logo">
                             </div>
