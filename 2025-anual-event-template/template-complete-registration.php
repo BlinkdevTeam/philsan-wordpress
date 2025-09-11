@@ -171,6 +171,7 @@ get_header();
 
             console.lgo("data", data)
             console.log("matchData", matchData)
+            console.log("token", token)
 
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
