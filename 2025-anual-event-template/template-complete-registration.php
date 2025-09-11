@@ -170,6 +170,13 @@ get_header();
             const matchData = data.find(i => i.token == token);
 
             console.log("data", data)
+            data.map(i => {
+                if(i.token === "3AImQZHaxYBJPHAIllewrimirwell@gmail.com"){
+                    console.log("THIS IS THE TOKEN ------------------------>", i.token)
+                } else {
+                    console.log(i.token)
+                }
+            })
             console.log("matchData", matchData)
             console.log("token", token)
 
