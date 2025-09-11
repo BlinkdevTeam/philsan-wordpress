@@ -5,20 +5,20 @@
     <?php if ($featured->have_posts()) : ?>
         <div class="swiper featuredNews mt-[-200px]">
             <div class="swiper-wrapper">
-                <?php
-                    $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                    $description = get_the_content();
-                    $date        = get_field("date");
-                    $categories = get_the_terms( get_the_ID(), 'category-filters' );
-
-                    // Reformat the date
-                    if ($date) {
-                        $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
-                    } else {
-                        $formatted_date = '';
-                    }
-                ?>
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
+                    <?php
+                        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                        $description = get_the_content();
+                        $date        = get_field("date");
+                        $categories = get_the_terms( get_the_ID(), 'category-filters' );
+
+                        // Reformat the date
+                        if ($date) {
+                            $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                        } else {
+                            $formatted_date = '';
+                        }
+                    ?>
                     <!-- FEATURED NEWS -->
                     <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0] swiper-slide">
                         <div class="w-[40%]">
@@ -42,7 +42,6 @@
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     <?php endif; ?>
 </div>
