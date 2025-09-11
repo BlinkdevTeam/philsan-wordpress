@@ -1,10 +1,13 @@
 <div>
+    <div>
+
+    </div>
      <?php if ($featured->have_posts()) : ?>
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                 <?php
                     $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                    $description = get_field("description");
+                    $description = get_the_content();
                     $date        = get_field("date");
                     $categories = get_the_terms( get_the_ID(), 'category-filters' );
 

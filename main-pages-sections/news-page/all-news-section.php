@@ -8,7 +8,7 @@
                 <?php while ($all_news->have_posts()) : $all_news->the_post(); ?>
                     <?php
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                        $description = get_field("description");
+                        $description = get_the_content();
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         $title = get_the_title();
