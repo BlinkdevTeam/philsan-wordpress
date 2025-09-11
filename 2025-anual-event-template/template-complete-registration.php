@@ -170,7 +170,7 @@ get_header();
         .then(data => {
             const matchData = data[0];
 
-            consle.log("matchdata", matchData)
+            console.log("matchdata", matchData)
             console.log("data", data)
 
             if(matchData) {
