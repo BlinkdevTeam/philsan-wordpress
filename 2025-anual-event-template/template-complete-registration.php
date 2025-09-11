@@ -288,7 +288,7 @@ get_header();
                     }
                 })
             } else {
-                 window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
+                //  window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
             }
         })
         .catch(error => {
@@ -296,7 +296,7 @@ get_header();
         });
         
     } else {
-        // window.location.href = "https://philsan.org/404";
+        window.location.href = "https://philsan.org/404";
     }
 
     // Custom Upload field
