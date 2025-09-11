@@ -157,7 +157,7 @@ get_header();
 
     if(token) {
         //FILTER EMAIL FROM VERFICAITION DATABASE
-        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
+        fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification?token=eq.${token}', {
             method: 'GET',
             headers: {
                 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
@@ -168,8 +168,9 @@ get_header();
         })
         .then(res => res.json())
         .then(data => {
-            const matchData = data.find(i => i.token === token);
+            const matchData = data[0];
 
+            consle.log("matchdata", matchData)
             console.log("data", data)
 
             if(matchData) {
