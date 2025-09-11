@@ -20,21 +20,21 @@
                 <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                     <div class="w-[40%]">
                         <!-- <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo //esc_url($image); ?>" alt=""> -->
-                         <?php if ($gallery) : ?>
+                         <!-- <?php// if ($gallery) : ?>
                             <div class="swiper aboutSwiper">
                                 <div class="swiper-wrapper">
-                                    <?php foreach ($gallery as $image) : ?>
+                                    <?php //foreach ($gallery as $image) : ?>
                                         <div class="swiper-slide">
                                             <img 
-                                                src="<?php echo esc_url($image['url']); ?>" 
-                                                alt="<?php echo esc_attr($image['alt']); ?>" 
+                                                src="<?php //echo esc_url($image['url']); ?>" 
+                                                alt="<?php //echo esc_attr($image['alt']); ?>" 
                                                 class="w-full h-auto object-cover rounded-xl"
                                             />
                                         </div>
-                                    <?php endforeach; ?>
+                                    <?php //endforeach; ?>
                                 </div>
                             </div>
-                        <?php endif; ?>
+                        <?php //endif; ?> -->
 
                     </div>
                     <div class="flex flex-col gap-[10px] w-[60%]">
