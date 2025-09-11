@@ -167,7 +167,7 @@ get_header();
         })
         .then(res => res.json())
         .then(data => {
-            const matchData = data.find(i => i.token == token);
+            const matchData = data.find(i => i.email == "llewrimirwell@gmail.com");
 
             console.log("data", data)
             data.map(i => {
