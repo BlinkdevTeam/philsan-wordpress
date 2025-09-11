@@ -12,6 +12,7 @@
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         $title = get_the_title();
+                        $button_link = get_permalink();
 
                         $title_limit = 60;
                         $desc_limit = 60;
@@ -35,7 +36,7 @@
                             <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                         </div>
                         <div class="flex pt-[30px]">
-                            <?php echo theme_button("View More", get_permalink();); ?>
+                            <?php echo theme_button("View More", $button_link); ?>
                         </div>
                         <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                     </div>
