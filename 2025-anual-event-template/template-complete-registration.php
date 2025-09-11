@@ -296,7 +296,7 @@ get_header();
         });
         
     } else {
-        window.location.href = "https://philsan.org/404";
+        // window.location.href = "https://philsan.org/404";
     }
 
     // Custom Upload field
