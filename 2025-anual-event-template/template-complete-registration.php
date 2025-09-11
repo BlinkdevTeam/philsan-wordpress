@@ -169,7 +169,7 @@ get_header();
         .then(res => res.json())
         .then(data => {
             const matchData = data.find(i => i.token === token);
-            
+            conosle.log("data", data)
             console.log("matchData", matchData)
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
