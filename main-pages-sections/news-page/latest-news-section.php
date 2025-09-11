@@ -80,21 +80,21 @@
                 <!-- NON-FEATURED NEWS -->
                 <div class="">
                     <!-- <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php //echo esc_url($image); ?>" alt=""> -->
-                     <?php if ($gallery) : ?>
+                     <!-- <?php //if ($gallery) : ?>
                         <div class="swiper aboutSwiper">
                             <div class="swiper-wrapper">
-                                <?php foreach ($gallery as $image) : ?>
+                                <?php //foreach ($gallery as $image) : ?>
                                     <div class="swiper-slide">
                                         <img 
-                                            src="<?php echo esc_url($image['url']); ?>" 
-                                            alt="<?php echo esc_attr($image['alt']); ?>" 
+                                            src="<?php //echo esc_url($image['url']); ?>" 
+                                            alt="<?php //echo esc_attr($image['alt']); ?>" 
                                             class="w-full h-auto object-cover rounded-xl"
                                         />
                                     </div>
-                                <?php endforeach; ?>
+                                <?php// endforeach; ?>
                             </div>
                         </div>
-                    <?php endif; ?>
+                    <?php// endif; ?> -->
 
                     <div class="pt-[20px]">
                         <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
