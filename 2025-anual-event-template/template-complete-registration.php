@@ -173,8 +173,6 @@ get_header();
             data.map(i => {
                 if(i.token === "3AImQZHaxYBJPHAIllewrimirwell@gmail.com"){
                     console.log("THIS IS THE TOKEN ------------------------>", i.token)
-                } else {
-                    console.log(i.token)
                 }
             })
             console.log("matchData", matchData)
