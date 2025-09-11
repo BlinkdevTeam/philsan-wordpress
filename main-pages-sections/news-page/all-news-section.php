@@ -35,7 +35,7 @@
                             <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                         </div>
                         <div class="flex pt-[30px]">
-                            <?php echo theme_button("View More", "/"); ?>
+                            <?php echo theme_button("View More", get_permalink();); ?>
                         </div>
                         <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                     </div>
