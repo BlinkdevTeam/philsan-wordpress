@@ -1,10 +1,10 @@
-<div class="custom-container pt-[50px]">
+<div class="custom-container pt-[200px]">
     <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
         <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Featured News</h2>
     </div>
     <?php if ($featured->have_posts()) : ?>
-        <div class="flex">
-            <?php while ($featured->have_posts()) : $featured->the_post(); ?>
+        <div class="swiper featuredNews mt-[-200px]">
+            <div class="swiper-wrapper">
                 <?php
                     $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     $description = get_the_content();
@@ -18,28 +18,30 @@
                         $formatted_date = '';
                     }
                 ?>
-                <!-- FEATURED NEWS -->
-                <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
-                    <div class="w-[40%]">
-                        <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
-                    </div>
-                    <div class="flex flex-col gap-[10px] w-[60%]">
-                        <div class="flex justify-between items-center">
-                            <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
+                <?php while ($featured->have_posts()) : $featured->the_post(); ?>
+                    <!-- FEATURED NEWS -->
+                    <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0] swiper-slide">
+                        <div class="w-[40%]">
+                            <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                        </div>
+                        <div class="flex flex-col gap-[10px] w-[60%]">
+                            <div class="flex justify-between items-center">
+                                <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
 
-                            <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                                <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
+                                <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                    <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
+                                </div>
+                            </div>
+                            <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
+                            <p class="text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
+                            <div class="flex pt-[30px]">
+                                <?php echo theme_button("View More", "/"); ?>
                             </div>
                         </div>
-                        <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-                        <p class="text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
-                        <div class="flex pt-[30px]">
-                            <?php echo theme_button("View More", "/"); ?>
-                        </div>
                     </div>
-                </div>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            </div>
         </div>
     <?php endif; ?>
 </div>

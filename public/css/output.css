@@ -2206,6 +2206,10 @@ video {
   padding-top: 80px;
 }
 
+.pt-\[200px\] {
+  padding-top: 200px;
+}
+
 .text-left {
   text-align: left;
 }
