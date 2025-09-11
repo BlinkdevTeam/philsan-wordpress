@@ -277,7 +277,6 @@ get_header();
                             if (!response.ok) {
                                 return response.json().then(error => { throw error });
                             }
-                            console.log("response", response)
                             spinner.classList.add("hidden");
                             window.location.href = "https://philsan.org/38th-annual-convention/registration-successful/";
                         })
