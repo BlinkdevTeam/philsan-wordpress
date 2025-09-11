@@ -1,5 +1,8 @@
-<div class="custom-container pt-[100px]">
-     <?php if ($featured->have_posts()) : ?>
+<div class="custom-container pt-[50px]">
+    <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
+        <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">Featured News</h2>
+    </div>
+    <?php if ($featured->have_posts()) : ?>
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                 <?php
