@@ -1,6 +1,7 @@
 <?php get_header(); ?>
     <?php 
         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+        $gallery = get_field("image");
         $description = get_the_content();
         $date        = get_field("date");
         $categories = get_the_terms( get_the_ID(), 'category-filters' );
@@ -18,9 +19,26 @@
         }
     ?>
     <div class="custom-container py-[100px]">
-        <div>
-            <h2 class="text-left text-[42px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-            <img class="w-full h-[500px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+        <div class="flex flex-col gap-[20px]">
+            <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
+            <div class="flex flex-col">
+                <img class="w-full h-[500px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                <?php if ($gallery) : ?>
+                    <div class="">
+                        <div class="">
+                            <?php foreach ($gallery as $image) : ?>
+                                <div class="justify-center">
+                                    <img 
+                                        src="<?php echo esc_url($image['url']); ?>" 
+                                        alt="<?php echo esc_attr($image['alt']); ?>" 
+                                        class="w-full h-auto object-cover rounded-xl"
+                                    />
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
             <p class="text-left text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
         </div>
     </div>
