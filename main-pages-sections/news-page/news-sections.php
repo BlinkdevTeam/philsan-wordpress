@@ -38,6 +38,10 @@
 <div class="with-filters pt-[150px]">
     <div class="custom-container">
         <div class="">
+            <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
+                <h2 class="text-[42px] font-[700] text-[#1F773A]">All News</h2>
+                <p class="text-[24px] text-[#000000]">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
             <div class="flex justify-center gap-[5px] w-[90%] lg:w-[80%] xl:w-[800px] mx-auto pt-[20px]">
                 <div class="relative flex items-center w-[100%] justify-end">
                     <svg id="searchBtn" class="absolute left-[10px]" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

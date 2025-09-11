@@ -1,7 +1,7 @@
 <div class="py-[100px]">
-    <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
+    <!-- <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
         <h2 class="text-[42px] font-[700] pb-[20px] text-[#1F773A]">All News</h2>
-    </div>
+    </div> -->
     <div class="flex flex-col gap-[50px] pt-[50px]">
         <?php if ($all_news->have_posts()) : ?>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
