@@ -155,9 +155,6 @@ get_header();
     const token = params.get('t');
     const spinner = document.getElementById('spinner');
 
-    console.log("token", token)
-    console.log("params", params)
-
     if(token) {
         console.log("token", token)
         //FILTER EMAIL FROM VERFICAITION DATABASE
@@ -173,6 +170,7 @@ get_header();
         .then(data => {
             const matchData = data.find(i => i.token === token);
             
+            console.log("matchData", matchData)
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
 
@@ -189,6 +187,7 @@ get_header();
                 .then(data => {
                     const alreadyInregistration = data.find(i => i.email === matchData.email);
 
+                    console.log("alreadyInreg", alreadyInregistration)
                     if(alreadyInregistration) {
                         window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
                     } else { 
