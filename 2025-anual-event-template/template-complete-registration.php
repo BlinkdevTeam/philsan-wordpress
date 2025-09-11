@@ -169,7 +169,7 @@ get_header();
         .then(data => {
             const matchData = data.find(i => i.token == token);
 
-            console.lgo("data", data)
+            console.log("data", data)
             console.log("matchData", matchData)
             console.log("token", token)
 
