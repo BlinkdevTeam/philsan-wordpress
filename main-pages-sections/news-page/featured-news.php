@@ -33,8 +33,8 @@
                                         <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
                                     </div>
                                 </div>
-                                <h2 class="text-[left] items-start text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-                                <p class="text-[left] items-start text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
+                                <h2 class="text-left text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
+                                <p class="text-left text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
                                 <div class="flex pt-[30px]">
                                     <?php echo theme_button("View More", "/"); ?>
                                 </div>
