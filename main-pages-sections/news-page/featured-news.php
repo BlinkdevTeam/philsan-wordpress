@@ -1,4 +1,4 @@
-<div>
+<div class="custom-container pt-[100px]">
      <?php if ($featured->have_posts()) : ?>
         <div class="flex">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
