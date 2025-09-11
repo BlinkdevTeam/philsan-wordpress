@@ -167,12 +167,8 @@ get_header();
         })
         .then(res => res.json())
         .then(data => {
-            const matchData = data.find(i => i.token === token);
-            
-            const matchDataTest = data.find(i => i.token === "3AImQZHaxYBJPHAIllewrimirwell@gmail.com");
+            const matchData = data.find(i => i.token == token);
 
-            console.log("matchdatatest", matchDataTest)
-            
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
 
