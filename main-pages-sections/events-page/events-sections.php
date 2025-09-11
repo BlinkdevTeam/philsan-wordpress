@@ -46,6 +46,8 @@
 
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 ?>
+<?php include locate_template('main-pages-sections/events-page/hero-section.php'); ?>
+<?php include locate_template('main-pages-sections/events-page/featured-events.php'); ?>
 
 <div class="with-filters pt-[150px]">
     <div class="custom-container">
@@ -71,8 +73,6 @@
             </div>
             <div id="search-results"></div>
         </div>
-        <?php include locate_template('main-pages-sections/events-page/hero-section.php'); ?>
-        <?php include locate_template('main-pages-sections/events-page/featured-events.php'); ?>
         <?php //include locate_template('main-pages-sections/events-page/upcoming-events.php'); ?>
         <?php include locate_template('main-pages-sections/events-page/past-events.php'); ?>
         <?php get_template_part('template_part/filter-sidebar'); ?>
