@@ -155,6 +155,9 @@ get_header();
     const token = params.get('t');
     const spinner = document.getElementById('spinner');
 
+    console.log("token", token)
+    console.log("params", params)
+
     if(token) {
         console.log("token", token)
         //FILTER EMAIL FROM VERFICAITION DATABASE
@@ -287,9 +290,10 @@ get_header();
                     });
                     }
                 })
-            } else {
-                //  window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
-            }
+            } 
+            // else {
+            //      window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
+            // }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
