@@ -59,7 +59,7 @@
             <div id="search-results"></div>
         </div>
         
-        <?php //include locate_template('main-pages-sections/news-page/latest-news-section.php'); ?>
+        <?php include locate_template('main-pages-sections/news-page/latest-news-section.php'); ?>
         <?php //include locate_template('main-pages-sections/news-page/all-news-section.php'); ?>
         <?php get_template_part('template_part/filter-sidebar'); ?>
     </div>
