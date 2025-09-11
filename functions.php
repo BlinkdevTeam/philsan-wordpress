@@ -163,24 +163,40 @@ function philsan_swiper_init_script() {
             });
 
             new Swiper(".featuredNews", {
+                direction: "vertical",
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
+                speed: 700, // smooth transition time in ms
                 autoplay: {
                     delay: 6000,
                     disableOnInteraction: false,
                 },
-                direction: "vertical",
                 pagination: {
                     el: ".swiper-pagination",
+                    clickable: true,
                     dynamicBullets: true,
                 },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    1024: { slidesPerView: 1 }
+
+                // Important for dynamic content and images
+                observer: true,
+                observeParents: true,
+
+                // Keep interactions predictable
+                simulateTouch: true,            // change to false to disable drag
+                preventInteractionOnTransition: true,
+
+                on: {
+                    imagesReady: function () {
+                    // ensure Swiper recalculates after images load
+                    this.update();
+                    },
+                    resize: function () {
+                    this.update();
+                    }
                 }
-            });
+                });
+
         });
     </script>
     <?php
