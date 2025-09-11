@@ -163,7 +163,6 @@ get_header();
                 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNodnV0bGNnbGpxaWlkcXhxcnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MTM2NDgsImV4cCI6MjA2MTQ4OTY0OH0.UXJKk6iIyaVJsohEB6CwwauC21YPez1xwsOFy9qa34Q',
                 'Content-Type': 'application/json',
-                'Range': '0-4999'
             }
         })
         .then(res => res.json())
@@ -289,9 +288,9 @@ get_header();
                     }
                 })
             } 
-            // else {
-            //      window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
-            // }
+            else {
+                 window.location.href = "https://philsan.org/38th-annual-convention/session-expired/";
+            }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
