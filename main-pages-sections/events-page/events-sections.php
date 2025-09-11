@@ -71,6 +71,7 @@
             </div>
             <div id="search-results"></div>
         </div>
+        <?php include locate_template('main-pages-sections/events-page/hero-section.php'); ?>
         <?php include locate_template('main-pages-sections/events-page/featured-events.php'); ?>
         <?php //include locate_template('main-pages-sections/events-page/upcoming-events.php'); ?>
         <?php include locate_template('main-pages-sections/events-page/past-events.php'); ?>
