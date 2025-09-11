@@ -169,6 +169,9 @@ get_header();
         .then(data => {
             const matchData = data.find(i => i.token == token);
 
+            console.lgo("data", data)
+            console.log("matchData", matchData)
+
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
 
