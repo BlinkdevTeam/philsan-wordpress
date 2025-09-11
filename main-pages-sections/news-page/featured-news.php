@@ -11,6 +11,9 @@
                         $description = get_the_content();
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
+                        $button_link = get_field("button_link");
+                        $permalink = get_permalink();
+
 
                         // Reformat the date
                         if ($date) {
@@ -36,7 +39,13 @@
                                 <h2 class="text-left text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                                 <p class="text-left text-[16px] font-[400]"><?php echo esc_html($description); ?></p>
                                 <div class="flex pt-[30px]">
-                                    <?php echo theme_button("View More", "/"); ?>
+                                    <div class="flex pt-[30px]">
+                                        <?php if($button_link) : ?>
+                                            <?php echo theme_button("View More", $button_link); ?>
+                                        <?php else ?>
+                                            <?php echo theme_button("View More", $permalink); ?>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
