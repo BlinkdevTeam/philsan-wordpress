@@ -1,8 +1,5 @@
 <?php if ($past_events->have_posts()) : ?>
-    <div class="py-[100px] w-[80%] mx-auto">
-        <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pb-[50px]">
-            <h2 class="text-[24px] font-[700] pb-[20px] text-[#1F773A]">Events</h2>
-        </div>
+    <div class="py-[100px]">
         <div class="flex flex-col gap-[50px]">
             <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-[30px]">
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>

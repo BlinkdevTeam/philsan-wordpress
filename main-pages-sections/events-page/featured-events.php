@@ -1,8 +1,5 @@
 <?php if ($featured->have_posts()) : ?>
     <!-- FEATURED  EVENTS BUT MIGHT NOT BE THE LATEST -->
-    <div class="w-[100%] flex flex-col justify-center items-center h-[100%] pt-[100px] pb-[50px]">
-        <h2 class="text-[24px] font-[700] text-[#1F773A]">Featured Events</h2>
-    </div>
     <div class="swiper featuredEvents">
         <div class="swiper-wrapper">
             <?php while ($featured->have_posts()) : $featured->the_post(); ?>
