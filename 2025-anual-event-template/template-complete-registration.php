@@ -157,6 +157,7 @@ get_header();
 
     if(token) {
         console.log("token", token)
+        console.log("token from URL:", token, typeof token);
         //FILTER EMAIL FROM VERFICAITION DATABASE
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
             method: 'GET',
@@ -168,9 +169,8 @@ get_header();
         })
         .then(res => res.json())
         .then(data => {
-            console.log("data", data)
             const matchData = data.find(i => i.token === token);
-
+            data.map(i => console.log("i.token", typeof i.token))
             console.log("match data", matchData)
 
             if(matchData) {
