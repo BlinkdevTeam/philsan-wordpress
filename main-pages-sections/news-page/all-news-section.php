@@ -31,8 +31,8 @@
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
-                            <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                            <p class="text-[14px] font-[400]"><?php echo esc_html($title_trimmed); ?></p>
+                            <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
+                            <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                         </div>
                         <div class="flex pt-[30px]">
                             <?php echo theme_button("View More", "/"); ?>
