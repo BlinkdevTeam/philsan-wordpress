@@ -17,10 +17,10 @@
             $formatted_date = '';
         }
     ?>
-    <div class="custom-container">
+    <div class="custom-container py-[100px]">
         <div>
             <h2 class="text-left text-[42px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
-            <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+            <img class="w-full h-[500px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
             <p class="text-left text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
         </div>
     </div>
