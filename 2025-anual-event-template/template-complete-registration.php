@@ -156,8 +156,6 @@ get_header();
     const spinner = document.getElementById('spinner');
 
     if(token) {
-        console.log("token", token)
-        console.log("token from URL:", token, typeof token);
         //FILTER EMAIL FROM VERFICAITION DATABASE
         fetch('https://shvutlcgljqiidqxqrru.supabase.co/rest/v1/philsan_email_verification', {
             method: 'GET',
@@ -170,9 +168,11 @@ get_header();
         .then(res => res.json())
         .then(data => {
             const matchData = data.find(i => i.token === token);
-            data.map(i => console.log("i.token", typeof i.token))
-            console.log("match data", matchData)
+            
+            const matchDataTest = data.find(i => i.token === "3AImQZHaxYBJPHAIllewrimirwell@gmail.com");
 
+            console.log("matchdatatest", matchDataTest)
+            
             if(matchData) {
                 document.querySelector('input[name="email"]').value = matchData.email;
 
