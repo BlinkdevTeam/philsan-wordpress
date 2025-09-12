@@ -21,10 +21,13 @@
     <div class="custom-container py-[100px]">
         <div class="flex flex-col gap-[20px]">
             <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-            <div class="flex gap-[20px]">
-                <div class="w-[70%]">
-                    <img class="w-full h-[500px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+            <div class="flex gap-[20px] items-stretch">
+                <div class="w-[70%] featured-image-container">
+                    <img class="w-full h-full object-cover rounded-xl" 
+                        src="<?php echo esc_url($featured_image_url); ?>" 
+                        alt="">
                 </div>
+
                 <?php if ($gallery) : ?>
                     <div class="swiper singleFeaturedNews w-[30%]">
                         <div class="swiper-wrapper">
@@ -41,6 +44,7 @@
                     </div>
                 <?php endif; ?>
             </div>
+
             <p class="text-left text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
         </div>
     </div>

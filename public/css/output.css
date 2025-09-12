@@ -1257,6 +1257,10 @@ video {
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -2673,8 +2677,8 @@ p, a, li {
 
 .singleFeaturedNews .swiper-wrapper,
 .singleFeaturedNews .swiper-slide {
-  height: 100%;
-  margin: 0
+  height: 100% !important;
+  margin: 0 !important;
 }
 
 /* optional: pagination z-index */
