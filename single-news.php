@@ -29,11 +29,11 @@
                     <div class="swiper singleFeaturedNews w-[30%]">
                         <div class="swiper-wrapper">
                             <?php foreach ($gallery as $image) : ?>
-                                <div class="swiper-slide justify-center">
+                                <div class="swiper-slide justify-start">
                                     <img 
                                         src="<?php echo esc_url($image['url']); ?>" 
                                         alt="<?php echo esc_attr($image['alt']); ?>" 
-                                        class="w-full h-auto object-cover rounded-xl"
+                                        class="w-full h-[300px] object-cover rounded-xl"
                                     />
                                 </div>
                             <?php endforeach; ?>

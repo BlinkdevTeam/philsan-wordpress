@@ -61,6 +61,7 @@ p, a, li {
 .singleFeaturedNews .swiper-wrapper,
 .singleFeaturedNews .swiper-slide {
   height: 100%;
+  margin: 0
 }
 
 /* optional: pagination z-index */
