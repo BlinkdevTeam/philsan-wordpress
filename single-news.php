@@ -27,7 +27,7 @@
                 </div>
                 <?php if ($gallery) : ?>
                     <div class="swiper singleFeaturedNews w-[30%]">
-                        <div class="swiper-wrapper flex flex-col gap-[20px]">
+                        <div class="swiper-wrapper">
                             <?php foreach ($gallery as $image) : ?>
                                 <div class="swiper-slide justify-center">
                                     <img 
