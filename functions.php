@@ -195,8 +195,41 @@ function philsan_swiper_init_script() {
                     this.update();
                     }
                 }
-                });
+            });
+            new Swiper(".singleFeaturedNews", {
+                direction: "vertical",
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+                speed: 700, // smooth transition time in ms
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    dynamicBullets: true,
+                },
 
+                // Important for dynamic content and images
+                observer: true,
+                observeParents: true,
+
+                // Keep interactions predictable
+                simulateTouch: true,            // change to false to disable drag
+                preventInteractionOnTransition: true,
+
+                on: {
+                    imagesReady: function () {
+                    // ensure Swiper recalculates after images load
+                    this.update();
+                    },
+                    resize: function () {
+                    this.update();
+                    }
+                }
+            });
         });
     </script>
     <?php

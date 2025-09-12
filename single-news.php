@@ -26,7 +26,7 @@
                     <img class="w-full h-[500px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                 </div>
                 <?php if ($gallery) : ?>
-                    <div class="swiper featuredNews w-[30%]">
+                    <div class="swiper singleFeaturedNews w-[30%]">
                         <div class="swiper-wrapper flex flex-col gap-[20px]">
                             <?php foreach ($gallery as $image) : ?>
                                 <div class="swiper-slide justify-center">
