@@ -929,10 +929,6 @@ video {
   height: 50%;
 }
 
-.h-\[500px\] {
-  height: 500px;
-}
-
 .h-\[50px\] {
   height: 50px;
 }
@@ -1255,10 +1251,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.items-stretch {
-  align-items: stretch;
 }
 
 .justify-start {

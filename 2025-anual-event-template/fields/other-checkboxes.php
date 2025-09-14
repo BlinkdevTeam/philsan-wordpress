@@ -28,10 +28,10 @@
             <input class="mt-[5px] border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">No</label>
         </div>
-        <div class="flex gap-[5px] items-start">
+        <!-- <div class="flex gap-[5px] items-start">
             <input class="mt-[5px] border-[1px] border-[#339544]" type="radio" id="sv_printed" name="souvenir" value="printed" required>
             <label for="sv_printed">Printed (First 300 only)</label>
-        </div>
+        </div> -->
         <div class="flex gap-[5px] items-start">
             <input class="mt-[5px] border-[1px] border-[#339544]" type="radio" id="sv_digital" name="souvenir" value="digital">
             <label for="sv_digital">Digital Copy in USB drive (limited slots only)</label>
