@@ -6,7 +6,7 @@
         <div class="flex flex-col justify-center items-center">
             <h2 class="text-[24px] text-[#1F773A] font-[700]">Event Sponsors</h2>
         </div>
-        <div class="pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[50px] mt-8">
+        <div class="pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[50px] mt-8">
             <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                     <?php 
                         $image_url   = $row['logo'];
