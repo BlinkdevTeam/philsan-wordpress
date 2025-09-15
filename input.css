@@ -53,7 +53,7 @@ p, a, li {
 
 /* Ensure container has fixed height and hides overflow */
 .singleFeaturedNews {
-  height: 600px;           /* adjust to taste */
+  height: 100%;           /* adjust to taste */
   overflow: hidden;
 }
 

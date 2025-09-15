@@ -203,11 +203,11 @@ function philsan_swiper_init_script() {
                 spaceBetween: 30,
                 loop: true,
                 speed: 700, // smooth transition time in ms
-                // autoplay: {
-                //     delay: 6000,
-                //     disableOnInteraction: false,
-                // },
-                autoplay: false
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                // autoplay: false
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,

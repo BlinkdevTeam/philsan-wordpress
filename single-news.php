@@ -26,17 +26,19 @@
                     <img class="w-full h-[100%] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                 </div>
                 <?php if ($gallery) : ?>
-                    <div class="swiper singleFeaturedNews w-[30%]">
-                        <div class="swiper-wrapper">
-                            <?php foreach ($gallery as $image) : ?>
-                                <div class="swiper-slide justify-start">
-                                    <img 
-                                        src="<?php echo esc_url($image['url']); ?>" 
-                                        alt="<?php echo esc_attr($image['alt']); ?>" 
-                                        class="w-full h-[300px] object-cover rounded-xl"
-                                    />
-                                </div>
-                            <?php endforeach; ?>
+                    <div class="w-[30%]">
+                        <div class="swiper singleFeaturedNews">
+                            <div class="swiper-wrapper">
+                                <?php foreach ($gallery as $image) : ?>
+                                    <div class="swiper-slide justify-start">
+                                        <img 
+                                            src="<?php echo esc_url($image['url']); ?>" 
+                                            alt="<?php echo esc_attr($image['alt']); ?>" 
+                                            class="w-full h-[300px] object-cover rounded-xl"
+                                        />
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 <?php endif; ?>
