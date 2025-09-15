@@ -18,7 +18,7 @@
         <div class="flex flex-col gap-[20px]">
             <div class="flex flex-col gap-[10px]">
                 <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                <div class="px-[15px] py-[10px] border-[2px] border-[#5d5d5d] w-fit rounded-full">
+                <div class="px-[15px] py-[5px] border-[2px] border-[#5d5d5d] w-fit rounded-full">
                     <p class="text-[16px] text-[#5d5d5d] font-[600]"><?php echo $formatted_date ?></p>
                 </div>
             </div>
@@ -56,10 +56,8 @@
                <div class="flex gap-[20px]">
                     <?php while (have_rows('social_media')) : the_row(); ?>
                         <!-- Loop through each row in the 'about_description' repeater -->
-                       <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer">
-                            <img class="w-[30px] h-[30px] object-cover" 
-                                src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" 
-                                alt="">
+                       <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[20px] rounded-xl">
+                            <img class="w-[20px] h-[20px] object-cover" src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" alt="">
                         </a>
                     <?php endwhile; ?>
                </div>
