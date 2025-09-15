@@ -201,12 +201,13 @@ function philsan_swiper_init_script() {
                 direction: "vertical",
                 slidesPerView: 2,
                 spaceBetween: 30,
-                loop: false,
+                loop: true,
                 speed: 700, // smooth transition time in ms
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: false,
-                },
+                // autoplay: {
+                //     delay: 6000,
+                //     disableOnInteraction: false,
+                // },
+                autoplay: false
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
