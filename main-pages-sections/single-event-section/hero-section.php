@@ -37,7 +37,7 @@
                         <p class="text-[16px] text-[#ffffff] font-[200]"><?php echo $formatted_date ?></p>
                     </div>
                 </div>
-                <div class="w-[40%] rounded-xl overflow-hidden">
+                <div class="w-[40%] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                     <img class="w-full h-[400px] object-cover" src="<?php echo $featured_image_url ?>" alt="hero-image">
                 </div>
             </div>
