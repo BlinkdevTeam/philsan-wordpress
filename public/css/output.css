@@ -692,12 +692,12 @@ video {
   top: 0;
 }
 
-.top-\[10px\] {
-  top: 10px;
-}
-
 .top-\[0px\] {
   top: 0px;
+}
+
+.top-\[10px\] {
+  top: 10px;
 }
 
 .z-0 {
@@ -921,10 +921,6 @@ video {
   height: 20px;
 }
 
-.h-\[285px\] {
-  height: 285px;
-}
-
 .h-\[300px\] {
   height: 300px;
 }
@@ -959,10 +955,6 @@ video {
 
 .h-\[58px\] {
   height: 58px;
-}
-
-.h-\[600px\] {
-  height: 600px;
 }
 
 .h-\[60px\] {
@@ -1616,11 +1608,6 @@ video {
 .border-\[\#339544\] {
   --tw-border-opacity: 1;
   border-color: rgb(51 149 68 / var(--tw-border-opacity, 1));
-}
-
-.border-\[\#5d5d5d\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(93 93 93 / var(--tw-border-opacity, 1));
 }
 
 .border-\[\#9e9e47\] {
@@ -2468,11 +2455,6 @@ video {
   color: rgb(83 83 83 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#5d5d5d\] {
-  --tw-text-opacity: 1;
-  color: rgb(93 93 93 / var(--tw-text-opacity, 1));
-}
-
 .text-\[\#646464\] {
   --tw-text-opacity: 1;
   color: rgb(100 100 100 / var(--tw-text-opacity, 1));
@@ -2696,6 +2678,21 @@ p, a, li {
   align-items: center;
   border-radius: 8px;
   text-align: center;
+}
+
+/* Ensure container has fixed height and hides overflow */
+
+.mobile-swiper {
+  height: 600px;
+  /* adjust to taste */
+  overflow: hidden;
+}
+
+/* Make wrapper & slides fill that height */
+
+.mobile-swiper .swiper-wrapper,
+.mobile-swiper .swiper-slide {
+  height: 100%;
 }
 
 /* Ensure container has fixed height and hides overflow */
