@@ -48,7 +48,7 @@
                                         <?php endwhile; ?>
                                     </div>
                                 <?php endif; ?> 
-                                <div class="flex pt-[30px]">
+                                <div class="flex pt-[8px]">
                                     <?php if($button_link) : ?>
                                         <?php echo theme_button("View More", $button_link); ?>
                                     <?php else : ?>
