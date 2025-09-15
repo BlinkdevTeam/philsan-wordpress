@@ -6,12 +6,7 @@
         $date        = get_field("date");
         $categories = get_the_terms( get_the_ID(), 'category-filters' );
         $title = get_the_title();
-        $location = get_field("location");
 
-        $title_limit = 60;
-        $desc_limit = 60;
-        $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "..."); // Trim it properly
-        $title_trimmed = mb_strimwidth($description, 0, $title_limit, "...");
         // Reformat the date
         if ($date) {
             $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
@@ -23,7 +18,7 @@
         <div class="flex flex-col gap-[20px]">
             <div class="flex flex-col gap-[10px]">
                 <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                <p class="text-[16px] "><?php echo $location ?></p>
+                <p class="text-[16px] "><?php echo $date ?></p>
             </div>
             <div class="flex gap-[20px]">
                 <?php if ($gallery) : ?>
@@ -59,8 +54,10 @@
                <div class="flex gap-[20px]">
                     <?php while (have_rows('social_media')) : the_row(); ?>
                         <!-- Loop through each row in the 'about_description' repeater -->
-                        <a href="<?php echo esc_url(get_field("socmed_link"))  ?>" class="w-[100%] cursor-pointer">
-                            <img class="w-full h-[200px] object-cover rounded-xl" src="<?php echo esc_url(get_field($socmed_icon);); ?>" alt="">
+                       <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="w-[100%] cursor-pointer">
+                            <img class="w-full h-[200px] object-cover rounded-xl" 
+                                src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" 
+                                alt="">
                         </a>
                     <?php endwhile; ?>
                </div>
