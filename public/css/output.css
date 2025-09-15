@@ -1849,6 +1849,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[rgba\(11\2c 83\2c 4\2c 0\.6\)\] {
+  --tw-gradient-from: rgba(11,83,4,0.6) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(11, 83, 4, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-\[\#269739\] {
   --tw-gradient-to: rgb(38 151 57 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #269739 var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2605,6 +2611,10 @@ video {
 
 .opacity-\[0\] {
   opacity: 0;
+}
+
+.opacity-\[\.6\] {
+  opacity: .6;
 }
 
 .shadow {

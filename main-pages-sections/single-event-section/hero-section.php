@@ -27,14 +27,12 @@
         <div class="flex custom-container items-center justify-center py-[100px] mx-auto z-[2]">
             <div class="flex justify-between items-center gap-[50px]">
                 <div class="w-[100%] flex flex-col justify-center text-center h-[100%]">
-                    <h1 class="text-[48px] font-[700] pb-[20px] text-[#ffffff]"><?php the_title(); ?></h1>
-                    <div class="w-[100%] flex items-center">
-                        <p class="text-[18px] text-[#ffffff]"><?php echo $description ?></p>
-                    </div>
+                    <h1 class="text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_title(); ?></h1>
+                    <p class="text-[18px] text-[#ffffff]"><?php echo $description ?></p>
                 </div>
             </div>
         </div>
-        <div class="bg-gradient-to-b from-[rgba(11,83,4,0.3)] to-[rgba(11,83,4,1)] w-full h-full absolute top-0 left-0 z-[1]"></div>
+        <div class="bg-[#1f773a] opacity-[.6] w-full h-full absolute top-0 left-0 z-[1]"></div>
         <img class="w-full h-full object-cover absolute" src="<?php echo $featured_image_url ?>" alt="hero-image">
     </div>
 </div>
