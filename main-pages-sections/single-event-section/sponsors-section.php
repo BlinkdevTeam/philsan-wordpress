@@ -2,21 +2,19 @@
     $group = get_field('sponsor_section');
 ?>
 <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
-    <div class="sponsors-section custom-container py-[50px]">
+    <div class="sponsors-section custom-container py-[50px] items-center">
         <div class="flex flex-col justify-center items-center">
             <h2 class="text-[24px] text-[#1F773A] font-[700]">Event Sponsors</h2>
         </div>
-        <div class="pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[50px] mt-8">
+        <div class="pt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-[50px] mt-8">
             <?php foreach ( $group['sponsor_repeater'] as $row ) : ?>
                     <?php 
                         $image_url   = $row['logo'];
                         $name        = $row['name'];
                         $description = $row['description'];
                     ?>
-                    <div class="justify-center">
-                        <div class="">
-                            <img class="w-full h-auto object-cover" src="<?php echo esc_url($image_url); ?>" alt="sponsor logo">
-                        </div>
+                    <div class="">
+                        <img class="w-full h-auto object-cover" src="<?php echo esc_url($image_url); ?>" alt="sponsor logo">
                     </div>
                 <?php endforeach; ?> 
             </div>
