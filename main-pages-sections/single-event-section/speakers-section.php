@@ -1,6 +1,6 @@
 <div class="speaker-section custom-container pt-[80px] pb-[50px]">
-    <?php if ( have_rows('repeater_repeater') ): ?>
-        <?php while ( have_rows('repeater_repeater') ): the_row(); ?>
+    <?php if ( have_rows('speaker_repeater') ): ?>
+        <?php while ( have_rows('speaker_repeater') ): the_row(); ?>
             
             <div class="flex flex-col items-center justify-center">
                 <h2 class="text-[42px] text-[#1F773A] font-[700] text-center">Speakers</h2>
