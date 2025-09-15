@@ -6,6 +6,7 @@
         $date        = get_field("date");
         $categories = get_the_terms( get_the_ID(), 'category-filters' );
         $title = get_the_title();
+        $location = get_field("location");
 
         $title_limit = 60;
         $desc_limit = 60;
@@ -20,11 +21,20 @@
     ?>
     <div class="custom-container py-[100px]">
         <div class="flex flex-col gap-[20px]">
-            <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
+            <div class="flex flex-col gap-[10px]">
+                <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
+                <p class="text-[16px] "><?php echo $location ?></p>
+            </div>
             <div class="flex gap-[20px]">
-                <div class="w-[70%]">
-                    <img class="w-full h-[600px] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
-                </div>
+                <?php if ($gallery) : ?>
+                    <div class="w-[70%]">
+                        <img class="w-full h-[600px] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                    </div>
+                <?php else:  ?>
+                    <div class="w-[100%]">
+                        <img class="w-full h-[600px] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                    </div>
+                <?php endif; ?>
                 <?php if ($gallery) : ?>
                     <div class="w-[30%]">
                         <div class="swiper singleFeaturedNews">
@@ -45,6 +55,16 @@
             </div>
             
             <p class="text-left text-[18px] font-[400]"><?php echo esc_html($description); ?></p>
+             <?php if (have_rows('social_media')) : ?>
+               <div class="flex gap-[20px]">
+                    <?php while (have_rows('social_media')) : the_row(); ?>
+                        <!-- Loop through each row in the 'about_description' repeater -->
+                        <a href="<?php echo esc_url(get_field("socmed_link"))  ?>" class="w-[100%] cursor-pointer">
+                            <img class="w-full h-[200px] object-cover rounded-xl" src="<?php echo esc_url(get_field($socmed_icon);); ?>" alt="">
+                        </a>
+                    <?php endwhile; ?>
+               </div>
+            <?php endif; ?> 
         </div>
     </div>
 <?php get_footer(); ?>
