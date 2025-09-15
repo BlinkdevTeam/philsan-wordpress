@@ -12,7 +12,7 @@
                             <div class="swiper-wrapper">
                                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                                     <?php
-                                        $image       = get_field("image");
+                                        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                                         $description = get_the_content();
                                         $description = wp_strip_all_tags($description);
                                         $date        = get_field("date");
