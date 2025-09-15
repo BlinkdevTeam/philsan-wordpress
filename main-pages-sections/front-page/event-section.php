@@ -116,79 +116,75 @@
                 <?php if ($events->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
-                            <div class="flex gap-[50px]"> <!-- First row -->
-                                <?php while ($events->have_posts()) : $events->the_post(); ?>
-                                    <?php
-                                        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                                        $description    = get_the_content();
-                                        $description    = wp_strip_all_tags($description);
-                                        $location       = get_field("location");
-                                        $date           = get_field("date");
-                                        $max_length     = 10;
+                            <?php while ($events->have_posts()) : $events->the_post(); ?>
+                                <?php
+                                    $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                                    $description    = get_the_content();
+                                    $description    = wp_strip_all_tags($description);
+                                    $location       = get_field("location");
+                                    $date           = get_field("date");
+                                    $max_length     = 10;
 
-                                        // Reformat the date
-                                        if ($date) {
-                                            $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
-                                        } else {
-                                            $formatted_date = '';
-                                        }
+                                    // Reformat the date
+                                    if ($date) {
+                                        $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                                    } else {
+                                        $formatted_date = '';
+                                    }
 
-                                        if (strlen($location) > $max_length) {
-                                            $short_location = substr($location, 0, $max_length) . '...';
-                                        } else {
-                                            $short_location = $location;
-                                        }
-                                    ?>
-                                    <div class="swiper-slide">
-                                        <div class="flex flex-col gap-[20px]">
-                                            <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                                <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
-                                            </div>
-                                            <div class="flex gap-[10px]">
-                                                <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                                    <div class="w-fit">
-                                                        <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="#646464"/>
-                                                            <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
-                                                        </svg>
-                                                    </div>
-                                                    
-                                                    <!-- Shortened text -->
-                                                    <p class="text-[16px] font-[300] text-[#646464]">
-                                                        <?php echo esc_html($short_location); ?>
-                                                    </p>
-
-                                                    <!-- Tooltip on hover -->
-                                                    <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-white text-black text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
-                                                        <?php echo esc_html($location); ?>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                                    <div class="w-fit">
-                                                        <svg width="22" height="23" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        </svg>
-                                                    </div>
-                                                    <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col gap-[10px]">
-                                                <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
-                                                <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
-                                            </div>
-                                            <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
-                                                Explore More
-                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1 13L7 7L1 1" stroke="#EDB221" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
+                                    if (strlen($location) > $max_length) {
+                                        $short_location = substr($location, 0, $max_length) . '...';
+                                    } else {
+                                        $short_location = $location;
+                                    }
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-[20px]">
+                                        <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
+                                            <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
+                                            <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                         </div>
-                                    </div>
-                                <?php endwhile; ?>
-                            </div> <!-- Close second row -->
+                                        <div class="flex gap-[10px]">
+                                            <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
+                                                <div class="w-fit">
+                                                    <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="#646464"/>
+                                                        <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
+                                                    </svg>
+                                                </div>
+                                                
+                                                <!-- Shortened text -->
+                                                <p class="text-[16px] font-[300] text-[#646464]">
+                                                    <?php echo esc_html($short_location); ?>
+                                                </p>
 
-                            <?php wp_reset_postdata(); ?>
+                                                <!-- Tooltip on hover -->
+                                                <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-white text-black text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
+                                                    <?php echo esc_html($location); ?>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
+                                                <div class="w-fit">
+                                                    <svg width="22" height="23" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col gap-[10px]">
+                                            <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
+                                            <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
+                                        </div>
+                                        <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
+                                            Explore More
+                                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 13L7 7L1 1" stroke="#EDB221" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
                         </div>
                     </div>
                 <?php endif; ?>
