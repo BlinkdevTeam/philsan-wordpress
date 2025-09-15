@@ -34,7 +34,11 @@
                                 <h2 class="text-[24px] text-left font-[600] text-[#1f773a] text-left"><?php the_title(); ?> </h2>
                                 <div class="text-[18px] text-left font-[400]"><?php echo esc_html($description); ?></div>
                                 <div class="flex pt-[30px]">
-                                    <?php echo theme_button("View More", "/"); ?>
+                                    <?php if($button_link) : ?>
+                                        <?php echo theme_button("View More", $button_link); ?>
+                                    <?php else : ?>
+                                        <?php echo theme_button("View More", $permalink); ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

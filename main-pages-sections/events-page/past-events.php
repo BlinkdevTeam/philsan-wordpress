@@ -9,6 +9,7 @@
                         $description = wp_strip_all_tags($description);
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
+                        $button_link = get_field("button_link");
                         
                         $desc_limit = 200;
                         $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "..."); // Trim it properly
@@ -41,7 +42,11 @@
                                 <div class="text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></div>
                             </div>
                             <div class="flex pt-[30px]">
-                                <?php echo theme_button("View More", "/"); ?>
+                                <?php if($button_link) : ?>
+                                    <?php echo theme_button("View More", $button_link); ?>
+                                <?php else : ?>
+                                    <?php echo theme_button("View More", $permalink); ?>
+                                <?php endif; ?>
                             </div>
                             <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                         </div>
