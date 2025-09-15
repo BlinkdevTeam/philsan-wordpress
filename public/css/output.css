@@ -970,6 +970,10 @@ video {
   height: 100vh;
 }
 
+.h-\[285px\] {
+  height: 285px;
+}
+
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -2664,6 +2668,7 @@ p, a, li {
 /* Ensure container has fixed height and hides overflow */
 
 .singleFeaturedNews {
+  height: 600px;
 }
 
 /* Make wrapper & slides fill that height */
