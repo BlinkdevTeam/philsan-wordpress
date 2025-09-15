@@ -2,7 +2,9 @@
     <?php if ( have_rows('speaker_repeater') ): ?>
         <div class="flex flex-col items-center justify-center">
             <h2 class="text-[24px] text-[#1F773A] font-[700] text-center">Speakers</h2>
-            <p class="text-[18px] text-center font-[400]">At PHILSAN, you will find inspiring speakers, exciting activities, and unique experiences that are sure to leave a lasting impression. We invite you to join us in our mission of connecting people and fostering meaningful conversations.</p>
+            <div class="w-[80%] mx-auto py-[20px]">
+                <p class="text-[18px] text-center font-[400]">At PHILSAN, you will find inspiring speakers, exciting activities, and unique experiences that are sure to leave a lasting impression. We invite you to join us in our mission of connecting people and fostering meaningful conversations.</p>
+            </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[50px] mt-8">
             <?php while ( have_rows('speaker_repeater') ): the_row(); ?>
