@@ -1,5 +1,6 @@
 <?php 
     $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+    $background_image = get_field("background_image") ? get_field("background_image") : $featured_image_url;
     $description = get_the_content();
     $description = wp_strip_all_tags($description);    
     $date        = get_field("date");
@@ -43,6 +44,6 @@
             </div>
         </div>
         <div class="bg-gradient-to-b from-[rgba(11,83,4,0.6)] to-[rgba(11,83,4,1)] w-full h-full absolute top-0 left-0 z-[1]"></div>
-        <img class="w-full h-full object-cover absolute" src="<?php echo $featured_image_url ?>" alt="hero-image">
+        <img class="w-full h-full object-cover absolute" src="<?php echo $background_image ?>" alt="hero-image">
     </div>
 </div>
