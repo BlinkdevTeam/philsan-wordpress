@@ -232,6 +232,25 @@ function philsan_swiper_init_script() {
                     }
                 }
             });
+            
+            new Swiper(".mobile-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+                breakpoints: {
+                    640: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 1 }
+                }
+            });
         });
     </script>
     <?php
