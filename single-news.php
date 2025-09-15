@@ -18,7 +18,7 @@
         <div class="flex flex-col gap-[20px]">
             <div class="flex flex-col gap-[10px]">
                 <h2 class="text-left text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                <div class="px-[30px] py-[15px] border-[1px] border-[#5d5d5d]">
+                <div class="px-[30px] py-[15px] border-[1px] border-[#5d5d5d] w-fit">
                     <p class="text-[18px] text-[#5d5d5d]"><?php echo $formatted_date ?></p>
                 </div>
             </div>
