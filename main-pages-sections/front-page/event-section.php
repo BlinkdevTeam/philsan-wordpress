@@ -24,8 +24,9 @@
                     <div class="flex gap-[50px]"> <!-- First row -->
                     <?php while ($events->have_posts()) : $events->the_post(); ?>
                         <?php
-                            $image          = get_field("image");
-                            $description    = get_field("description");
+                            $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                            $description    = get_the_content();
+                            $description    = wp_strip_all_tags($description);
                             $location       = get_field("location");
                             $date           = get_field("date");
                             $max_length     = 10;
@@ -47,7 +48,7 @@
                         <div class="flex flex-col gap-[20px] <?php echo $count < 2 ? 'w-1/2' : 'w-1/3'; ?>">
                             <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
+                                <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                             </div>
                             <div class="flex gap-[10px]">
                                 <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">

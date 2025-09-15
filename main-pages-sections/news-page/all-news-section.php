@@ -6,6 +6,7 @@
                     <?php
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         $description = get_the_content();
+                        $description = wp_strip_all_tags($description);
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         $title = get_the_title();

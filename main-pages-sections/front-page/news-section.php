@@ -21,7 +21,7 @@
               <?php if ($news->have_posts()) : ?>
                   <?php while ($news->have_posts()) : $news->the_post(); ?>
                       <?php
-                        $image        = get_field("image");
+                        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         $description  = get_field("description");
                         $date         = get_field("date");
 
@@ -45,7 +45,7 @@
                             </div>
                             <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($image); ?>" alt="event image">
+                                <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                             </div>
                             <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                 <div class="w-fit">
