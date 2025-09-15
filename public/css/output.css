@@ -941,6 +941,10 @@ video {
   height: 58px;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
 .h-\[60px\] {
   height: 60px;
 }
@@ -2660,7 +2664,7 @@ p, a, li {
 /* Ensure container has fixed height and hides overflow */
 
 .singleFeaturedNews {
-  height: 100%;
+  height: 600px;
   /* adjust to taste */
   overflow: hidden;
 }
@@ -2669,7 +2673,6 @@ p, a, li {
 
 .singleFeaturedNews .swiper-wrapper,
 .singleFeaturedNews .swiper-slide {
-  height: 100% !important;
   margin: 0 !important;
 }
 
