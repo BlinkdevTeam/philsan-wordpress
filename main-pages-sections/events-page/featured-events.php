@@ -11,6 +11,7 @@
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         $button_link = get_field("button_link");
+                        $permalink = get_permalink();
 
                         // Reformat the date
                         if ($date) {
