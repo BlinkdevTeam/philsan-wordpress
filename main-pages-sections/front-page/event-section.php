@@ -112,7 +112,7 @@
             </div>
 
             <!-- mobile -->
-             <div class="flex flex-col gap-[50px] pt-[50px] lg:hidden">
+            <div class="flex flex-col gap-[50px] pt-[50px] lg:hidden">
                 <?php if ($events->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
@@ -175,11 +175,7 @@
                                             </div>
                                             <div class="flex flex-col gap-[10px]">
                                                 <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
-                                                <?php if($count > 1 ) : ?>
-                                                    <p class="text-[18px] font-[300]"><?php echo esc_html($description); ?></p>
-                                                <?php else: ?>
-                                                    <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
-                                                <?php endif; ?>
+                                                <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
                                             </div>
                                             <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
                                                 Explore More
