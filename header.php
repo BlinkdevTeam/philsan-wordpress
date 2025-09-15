@@ -78,7 +78,7 @@ if (!$should_hide_nav_or_footer) :
       </div>
 
       <!-- Navigation Menu -->
-      <nav>
+      <div class="nav-menu hidden md:block">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
@@ -87,8 +87,25 @@ if (!$should_hide_nav_or_footer) :
           'fallback_cb' => false,
         ));
         ?>
-      </nav>
+      </div>
 
+      <!-- Mobile Menu -->
+      <div class="absolute top-[0px] w-[100%] mobile-nav-menu md:hidden">
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => 'primary',
+          'menu_class' => 'flex space-x-6 text-black text-[16px] md:text-[18px] ',
+          'container' => false,
+          'fallback_cb' => false,
+        ));
+        ?>
+      </div>
+      
+      <div class="cursor-pointer md:hidden">
+        <svg width="29" height="18" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5625C0 0.975697 0.540989 0.5 1.20833 0.5H27.7917C28.459 0.5 29 0.975697 29 1.5625C29 2.1493 28.459 2.625 27.7917 2.625H1.20833C0.540989 2.625 0 2.1493 0 1.5625ZM0 9C0 8.4132 0.540989 7.9375 1.20833 7.9375H27.7917C28.459 7.9375 29 8.4132 29 9C29 9.5868 28.459 10.0625 27.7917 10.0625H1.20833C0.540989 10.0625 0 9.5868 0 9ZM13.2917 16.4375C13.2917 15.8507 13.8327 15.375 14.5 15.375H27.7917C28.459 15.375 29 15.8507 29 16.4375C29 17.0243 28.459 17.5 27.7917 17.5H14.5C13.8327 17.5 13.2917 17.0243 13.2917 16.4375Z" fill="#096936"/>
+        </svg>
+      </div>
     </div>
   </header>
 <?php endif; ?>
