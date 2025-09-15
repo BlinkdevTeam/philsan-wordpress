@@ -1148,6 +1148,10 @@ video {
   width: 15rem;
 }
 
+.w-\[500px\] {
+  width: 500px;
+}
+
 .max-w-\[1280px\] {
   max-width: 1280px;
 }

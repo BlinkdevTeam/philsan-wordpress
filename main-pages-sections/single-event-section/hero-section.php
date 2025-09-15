@@ -9,7 +9,7 @@
                     <p class="text-[18px] text-[#ffffff]"><?php the_content(); ?></p>
                 </div>
                 <div class="w=[40%] rounded-xl">
-                    <img class="absolute w-full h-full object-cover" src="<?php echo $featured_image_url ?>" alt="hero-image">
+                    <img class="w-[500px] h-[600px] object-cover" src="<?php echo $featured_image_url ?>" alt="hero-image">
                 </div>
             </div>
         </div>
