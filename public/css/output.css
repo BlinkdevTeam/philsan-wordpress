@@ -2371,6 +2371,10 @@ video {
   font-weight: 600;
 }
 
+.font-\[600px\] {
+  font-weight: 600px;
+}
+
 .italic {
   font-style: italic;
 }
