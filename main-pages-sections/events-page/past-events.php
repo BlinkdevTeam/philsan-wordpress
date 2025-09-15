@@ -5,7 +5,7 @@
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
                         $image       = get_field("image");
-                        $description = get_field("description");
+                        $description = the_content();
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         
@@ -37,7 +37,7 @@
                                     <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <h2 class="text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                                <p class="text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
+                                <div class="text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></div>
                             </div>
                             <div class="flex pt-[30px]">
                                 <?php echo theme_button("View More", "/"); ?>

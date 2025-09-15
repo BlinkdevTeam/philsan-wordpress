@@ -53,7 +53,7 @@
             
             <p class="text-left text-[18px] font-[300] text-[#5d5d5d]"><?php echo esc_html($description); ?></p>
             <?php if (have_rows('social_media')) : ?>
-                <div class="pb-[10px]">
+                <div class="flex flex-col gap-[20px]">
                     <p class="font-[600] text-[18px]">Visit us:</p>
                     <div class="flex gap-[20px]">
                             <?php while (have_rows('social_media')) : the_row(); ?>
