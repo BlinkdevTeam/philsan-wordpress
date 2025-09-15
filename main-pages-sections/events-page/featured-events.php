@@ -5,7 +5,7 @@
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                     <?php
-                        $image       = get_field("image");
+                        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         $description = get_the_content();
                         $description = wp_strip_all_tags($description);
                         $date        = get_field("date");
@@ -24,7 +24,7 @@
                     <div class="swiper-slide">
                         <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                             <div class="w-[40%]">
-                                <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                                <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                             </div>
                             <div class="flex flex-col gap-[10px] w-[60%]">
                                 <div class="flex justify-between items-center">

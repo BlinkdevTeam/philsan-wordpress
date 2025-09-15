@@ -5,7 +5,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <?php while ($upcoming_events->have_posts()) : $upcoming_events->the_post(); ?>
             <?php
-                $image       = get_field("image");
+                $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 $description = get_the_content();
                 $description = wp_strip_all_tags($description);
                 $date        = get_field("date");
@@ -25,7 +25,7 @@
             ?>
             
             <div class="">
-                <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($image); ?>" alt="">
+                <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                 <div class="pt-[20px]">
                     <?php include locate_template('main-pages-sections/events-page/category-element.php'); ?>
                     <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
