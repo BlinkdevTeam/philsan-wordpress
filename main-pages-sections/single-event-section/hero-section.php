@@ -27,11 +27,11 @@
     <div class="flex space-between h-full w-full relative y-thumbnail">
         <div class="flex custom-container items-center justify-center py-[100px] mx-auto z-[2]">
             <div class="flex justify-between items-center gap-[50px]">
-                <div class="w-[60%] flex flex-col justify-center text-center h-[100%]">
+                <div class="w-[60%] flex flex-col justify-center text-left h-[100%]">
                     <p class="text-[18px] text-[#ffffff]"><?php echo $location ?></p>
                     <h1 class="text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_title(); ?></h1>
-                    <p class="text-[24px] text-[#ffffff] w-[70%] mr-auto font-[300]"><?php echo $description ?></p>
-                    <div class="mt-[20px] rounded-full py-[5px] px-[20px] border-[2px] ">
+                    <p class="text-[24px] text-[#ffffff] w-[80%] mr-auto font-[300]"><?php echo $description ?></p>
+                    <div class="mt-[20px] rounded-full py-[5px] px-[20px] border-[2px] w-fit">
                         <p class="text-[16px] text-[#ffffff]"><?php echo $formatted_date ?></p>
                     </div>
                 </div>
