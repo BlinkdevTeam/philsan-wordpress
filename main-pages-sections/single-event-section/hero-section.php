@@ -17,6 +17,6 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#1f773a] w-full h-full absolute top-0 left-0 z-[1]"></div>
+        <div class="bg-gradient-to-b from-[#051e22] to-[#5a944d] w-full h-full absolute top-0 left-0 z-[1]"></div
     </div>
 </div>
