@@ -5,7 +5,8 @@
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
                         $image       = get_field("image");
-                        $description = apply_filters('the_content', get_the_content());
+                        $description = get_the_content();
+                        $description = wp_strip_all_tags($description);
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         

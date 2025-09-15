@@ -6,7 +6,8 @@
         <?php while ($upcoming_events->have_posts()) : $upcoming_events->the_post(); ?>
             <?php
                 $image       = get_field("image");
-                $description = get_field("description");
+                $description = get_the_content();
+                $description = wp_strip_all_tags($description);
                 $date        = get_field("date");
                 $categories  = get_the_terms(get_the_ID(), 'category-filters');
 
