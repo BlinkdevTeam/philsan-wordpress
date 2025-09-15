@@ -10,6 +10,7 @@
                 $description = wp_strip_all_tags($description);
                 $date        = get_field("date");
                 $categories  = get_the_terms(get_the_ID(), 'category-filters');
+                $button_link = get_field("button_link");
 
                 $desc_limit   = 40;
                 $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "...");
