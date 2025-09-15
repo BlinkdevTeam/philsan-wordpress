@@ -34,7 +34,11 @@
                     <p class="text-[18px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                 </div>
                 <div class="flex pt-[30px]">
-                    <?php echo theme_button("View More", "/"); ?>
+                    <?php if($button_link) : ?>
+                        <?php echo theme_button("View More", $button_link); ?>
+                    <?php else : ?>
+                        <?php echo theme_button("View More", $permalink); ?>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endwhile; ?>
