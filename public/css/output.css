@@ -3161,6 +3161,10 @@ body.modal-open {
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
