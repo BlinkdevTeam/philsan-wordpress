@@ -974,6 +974,10 @@ video {
   height: 285px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -2499,6 +2503,16 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#696969\] {
+  --tw-text-opacity: 1;
+  color: rgb(105 105 105 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#5d5d5d\] {
+  --tw-text-opacity: 1;
+  color: rgb(93 93 93 / var(--tw-text-opacity, 1));
 }
 
 .underline {
