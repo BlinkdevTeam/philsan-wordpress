@@ -36,10 +36,10 @@
                                 <h2 class="text-[24px] text-left font-[600] text-[#1f773a] text-left"><?php the_title(); ?> </h2>
                                 <div class="text-[18px] text-left font-[400]"><?php echo esc_html($description); ?></div>
                                 <?php if (have_rows('social_media')) : ?>
-                                    <div class="flex gap-[20px]">
+                                    <div class="flex gap-[20px] pt-[20px]">
                                         <?php while (have_rows('social_media')) : the_row(); ?>
                                             <!-- Loop through each row in the 'about_description' repeater -->
-                                        <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[8px] rounded-md bg-[#dfdfdf]">
+                                        <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[8px] rounded-full bg-[#dfdfdf]">
                                                 <img class="w-[20px] h-[20px] object-cover" src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" alt="">
                                             </a>
                                         <?php endwhile; ?>
