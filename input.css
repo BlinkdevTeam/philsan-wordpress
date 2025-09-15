@@ -53,14 +53,11 @@ p, a, li {
 
 /* Ensure container has fixed height and hides overflow */
 .singleFeaturedNews {
-  height: 600px;           /* adjust to taste */
-  overflow: hidden;
 }
 
 /* Make wrapper & slides fill that height */
 .singleFeaturedNews .swiper-wrapper,
 .singleFeaturedNews .swiper-slide {
-  margin: 0 !important;
 }
 
 /* optional: pagination z-index */
