@@ -112,7 +112,7 @@
             </div>
 
             <!-- mobile -->
-            <div class="flex flex-col gap-[50px] pt-[50px] lg:hidden">
+            <div class="block pt-[50px] lg:hidden">
                 <?php if ($events->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
