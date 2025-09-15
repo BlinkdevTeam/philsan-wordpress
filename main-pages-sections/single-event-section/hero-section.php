@@ -28,10 +28,10 @@
         <div class="flex custom-container items-center justify-center py-[100px] mx-auto z-[2]">
             <div class="flex justify-between items-center gap-[50px]">
                 <div class="w-[100%] flex flex-col justify-center text-center h-[100%]">
-                    <p class="text-[18px] text-[#ffffff]"><?php echo $description ?></p>
+                    <p class="text-[18px] text-[#ffffff]"><?php echo $location ?></p>
                     <h1 class="text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_title(); ?></h1>
-                    <p class="text-[18px] text-[#ffffff]"><?php echo $description ?></p>
-                    <p class="text-[18px] text-[#ffc200]"><?php echo $format_date ?></p>
+                    <p class="text-[18px] text-[#ffffff] w-[70%] mx-auto"><?php echo $description ?></p>
+                    <p class="text-[18px] text-[#ffc200]"><?php echo $formatted_date ?></p>
                 </div>
             </div>
         </div>
