@@ -1,4 +1,6 @@
 <?php
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
     // 1. Get the featured news (always show if exists)
     $featured = new WP_Query(array(
         "post_type"      => "event",
@@ -43,8 +45,6 @@
     //     "posts_per_page" => 12, // change per-page limit
     //     "paged"          => $paged,
     // ));
-
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 ?>
 <?php include locate_template('main-pages-sections/events-page/hero-section.php'); ?>
 <?php include locate_template('main-pages-sections/events-page/featured-events.php'); ?>

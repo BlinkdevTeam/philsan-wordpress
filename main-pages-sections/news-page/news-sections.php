@@ -1,4 +1,6 @@
 <?php
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    
     // 1. Get the featured news (always show if exists)
     $featured = new WP_Query(array(
         "post_type"      => "news",
@@ -25,8 +27,7 @@
             )
         )
     ));
-
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    
     $all_news = new WP_Query(array(
         "post_type"      => "news",
         "posts_per_page" => 12, // change per-page limit
