@@ -53,14 +53,17 @@
             
             <p class="text-left text-[18px] font-[300] text-[#5d5d5d]"><?php echo esc_html($description); ?></p>
             <?php if (have_rows('social_media')) : ?>
-               <div class="flex gap-[20px]">
-                    <?php while (have_rows('social_media')) : the_row(); ?>
-                        <!-- Loop through each row in the 'about_description' repeater -->
-                       <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[20px] rounded-xl">
-                            <img class="w-[20px] h-[20px] object-cover" src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" alt="">
-                        </a>
-                    <?php endwhile; ?>
-               </div>
+                <div class="pb-[10px]">
+                    <p class="font-[600] text-[18px]">Visit us:</p>
+                    <div class="flex gap-[20px]">
+                            <?php while (have_rows('social_media')) : the_row(); ?>
+                                <!-- Loop through each row in the 'about_description' repeater -->
+                            <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[8px] rounded-md bg-[#dfdfdf]">
+                                    <img class="w-[20px] h-[20px] object-cover" src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" alt="">
+                                </a>
+                            <?php endwhile; ?>
+                    </div>
+                </div>
             <?php endif; ?> 
         </div>
     </div>

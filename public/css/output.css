@@ -1758,6 +1758,11 @@ video {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-\[\#dfdfdf\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 223 223 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1908,6 +1913,10 @@ video {
 
 .p-\[5px\] {
   padding: 5px;
+}
+
+.p-\[8px\] {
+  padding: 8px;
 }
 
 .px-2 {
