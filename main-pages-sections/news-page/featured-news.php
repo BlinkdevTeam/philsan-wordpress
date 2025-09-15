@@ -26,7 +26,7 @@
                     <div class="swiper-slide justify-start">
                         <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
                             <div class="w-[40%]">
-                                <img class="w-full h-auto object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                                <img class="w-full h-full object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                             </div>
                             <div class="flex flex-col gap-[10px] w-[60%]">
                                 <div class="flex justify-between items-center">
