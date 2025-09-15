@@ -144,7 +144,7 @@
                                             <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                             <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                         </div>
-                                        <div class="flex gap-[10px]">
+                                        <div class="flex flex-col gap-[5px]">
                                             <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">
                                                     <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,14 +154,9 @@
                                                 </div>
                                                 
                                                 <!-- Shortened text -->
-                                                <p class="text-[16px] font-[300] text-[#646464]">
+                                                <p class="text-[14px] font-[300] text-[#646464]">
                                                     <?php echo esc_html($short_location); ?>
                                                 </p>
-
-                                                <!-- Tooltip on hover -->
-                                                <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-white text-black text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
-                                                    <?php echo esc_html($location); ?>
-                                                </div>
                                             </div>
                                             <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">
@@ -169,12 +164,12 @@
                                                         <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>
                                                 </div>
-                                                <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
+                                                <p class="text-[14px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                             </div>
                                         </div>
-                                        <div class="flex flex-col gap-[10px]">
-                                            <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
-                                            <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
+                                        <div class="flex flex-col gap-[10px] items-left">
+                                            <h2 class="text-[14px] font-[800]"><?php the_title(); ?></h2>
+                                            <p class="text-[18px] font-[300]"><?php echo esc_html($description); ?></p>
                                         </div>
                                         <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
                                             Explore More
