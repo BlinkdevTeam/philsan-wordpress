@@ -22,7 +22,7 @@
                     ?>
                     <!-- FEATURED EVENTS -->
                     <div class="swiper-slide">
-                        <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
+                        <div class="flex gap-[20px] py-[50px] px-[40px] rounded-xl bg-[#FCFCF0]">
                             <div class="w-[40%]">
                                 <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                             </div>
@@ -35,6 +35,16 @@
                                 </div>
                                 <h2 class="text-[24px] text-left font-[600] text-[#1f773a] text-left"><?php the_title(); ?> </h2>
                                 <div class="text-[18px] text-left font-[400]"><?php echo esc_html($description); ?></div>
+                                <?php if (have_rows('social_media')) : ?>
+                                    <div class="flex gap-[20px]">
+                                        <?php while (have_rows('social_media')) : the_row(); ?>
+                                            <!-- Loop through each row in the 'about_description' repeater -->
+                                        <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[8px] rounded-md bg-[#dfdfdf]">
+                                                <img class="w-[20px] h-[20px] object-cover" src="<?php echo esc_url(get_sub_field('socmed_icon')); ?>" alt="">
+                                            </a>
+                                        <?php endwhile; ?>
+                                    </div>
+                                <?php endif; ?> 
                                 <div class="flex pt-[30px]">
                                     <?php if($button_link) : ?>
                                         <?php echo theme_button("View More", $button_link); ?>
