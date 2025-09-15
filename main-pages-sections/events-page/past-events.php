@@ -5,7 +5,7 @@
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
                         $image       = get_field("image");
-                        $description = the_content();
+                        $description = get_the_content();
                         $date        = get_field("date");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         
