@@ -1879,6 +1879,10 @@ video {
   --tw-gradient-to: #5a944d var(--tw-gradient-to-position);
 }
 
+.to-\[\#6fbd5d\] {
+  --tw-gradient-to: #6fbd5d var(--tw-gradient-to-position);
+}
+
 .bg-\[length\:200\%_100\%\] {
   background-size: 200% 100%;
 }
