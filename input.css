@@ -18,6 +18,14 @@ p, a, li {
     transform: translateY(-100%);
 }
 
+.mobile-nav-menu {
+  display: none
+}
+  
+.nav-menu {
+  display: block
+}
+
 .swiper {
   height: auto;
   margin: 0 auto;
@@ -133,7 +141,13 @@ body.modal-open {
 
 
 @media (max-width: 768px) {
-
+  .mobile-nav-menu {
+    display: block
+  }
+  
+  .nav-menu {
+    display: none
+  }
 }
 
 /* Desktop (1024px and above) */

@@ -78,7 +78,7 @@ if (!$should_hide_nav_or_footer) :
       </div>
 
       <!-- Navigation Menu -->
-      <div class="nav-menu hidden md:block">
+      <div class="nav-menu">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
@@ -90,7 +90,7 @@ if (!$should_hide_nav_or_footer) :
       </div>
 
       <!-- Mobile Menu -->
-      <div class="absolute top-[0px] w-[100%] mobile-nav-menu md:hidden">
+      <div class="absolute top-[0px] w-[100%] mobile-nav-menu">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
