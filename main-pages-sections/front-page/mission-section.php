@@ -34,7 +34,7 @@
 
 <!-- mobile -->
 <div class="block md:hidden bg-[#ffffff]">
-    <div class="mission-section pb-[50px]">
+    <div class="mission-section pt-[50px] pb-[50px]">
         <div class="flex custom-container mx-auto gap-[50px]">
             <div class="w-[100%]">
                 <?php if (!empty($group['title'])) : ?>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="pt-[10px]">
                     <?php if (!empty($group['description'])) : ?>
-                        <p class="text-[16px] md:text-[24px] font-[400]"><?php echo esc_html($group['description']) ?></p>
+                        <p class="text-[16px] md:text-[24px] font-[300]"><?php echo esc_html($group['description']) ?></p>
                     <?php endif; ?>
                 </div>
                 <?php if (!empty($group['button_title'])) : ?>
