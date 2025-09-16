@@ -82,6 +82,8 @@ if (function_exists('theme_button')) {
     error_log('theme_button is loaded ✅');
 }
 
+add_filter('show_admin_bar', '__return_false');
+
 function philsan_swiper_init_script() {
     ?>
     <script>
