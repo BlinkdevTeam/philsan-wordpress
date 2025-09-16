@@ -930,6 +930,10 @@ video {
   height: 20px;
 }
 
+.h-\[285px\] {
+  height: 285px;
+}
+
 .h-\[300px\] {
   height: 300px;
 }
@@ -997,10 +1001,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[285px\] {
-  height: 285px;
 }
 
 .max-h-\[200px\] {
@@ -2659,6 +2659,14 @@ body {
   margin: 0;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
@@ -2741,10 +2749,6 @@ p, a, li {
 
 .singleFeaturedNews .swiper-pagination {
   z-index: 10;
-}
-
-body.modal-open {
-  overflow: hidden;
 }
 
 .scrollbar-custom::-webkit-scrollbar {

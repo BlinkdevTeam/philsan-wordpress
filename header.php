@@ -90,7 +90,7 @@ if (!$should_hide_nav_or_footer) :
       </div>
 
       <!-- Mobile Menu -->
-      <div class="absolute top-[0px] w-[100%] mobile-nav-menu">
+      <div class="absolute top-[0px] w-[100%] mobile-nav-menu hide">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
