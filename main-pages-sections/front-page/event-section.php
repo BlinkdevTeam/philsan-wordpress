@@ -6,7 +6,7 @@
     ));
 ?>
 <div class="bg-[#ffffff]">
-    <div class="custom-container mx-auto event-section pt-[100px] pb-[50px]">
+    <div class="custom-container mx-auto event-section md:pt-[100px] pb-[50px]">
         <div>
             <div class="flex flex-col md:flex-row justify-between items-start">
                 <div>

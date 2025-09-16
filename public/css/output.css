@@ -3100,6 +3100,10 @@ body.modal-open {
     padding-top: 70px;
   }
 
+  .md\:pt-\[100px\] {
+    padding-top: 100px;
+  }
+
   .md\:text-center {
     text-align: center;
   }

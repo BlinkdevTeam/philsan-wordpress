@@ -34,7 +34,7 @@
 
 <!-- mobile -->
 <div class="block md:hidden bg-[#ffffff]">
-    <div class="mission-section pt-[100px] pb-[50px]">
+    <div class="mission-section pb-[50px]">
         <div class="flex custom-container mx-auto gap-[50px]">
             <div class="w-[100%]">
                 <?php if (!empty($group['title'])) : ?>
