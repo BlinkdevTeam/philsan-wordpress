@@ -33,7 +33,7 @@
                         ?>
                         <div class="flex gap-[20px] items-start justify-start">
                             <!-- Perfect circle image with random background -->
-                            <div class="w-[100px] md:w-[150px] rounded-full overflow-hidden pt-[15px]" style="background-color: <?php echo $bg_color; ?>;">
+                            <div class="w-[100px] md:w-[150px] rounded-full overflow-hidden" style="background-color: <?php echo $bg_color; ?>;">
                                 <img class="w-full h-auto object-cover" 
                                     src="<?php echo esc_url($image_url); ?>" 
                                     alt="member image">
