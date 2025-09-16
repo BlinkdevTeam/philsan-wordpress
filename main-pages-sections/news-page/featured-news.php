@@ -5,7 +5,7 @@
     <?php if ($featured->have_posts()) : ?>
         <!-- DESKTOP -->
         <div class="hidden md:block">
-            <div class="swiper featuredNews mt-[-200px] w-[100%]">
+            <div class="swiper featuredNews mt-[-200px] w-[100%] h-[600px]">
                 <div class="swiper-wrapper">
                     <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                         <?php
@@ -69,7 +69,7 @@
 
         <!-- MOBILE -->
         <div class="md:hidden">
-            <div class="swiper featuredNews mt-[-200px] w-[100%]">
+            <div class="swiper featuredNews mt-[-200px] w-[100%] h-[800px]">
                 <div class="swiper-wrapper">
                     <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                         <?php
@@ -106,7 +106,7 @@
                                     </div>
                                     <p class="text-left text-[14px] md:text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                                     <?php if (have_rows('social_media')) : ?>
-                                        <div class="flex gap-[20px] pt-[20px]">
+                                        <div class="flex gap-[20px]">
                                             <?php while (have_rows('social_media')) : the_row(); ?>
                                                 <!-- Loop through each row in the 'about_description' repeater -->
                                             <a href="<?php echo esc_url(get_sub_field('socmed_link')); ?>" class="cursor-pointer p-[8px] rounded-full bg-[#e6fcdc]">
