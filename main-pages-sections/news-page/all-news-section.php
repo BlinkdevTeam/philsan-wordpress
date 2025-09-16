@@ -26,7 +26,7 @@
                     ?>
 
                     <!-- DESKTOP -->
-                    <div class="">
+                    <div class="hidden md:block">
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                         <div class="pt-[20px]">
                             <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
@@ -48,7 +48,7 @@
 
 
                     <!-- MOBILE -->
-                    <div class="flex gap-[20px]">
+                    <div class="md:hidden flex gap-[20px]">
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                         <div class="">
                             <div class="pt-[20px]">
