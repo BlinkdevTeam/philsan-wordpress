@@ -11,7 +11,7 @@
             <div class="flex flex-col md:flex-row justify-between items-start">
                 <div>
                     <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
-                    <p class="text-[18px] md:text-[24px] text-center font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
+                    <p class="text-[18px] md:text-[24px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                 </div>
                  <div class="flex pt-[30px]">
                     <?php echo theme_button("See More", "/"); ?>
