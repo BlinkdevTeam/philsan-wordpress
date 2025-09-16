@@ -990,6 +990,10 @@ video {
   height: 100vh;
 }
 
+.h-\[800px\] {
+  height: 800px;
+}
+
 .max-h-\[200px\] {
   max-height: 200px;
 }

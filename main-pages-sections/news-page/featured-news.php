@@ -68,8 +68,8 @@
 
 
         <!-- MOBILE -->
-         <div class="md:hidden">
-            <div class="swiper featuredNews mt-[-200px] w-[100%]">
+        <div class="md:hidden">
+            <div class="swiper featuredNews mt-[-200px] w-[100%] h-[800px]">
                 <div class="swiper-wrapper">
                     <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                         <?php
