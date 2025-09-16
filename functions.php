@@ -125,7 +125,7 @@ function philsan_swiper_init_script() {
             });
 
             new Swiper(".sponsorSwiper", {
-                slidesPerView: 4,
+                slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
