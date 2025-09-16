@@ -98,15 +98,15 @@
                             $formatted_date = '';
                         }
                     ?>
-                    <div class="flex justify-between gap-[20px] border-b-[1px] border-[#cccccc] pb-[30px]">
+                    <div class="flex justify-between gap-[20px] border-b-[1px] border-[#cccccc]">
                         <div class="w-[100%] pl-[20px]">
                             <div class="pt-[20px] w-[100%]">
                                 <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                     <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <h2 class="text-[18px] md:text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-                                 <div class="w-[100%] py-[5px]">
-                                    <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                                 <div class="w-[100%] pb-[10px] pt-[5px]">
+                                    <img class="w-full h-[150px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                                 </div>
                                 <div class="text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></div>
                                 <?php if (have_rows('social_media')) : ?>
@@ -120,7 +120,7 @@
                                     </div>
                                 <?php endif; ?> 
                             </div>
-                            <div class="flex pt-[30px]">
+                            <div class="flex">
                                 <?php if($button_link) : ?>
                                     <?php echo theme_button("View More", $button_link); ?>
                                 <?php else : ?>

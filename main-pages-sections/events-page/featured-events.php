@@ -66,7 +66,7 @@
     </div>
 
     <!-- MOBILE -->
-     <div class="md:hidden mt-[-320px] custom-container">
+     <div class="md:hidden mt-[-170px] custom-container">
         <div class="swiper featuredEvents w-[100%]">
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
