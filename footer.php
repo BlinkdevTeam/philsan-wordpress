@@ -46,8 +46,8 @@ if (!$should_hide_nav_or_footer) :
 ?>
   <footer class="bg-[#101010] py-[50px]">
     <div class="custom-container">
-      <div class="flex gap-[50px] justify-between pb-[40px] border-b-[1px] border-[#ffffff]">
-          <div class="logo-container w-[350px]">
+      <div class="flex flex-col md:flex-row gap-[50px] justify-between pb-[40px] border-b-[1px] border-[#ffffff]">
+          <div class="logo-container w-[100%] md:w-[350px]">
               <img class="w-full h-auto" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
           </div>
           <div class="flex gap-[20px] justify-between text-[#ffffff]">

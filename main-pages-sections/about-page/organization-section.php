@@ -3,10 +3,10 @@
         <?php while ( have_rows('organization_repeater') ): the_row(); ?>
             
             <div class="flex flex-col items-center justify-center">
-                <h2 class="text-[42px] text-[#1F773A] font-[700] text-center">
+                <h2 class="text-[32px] md:text-[42px] text-[#1F773A] font-[700] text-center">
                     <?php the_sub_field("title") ?>
                 </h2>
-                <p class="text-[24px] text-center font-[600]">
+                <p class="text-[18px] md:text-[24px] text-center font-[600]">
                     <?php the_sub_field("sub") ?>
                 </p>
             </div>
