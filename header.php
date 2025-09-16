@@ -90,11 +90,11 @@ if (!$should_hide_nav_or_footer) :
       </div>
 
       <!-- Mobile Menu -->
-      <div class="absolute top-[0px] w-[100%] mobile-nav-menu hide">
+      <div class="absolute top-[0px] w-[100%] mobile-nav-menu hide-mobile-nav bg">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
-          'menu_class' => 'flex space-x-6 text-black text-[16px] md:text-[18px] ',
+          'menu_class' => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] ',
           'container' => false,
           'fallback_cb' => false,
         ));

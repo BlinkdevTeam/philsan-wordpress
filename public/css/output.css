@@ -2663,7 +2663,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.hide {
+.hide-mobile-nav {
   display: none;
 }
 
