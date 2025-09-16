@@ -1,7 +1,7 @@
 <div class="py-[50px]">
     <div class="flex flex-col gap-[50px] pt-[50px]">
         <?php if ($all_news->have_posts()) : ?>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                 <?php while ($all_news->have_posts()) : $all_news->the_post(); ?>
                     <?php
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -24,6 +24,8 @@
                             $formatted_date = '';
                         }
                     ?>
+
+                    <!-- DESKTOP -->
                     <div class="">
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                         <div class="pt-[20px]">
@@ -40,6 +42,30 @@
                             <?php else : ?>
                                 <?php echo theme_button("View More", $permalink); ?>
                             <?php endif; ?>
+                        </div>
+                        <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
+                    </div>
+
+
+                    <!-- MOBILE -->
+                    <div class="flex gap-[20px]">
+                        <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                        <div class="">
+                            <div class="pt-[20px]">
+                                <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
+                                <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                    <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
+                                </div>
+                                <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
+                                <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
+                            </div>
+                            <div class="flex pt-[30px]">
+                                <?php if($button_link) : ?>
+                                    <?php echo theme_button("View More", $button_link); ?>
+                                <?php else : ?>
+                                    <?php echo theme_button("View More", $permalink); ?>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                     </div>

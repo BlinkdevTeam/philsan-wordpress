@@ -90,11 +90,11 @@
                                 $formatted_date = '';
                             }
                         ?>
-                        <!-- FEATURED NEWS -->
+                        <!-- FEATURED NEWS ""MOBILE"" -->
                         <div class="swiper-slide justify-start">
                             <div class="flex gap-[20px] px-[20px] py-[40px] rounded-xl bg-[#FCFCF0]">
                                 <div class="flex flex-col gap-[10px] w-[100%]">
-                                    <div class="flex flex-col items-baseline justify-between items-center">
+                                    <div class="flex flex-col gap-[10px] items-baseline justify-between items-center">
                                          <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                             <p class="text-[12px]"><?php echo esc_html($formatted_date); ?></p>
                                         </div>
