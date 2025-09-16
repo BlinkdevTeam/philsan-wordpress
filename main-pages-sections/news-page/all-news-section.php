@@ -47,7 +47,7 @@
 
 
                     <!-- MOBILE -->
-                    <div class="md:hidden flex gap-[20px]">
+                    <div class="md:hidden">
                         <div class="pt-[20px]">
                             <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
