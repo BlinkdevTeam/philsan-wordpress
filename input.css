@@ -133,6 +133,11 @@ body.modal-open {
 
 
 @media (max-width: 768px) {
+  
+}
+
+/* Desktop (1024px and above) */
+@media (max-width: 1024px) {
   #wpforms-760-field_2-container,
   #wpforms-760-field_7-container {
     display: block;     /* stack vertically */
@@ -145,11 +150,6 @@ body.modal-open {
     margin: 0px !important;
     width: 100% !important;
   }
-}
-
-/* Desktop (1024px and above) */
-@media (max-width: 1024px) {
-
 }
 
 @layer utilities {
