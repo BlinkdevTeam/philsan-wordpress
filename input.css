@@ -131,6 +131,22 @@ body.modal-open {
   border-radius: 20px 0px !important;
 }
 
+
+@media (max-width: 768px) {
+  #wpforms-760-field_2-container,
+  #wpforms-760-field_7-container {
+    display: block;     /* stack vertically */
+    width: 100%;        /* take full width */
+    margin-right: 0;    /* remove the side margin */
+    margin-bottom: 15px; /* add some space between fields (optional) */
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (max-width: 1024px) {
+
+}
+
 @layer utilities {
   @keyframes flipY {
     0% { transform: rotateY(0deg); }
