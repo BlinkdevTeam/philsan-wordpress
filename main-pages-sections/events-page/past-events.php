@@ -108,7 +108,7 @@
                                  <div class="w-[100%] pb-[10px] pt-[5px]">
                                     <img class="w-full h-[150px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                                 </div>
-                                <div class="text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></div>
+                                <div class="text-[14px] md:text-[16px] font-[400]"><?php echo esc_html($desc_trimmed); ?></div>
                                 <?php if (have_rows('social_media')) : ?>
                                     <div class="flex gap-[20px] pt-[20px]">
                                         <?php while (have_rows('social_media')) : the_row(); ?>
@@ -120,7 +120,7 @@
                                     </div>
                                 <?php endif; ?> 
                             </div>
-                            <div class="flex">
+                            <div class="flex pt-[20px]">
                                 <?php if($button_link) : ?>
                                     <?php echo theme_button("View More", $button_link); ?>
                                 <?php else : ?>
