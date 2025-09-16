@@ -3169,6 +3169,10 @@ body.modal-open {
     padding-bottom: 0px;
   }
 
+  .md\:pt-\[50px\] {
+    padding-top: 50px;
+  }
+
   .md\:text-center {
     text-align: center;
   }

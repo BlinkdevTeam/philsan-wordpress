@@ -4,7 +4,7 @@
 <div class="sponsors-section custom-container py-[50px]">
     <div class="flex flex-col justify-center items-center">
         <?php if (!empty($group['title'])) : ?>
-            <h2 class="text-[32px] md:text-[42px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
+            <h2 class="text-[32px] md:text-[42px] text-[#1F773A] font-[700] text-center"><?php echo esc_html($group['title']) ?></h2>
         <?php endif; ?>
 
         <?php if (!empty($group['sub'])) : ?>
@@ -16,7 +16,7 @@
         <?php endif; ?>
     </div>
     
-    <div class="pt-[50px]">
+    <div class="md:pt-[50px]">
         <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
             <div class="swiper sponsorSwiper w-[100%]">
                 <div class="swiper-wrapper items-center">
