@@ -163,7 +163,6 @@ function philsan_swiper_init_script() {
             });
 
             new Swiper(".featuredNews", {
-                direction: "vertical",
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
@@ -180,7 +179,6 @@ function philsan_swiper_init_script() {
             });
             
             new Swiper(".singleFeaturedNews", {
-                direction: "vertical",
                 slidesPerView: 2,
                 spaceBetween: 30,
                 loop: true,
