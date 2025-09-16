@@ -1,4 +1,4 @@
-<div class="home-hero-section h-[700px] lg:h-[800px]">
+<div class="home-hero-section h-[500px] md:h-[800px]">
     <?php if ( have_rows('hero_section') ): ?>
         <?php while ( have_rows('hero_section') ): the_row(); ?>
 
@@ -6,7 +6,7 @@
                 <div class="flex space-between h-full w-full relative y-thumbnail">
                     <div class="custom-container py-[100px] mx-auto z-[2]">
                         <div class="w-[70%] flex flex-col justify-center h-[100%]">
-                            <h1 class="text-[18px] md:text-[42px] xl:text-[64px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
+                            <h1 class="text-[24px] md:text-[42px] xl:text-[64px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                             <p class="text-[16px] md:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                             <?php if ( !empty($button_name = get_sub_field('hero_button_name'))) : ?>
                                 <div class="flex pt-[30px]">

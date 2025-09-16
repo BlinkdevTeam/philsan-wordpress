@@ -88,7 +88,7 @@
                                 <div class="swiper-slide">
                                     <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
                                         <div class="flex flex-col gap-[20px]">
-                                            <div class="flex flex-col md:flex-row justify-between items-center pb-[20px]">
+                                            <div class="flex flex-col md:flex-row justify-between items-center>
                                                 <div class="w-[100%]">
                                                     <h2 class="text-[18px] md:text-[24px] font-[700] text-[#1f773a] text-left md:text-center"><?php the_title(); ?></h2>
                                                 </div>
