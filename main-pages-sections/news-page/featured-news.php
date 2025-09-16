@@ -5,7 +5,7 @@
     <?php if ($featured->have_posts()) : ?>
         <!-- DESKTOP -->
         <div class="hidden md:block">
-            <div class="swiper featuredNews mt-[-200px] w-[100%] h-[600px]">
+            <div class="swiper featuredNews mt-[-200px] w-[100%]">
                 <div class="swiper-wrapper">
                     <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                         <?php
@@ -69,7 +69,7 @@
 
         <!-- MOBILE -->
         <div class="md:hidden">
-            <div class="swiper featuredNews mt-[-200px] w-[100%] h-[800px]">
+            <div class="swiper featuredNews mt-[-200px] w-[100%]">
                 <div class="swiper-wrapper">
                     <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                         <?php

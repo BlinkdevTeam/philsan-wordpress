@@ -986,14 +986,6 @@ video {
   height: 100vh;
 }
 
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-\[800px\] {
-  height: 800px;
-}
-
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -2081,6 +2073,11 @@ video {
   padding-bottom: 35px;
 }
 
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -2104,11 +2101,6 @@ video {
 .py-\[80px\] {
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.py-\[40px\] {
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .pb-8 {
@@ -2693,6 +2685,7 @@ p, a, li {
 /* Ensure container has fixed height and hides overflow */
 
 .featuredNews {
+  height: 600px;
   /* adjust to taste */
   overflow: hidden;
 }
