@@ -761,6 +761,11 @@ video {
   margin-right: auto;
 }
 
+.my-\[10px\] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .-mt-8 {
   margin-top: -2rem;
 }
@@ -2115,6 +2120,16 @@ video {
   padding-bottom: 80px;
 }
 
+.py-\[8px\] {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.px-\[17px\] {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -3108,6 +3123,16 @@ body.modal-open {
   .md\:py-\[100px\] {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+
+  .md\:py-\[10px\] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .md\:px-\[25px\] {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .md\:pb-\[0px\] {
