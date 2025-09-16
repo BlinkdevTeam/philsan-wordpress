@@ -2795,6 +2795,11 @@ body.modal-open {
     margin-bottom: 15px;
     /* add some space between fields (optional) */
   }
+
+  .wpforms-container {
+    margin: 0px !important;
+    width: 100% !important;
+  }
 }
 
 /* Desktop (1024px and above) */
