@@ -32,8 +32,7 @@ p, a, li {
 }
 
 /* Ensure container has fixed height and hides overflow */
-.mobile-swiper {
-  height: 600px;           /* adjust to taste */
+.mobile-swiper {       /* adjust to taste */
   overflow: hidden;
 }
 

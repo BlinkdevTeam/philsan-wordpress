@@ -90,10 +90,7 @@
                                         <div class="flex flex-col gap-[20px]">
                                             <div class="flex flex-col md:flex-row justify-between items-center pb-[20px]">
                                                 <div class="w-[60%]">
-                                                    <h2 class="text-[18px] md:text-[24px] font-[700] text-[#1f773a]"><?php the_title(); ?></h2>
-                                                </div>
-                                                <div class="flex">
-                                                    <?php echo theme_button("Learn More", "/"); ?>
+                                                    <h2 class="text-[18px] md:text-[24px] font-[700] text-[#1f773a] text-left md:text-center"><?php the_title(); ?></h2>
                                                 </div>
                                             </div>
                                             <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
@@ -110,6 +107,9 @@
                                             </div>
                                             <div class="flex flex-col gap-[10px]">
                                                 <p class="text-[18px] md:text-[24px] font-[300] text-left md:text-center"><?php echo esc_html($description); ?></p>
+                                            </div>
+                                            <div class="flex pt-[20px]">
+                                                <?php echo theme_button("Learn More", "/"); ?>
                                             </div>
                                         </div>
                                     </div>
