@@ -961,10 +961,6 @@ video {
   height: 58px;
 }
 
-.h-\[600px\] {
-  height: 600px;
-}
-
 .h-\[60px\] {
   height: 60px;
 }
@@ -988,10 +984,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[800px\] {
-  height: 800px;
 }
 
 .max-h-\[200px\] {
@@ -2684,6 +2676,7 @@ p, a, li {
 /* Ensure container has fixed height and hides overflow */
 
 .featuredNews {
+  height: 600px;
   /* adjust to taste */
   overflow: hidden;
 }
