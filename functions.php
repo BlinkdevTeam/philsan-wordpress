@@ -181,6 +181,7 @@ function philsan_swiper_init_script() {
             });
             
             new Swiper(".singleFeaturedNews", {
+                direction: "vertical",
                 slidesPerView: 2,
                 spaceBetween: 30,
                 loop: true,
@@ -195,6 +196,24 @@ function philsan_swiper_init_script() {
                     clickable: true,
                     dynamicBullets: true,
                 },
+                // Important for dynamic content and images
+                observer: true,
+                observeParents: true,
+
+                // Keep interactions predictable
+                simulateTouch: true,            // change to false to disable drag
+                preventInteractionOnTransition: true,
+
+                on: {
+                    imagesReady: function () {
+                    // ensure Swiper recalculates after images load
+                    this.update();
+                    },
+                    resize: function () {
+                    this.update();
+                    }
+                }
+
             });
             
             new Swiper(".mobile-swiper", {
