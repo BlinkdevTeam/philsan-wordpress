@@ -49,8 +49,10 @@
 
                     <!-- MOBILE -->
                     <div class="md:hidden flex gap-[20px]">
-                        <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
-                        <div class="">
+                        <div class="w-[40%]">
+                            <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                        </div>
+                        <div class="w-[60%]">
                             <div class="pt-[20px]">
                                 <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
                                 <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
