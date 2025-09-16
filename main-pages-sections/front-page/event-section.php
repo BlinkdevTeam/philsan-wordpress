@@ -11,7 +11,7 @@
             <div class="flex flex-col md:flex-row justify-between items-start">
                 <div>
                     <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
-                    <p class="text-[18px] md:text-[24px] text-center font-[400]">Find stories through a selection of our key strategic topics</p>
+                    <p class="text-[18px] md:text-[24px] text-center font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                 </div>
                  <div class="flex pt-[30px]">
                     <?php echo theme_button("See More", "/"); ?>
@@ -147,7 +147,7 @@
                                         <div class="flex gap-[5px]">
                                             <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">
-                                                    <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg width="20" height="21" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="#646464"/>
                                                         <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
                                                     </svg>
@@ -160,7 +160,7 @@
                                             </div>
                                             <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">
-                                                    <svg width="22" height="23" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg width="20" height="21" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>
                                                 </div>
