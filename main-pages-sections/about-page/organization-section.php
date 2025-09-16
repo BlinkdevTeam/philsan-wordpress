@@ -12,7 +12,7 @@
             </div>
 
             <?php if ( have_rows('member') ): ?> 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[5px] md:gap-[50px] mt-8">
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-[5px] md:gap-[50px] mt-8">
                     <?php 
                         // define your pool of background colors
                         $colors = [
@@ -32,9 +32,8 @@
                             $bg_color = $colors[array_rand($colors)];
                         ?>
                         <div class="flex gap-[20px] items-start justify-start">
-                            <!-- Perfect circle image with random background -->
-                            <div class="w-[100px] md:w-[150px] rounded-full overflow-hidden" style="background-color: <?php echo $bg_color; ?>;">
-                                <img class="w-full h-auto object-cover" 
+                            <div class="relative w-[100px] md:w-[150px] h-[100px] md:h-[150px] rounded-full overflow-hidden" style="background-color: <?php echo $bg_color; ?>;">
+                                <img class="w-full h-full object-cover absolute top-[0px]" 
                                     src="<?php echo esc_url($image_url); ?>" 
                                     alt="member image">
                             </div>
