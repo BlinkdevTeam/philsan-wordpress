@@ -169,10 +169,10 @@
                                         </div>
                                         <div class="flex flex-col gap-[10px] items-left">
                                             <h2 class="text-[14px] font-[800] text-left"><?php the_title(); ?></h2>
-                                            <p class="text-[18px] font-[300] text-left"><?php echo esc_html($description); ?></p>
+                                            <p class="text-[16px] font-[300] text-left"><?php echo esc_html($description); ?></p>
                                         </div>
-                                        <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
-                                            Explore More
+                                        <a href="" class="flex items-center gap-[10px] w-fit text-[#EDB221] font-[800]">
+                                            <span class="text-[14px]">Explore More</span>
                                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 13L7 7L1 1" stroke="#EDB221" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
