@@ -43,6 +43,10 @@ p, a, li {
   text-align: center;
 }
 
+.mobile-nav-menu {
+  height: 100vh;
+}
+
 /* Ensure container has fixed height and hides overflow */
 .mobile-swiper {       
   overflow: hidden;

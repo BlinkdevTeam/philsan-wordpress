@@ -88,18 +88,6 @@ if (!$should_hide_nav_or_footer) :
         ));
         ?>
       </div>
-
-      <!-- Mobile Menu -->
-      <div class="absolute top-[0px] w-[100%] mobile-nav-menu hide-mobile-nav bg-[#ffffff]">
-        <?php
-        wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'menu_class' => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] ',
-          'container' => false,
-          'fallback_cb' => false,
-        ));
-        ?>
-      </div>
       
       <div class="cursor-pointer md:hidden">
         <svg width="29" height="18" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +97,7 @@ if (!$should_hide_nav_or_footer) :
     </div>
   </header>
 
-  <header class="bg-white shadow-md bottom-0 z-[999] fixed w-[100%] mobile-nav-menu hide-mobile-nav transition-all duration-200 ease">
+  <header class="bg-white shadow-md top-0 z-[999] fixed w-[100%] mobile-nav-menu hide-mobile-nav transition-all duration-200 ease">
     <!-- Mobile Menu -->
       <div class="top-[0px] w-[100%] bg-[#ffffff]">
         <?php
