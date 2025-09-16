@@ -86,14 +86,14 @@
                                     }
                                 ?>
                                 <div class="swiper-slide">
-                                    <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
+                                    <div class="py-[40px] px-[20px] rounded-xl bg-[#FCFCF0]">
                                         <div class="flex flex-col gap-[20px]">
                                             <div class="w-[100%]">
                                                 <h2 class="text-[18px] md:text-[24px] font-[700] text-[#1f773a] text-left md:text-center"><?php the_title(); ?></h2>
                                             </div>
                                             <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                                <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
+                                                <img class="w-full h-[200px] object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                             </div>
                                             <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">

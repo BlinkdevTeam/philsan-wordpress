@@ -13,7 +13,7 @@
                     <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
                     <p class="text-[18px] md:text-[24px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                 </div>
-                 <div class="flex pt-[30px]">
+                 <div class="flex pt-[10px]">
                     <?php echo theme_button("See More", "/"); ?>
                 </div>
             </div>
@@ -112,7 +112,7 @@
             </div>
 
             <!-- mobile -->
-            <div class="block pt-[50px] lg:hidden">
+            <div class="block  pt-[20px] lg:hidden">
                 <?php if ($events->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
@@ -142,7 +142,7 @@
                                     <div class="flex flex-col gap-[20px]">
                                         <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                             <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                            <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
+                                            <img class="w-full h-[200px] object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                         </div>
                                         <div class="flex gap-[5px]">
                                             <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">

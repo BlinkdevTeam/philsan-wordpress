@@ -79,7 +79,7 @@
                     <?php endif; ?>
                 </div>
                 <?php if (!empty($group['button_title'])) : ?>
-                    <div class="flex pt-[30px]">
+                    <div class="flex pt-[10px]">
                         <?php echo theme_button(esc_html($group['button_title']), "/"); ?>
                     </div>
                 <?php endif; ?>
