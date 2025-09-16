@@ -11,7 +11,7 @@ body.modal-open {
 }
 
 .hide-mobile-nav {
-  display: none;
+  transform: translateX(-100%);
 }
 
 h1, h2, h3, h4, h5, h6 {
