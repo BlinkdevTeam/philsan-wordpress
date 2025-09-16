@@ -43,33 +43,29 @@
                                 <?php echo theme_button("View More", $permalink); ?>
                             <?php endif; ?>
                         </div>
-                        <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
                     </div>
 
 
                     <!-- MOBILE -->
                     <div class="md:hidden flex gap-[20px]">
-                        <div class="w-[40%]">
-                            <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
-                        </div>
-                        <div class="w-[60%]">
-                            <div class="pt-[20px]">
-                                <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
-                                <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                                    <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
-                                </div>
-                                <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
-                                <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
+                        <div class="pt-[20px]">
+                            <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
+                            <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                <p class="text-[12px] md:text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
-                            <div class="flex pt-[30px]">
-                                <?php if($button_link) : ?>
-                                    <?php echo theme_button("View More", $button_link); ?>
-                                <?php else : ?>
-                                    <?php echo theme_button("View More", $permalink); ?>
-                                <?php endif; ?>
+                            <h2 class="text-[16px] md:text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
+                            <div class="py-[10px]">
+                                <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                             </div>
+                            <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                         </div>
-                        <!-- <p class="text-[18px] leading-normal mt-4"><?php //echo esc_html($description); ?></p> -->
+                        <div class="flex pt-[30px]">
+                            <?php if($button_link) : ?>
+                                <?php echo theme_button("View More", $button_link); ?>
+                            <?php else : ?>
+                                <?php echo theme_button("View More", $permalink); ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
