@@ -90,7 +90,7 @@
                     ?>
                     <!-- FEATURED EVENTS MOBILE -->
                     <div class="swiper-slide">
-                        <div class="flex gap-[20px] py-[50px] px-[40px] rounded-xl bg-[#FCFCF0]">
+                        <div class="flex gap-[20px] py-[50px] px-[25px] rounded-xl bg-[#FCFCF0]">
                             <div class="flex flex-col gap-[10px] w-[100%]">
                                 <div class="flex justify-between items-center">
                                     <?php include locate_template('main-pages-sections/events-page/category-element.php'); ?>

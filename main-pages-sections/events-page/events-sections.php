@@ -54,7 +54,7 @@
         <div class="">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
                 <h2 class="text-[24px] md:text-[42px] font-[700] text-[#1F773A]">All Events</h2>
-                <p class="text-[18px] md:text-[24px] text-[#000000]">Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="text-[18px] md:text-[24px] text-[#000000] text-center">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
             <div class="flex justify-center gap-[5px] w-[90%] lg:w-[80%] xl:w-[800px] mx-auto pt-[20px]">
                 <div class="relative flex items-center w-[100%] justify-end">

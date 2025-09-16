@@ -99,10 +99,10 @@
                         }
                     ?>
                     <div class="flex justify-between gap-[20px] border-b-[1px] border-[#cccccc]">
-                        <div class="w-[100%] pl-[20px]">
+                        <div class="w-[100%]">
                             <div class="pt-[20px] w-[100%]">
                                 <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                                    <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
+                                    <p class="text-[12px] md:text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <h2 class="text-[18px] md:text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
                                  <div class="w-[100%] pb-[10px] pt-[5px]">
