@@ -986,6 +986,14 @@ video {
   height: 100vh;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -1267,6 +1275,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-start {
@@ -2094,6 +2106,11 @@ video {
   padding-bottom: 80px;
 }
 
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -2676,7 +2693,6 @@ p, a, li {
 /* Ensure container has fixed height and hides overflow */
 
 .featuredNews {
-  height: 600px;
   /* adjust to taste */
   overflow: hidden;
 }
