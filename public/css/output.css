@@ -3402,6 +3402,10 @@ body.modal-open {
 }
 
 @media (min-width: 1280px) {
+  .xl\:h-\[150px\] {
+    height: 150px;
+  }
+
   .xl\:w-\[1280px\] {
     width: 1280px;
   }
@@ -3414,11 +3418,19 @@ body.modal-open {
     width: 800px;
   }
 
+  .xl\:w-\[150px\] {
+    width: 150px;
+  }
+
   .xl\:text-\[18px\] {
     font-size: 18px;
   }
 
   .xl\:text-\[64px\] {
     font-size: 64px;
+  }
+
+  .xl\:text-\[24px\] {
+    font-size: 24px;
   }
 }

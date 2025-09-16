@@ -12,7 +12,7 @@
             </div>
 
             <?php if ( have_rows('member') ): ?> 
-                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-[5px] md:gap-[50px] mt-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[5px] md:gap-[50px] mt-8">
                     <?php 
                         // define your pool of background colors
                         $colors = [
@@ -32,14 +32,14 @@
                             $bg_color = $colors[array_rand($colors)];
                         ?>
                         <div class="flex gap-[20px] items-start justify-start">
-                            <div class="relative w-[100px] md:w-[150px] h-[100px] md:h-[150px] rounded-full overflow-hidden" style="background-color: <?php echo $bg_color; ?>;">
-                                <img class="w-full h-full object-cover absolute top-[0px]" 
+                            <div class="relative w-[100px] xl:w-[150px] h-[100px] xl:h-[150px] rounded-full overflow-hidden" style="background-color: <?php echo $bg_color; ?>;">
+                                <img class="w-full h-full object-cover absolute top-[10px]" 
                                     src="<?php echo esc_url($image_url); ?>" 
                                     alt="member image">
                             </div>
                             <div class="flex flex-col pt-[20px]">
-                                <p class="text-[18px] md:text-[24px] font-[600]"><?php echo esc_html($name); ?></p>
-                                <p class="text-[16px] md:text-[18px] text-gray-600"><?php echo esc_html($job_title); ?></p>
+                                <p class="text-[18px] xl:text-[24px] font-[600]"><?php echo esc_html($name); ?></p>
+                                <p class="text-[16px] xl:text-[18px] text-gray-600"><?php echo esc_html($job_title); ?></p>
                             </div>
                         </div>
                     <?php endwhile; ?> 

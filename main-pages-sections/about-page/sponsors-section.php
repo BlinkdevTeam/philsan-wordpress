@@ -9,7 +9,7 @@
 
         <?php if (!empty($group['sub'])) : ?>
             <div class="pt-[10px]">
-                <div class="text-[18px] md:text-[24px] flex flex-col gap-[20px]">
+                <div class="text-[18px] md:text-[24px] flex flex-col gap-[20px] text-center">
                     <?php echo wp_kses_post($group['sub']); ?>
                 </div>
             </div>
