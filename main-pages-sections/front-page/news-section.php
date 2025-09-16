@@ -13,7 +13,7 @@
                         <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Latest News</h2>
                         <p class="text-[18px] md:text-[24px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                     </div>
-                    <div class="flex pt-[30px]">
+                    <div class="flex pt-[10px] md:pt-[30px]">
                         <?php echo theme_button("More Topics", "/"); ?>
                     </div>
             </div>
@@ -68,7 +68,7 @@
             </div>
 
             <!-- mobile -->
-            <div class="block md:hidden gap-[50px] pt-[50px]">
+            <div class="block md:hidden gap-[50px] pt-[20px]">
                 <?php if ($news->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
@@ -93,7 +93,7 @@
                                             </div>
                                             <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                                <img class="w-full h-[200px] object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
+                                                <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                             </div>
                                             <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">
@@ -106,7 +106,7 @@
                                             <div class="flex flex-col gap-[10px]">
                                                 <p class="text-[16px] md:text-[24px] font-[300] text-left md:text-center"><?php echo esc_html($description); ?></p>
                                             </div>
-                                            <div class="flex pt-[20px]">
+                                            <div class="flex">
                                                 <?php echo theme_button("Learn More", "/"); ?>
                                             </div>
                                         </div>

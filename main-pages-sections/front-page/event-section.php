@@ -142,7 +142,7 @@
                                     <div class="flex flex-col gap-[20px]">
                                         <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                             <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                            <img class="w-full h-[200px] object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
+                                            <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                         </div>
                                         <div class="flex gap-[5px]">
                                             <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">

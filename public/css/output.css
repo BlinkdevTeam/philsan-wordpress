@@ -3203,6 +3203,10 @@ body.modal-open {
     padding-top: 70px;
   }
 
+  .md\:pt-\[30px\] {
+    padding-top: 30px;
+  }
+
   .md\:text-center {
     text-align: center;
   }
