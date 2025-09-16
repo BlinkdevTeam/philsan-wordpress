@@ -5,7 +5,7 @@
     <?php if ($featured->have_posts()) : ?>
         <!-- DESKTOP -->
         <div class="hidden md:block">
-            <div class="swiper featuredNews mt-[-200px] w-[100%]">
+            <div class="swiper featuredNews mt-[-200px] w-[100%] h-[600px]">
                 <div class="swiper-wrapper">
                     <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                         <?php
@@ -91,7 +91,7 @@
                         <!-- FEATURED NEWS -->
                         <div class="swiper-slide justify-start">
                             <div class="flex gap-[20px] p-[40px] rounded-xl bg-[#FCFCF0]">
-                                <div class="flex flex-col gap-[10px] w-[60%]">
+                                <div class="flex flex-col gap-[10px] w-[100%]">
                                     <div class="flex justify-between items-center">
                                         <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
 
