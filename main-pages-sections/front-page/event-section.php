@@ -8,10 +8,10 @@
 <div class="bg-[#ffffff]">
     <div class="custom-container mx-auto event-section pt-[100px] pb-[50px]">
         <div>
-            <div class="flex justify-between items-start">
+            <div class="flex flex-col md:flex-row justify-between items-start">
                 <div>
-                    <h2 class="text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
-                    <p class="text-[24px] text-center font-[400]">Find stories through a selection of our key strategic topics</p>
+                    <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
+                    <p class="text-[18px] md:text-[24px] text-center font-[400]">Find stories through a selection of our key strategic topics</p>
                 </div>
                  <div class="flex pt-[30px]">
                     <?php echo theme_button("See More", "/"); ?>
@@ -144,7 +144,7 @@
                                             <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
                                             <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
                                         </div>
-                                        <div class="flex flex-col gap-[5px]">
+                                        <div class="flex gap-[5px]">
                                             <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
                                                 <div class="w-fit">
                                                     <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,8 +168,8 @@
                                             </div>
                                         </div>
                                         <div class="flex flex-col gap-[10px] items-left">
-                                            <h2 class="text-[14px] font-[800]"><?php the_title(); ?></h2>
-                                            <p class="text-[18px] font-[300]"><?php echo esc_html($description); ?></p>
+                                            <h2 class="text-[14px] font-[800] text-left"><?php the_title(); ?></h2>
+                                            <p class="text-[18px] font-[300] text-left"><?php echo esc_html($description); ?></p>
                                         </div>
                                         <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
                                             Explore More
