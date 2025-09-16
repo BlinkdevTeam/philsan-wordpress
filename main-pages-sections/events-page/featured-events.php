@@ -3,7 +3,7 @@
 
 
     <!-- DESKTOP -->
-    <div class="mt-[-200px] custom-container">
+    <div class="hidden md:block mt-[-200px] custom-container">
         <div class="swiper featuredEvents mt-[-200px] w-[100%]">
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
@@ -66,7 +66,7 @@
     </div>
 
     <!-- MOBILE -->
-     <div class="mt-[-200px] custom-container">
+     <div class="md:hidden mt-[-200px] custom-container">
         <div class="swiper featuredEvents mt-[-200px] w-[100%]">
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>

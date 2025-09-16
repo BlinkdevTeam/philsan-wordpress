@@ -2,7 +2,7 @@
     <div class="py-[100px]">
 
         <!-- DESKTOP -->
-        <div class="flex flex-col gap-[50px]">
+        <div class="hidden md:block flex flex-col gap-[50px]">
             <div class="grid grid-cols-1 gap-[30px]">
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
@@ -72,7 +72,7 @@
         </div>
 
         <!-- MOBILE -->
-         <div class="flex flex-col gap-[50px]">
+         <div class="md:hidden flex flex-col gap-[50px]">
             <div class="grid grid-cols-1 gap-[30px]">
                 <?php while ($past_events->have_posts()) : $past_events->the_post(); ?>
                     <?php
