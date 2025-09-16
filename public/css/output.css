@@ -853,6 +853,10 @@ video {
   margin-top: 5px;
 }
 
+.mt-\[-320px\] {
+  margin-top: -320px;
+}
+
 .block {
   display: block;
 }
@@ -2927,6 +2931,10 @@ body.modal-open {
     height: auto;
   }
 
+  .md\:h-\[580px\] {
+    height: 580px;
+  }
+
   .md\:w-10 {
     width: 2.5rem;
   }
@@ -3091,6 +3099,11 @@ body.modal-open {
   .md\:py-\[50px\] {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .md\:py-\[100px\] {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .md\:pb-\[0px\] {

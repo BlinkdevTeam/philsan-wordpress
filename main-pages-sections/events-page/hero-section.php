@@ -1,4 +1,4 @@
-<div class="events-hero-section h-[580px]">
+<div class="events-hero-section h-[400px] md:h-[580px]">
     <?php if ( have_rows('hero_section') ): ?>
         <?php while ( have_rows('hero_section') ): the_row(); ?>
             <div class="flex space-between h-full w-full relative y-thumbnail">

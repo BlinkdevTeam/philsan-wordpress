@@ -1,5 +1,5 @@
 <?php if ($past_events->have_posts()) : ?>
-    <div class="py-[100px]">
+    <div class="pt-[30px] pb-[100px] md:py-[100px]">
 
         <!-- DESKTOP -->
         <div class="hidden md:block flex flex-col gap-[50px]">
@@ -99,7 +99,7 @@
                         }
                     ?>
                     <div class="flex justify-between gap-[20px] border-b-[1px] border-[#cccccc] pb-[30px]">
-                        <div class="w-[50%] pl-[20px]">
+                        <div class="w-[100%] pl-[20px]">
                             <div class="pt-[20px] w-[100%]">
                                 <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                     <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>

@@ -4,7 +4,7 @@
 
     <!-- DESKTOP -->
     <div class="hidden md:block mt-[-200px] custom-container">
-        <div class="swiper featuredEvents mt-[-200px] w-[100%]">
+        <div class="swiper featuredEvents w-[100%]">
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                     <?php
@@ -66,8 +66,8 @@
     </div>
 
     <!-- MOBILE -->
-     <div class="md:hidden mt-[-200px] custom-container">
-        <div class="swiper featuredEvents mt-[-200px] w-[100%]">
+     <div class="md:hidden mt-[-320px] custom-container">
+        <div class="swiper featuredEvents w-[100%]">
             <div class="swiper-wrapper">
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                     <?php
@@ -100,7 +100,7 @@
                                 </div>
                                 <h2 class="text-[18px] md:text-[24px] text-left font-[600] text-[#1f773a] text-left"><?php the_title(); ?> </h2>
                                 <div class="w-[100%]">
-                                    <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                                    <img class="w-full h-[150px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                                 </div>
                                 <div class="text-[14px] md:text-[18px] text-left font-[400]"><?php echo esc_html($desc_trimmed); ?></div>
                                 <?php if (have_rows('social_media')) : ?>
@@ -113,7 +113,7 @@
                                         <?php endwhile; ?>
                                     </div>
                                 <?php endif; ?> 
-                                <div class="flex pt-[30px]">
+                                <div class="flex">
                                     <?php if($button_link) : ?>
                                         <?php echo theme_button("View More", $button_link); ?>
                                     <?php else : ?>
