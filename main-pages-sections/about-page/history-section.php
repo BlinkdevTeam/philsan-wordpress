@@ -12,7 +12,7 @@
                     </h2>
 
                     <div class="flex flex-col md:flex-row">
-                        <div class="w-[100%] md:w-[50%] image-container pr-[0px] md:pr-6">
+                        <div class="w-[100%] md:w-[50%] image-container pr-[0px] md:pr-6 pb-[10px] md:pb-[0px]">
                             <div  class="w-[100%] h-[200px] md:h-[280px] lg:h-[300px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                 <img 
                                     class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-300" 

@@ -4,12 +4,12 @@
 <div class="sponsors-section custom-container py-[50px]">
     <div class="flex flex-col justify-center items-center">
         <?php if (!empty($group['title'])) : ?>
-            <h2 class="text-[42px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
+            <h2 class="text-[32px] md:text-[42px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
         <?php endif; ?>
 
         <?php if (!empty($group['sub'])) : ?>
             <div class="pt-[10px]">
-                <div class="text-[24px] leading-[34px] flex flex-col gap-[20px]">
+                <div class="text-[18px] md:text-[24px] flex flex-col gap-[20px]">
                     <?php echo wp_kses_post($group['sub']); ?>
                 </div>
             </div>
