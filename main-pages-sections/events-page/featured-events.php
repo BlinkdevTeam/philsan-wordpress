@@ -1,5 +1,8 @@
 <?php if ($featured->have_posts()) : ?>
     <!-- FEATURED  EVENTS BUT MIGHT NOT BE THE LATEST -->
+
+
+    <!-- DESKTOP -->
     <div class="mt-[-200px] custom-container">
         <div class="swiper featuredEvents mt-[-200px] w-[100%]">
             <div class="swiper-wrapper">
@@ -61,4 +64,6 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
+
+    <!-- MOBILE -->
 <?php endif; ?>
