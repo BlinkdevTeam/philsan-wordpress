@@ -139,7 +139,7 @@ function philsan_swiper_init_script() {
                 breakpoints: {
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 4 }
+                    1024: { slidesPerView: 6 }
                 }
             });
 
