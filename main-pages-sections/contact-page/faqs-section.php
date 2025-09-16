@@ -8,7 +8,7 @@
             <?php while ( have_rows('faqs') ): the_row(); ?>
                 <?php $faq_index++; // increment each loop ?>
                 
-                <div id="faq-group-<?php echo $faq_index; ?>" class="flex flex-col py-[20px] gap-[20px] border-b-[1px] border-b-[#CCCCCC]">
+                <div id="faq-group-<?php echo $faq_index; ?>" class="flex flex-col py-[20px] md:gap-[20px] border-b-[1px] border-b-[#CCCCCC]">
                     
                     <div 
                         id="faq-head-<?php echo $faq_index; ?>"
