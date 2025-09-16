@@ -1894,6 +1894,10 @@ video {
   padding: 20px;
 }
 
+.p-\[30px\] {
+  padding: 30px;
+}
+
 .p-\[35px\] {
   padding: 35px;
 }
@@ -1902,20 +1906,12 @@ video {
   padding: 40px;
 }
 
-.p-\[50px\] {
-  padding: 50px;
-}
-
 .p-\[5px\] {
   padding: 5px;
 }
 
 .p-\[8px\] {
   padding: 8px;
-}
-
-.p-\[30px\] {
-  padding: 30px;
 }
 
 .px-2 {
@@ -2808,6 +2804,10 @@ body.modal-open {
   .wpforms-container {
     margin: 0px !important;
     width: 100% !important;
+  }
+
+  .wpforms-field {
+    margin-bottom: 0px !important;
   }
 }
 

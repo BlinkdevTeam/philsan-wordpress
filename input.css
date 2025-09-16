@@ -133,7 +133,7 @@ body.modal-open {
 
 
 @media (max-width: 768px) {
-  
+
 }
 
 /* Desktop (1024px and above) */
@@ -149,6 +149,10 @@ body.modal-open {
   .wpforms-container {
     margin: 0px !important;
     width: 100% !important;
+  }
+
+  .wpforms-field {
+    margin-bottom: 0px !important;
   }
 }
 
