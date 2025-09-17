@@ -97,19 +97,22 @@ if (!$should_hide_nav_or_footer) :
     </div>
   </header>
 
-  <header id="mobile-nav" class="bg-white shadow-md top-0 z-[999] fixed w-[100%] mobile-nav-menu hide-mobile-nav transition-all duration-200 ease">
+  <header id="mobile-nav" class="mobile-nav-menu hide-mobile-nav fixed top-0 right-0 w-80 p-[20px] h-screen bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
     <!-- Mobile Menu -->
-      <div class="top-[0px] w-[100%] bg-[#ffffff]">
+      <div class="w-[100%] pt-[50px] px-[20px]">
         <?php
-        wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'menu_class' => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] ',
-          'container' => false,
-          'fallback_cb' => false,
-        ));
+          wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'menu_class' => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] ',
+            'container' => false,
+            'fallback_cb' => false,
+          ));
         ?>
       </div>
   </header>
+
+  <!-- MOBILE MENU BACKDROP -->
+  <div id="mobile-nav-backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
 <?php endif; ?>
 
 

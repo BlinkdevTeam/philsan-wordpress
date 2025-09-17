@@ -4,11 +4,6 @@ class SidebarFilter {
         const closeBtn = document.getElementById('closeFilter');
         const sidebar = document.getElementById('sidebar');
         const backdrop = document.getElementById('backdrop');
-
-        // if (!openBtn || !closeBtn || !sidebar || !backdrop) {
-        //     console.warn("Sidebar elements missing");
-        //     return;
-        // }
         
         const openSidebar = () => {
             sidebar.classList.remove('translate-x-full');
@@ -24,7 +19,6 @@ class SidebarFilter {
         };
 
         openBtn.addEventListener('click', openSidebar);
-        // closeBtn.addEventListener('click', closeSidebar);
         backdrop.addEventListener('click', closeSidebar);
     }
 }

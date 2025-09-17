@@ -1,16 +1,24 @@
 class MobileNavBehaviour {
     constructor() {
-        const header = document.getElementById('mobile-nav');
         const burger =  document.getElementById("mobile-burger-icon")
+        const closeBtn = document.getElementById('closeFilter');
+        const header = document.getElementById('mobile-nav');
+        const backdrop = document.getElementById('mobile-nav-backdrop');
+        
+        const openSidebar = () => {
+            header.classList.remove('translate-x-full');
+            backdrop.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        };
 
-        burger.addEventListener('click', (event) => {
-            console.log("mobile navbar trigger")
-            if (header.classList.contains('hide-mobile-nav')) {
-                header.classList.remove('hide-mobile-nav');
-            } else {
-                header.classList.add('hide-mobile-nav');
-            }
-        });
+        const closeSidebar = () => {
+            header.classList.add('translate-x-full');
+            backdrop.classList.add('hidden');
+            document.body.style.overflow = '';
+        };
+
+        burger.addEventListener('click', openSidebar);
+        backdrop.addEventListener('click', closeSidebar);
     }
 }
 

@@ -136,16 +136,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class MobileNavBehaviour {
   constructor() {
-    const header = document.getElementById('mobile-nav');
     const burger = document.getElementById("mobile-burger-icon");
-    burger.addEventListener('click', event => {
-      console.log("mobile navbar trigger");
-      if (header.classList.contains('hide-mobile-nav')) {
-        header.classList.remove('hide-mobile-nav');
-      } else {
-        header.classList.add('hide-mobile-nav');
-      }
-    });
+    const closeBtn = document.getElementById('closeFilter');
+    const header = document.getElementById('mobile-nav');
+    const backdrop = document.getElementById('mobile-nav-backdrop');
+    const openSidebar = () => {
+      header.classList.remove('translate-x-full');
+      backdrop.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeSidebar = () => {
+      header.classList.add('translate-x-full');
+      backdrop.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+    burger.addEventListener('click', openSidebar);
+    backdrop.addEventListener('click', closeSidebar);
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MobileNavBehaviour);
@@ -271,12 +277,6 @@ class SidebarFilter {
     const closeBtn = document.getElementById('closeFilter');
     const sidebar = document.getElementById('sidebar');
     const backdrop = document.getElementById('backdrop');
-
-    // if (!openBtn || !closeBtn || !sidebar || !backdrop) {
-    //     console.warn("Sidebar elements missing");
-    //     return;
-    // }
-
     const openSidebar = () => {
       sidebar.classList.remove('translate-x-full');
       backdrop.classList.remove('hidden');
@@ -289,7 +289,6 @@ class SidebarFilter {
       document.body.style.overflow = '';
     };
     openBtn.addEventListener('click', openSidebar);
-    // closeBtn.addEventListener('click', closeSidebar);
     backdrop.addEventListener('click', closeSidebar);
   }
 }
