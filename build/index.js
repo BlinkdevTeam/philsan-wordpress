@@ -124,6 +124,32 @@ class HeaderScrollBehaviour {
 
 /***/ }),
 
+/***/ "./javascripts/mobileNavBehaviour.js":
+/*!*******************************************!*\
+  !*** ./javascripts/mobileNavBehaviour.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class MobileNavBehaviour {
+  constructor() {
+    const header = document.getElementById('mobile-nav');
+    window.addEventListener('click', event => {
+      if (header.classList.contains('hide-header')) {
+        header.classList.remove('hide-header');
+      } else {
+        header.classList.add('hide-header');
+      }
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MobileNavBehaviour);
+
+/***/ }),
+
 /***/ "./javascripts/newsEventSearch.js":
 /*!****************************************!*\
   !*** ./javascripts/newsEventSearch.js ***!
@@ -337,6 +363,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascripts/newsEventSearch */ "./javascripts/newsEventSearch.js");
 /* harmony import */ var _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascripts/headerScrollbehaviour */ "./javascripts/headerScrollbehaviour.js");
 /* harmony import */ var _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../javascripts/faqAccordion */ "./javascripts/faqAccordion.js");
+/* harmony import */ var _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../javascripts/mobileNavBehaviour */ "./javascripts/mobileNavBehaviour.js");
+
 
 
 
@@ -345,6 +373,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JS Running!!!");
   new _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  new _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_5__["default"]();
   const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   if (document.querySelector(".speaker-item")) {
     annualSpeakerModal.handleModal();

@@ -97,7 +97,7 @@ if (!$should_hide_nav_or_footer) :
     </div>
   </header>
 
-  <header class="bg-white shadow-md top-0 z-[999] fixed w-[100%] mobile-nav-menu hide-mobile-nav transition-all duration-200 ease">
+  <header id="mobile-nav" class="bg-white shadow-md top-0 z-[999] fixed w-[100%] mobile-nav-menu hide-mobile-nav transition-all duration-200 ease">
     <!-- Mobile Menu -->
       <div class="top-[0px] w-[100%] bg-[#ffffff]">
         <?php

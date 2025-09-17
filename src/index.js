@@ -3,11 +3,13 @@ import SidebarFilter from "../javascripts/sidebarFilter";
 import NewsEventSearch from "../javascripts/newsEventSearch";
 import HeaderScrollBehaviour from "../javascripts/headerScrollbehaviour";
 import FaqAcc from "../javascripts/faqAccordion";
+import MobileNavBehaviour from "../javascripts/mobileNavBehaviour";
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JS Running!!!")
 
     new HeaderScrollBehaviour();
+    new MobileNavBehaviour();
 
     const annualSpeakerModal = new SpeakerModal();
 
