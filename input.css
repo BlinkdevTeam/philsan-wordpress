@@ -47,6 +47,14 @@ p, a, li {
   text-align: center;
 }
 
+.mobile-nav > ul {
+  gap: 10px;
+}
+
+.mobile-nav > ul > li {
+  margin: 0;
+}
+
 /* Ensure container has fixed height and hides overflow */
 .mobile-swiper {       
   overflow: hidden;
