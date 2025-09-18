@@ -47,11 +47,11 @@ p, a, li {
   text-align: center;
 }
 
-.mobile-nav-menu > ul {
+.mobile-nav-menu ul {
   gap: 10px;
 }
 
-.mobile-nav-menu > ul > li {
+.mobile-nav-menu ul li {
   margin: 0;
 }
 
