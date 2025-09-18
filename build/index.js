@@ -373,8 +373,10 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JS Running!!!");
-  new _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__["default"]();
-  new _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  if (document.getElementById("mobile-nav")) {
+    new _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__["default"]();
+    new _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  }
   const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   if (document.querySelector(".speaker-item")) {
     annualSpeakerModal.handleModal();
