@@ -27,7 +27,7 @@
                 </div>
                 <?php if ($gallery) : ?>
                     <!-- DESKTOP -->
-                    <div class="hidden md:block">
+                    <div class="hidden lg:block">
                         <div class="swiper singleFeaturedNews">
                             <div class="swiper-wrapper">
                                 <?php foreach ($gallery as $image) : ?>
@@ -44,7 +44,7 @@
                     </div>
 
                     <!-- MOBILE -->
-                    <div class="md:hidden">
+                    <div class="lg:hidden">
                         <div class="swiper singleFeaturedNewsMobile">
                             <div class="swiper-wrapper">
                                 <?php foreach ($gallery as $image) : ?>
