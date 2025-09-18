@@ -23,11 +23,29 @@
             <h2 class="text-left text-[24px] lg:text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
             <div class="flex gap-[20px]">
                 <div class="w-[100%] md:w-[70%]">
-                    <img class="w-full h-[600px] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
+                    <img class="w-full w-[200px] lg:h-[600px] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                 </div>
                 <?php if ($gallery) : ?>
+                    <!-- DESKTOP -->
                     <div class="hidden md:block">
-                        <div class="swiper singleFeaturedNews w-[30%]">
+                        <div class="swiper singleFeaturedNews">
+                            <div class="swiper-wrapper">
+                                <?php foreach ($gallery as $image) : ?>
+                                    <div class="swiper-slide justify-start">
+                                        <img 
+                                            src="<?php echo esc_url($image['url']); ?>" 
+                                            alt="<?php echo esc_attr($image['alt']); ?>" 
+                                            class="w-full h-[285px] object-cover rounded-xl"
+                                        />
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOBILE -->
+                    <div class="md:hidden">
+                        <div class="swiper singleFeaturedNewsMobile">
                             <div class="swiper-wrapper">
                                 <?php foreach ($gallery as $image) : ?>
                                     <div class="swiper-slide justify-start">

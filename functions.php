@@ -179,6 +179,22 @@ function philsan_swiper_init_script() {
                     dynamicBullets: true,
                 },
             });
+
+            new Swiper(".singleFeaturedNewsMobile", {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+                speed: 700, // smooth transition time in ms
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+            });
             
             new Swiper(".singleFeaturedNews", {
                 direction: "vertical",

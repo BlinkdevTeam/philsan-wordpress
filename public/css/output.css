@@ -1149,6 +1149,10 @@ video {
   width: max-content;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
 .max-w-\[1280px\] {
   max-width: 1280px;
 }
@@ -3334,6 +3338,10 @@ p, a, li {
 
   .lg\:h-\[450px\] {
     height: 450px;
+  }
+
+  .lg\:h-\[600px\] {
+    height: 600px;
   }
 
   .lg\:w-\[1280px\] {
