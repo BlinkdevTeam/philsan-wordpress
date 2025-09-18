@@ -8,8 +8,10 @@ import MobileNavBehaviour from "../javascripts/mobileNavBehaviour";
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JS Running!!!")
 
-    new HeaderScrollBehaviour();
-    new MobileNavBehaviour();
+    if(document.getElementById("mobile-nav")) {
+        new HeaderScrollBehaviour();
+        new MobileNavBehaviour();
+    }
 
     const annualSpeakerModal = new SpeakerModal();
 
