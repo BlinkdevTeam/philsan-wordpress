@@ -40,9 +40,9 @@
 
                         <div class="p-[40px] rounded-xl bg-[#FCFCF0]">
                             <div class="flex flex-col gap-[20px]">
-                                <div class="flex justify-between items-center pb-[20px]">
+                                <div class="flex justify-between items-start pb-[20px]">
                                     <div class="w-[60%]">
-                                        <h2 class="text-[24px] font-[700] text-[#1f773a]"><?php the_title(); ?></h2>
+                                        <h2 class="text-[22px] font-[700] text-[#1f773a]"><?php the_title(); ?></h2>
                                     </div>
                                     <div class="flex">
                                         <?php echo theme_button("Learn More", "/"); ?>
