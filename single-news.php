@@ -52,7 +52,7 @@
                                         <img 
                                             src="<?php echo esc_url($image['url']); ?>" 
                                             alt="<?php echo esc_attr($image['alt']); ?>" 
-                                            class="w-full h-[285px] object-cover rounded-xl"
+                                            class="w-full h-[150px] object-cover rounded-xl"
                                         />
                                     </div>
                                 <?php endforeach; ?>

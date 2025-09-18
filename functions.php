@@ -194,6 +194,10 @@ function philsan_swiper_init_script() {
                     clickable: true,
                     dynamicBullets: true,
                 },
+                 breakpoints: {
+                    640: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 }
+                }
             });
             
             new Swiper(".singleFeaturedNews", {
