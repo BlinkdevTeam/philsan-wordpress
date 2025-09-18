@@ -61,7 +61,7 @@
                                     <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <div class="flex flex-col gap-[10px]">
-                                    <p class="text-[22px] font-[300]"><?php echo esc_html($desc_trimmed); ?></p>
+                                    <p class="text-[18px] font-[300]"><?php echo esc_html($desc_trimmed); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                                 <p class="text-[14px] md:text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                             </div>
                                             <div class="flex flex-col gap-[10px]">
-                                                <p class="text-[16px] md:text-[22px] font-[300] text-left md:text-center"><?php echo esc_html($desc_trimmed); ?></p>
+                                                <p class="text-[16px] font-[300] text-left md:text-center"><?php echo esc_html($desc_trimmed); ?></p>
                                             </div>
                                             <div class="flex">
                                                 <?php echo theme_button("Learn More", "/"); ?>
