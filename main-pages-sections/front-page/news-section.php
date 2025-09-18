@@ -24,7 +24,10 @@
                     <?php while ($news->have_posts()) : $news->the_post(); ?>
                         <?php
                             $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                            $description  = get_the_content();
+                            $description = get_the_content();
+                            $description = wp_strip_all_tags($description);
+                            $desc_limit = 200;
+                            $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "...");
                             $date         = get_field("date");
 
                             // Reformat the date
@@ -58,7 +61,7 @@
                                     <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <div class="flex flex-col gap-[10px]">
-                                    <p class="text-[22px] font-[300]"><?php echo esc_html($description); ?></p>
+                                    <p class="text-[22px] font-[300]"><?php echo esc_html($desc_trimmed); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +78,10 @@
                             <?php while ($news->have_posts()) : $news->the_post(); ?>
                                 <?php
                                     $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                                    $description  = get_the_content();
+                                     $description = get_the_content();
+                                    $description = wp_strip_all_tags($description);
+                                    $desc_limit = 200;
+                                    $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "...");
                                     $date         = get_field("date");
 
                                     // Reformat the date
@@ -104,7 +110,7 @@
                                                 <p class="text-[14px] md:text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                             </div>
                                             <div class="flex flex-col gap-[10px]">
-                                                <p class="text-[16px] md:text-[22px] font-[300] text-left md:text-center"><?php echo esc_html($description); ?></p>
+                                                <p class="text-[16px] md:text-[22px] font-[300] text-left md:text-center"><?php echo esc_html($desc_trimmed); ?></p>
                                             </div>
                                             <div class="flex">
                                                 <?php echo theme_button("Learn More", "/"); ?>
