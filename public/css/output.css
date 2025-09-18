@@ -3295,9 +3295,17 @@ p, a, li {
     line-height: 1.75rem;
   }
 
+  .md\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .md\:text-\[\#ffffff\] {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+
+  .md\:text-\[2wpx\] {
+    color: 2wpx;
   }
 
   .md\:shadow {

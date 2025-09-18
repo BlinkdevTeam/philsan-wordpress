@@ -11,7 +11,7 @@
                 <?php endif; ?>
                 <div class="pt-[10px]">
                     <?php if (!empty($group['description'])) : ?>
-                        <p class="text-[24px] font-[400]"><?php echo esc_html($group['description']) ?></p>
+                        <p class="text-[22px] font-[400]"><?php echo esc_html($group['description']) ?></p>
                     <?php endif; ?>
                 </div>
                 <?php if (!empty($group['button_title'])) : ?>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="pt-[10px]">
                     <?php if (!empty($group['description'])) : ?>
-                        <p class="text-[16px] md:text-[24px] font-[300]"><?php echo esc_html($group['description']) ?></p>
+                        <p class="text-[16px] md:text-[22px] font-[300]"><?php echo esc_html($group['description']) ?></p>
                     <?php endif; ?>
                 </div>
                 <?php if (!empty($group['button_title'])) : ?>

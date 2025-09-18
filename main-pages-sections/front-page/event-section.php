@@ -6,12 +6,12 @@
     ));
 ?>
 <div class="bg-[#ffffff]">
-    <div class="custom-container mx-auto event-section md:pt-[100px] pb-[50px]">
+    <div class="custom-container mx-auto event-section pt-[50px] md:pt-[100px] pb-[50px]">
         <div>
             <div class="flex flex-col md:flex-row justify-between items-start">
                 <div>
                     <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
-                    <p class="text-[16px] md:text-[24px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
+                    <p class="text-[16px] md:text-[22px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                 </div>
                  <div class="flex pt-[10px]">
                     <?php echo theme_button("See More", "/"); ?>
@@ -85,7 +85,7 @@
                                 <?php if($count > 1 ) : ?>
                                     <p class="text-[18px] font-[300]"><?php echo esc_html($description); ?></p>
                                 <?php else: ?>
-                                    <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
+                                    <p class="text-[22px] font-[300]"><?php echo esc_html($description); ?></p>
                                 <?php endif; ?>
                             </div>
                             <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">

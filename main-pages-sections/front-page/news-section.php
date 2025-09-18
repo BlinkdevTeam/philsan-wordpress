@@ -11,7 +11,7 @@
             <div class="flex flex-col md:flex-row justify-between items-start">
                     <div>
                         <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Latest News</h2>
-                        <p class="text-[16px] md:text-[24px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
+                        <p class="text-[16px] md:text-[22px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                     </div>
                     <div class="flex pt-[10px] md:pt-[30px]">
                         <?php echo theme_button("More Topics", "/"); ?>
@@ -58,7 +58,7 @@
                                     <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <div class="flex flex-col gap-[10px]">
-                                    <p class="text-[24px] font-[300]"><?php echo esc_html($description); ?></p>
+                                    <p class="text-[22px] font-[300]"><?php echo esc_html($description); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                     <div class="py-[40px] px-[20px] rounded-xl bg-[#FCFCF0]">
                                         <div class="flex flex-col gap-[20px]">
                                             <div class="w-[100%]">
-                                                <h2 class="text-[18px] md:text-[24px] font-[700] text-[#1f773a] text-left md:text-center"><?php the_title(); ?></h2>
+                                                <h2 class="text-[18px] md:text-[22px] font-[700] text-[#1f773a] text-left md:text-center"><?php the_title(); ?></h2>
                                             </div>
                                             <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
                                                 <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
@@ -104,7 +104,7 @@
                                                 <p class="text-[14px] md:text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
                                             </div>
                                             <div class="flex flex-col gap-[10px]">
-                                                <p class="text-[16px] md:text-[24px] font-[300] text-left md:text-center"><?php echo esc_html($description); ?></p>
+                                                <p class="text-[16px] md:text-[22px] font-[300] text-left md:text-center"><?php echo esc_html($description); ?></p>
                                             </div>
                                             <div class="flex">
                                                 <?php echo theme_button("Learn More", "/"); ?>
