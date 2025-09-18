@@ -692,10 +692,6 @@ video {
   top: 0;
 }
 
-.top-\[0px\] {
-  top: 0px;
-}
-
 .top-\[10px\] {
   top: 10px;
 }
@@ -2663,9 +2659,13 @@ body.modal-open {
   overflow: hidden;
 }
 
-.hide-mobile-nav {
+/* .hide-mobile-nav {
   transform: translateX(-100%);
-}
+} */
+
+/* .mobile-nav-menu {
+  height: 100vh;
+} */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
@@ -2694,10 +2694,6 @@ p, a, li {
   align-items: center;
   border-radius: 8px;
   text-align: center;
-}
-
-.mobile-nav-menu {
-  height: 100vh;
 }
 
 /* Ensure container has fixed height and hides overflow */
