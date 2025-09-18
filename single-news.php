@@ -21,7 +21,7 @@
     <div class="custom-container py-[100px]">
         <div class="flex flex-col gap-[20px]">
             <h2 class="text-left text-[24px] lg:text-[32px] font-[600] text-[#1f773a]"><?php the_title(); ?></h2>
-            <div class="flex gap-[20px]">
+            <div class="flex flex-col md:flex-row gap-[20px]">
                 <div class="w-[100%] md:w-[70%]">
                     <img class="w-full w-[200px] lg:h-[600px] object-cover rounded-xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                 </div>
