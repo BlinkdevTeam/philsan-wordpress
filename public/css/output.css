@@ -3455,6 +3455,10 @@ p, a, li {
     font-size: 38px;
   }
 
+  .lg\:text-\[32px\] {
+    font-size: 32px;
+  }
+
   .lg\:text-\[left\] {
     color: left;
   }

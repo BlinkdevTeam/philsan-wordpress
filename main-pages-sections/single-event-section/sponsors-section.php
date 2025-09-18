@@ -4,7 +4,7 @@
 <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
     <div class="sponsors-section custom-container py-[50px] items-center">
         <div class="flex flex-col justify-center items-center">
-            <h2 class="text-[24px] text-[#1F773A] font-[700]">Event Sponsors</h2>
+            <h2 class="text-[18px] md:text-[24px] text-[#1F773A] font-[700]">Event Sponsors</h2>
         </div>
         <div class="pt-[50px]">
             <?php if ( !empty($group['sponsor_repeater']) ) : ?> 
