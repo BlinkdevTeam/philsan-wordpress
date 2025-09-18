@@ -28,7 +28,7 @@
     <div class="flex space-between h-full w-full relative y-thumbnail">
         <div class="flex custom-container items-center justify-center py-[100px] mx-auto z-[2]">
             <div class="flex justify-between items-center gap-[50px]">
-                <div class="w-[50%] flex flex-col justify-center text-left h-[100%]">
+                <div class="w-[80%] md:w-[50%] flex flex-col justify-center text-left h-[100%]">
                     <p class="text-[18px] text-[#ffffff] font-[200]"><?php echo $location ?></p>
                     <div class="w-[90%]">
                         <h1 class="text-[48px] font-[700] pb-[20px] text-[#ffc200]"><?php the_title(); ?></h1>
@@ -38,7 +38,7 @@
                         <p class="text-[16px] text-[#ffffff] font-[200]"><?php echo $formatted_date ?></p>
                     </div>
                 </div>
-                <div class="w-[50%] rounded-tl-2xl rounded-br-2xl overflow-hidden">
+                <div class="w-[50%] rounded-tl-2xl rounded-br-2xl overflow-hidden hidden md:block">
                     <img class="w-full h-[400px] object-cover" src="<?php echo $featured_image_url ?>" alt="hero-image">
                 </div>
             </div>
