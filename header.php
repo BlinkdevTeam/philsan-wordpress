@@ -110,7 +110,7 @@ if (!$should_hide_nav_or_footer) :
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div class="w-[100%] pt-[50px] px-[20px]">
+    <div class="w-[100%] pt-[50px]">
       <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',

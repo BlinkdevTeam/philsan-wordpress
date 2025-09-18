@@ -2705,7 +2705,9 @@ p, a, li {
 }
 
 .mobile-nav-menu ul li {
-  margin: 0;
+  margin: 0px !important;
+  text-align: center;
+  padding: 0px 20px
 }
 
 /* Ensure container has fixed height and hides overflow */
