@@ -24,7 +24,7 @@
                     <?php while ($news->have_posts()) : $news->the_post(); ?>
                         <?php
                             $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                            $description  = get_field("description");
+                            $description  = get_the_content();
                             $date         = get_field("date");
 
                             // Reformat the date
@@ -75,7 +75,7 @@
                             <?php while ($news->have_posts()) : $news->the_post(); ?>
                                 <?php
                                     $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                                    $description  = get_field("description");
+                                    $description  = get_the_content();
                                     $date         = get_field("date");
 
                                     // Reformat the date
