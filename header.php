@@ -97,8 +97,8 @@ if (!$should_hide_nav_or_footer) :
     </div>
   </header>
 
-  <header id="mobile-nav" class="mobile-nav-menu hide-mobile-nav fixed top-0 right-0 w-[60%] p-[20px] h-screen bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
-    <div class="flex gap-[20px] items-center">
+  <header id="mobile-nav" class="mobile-nav-menu hide-mobile-nav fixed top-0 right-0 w-[60%] h-screen bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
+    <div class="flex gap-[20px] items-center p-[20px] border-b-[10px]">
       <div class="">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 13L1 7L7 1" stroke="#007831" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -110,16 +110,16 @@ if (!$should_hide_nav_or_footer) :
       </div>
     </div>
     <!-- Mobile Menu -->
-      <div class="w-[100%] pt-[50px] px-[20px]">
-        <?php
-          wp_nav_menu(array(
-            'theme_location' => 'primary',
-            'menu_class' => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] ',
-            'container' => false,
-            'fallback_cb' => false,
-          ));
-        ?>
-      </div>
+    <div class="w-[100%] pt-[50px] px-[20px]">
+      <?php
+        wp_nav_menu(array(
+          'theme_location' => 'primary',
+          'menu_class' => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] ',
+          'container' => false,
+          'fallback_cb' => false,
+        ));
+      ?>
+    </div>
   </header>
 
   <!-- MOBILE MENU BACKDROP -->
