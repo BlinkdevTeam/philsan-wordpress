@@ -32,7 +32,7 @@ while (have_posts()) {
                         rounded-tl-[40px] rounded-br-[40px]">
                 Register
             </a> -->
-            <button class="font-bold w-max
+            <button id="scrollToprogram" class="font-bold w-max
                         bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                         bg-[length:200%_100%] bg-[position:left_center]
                         hover:bg-[position:right_center]
@@ -62,7 +62,7 @@ while (have_posts()) {
                     rounded-tl-[40px] rounded-br-[40px]">
                 Register
             </a> -->
-            <button id="scrollToprgram" class="font-bold w-max
+            <button id="scrollToprogram" class="font-bold w-max
                     bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                     bg-[length:200%_100%] bg-[position:left_center]
                     hover:bg-[position:right_center]
