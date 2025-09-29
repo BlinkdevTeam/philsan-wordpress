@@ -81,7 +81,7 @@ while (have_posts()) {
                     rounded-tl-[40px] rounded-br-[40px]">See Program</button>
 
             <div class="rounded-[20px] justify-between w-max gap-[50px] pt-[20px] pb-[30px] px-[20px] items-center  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg border-[#abeabe] border-[1px]">
-                <p class="text-[#1f773a] text-[14px] font-bold pb-[]">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
+                <p class="text-[#1f773a] text-[14px] font-bold pb-[20px]">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
                 <a class="text-[#ffffff] p-[10px] rounded-[10px] bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                         bg-[length:200%_100%] bg-[position:left_center]
                         hover:bg-[position:right_center]
