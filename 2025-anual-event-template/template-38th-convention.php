@@ -371,7 +371,8 @@ while (have_posts()) {
                                     <path d="M5.24537e-06 30C2.34843e-06 13.4315 13.4315 -2.34843e-06 30 -5.24537e-06L30 9.99999C30 21.0457 21.0457 30 10 30L5.24537e-06 30Z" fill="#1F773A"/>
                                 </svg>
                             </div>
-                            <h6 class="font-bold text-[#1F773A] text-[28px] md:text-[40px]"><?php echo get_field("program_title", $page->ID); ?></h6>
+                            <h6 class="font-bold text-[#1F773A] text-[40px] hidden md:block">Convention Schedule</h6>
+                            <h6 class="font-bold text-[#1F773A] text-[28px] md:hidden">Convention</br> Schedule</h6>
                         </div>
                     </div>
                 <?php endif; ?>
