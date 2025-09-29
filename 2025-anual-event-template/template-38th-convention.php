@@ -41,9 +41,13 @@ while (have_posts()) {
                         py-[10px] px-[50px]
                         rounded-tl-[40px] rounded-br-[40px]">See Program</button>
 
-            <div class="flex justify-between w-fit gap-[50px] p-[20px] items-center p-[20px] bg-[#edb221]">
-                <p class="text-[#ffffff]">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
-                <a class="p-[20px]" href="">Take Quiz and Survey</a>
+            <div class="rounded-[20px] flex justify-between w-fit gap-[50px] py-[10px] px-[20px] items-center p-[20px]  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg">
+                <p class="text-[#1f773a] text-[14px] font-bold">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
+                <a class="text-[#ffffff] p-[10px] rounded-[10px] bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                        bg-[length:200%_100%] bg-[position:left_center]
+                        hover:bg-[position:right_center]
+                        transition-[background-position] duration-700 ease-in-out" 
+                    href="https://philsan-38th-annual-dashboard.vercel.app/quiz-survey-login">Take Quiz and Survey</a>
             </div>
         </div>
         <div class="flex flex-col items-center gap-[20px] md:hidden">
