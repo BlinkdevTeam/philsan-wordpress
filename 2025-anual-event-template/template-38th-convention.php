@@ -21,7 +21,7 @@ while (have_posts()) {
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <a href="https://philsan.org/38th-annual-convention/registration/"
+            <!-- <a href="https://philsan.org/38th-annual-convention/registration/"
                 class="font-bold w-max
                         bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                         bg-[length:200%_100%] bg-[position:left_center]
@@ -31,7 +31,15 @@ while (have_posts()) {
                         py-[10px] px-[50px]
                         rounded-tl-[40px] rounded-br-[40px]">
                 Register
-            </a>
+            </a> -->
+            <button class="font-bold w-max
+                        bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                        bg-[length:200%_100%] bg-[position:left_center]
+                        hover:bg-[position:right_center]
+                        transition-[background-position] duration-700 ease-in-out
+                        text-white text-[24px] lg:text-[38px]
+                        py-[10px] px-[50px]
+                        rounded-tl-[40px] rounded-br-[40px]">See Program</button>
         </div>
         <div class="flex flex-col items-center gap-[20px] md:hidden">
             <img class="w-[70%]" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="">
