@@ -43,7 +43,7 @@ while (have_posts()) {
             <?php 
                 get_template_part('2025-anual-event-template/components/count-down'); 
             ?>  
-            <a href="https://philsan.org/38th-annual-convention/registration/"
+            <!-- <a href="https://philsan.org/38th-annual-convention/registration/"
                 class="font-bold w-max
                     bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                     bg-[length:200%_100%] bg-[position:left_center]
@@ -53,7 +53,15 @@ while (have_posts()) {
                     py-[10px] px-[50px]
                     rounded-tl-[40px] rounded-br-[40px]">
                 Register
-            </a>
+            </a> -->
+            <button id="scrollToprgram" class="font-bold w-max
+                    bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                    bg-[length:200%_100%] bg-[position:left_center]
+                    hover:bg-[position:right_center]
+                    transition-[background-position] duration-700 ease-in-out
+                    text-[#ffffff] text-[18px]
+                    py-[10px] px-[50px]
+                    rounded-tl-[40px] rounded-br-[40px]">See Program</button>
         </div>
         <div class="relative w-[100%] md:w-[50%] pb-[0px] md:pb-[50px]">
             <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
@@ -322,7 +330,7 @@ while (have_posts()) {
     </div>
 </div>
 
-<div class="program relative overflow-hidden">
+<div id="program" class="program relative overflow-hidden">
     <div class="w-[90%] max-w-[1280px] mx-auto pt-[80px] md:pt-[110px]">
        <?php if ($page) : ?>
             <div class="flex flex-col gap-[20px] pb-[40px]">
@@ -470,6 +478,13 @@ while (have_posts()) {
     </div>
 </div>
 
+<script>
+  document.getElementById("scrollToprogram").addEventListener("click", function() {
+    document.getElementById("program").scrollIntoView({ 
+      behavior: "smooth" 
+    });
+  });
+</script>
 
 <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
