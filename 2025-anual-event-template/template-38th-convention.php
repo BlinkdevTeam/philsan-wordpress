@@ -40,6 +40,11 @@ while (have_posts()) {
                         text-white text-[24px]
                         py-[10px] px-[50px]
                         rounded-tl-[40px] rounded-br-[40px]">See Program</button>
+
+            <div class="flex justify-between w-fit gap-[50px] p-[20px] items-center p-[20px] bg-[#edb221]">
+                <p class="text-[#ffffff]">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
+                <a class="p-[20px]" href="">Take Quiz and Survey</a>
+            </div>
         </div>
         <div class="flex flex-col items-center gap-[20px] md:hidden">
             <img class="w-[70%]" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="">
@@ -70,10 +75,6 @@ while (have_posts()) {
                     text-[#ffffff] text-[18px]
                     py-[10px] px-[50px]
                     rounded-tl-[40px] rounded-br-[40px]">See Program</button>
-        </div>
-        <div class="flex justify-between w-fit gap-[50px] p-[20px] items-center p-[20px] bg-[#edb221]">
-            <p class="text-[#ffffff]">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
-            <a class="p-[20px]" href="">Take Quiz and Survey</a>
         </div>
         <div class="relative w-[100%] md:w-[50%] pb-[0px] md:pb-[50px]">
             <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
