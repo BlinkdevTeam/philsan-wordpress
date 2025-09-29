@@ -32,12 +32,12 @@ while (have_posts()) {
                         rounded-tl-[40px] rounded-br-[40px]">
                 Register
             </a> -->
-            <button id="scrollToprogram" class="font-bold w-max
+            <button id="scrollToprogram" class="font-[600] w-max
                         bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                         bg-[length:200%_100%] bg-[position:left_center]
                         hover:bg-[position:right_center]
                         transition-[background-position] duration-700 ease-in-out
-                        text-white text-[24px] lg:text-[38px]
+                        text-white text-[24px]
                         py-[10px] px-[50px]
                         rounded-tl-[40px] rounded-br-[40px]">See Program</button>
         </div>
@@ -80,6 +80,10 @@ while (have_posts()) {
                 ?> 
             </div> 
         </div>
+    </div>
+    <div class="flex justify-between w-fit gap-[50px] p-[20px] items-center p-[20px]">
+        <p>Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
+        <a class="p-[20px]" href="">Take Quiz and Survey</a>
     </div>
     <div class="absolute bottom-[0px] left-[0px] transform scale-[1.3] opacity-[0.3]">
         <img class="block md:hidden" src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
