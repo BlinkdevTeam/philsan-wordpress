@@ -1636,6 +1636,11 @@ video {
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#abeabe\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(171 234 190 / var(--tw-border-opacity, 1));
+}
+
 .border-b-\[\#CCCCCC\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(204 204 204 / var(--tw-border-opacity, 1));
