@@ -146,9 +146,8 @@ class InfomercialModal {
     document.querySelectorAll(".watch-video-btn").forEach(btn => {
       btn.addEventListener("click", e => {
         e.preventDefault();
-        console.log("click open video");
-        console.log("e", e);
         const videoUrl = btn.getAttribute("data-video");
+        console.log("videoUrl", videoUrl);
         if (videoUrl) this.open(videoUrl);
       });
     });
