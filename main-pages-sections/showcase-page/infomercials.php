@@ -7,7 +7,8 @@
                         $featured_image_url = get_sub_field("featured_image");
                         $description = ge_sub_field("description");
                         $description = wp_strip_all_tags($description);
-                        $date        = get_sub_field("date");
+                        $sponsor        = get_sub_field("sponsor");
+                        $date        = get_sub_field("published_date");
                         $title = get_sub_field("title");
 
                         $title_limit = 60;
@@ -20,8 +21,6 @@
                         } else {
                             $formatted_date = '';
                         }
-
-                        var_dump($featured_image_url);
                     ?>
 
                     <!-- DESKTOP -->
