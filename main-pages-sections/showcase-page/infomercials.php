@@ -5,7 +5,7 @@
                 <?php while ( have_rows('showcase_repeater') ): the_row(); ?>
                     <?php
                         $featured_image_url = get_sub_field("featured_image");
-                        $description = ge_sub_field("description");
+                        $description = get_sub_field("description");
                         $sponsor        = get_sub_field("sponsor");
                         $date        = get_sub_field("published_date");
                         $title = get_sub_field("title");
