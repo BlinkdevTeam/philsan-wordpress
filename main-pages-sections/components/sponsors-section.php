@@ -8,8 +8,8 @@
 <div class="custom-container">
     <div class="pt-[20px] md:pt-[50px]">
         <?php if ( $sponsors->have_posts() ) : ?> 
-            <div>
-                <h2 class="text-[24px] md:text-[42px] text-[#1F773A] font-[700] text-center">Our Sponsors</h2>
+            <div class="pb-[20px]">
+                <h2 class="text-[24px] md:text-[42px] text-[#1F773A] font-[700] text-center">Our Sponsors / Investors</h2>
             </div>
             <div class="swiper sponsorSwiper w-[100%]">
                 <div class="swiper-wrapper items-center">

@@ -10,6 +10,7 @@
                             $sponsor        = get_sub_field("sponsor");
                             $date        = get_sub_field("published_date");
                             $title = get_sub_field("title");
+                            $video_url = get_sub_field("video_link");
 
                             $title_limit = 60;
                             $desc_limit = 60;
@@ -33,7 +34,9 @@
                                 <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                             </div>
                             <div class="flex pt-[30px]">
-                                <?php echo theme_button("Watch Video", "/"); ?>
+                               <a href="#" class="watch-video-btn inline-flex items-center justify-center px-5 py-2 bg-[#096936] text-white rounded-full hover:bg-[#0a875a] transition" data-video="<?php echo esc_url(get_sub_field('video_url')); ?>">
+                                    Watch Video
+                                </a>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -43,4 +46,25 @@
         </div>
     </div>
 </div>
+
+<!-- Video Modal -->
+<div id="video-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl w-[90%] max-w-[800px] overflow-hidden">
+    <!-- Close button -->
+    <button id="close-modal" class="absolute top-3 right-3 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition">
+      ✕
+    </button>
+
+    <!-- Video container -->
+    <div class="relative w-full h-0 pb-[56.25%]"> <!-- 16:9 ratio -->
+      <iframe id="modal-video" class="absolute top-0 left-0 w-full h-full rounded-2xl"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
 

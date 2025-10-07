@@ -1,4 +1,5 @@
 import SpeakerModal from "../javascripts/38thSpeakerModal";
+import InfomercialModal from "../javascripts/informecialModal";
 import SidebarFilter from "../javascripts/sidebarFilter";
 import NewsEventSearch from "../javascripts/newsEventSearch";
 import HeaderScrollBehaviour from "../javascripts/headerScrollbehaviour";
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const annualSpeakerModal = new SpeakerModal();
+    const informecialModal = InfomercialModal();
 
     if (document.querySelector(".speaker-item")) {
         annualSpeakerModal.handleModal();
@@ -28,5 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
         window.handleFaqAccordion = function(elementId, index) {
             new FaqAcc().handleFaqAcc(elementId, index);
         }
+    }
+
+    if(document.getElementById("video-modal")) {
+        new InfomercialModal();
     }
 });

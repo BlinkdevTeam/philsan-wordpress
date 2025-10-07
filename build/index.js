@@ -124,6 +124,54 @@ class HeaderScrollBehaviour {
 
 /***/ }),
 
+/***/ "./javascripts/informecialModal.js":
+/*!*****************************************!*\
+  !*** ./javascripts/informecialModal.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class InfomercialModal {
+  constructor() {
+    this.modal = document.getElementById("video-modal");
+    this.iframe = document.getElementById("modal-video");
+    this.closeBtn = document.getElementById("close-modal");
+    this.registerEvents();
+  }
+  registerEvents() {
+    // Open modal when any "Watch Video" button is clicked
+    document.querySelectorAll(".watch-video-btn").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        const videoUrl = btn.getAttribute("data-video");
+        if (videoUrl) this.open(videoUrl);
+      });
+    });
+
+    // Close modal on close button or click outside
+    this.closeBtn.addEventListener("click", () => this.close());
+    this.modal.addEventListener("click", e => {
+      if (e.target === this.modal) this.close();
+    });
+  }
+  open(videoUrl) {
+    this.iframe.src = videoUrl.includes("?") ? videoUrl + "&autoplay=1" : videoUrl + "?autoplay=1";
+    this.modal.classList.remove("hidden");
+    this.modal.classList.add("flex");
+  }
+  close() {
+    this.iframe.src = ""; // stop video
+    this.modal.classList.add("hidden");
+    this.modal.classList.remove("flex");
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfomercialModal);
+
+/***/ }),
+
 /***/ "./javascripts/mobileNavBehaviour.js":
 /*!*******************************************!*\
   !*** ./javascripts/mobileNavBehaviour.js ***!
@@ -360,11 +408,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../javascripts/38thSpeakerModal */ "./javascripts/38thSpeakerModal.js");
-/* harmony import */ var _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascripts/sidebarFilter */ "./javascripts/sidebarFilter.js");
-/* harmony import */ var _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascripts/newsEventSearch */ "./javascripts/newsEventSearch.js");
-/* harmony import */ var _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascripts/headerScrollbehaviour */ "./javascripts/headerScrollbehaviour.js");
-/* harmony import */ var _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../javascripts/faqAccordion */ "./javascripts/faqAccordion.js");
-/* harmony import */ var _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../javascripts/mobileNavBehaviour */ "./javascripts/mobileNavBehaviour.js");
+/* harmony import */ var _javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascripts/informecialModal */ "./javascripts/informecialModal.js");
+/* harmony import */ var _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascripts/sidebarFilter */ "./javascripts/sidebarFilter.js");
+/* harmony import */ var _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascripts/newsEventSearch */ "./javascripts/newsEventSearch.js");
+/* harmony import */ var _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../javascripts/headerScrollbehaviour */ "./javascripts/headerScrollbehaviour.js");
+/* harmony import */ var _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../javascripts/faqAccordion */ "./javascripts/faqAccordion.js");
+/* harmony import */ var _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../javascripts/mobileNavBehaviour */ "./javascripts/mobileNavBehaviour.js");
+
 
 
 
@@ -374,21 +424,25 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JS Running!!!");
   if (document.getElementById("mobile-nav")) {
-    new _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_3__["default"]();
-    new _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_5__["default"]();
+    new _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_4__["default"]();
+    new _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_6__["default"]();
   }
   const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  const informecialModal = (0,_javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
   if (document.querySelector(".speaker-item")) {
     annualSpeakerModal.handleModal();
   }
   if (document.querySelector(".with-filters")) {
-    new _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_1__["default"]();
-    new _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    new _javascripts_sidebarFilter__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    new _javascripts_newsEventSearch__WEBPACK_IMPORTED_MODULE_3__["default"]();
   }
   if (document.getElementById("faq-section")) {
     window.handleFaqAccordion = function (elementId, index) {
-      new _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_4__["default"]().handleFaqAcc(elementId, index);
+      new _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_5__["default"]().handleFaqAcc(elementId, index);
     };
+  }
+  if (document.getElementById("video-modal")) {
+    new _javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__["default"]();
   }
 });
 })();
