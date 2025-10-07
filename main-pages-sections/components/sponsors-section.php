@@ -1,7 +1,7 @@
 <?php 
 
     $sponsors = new WP_Query(array(
-        "post_type"      => "sponsors",
+        "post_type"      => "sponsor",
         "posts_per_page" => -1,
     ));
 ?>
