@@ -12,6 +12,7 @@ class InfomercialModal {
     document.querySelectorAll(".watch-video-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
+        console.log("click open video")
         const videoUrl = btn.getAttribute("data-video");
         if (videoUrl) this.open(videoUrl);
       });
