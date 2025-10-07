@@ -14,7 +14,7 @@
                             $title_limit = 60;
                             $desc_limit = 60;
                             $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "..."); // Trim it properly
-                            $title_trimmed = mb_strimwidth($description, 0, $title_limit, "...");
+                            $title_trimmed = mb_strimwidth($title, 0, $title_limit, "...");
                             // Reformat the date
                             if ($date) {
                                 $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
