@@ -146,6 +146,7 @@ class InfomercialModal {
     document.querySelectorAll(".watch-video-btn").forEach(btn => {
       btn.addEventListener("click", e => {
         e.preventDefault();
+        console.log("click open video");
         const videoUrl = btn.getAttribute("data-video");
         if (videoUrl) this.open(videoUrl);
       });
@@ -440,7 +441,8 @@ document.addEventListener("DOMContentLoaded", function () {
       new _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_5__["default"]().handleFaqAcc(elementId, index);
     };
   }
-  if (document.getElementById("video-modal")) {
+  if (document.querySelector(".watch-video-btn")) {
+    console.log("there's modal here");
     new _javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__["default"]();
   }
 });

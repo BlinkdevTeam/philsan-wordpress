@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    if(document.getElementById("video-modal")) {
+    if(document.querySelector(".watch-video-btn")) {
+        console.log("there's modal here")
         new InfomercialModal();
     }
 });
