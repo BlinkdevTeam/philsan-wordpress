@@ -6,7 +6,6 @@
                     <?php
                         $featured_image_url = get_sub_field("featured_image");
                         $description = ge_sub_field("description");
-                        $description = wp_strip_all_tags($description);
                         $sponsor        = get_sub_field("sponsor");
                         $date        = get_sub_field("published_date");
                         $title = get_sub_field("title");
@@ -27,7 +26,6 @@
                     <div class="block">
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                         <div class="pt-[20px]">
-                            <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
