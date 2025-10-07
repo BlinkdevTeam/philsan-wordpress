@@ -4,6 +4,8 @@
         "post_type"      => "sponsor",
         "posts_per_page" => -1,
     ));
+
+    var_dump($sponsors);
 ?>
 <div class="pt-[20px] md:pt-[50px]">
     <?php if ( $sponsors->have_posts() ) : ?> 
