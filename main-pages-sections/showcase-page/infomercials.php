@@ -36,7 +36,7 @@
                             <div class="flex pt-[30px]">
                                <a 
                                     href="#" 
-                                    class="text-[12px] md:text-[16px] bg-[#ffc200] px-[17px] md:px-[25px] py-[8px] md:py-[10px] text-[#ffffff] inline-flex items-center gap-[10px] rounded-tl-2xl rounded-br-2xl hover:bg-[#1F773A] transition"
+                                    class="watch-video-btn text-[12px] md:text-[16px] bg-[#ffc200] px-[17px] md:px-[25px] py-[8px] md:py-[10px] text-[#ffffff] inline-flex items-center gap-[10px] rounded-tl-2xl rounded-br-2xl hover:bg-[#1F773A] transition"
                                     data-video="<?php echo esc_url($video_url); ?>?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=1"
                                 >
                                     Watch Video
