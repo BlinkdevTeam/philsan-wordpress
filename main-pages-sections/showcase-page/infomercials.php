@@ -34,7 +34,11 @@
                                 <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                             </div>
                             <div class="flex pt-[30px]">
-                               <a href="#" class="watch-video-btn inline-flex items-center justify-center px-5 py-2 bg-[#096936] text-white rounded-full hover:bg-[#0a875a] transition" data-video="<?php echo esc_url($video_url); ?>">
+                               <a 
+                                    href="#" 
+                                    class="text-[12px] md:text-[16px] bg-[#ffc200] px-[17px] md:px-[25px] py-[8px] md:py-[10px] text-[#ffffff] inline-flex items-center gap-[10px] rounded-tl-2xl rounded-br-2xl hover:bg-[#1F773A] transition"
+                                    data-video="<?php echo esc_url($video_url); ?>?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=1"
+                                >
                                     Watch Video
                                 </a>
                             </div>
