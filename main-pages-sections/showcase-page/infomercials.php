@@ -4,11 +4,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                 <?php while ( have_rows('showcase_repeater') ): the_row(); ?>
                     <?php
-                        $featured_image_url = get_field("featured_image");
-                        $description = get_field("description");
+                        $featured_image_url = get_sub_field("featured_image");
+                        $description = ge_sub_field("description");
                         $description = wp_strip_all_tags($description);
-                        $date        = get_field("date");
-                        $title = get_field("title");
+                        $date        = get_sub_field("date");
+                        $title = get_sub_field("title");
 
                         $title_limit = 60;
                         $desc_limit = 60;
