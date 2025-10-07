@@ -31,7 +31,9 @@
                                     <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                                 </div>
                                 <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
-                                <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
+                                <?php if ( $description ) : ?>
+                                    <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="flex pt-[30px]">
                                <a 
