@@ -8,8 +8,7 @@
                         $description = get_field("description");
                         $description = wp_strip_all_tags($description);
                         $date        = get_field("date");
-                        $categories = get_the_terms( get_the_ID(), 'category-filters' );
-                        $title = get_the_title();
+                        $title = get_field("title");
 
                         $title_limit = 60;
                         $desc_limit = 60;
@@ -21,6 +20,8 @@
                         } else {
                             $formatted_date = '';
                         }
+
+                        var_dump($featured_image_url);
                     ?>
 
                     <!-- DESKTOP -->
