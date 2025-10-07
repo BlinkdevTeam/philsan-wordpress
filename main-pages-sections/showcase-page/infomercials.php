@@ -34,7 +34,7 @@
                                 <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                             </div>
                             <div class="flex pt-[30px]">
-                               <a href="#" class="watch-video-btn inline-flex items-center justify-center px-5 py-2 bg-[#096936] text-white rounded-full hover:bg-[#0a875a] transition" data-video="<?php echo esc_url(get_sub_field('video_url')); ?>">
+                               <a href="#" class="watch-video-btn inline-flex items-center justify-center px-5 py-2 bg-[#096936] text-white rounded-full hover:bg-[#0a875a] transition" data-video="<?php echo $video_url); ?>">
                                     Watch Video
                                 </a>
                             </div>
