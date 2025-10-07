@@ -13,6 +13,7 @@ class InfomercialModal {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         console.log("click open video")
+        console.log("e", e)
         const videoUrl = btn.getAttribute("data-video");
         if (videoUrl) this.open(videoUrl);
       });
