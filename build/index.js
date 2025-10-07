@@ -428,7 +428,6 @@ document.addEventListener("DOMContentLoaded", function () {
     new _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_6__["default"]();
   }
   const annualSpeakerModal = new _javascripts_38thSpeakerModal__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  const informecialModal = (0,_javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
   if (document.querySelector(".speaker-item")) {
     annualSpeakerModal.handleModal();
   }

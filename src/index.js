@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const annualSpeakerModal = new SpeakerModal();
-    const informecialModal = InfomercialModal();
 
     if (document.querySelector(".speaker-item")) {
         annualSpeakerModal.handleModal();
