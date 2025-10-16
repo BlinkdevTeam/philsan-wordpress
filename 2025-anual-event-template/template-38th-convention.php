@@ -11,7 +11,7 @@ while (have_posts()) {
 
 <div class="relative hero-section flex items-center bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%)] overflow-hidden">
     <div class="relative z-[1] flex flex-col md:flex-row gap-[50px] w-[90%] max-w-[1280px] mx-auto py-[120px] lg:py-[0px] pt-[60px]">
-        <div class="hidden md:flex flex-col w-[50%] gap-[40px]">
+        <div class="hidden md:flex flex-col w-[50%] gap-[40px] pb-[40px]">
             <img class="w-[80px] ml-[-15px]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226390.png" alt="">
             <div class="flex flex-col gap-[10px] pt-[50px]">
                 <img class="w-[80%]" src="https://philsan.org/wp-content/uploads/2025/06/Frame-2147226387-1.png" alt="">
@@ -21,25 +21,15 @@ while (have_posts()) {
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <!-- <a href="https://philsan.org/38th-annual-convention/registration/"
-                class="font-bold w-max
-                        bg-gradient-to-r from-[#1F773A] to-[#EDB221]
-                        bg-[length:200%_100%] bg-[position:left_center]
-                        hover:bg-[position:right_center]
-                        transition-[background-position] duration-700 ease-in-out
-                        text-white text-[24px] lg:text-[38px]
-                        py-[10px] px-[50px]
-                        rounded-tl-[40px] rounded-br-[40px]">
-                Register
-            </a> -->
-            <button id="scrollToprogram" class="font-[600] w-max
-                        bg-gradient-to-r from-[#1F773A] to-[#EDB221]
-                        bg-[length:200%_100%] bg-[position:left_center]
-                        hover:bg-[position:right_center]
-                        transition-[background-position] duration-700 ease-in-out
-                        text-white text-[24px]
-                        py-[10px] px-[50px]
-                        rounded-tl-[40px] rounded-br-[40px]">See Program</button>
+             <a href="https://philsan-38th-annual-dashboard.vercel.app/speaker-presentation-login" class="font-bold w-max
+                    bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                    bg-[length:200%_100%] bg-[position:left_center]
+                    hover:bg-[position:right_center]
+                    transition-[background-position] duration-700 ease-in-out
+                    text-[#ffffff] text-[18px]
+                    py-[10px] px-[50px]
+                    rounded-tl-[40px] rounded-br-[40px]">Access the speaker’s presentation.
+            </a>
 
             <div class="rounded-[20px] flex justify-between w-max gap-[50px] py-[10px] px-[20px] items-center  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg border-[#abeabe] border-[1px]">
                 <p class="text-[#1f773a] text-[14px] font-bold">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
@@ -49,14 +39,6 @@ while (have_posts()) {
                         transition-[background-position] duration-700 ease-in-out" 
                     href="https://philsan-38th-annual-dashboard.vercel.app/quiz-survey-login">Take Quiz and Survey</a>
             </div>
-            <div class="rounded-[20px] flex justify-between w-max gap-[50px] py-[10px] px-[20px] items-center  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg border-[#abeabe] border-[1px]">
-                <p class="text-[#1f773a] text-[14px] font-bold">Access the speaker’s presentation.</p>
-                <a class="text-[#ffffff] p-[10px] rounded-[10px] bg-gradient-to-r from-[#1F773A] to-[#EDB221]
-                        bg-[length:200%_100%] bg-[position:left_center]
-                        hover:bg-[position:right_center]
-                        transition-[background-position] duration-700 ease-in-out" 
-                    href="https://philsan-38th-annual-dashboard.vercel.app/speaker-presentation-login">Download Here</a>
-            </div>
         </div>
         <div class="flex flex-col items-center gap-[20px] md:hidden">
             <img class="w-[70%]" src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="">
@@ -65,28 +47,15 @@ while (have_posts()) {
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-            <?php 
-                get_template_part('2025-anual-event-template/components/count-down'); 
-            ?>  
-            <!-- <a href="https://philsan.org/38th-annual-convention/registration/"
-                class="font-bold w-max
+            <a href="https://philsan-38th-annual-dashboard.vercel.app/speaker-presentation-login" class="font-bold w-max
                     bg-gradient-to-r from-[#1F773A] to-[#EDB221]
                     bg-[length:200%_100%] bg-[position:left_center]
                     hover:bg-[position:right_center]
                     transition-[background-position] duration-700 ease-in-out
                     text-[#ffffff] text-[18px]
                     py-[10px] px-[50px]
-                    rounded-tl-[40px] rounded-br-[40px]">
-                Register
-            </a> -->
-            <button id="scrollToprogram" class="font-bold w-max
-                    bg-gradient-to-r from-[#1F773A] to-[#EDB221]
-                    bg-[length:200%_100%] bg-[position:left_center]
-                    hover:bg-[position:right_center]
-                    transition-[background-position] duration-700 ease-in-out
-                    text-[#ffffff] text-[18px]
-                    py-[10px] px-[50px]
-                    rounded-tl-[40px] rounded-br-[40px]">See Program</button>
+                    rounded-tl-[40px] rounded-br-[40px]">Access the speaker’s presentation.
+            </a>
 
             <div class="rounded-[20px] justify-between w-max gap-[50px] pt-[20px] pb-[30px] px-[20px] items-center  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg border-[#abeabe] border-[1px]">
                 <p class="text-[#1f773a] text-[14px] font-bold pb-[20px]">Finish the quiz and survey to</br> download your Certificate and SV Program.</p>
@@ -96,25 +65,7 @@ while (have_posts()) {
                         transition-[background-position] duration-700 ease-in-out" 
                     href="https://philsan-38th-annual-dashboard.vercel.app/quiz-survey-login">Take Quiz and Survey</a>
             </div>
-            <div class="rounded-[20px] justify-between w-max gap-[50px] pt-[20px] pb-[30px] px-[20px] items-center  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg border-[#abeabe] border-[1px]">
-                <p class="text-[#1f773a] text-[14px] font-bold pb-[20px]">Access the speaker’s presentation.</p>
-                <a class="text-[#ffffff] p-[10px] rounded-[10px] bg-gradient-to-r from-[#1F773A] to-[#EDB221]
-                        bg-[length:200%_100%] bg-[position:left_center]
-                        hover:bg-[position:right_center]
-                        transition-[background-position] duration-700 ease-in-out" 
-                    href="https://philsan-38th-annual-dashboard.vercel.app/speaker-presentation-login">Download Here</a>
-            </div>
         </div>
-        <div class="relative w-[100%] md:w-[50%] pb-[0px] md:pb-[50px]">
-            <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
-            <img class="hidden md:block absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
-            <div class="hidden pt-[50px]">
-                <?php 
-                    get_template_part('2025-anual-event-template/components/count-down'); 
-                ?> 
-            </div> 
-        </div>
-        
     </div>
     <div class="absolute bottom-[0px] left-[0px] transform scale-[1.3] opacity-[0.3]">
         <img class="block md:hidden" src="https://philsan.org/wp-content/uploads/2025/06/Asset-3@3x-8-1-scaled.png" alt="">
