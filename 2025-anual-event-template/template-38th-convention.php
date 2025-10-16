@@ -65,6 +65,10 @@ while (have_posts()) {
                         transition-[background-position] duration-700 ease-in-out" 
                     href="https://philsan-38th-annual-dashboard.vercel.app/quiz-survey-login">Take Quiz and Survey</a>
             </div>
+            <div class="relative w-[100%] md:w-[50%] pb-[0px] md:pb-[50px]">
+                <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+                <img class="hidden md:block absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
+            </div>
         </div>
     </div>
     <div class="absolute bottom-[0px] left-[0px] transform scale-[1.3] opacity-[0.3]">
