@@ -1672,11 +1672,6 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#096936\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 105 54 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[\#101010\] {
   --tw-bg-opacity: 1;
   background-color: rgb(16 16 16 / var(--tw-bg-opacity, 1));
@@ -2876,11 +2871,6 @@ p, a, li {
   .wpforms-field {
     margin-bottom: 0px !important;
   }
-}
-
-.hover\:bg-\[\#0a875a\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 135 90 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-\[\#1F773A\]:hover {
