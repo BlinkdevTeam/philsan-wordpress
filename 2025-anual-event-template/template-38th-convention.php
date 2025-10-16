@@ -21,14 +21,14 @@ while (have_posts()) {
                 <p class="font-bold text-[#1F773A] text-[28px]">SEPTEMBER 30, 2025</p>
                 <p class="font-bold text-[#EDB221] text-[18px]">Okada Manila, Paranaque City, Philippines</p>
             </div>
-             <a href="https://philsan-38th-annual-dashboard.vercel.app/speaker-presentation-login" class="font-bold w-max
-                    bg-gradient-to-r from-[#1F773A] to-[#EDB221]
-                    bg-[length:200%_100%] bg-[position:left_center]
-                    hover:bg-[position:right_center]
-                    transition-[background-position] duration-700 ease-in-out
-                    text-[#ffffff] text-[18px]
-                    py-[10px] px-[50px]
-                    rounded-tl-[40px] rounded-br-[40px]">Access the speaker’s presentation.
+            <a href="https://philsan-38th-annual-dashboard.vercel.app/speaker-presentation-login" class="font-bold w-max
+                bg-gradient-to-r from-[#1F773A] to-[#EDB221]
+                bg-[length:200%_100%] bg-[position:left_center]
+                hover:bg-[position:right_center]
+                transition-[background-position] duration-700 ease-in-out
+                text-[#ffffff] text-[18px]
+                py-[10px] px-[50px]
+                rounded-tl-[40px] rounded-br-[40px]">Access the speaker’s presentation.
             </a>
 
             <div class="rounded-[20px] flex justify-between w-max gap-[50px] py-[10px] px-[20px] items-center  bg-[linear-gradient(to_bottom,#ffffff_0%,#ffffff_60%,#CBF9B6_100%) shadow-lg border-[#abeabe] border-[1px]">
@@ -65,10 +65,6 @@ while (have_posts()) {
                         transition-[background-position] duration-700 ease-in-out" 
                     href="https://philsan-38th-annual-dashboard.vercel.app/quiz-survey-login">Take Quiz and Survey</a>
             </div>
-        </div>
-         <div class="relative w-[100%] md:w-[50%] pb-[0px] md:pb-[50px]">
-            <img class="hidden md:block z-[2]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
-            <img class="hidden md:block absolute z-[1] bottom-[-50px] transform scale-[1.3] opacity-[0.05]" src="https://philsan.org/wp-content/uploads/2025/06/Philsan-Ticket-BG@3x-8-2.png" alt="">
         </div>
     </div>
     <div class="absolute bottom-[0px] left-[0px] transform scale-[1.3] opacity-[0.3]">
@@ -477,13 +473,7 @@ while (have_posts()) {
     </div>
 </div>
 
-<script>
-  document.getElementById("scrollToprogram").addEventListener("click", function() {
-    document.getElementById("program").scrollIntoView({ 
-      behavior: "smooth" 
-    });
-  });
-</script>
+
 
 <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
