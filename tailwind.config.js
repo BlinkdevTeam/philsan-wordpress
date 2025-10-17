@@ -24,10 +24,10 @@ module.exports = {
           marginRight: 'auto',
           width: '90%',
           '@screen md': {
-            width: '720px',
+            width: '768px',
           },
           '@screen lg': {
-            width: '1080px',
+            width: '1024px',
           },
           '@screen xl': {
             width: '1280px',
