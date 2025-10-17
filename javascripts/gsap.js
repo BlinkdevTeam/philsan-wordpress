@@ -3,7 +3,7 @@ class GsapScrollAnimation {
         gsap.registerPlugin(ScrollTrigger);
 
         // Loop through all sections
-        gsap.utils.toArray(",gsap-container").forEach((section) => {
+        gsap.utils.toArray(".gsap-container").forEach((section) => {
             const elements = section.querySelectorAll(".gsap-fade-up");
 
             // Only animate if section has elements
