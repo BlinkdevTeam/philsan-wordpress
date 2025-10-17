@@ -92,6 +92,47 @@ class FaqAcc {
 
 /***/ }),
 
+/***/ "./javascripts/gsap.js":
+/*!*****************************!*\
+  !*** ./javascripts/gsap.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class GsapScrollAnimation {
+  constructor() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Loop through all sections
+    gsap.utils.toArray(",gsap-container").forEach(section => {
+      const elements = section.querySelectorAll(".gsap-fade-up");
+
+      // Only animate if section has elements
+      if (elements.length > 0) {
+        gsap.from(elements, {
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            // when section top hits 80% of viewport height
+            toggleActions: "play none none none" // play once
+          },
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: 0.2
+        });
+      }
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GsapScrollAnimation);
+
+/***/ }),
+
 /***/ "./javascripts/headerScrollbehaviour.js":
 /*!**********************************************!*\
   !*** ./javascripts/headerScrollbehaviour.js ***!
@@ -415,6 +456,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _javascripts_headerScrollbehaviour__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../javascripts/headerScrollbehaviour */ "./javascripts/headerScrollbehaviour.js");
 /* harmony import */ var _javascripts_faqAccordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../javascripts/faqAccordion */ "./javascripts/faqAccordion.js");
 /* harmony import */ var _javascripts_mobileNavBehaviour__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../javascripts/mobileNavBehaviour */ "./javascripts/mobileNavBehaviour.js");
+/* harmony import */ var _javascripts_gsap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../javascripts/gsap */ "./javascripts/gsap.js");
+
 
 
 
@@ -444,6 +487,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".watch-video-btn")) {
     console.log("there's modal here");
     new _javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  }
+  if (document.querySelector(".gsap-container")) {
+    new _javascripts_gsap__WEBPACK_IMPORTED_MODULE_7__["default"]();
   }
 });
 })();

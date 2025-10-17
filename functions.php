@@ -19,6 +19,8 @@ function philsan_enqueue_styles() {
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
 
+
+
     // Correct path and URL for Tailwind output.css
     $tailwind_path = get_template_directory() . '/public/css/output.css';
     $tailwind_url  = get_template_directory_uri() . '/public/css/output.css';
@@ -30,6 +32,20 @@ function philsan_enqueue_styles() {
     }
 }
 add_action('wp_enqueue_scripts', 'philsan_enqueue_styles');
+
+
+// The proper way to enqueue GSAP script in WordPress
+// wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
+function theme_gsap_script(){
+    // The core GSAP library
+    wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js', array(), false, true );
+    // ScrollTrigger - with gsap.js passed as a dependency
+    wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js', array('gsap-js'), false, true );
+    // Your animation code file - with gsap.js passed as a dependency
+    wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . 'js/app.js', array('gsap-js'), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
+
 
 //INCLUDES 
 include(get_stylesheet_directory() . '/functions/news_event_api.php');

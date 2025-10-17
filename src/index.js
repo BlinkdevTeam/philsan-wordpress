@@ -5,6 +5,7 @@ import NewsEventSearch from "../javascripts/newsEventSearch";
 import HeaderScrollBehaviour from "../javascripts/headerScrollbehaviour";
 import FaqAcc from "../javascripts/faqAccordion";
 import MobileNavBehaviour from "../javascripts/mobileNavBehaviour";
+import GsapScrollAnimation from "../javascripts/gsap";
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JS Running!!!")
@@ -34,5 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if(document.querySelector(".watch-video-btn")) {
         console.log("there's modal here")
         new InfomercialModal();
+    }
+
+    if (document.querySelector(".gsap-container")) {
+        new GsapScrollAnimation();
     }
 });

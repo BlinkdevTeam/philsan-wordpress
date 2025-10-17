@@ -5,8 +5,8 @@
 <!-- desktop -->
 <div class="hidden lg:block bg-[#ffffff]">
     <div class="about-section pt-[100px] pb-[50px]">
-        <div class="flex custom-container mx-auto gap-[50px]">
-            <div class="w-[40%]">
+        <div class="gsap-container flex custom-container mx-auto gap-[50px]">
+            <div class="w-[40%] gsap-fade-up">
                 <?php if (!empty($group['title'])) : ?>
                     <h2 class="text-[18px] text-[#1F773A] font-[800]"><?php echo esc_html($group['title']) ?></h2>
                 <?php endif; ?>
@@ -21,7 +21,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="w-[60%] overflow-hidden">
+            <div class="w-[60%] overflow-hidden gsap-fade-up">
                 <div class="flex gap-[20px]">
                     <?php if ( !empty($group['items']) && is_array($group['items']) ) : ?>
                         <?php foreach ( $group['items'] as $item ) : ?>
@@ -49,11 +49,11 @@
 <div class="block lg:hidden bg-[#ffffff]">
     <div class="about-section pt-[100px] pb-[50px]">
         <div class="flex custom-container mx-auto gap-[50px]">
-            <div class="w-[100%]">
+            <div class="gsap-container w-[100%]">
                 <?php if (!empty($group['title'])) : ?>
-                    <h2 class="text-[18px] text-[#1F773A] font-[800]"><?php echo esc_html($group['title']) ?></h2>
+                    <h2 class="gsap-fade-up text-[18px] text-[#1F773A] font-[800]"><?php echo esc_html($group['title']) ?></h2>
                 <?php endif; ?>
-                <div class="overflow-hidden pt-[10px]">
+                <div class="gsap-fade-up overflow-hidden pt-[10px]">
                     <div class="flex gap-[20px]">
                         <?php if ( !empty($group['items']) && is_array($group['items']) ) : ?>
                             <?php foreach ( $group['items'] as $item ) : ?>
@@ -73,13 +73,13 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="pt-[10px]">
+                <div class="gsap-fade-up pt-[10px]">
                     <?php if (!empty($group['description'])) : ?>
                         <p class="text-[16px] md:text-[22px] font-[300]"><?php echo esc_html($group['description']) ?></p>
                     <?php endif; ?>
                 </div>
                 <?php if (!empty($group['button_title'])) : ?>
-                    <div class="flex pt-[10px]">
+                    <div class="gsap-fade-up flex pt-[10px]">
                         <?php echo theme_button(esc_html($group['button_title']), "/"); ?>
                     </div>
                 <?php endif; ?>
