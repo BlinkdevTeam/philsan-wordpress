@@ -4,16 +4,16 @@
         <p class="gsap-fade-up text-[16px] md:text-[18px] font-[600] text-[#1F773A] mb-8 text-center">( a glance at the past )</p>
     </div>
 
-    <div class="gsap-container flex flex-col gap-[40px] md:gap-[80px] md:py-[50px]">
+    <div class="flex flex-col gap-[40px] md:gap-[80px] md:py-[50px]">
         <?php if ( have_rows('history_repeater') ): ?>
             <?php while ( have_rows('history_repeater') ): the_row(); ?>
                 
-                <div class="gsap-fade-up">
-                    <h2 class="text-[32px] md:text-[42px] font-[700] text-[#1F773A] mb-4 text-center">
+                <div class="gsap-container">
+                    <h2 class="gsap-fade-up text-[32px] md:text-[42px] font-[700] text-[#1F773A] mb-4 text-center">
                         <?php the_sub_field("year"); // e.g. "1988" ?>
                     </h2>
 
-                    <div class="flex flex-col md:flex-row">
+                    <div class="gsap-fade-up flex flex-col md:flex-row">
                         <div class="w-[100%] md:w-[50%] image-container pr-[0px] md:pr-6 pb-[10px] md:pb-[0px]">
                             <div  class="w-[100%] h-[200px] md:h-[280px] lg:h-[300px] rounded-tl-2xl rounded-br-2xl overflow-hidden">
                                 <img 
