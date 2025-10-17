@@ -105,11 +105,11 @@ __webpack_require__.r(__webpack_exports__);
 class GsapScrollAnimation {
   constructor() {
     gsap.registerPlugin(ScrollTrigger);
-    console.log("scroll animation..");
+
     // Loop through all sections
     gsap.utils.toArray(".gsap-container").forEach(section => {
       const elements = section.querySelectorAll(".gsap-fade-up");
-
+      console.log("elements", elements);
       // Only animate if section has elements
       if (elements.length > 0) {
         gsap.from(elements, {
