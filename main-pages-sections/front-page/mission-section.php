@@ -2,7 +2,7 @@
     $group = get_field('mission_section');
 ?>
 <!-- desktop -->
-<div class="hidden md:block bg-[#ffffff]">
+<div class="hidden lg:block bg-[#ffffff]">
     <div class="mission-section pt-[100px] pb-[50px]">
         <div class="flex custom-container mx-auto gap-[50px]">
             <div class="w-[40%]">
@@ -33,7 +33,7 @@
 
 
 <!-- mobile -->
-<div class="block md:hidden bg-[#ffffff]">
+<div class="block lg:hidden bg-[#ffffff]">
     <div class="mission-section pt-[50px] pb-[50px]">
         <div class="flex custom-container mx-auto gap-[50px]">
             <div class="w-[100%]">
