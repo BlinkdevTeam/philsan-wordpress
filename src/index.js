@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (document.querySelector(".gsap-container")) {
+        console.log("gsap starting..")
         new GsapScrollAnimation();
     }
 });

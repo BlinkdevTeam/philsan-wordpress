@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 class GsapScrollAnimation {
   constructor() {
     gsap.registerPlugin(ScrollTrigger);
-
+    console.log("scroll animation..");
     // Loop through all sections
     gsap.utils.toArray(".gsap-container").forEach(section => {
       const elements = section.querySelectorAll(".gsap-fade-up");
@@ -489,6 +489,7 @@ document.addEventListener("DOMContentLoaded", function () {
     new _javascripts_informecialModal__WEBPACK_IMPORTED_MODULE_1__["default"]();
   }
   if (document.querySelector(".gsap-container")) {
+    console.log("gsap starting..");
     new _javascripts_gsap__WEBPACK_IMPORTED_MODULE_7__["default"]();
   }
 });
