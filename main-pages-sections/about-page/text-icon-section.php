@@ -2,8 +2,8 @@
     $group = get_field('text_icon_section');
 ?>
 <div class="text-icon-section custom-container py-[50px]">
-    <div class="flex space-between justify-center">
-        <div class="pb-[50px]">
+    <div class="gsap-container flex space-between justify-center">
+        <div class="gsap-fade-up pb-[50px]">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[18px] md:text-[24px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
@@ -16,9 +16,9 @@
     </div>
     <!-- Repeater section -->
     <?php if( !empty($group['text_icon_section']) && is_array($group['text_icon_section']) ): ?>
-        <div class="flex flex-col md:flex-row gap-[20px] justify-center">
+        <div class="gsap-container flex flex-col md:flex-row gap-[20px] justify-center">
             <?php foreach( $group['text_icon_section'] as $item ): ?>
-                <div class="flex flex-col gap-[20px] items-start w-[100%] md:w-[25%] rounded-xl pt-[20px] pb-[30px] px-[20px] shadow-md bg-white">
+                <div class="gsap-fade-up flex flex-col gap-[20px] items-start w-[100%] md:w-[25%] rounded-xl pt-[20px] pb-[30px] px-[20px] shadow-md bg-white">
                     <?php if( !empty($item['icon']) ): ?>
                         <div class="bg-[#CBF9B6] p-[10px] rounded-xl">
                             <img src="<?php echo esc_url($item['icon']['url']); ?>" alt="icon image" class="w-9 md:w-10 h-9 md:h-10 object-contain" />

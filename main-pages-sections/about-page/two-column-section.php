@@ -4,15 +4,15 @@
 
 <!-- desktop -->
 <div class="hidden md:block two-col-section custom-container py-[50px]">
-    <div class="flex space-between gap-[50px]">
-        <div class="w-[60%]">
+    <div class="gsap-container flex space-between gap-[50px]">
+        <div class="gsap-fade-up w-[60%]">
             <div class="w-[100%] image-container">
                 <div class="h-[200px] md:h-[250px] lg:h-[300px] rounded-2xl overflow-hidden">
                     <img class="w-full h-full object-cover" src="<?php echo esc_html($group['image']) ?>" alt="two col image">
                 </div>
             </div>
         </div>
-        <div class="w-[40%]">
+        <div class="gsap-fade-up w-[40%]">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[24px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>
@@ -27,8 +27,8 @@
 
 <!-- mobile -->
 <div class="md:hidden two-col-section custom-container py-[50px]">
-    <div class="flex space-between gap-[50px]">
-        <div class="w-[100%]">
+    <div class="gsap-container flex space-between gap-[50px]">
+        <div class="gsap-fade-up w-[100%]">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[18px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>

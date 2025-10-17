@@ -3,8 +3,8 @@
         <?php while ( have_rows('hero_section') ): the_row(); ?>
 
             <div class="flex space-between h-full w-full relative y-thumbnail">
-                <div class="custom-container py-[100px] mx-auto z-[2]">
-                    <div class="w-[100%] md:w-[70%] flex flex-col justify-center h-[100%]">
+                <div class="gsap-container custom-container py-[100px] mx-auto z-[2]">
+                    <div class="gsap-fade-up w-[100%] md:w-[70%] flex flex-col justify-center h-[100%]">
                         <h1 class="text-[32px] md:text-[42px] font-[700] pb-[20px] text-[#ffc200]"><?php the_sub_field('hero_title'); ?></h1>
                         <p class="text-[16px] md:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                     </div>

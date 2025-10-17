@@ -2,8 +2,8 @@
     $group = get_field('mission_section');
 ?>
 <div class="mission-section custom-container py-[50px]">
-    <div class="flex space-between">
-        <div class="">
+    <div class="gsap-container flex space-between">
+        <div class="gsap-fade-up">
             <?php if (!empty($group['title'])) : ?>
                 <h2 class="text-[32px] md:text-[42px] text-[#1F773A] font-[700]"><?php echo esc_html($group['title']) ?></h2>
             <?php endif; ?>

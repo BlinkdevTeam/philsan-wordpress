@@ -2,17 +2,17 @@
     <?php if ( have_rows('organization_repeater') ): ?>
         <?php while ( have_rows('organization_repeater') ): the_row(); ?>
             
-            <div class="flex flex-col items-center justify-center">
-                <h2 class="text-[32px] md:text-[42px] text-[#1F773A] font-[700] text-center">
+            <div class="gsap-container flex flex-col items-center justify-center">
+                <h2 class="gsap-fade-up text-[32px] md:text-[42px] text-[#1F773A] font-[700] text-center">
                     <?php the_sub_field("title") ?>
                 </h2>
-                <p class="text-[18px] md:text-[24px] text-center font-[600]">
+                <p class="gsap-fade-up text-[18px] md:text-[24px] text-center font-[600]">
                     <?php the_sub_field("sub") ?>
                 </p>
             </div>
 
             <?php if ( have_rows('member') ): ?> 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[5px] md:gap-[50px] mt-8">
+                <div class="gsap-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[5px] md:gap-[50px] mt-8">
                     <?php 
                         // define your pool of background colors
                         $colors = [
@@ -31,7 +31,7 @@
                             // pick a random color from the list
                             $bg_color = $colors[array_rand($colors)];
                         ?>
-                        <div class="flex gap-[20px] items-start justify-start">
+                        <div class="gsap-fade-up flex gap-[20px] items-start justify-start">
                             <div class="relative w-[100px] xl:w-[150px] h-[100px] xl:h-[150px] rounded-full overflow-hidden" style="background-color: <?php echo $bg_color; ?>;">
                                 <img class="w-full h-full object-cover absolute top-[10px]" 
                                     src="<?php echo esc_url($image_url); ?>" 
