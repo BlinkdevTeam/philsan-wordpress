@@ -3514,6 +3514,14 @@ p, a, li {
 }
 
 @media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:h-\[150px\] {
     height: 150px;
   }
