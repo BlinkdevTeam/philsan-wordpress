@@ -7,8 +7,8 @@
 ?>
 <div class="bg-[#F3F3F3]">
     <div class="custom-container mx-auto news-section pt-[100px] pb-[50px]">
-        <div>
-            <div class="flex flex-col md:flex-row justify-between items-start">
+        <div class="gsap-container">
+            <div class="gsap-fade-up flex flex-col md:flex-row justify-between items-start">
                     <div>
                         <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Latest News</h2>
                         <p class="text-[16px] md:text-[22px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
@@ -19,7 +19,7 @@
             </div>
 
             <!-- desktop -->
-            <div class="hidden lg:flex gap-[50px] pt-[50px]">
+            <div class="gsap-fade-up  hidden lg:flex gap-[50px] pt-[50px]">
                 <?php if ($news->have_posts()) : ?>
                     <?php while ($news->have_posts()) : $news->the_post(); ?>
                         <?php
@@ -71,7 +71,7 @@
             </div>
 
             <!-- mobile -->
-            <div class="block lg:hidden gap-[50px] pt-[20px]">
+            <div class="gsap-fade-up block lg:hidden gap-[50px] pt-[20px]">
                 <?php if ($news->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">

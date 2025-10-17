@@ -4,8 +4,8 @@
 <!-- desktop -->
 <div class="hidden lg:block bg-[#ffffff]">
     <div class="mission-section pt-[100px] pb-[50px]">
-        <div class="flex custom-container mx-auto gap-[50px]">
-            <div class="w-[40%]">
+        <div class="gsap-container flex custom-container mx-auto gap-[50px]">
+            <div class="gsap-fade-up w-[40%]">
                 <?php if (!empty($group['title'])) : ?>
                     <h2 class="text-[18px] text-[#1F773A] font-[800]"><?php echo esc_html($group['title']) ?></h2>
                 <?php endif; ?>
@@ -20,7 +20,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="w-[60%]">
+            <div class="gsap-fade-up w-[60%]">
                 <div class="w-[100%] image-container">
                     <div class="h-[200px] md:h-[320px] lg:h-[450px] rounded-2xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="<?php echo esc_html($group['image']) ?>" alt="<?php echo esc_attr($alt); ?>">

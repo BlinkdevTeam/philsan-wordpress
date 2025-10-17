@@ -7,7 +7,7 @@
 ?>
 <div class="bg-[#ffffff]">
     <div class="custom-container mx-auto event-section pt-[50px] md:pt-[100px] pb-[50px]">
-        <div>
+        <div class="gsap-container">
             <div class="flex flex-col md:flex-row justify-between items-start">
                 <div>
                     <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
@@ -19,7 +19,7 @@
             </div>
 
             <!-- desktop  -->
-            <div class="hidden lg:flex flex-col gap-[50px] pt-[50px]">
+            <div class="gsap-fade-up hidden lg:flex flex-col gap-[50px] pt-[50px]">
                 <?php if ($events->have_posts()) : ?>
                     <?php $count = 0; ?>
                     
@@ -112,7 +112,7 @@
             </div>
 
             <!-- mobile -->
-            <div class="block  pt-[20px] lg:hidden">
+            <div class="gsap-fade-up block  pt-[20px] lg:hidden">
                 <?php if ($events->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
