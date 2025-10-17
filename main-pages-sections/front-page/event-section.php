@@ -7,23 +7,23 @@
 ?>
 <div class="bg-[#ffffff]">
     <div class="custom-container mx-auto event-section pt-[50px] md:pt-[100px] pb-[50px]">
-        <div class="gsap-container">
-            <div class="flex flex-col md:flex-row justify-between items-start">
-                <div>
+        <div class="">
+            <div class="gsap-container flex flex-col md:flex-row justify-between items-start">
+                <div class="gsap-fade-up">
                     <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
                     <p class="text-[16px] md:text-[22px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                 </div>
-                 <div class="flex pt-[10px]">
+                 <div class="gsap-fade-up flex pt-[10px]">
                     <?php echo theme_button("See More", "/"); ?>
                 </div>
             </div>
 
             <!-- desktop  -->
-            <div class="gsap-fade-up hidden lg:flex flex-col gap-[50px] pt-[50px]">
+            <div class="gsap-container hidden lg:flex flex-col gap-[50px] pt-[50px]">
                 <?php if ($events->have_posts()) : ?>
                     <?php $count = 0; ?>
                     
-                    <div class="flex gap-[50px]"> <!-- First row -->
+                    <div class="gsap-fade-up flex gap-[50px]"> <!-- First row -->
                     <?php while ($events->have_posts()) : $events->the_post(); ?>
                         <?php
                             $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -112,9 +112,9 @@
             </div>
 
             <!-- mobile -->
-            <div class="gsap-fade-up block  pt-[20px] lg:hidden">
+            <div class="gsap-container block  pt-[20px] lg:hidden">
                 <?php if ($events->have_posts()) : ?>
-                    <div class="swiper mobile-swiper">
+                    <div class="gsap-fade-up swiper mobile-swiper">
                         <div class="swiper-wrapper">
                             <?php while ($events->have_posts()) : $events->the_post(); ?>
                                 <?php
