@@ -19,7 +19,7 @@
             </div>
 
             <!-- desktop -->
-            <div class="hidden md:flex gap-[50px] pt-[50px]">
+            <div class="hidden lg:flex gap-[50px] pt-[50px]">
                 <?php if ($news->have_posts()) : ?>
                     <?php while ($news->have_posts()) : $news->the_post(); ?>
                         <?php
@@ -71,7 +71,7 @@
             </div>
 
             <!-- mobile -->
-            <div class="block md:hidden gap-[50px] pt-[20px]">
+            <div class="block lg:hidden gap-[50px] pt-[20px]">
                 <?php if ($news->have_posts()) : ?>
                     <div class="swiper mobile-swiper">
                         <div class="swiper-wrapper">
