@@ -1,12 +1,14 @@
 <div class="history-section custom-container xl:w-[70%] mx-auto px-6 py-12">
-    <h2 class="text-[32px] md:text-[42px] font-bold text-[#1F773A] text-center">Our History</h2>
-    <p class="text-[16px] md:text-[18px] font-[600] text-[#1F773A] mb-8 text-center">( a glance at the past )</p>
+    <div class="gsap-container flex flex-col items-center justify-center">
+        <h2 class="gsap-fade-up text-[32px] md:text-[42px] font-bold text-[#1F773A] text-center">Our History</h2>
+        <p class="gsap-fade-up text-[16px] md:text-[18px] font-[600] text-[#1F773A] mb-8 text-center">( a glance at the past )</p>
+    </div>
 
-    <div class="flex flex-col gap-[40px] md:gap-[80px] md:py-[50px]">
+    <div class="gsap-container flex flex-col gap-[40px] md:gap-[80px] md:py-[50px]">
         <?php if ( have_rows('history_repeater') ): ?>
             <?php while ( have_rows('history_repeater') ): the_row(); ?>
                 
-                <div>
+                <div class="gsap-fade-up">
                     <h2 class="text-[32px] md:text-[42px] font-[700] text-[#1F773A] mb-4 text-center">
                         <?php the_sub_field("year"); // e.g. "1988" ?>
                     </h2>
