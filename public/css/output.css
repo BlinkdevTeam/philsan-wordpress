@@ -2808,6 +2808,11 @@ p, a, li {
 
 /* Contact Form WP_FORMS */
 
+.wpforms-container {
+  margin: 0px !important;
+  width: 100% !important;
+}
+
 /* #wpforms-760-field_2-container,
 #wpforms-760-field_7-container {
   display: inline-block;
@@ -2817,11 +2822,6 @@ p, a, li {
 
 #wpforms-760-field_2-container {
   margin-right: 3%
-}
-
-.wpforms-container {
-  margin: 0px !important;
-  width: 50% !important;
 }
 
 .wpforms-field {
