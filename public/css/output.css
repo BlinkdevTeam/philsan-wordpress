@@ -3416,6 +3416,10 @@ p, a, li {
     width: 100%;
   }
 
+  .lg\:w-\[720px\] {
+    width: 720px;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
