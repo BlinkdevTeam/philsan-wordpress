@@ -121,7 +121,7 @@ p, a, li {
 
 /* Contact Form WP_FORMS */
 
-#wpforms-760-field_2-container,
+/* #wpforms-760-field_2-container,
 #wpforms-760-field_7-container {
   display: inline-block;
   width: 48%;
@@ -143,7 +143,7 @@ p, a, li {
 
 .wpforms-field > label {
   margin-bottom: 2px !important;
-}
+} */
 
 .wpforms-submit-container > button {
   background-color: #FFC200 !important;
