@@ -104,172 +104,190 @@ function philsan_swiper_init_script() {
     ?>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    dynamicBullets: true,
-                },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    1024: { slidesPerView: 1 }
-                }
-            });
-
-            new Swiper(".aboutSwiper", {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    dynamicBullets: true,
-                },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 4 }
-                }
-            });
-
-            new Swiper(".sponsorSwiper", {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    dynamicBullets: true,
-                },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 6 }
-                }
-            });
-
-            new Swiper(".featuredEvents", {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    dynamicBullets: true,
-                },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    1024: { slidesPerView: 1 }
-                }
-            });
-
-            new Swiper(".featuredNews", {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                speed: 700, // smooth transition time in ms
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-            });
-
-            new Swiper(".singleFeaturedNewsMobile", {
-                slidesPerView: 2,
-                spaceBetween: 30,
-                loop: true,
-                speed: 700, // smooth transition time in ms
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-                 breakpoints: {
-                    640: { slidesPerView: 2 },
-                    768: { slidesPerView: 3 }
-                }
-            });
-            
-            new Swiper(".singleFeaturedNews", {
-                direction: "vertical",
-                slidesPerView: 2,
-                spaceBetween: 30,
-                loop: true,
-                speed: 700, // smooth transition time in ms
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: false,
-                },
-                // autoplay: false
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-                // Important for dynamic content and images
-                observer: true,
-                observeParents: true,
-
-                // Keep interactions predictable
-                simulateTouch: true,            // change to false to disable drag
-                preventInteractionOnTransition: true,
-
-                on: {
-                    imagesReady: function () {
-                    // ensure Swiper recalculates after images load
-                    this.update();
+            if (document.querySelector(".mySwiper")) {
+                new Swiper(".mySwiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
                     },
-                    resize: function () {
-                    this.update();
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 1 },
+                        1024: { slidesPerView: 1 }
                     }
-                }
+                });
+            }
 
-            });
+
+
+            if (document.querySelector(".aboutSwiper")) {
+                new Swiper(".aboutSwiper", {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 4 }
+                    }
+                });
+            }
+
+            if (document.querySelector(".sponsorSwiper")) {
+                new Swiper(".sponsorSwiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 6 }
+                    }
+                });
+            }
             
-            new Swiper(".mobile-swiper", {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    dynamicBullets: true,
-                },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 1 }
-                }
-            });
+            if (document.querySelector(".featuredEvents")) {
+                new Swiper(".featuredEvents", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 1 },
+                        1024: { slidesPerView: 1 }
+                    }
+                });
+            }
+
+            if (document.querySelector(".featuredNews")) {
+                new Swiper(".featuredNews", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    speed: 700, // smooth transition time in ms
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                });
+            }
+
+            if (document.querySelector(".singleFeaturedNewsMobile")) {
+                new Swiper(".singleFeaturedNewsMobile", {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    loop: true,
+                    speed: 700, // smooth transition time in ms
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 }
+                    }
+                });
+            }
+            
+            if (document.querySelector(".singleFeaturedNews")) {
+                new Swiper(".singleFeaturedNews", {
+                    direction: "vertical",
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    loop: true,
+                    speed: 700, // smooth transition time in ms
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
+                    // autoplay: false
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    // Important for dynamic content and images
+                    observer: true,
+                    observeParents: true,
+
+                    // Keep interactions predictable
+                    simulateTouch: true,            // change to false to disable drag
+                    preventInteractionOnTransition: true,
+
+                    on: {
+                        imagesReady: function () {
+                        // ensure Swiper recalculates after images load
+                        this.update();
+                        },
+                        resize: function () {
+                        this.update();
+                        }
+                    }
+
+                });
+            }
+            
+            if (document.querySelector(".mobile-swiper")) {
+                new Swiper(".mobile-swiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 1 }
+                    }
+                });
+            }
         });
     </script>
     <?php
