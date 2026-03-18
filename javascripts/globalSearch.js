@@ -136,7 +136,7 @@ class GlobalSearch {
     // ── Renderers ─────────────────────────────────────────────────────────────
     renderEmpty() {
         this.$results.innerHTML = '';
-        this.$footer.classList.add('hidden');
+        this.$footer.classList.remove('is-visible');
         this.liveResults = [];
     }
 
@@ -146,7 +146,7 @@ class GlobalSearch {
                 <div class="philsan-spinner"></div>
                 <span>Searching…</span>
             </div>`;
-        this.$footer.classList.add('hidden');
+        this.$footer.classList.remove('is-visible');
     }
 
     renderError() {
@@ -159,7 +159,7 @@ class GlobalSearch {
                 </svg>
                 <span>Something went wrong. Please try again.</span>
             </div>`;
-        this.$footer.classList.add('hidden');
+        this.$footer.classList.remove('is-visible');
     }
 
     renderResults(results, total, kw) {
@@ -172,16 +172,14 @@ class GlobalSearch {
                     </svg>
                     <span>No results for <strong>${this.esc(kw)}</strong></span>
                 </div>`;
-            this.$footer.classList.add('hidden');
+            this.$footer.classList.remove('is-visible');
             return;
         }
 
         this.$results.innerHTML = results.map((r, i) => `
             <div class="philsan-result-item" role="option" tabindex="-1"
                  data-url="${this.esc(r.url)}" data-index="${i}">
-                <div>
-                    <span class="philsan-result-type">${this.esc(r.subtype)}</span>
-                </div>
+                <div><span class="philsan-result-type">${this.esc(r.subtype)}</span></div>
                 <div class="philsan-result-title">${this.esc(r.title)}</div>
                 <div class="philsan-result-url">${this.esc(r.url)}</div>
             </div>`
@@ -189,7 +187,7 @@ class GlobalSearch {
 
         this.$count.textContent = `Showing ${results.length} of ${total} result${total !== 1 ? 's' : ''}`;
         this.$allLink.href = this.SEARCH_PAGE + encodeURIComponent(kw);
-        this.$footer.classList.remove('hidden');
+        this.$footer.classList.add('is-visible');
         this.activeIndex = -1;
     }
 

@@ -83,17 +83,9 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
         </div>
 
         <!-- Search Icon (desktop + mobile) -->
-        <button
-          id="philsan-search-trigger"
-          aria-label="Open search"
-          class="flex items-center justify-center w-9 h-9 rounded-full hover:bg-green-50 transition-colors duration-200 group"
-        >
-          <svg
-            width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="text-gray-600 group-hover:text-[#096936] transition-colors duration-200"
-          >
+        <button id="philsan-search-trigger" aria-label="Open search" class="philsan-search-trigger-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="7"/>
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
@@ -141,25 +133,18 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
 
 
   <!-- ═══════════════════════════════════════════════════ SEARCH OVERLAY PANEL -->
-  <div
-    id="philsan-search-panel"
-    aria-hidden="true"
-    class="fixed inset-0 z-[99999] pointer-events-none opacity-0 transition-opacity duration-200"
-  >
+  <div id="philsan-search-panel" aria-hidden="true">
+
     <!-- Backdrop -->
-    <div id="philsan-search-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div id="philsan-search-backdrop"></div>
 
     <!-- Box -->
-    <div class="absolute top-[72px] left-1/2 -translate-x-1/2 -translate-y-3
-                w-[min(680px,calc(100vw-32px))]
-                bg-white rounded-2xl shadow-2xl overflow-hidden
-                transition-transform duration-[220ms] ease-[cubic-bezier(.34,1.56,.64,1)]
-                philsan-search-box">
+    <div class="philsan-search-box">
 
       <!-- Input row -->
-      <div class="flex items-center gap-3 px-5 py-4 border-b border-gray-100">
-        <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <div class="philsan-search-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
         <input
@@ -169,13 +154,8 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
           autocomplete="off"
           spellcheck="false"
           aria-label="Search"
-          class="flex-1 bg-transparent text-gray-800 text-base outline-none placeholder-gray-300 font-[inherit]"
         />
-        <button
-          id="philsan-search-close"
-          aria-label="Close search"
-          class="text-gray-400 hover:text-gray-700 transition-colors p-1"
-        >
+        <button id="philsan-search-close" aria-label="Close search">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/>
           </svg>
@@ -183,20 +163,12 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
       </div>
 
       <!-- Live results -->
-      <div
-        id="philsan-search-results"
-        role="listbox"
-        aria-live="polite"
-        class="max-h-[400px] overflow-y-auto py-2"
-      ></div>
+      <div id="philsan-search-results" role="listbox" aria-live="polite"></div>
 
       <!-- Footer -->
-      <div id="philsan-search-footer" class="hidden flex items-center justify-between px-5 py-3 border-t border-gray-100 bg-gray-50">
-        <span id="philsan-search-count" class="text-xs text-gray-400"></span>
-        <a id="philsan-search-all-link" href="#"
-           class="text-xs font-semibold text-[#096936] hover:text-[#07582c] transition-colors">
-          View all results →
-        </a>
+      <div id="philsan-search-footer">
+        <span id="philsan-search-count"></span>
+        <a id="philsan-search-all-link" href="#">View all results →</a>
       </div>
 
     </div><!-- /box -->
@@ -205,22 +177,108 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
 
   <!-- ═══════════════════════════════════════════════════════════ SEARCH STYLES -->
   <style>
-    /* Open state */
+    /* ── Trigger button ── */
+    .philsan-search-trigger-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 9999px;
+      padding: 0;
+      color: #4b5563;
+      transition: background .2s, color .2s;
+    }
+    .philsan-search-trigger-btn:hover {
+      background: #f0fdf4;
+      color: #096936;
+    }
+
+    /* ── Panel — hidden by default ── */
+    #philsan-search-panel {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+    }
     #philsan-search-panel.is-open {
-      pointer-events: auto;
       opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ── Backdrop ── */
+    #philsan-search-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Box ── */
+    .philsan-search-box {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-12px);
+      width: min(680px, calc(100vw - 32px));
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 24px 64px rgba(0,0,0,.18), 0 4px 16px rgba(0,0,0,.08);
+      overflow: hidden;
+      transition: transform .22s cubic-bezier(.34,1.56,.64,1);
     }
     #philsan-search-panel.is-open .philsan-search-box {
       transform: translateX(-50%) translateY(0);
     }
-    #philsan-search-panel:not(.is-open) .philsan-search-box {
-      transform: translateX(-50%) translateY(-12px);
+
+    /* ── Input row ── */
+    .philsan-search-input-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid #f0f0f0;
+      color: #9ca3af;
     }
+    #philsan-search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #1a1a1a;
+      background: transparent;
+      font-family: inherit;
+    }
+    #philsan-search-input::placeholder { color: #d1d5db; }
+    #philsan-search-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #9ca3af;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      transition: color .15s;
+    }
+    #philsan-search-close:hover { color: #374151; }
 
-    /* Body scroll lock */
-    body.philsan-search-open { overflow: hidden; }
+    /* ── Results ── */
+    #philsan-search-results {
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 8px 0;
+    }
+    #philsan-search-results::-webkit-scrollbar { width: 5px; }
+    #philsan-search-results::-webkit-scrollbar-track { background: transparent; }
+    #philsan-search-results::-webkit-scrollbar-thumb { background: #ddd; border-radius: 99px; }
 
-    /* Result item */
+    /* ── Result item ── */
     .philsan-result-item {
       padding: 12px 20px;
       cursor: pointer;
@@ -244,28 +302,38 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       margin-bottom: 3px;
     }
-    .philsan-result-excerpt {
-      font-size: 12.5px; color: #666; line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
     .philsan-result-url {
       font-size: 11px; color: #bbb; margin-top: 3px;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
-    mark.philsan-hl {
-      background: #fef08a; color: #78350f;
-      border-radius: 2px; padding: 0 2px;
-    }
 
-    /* States */
+    /* ── Footer ── */
+    #philsan-search-footer {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-top: 1px solid #f0f0f0;
+      background: #fafafa;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    #philsan-search-footer.is-visible { display: flex; }
+    #philsan-search-all-link {
+      color: #096936; font-weight: 600;
+      text-decoration: none; font-size: 12px;
+      transition: color .15s;
+    }
+    #philsan-search-all-link:hover { color: #07582c; }
+
+    /* ── States (loading / empty / error) ── */
     .philsan-state {
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       gap: 10px; padding: 40px 20px;
-      color: #aaa; font-size: 14px; text-align: center;
+      color: #9ca3af; font-size: 14px; text-align: center;
     }
+    .philsan-state--error { color: #ef4444; }
     .philsan-spinner {
       width: 22px; height: 22px;
       border: 2.5px solid #e0e0e0;
@@ -275,196 +343,17 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
     }
     @keyframes philsan-spin { to { transform: rotate(360deg); } }
 
-    /* Scrollbar */
-    #philsan-search-results::-webkit-scrollbar { width: 5px; }
-    #philsan-search-results::-webkit-scrollbar-track { background: transparent; }
-    #philsan-search-results::-webkit-scrollbar-thumb { background: #ddd; border-radius: 99px; }
+    /* ── Body scroll lock ── */
+    body.philsan-search-open { overflow: hidden; }
 
-    /* Mobile: full-width, top flush */
+    /* ── Mobile ── */
     @media (max-width: 640px) {
       .philsan-search-box {
-        top: 0 !important; border-radius: 0 0 16px 16px;
-        width: 100vw !important;
+        top: 0;
+        border-radius: 0 0 16px 16px;
+        width: 100vw;
       }
     }
   </style>
-
-
-  <!-- ═══════════════════════════════════════════════════════════ SEARCH SCRIPT -->
-  <script>
-  (function () {
-    const AJAX_URL    = '<?php echo esc_js(admin_url("admin-ajax.php")); ?>';
-    const SEARCH_PAGE = '<?php echo esc_js(home_url("/?s=")); ?>';
-    const NONCE       = '<?php echo esc_js(wp_create_nonce("philsan_search_nonce")); ?>';
-
-    const $trigger  = document.getElementById('philsan-search-trigger');
-    const $panel    = document.getElementById('philsan-search-panel');
-    const $backdrop = document.getElementById('philsan-search-backdrop');
-    const $input    = document.getElementById('philsan-search-input');
-    const $close    = document.getElementById('philsan-search-close');
-    const $results  = document.getElementById('philsan-search-results');
-    const $footer   = document.getElementById('philsan-search-footer');
-    const $count    = document.getElementById('philsan-search-count');
-    const $allLink  = document.getElementById('philsan-search-all-link');
-
-    let timer        = null;
-    let activeIndex  = -1;
-    let liveResults  = [];
-
-    // ── Open / Close ──────────────────────────────────────────────────────────
-    function openSearch() {
-      $panel.classList.add('is-open');
-      $panel.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('philsan-search-open');
-      setTimeout(() => $input.focus(), 80);
-    }
-
-    function closeSearch() {
-      $panel.classList.remove('is-open');
-      $panel.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('philsan-search-open');
-      setTimeout(() => { $input.value = ''; renderEmpty(); }, 250);
-    }
-
-    $trigger.addEventListener('click', openSearch);
-    $close.addEventListener('click', closeSearch);
-    $backdrop.addEventListener('click', closeSearch);
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
-
-    // ── Typing ────────────────────────────────────────────────────────────────
-    $input.addEventListener('input', function () {
-      const kw = this.value.trim();
-      activeIndex = -1;
-      clearTimeout(timer);
-      if (kw.length < 2) { renderEmpty(); return; }
-      renderLoading();
-      timer = setTimeout(() => doSearch(kw), 320);
-    });
-
-    // ── Keyboard nav ──────────────────────────────────────────────────────────
-    $input.addEventListener('keydown', function (e) {
-      const items = $results.querySelectorAll('.philsan-result-item');
-      if (!items.length) return;
-      if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        activeIndex = Math.min(activeIndex + 1, items.length - 1);
-        updateActive(items);
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        activeIndex = Math.max(activeIndex - 1, 0);
-        updateActive(items);
-      } else if (e.key === 'Enter') {
-        if (activeIndex >= 0 && liveResults[activeIndex]) {
-          window.location.href = liveResults[activeIndex].url;
-        } else {
-          goFull(this.value.trim());
-        }
-      }
-    });
-
-    $allLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      goFull($input.value.trim());
-    });
-
-    $results.addEventListener('click', function (e) {
-      const item = e.target.closest('.philsan-result-item');
-      if (item) window.location.href = item.dataset.url;
-    });
-
-    function goFull(kw) {
-      if (kw) window.location.href = SEARCH_PAGE + encodeURIComponent(kw);
-    }
-
-    // ── AJAX ──────────────────────────────────────────────────────────────────
-    function doSearch(kw) {
-      const fd = new FormData();
-      fd.append('action',  'philsan_live_search');
-      fd.append('keyword', kw);
-      fd.append('nonce',   NONCE);
-
-      fetch(AJAX_URL, { method: 'POST', body: fd })
-        .then(r => r.json())
-        .then(res => {
-          if (res.success) {
-            liveResults = res.data.results;
-            renderResults(res.data.results, res.data.total, kw);
-          } else { renderError(); }
-        })
-        .catch(renderError);
-    }
-
-    // ── Renderers ─────────────────────────────────────────────────────────────
-    function renderEmpty() {
-      $results.innerHTML = '';
-      $footer.classList.add('hidden');
-      liveResults = [];
-    }
-
-    function renderLoading() {
-      $results.innerHTML = `
-        <div class="philsan-state">
-          <div class="philsan-spinner"></div>
-          <span>Searching…</span>
-        </div>`;
-      $footer.classList.add('hidden');
-    }
-
-    function renderError() {
-      $results.innerHTML = `
-        <div class="philsan-state" style="color:#e55">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-          <span>Something went wrong. Please try again.</span>
-        </div>`;
-      $footer.classList.add('hidden');
-    }
-
-    function renderResults(results, total, kw) {
-      if (!results.length) {
-        $results.innerHTML = `
-          <div class="philsan-state">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-            <span>No results for <strong>${esc(kw)}</strong></span>
-          </div>`;
-        $footer.classList.add('hidden');
-        return;
-      }
-
-      $results.innerHTML = results.map((r, i) => `
-        <div class="philsan-result-item" role="option" tabindex="-1"
-             data-url="${esc(r.url)}" data-index="${i}">
-          <div><span class="philsan-result-type">${esc(r.type)}</span></div>
-          <div class="philsan-result-title">${esc(r.title)}</div>
-          <div class="philsan-result-excerpt">${r.excerpt}</div>
-          <div class="philsan-result-url">${esc(r.url)}</div>
-        </div>`
-      ).join('');
-
-      $count.textContent = `Showing ${results.length} of ${total} result${total !== 1 ? 's' : ''}`;
-      $allLink.href = SEARCH_PAGE + encodeURIComponent(kw);
-      $footer.classList.remove('hidden');
-      activeIndex = -1;
-    }
-
-    function updateActive(items) {
-      items.forEach(el => el.classList.remove('is-active'));
-      if (activeIndex >= 0) {
-        items[activeIndex].classList.add('is-active');
-        items[activeIndex].scrollIntoView({ block: 'nearest' });
-      }
-    }
-
-    function esc(s) {
-      return String(s)
-        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-  }());
-  </script>
 
 <?php endif; ?>
