@@ -49,6 +49,7 @@ add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
 
 //INCLUDES 
 include(get_stylesheet_directory() . '/functions/news_event_api.php');
+include(get_stylesheet_directory() . '/functions/news-search.php');
 
 // Register navigation menus
 function philsan_register_menus() {
