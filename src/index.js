@@ -7,6 +7,8 @@ import GlobalSearch from "../javascripts/globalSearch";
 import FaqAcc from "../javascripts/faqAccordion";
 import MobileNavBehaviour from "../javascripts/mobileNavBehaviour";
 import GsapScrollAnimation from "../javascripts/gsap";
+import NewsSearch from "../javascripts/newsSearch";
+
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JS Running!!!")
@@ -20,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (document.querySelector(".speaker-item")) {
         annualSpeakerModal.handleModal();
+    }
+
+    // inside DOMContentLoaded:
+    if (document.getElementById('news-event-search-input')) {
+        new NewsSearch();
     }
 
     if (document.getElementById("philsan-search-trigger")) {

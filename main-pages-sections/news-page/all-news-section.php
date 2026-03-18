@@ -1,7 +1,7 @@
 <div class="py-[50px]">
     <div class="flex flex-col gap-[50px] pt-[50px]">
         <?php if ($all_news->have_posts()) : ?>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                 <?php while ($all_news->have_posts()) : $all_news->the_post(); ?>
                     <?php
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -15,9 +15,9 @@
 
                         $title_limit = 60;
                         $desc_limit = 60;
-                        $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "..."); // Trim it properly
+                        $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "...");
                         $title_trimmed = mb_strimwidth($description, 0, $title_limit, "...");
-                        // Reformat the date
+
                         if ($date) {
                             $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
                         } else {
@@ -45,7 +45,6 @@
                         </div>
                     </div>
 
-
                     <!-- MOBILE -->
                     <div class="md:hidden">
                         <div class="pt-[20px]">
@@ -67,22 +66,24 @@
                             <?php endif; ?>
                         </div>
                     </div>
+
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
             </div>
         <?php endif; ?>
     </div>
-    <div class="flex justify-center space-x-2 mt-6">
-    <?php
-        echo paginate_links(array(
-            'total'   => $all_news->max_num_pages,
-            'current' => $paged,
-            'prev_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">«</span>',
-            'next_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">»</span>',
-            'before_page_number' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">',
-            'after_page_number'  => '</span>',
-        ));
+
+    <!-- Pagination — hidden during search -->
+    <div id="news-pagination" class="flex justify-center space-x-2 mt-6">
+        <?php
+            echo paginate_links(array(
+                'total'   => $all_news->max_num_pages,
+                'current' => $paged,
+                'prev_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">«</span>',
+                'next_text' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">»</span>',
+                'before_page_number' => '<span class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">',
+                'after_page_number'  => '</span>',
+            ));
         ?>
     </div>
 </div>
-

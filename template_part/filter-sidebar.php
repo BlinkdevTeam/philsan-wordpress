@@ -13,7 +13,7 @@ $filter_group = array(
     <div style="display: flex; align-items: center; justify-content: space-between;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <div style="width: 4px; height: 24px; background: #096936; border-radius: 99px;"></div>
-        <h2 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0;">Filter News</h2>
+        <h2 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0;">Filter</h2>
       </div>
       <button id="closeFilter" style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: none; background: #f5f5f5; border-radius: 99px; cursor: pointer; color: #666; transition: background .2s, color .2s;" onmouseover="this.style.background='#fee2e2';this.style.color='#ef4444'" onmouseout="this.style.background='#f5f5f5';this.style.color='#666'">
         <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
