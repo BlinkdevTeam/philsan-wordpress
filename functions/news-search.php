@@ -13,19 +13,14 @@ function news_search_handler() {
 
     $keyword = isset($_POST['keyword']) ? sanitize_text_field($_POST['keyword']) : '';
 
-    $args = array(
+    $all_news = new WP_Query(array(
         'post_type'      => 'news',
         'post_status'    => 'publish',
         'posts_per_page' => 12,
         'orderby'        => 'date',
         'order'          => 'DESC',
-    );
-
-    if (!empty($keyword)) {
-        $args['s'] = $keyword;
-    }
-
-    $all_news = new WP_Query($args);
+        's'              => $keyword,
+    ));
 
     ob_start();
 
@@ -33,22 +28,25 @@ function news_search_handler() {
         while ($all_news->have_posts()) : $all_news->the_post();
 
             $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-            $description        = wp_strip_all_tags(get_the_content());
-            $date               = get_field('date');
+            $description        = get_the_content();
+            $description        = wp_strip_all_tags($description);
+            $date               = get_field("date");
             $categories         = get_the_terms(get_the_ID(), 'category-filters');
             $title              = get_the_title();
-            $button_link        = get_field('button_link');
+            $button_link        = get_field("button_link");
             $permalink          = get_permalink();
 
-            $desc_trimmed  = mb_strimwidth($description, 0, 60, '...');
-            $title_trimmed = mb_strimwidth($description, 0, 60, '...');
+            $title_limit  = 60;
+            $desc_limit   = 60;
+            $desc_trimmed  = mb_strimwidth($description, 0, $desc_limit, "...");
+            $title_trimmed = mb_strimwidth($description, 0, $title_limit, "...");
 
-            $formatted_date = '';
             if ($date) {
-                $dt = DateTime::createFromFormat('m/d/Y', $date);
-                if ($dt) $formatted_date = $dt->format('F j, Y');
+                $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+            } else {
+                $formatted_date = '';
             }
-            ?>
+        ?>
 
             <!-- DESKTOP -->
             <div class="hidden md:block">
@@ -62,10 +60,10 @@ function news_search_handler() {
                     <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                 </div>
                 <div class="flex pt-[30px]">
-                    <?php if ($button_link) : ?>
-                        <?php echo theme_button('View More', $button_link); ?>
+                    <?php if($button_link) : ?>
+                        <?php echo theme_button("View More", $button_link); ?>
                     <?php else : ?>
-                        <?php echo theme_button('View More', $permalink); ?>
+                        <?php echo theme_button("View More", $permalink); ?>
                     <?php endif; ?>
                 </div>
             </div>
@@ -84,10 +82,10 @@ function news_search_handler() {
                     <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                 </div>
                 <div class="flex pt-[30px]">
-                    <?php if ($button_link) : ?>
-                        <?php echo theme_button('View More', $button_link); ?>
+                    <?php if($button_link) : ?>
+                        <?php echo theme_button("View More", $button_link); ?>
                     <?php else : ?>
-                        <?php echo theme_button('View More', $permalink); ?>
+                        <?php echo theme_button("View More", $permalink); ?>
                     <?php endif; ?>
                 </div>
             </div>
@@ -102,18 +100,17 @@ function news_search_handler() {
                 <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
             <p style="font-size: 15px; font-weight: 600; color: #374151;">
-                No results found<?php echo $keyword ? ' for "' . esc_html($keyword) . '"' : ''; ?>
+                No results found for "<?php echo esc_html($keyword); ?>"
             </p>
             <p style="font-size: 13px;">Try a different keyword</p>
         </div>
     <?php endif;
 
     $html = ob_get_clean();
-
     wp_send_json_success(['html' => $html]);
 }
 
-// Expose nonce to JS via the already-enqueued react-modal handle
+// Expose nonce to JS
 add_action('wp_enqueue_scripts', function () {
     wp_localize_script('react-modal', 'NewsSearchData', [
         'ajax_url' => admin_url('admin-ajax.php'),
