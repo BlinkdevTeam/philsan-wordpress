@@ -64,6 +64,7 @@ class NewsEventSearch {
     }
 
     async handleSearch() {
+        if (!this.$grid) return;
         const keyword = this.searchInput ? this.searchInput.value.trim() : "";
 
         // Collect taxonomy filters
