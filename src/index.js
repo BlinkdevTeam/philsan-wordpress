@@ -3,6 +3,7 @@ import InfomercialModal from "../javascripts/informecialModal";
 import SidebarFilter from "../javascripts/sidebarFilter";
 import NewsEventSearch from "../javascripts/newsEventSearch";
 import HeaderScrollBehaviour from "../javascripts/headerScrollbehaviour";
+import GlobalSearch from "../javascripts/globalSearch";
 import FaqAcc from "../javascripts/faqAccordion";
 import MobileNavBehaviour from "../javascripts/mobileNavBehaviour";
 import GsapScrollAnimation from "../javascripts/gsap";
@@ -19,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (document.querySelector(".speaker-item")) {
         annualSpeakerModal.handleModal();
+    }
+
+    if (document.getElementById("philsan-search-trigger")) {
+        new GlobalSearch();
     }
 
     if(document.querySelector(".with-filters")) {
