@@ -11,16 +11,52 @@ add_action('wp_ajax_nopriv_news_search', 'news_search_handler');
 function news_search_handler() {
     check_ajax_referer('news_search_nonce', 'nonce');
 
-    $keyword = isset($_POST['keyword']) ? sanitize_text_field($_POST['keyword']) : '';
+    $keyword    = isset($_POST['keyword'])    ? sanitize_text_field($_POST['keyword'])    : '';
+    $taxonomies = isset($_POST['taxonomies']) ? json_decode(stripslashes($_POST['taxonomies']), true) : array();
+    $meta       = isset($_POST['meta'])       ? json_decode(stripslashes($_POST['meta']), true)       : array();
 
-    $all_news = new WP_Query(array(
+    $args = array(
         'post_type'      => 'news',
         'post_status'    => 'publish',
         'posts_per_page' => 12,
         'orderby'        => 'date',
         'order'          => 'DESC',
-        's'              => $keyword,
-    ));
+    );
+
+    // Keyword search
+    if (!empty($keyword)) {
+        $args['s'] = $keyword;
+    }
+
+    // Taxonomy filters
+    if (!empty($taxonomies)) {
+        $tax_query = array('relation' => 'AND');
+        foreach ($taxonomies as $taxonomy => $terms) {
+            $tax_query[] = array(
+                'taxonomy' => sanitize_key($taxonomy),
+                'field'    => 'slug',
+                'terms'    => array_map('sanitize_text_field', $terms),
+            );
+        }
+        $args['tax_query'] = $tax_query;
+    }
+
+    // Meta filters (date)
+    if (!empty($meta)) {
+        $meta_query = array('relation' => 'OR');
+        foreach ($meta as $meta_key => $meta_values) {
+            foreach ($meta_values as $meta_value) {
+                $meta_query[] = array(
+                    'key'     => sanitize_key($meta_key),
+                    'value'   => sanitize_text_field($meta_value),
+                    'compare' => '=',
+                );
+            }
+        }
+        $args['meta_query'] = $meta_query;
+    }
+
+    $all_news = new WP_Query($args);
 
     ob_start();
 
@@ -36,10 +72,8 @@ function news_search_handler() {
             $button_link        = get_field("button_link");
             $permalink          = get_permalink();
 
-            $title_limit  = 60;
-            $desc_limit   = 60;
-            $desc_trimmed  = mb_strimwidth($description, 0, $desc_limit, "...");
-            $title_trimmed = mb_strimwidth($description, 0, $title_limit, "...");
+            $desc_trimmed  = mb_strimwidth($description, 0, 60, "...");
+            $title_trimmed = mb_strimwidth($description, 0, 60, "...");
 
             if ($date) {
                 $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
@@ -100,7 +134,7 @@ function news_search_handler() {
                 <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
             <p style="font-size: 15px; font-weight: 600; color: #374151;">
-                No results found for "<?php echo esc_html($keyword); ?>"
+                No results found<?php echo $keyword ? ' for "' . esc_html($keyword) . '"' : ''; ?>
             </p>
             <p style="font-size: 13px;">Try a different keyword</p>
         </div>
