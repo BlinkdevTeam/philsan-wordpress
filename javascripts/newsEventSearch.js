@@ -3,53 +3,54 @@ class NewsEventSearch {
         this.searchInput = document.getElementById("news-event-search-input");
         this.searchBtn   = document.getElementById("searchBtn");
         this.filterBtn   = document.getElementById("applyFilterBtn");
-        this.$grid       = document.getElementById("news-grid");
-        this.$pagination = document.getElementById("news-pagination");
 
-        // Store original grid so we can restore it when search is cleared
-        this.originalGrid       = this.$grid ? this.$grid.innerHTML : '';
-        this.originalPagination = this.$pagination ? this.$pagination.innerHTML : '';
+        // Detect which page we're on
+        this.isEventsPage = !!document.getElementById("events-grid");
+        this.isNewsPage   = !!document.getElementById("news-grid");
 
-        this.timer = null;
+        this.$grid       = document.getElementById(this.isEventsPage ? "events-grid" : "news-grid");
+        this.$gridMobile = document.getElementById("events-grid-mobile") || null;
+        this.$pagination = document.getElementById(this.isEventsPage ? "events-pagination" : "news-pagination");
+
+        if (!this.$grid) return;
+
+        this.originalGrid         = this.$grid.innerHTML;
+        this.originalGridMobile   = this.$gridMobile ? this.$gridMobile.innerHTML : '';
+        this.originalPagination   = this.$pagination ? this.$pagination.innerHTML : '';
+
+        this.ajaxAction = this.isEventsPage ? 'event_search' : 'news_search';
+        this.timer      = null;
 
         this.init();
     }
 
     init() {
-        // Search icon click
         if (this.searchBtn) {
             this.searchBtn.addEventListener("click", () => this.handleSearch());
         }
 
-        // Apply Filter button
         if (this.filterBtn) {
             this.filterBtn.addEventListener("click", () => {
-                // Close sidebar
                 const sidebar  = document.getElementById('sidebar');
                 const backdrop = document.getElementById('backdrop');
                 if (sidebar)  sidebar.classList.remove('is-open');
                 if (backdrop) backdrop.classList.add('hidden');
                 document.body.style.overflow = '';
-
                 this.handleSearch();
             });
         }
 
-        // Real-time debounced search as user types
         if (this.searchInput) {
             this.searchInput.addEventListener("input", () => {
                 clearTimeout(this.timer);
                 const kw = this.searchInput.value.trim();
-
                 if (kw === '' && !this.hasActiveFilters()) {
                     this.restoreOriginal();
                     return;
                 }
-
                 this.timer = setTimeout(() => this.handleSearch(), 400);
             });
 
-            // Enter key
             this.searchInput.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") {
                     clearTimeout(this.timer);
@@ -65,9 +66,9 @@ class NewsEventSearch {
 
     async handleSearch() {
         if (!this.$grid) return;
+
         const keyword = this.searchInput ? this.searchInput.value.trim() : "";
 
-        // Collect taxonomy filters
         const taxonomyFilters = {};
         document.querySelectorAll(".taxonomy-filter-checkbox:checked").forEach(cb => {
             const taxonomy = cb.dataset.taxonomy;
@@ -75,7 +76,6 @@ class NewsEventSearch {
             taxonomyFilters[taxonomy].push(cb.value);
         });
 
-        // Collect meta filters (date)
         const metaFilters = {};
         document.querySelectorAll(".date-filter-checkbox:checked").forEach(cb => {
             const metaKey = cb.dataset.meta;
@@ -83,7 +83,6 @@ class NewsEventSearch {
             metaFilters[metaKey].push(cb.value);
         });
 
-        // If nothing to search, restore
         if (!keyword && !this.hasActiveFilters()) {
             this.restoreOriginal();
             return;
@@ -91,31 +90,24 @@ class NewsEventSearch {
 
         this.renderLoading();
 
-        // Build query params
-        const params = new URLSearchParams();
-        if (keyword) params.append("keyword", keyword);
-        if (Object.keys(taxonomyFilters).length > 0) params.append("taxonomies", JSON.stringify(taxonomyFilters));
-        if (Object.keys(metaFilters).length > 0)     params.append("meta", JSON.stringify(metaFilters));
+        const fd = new FormData();
+        fd.append('action',     this.ajaxAction);
+        fd.append('keyword',    keyword);
+        fd.append('taxonomies', JSON.stringify(taxonomyFilters));
+        fd.append('meta',       JSON.stringify(metaFilters));
+        fd.append('nonce',      NewsSearchData.nonce);
 
         try {
-            // Use AJAX to get fully rendered card HTML from PHP
-            const fd = new FormData();
-            fd.append('action',     'news_search');
-            fd.append('keyword',    keyword);
-            fd.append('taxonomies', JSON.stringify(taxonomyFilters));
-            fd.append('meta',       JSON.stringify(metaFilters));
-            fd.append('nonce',      NewsSearchData.nonce);
-
             const res  = await fetch(NewsSearchData.ajax_url, { method: 'POST', body: fd });
             const data = await res.json();
 
             if (data.success) {
                 this.$grid.innerHTML = data.data.html;
+                if (this.$gridMobile) this.$gridMobile.innerHTML = data.data.html;
                 if (this.$pagination) this.$pagination.style.display = 'none';
             } else {
                 this.renderError();
             }
-
         } catch (error) {
             console.error("Search error:", error);
             this.renderError();
@@ -123,30 +115,33 @@ class NewsEventSearch {
     }
 
     renderLoading() {
-        if (!this.$grid) return;
-        this.$grid.innerHTML = `
+        const loadingHTML = `
             <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; gap: 14px; color: #9ca3af;">
                 <div style="width: 28px; height: 28px; border: 3px solid #e5e7eb; border-top-color: #096936; border-radius: 50%; animation: news-spin .7s linear infinite;"></div>
                 <span style="font-size: 14px;">Searching…</span>
                 <style>@keyframes news-spin { to { transform: rotate(360deg); } }</style>
             </div>
         `;
+        this.$grid.innerHTML = loadingHTML;
+        if (this.$gridMobile) this.$gridMobile.innerHTML = loadingHTML;
         if (this.$pagination) this.$pagination.style.display = 'none';
     }
 
     renderError() {
-        if (!this.$grid) return;
-        this.$grid.innerHTML = `
+        const errorHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: #9ca3af; font-size: 14px;">
                 Something went wrong. Please try again.
             </div>
         `;
+        this.$grid.innerHTML = errorHTML;
+        if (this.$gridMobile) this.$gridMobile.innerHTML = errorHTML;
     }
 
     restoreOriginal() {
-        if (this.$grid) this.$grid.innerHTML = this.originalGrid;
+        this.$grid.innerHTML = this.originalGrid;
+        if (this.$gridMobile) this.$gridMobile.innerHTML = this.originalGridMobile;
         if (this.$pagination) {
-            this.$pagination.innerHTML   = this.originalPagination;
+            this.$pagination.innerHTML     = this.originalPagination;
             this.$pagination.style.display = '';
         }
     }
