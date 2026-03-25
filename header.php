@@ -120,7 +120,7 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
       <?php
         wp_nav_menu(array(
           'theme_location' => 'primary',
-          'menu_class'     => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] flex gap-[20px]',
+          'menu_class'     => 'flex flex-col space-x-6 text-black text-[16px] md:text-[18px] gap-[20px]',
           'container'      => false,
           'fallback_cb'    => false,
         ));
