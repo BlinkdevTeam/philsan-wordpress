@@ -10,7 +10,7 @@
                             <p class="text-[16px] md:text-[18px] text-[#ffffff]"><?php the_sub_field('hero_sub'); ?></p>
                             <?php if ( !empty($button_name = get_sub_field('hero_button_name'))) : ?>
                                 <div class="flex pt-[30px]">
-                                    <?php echo theme_button(get_sub_field('hero_button_name'), get_sub_field('hero_button_name')); ?>
+                                    <?php echo theme_button(get_sub_field('hero_button_name'), get_sub_field('hero_button_link')); ?>
                                 </div>
                             <?php endif; ?>
                         </div>
