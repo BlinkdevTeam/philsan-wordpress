@@ -52,27 +52,27 @@ if (!$should_hide_nav_or_footer) :
           </div>
           <div class="flex gap-[20px] justify-between text-[#ffffff]">
             <div class="flex flex-col gap-[10px] text-[16px]">
-              <h6 class="font-[700]">Education</h6>
+              <h6 class="font-[700]">Navigation</h6>
               <ul class="flex flex-col gap-[5px] text-[18px] font-[400]">
-                <li>Email Marketing</li>
-                <li>Social Media Markeitng</li>
-                <li>Search Engine Optimization</li>
+                <li><a href="https://philsan.org/">Home</a></li>
+                <li><a href="https://philsan.org/about/">About</a></li>
+                <li><a href="https://philsan.org/news/">News</a></li>
+                <li><a href="https://philsan.org/events/">Events</a></li>
               </ul>
             </div>
             <div class="flex flex-col gap-[10px] text-[16px]">
-              <h6 class="font-[700]">Business</h6>
+              <h6 class="font-[700]">Resources</h6>
               <ul class="flex flex-col gap-[5px] text-[16px] font-[400]">
-                <li>Digital Marketing Agency</li>
-                <li>SEO Agency</li>
-                <li>PRC Agency</li>
+                <li><a href="https://philsan.org/highlights/">Highlights</a></li>
+                <li><a href="https://philsan.org/events/">Events</a></li>
+                <li><a href="https://philsan.org/news/">News</a></li>
               </ul>
             </div>
             <div class="flex flex-col gap-[10px] text-[16px]">
               <h6 class="font-[700]">Developer & IT</h6>
               <ul class="flex flex-col gap-[5px] text-[16px] font-[400]">
-                <li>Internet Marketing</li>
-                <li>Content Markeitng</li>
-                <li>Social Media</li>
+                <li><a href="https://philsan.org/contact/">Contact</a></li>
+                <li>admin@philsan.org</li>
               </ul>
             </div>
           </div>
