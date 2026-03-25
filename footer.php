@@ -50,7 +50,7 @@ if (!$should_hide_nav_or_footer) :
           <div class="logo-container w-[100%] md:w-[350px]">
               <img class="w-full h-auto" src="https://philsan.org/wp-content/uploads/2025/08/cropped-PHILSAN-LOGO.png" alt="Philsan Logo White">
           </div>
-          <div class="flex gap-[20px] justify-between text-[#ffffff]">
+          <div class="flex gap-[10px] md:gap-[40px] justify-between text-[#ffffff]">
             <div class="flex flex-col gap-[10px] text-[16px]">
               <h6 class="font-[700]">Navigation</h6>
               <ul class="flex flex-col gap-[5px] text-[16px] font-[200]">
