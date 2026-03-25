@@ -177,6 +177,45 @@ $should_hide_nav_or_footer = $hide_by_template || $hide_by_slug_and_type || $hid
 
   <!-- ═══════════════════════════════════════════════════════════ SEARCH STYLES -->
   <style>
+    /* ── Desktop Nav Hover Effects ── */
+    .nav-menu ul li a {
+      position: relative;
+      color: #1a1a1a;
+      text-decoration: none;
+      padding-bottom: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-menu ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #096936;
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+
+    .nav-menu ul li a:hover {
+      color: #096936;
+    }
+
+    .nav-menu ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Active/current page indicator */
+    .nav-menu ul li.current-menu-item > a,
+    .nav-menu ul li.current-page-ancestor > a {
+      color: #096936;
+    }
+
+    .nav-menu ul li.current-menu-item > a::after,
+    .nav-menu ul li.current-page-ancestor > a::after {
+      width: 100%;
+    }
     /* ── Trigger button ── */
     .philsan-search-trigger-btn {
       display: flex;
