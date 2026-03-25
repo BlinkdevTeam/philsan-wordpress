@@ -3141,6 +3141,10 @@ p, a, li {
     gap: 20px;
   }
 
+  .md\:gap-\[40px\] {
+    gap: 40px;
+  }
+
   .md\:gap-\[50px\] {
     gap: 50px;
   }
