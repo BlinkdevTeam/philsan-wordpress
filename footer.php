@@ -69,9 +69,10 @@ if (!$should_hide_nav_or_footer) :
               </ul>
             </div>
             <div class="flex flex-col gap-[10px] text-[16px]">
-              <h6 class="font-[700]">Developer & IT</h6>
+              <h6 class="font-[700]">Contact</h6>
               <ul class="flex flex-col gap-[5px] text-[16px] font-[200]">
                 <li><a href="https://philsan.org/contact/">Contact</a></li>
+                <li><a href="https://philsan.org/contact/">FAQs</a></li>
                 <li>admin@philsan.org</li>
               </ul>
             </div>
