@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Kemin PHILSAN Event Page
+ * Template Name: From Droplets to DNA
  * Description: From Droplets to DNA – PHILSAN 2026 event landing page
  */
 
