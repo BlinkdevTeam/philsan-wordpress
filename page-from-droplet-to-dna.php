@@ -211,6 +211,7 @@ get_header(); ?>
          style="font-size: clamp(0.9rem, 2vw, 1.1rem); letter-spacing: 0.04em; text-transform: uppercase;">
         The New Science of Bioemulsifiers<br/>and Nutrient Absorption
       </p>
+      <p class="">0.5 CPD points for Agriculture</p>
     </div>
   </div>
 </section>
