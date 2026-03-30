@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: From Droplets to DNA
+ * Template Name: Kemin PHILSAN Event Page
  * Description: From Droplets to DNA – PHILSAN 2026 event landing page
  */
 
@@ -52,38 +52,29 @@ get_header(); ?>
       position: relative;
       overflow: hidden;
     }
+    /* When a WP Featured Image is present it becomes a full-cover background */
+    .hero-bg .hero-banner-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      opacity: 0.45; /* darken so text stays readable */
+    }
+    /* Dark gradient overlay on top of the image */
     .hero-bg::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 68% 20%, rgba(201,168,76,0.30) 0%, transparent 38%),
-        radial-gradient(circle at 80% 60%, rgba(201,168,76,0.15) 0%, transparent 30%),
-        radial-gradient(circle at 20% 80%, rgba(201,168,76,0.10) 0%, transparent 30%);
+        linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.30) 100%),
+        radial-gradient(circle at 68% 20%, rgba(201,168,76,0.20) 0%, transparent 38%),
+        radial-gradient(circle at 80% 60%, rgba(201,168,76,0.10) 0%, transparent 30%);
       pointer-events: none;
+      z-index: 1;
     }
-    /* floating orb decorations */
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      border: 1.5px solid rgba(201,168,76,0.35);
-      animation: float 6s ease-in-out infinite;
-    }
-    .orb::after {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      width: 30%; height: 30%;
-      border-radius: 50%;
-      background: rgba(201,168,76,0.55);
-      box-shadow: 0 0 18px 6px rgba(201,168,76,0.4);
-    }
-    @keyframes float {
-      0%,100% { transform: translateY(0) scale(1); }
-      50%      { transform: translateY(-10px) scale(1.03); }
-    }
-
     /* ── Divider line ── */
     .accent-line { width: 3.5rem; height: 3px; background: #C8272D; }
 
@@ -173,15 +164,35 @@ get_header(); ?>
 ═══════════════════════════════════════════════ -->
 <section class="hero-bg min-h-[520px] md:min-h-[600px] px-6 md:px-16 py-16 flex flex-col justify-end relative">
 
-  <!-- Decorative floating orbs -->
-  <div class="orb" style="width:90px;height:90px;top:12%;right:22%;animation-delay:0s;"></div>
-  <div class="orb" style="width:55px;height:55px;top:28%;right:14%;animation-delay:1.5s;"></div>
-  <div class="orb" style="width:120px;height:120px;top:5%;right:8%;animation-delay:0.8s;"></div>
-  <div class="orb" style="width:40px;height:40px;top:48%;right:30%;animation-delay:2.2s;"></div>
-  <div class="orb" style="width:70px;height:70px;top:55%;right:6%;animation-delay:1.1s;"></div>
+  <?php
+    /*
+     * ── Hero Banner Image ──────────────────────────────────────────────────────
+     * Set the page's Featured Image in WordPress (Dashboard → Edit Page →
+     * "Featured Image" panel) and it will automatically appear here as the
+     * full-cover hero background.
+     *
+     * You can also hard-code any WordPress media URL like:
+     *   $hero_img_url = 'https://yoursite.com/wp-content/uploads/your-banner.jpg';
+     */
+    if ( has_post_thumbnail() ) :
+      $hero_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+    else :
+      // Fallback: replace this URL with any image from your WP Media Library
+      $hero_img_url = '';
+    endif;
+
+    if ( ! empty( $hero_img_url ) ) : ?>
+      <img
+        src="<?php echo esc_url( $hero_img_url ); ?>"
+        alt="<?php echo esc_attr( get_the_title() ); ?> – Hero Banner"
+        class="hero-banner-img"
+        loading="eager"
+        decoding="async"
+      />
+  <?php endif; ?>
 
   <!-- Content -->
-  <div class="relative z-10 max-w-4xl fade-up" id="hero-text">
+  <div class="relative z-[3] max-w-4xl fade-up" id="hero-text">
     <div class="event-badge mb-6">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="6" cy="6" r="5" stroke="white" stroke-width="1.2"/>
