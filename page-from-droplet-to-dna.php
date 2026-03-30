@@ -127,7 +127,7 @@ get_header(); ?>
       position: relative;
       display: inline-block;
     }
-    .photo-wrap::before {
+    /* .photo-wrap::before {
       content: '';
       position: absolute;
       top: 10px; left: 10px;
@@ -135,7 +135,7 @@ get_header(); ?>
       border: 2px solid #C8272D;
       border-radius: 50%;
       z-index: 0;
-    }
+    } */
     .photo-wrap img {
       position: relative;
       z-index: 1;
@@ -275,7 +275,7 @@ get_header(); ?>
 
         <!-- Photo -->
         <div class="flex-shrink-0 flex flex-col items-center gap-4">
-          <div class="photo-wrap">
+          <div class="photo-wrap shadow">
             <?php
               // Replace the src below with the actual speaker image URL via WordPress
               $speaker_img = get_template_directory_uri() . '/assets/images/zancia-swart.jpg';
