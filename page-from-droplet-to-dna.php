@@ -162,7 +162,7 @@ get_header(); ?>
 <!-- ═══════════════════════════════════════════════
      HERO SECTION
 ═══════════════════════════════════════════════ -->
-<section class="hero-bg min-h-[520px] md:min-h-[600px] px-6 md:px-16 py-16 flex flex-col justify-end relative">
+<section class="hero-bg min-h-[520px] md:min-h-[600px] px-6 md:px-16 py-16 flex flex-col justify-end relative max-w-4xl mx-auto fade-up visible">
 
   <?php
     /*
