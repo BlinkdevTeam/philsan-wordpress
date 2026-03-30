@@ -162,7 +162,7 @@ get_header(); ?>
 <!-- ═══════════════════════════════════════════════
      HERO SECTION
 ═══════════════════════════════════════════════ -->
-<section class="hero-bg min-h-[520px] md:min-h-[600px] px-6 md:px-16 py-16 flex flex-col justify-end relative max-w-4xl mx-auto fade-up visible">
+<section class="hero-bg min-h-[520px] md:min-h-[600px] py-16 flex flex-col justify-end relative">
 
   <?php
     /*
@@ -192,24 +192,26 @@ get_header(); ?>
   <?php endif; ?>
 
   <!-- Content -->
-  <div class="relative z-[3] max-w-4xl fade-up" id="hero-text">
-    <div class="event-badge mb-6">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="6" cy="6" r="5" stroke="white" stroke-width="1.2"/>
-        <path d="M6 3.5V6.5L7.5 8" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-      </svg>
-      16 April 2026 &nbsp;|&nbsp; PHILSAN, Philippines
+  <div class="px-6 md:px-16">
+    <div class="max-w-4xl mx-auto fade-up" id="hero-text">
+      <div class="event-badge mb-6">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="5" stroke="white" stroke-width="1.2"/>
+          <path d="M6 3.5V6.5L7.5 8" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        16 April 2026 &nbsp;|&nbsp; PHILSAN, Philippines
+      </div>
+
+      <h1 class="font-display text-white leading-tight mb-4"
+          style="font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -0.01em;">
+        From Droplets<br/>to DNA
+      </h1>
+
+      <p class="text-kemin-gold font-body font-medium mb-8"
+         style="font-size: clamp(0.9rem, 2vw, 1.1rem); letter-spacing: 0.04em; text-transform: uppercase;">
+        The New Science of Bioemulsifiers<br/>and Nutrient Absorption
+      </p>
     </div>
-
-    <h1 class="font-display text-white leading-tight mb-4"
-        style="font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -0.01em;">
-      From Droplets<br/>to DNA
-    </h1>
-
-    <p class="text-kemin-gold font-body font-medium mb-8"
-       style="font-size: clamp(0.9rem, 2vw, 1.1rem); letter-spacing: 0.04em; text-transform: uppercase;">
-      The New Science of Bioemulsifiers<br/>and Nutrient Absorption
-    </p>
   </div>
 </section>
 
