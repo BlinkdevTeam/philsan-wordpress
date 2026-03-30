@@ -282,8 +282,9 @@ get_header(); ?>
             ?>
             <img src="<?php echo esc_url($speaker_img); ?>"
                  alt="Zancia Swart – Product Manager, Kemin Animal Nutrition and Health"
-                 width="150" height="150"
-                 onerror="this.src='https://ui-avatars.com/api/?name=Zancia+Swart&size=150&background=C8272D&color=fff&bold=true&font-size=0.35'"
+                 width="150" 
+                 height="150"
+                 src="https://philsan.org/wp-content/uploads/2026/03/Frame-42.png"
                  style="width:150px;height:150px;" />
           </div>
         </div>
