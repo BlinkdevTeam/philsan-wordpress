@@ -64,7 +64,7 @@ get_header(); ?>
       opacity: 1; /* darken so text stays readable */
     }
     /* Dark gradient overlay on top of the image */
-    .hero-bg::before {
+    /* .hero-bg::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -74,7 +74,7 @@ get_header(); ?>
         radial-gradient(circle at 80% 60%, rgba(201,168,76,0.10) 0%, transparent 30%);
       pointer-events: none;
       z-index: 1;
-    }
+    } */
     /* ── Divider line ── */
     .accent-line { width: 3.5rem; height: 3px; background: #C8272D; }
 
