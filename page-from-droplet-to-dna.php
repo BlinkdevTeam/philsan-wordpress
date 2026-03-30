@@ -61,7 +61,7 @@ get_header(); ?>
       object-fit: cover;
       object-position: center;
       z-index: 0;
-      opacity: 0.45; /* darken so text stays readable */
+      opacity: 1; /* darken so text stays readable */
     }
     /* Dark gradient overlay on top of the image */
     .hero-bg::before {
@@ -385,31 +385,23 @@ get_header(); ?>
   <div class="max-w-4xl mx-auto">
     <div class="logos-row flex flex-row items-center justify-between gap-6">
 
-      <!-- Kemin logo (SVG inline fallback; replace with actual img if available) -->
-      <div class="flex flex-col gap-1">
-        <svg width="110" height="36" viewBox="0 0 140 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kemin">
-          <!-- Stylised "KEMIN" wordmark approximation -->
-          <text x="0" y="32" font-family="'Playfair Display', serif" font-weight="900"
-                font-size="28" fill="#C8272D" letter-spacing="-1">KEMIN</text>
-          <path d="M0 38 Q8 32 0 26" stroke="#C8272D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </svg>
-        <span class="font-body text-kemin-muted" style="font-size:0.65rem;letter-spacing:0.12em;">
-          Compelled by Curiosity™
-        </span>
-      </div>
+      <!-- Kemin logo — replace src with your actual image URL -->
+      <img
+        src="https://philsan.org/wp-content/uploads/2025/06/Kemin.png"
+        alt="Kemin – Compelled by Curiosity"
+        style="height: 48px; width: auto;"
+      />
 
       <!-- Divider -->
       <div class="hidden sm:block w-px bg-gray-200 self-stretch"></div>
 
-      <!-- PHILSAN logo text -->
-      <div class="flex flex-col items-end sm:items-center gap-0.5">
-        <span class="font-body text-kemin-muted text-xs tracking-widest uppercase">
-          Philippine Society of Animal Nutritionists
-        </span>
-        <span class="font-display font-bold text-kemin-dark" style="font-size:1.5rem;letter-spacing:0.04em;">
-          PHILSAN
-        </span>
-      </div>
+      <!-- PHILSAN logo — replace src with your actual image URL -->
+      <img
+        src="https://philsan.org/wp-content/uploads/2025/06/PHILSAN_LOGO.png"
+        alt="PHILSAN – Philippine Society of Animal Nutritionists"
+        style="height: 48px; width: auto;"
+      />
+
     </div>
 
     <!-- Copyright -->
