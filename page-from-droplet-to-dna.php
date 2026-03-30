@@ -280,7 +280,7 @@ get_header(); ?>
               // Replace the src below with the actual speaker image URL via WordPress
               $speaker_img = get_template_directory_uri() . '/assets/images/zancia-swart.jpg';
             ?>
-            <img src="<?php echo esc_url($speaker_img); ?>"
+            <img
                  alt="Zancia Swart – Product Manager, Kemin Animal Nutrition and Health"
                  width="150" 
                  height="150"
