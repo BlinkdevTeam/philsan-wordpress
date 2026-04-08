@@ -359,7 +359,7 @@ get_header(); ?>
       <div>
         <p class="font-body text-kemin-gold text-xs font-semibold tracking-widest uppercase mb-1">Location</p>
         <p class="font-display text-white" style="font-size:1.1rem;font-weight:700;">Philippines</p>
-        <p class="font-body text-gray-400 text-sm">PHILSAN Annual Convention</p>
+        <p class="font-body text-gray-400 text-sm">Vivere Hotel Alabang</p>
       </div>
     </div>
 
