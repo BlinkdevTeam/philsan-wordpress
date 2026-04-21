@@ -73,22 +73,22 @@
 
         <!-- ── Tabs ── -->
         <div class="flex justify-center gap-[0px] w-fit mx-auto mt-[40px] border-b-[2px] border-[#e0e0e0]">
-            <button
-                id="tab-upcoming"
-                onclick="switchTab('upcoming')"
-                class="tab-btn px-[30px] py-[12px] text-[16px] font-[600] text-[#1F773A] border-b-[3px] border-[#1F773A] transition-all duration-200"
-            >
-                Upcoming Events
-                <?php if ($upcoming_events->found_posts > 0) : ?>
+            <?php if ($upcoming_events->found_posts > 0) : ?>
+                <button
+                    id="tab-upcoming"
+                    onclick="switchTab('upcoming')"
+                    class="tab-btn px-[30px] py-[12px] text-[16px] font-[600] text-[#1F773A] border-b-[3px] border-[#1F773A] transition-all duration-200"
+                >
+                    Upcoming Events
                     <span class="ml-[6px] text-[12px] bg-[#1F773A] text-white rounded-full px-[8px] py-[2px]">
-                        <?php echo $upcoming_events->found_posts; ?>
+                        <?php echo esc_html($upcoming_events->found_posts); ?>
                     </span>
-                <?php endif; ?>
-            </button>
+                </button>
+            <?php endif; ?>
             <button
                 id="tab-past"
                 onclick="switchTab('past')"
-                class="tab-btn px-[30px] py-[12px] text-[16px] font-[600] text-[#888888] border-b-[3px] border-transparent transition-all duration-200"
+                class="tab-btn px-[30px] py-[12px] text-[16px] font-[600] <?php echo ($upcoming_events->found_posts > 0) ? 'text-[#888888] border-transparent' : 'text-[#1F773A] border-[#1F773A]'; ?> border-b-[3px] transition-all duration-200"
             >
                 Past Events
                 <?php if ($past_events->found_posts > 0) : ?>
@@ -100,7 +100,7 @@
         </div>
 
         <!-- ── Tab Panels ── -->
-        <div id="panel-upcoming">
+        <div id="panel-upcoming" class="<?php echo ($upcoming_events->found_posts > 0) ? '' : 'hidden'; ?>">
             <?php
                 // rewind so the loop in the included file works fresh
                 $upcoming_events->rewind_posts();
@@ -108,7 +108,7 @@
             ?>
         </div>
 
-        <div id="panel-past" class="hidden">
+        <div id="panel-past" class="<?php echo ($upcoming_events->found_posts > 0) ? 'hidden' : ''; ?>">
             <?php
                 $past_events->rewind_posts();
                 include locate_template('main-pages-sections/events-page/past-events.php');

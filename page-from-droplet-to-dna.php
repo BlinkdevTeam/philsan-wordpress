@@ -212,6 +212,27 @@ get_header(); ?>
         The New Science of Bioemulsifiers<br/>and Nutrient Absorption
       </p>
       <p class="text-white">0.5 CPD points for Agriculture</p>
+      
+      <!-- CTA BUTTON -->
+      <a href="https://philsan-droplets-to-dna.vercel.app/"
+         target="_blank"
+         class="inline-flex items-center gap-2 mt-6 px-7 py-3 rounded-full 
+                bg-[#c8272d] text-white font-semibold
+                shadow-md hover:shadow-lg
+                hover:bg-[#b31f26]
+                active:scale-[0.98]
+                transition-all duration-200 ease-out text-sm md:text-base">
+    
+        Take Quiz and Survey
+    
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-[1px]">
+          <path d="M3 8h10M9 4l4 4-4 4"
+                stroke="white"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
