@@ -68,7 +68,7 @@ get_header();
                             </div>
                             <div
                                 id="donor-detail-<?php echo $row_index; ?>"
-                                class="hidden absolute top-[100%] left-0 right-0 mt-[8px] z-[50] bg-white rounded-[8px] shadow-lg border border-gray-100 p-[16px] flex flex-col gap-[16px]"
+                                class="hidden absolute top-[100%] left-0 right-0 mt-[8px] z-[50] bg-white rounded-[8px] shadow-lg border border-gray-100 p-[10px] flex flex-col gap-[16px]"
                                 onclick="event.stopPropagation()"
                             >
                                 <?php if ( have_rows('donor_representative') ) : ?>
