@@ -56,7 +56,7 @@ get_header();
                             onclick="toggleDonor('donor-detail-<?php echo $row_index; ?>', this)"
                         >
                             <div class="flex items-center justify-between gap-[10px]">
-                               <div class="flex flex-col">
+                               <div class="flex flex-col hidden">
                                     <?php if ( $logo_url ) : ?>
                                         <img class="w-[auto] h-[80px] object-cover rounded-[5px]" src="<?php echo esc_url($logo_url); ?>" alt="">
                                     <?php endif; ?>
