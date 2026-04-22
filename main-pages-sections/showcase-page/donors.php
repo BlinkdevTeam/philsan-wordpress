@@ -49,14 +49,11 @@ get_header();
                                 }
                             }
                         ?>
-
-                        {{-- Wrapper: relative so the absolute dropdown anchors to this card --}}
                         <div
                             class="donor-card relative p-[20px] rounded-[8px] shadow cursor-pointer select-none"
                             data-search="<?php echo esc_attr($search_data); ?>"
                             onclick="toggleDonor('donor-detail-<?php echo $row_index; ?>', this)"
                         >
-                            {{-- Company name + chevron --}}
                             <div class="flex items-center justify-between gap-[10px]">
                                 <?php if ( $company_name ) : ?>
                                     <p class="text-[16px] font-[600] text-[#1F773A]"><?php echo esc_html($company_name); ?></p>
@@ -69,15 +66,6 @@ get_header();
                                     <path d="M5 7.5L10 12.5L15 7.5" stroke="#1F773A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-
-                            {{--
-                                Dropdown: position absolute so it floats BELOW the card
-                                without pushing or stretching any sibling cards in the grid.
-                                z-[50] keeps it above other cards.
-                                top-[100%] places it right below the card bottom edge.
-                                left-0 / right-0 matches the card width.
-                                mt-[8px] gives a small gap between card and dropdown.
-                            --}}
                             <div
                                 id="donor-detail-<?php echo $row_index; ?>"
                                 class="hidden absolute top-[100%] left-0 right-0 mt-[8px] z-[50] bg-white rounded-[8px] shadow-lg border border-gray-100 p-[16px] flex flex-col gap-[16px]"
