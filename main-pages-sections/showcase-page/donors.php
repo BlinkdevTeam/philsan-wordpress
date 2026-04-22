@@ -41,7 +41,6 @@ get_header();
                             $company_name = get_sub_field('donor_company');
                             $row_index    = get_row_index();
 
-                            // Build searchable string for JS filtering
                             $search_data = strtolower($company_name);
                             $reps_raw    = get_sub_field('donor_representative');
                             if ( is_array($reps_raw) ) {
@@ -51,12 +50,13 @@ get_header();
                             }
                         ?>
 
+                        {{-- Wrapper: relative so the absolute dropdown anchors to this card --}}
                         <div
-                            class="donor-card p-[20px] rounded-[8px] shadow cursor-pointer select-none"
+                            class="donor-card relative p-[20px] rounded-[8px] shadow cursor-pointer select-none"
                             data-search="<?php echo esc_attr($search_data); ?>"
                             onclick="toggleDonor('donor-detail-<?php echo $row_index; ?>', this)"
                         >
-                            <!-- Company name + chevron -->
+                            {{-- Company name + chevron --}}
                             <div class="flex items-center justify-between gap-[10px]">
                                 <?php if ( $company_name ) : ?>
                                     <p class="text-[16px] font-[600] text-[#1F773A]"><?php echo esc_html($company_name); ?></p>
@@ -70,13 +70,21 @@ get_header();
                                 </svg>
                             </div>
 
-                            <!-- Representatives dropdown (hidden by default) -->
+                            {{--
+                                Dropdown: position absolute so it floats BELOW the card
+                                without pushing or stretching any sibling cards in the grid.
+                                z-[50] keeps it above other cards.
+                                top-[100%] places it right below the card bottom edge.
+                                left-0 / right-0 matches the card width.
+                                mt-[8px] gives a small gap between card and dropdown.
+                            --}}
                             <div
                                 id="donor-detail-<?php echo $row_index; ?>"
-                                class="hidden pt-[14px] mt-[14px] border-t border-gray-100 flex flex-col gap-[16px]"
+                                class="hidden absolute top-[100%] left-0 right-0 mt-[8px] z-[50] bg-white rounded-[8px] shadow-lg border border-gray-100 p-[16px] flex flex-col gap-[16px]"
+                                onclick="event.stopPropagation()"
                             >
                                 <?php if ( have_rows('donor_representative') ) : ?>
-                                    <?php $rep_index = 0; $total_reps = count($reps_raw); ?>
+                                    <?php $rep_index = 0; $total_reps = is_array($reps_raw) ? count($reps_raw) : 0; ?>
                                     <?php while ( have_rows('donor_representative') ) : the_row(); ?>
                                         <?php
                                             $rep_name        = get_sub_field('representative_name');
@@ -129,6 +137,7 @@ get_header();
 <script>
 (function () {
     var cards = document.querySelectorAll('.donor-card');
+    var currentOpen = null; // tracks the currently open detail id
 
     function updateCount(visible) {
         var el = document.getElementById('donor-count');
@@ -138,6 +147,22 @@ get_header();
     }
 
     updateCount(cards.length);
+
+    // Close dropdown when clicking outside any card
+    document.addEventListener('click', function (e) {
+        if (currentOpen && !e.target.closest('.donor-card')) {
+            closeDropdown(currentOpen);
+            currentOpen = null;
+        }
+    });
+
+    function closeDropdown(id) {
+        var detail  = document.getElementById(id);
+        var card    = detail ? detail.closest('.donor-card') : null;
+        var chevron = card ? card.querySelector('.donor-chevron') : null;
+        if (detail)  detail.classList.add('hidden');
+        if (chevron) chevron.style.transform = '';
+    }
 
     window.filterDonors = function () {
         var q = document.getElementById('donor-search').value.toLowerCase().trim();
@@ -157,8 +182,23 @@ get_header();
         if (!detail) return;
 
         var isOpen = !detail.classList.contains('hidden');
-        detail.classList.toggle('hidden', isOpen);
-        chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+
+        // Close the currently open dropdown if it's a different one
+        if (currentOpen && currentOpen !== id) {
+            closeDropdown(currentOpen);
+            currentOpen = null;
+        }
+
+        // Toggle the clicked dropdown
+        if (isOpen) {
+            detail.classList.add('hidden');
+            chevron.style.transform = '';
+            currentOpen = null;
+        } else {
+            detail.classList.remove('hidden');
+            chevron.style.transform = 'rotate(180deg)';
+            currentOpen = id;
+        }
     };
 })();
 </script>
