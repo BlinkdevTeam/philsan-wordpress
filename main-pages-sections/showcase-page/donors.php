@@ -56,10 +56,10 @@ get_header();
                             onclick="toggleDonor('donor-detail-<?php echo $row_index; ?>', this)"
                         >
                             <div class="flex items-center justify-between gap-[10px]">
-                               <div class="flex flex-col hidden">
-                                    <?php if ( $logo_url ) : ?>
-                                        <img class="w-[auto] h-[80px] object-cover rounded-[5px]" src="<?php echo esc_url($logo_url); ?>" alt="">
-                                    <?php endif; ?>
+                               <div class="flex flex-col">
+                                    <?php //if ( $logo_url ) : ?>
+                                        <!-- <img class="w-[auto] h-[80px] object-cover rounded-[5px]" src="<?php echo esc_url($logo_url); ?>" alt=""> -->
+                                    <?php //endif; ?>
                                     <?php if ( $company_name ) : ?>
                                         <p class="text-[16px] font-[600] text-[#1F773A]"><?php echo esc_html($company_name); ?></p>
                                     <?php endif; ?>
