@@ -4,4 +4,6 @@
 <?php get_template_part("main-pages-sections/components/sponsors-section"); ?>
 <?php get_template_part("main-pages-sections/showcase-page/infomercials"); ?>
 
+<?php get_template_part("main-pages-sections/showcase-page/donors"); ?>
+
 <?php get_footer(); ?>
