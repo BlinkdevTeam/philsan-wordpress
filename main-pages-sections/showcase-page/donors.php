@@ -29,7 +29,7 @@ get_header();
             </div>
         </div>
 
-        <div class="flex flex-col gap-[20px] pt-[50px]">
+        <div class="flex flex-col gap-[50px] pt-[50px]">
             <?php if ( have_rows('donor_repeater') ) : ?>
 
                 <p class="text-[13px] text-gray-400 -mb-[40px]" id="donor-count"></p>
@@ -150,6 +150,7 @@ get_header();
         var chevron = card ? card.querySelector('.donor-chevron') : null;
         if (detail)  detail.classList.add('hidden');
         if (chevron) chevron.style.transform = '';
+        if (card)    card.style.backgroundColor = 'transparent'; // ← add this
     }
 
     window.filterDonors = function () {
@@ -181,10 +182,12 @@ get_header();
         if (isOpen) {
             detail.classList.add('hidden');
             chevron.style.transform = '';
+            card.style.backgroundColor = 'transparent';
             currentOpen = null;
         } else {
             detail.classList.remove('hidden');
             chevron.style.transform = 'rotate(180deg)';
+            card.style.backgroundColor = '#dcecdc';
             currentOpen = id;
         }
     };
