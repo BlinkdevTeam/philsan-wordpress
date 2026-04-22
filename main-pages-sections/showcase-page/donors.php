@@ -56,12 +56,14 @@ get_header();
                             onclick="toggleDonor('donor-detail-<?php echo $row_index; ?>', this)"
                         >
                             <div class="flex items-center justify-between gap-[10px]">
-                                <?php if ( $logo_url ) : ?>
-                                    <img class="w-full h-[80px] object-cover rounded-[5px]" src="<?php echo esc_url($logo_url); ?>" alt="">
-                                <?php endif; ?>
-                                <?php if ( $company_name ) : ?>
-                                    <p class="text-[16px] font-[600] text-[#1F773A]"><?php echo esc_html($company_name); ?></p>
-                                <?php endif; ?>
+                               <div class="flex flex-col">
+                                    <?php if ( $logo_url ) : ?>
+                                        <img class="w-[auto] h-[80px] object-cover rounded-[5px]" src="<?php echo esc_url($logo_url); ?>" alt="">
+                                    <?php endif; ?>
+                                    <?php if ( $company_name ) : ?>
+                                        <p class="text-[16px] font-[600] text-[#1F773A]"><?php echo esc_html($company_name); ?></p>
+                                    <?php endif; ?>
+                               </div>
                                 <svg
                                     class="donor-chevron w-[18px] h-[18px] flex-shrink-0 transition-transform duration-300"
                                     viewBox="0 0 20 20"
