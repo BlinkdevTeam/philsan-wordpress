@@ -39,6 +39,7 @@ get_header();
                     <?php while ( have_rows('donor_repeater') ) : the_row(); ?>
                         <?php
                             $company_name = get_sub_field('donor_company');
+                            $logo_url = get_sub_field("donor_logo");
                             $row_index    = get_row_index();
 
                             $search_data = strtolower($company_name);
@@ -55,6 +56,9 @@ get_header();
                             onclick="toggleDonor('donor-detail-<?php echo $row_index; ?>', this)"
                         >
                             <div class="flex items-center justify-between gap-[10px]">
+                                <?php if ( $logo_url ) : ?>
+                                    <img class="w-full h-[80px] object-cover rounded-[5px]" src="<?php echo esc_url($logo_url); ?>" alt="">
+                                <?php endif; ?>
                                 <?php if ( $company_name ) : ?>
                                     <p class="text-[16px] font-[600] text-[#1F773A]"><?php echo esc_html($company_name); ?></p>
                                 <?php endif; ?>
