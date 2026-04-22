@@ -10,7 +10,7 @@ get_header();
 
         <div class="">
             <div class="w-[100%] flex flex-col justify-center items-center h-[100%]">
-                <h2 class="text-[24px] md:text-[42px] font-[700] text-[#1F773A]">All Sponsors</h2>
+                <h2 class="text-[24px] md:text-[42px] font-[700] text-[#1F773A]">All Donor Members</h2>
             </div>
             <div class="flex justify-center gap-[5px] w-[90%] lg:w-[80%] xl:w-[800px] mx-auto pt-[20px]">
                 <div class="relative flex items-center w-[100%] justify-end">
@@ -29,7 +29,7 @@ get_header();
             </div>
         </div>
 
-        <div class="flex flex-col gap-[50px] pt-[50px]">
+        <div class="flex flex-col gap-[20px] pt-[50px]">
             <?php if ( have_rows('donor_repeater') ) : ?>
 
                 <p class="text-[13px] text-gray-400 -mb-[40px]" id="donor-count"></p>
