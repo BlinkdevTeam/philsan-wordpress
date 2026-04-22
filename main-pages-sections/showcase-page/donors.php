@@ -100,9 +100,9 @@ get_header();
                                                     <?php echo esc_html($rep_email); ?>
                                                 </a>
                                             <?php endif; ?>
-                                            <?php if ( $rep_contact ) : ?>
-                                                <p class="text-[12px] text-gray-500"><?php echo esc_html($rep_contact); ?></p>
-                                            <?php endif; ?>
+                                            <?php //if ( $rep_contact ) : ?>
+                                                <!-- <p class="text-[12px] text-gray-500"><?php echo esc_html($rep_contact); ?></p> -->
+                                            <?php //endif; ?>
                                         </div>
 
                                         <?php if ( $rep_index < $total_reps ) : ?>
