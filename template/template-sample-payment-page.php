@@ -19,10 +19,10 @@ if (isset($_POST['payment_type'])) {
     $type = $_POST['payment_type'];
 
     if ($type === 'member') {
-        $amount = 10000; // ₱100
+        $amount = 1000; // ₱10
         $description = "Member Registration";
     } else {
-        $amount = 20000; // ₱200
+        $amount = 2000; // ₱20
         $description = "Non-Member Registration";
     }
 
@@ -167,11 +167,11 @@ if (isset($_POST['payment_type'])) {
     >
 
     <button type="submit" name="payment_type" value="member">
-        Member – ₱100
+        Member – ₱10
     </button>
 
     <button type="submit" name="payment_type" value="non_member">
-        Non-Member – ₱200
+        Non-Member – ₱20
     </button>
 
 </form>
