@@ -62,12 +62,12 @@
                         </div>
                     <?php endif; ?>
 
-                    <?php if ($cta_link) : ?>
-                        <a href="<?php echo esc_url($cta_link); ?>" class="inline-flex items-center gap-[6px] bg-[#1F5C35] text-white px-[18px] py-[10px] rounded-md text-[13px] md:text-[14px] font-[500] hover:bg-[#17452A] transition-colors">
+                    <?php //if ($cta_link) : ?>
+                        <!-- <a href="<?php //echo esc_url($cta_link); ?>" class="inline-flex items-center gap-[6px] bg-[#1F5C35] text-white px-[18px] py-[10px] rounded-md text-[13px] md:text-[14px] font-[500] hover:bg-[#17452A] transition-colors">
                             View details
                             <i class="ti ti-arrow-right text-[14px]"></i>
-                        </a>
-                    <?php endif; ?>
+                        </a> -->
+                    <?php //endif; ?>
 
                 </div>
             </div>
