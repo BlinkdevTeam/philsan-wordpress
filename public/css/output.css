@@ -792,6 +792,10 @@ video {
   z-index: 9;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -846,6 +850,14 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -875,10 +887,6 @@ video {
 }
 
 .mr-\[auto\] {
-  margin-right: auto;
-}
-
-.mr-auto {
   margin-right: auto;
 }
 
@@ -948,6 +956,17 @@ video {
 
 .mt-\[8px\] {
   margin-top: 8px;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .block {
@@ -1042,6 +1061,10 @@ video {
   height: 20px;
 }
 
+.h-\[280px\] {
+  height: 280px;
+}
+
 .h-\[285px\] {
   height: 285px;
 }
@@ -1088,10 +1111,6 @@ video {
 
 .h-\[60px\] {
   height: 60px;
-}
-
-.h-\[700px\] {
-  height: 700px;
 }
 
 .h-\[800px\] {
@@ -1317,12 +1336,20 @@ video {
   max-width: 400px;
 }
 
+.max-w-\[40ch\] {
+  max-width: 40ch;
+}
+
 .max-w-\[800px\] {
   max-width: 800px;
 }
 
 .max-w-\[840px\] {
   max-width: 840px;
+}
+
+.max-w-\[95\%\] {
+  max-width: 95%;
 }
 
 .max-w-\[980px\] {
@@ -1851,6 +1878,11 @@ video {
   border-color: rgb(224 224 224 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#e5e3da\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 227 218 / var(--tw-border-opacity, 1));
+}
+
 .border-\[\#ffffff\] {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1888,6 +1920,11 @@ video {
 .bg-\[\#101010\] {
   --tw-bg-opacity: 1;
   background-color: rgb(16 16 16 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#1F5C35\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 92 53 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#1F773A\] {
@@ -1928,6 +1965,11 @@ video {
 .bg-\[\#F4C430\] {
   --tw-bg-opacity: 1;
   background-color: rgb(244 196 48 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#FAEEDA\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 238 218 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#FCFCF0\] {
@@ -2051,12 +2093,6 @@ video {
 
 .from-\[rgba\(11\2c 83\2c 4\2c 0\.3\)\] {
   --tw-gradient-from: rgba(11,83,4,0.3) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(11, 83, 4, 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-\[rgba\(11\2c 83\2c 4\2c 0\.6\)\] {
-  --tw-gradient-from: rgba(11,83,4,0.6) var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(11, 83, 4, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -2247,6 +2283,11 @@ video {
 .px-\[17px\] {
   padding-left: 17px;
   padding-right: 17px;
+}
+
+.px-\[18px\] {
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .px-\[20px\] {
@@ -2776,6 +2817,14 @@ video {
   font-style: italic;
 }
 
+.leading-\[1\.25\] {
+  line-height: 1.25;
+}
+
+.leading-\[1\.6\] {
+  line-height: 1.6;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -2812,6 +2861,11 @@ video {
 .text-\[\#176524\] {
   --tw-text-opacity: 1;
   color: rgb(23 101 36 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#1F5C35\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 92 53 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#1F773A\] {
@@ -2859,9 +2913,19 @@ video {
   color: rgb(85 85 85 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#5f5e5a\] {
+  --tw-text-opacity: 1;
+  color: rgb(95 94 90 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#646464\] {
   --tw-text-opacity: 1;
   color: rgb(100 100 100 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#854F0B\] {
+  --tw-text-opacity: 1;
+  color: rgb(133 79 11 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#888888\] {
@@ -3284,6 +3348,11 @@ p, a, li {
   }
 }
 
+.hover\:bg-\[\#17452A\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 69 42 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[\#1F773A\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(31 119 58 / var(--tw-bg-opacity, 1));
@@ -3487,6 +3556,10 @@ p, a, li {
     height: 400px;
   }
 
+  .md\:h-\[420px\] {
+    height: 420px;
+  }
+
   .md\:h-\[580px\] {
     height: 580px;
   }
@@ -3557,6 +3630,10 @@ p, a, li {
 
   .md\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .md\:max-w-\[90\%\] {
+    max-width: 90%;
   }
 
   .md\:grid-cols-2 {
@@ -3818,6 +3895,10 @@ p, a, li {
 
   .md\:text-\[48px\] {
     font-size: 48px;
+  }
+
+  .md\:text-\[clamp\(28px\2c 4\.5vw\2c 48px\)\] {
+    font-size: clamp(28px,4.5vw,48px);
   }
 
   .md\:text-base {
