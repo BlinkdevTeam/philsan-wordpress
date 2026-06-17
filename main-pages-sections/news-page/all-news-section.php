@@ -8,6 +8,7 @@
                         $description = get_the_content();
                         $description = wp_strip_all_tags($description);
                         $date        = get_field("date");
+                        $date_to     = get_field("date_to");
                         $categories = get_the_terms( get_the_ID(), 'category-filters' );
                         $title = get_the_title();
                         $button_link = get_field("button_link");
@@ -18,10 +19,30 @@
                         $desc_trimmed = mb_strimwidth($description, 0, $desc_limit, "...");
                         $title_trimmed = mb_strimwidth($description, 0, $title_limit, "...");
 
+                        // Reformat the date
                         if ($date) {
-                            $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                            $date_obj       = DateTime::createFromFormat('m/d/Y', $date);
+                            $formatted_date = $date_obj ? $date_obj->format('F j, Y') : '';
+                            $day            = $date_obj ? $date_obj->format('j') : '';
+                            $month          = $date_obj ? $date_obj->format('M') : '';
+                            $year           = $date_obj ? $date_obj->format('Y') : '';
                         } else {
                             $formatted_date = '';
+                            $month          = '';
+                            $year           = '';
+                        }
+
+                        if ($date_to) {
+                            $date_to_obj       = DateTime::createFromFormat('m/d/Y', $date_to);
+                            $formatted_date_to = $date_to_obj ? $date_to_obj->format('F j, Y') : '';
+                            $day_to            = $date_to_obj ? $date_to_obj->format('d') : '';
+                            $month_to          = $date_to_obj ? $date_to_obj->format('M') : '';
+                            $year_to           = $date_to_obj ? $date_to_obj->format('Y') : '';
+                        } else {
+                            $formatted_date_to = '';
+                            $day_to            = '';
+                            $month_to          = '';
+                            $year_to           = '';
                         }
                     ?>
 
@@ -30,9 +51,22 @@
                         <img class="w-full h-[300px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">
                         <div class="pt-[20px]">
                             <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
-                            <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                                <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
-                            </div>
+
+                            <?php if($date_to) : ?>
+                                <div class="flex gap-[5px] px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                    <p class="text-[14px]"><?php echo esc_html($day); ?></p>
+                                    <span>-</span>
+                                    <p class="text-[14px]"><?php echo esc_html($day_to); ?>,</p>
+                                    <p class="text-[14px]"><?php echo esc_html($month); ?></p>
+                                    <p class="text-[14px]"><?php echo esc_html($year); ?></p>
+                                </div>
+                            <?php else : ?>
+                                <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                    <p class="text-[14px]"><?php echo esc_html($formatted_date); ?></p>
+                                </div>
+                            <?php endif; ?>
+
+
                             <h2 class="text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
                             <p class="text-[14px] font-[400]"><?php echo esc_html($desc_trimmed); ?></p>
                         </div>
@@ -49,9 +83,25 @@
                     <div class="md:hidden">
                         <div class="pt-[20px]">
                             <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
+                            
                             <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
                                 <p class="text-[12px] md:text-[14px]"><?php echo esc_html($formatted_date); ?></p>
                             </div>
+
+                            <?php if($date_to) : ?>
+                                <div class="flex gap-[5px] px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                    <p class="text-[12px] md:text-[14px]"><?php echo esc_html($day); ?></p>
+                                    <span>-</span>
+                                    <p class="text-[12px] md:text-[14px]"><?php echo esc_html($day_to); ?>,</p>
+                                    <p class="text-[12px] md:text-[14px]"><?php echo esc_html($month); ?></p>
+                                    <p class="text-[12px] md:text-[14px]"><?php echo esc_html($year); ?></p>
+                                </div>
+                            <?php else : ?>
+                                <div class="px-[20px] mt-[10px] mb-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                    <p class="text-[12px] md:text-[14px]"><?php echo esc_html($formatted_date); ?></p>
+                                </div>
+                            <?php endif; ?>
+
                             <h2 class="text-[16px] md:text-[18px] font-[600] text-[#1f773a]"><?php echo esc_html($title_trimmed); ?></h2>
                             <div class="py-[10px]">
                                 <img class="w-full h-[200px] object-cover rounded-tl-2xl rounded-br-2xl" src="<?php echo esc_url($featured_image_url); ?>" alt="">

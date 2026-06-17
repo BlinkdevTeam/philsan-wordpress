@@ -12,6 +12,7 @@
                             $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                             $description = get_the_content();
                             $date        = get_field("date");
+                            $date_to     = get_field("date_to");
                             $categories = get_the_terms( get_the_ID(), 'category-filters' );
                             $button_link = get_field("button_link");
                             $permalink = get_permalink();
@@ -19,9 +20,28 @@
 
                             // Reformat the date
                             if ($date) {
-                                $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
+                                $date_obj       = DateTime::createFromFormat('m/d/Y', $date);
+                                $formatted_date = $date_obj ? $date_obj->format('F j, Y') : '';
+                                $day            = $date_obj ? $date_obj->format('j') : '';
+                                $month          = $date_obj ? $date_obj->format('M') : '';
+                                $year           = $date_obj ? $date_obj->format('Y') : '';
                             } else {
                                 $formatted_date = '';
+                                $month          = '';
+                                $year           = '';
+                            }
+
+                            if ($date_to) {
+                                $date_to_obj       = DateTime::createFromFormat('m/d/Y', $date_to);
+                                $formatted_date_to = $date_to_obj ? $date_to_obj->format('F j, Y') : '';
+                                $day_to            = $date_to_obj ? $date_to_obj->format('d') : '';
+                                $month_to          = $date_to_obj ? $date_to_obj->format('M') : '';
+                                $year_to           = $date_to_obj ? $date_to_obj->format('Y') : '';
+                            } else {
+                                $formatted_date_to = '';
+                                $day_to            = '';
+                                $month_to          = '';
+                                $year_to           = '';
                             }
                         ?>
                         <!-- FEATURED NEWS -->
@@ -34,9 +54,20 @@
                                     <div class="flex justify-between items-center">
                                         <?php include locate_template('main-pages-sections/news-page/category-element.php'); ?>
 
-                                        <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
-                                            <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
-                                        </div>
+                                        <?php if($date_to) : ?>
+                                            <div class=" flex gap-[5px] px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                                <p class="text-[16px]"><?php echo esc_html($day); ?></p>
+                                                <span>-</span>
+                                                <p class="text-[16px]"><?php echo esc_html($day_to); ?>,</p>
+                                                <p class="text-[16px]"><?php echo esc_html($month); ?></p>
+                                                <p class="text-[16px]"><?php echo esc_html($year); ?></p>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="px-[20px] border-[1px] border-[#000000] rounded-full w-fit">
+                                                <p class="text-[16px]"><?php echo esc_html($formatted_date); ?></p>
+                                            </div>
+                                        <?php endif; ?>
+
                                     </div>
                                     <h2 class="text-left text-[24px] font-[600] text-[#1f773a]"><?php the_title(); ?> </h2>
                                     <p class="text-left text-[16px] font-[400]"><?php echo esc_html($description); ?></p>

@@ -13,6 +13,7 @@
                         $description        = wp_strip_all_tags($description);
                         $desc_trimmed       = mb_strimwidth($description, 0, 250, '...');
                         $date               = get_field('date');
+                        $date_to            = get_field('date_to');
                         $categories         = get_the_terms(get_the_ID(), 'category-filters');
                         $button_link        = get_field('button_link');
                         $permalink          = get_permalink();
@@ -20,12 +21,26 @@
                         if ($date) {
                             $date_obj       = DateTime::createFromFormat('m/d/Y', $date);
                             $formatted_date = $date_obj ? $date_obj->format('F j, Y') : '';
+                            $day            = $date_obj ? $date_obj->format('j') : '';
                             $month          = $date_obj ? $date_obj->format('M') : '';
                             $year           = $date_obj ? $date_obj->format('Y') : '';
                         } else {
                             $formatted_date = '';
                             $month          = '';
                             $year           = '';
+                        }
+
+                        if ($date_to) {
+                            $date_to_obj       = DateTime::createFromFormat('m/d/Y', $date_to);
+                            $formatted_date_to = $date_to_obj ? $date_to_obj->format('F j, Y') : '';
+                            $day_to            = $date_to_obj ? $date_to_obj->format('d') : '';
+                            $month_to          = $date_to_obj ? $date_to_obj->format('M') : '';
+                            $year_to           = $date_to_obj ? $date_to_obj->format('Y') : '';
+                        } else {
+                            $formatted_date_to = '';
+                            $day_to            = '';
+                            $month_to          = '';
+                            $year_to           = '';
                         }
                     ?>
                     <div class="swiper-slide">
@@ -50,23 +65,33 @@
                             </div>
 
                             <!-- Right: Content -->
-                            <div class="flex flex-col justify-between gap-[12px] w-[55%] px-[40px] py-[40px]">
+                            <div class="flex flex-col gap-[12px] w-[55%] px-[40px] py-[40px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <!-- Category + Date row -->
                                     <div class="flex justify-between items-center flex-wrap gap-[10px]">
                                         <?php include locate_template('main-pages-sections/events-page/category-element.php'); ?>
-                                        <div class="px-[16px] py-[4px] border-[1px] border-[#1F773A] rounded-full w-fit">
-                                            <p class="text-[13px] text-[#1F773A] font-[500]"><?php echo esc_html($formatted_date); ?></p>
-                                        </div>
+                                        <?php if($date_to) : ?>
+                                            <div class="flex items-center gap-[5px] px-[16px] py-[4px] border-[1px] border-[#1F773A] rounded-full w-fit">
+                                                <p class="text-[13px] text-[#1F773A] font-[500]"><?php echo esc_html($day); ?></p>
+                                                <span>-</span>
+                                                <p class="text-[13px] text-[#1F773A] font-[500]"><?php echo esc_html($day_to); ?>,</p>
+                                                <p class="text-[13px] text-[#1F773A] font-[500]"><?php echo esc_html($month); ?></p>
+                                                <p class="text-[13px] text-[#1F773A] font-[500]"><?php echo esc_html($year); ?></p>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="px-[16px] py-[4px] border-[1px] border-[#1F773A] rounded-full w-fit">
+                                                <p class="text-[13px] text-[#1F773A] font-[500]"><?php echo esc_html($formatted_date); ?></p>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
 
                                     <!-- Title -->
-                                    <h2 class="text-[26px] font-[700] text-[#1F773A] leading-snug">
+                                    <h2 class="text-[26px] font-[700] text-[#1F773A] text-left leading-snug">
                                         <?php the_title(); ?>
                                     </h2>
 
                                     <!-- Description -->
-                                    <p class="text-[15px] text-[#444444] font-[400] leading-relaxed">
+                                    <p class="text-[15px] text-[#444444] font-[400] text-left leading-relaxed">
                                         <?php echo esc_html($desc_trimmed); ?>
                                     </p>
                                 </div>
