@@ -10,7 +10,6 @@ get_header();
     the_post();
 ?>
 
-
 <div class="bg-[#f1efe8] min-h-screen w-full relative flex flex-col gap-[20px]">
     <div class="mx-auto w-[90%] lg:w-[900px]">
         <div class="flex w-[100%] py-[50px]">
@@ -228,8 +227,8 @@ get_header();
                     <div class="w-[56px] h-[56px] rounded-full bg-[#EAF3DE] flex items-center justify-center mb-[16px]">
                         <i class="ti ti-mail-opened text-[26px] text-[#16572A]"></i>
                     </div>
-                    <p class="text-[19px] font-[700] text-[#16572A] mb-[8px] font-fraunces">Check your email for your QR code</p>
-                    <p class="text-[13.5px] text-[#5f5e5a] max-w-[420px] leading-[1.7]">We've sent your registration confirmation and QR code to your inbox. It may take a few minutes to arrive.</p>
+                    <p class="text-[19px] font-[700] text-[#16572A] mb-[8px] font-fraunces">Your registration is under review</p>
+                    <p class="text-[13.5px] text-[#5f5e5a] max-w-[420px] leading-[1.7]">We've received your registration and sent a confirmation to your email. Our team will review it shortly — once approved, you'll receive another email with your QR code.</p>
                 </div>
 
             </div>
@@ -241,23 +240,29 @@ get_header();
 const SUPABASE_URL = 'https://pskballrwzdbovtylgjs.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBza2JhbGxyd3pkYm92dHlsZ2pzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzU4MTAsImV4cCI6MjA5NzIxMTgxMH0.LhtBD_E8aEUHLI4UAFqQ5-3_iVqwOLYN5TklbCDDeIg';
 
-// Edge Function that sends the registration confirmation email via Resend.
-const SEND_CONFIRMATION_EMAIL_URL = 'https://pskballrwzdbovtylgjs.supabase.co/functions/v1/bright-api';
+// Edge Function that sends the "your registration is under review" email
+// right after a successful submit. This does NOT send the QR code — that
+// happens later, in a separate function called by the admin dashboard once
+// a registration is approved.
+//
+// TODO: replace this URL once the send-registration-received function is
+// deployed. The bright-api / send-confirmation-email function from earlier
+// testing is being repurposed as the *approval* email and is called from the
+// admin dashboard, not from here.
+const SEND_REGISTRATION_RECEIVED_URL = ''; // e.g. `${SUPABASE_URL}/functions/v1/send-registration-received`
 
-// Calls the Edge Function that emails the registrant their QR code via Resend.
-// The Resend API key lives only as a server-side secret inside that function —
-// never put it in this file or anywhere else that runs in the browser.
-async function sendConfirmationEmail(registration) {
-    if (!SEND_CONFIRMATION_EMAIL_URL) {
-        console.warn('sendConfirmationEmail: SEND_CONFIRMATION_EMAIL_URL not set yet, skipping email send (Edge Function not deployed).');
+// Calls the Edge Function that emails the registrant confirming their
+// registration was received and is under review.
+async function sendRegistrationReceivedEmail(registration) {
+    if (!SEND_REGISTRATION_RECEIVED_URL) {
+        console.warn('sendRegistrationReceivedEmail: SEND_REGISTRATION_RECEIVED_URL not set yet, skipping email send (Edge Function not deployed).');
         return { skipped: true };
     }
 
-    const response = await fetch(SEND_CONFIRMATION_EMAIL_URL, {
+    const response = await fetch(SEND_REGISTRATION_RECEIVED_URL, {
         method: 'POST',
         headers: {
             'apikey': SUPABASE_KEY,
-            'Authorization': `Bearer ${SUPABASE_KEY}`,
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(registration)
@@ -265,7 +270,7 @@ async function sendConfirmationEmail(registration) {
 
     if (!response.ok) {
         const error = await response.json().catch(() => ({}));
-        throw new Error(error.message || 'Failed to send confirmation email.');
+        throw new Error(error.message || 'Failed to send registration-received email.');
     }
 
     return response.json();
@@ -331,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Check for duplicate email before inserting
-            const checkRes = await fetch(`${SUPABASE_URL}/rest/v1/participants?email=eq.${encodeURIComponent(email)}`, {
+            const checkRes = await fetch(`${SUPABASE_URL}/rest/v1/participants?select=email&email=eq.${encodeURIComponent(email)}`, {
                 headers: {
                     'apikey': SUPABASE_KEY,
                     'Authorization': `Bearer ${SUPABASE_KEY}`,
@@ -421,27 +426,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw error;
             }
 
-            // Trigger the QR code email via Resend (through the Edge Function once deployed).
+            // Tell the registrant their submission was received and is under
+            // review. They'll get a second, separate email later (approval
+            // with QR link, or rejection with a reason) once an admin acts
+            // on this in the dashboard — that part is not built yet.
             // Wrapped separately so an email failure doesn't undo a registration
             // that already succeeded in Supabase.
             try {
-                await sendConfirmationEmail({
+                await sendRegistrationReceivedEmail({
                     email,
-                    first_name,
-                    last_name,
-                    middle_name,
-                    mobile,
-                    company,
-                    position,
-                    agri_license,
-                    membership,
-                    souvenir,
-                    certificate_needed,
-                    sponsored,
-                    sponsor
+                    first_name
                 });
             } catch (emailError) {
-                console.error('Confirmation email error:', emailError);
+                console.error('Registration-received email error:', emailError);
                 // Registration is already saved — don't block the user here.
                 // Once Resend is live, consider surfacing a soft warning instead of failing silently.
             }
