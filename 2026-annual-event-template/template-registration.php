@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, '_')}`;
                 filePath = `proofs/${uniqueFileName}`;
 
-                const uploadResponse = await fetch(`${SUPABASE_URL}/storage/v1/object/philsan-proof-of-payments/${filePath}`, {
+                const uploadResponse = await fetch(`${SUPABASE_URL}/storage/v1/object/payment_proof/${filePath}`, {
                     method: 'POST',
                     headers: {
                         'apikey': SUPABASE_KEY,
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     certificate_needed,
                     sponsored,
                     sponsor,
-                    payment: filePath,
+                    payment_proof: filePath,
                     reg_request: new Date().toISOString(),
                     reg_status: 'pending'
                 })
