@@ -1424,6 +1424,10 @@ video {
   max-width: 300px;
 }
 
+.max-w-\[380px\] {
+  max-width: 380px;
+}
+
 .max-w-\[400px\] {
   max-width: 400px;
 }
@@ -1434,6 +1438,10 @@ video {
 
 .max-w-\[420px\] {
   max-width: 420px;
+}
+
+.max-w-\[480px\] {
+  max-width: 480px;
 }
 
 .max-w-\[800px\] {
@@ -1845,6 +1853,10 @@ video {
   border-bottom-right-radius: 1rem;
 }
 
+.rounded-br-\[24px\] {
+  border-bottom-right-radius: 24px;
+}
+
 .rounded-br-\[30px\] {
   border-bottom-right-radius: 30px;
 }
@@ -1867,6 +1879,10 @@ video {
 
 .rounded-tl-2xl {
   border-top-left-radius: 1rem;
+}
+
+.rounded-tl-\[24px\] {
+  border-top-left-radius: 24px;
 }
 
 .rounded-tl-\[30px\] {
@@ -2005,6 +2021,16 @@ video {
   border-color: rgb(243 244 246 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
@@ -2017,6 +2043,11 @@ video {
 .border-b-\[\#CCCCCC\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(204 204 204 / var(--tw-border-opacity, 1));
+}
+
+.border-t-\[\#16572A\] {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(22 87 42 / var(--tw-border-opacity, 1));
 }
 
 .border-t-green-600 {
@@ -2097,6 +2128,11 @@ video {
 .bg-\[\#FAEEDA\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 238 218 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#FCEBEB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 235 235 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#FCFCF0\] {
@@ -2302,6 +2338,10 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -2659,6 +2699,14 @@ video {
   padding-bottom: 8px;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -2749,6 +2797,10 @@ video {
 
 .pr-\[20px\] {
   padding-right: 20px;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .pt-\[100px\] {
