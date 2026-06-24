@@ -10,7 +10,7 @@ get_header();
     the_post();
 ?>
 
-<div class="bg-[#f1efe8] min-h-screen w-full relative flex flex-col gap-[20px]">
+<div class="bg-[#f1efe8] min-h-screen w-full relative flex flex-col gap-[20px] pt-[80px]">
     <div class="mx-auto w-[90%] lg:w-[900px]">
         <div class="flex w-[100%] py-[50px]">
             <div class="w-[100%] rounded-lg overflow-hidden shadow-lg grid md:grid-cols-[220px_1fr]" id="registration-wrapper">
@@ -19,9 +19,9 @@ get_header();
                 <div class="hidden md:flex flex-col bg-[#16572A] px-[24px] py-[28px] relative overflow-hidden">
                     <div class="absolute inset-0 opacity-[0.12]" style="background-image: repeating-linear-gradient(115deg, transparent 0px, transparent 18px, #ffffff 18px, #ffffff 19px);"></div>
                     <div class="relative z-[1]">
-                        <div class="w-[120px] mb-[20px]">
+                        <!-- <div class="w-[120px] mb-[20px]">
                             <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Philsan logo" class="w-full" />
-                        </div>
+                        </div> -->
                         <p class="text-[12px] text-[#A9D4B4] mb-[4px]">39th annual convention</p>
                         <p class="text-[17px] font-[500] text-white mb-[28px] leading-[1.3]">Conference registration</p>
                         <div class="flex flex-col gap-[20px]">
@@ -306,6 +306,32 @@ function showFormPanel(email) {
     sponsoredYes?.addEventListener('change', updateSponsorState);
     sponsoredNo?.addEventListener('change', updateSponsorState);
     updateSponsorState();
+
+    async function loadSponsors() {
+        try {
+            const res = await fetch(
+                `${SUPABASE_URL}/rest/v1/sponsors?select=name&order=name.asc`,
+                { headers: { 'apikey': SUPABASE_KEY, 'Content-Type': 'application/json' } }
+            );
+            const data = await res.json();
+            if (Array.isArray(data)) {
+                sponsorSelect.innerHTML = '<option value="">Select sponsor</option>';
+                data.forEach(s => {
+                    const opt = document.createElement('option');
+                    opt.value = s.name;
+                    opt.textContent = s.name;
+                    sponsorSelect.appendChild(opt);
+                });
+                const othersOpt = document.createElement('option');
+                othersOpt.value = 'Others';
+                othersOpt.textContent = 'Others';
+                sponsorSelect.appendChild(othersOpt);
+            }
+        } catch (err) {
+            console.error('Failed to load sponsors:', err);
+        }
+    }
+    loadSponsors();
 
     sponsorSelect?.addEventListener('change', () => {
         if (sponsorSelect.value === 'Others') {

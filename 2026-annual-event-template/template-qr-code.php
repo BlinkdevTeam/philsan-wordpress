@@ -10,7 +10,7 @@ while (have_posts()) {
     the_post();
 ?>
 
-<div class="bg-[#f1efe8] min-h-screen w-full flex items-center justify-center px-4 py-[60px]">
+<div class="bg-[#f1efe8] min-h-screen w-full flex items-center justify-center px-4 py-[60px] pt-[140px]">
     <div class="w-full max-w-[480px]">
 
         <!-- Loading state -->
