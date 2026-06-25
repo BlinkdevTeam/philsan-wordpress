@@ -25,7 +25,7 @@ get_header();
                         <!-- <div class="w-[120px] mb-[20px]">
                             <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Philsan logo" class="w-full" />
                         </div> -->
-                        <p class="text-[12px] text-[#A9D4B4] mb-[4px]">39th annual convention</p>
+                        <p class="text-[12px] text-[#D3AF36] mb-[4px]">39th annual convention</p>
                         <p class="text-[17px] font-[500] text-white mb-[28px] leading-[1.3]">Conference registration</p>
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex gap-[12px]">
@@ -76,7 +76,7 @@ get_header();
                         <?php //include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
                     </div> -->
                     <div class="z-[1] relative">
-                        <h1 class="text-[20px] font-[700] text-[#16572A] mb-[4px] font-fraunces">Register for the convention</h1>
+                        <h1 class="text-[20px] font-[700] text-[#D3AF36] mb-[4px] font-fraunces">Register for the convention</h1>
                         <p class="text-[13px] text-[#5f5e5a] mb-[24px]">Enter your email address and we'll send you a verification link to get started.</p>
                         <div class="flex flex-col gap-[14px]">
                             <div>
@@ -100,7 +100,7 @@ get_header();
                     <div class="w-[56px] h-[56px] rounded-full bg-[#EAF3DE] flex items-center justify-center mb-[16px]">
                         <i class="ti ti-mail-forward text-[26px] text-[#16572A]"></i>
                     </div>
-                    <p class="text-[19px] font-[700] text-[#16572A] mb-[8px] font-fraunces">Check your inbox</p>
+                    <p class="text-[19px] font-[700] text-[#D3AF36] mb-[8px] font-fraunces">Check your inbox</p>
                     <p class="text-[13.5px] text-[#5f5e5a] max-w-[380px] leading-[1.7]" id="link-sent-desc">
                         We sent a verification link to your email. Click the button in the email to continue with your registration.
                     </p>
