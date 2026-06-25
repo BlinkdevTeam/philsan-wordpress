@@ -16,8 +16,11 @@ get_header();
             <div class="w-[100%] rounded-lg overflow-hidden shadow-lg grid md:grid-cols-[220px_1fr]" id="registration-wrapper">
 
                 <!-- Step rail -->
-                <div class="hidden md:flex flex-col bg-[#16572A] px-[24px] py-[28px] relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-[0.12]" style="background-image: repeating-linear-gradient(115deg, transparent 0px, transparent 18px, #ffffff 18px, #ffffff 19px);"></div>
+                <div class="hidden md:flex flex-col bg-[#0F4D91] px-[24px] py-[28px] relative overflow-hidden">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="" class="hidden" />
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
+                    </div>
                     <div class="relative z-[1]">
                         <!-- <div class="w-[120px] mb-[20px]">
                             <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Philsan logo" class="w-full" />
@@ -59,22 +62,36 @@ get_header();
                 </div>
 
                 <!-- Panel 1: Email entry (default) -->
-                <div class="bg-white px-[20px] md:px-[32px] py-[28px]" id="email-entry-panel">
-                    <h1 class="text-[20px] font-[700] text-[#16572A] mb-[4px] font-fraunces">Register for the convention</h1>
-                    <p class="text-[13px] text-[#5f5e5a] mb-[24px]">Enter your email address and we'll send you a verification link to get started.</p>
-                    <div class="flex flex-col gap-[14px]">
-                        <div>
-                            <label for="verify-email-input" class="text-[12.5px] text-[#344054] block mb-[4px]">Email address</label>
-                            <input id="verify-email-input" type="email" required placeholder="your@email.com"
-                                class="w-full p-[10px] rounded-md border-[1px] border-[#339544] text-[14px]" />
-                            <p id="email-exist-msg" class="hidden text-[12px] text-[#A32D2D] mt-[4px]">This email is already registered.</p>
-                            <p id="send-link-error" class="hidden text-[12px] text-[#A32D2D] mt-[4px]"></p>
+                <div class="relative bg-white px-[20px] md:px-[32px] py-[28px] overflow-hidden" id="email-entry-panel">
+                    <div class="absolute right-[-120px] top-[-120px] z-[1]">
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_01.php'; ?>
+                    </div>
+                    <div class="absolute left-[-130px] bottom-[-130px] z-[1]">
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_02.php'; ?>
+                    </div>
+                    <div class="absolute right-[-120px] bottom-[-120px] z-[1]">
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_03.php'; ?>
+                    </div>
+                    <!-- <div class="absolute inset-0 overflow-hidden">
+                        <?php //include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
+                    </div> -->
+                    <div class="z-[1] relative">
+                        <h1 class="text-[20px] font-[700] text-[#16572A] mb-[4px] font-fraunces">Register for the convention</h1>
+                        <p class="text-[13px] text-[#5f5e5a] mb-[24px]">Enter your email address and we'll send you a verification link to get started.</p>
+                        <div class="flex flex-col gap-[14px]">
+                            <div>
+                                <label for="verify-email-input" class="text-[12.5px] text-[#344054] block mb-[4px]">Email address</label>
+                                <input id="verify-email-input" type="email" required placeholder="your@email.com"
+                                    class="w-full p-[10px] rounded-md border-[1px] border-[#339544] text-[14px]" />
+                                <p id="email-exist-msg" class="hidden text-[12px] text-[#A32D2D] mt-[4px]">This email is already registered.</p>
+                                <p id="send-link-error" class="hidden text-[12px] text-[#A32D2D] mt-[4px]"></p>
+                            </div>
+                            <button id="send-link-btn" type="button"
+                                class="inline-flex items-center justify-center gap-[8px] py-[11px] px-[28px] bg-[#16572A] hover:bg-[#EDB221] text-white cursor-pointer rounded-tl-[30px] rounded-br-[30px] text-[14px] font-[500] font-fraunces transition-colors">
+                                Send verification link
+                                <i class="ti ti-send text-[15px]"></i>
+                            </button>
                         </div>
-                        <button id="send-link-btn" type="button"
-                            class="inline-flex items-center justify-center gap-[8px] py-[11px] px-[28px] bg-[#16572A] hover:bg-[#EDB221] text-white cursor-pointer rounded-tl-[30px] rounded-br-[30px] text-[14px] font-[500] font-fraunces transition-colors">
-                            Send verification link
-                            <i class="ti ti-send text-[15px]"></i>
-                        </button>
                     </div>
                 </div>
 
