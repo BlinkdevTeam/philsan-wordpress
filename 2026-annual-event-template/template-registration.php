@@ -16,21 +16,17 @@ get_header();
             <div class="w-[100%] rounded-lg overflow-hidden shadow-lg grid md:grid-cols-[220px_1fr]" id="registration-wrapper">
 
                 <!-- Step rail -->
-                <div class="hidden md:flex flex-col bg-[#0F4D91] px-[24px] py-[28px] relative overflow-hidden">
+                <div class="hidden md:flex flex-col bg-[#0F4D91] px-[24px] py-[28px] relative overflow-hidden self-stretch">
                     <div class="absolute inset-0 overflow-hidden">
-                        <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="" class="hidden" />
                         <?php include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
                     </div>
                     <div class="relative z-[1]">
-                        <!-- <div class="w-[120px] mb-[20px]">
-                            <img src="https://philsan.org/wp-content/uploads/2025/06/Asset-2-1.png" alt="Philsan logo" class="w-full" />
-                        </div> -->
                         <p class="text-[12px] text-[#D3AF36] mb-[4px]">39th annual convention</p>
                         <p class="text-[17px] font-[500] text-white mb-[28px] leading-[1.3]">Conference registration</p>
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex gap-[12px]">
                                 <div class="flex flex-col items-center">
-                                    <div class="w-[26px] h-[26px] rounded-full bg-[#EDB221] text-[#412402] text-[12px] font-[500] flex items-center justify-center shrink-0" id="step-1-circle">1</div>
+                                    <div class="w-[26px] h-[26px] rounded-full bg-[#EDB221] text-[#412402] text-[12px] font-[500] flex items-center justify-center shrink-0 relative z-[10]" id="step-1-circle">1</div>
                                     <div class="w-[1.5px] flex-1 bg-white/25 mt-[6px]"></div>
                                 </div>
                                 <div class="pt-[2px]">
@@ -40,7 +36,7 @@ get_header();
                             </div>
                             <div class="flex gap-[12px]">
                                 <div class="flex flex-col items-center">
-                                    <div class="w-[26px] h-[26px] rounded-full bg-white/15 text-[#A9D4B4] text-[12px] font-[500] flex items-center justify-center shrink-0" id="step-2-circle">2</div>
+                                    <div class="w-[26px] h-[26px] rounded-full bg-white/15 text-[#A9D4B4] text-[12px] font-[500] flex items-center justify-center shrink-0 relative z-[10]" id="step-2-circle">2</div>
                                     <div class="w-[1.5px] flex-1 bg-white/25 mt-[6px]"></div>
                                 </div>
                                 <div class="pt-[2px]">
@@ -50,7 +46,7 @@ get_header();
                             </div>
                             <div class="flex gap-[12px]">
                                 <div class="flex flex-col items-center">
-                                    <div class="w-[26px] h-[26px] rounded-full bg-white/15 text-[#A9D4B4] text-[12px] font-[500] flex items-center justify-center shrink-0" id="step-3-circle">3</div>
+                                    <div class="w-[26px] h-[26px] rounded-full bg-white/15 text-[#A9D4B4] text-[12px] font-[500] flex items-center justify-center shrink-0 relative z-[10]" id="step-3-circle">3</div>
                                 </div>
                                 <div class="pt-[2px]">
                                     <p class="text-[13.5px] font-[500] text-[#A9D4B4] mb-[2px]" id="step-3-label">Under review</p>
@@ -72,10 +68,7 @@ get_header();
                     <div class="absolute right-[-120px] bottom-[-120px] z-[1]">
                         <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_03.php'; ?>
                     </div>
-                    <!-- <div class="absolute inset-0 overflow-hidden">
-                        <?php //include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
-                    </div> -->
-                    <div class="z-[1] relative">
+                    <div class="z-[10] relative">
                         <h1 class="text-[20px] font-[700] text-[#D3AF36] mb-[4px] font-fraunces">Register for the convention</h1>
                         <p class="text-[13px] text-[#5f5e5a] mb-[24px]">Enter your email address and we'll send you a verification link to get started.</p>
                         <div class="flex flex-col gap-[14px]">
@@ -87,9 +80,12 @@ get_header();
                                 <p id="send-link-error" class="hidden text-[12px] text-[#A32D2D] mt-[4px]"></p>
                             </div>
                             <button id="send-link-btn" type="button"
-                                class="inline-flex items-center justify-center gap-[8px] py-[11px] px-[28px] bg-[#16572A] hover:bg-[#EDB221] text-white cursor-pointer rounded-tl-[30px] rounded-br-[30px] text-[14px] font-[500] font-fraunces transition-colors">
-                                Send verification link
-                                <i class="ti ti-send text-[15px]"></i>
+                                class="group relative inline-flex items-center justify-center py-[11px] px-[28px] text-white cursor-pointer text-[14px] font-[500] font-fraunces rounded-md">
+                                <span class="z-[10] relative group-hover:text-[#EDB221] transition-colors">Send verification link</span>
+                                <i class="ti ti-send text-[15px] z-[10] relative group-hover:text-[#EDB221] transition-colors ml-[8px]"></i>
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <?php include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -213,12 +209,40 @@ get_header();
                             </div>
                             <div id="payment-section">
                                 <div class="bg-[#f7f6f1] rounded-md p-[14px] mb-[14px]">
-                                    <p class="text-[12.5px] font-[700] text-[#344054] mb-[6px]">Regular rate <span class="italic font-[300] text-[11px]">(exclusive of tax)</span></p>
+                                    <p class="text-[12.5px] font-[700] text-[#344054] mb-[6px]">Early Bird rate <span class="italic font-[300] text-[11px]">(exclusive of tax)</span></p>
+                                    <p class="text-[12px] text-[#5f5e5a] leading-[1.7]">
+                                        PHILSAN members: <strong class="font-[600]">PHP 6,000/pax</strong><br>
+                                        Non-PHILSAN members: <strong class="font-[600]">PHP 6,500/pax</strong><br>
+                                        Foreigner: <strong class="font-[600]">USD 120/pax</strong><br>
+                                    </p>
+                                </div>
+                                <div class="bg-[#f7f6f1] rounded-md p-[14px] mb-[14px]">
+                                    <p class="text-[12.5px] font-[700] text-[#344054] mb-[6px]">Regular rate<span class="italic font-[300] text-[11px]">(exclusive of tax)</span></p>
                                     <p class="text-[12px] text-[#5f5e5a] leading-[1.7]">
                                         PHILSAN members: <strong class="font-[600]">PHP 6,500/pax</strong><br>
                                         Non-PHILSAN members: <strong class="font-[600]">PHP 7,000/pax</strong><br>
-                                        Foreigner: <strong class="font-[600]">USD 125/pax</strong><br>
+                                        Foreigner: <strong class="font-[600]">USD 130/pax</strong><br>
                                         Students: <strong class="font-[600]">PHP 3,500/pax</strong> with valid Agriculture or VetMed student ID
+                                    </p>
+                                </div>
+                                <div class="bg-[#f7f6f1] rounded-md p-[14px] mb-[14px]">
+                                    <p class="text-[12px] text-[#5f5e5a] leading-[1.7]">
+                                        B.S. Students: <strong class="font-[600]">PHP 3,500/pax</strong> with valid Agriculture or Vet Med student ID
+                                    </p>
+                                    <p class="text-[12px] text-[#5f5e5a] leading-[1.7]">
+                                        <strong class="font-[600]">Rates are exclussive of tax</strong>
+                                    </p>
+                                </div>
+                                <div class="bg-[#f7f6f1] rounded-md p-[14px] mb-[14px]">
+                                    <p class="text-[12.5px] font-[700] text-[#344054] mb-[6px]">Convetion Registration Fee Includes:<span class="italic font-[300] text-[11px]">(exclusive of tax)</span></p>
+                                    <p class="text-[12px] text-[#5f5e5a] leading-[1.7]">
+                                        1. <strong class="font-[600]">Convetion ID Badge</strong><br>
+                                        2. <strong class="font-[600]">Certificatte of Attendance</strong><br>
+                                        3. <strong class="font-[600]">Convention Bag</strong><br>
+                                        4. <strong class="font-[600]">Souvenir</strong><br>
+                                        5. <strong class="font-[600]">Morning and Afternoon Snacks and Coffee</strong><br>
+                                        6. <strong class="font-[600]">Lunch Buffet</strong><br>
+                                        7. <strong class="font-[600]">CPD units certificate (to be confirmed before the convention)</strong><br>
                                     </p>
                                 </div>
                                 <div class="bg-[#f7f6f1] rounded-md p-[14px] mb-[14px]">
@@ -227,6 +251,7 @@ get_header();
                                         Account name: <strong class="font-[600]">Philippine Society of Animal Nutritionists Inc.</strong><br>
                                         Bank: <strong class="font-[600]">Bank of the Philippine Islands (BPI)</strong><br>
                                         PHP account: <strong class="font-[600]">1593-0964-98</strong> &middot; USD account: <strong class="font-[600]">001594-0469-07</strong><br>
+                                        Address: <strong class="font-[600]">Alabang Town Center, Commerce Ave. corner Madrigal Ave., Ayala, Alabang Muntinlupa, 1780, Metro Manila, Philippines</strong>
                                         SWIFT code: <strong class="font-[600]">BOPIPHMM</strong>
                                     </p>
                                 </div>
@@ -246,25 +271,38 @@ get_header();
                             </label>
                         </div>
 
-                        <div class="flex gap-[16px] items-center">
-                            <button id="submit-button" type="submit" class="inline-flex items-center gap-[8px] py-[11px] px-[28px] bg-[#16572A] hover:bg-[#EDB221] text-white cursor-pointer rounded-tl-[30px] rounded-br-[30px] text-[14px] font-[500] font-fraunces">
-                                Submit registration
-                                <i class="ti ti-arrow-right text-[15px]"></i>
-                            </button>
-                            <div id="spinner" class="hidden flex items-center justify-center">
-                                <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-500 border-t-green-600"></div>
+                        <button id="submit-button" type="submit"
+                            class="group relative inline-flex items-center justify-center py-[11px] px-[28px] text-white cursor-pointer text-[14px] font-[500] font-fraunces">
+                            <span class="z-[10] relative group-hover:text-[#EDB221] transition-colors">Submit registration</span>
+                            <i class="ti ti-arrow-right text-[15px] z-[10] relative group-hover:text-[#EDB221] transition-colors ml-[8px]"></i>
+                            <div class="absolute inset-0 overflow-hidden">
+                                <?php include get_stylesheet_directory() . '/2026-annual-event-template/39th-blue-bg.php'; ?>
                             </div>
-                        </div>
+                        </button>
                     </form>
                 </div>
 
                 <!-- Panel 4: Confirmation -->
-                <div class="hidden bg-white px-[20px] md:px-[32px] py-[60px] flex flex-col items-center justify-center text-center" id="confirmation-panel">
+                <div class="relative hidden bg-white px-[20px] md:px-[32px] py-[60px] flex flex-col items-center justify-center text-center overflow-hidden" id="confirmation-panel">
+                    <div class="absolute right-[-150px] top-[-150px] 
+                        md:right-[-120px] md:top-[-120px] z-[1]">
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_01.php'; ?>
+                    </div>
+                    <div class="absolute left-[-160px] bottom-[-160px] 
+                        md:left-[-130px] md:bottom-[-130px] z-[1]">
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_02.php'; ?>
+                    </div>
+                    <div class="absolute right-[-150px] bottom-[-150px] 
+                        md:right-[-120px] md:bottom-[-120px] z-[1]">
+                        <?php include get_stylesheet_directory() . '/2026-annual-event-template/tribal-template_03.php'; ?>
+                    </div>
                     <div class="w-[56px] h-[56px] rounded-full bg-[#EAF3DE] flex items-center justify-center mb-[16px]">
                         <i class="ti ti-mail-opened text-[26px] text-[#16572A]"></i>
                     </div>
-                    <p class="text-[19px] font-[700] text-[#16572A] mb-[8px] font-fraunces">Your registration is under review</p>
-                    <p class="text-[13.5px] text-[#5f5e5a] max-w-[420px] leading-[1.7]">We've received your registration. Our team will review it shortly — once approved, you'll receive another email with your QR code.</p>
+                    <div class="z-[10] relative">
+                        <p class="text-[19px] font-[700] text-[#16572A] mb-[8px] font-fraunces">Your registration is under review</p>
+                        <p class="text-[13.5px] text-[#5f5e5a] max-w-[420px] leading-[1.7]">We've received your registration. Our team will review it shortly — once approved, you'll receive another email with your QR code.</p>
+                    </div>
                 </div>
 
             </div>
@@ -280,6 +318,26 @@ const VERIFY_EMAIL_TOKEN_URL     = `${SUPABASE_URL}/functions/v1/verify-email-to
 
 let verifiedEmail = sessionStorage.getItem('philsan_verified_email') || null;
 
+// Shared class for completed step circles — includes relative + z-[10] so they sit above the SVG bg
+const STEP_DONE_CLASS = 'w-[26px] h-[26px] rounded-full bg-[#0F6E56] text-white text-[12px] font-[500] flex items-center justify-center shrink-0 relative z-[10]';
+const STEP_ACTIVE_CLASS = 'w-[26px] h-[26px] rounded-full bg-[#EDB221] text-[#412402] text-[12px] font-[500] flex items-center justify-center shrink-0 relative z-[10]';
+
+function markStepDone(id) {
+    const el = document.getElementById(id);
+    if (el) {
+        el.innerHTML = '<i class="ti ti-check" style="font-size:14px; color:white; display:flex; align-items:center; justify-content:center;"></i>';
+        el.className = STEP_DONE_CLASS;
+    }
+}
+
+function markStepActive(id) {
+    const el = document.getElementById(id);
+    if (el) {
+        el.classList.remove('bg-white/15', 'text-[#A9D4B4]');
+        el.classList.add('bg-[#EDB221]', 'text-[#412402]', 'relative', 'z-[50]');
+    }
+}
+
 // ─── Show form panel + attach ALL form listeners ───────────────────────────
 function showFormPanel(email) {
     document.getElementById('email-entry-panel').classList.add('hidden');
@@ -287,11 +345,9 @@ function showFormPanel(email) {
     document.getElementById('form-panel').classList.remove('hidden');
     document.getElementById('verified-email-display').textContent = email;
 
-    // Step rail
-    const c1 = document.getElementById('step-1-circle');
-    if (c1) { c1.innerHTML = '<i class="ti ti-check" style="font-size:14px;"></i>'; c1.className = 'w-[26px] h-[26px] rounded-full bg-[#0F6E56] text-white text-[12px] font-[500] flex items-center justify-center shrink-0'; }
-    const c2 = document.getElementById('step-2-circle');
-    if (c2) { c2.classList.remove('bg-white/15','text-[#A9D4B4]'); c2.classList.add('bg-[#EDB221]','text-[#412402]'); }
+    // Step rail — step 1 done, step 2 active
+    markStepDone('step-1-circle');
+    markStepActive('step-2-circle');
     const l2 = document.getElementById('step-2-label');
     if (l2) { l2.classList.remove('text-[#A9D4B4]'); l2.classList.add('text-white'); }
 
@@ -371,7 +427,7 @@ function showFormPanel(email) {
         e.preventDefault();
         if (!verifiedEmail) return;
 
-        spinner.classList.remove('hidden');
+        spinner?.classList.remove('hidden');
 
         const sponsored = document.querySelector('input[name="sponsored"]:checked')?.value || 'no';
         let sponsor = null;
@@ -396,7 +452,7 @@ function showFormPanel(email) {
                 });
                 if (!uploadRes.ok) {
                     alert('File upload failed. Please try again.');
-                    spinner.classList.add('hidden');
+                    spinner?.classList.add('hidden');
                     return;
                 }
                 payment_proof = filePath;
@@ -446,22 +502,22 @@ function showFormPanel(email) {
             }
 
             sessionStorage.removeItem('philsan_verified_email');
-            spinner.classList.add('hidden');
-            document.getElementById('form-panel').classList.add('hidden');
-            document.getElementById('confirmation-panel').classList.remove('hidden');
+            spinner?.classList.add('hidden');
 
-            // Step rail final state
-            ['step-1-circle','step-2-circle'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) { el.innerHTML = '<i class="ti ti-check" style="font-size:14px;"></i>'; el.className = 'w-[26px] h-[26px] rounded-full bg-[#0F6E56] text-white text-[12px] font-[500] flex items-center justify-center shrink-0'; }
-            });
-            const c3 = document.getElementById('step-3-circle');
-            if (c3) { c3.classList.remove('bg-white/15','text-[#A9D4B4]'); c3.classList.add('bg-[#EDB221]','text-[#412402]'); }
+            try {
+                document.getElementById('form-panel')?.classList.add('hidden');
+                document.getElementById('confirmation-panel')?.classList.remove('hidden');
+                markStepDone('step-1-circle');
+                markStepDone('step-2-circle');
+                markStepActive('step-3-circle');
+            } catch(uiErr) {
+                console.error('UI update error:', uiErr.message);
+            }
 
         } catch (err) {
             console.error('Registration error:', err);
             alert('Failed to submit: ' + (err.message || JSON.stringify(err)));
-            spinner.classList.add('hidden');
+            spinner?.classList.add('hidden');
         }
     });
 }
@@ -509,7 +565,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         window.history.replaceState({}, '', window.location.pathname);
-        // Note: NO return here — we continue to attach email entry listeners below
     }
 
     // Email entry panel listeners

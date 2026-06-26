@@ -105,7 +105,7 @@ get_header();
         const spinner = document.getElementById('spinner');
         const email = document.getElementById('email').value;
 
-        spinner.classList.remove('hidden');
+        spinner?.classList.remove('hidden');
 
         // TODO: add verification logic here (e.g. check email, send verification link)
         console.log('Submitted email:', email);

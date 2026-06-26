@@ -1,5 +1,7 @@
 <?php // 39th-blue-bg.php ?>
-<svg viewBox="0 0 596 842" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 596 842" fill="none" xmlns="http://www.w3.org/2000/svg"
+     preserveAspectRatio="xMidYMid slice"
+     style="position:absolute; top:0; left:50%; transform:translateX(-50%); height:100%; width:auto; min-width:100%;">
                                 <g clip-path="url(#clip0_1_658)">
                                 <mask id="mask0_1_658" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-2" y="0" width="598" height="846">
                                 <path d="M595.28 0H-1.04999V845.01H595.28V0Z" fill="white"/>

@@ -220,7 +220,7 @@ get_header();
 
                         let filePath = null;
                         
-                        spinner.classList.remove("hidden");
+                        spinner?.classList.remove("hidden");
                         // Upload file to storage
                         if (file) {
                             const uniqueFileName = `${Date.now()}_${file.name.replace(/\s+/g, "_")}`;
@@ -237,7 +237,7 @@ get_header();
                             })
                             
                             //trigger spinner
-                            spinner.classList.remove("hidden");
+                            spinner?.classList.remove("hidden");
                             if (!uploadResponse.ok) {
                                 alert("File upload failed.");
                                 return;
@@ -277,7 +277,7 @@ get_header();
                             if (!response.ok) {
                                 return response.json().then(error => { throw error });
                             }
-                            spinner.classList.add("hidden");
+                            spinner?.classList.add("hidden");
                             window.location.href = "https://philsan.org/38th-annual-convention/registration-successful/";
                         })
                         .catch(error => {
