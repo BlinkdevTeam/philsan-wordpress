@@ -7,13 +7,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        corben: ['corben', 'sans-serif'], // use as font-shrikhand
+        corben: ['corben', 'sans-serif'],
         fraunces: ['fraunces', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         ibmFlexsans: ['IBM Plex Sans', 'sans-serif'],
         raleway: ['raleway', 'sans-serif'],
-        inter: ['inter', 'sans-serif'] 
-      },
+        inter: ['inter', 'sans-serif'],
+        isidora: ['IsidoraSans', 'sans-serif'],
+        'isidora-alt': ['IsidoraSansAlt', 'sans-serif'],
+        sateria: ['Sateria', 'sans-serif'],
+    },
     },
   },
   plugins: [

@@ -2940,12 +2940,20 @@ video {
   text-align: start;
 }
 
+.\!font-isidora {
+  font-family: IsidoraSans, sans-serif !important;
+}
+
 .font-fraunces {
   font-family: fraunces, sans-serif;
 }
 
 .font-poppins {
   font-family: Poppins, sans-serif;
+}
+
+.\!font-sateria {
+  font-family: Sateria, sans-serif !important;
 }
 
 .text-2xl {
@@ -3060,6 +3068,10 @@ video {
   font-size: 48px;
 }
 
+.text-\[64px\] {
+  font-size: 64px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3083,6 +3095,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[65px\] {
+  font-size: 65px;
 }
 
 .font-\[200\] {
@@ -3175,6 +3191,10 @@ video {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[1\] {
+  line-height: 1;
 }
 
 .tracking-wide {
@@ -3385,6 +3405,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#FBFCFE\] {
+  --tw-text-opacity: 1;
+  color: rgb(251 252 254 / var(--tw-text-opacity, 1));
 }
 
 .underline {
