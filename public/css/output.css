@@ -1,3 +1,357 @@
+/* IsidoraSans */
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-Thin.ttf') format('truetype');
+
+  font-weight: 100;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-ThinItalic.ttf') format('truetype');
+
+  font-weight: 100;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-Light.ttf') format('truetype');
+
+  font-weight: 300;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-LightItalic.ttf') format('truetype');
+
+  font-weight: 300;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-Regular.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-RegularItalic.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-Medium.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-MediumItalic.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-SemiBold.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-SemiBoldItalic.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-Bold.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-BoldItalic.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-Black.ttf') format('truetype');
+
+  font-weight: 900;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSans';
+
+  src: url('./assets/fonts/IsidoraSans-BlackItalic.ttf') format('truetype');
+
+  font-weight: 900;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+/* IsidoraSansAlt */
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-Thin.ttf') format('truetype');
+
+  font-weight: 100;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-ThinItalic.ttf') format('truetype');
+
+  font-weight: 100;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-Light.ttf') format('truetype');
+
+  font-weight: 300;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-LightItalic.ttf') format('truetype');
+
+  font-weight: 300;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-Regular.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-RegularItalic.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-Medium.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-MediumItalic.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-SemiBold.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-SemiBoldItalic.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-Bold.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-BoldItalic.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-Black.ttf') format('truetype');
+
+  font-weight: 900;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IsidoraSansAlt';
+
+  src: url('./assets/fonts/IsidoraSansAlt-BlackItalic.ttf') format('truetype');
+
+  font-weight: 900;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+/* Sateria */
+
+@font-face {
+  font-family: 'Sateria';
+
+  src: url('./assets/fonts/Sateria.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -106,9 +460,7 @@
   --tw-contain-style:  ;
 }
 
-/*
-! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
-*/
+/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -772,6 +1124,26 @@ video {
   top: 20px;
 }
 
+.top-\[-23\%\] {
+  top: -23%;
+}
+
+.right-\[-20px\] {
+  right: -20px;
+}
+
+.bottom-\[-10px\] {
+  bottom: -10px;
+}
+
+.right-\[-5px\] {
+  right: -5px;
+}
+
+.right-\[-10px\] {
+  right: -10px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1068,6 +1440,18 @@ video {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mt-\[-100px\] {
+  margin-top: -100px;
+}
+
+.mt-\[-80\%\] {
+  margin-top: -80%;
+}
+
+.mt-\[-80px\] {
+  margin-top: -80px;
 }
 
 .line-clamp-3 {
@@ -1452,6 +1836,22 @@ video {
   width: 1px;
 }
 
+.w-\[85\%\] {
+  width: 85%;
+}
+
+.w-\[1240px\] {
+  width: 1240px;
+}
+
+.w-\[700px\] {
+  width: 700px;
+}
+
+.w-\[120\%\] {
+  width: 120%;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1736,6 +2136,14 @@ video {
   gap: 8px;
 }
 
+.gap-\[60px\] {
+  gap: 60px;
+}
+
+.gap-\[35px\] {
+  gap: 35px;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1995,6 +2403,10 @@ video {
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-l-\[1px\] {
+  border-left-width: 1px;
 }
 
 .border-solid {
@@ -2279,6 +2691,11 @@ video {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-\[\#0A8E3D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 142 61 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
@@ -2748,6 +3165,26 @@ video {
   padding-bottom: 8px;
 }
 
+.px-\[120px\] {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.px-\[110px\] {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.py-\[150px\] {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -2928,6 +3365,10 @@ video {
   padding-top: 8px;
 }
 
+.pb-\[220px\] {
+  padding-bottom: 220px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2944,16 +3385,16 @@ video {
   font-family: IsidoraSans, sans-serif !important;
 }
 
+.\!font-sateria {
+  font-family: Sateria, sans-serif !important;
+}
+
 .font-fraunces {
   font-family: fraunces, sans-serif;
 }
 
 .font-poppins {
   font-family: Poppins, sans-serif;
-}
-
-.\!font-sateria {
-  font-family: Sateria, sans-serif !important;
 }
 
 .text-2xl {
@@ -3068,8 +3509,8 @@ video {
   font-size: 48px;
 }
 
-.text-\[64px\] {
-  font-size: 64px;
+.text-\[65px\] {
+  font-size: 65px;
 }
 
 .text-base {
@@ -3095,10 +3536,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[65px\] {
-  font-size: 65px;
 }
 
 .font-\[200\] {
@@ -3173,6 +3610,10 @@ video {
   line-height: 1.7;
 }
 
+.leading-\[1\] {
+  line-height: 1;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -3191,10 +3632,6 @@ video {
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.leading-\[1\] {
-  line-height: 1;
 }
 
 .tracking-wide {
@@ -3329,6 +3766,11 @@ video {
   color: rgb(237 178 33 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#FBFCFE\] {
+  --tw-text-opacity: 1;
+  color: rgb(251 252 254 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#a9a9a9\] {
   --tw-text-opacity: 1;
   color: rgb(169 169 169 / var(--tw-text-opacity, 1));
@@ -3407,11 +3849,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#FBFCFE\] {
-  --tw-text-opacity: 1;
-  color: rgb(251 252 254 / var(--tw-text-opacity, 1));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -3445,6 +3882,10 @@ video {
   opacity: 0;
 }
 
+.opacity-\[0\.85\] {
+  opacity: 0.85;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -3475,6 +3916,46 @@ video {
 
 .blur {
   --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.brightness-\[1\.2\] {
+  --tw-brightness: brightness(1.2);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.brightness-\[\.95\] {
+  --tw-brightness: brightness(.95);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.brightness-\[\.85\] {
+  --tw-brightness: brightness(.85);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-\[0_0_10px\] {
+  --tw-drop-shadow: drop-shadow(0 0 10px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-\[0_0_10px_\#888\] {
+  --tw-drop-shadow: drop-shadow(0 0 10px #888);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-\[10px_\#888\] {
+  --tw-drop-shadow: drop-shadow(10px #888);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-\[2px_4px_6px_\#333333\] {
+  --tw-drop-shadow: drop-shadow(2px 4px 6px #333333);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-\[10px_\#333333\] {
+  --tw-drop-shadow: drop-shadow(10px #333333);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -3778,6 +4259,11 @@ p, a, li {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#d3af36\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(211 175 54 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-opacity-70:hover {
   --tw-bg-opacity: 0.7;
 }
@@ -3877,12 +4363,28 @@ p, a, li {
     display: block;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:w-\[280px\] {
     width: 280px;
   }
 
   .sm\:w-\[640px\] {
     width: 640px;
+  }
+
+  .sm\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .sm\:w-auto {
+    width: auto;
+  }
+
+  .sm\:w-\[70\%\] {
+    width: 70%;
   }
 
   .sm\:grid-cols-2 {
@@ -3904,6 +4406,11 @@ p, a, li {
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .sm\:px-\[110px\] {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 
   .sm\:text-left {
@@ -4059,6 +4566,14 @@ p, a, li {
 
   .md\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:w-\[55\%\] {
+    width: 55%;
   }
 
   .md\:max-w-\[90\%\] {
@@ -4227,6 +4742,11 @@ p, a, li {
   .md\:py-\[50px\] {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .md\:px-\[110px\] {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 
   .md\:pb-\[0px\] {
@@ -4450,6 +4970,14 @@ p, a, li {
     width: 100%;
   }
 
+  .lg\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .lg\:w-\[85\%\] {
+    width: 85%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -4491,6 +5019,11 @@ p, a, li {
   .lg\:py-\[0px\] {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .lg\:px-\[20px\] {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .lg\:pb-\[160px\] {
@@ -4537,12 +5070,32 @@ p, a, li {
     font-size: 38px;
   }
 
+  .lg\:text-\[65px\] {
+    font-size: 65px;
+  }
+
   .lg\:text-\[left\] {
     color: left;
   }
 }
 
 @media (min-width: 1280px) {
+  .xl\:visible {
+    visibility: visible;
+  }
+
+  .xl\:bottom-auto {
+    bottom: auto;
+  }
+
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:h-\[150px\] {
     height: 150px;
   }
@@ -4563,6 +5116,30 @@ p, a, li {
     width: 800px;
   }
 
+  .xl\:w-\[1240px\] {
+    width: 1240px;
+  }
+
+  .xl\:w-\[700px\] {
+    width: 700px;
+  }
+
+  .xl\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .xl\:w-\[45\%\] {
+    width: 45%;
+  }
+
+  .xl\:w-\[650px\] {
+    width: 650px;
+  }
+
+  .xl\:gap-\[60px\] {
+    gap: 60px;
+  }
+
   .xl\:text-\[18px\] {
     font-size: 18px;
   }
@@ -4574,4 +5151,12 @@ p, a, li {
   .xl\:text-\[64px\] {
     font-size: 64px;
   }
+
+  .xl\:text-\[65px\] {
+    font-size: 65px;
+  }
+}
+
+.\[\&\>p\]\:mb-3>p {
+  margin-bottom: 0.75rem;
 }

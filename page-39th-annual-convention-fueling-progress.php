@@ -7,7 +7,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <div class="w-full max-w-screen overflow-x-hidden min-h-screen flex flex-col justify-center items-center gap-20 -mt-8 pb-8">
+    <div class="w-full max-w-screen overflow-x-hidden min-h-screen flex flex-col items-center">
         <?php get_template_part('39th-event-page/hero-section'); ?>
     </div>
     <?php wp_footer(); ?>
