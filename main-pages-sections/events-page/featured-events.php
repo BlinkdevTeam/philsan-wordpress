@@ -9,9 +9,8 @@
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                     <?php
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                        $description        = get_the_content();
-                        $description        = wp_strip_all_tags($description);
-                        $desc_trimmed       = mb_strimwidth($description, 0, 250, '...');
+                        $description        = wp_strip_all_tags(get_the_content());
+                        $desc_trimmed       = mb_strimwidth($description, 0, 25000, '...');
                         $date               = get_field('date');
                         $date_to            = get_field('date_to');
                         $categories         = get_the_terms(get_the_ID(), 'category-filters');
@@ -92,7 +91,7 @@
 
                                     <!-- Description -->
                                     <p class="text-[15px] text-[#444444] font-[400] text-left leading-relaxed">
-                                        <?php echo esc_html($desc_trimmed); ?>
+                                        <?php echo nl2br(esc_html($desc_trimmed)); ?>
                                     </p>
                                 </div>
 
@@ -137,15 +136,11 @@
     <div class="md:hidden mt-[-170px] custom-container">
         <div class="swiper featuredEventsMobile w-[100%]">
             <div class="swiper-wrapper">
-                <?php
-                    // rewind so the mobile loop works after the desktop loop above
-                    $featured->rewind_posts();
-                ?>
+                <?php $featured->rewind_posts(); ?>
                 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                     <?php
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                        $description        = get_the_content();
-                        $description        = wp_strip_all_tags($description);
+                        $description        = wp_strip_all_tags(get_the_content());
                         $desc_trimmed       = mb_strimwidth($description, 0, 180, '...');
                         $date               = get_field('date');
                         $categories         = get_the_terms(get_the_ID(), 'category-filters');
@@ -201,7 +196,7 @@
 
                                 <!-- Description -->
                                 <p class="text-[13px] text-[#444444] font-[400] leading-relaxed">
-                                    <?php echo esc_html($desc_trimmed); ?>
+                                    <?php echo nl2br(esc_html($desc_trimmed)); ?>
                                 </p>
 
                                 <!-- Social media -->
