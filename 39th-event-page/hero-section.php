@@ -106,10 +106,33 @@
         </div>
     </div>
     <div class="sm:hidden absolute right-[-20px] brightness-[.85] drop-shadow-[10px_#333333] z-[1] w-[120%] bottom-[-10px]">
-        <?php $main_element_url = wp_get_attachment_url(1187); ?>
+        <?php $main_element_url_compressed = wp_get_attachment_url(1219); ?>
 
-        <?php if ($main_element_url) : ?>
-            <img src="<?php echo esc_url($main_element_url); ?>" alt="" class="relative w-full h-full z-[1]">
+        <?php if ($main_element_url_compressed) : ?>
+            <img src="<?php echo esc_url($main_element_url_compressed); ?>" alt="" class="relative w-full h-full z-[1]">
         <?php endif; ?>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.aboutImageSlider', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    });
+</script>
