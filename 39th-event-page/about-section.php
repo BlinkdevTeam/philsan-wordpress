@@ -15,7 +15,7 @@
     
 ?>
 
-<div class="w-full py-[80px] bg-[#FFF9E6]">
+<div class="w-full pt-[40px] pb-[40px] md:pt-[80px] md:pb-[80px] bg-[#FFF9E6]">
     <div class="flex w-[90%] xl:w-[1240px] mx-auto">
         <div class="flex flex-col lg:flex-row gap-[60px] items-start w-full">
 
@@ -78,23 +78,17 @@
                     if ( $title_icon ) : ?>
                         <img src="<?php echo esc_url($title_icon); ?>" alt="" class="w-[36px] h-auto object-contain flex-shrink-0">
                     <?php endif; ?>
-                    <h2 class="text-[28px] md:text-[32px] font-[700] text-[#1F773A] leading-snug">
-                        <?php echo esc_html($header ?: 'About the Conference'); ?>
+                    <h2 class="text-[24px] md:text-[32px] font-[700] text-[#1F773A] leading-snug">
+                        About the Conference
                     </h2>
                 </div>
 
                 <!-- Body content -->
-                <?php if ( $content ) : ?>
-                    <div class="text-[15px] text-[#444444] leading-[1.75] [&>p]:mb-3">
-                        <?php echo wp_kses_post(wpautop($content)); ?>
-                    </div>
-                <?php else : ?>
-                    <div class="flex flex-col gap-[12px] text-[15px] text-[#444444] leading-[1.75]">
-                        <p>The Philippine Society of Animal Nutritionists will hold its <strong class="text-[#1F773A]">38th Annual Convention</strong> on September 30, 2025, from 8:00am to 6:00pm at Okada Manila, Parañaque City, Metro Manila.</p>
-                        <p>Theme: <span class="text-[#0A8E3D] italic">"Innovating for a Sustainable Future: Harnessing Technologies and Alternative Solutions in Animal Nutrition and Health."</span></p>
-                        <p>This year's theme focuses on continuous innovation tied with sustainability, cutting-edge technologies and alternative approaches to improve animal nutrition and health — attended by nutritionists, agriculturists, academicians, veterinarians, and stakeholders in livestock, poultry, ruminants, pets and aquatic industries.</p>
-                    </div>
-                <?php endif; ?>
+                <div class="flex flex-col gap-[12px] text-[12px] md:text-[14px] text-[#444444] leading-[1.75]">
+                    <p>The Philippine Society of Animal Nutritionists will hold its <strong class="text-[#1F773A]">38th Annual Convention</strong> on September 30, 2025, from 8:00am to 6:00pm at Okada Manila, Parañaque City, Metro Manila.</p>
+                    <p>Theme: <span class="text-[#0A8E3D] italic">"Innovating for a Sustainable Future: Harnessing Technologies and Alternative Solutions in Animal Nutrition and Health."</span></p>
+                    <p>This year's theme focuses on continuous innovation tied with sustainability, cutting-edge technologies and alternative approaches to improve animal nutrition and health — attended by nutritionists, agriculturists, academicians, veterinarians, and stakeholders in livestock, poultry, ruminants, pets and aquatic industries.</p>
+                </div>
 
                 <!-- Stats -->
                 <div class="flex flex-wrap gap-[12px] pt-[4px]">

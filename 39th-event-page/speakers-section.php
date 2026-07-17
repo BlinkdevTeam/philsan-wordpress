@@ -1,6 +1,6 @@
-<div class="w-full py-[80px] bg-[#FFF9E6]">
+<div class="w-full pt-[40px] pb-[40px] md:pt-[80px] md:pb-[80px] bg-[#FFF9E6]">
     <div class="flex flex-col gap-[20px] w-[90%] xl:w-[1240px] mx-auto">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center gap-[20px]">
             <!-- Heading with optional icon -->
             <div class="flex items-center gap-[10px]">
                 <?php
@@ -8,26 +8,28 @@
                 if ( $title_icon ) : ?>
                     <img src="<?php echo esc_url($title_icon); ?>" alt="" class="w-[36px] h-auto object-contain flex-shrink-0">
                 <?php endif; ?>
-                <h2 class="text-[28px] md:text-[32px] font-[700] text-[#1F773A] leading-snug">
-                    <?php echo esc_html($header ?: 'Speakers'); ?>
+                <h2 class="text-[24px] md:text-[32px] font-[700] text-[#1F773A] leading-snug">
+                    Speakers
                 </h2>
             </div>
-            <p class="text-center">PHILSAN is an annual convention held in the Philippines that brings together people from all walks of life to celebrate their passions and share ideas. Our goal is to create an environment of collaboration and inclusivity that is open to everyone.</p>
-            <p class="text-center">At PHILSAN, you will find inspiring speakers, exciting activities, and unique experiences that are sure to leave a lasting impression. We invite you to join us in our mission of connecting people and fostering meaningful conversations.</p>
+            <div class="flex flex-col gap-[10px]">
+                <p class="text-center text-[12px] md:text-[16px]">PHILSAN is an annual convention held in the Philippines that brings together people from all walks of life to celebrate their passions and share ideas. Our goal is to create an environment of collaboration and inclusivity that is open to everyone.</p>
+                <p class="text-center text-[12px] md:text-[16px]">At PHILSAN, you will find inspiring speakers, exciting activities, and unique experiences that are sure to leave a lasting impression. We invite you to join us in our mission of connecting people and fostering meaningful conversations.</p>
+            </div>
         </div>
         <div>
             <?php if (have_rows('speaker_group')) : ?>
 
-                <div class="w-full flex flex-col gap-20 pt-[50px]">
+                <div class="w-full flex flex-col gap-[20px] pt-[20px] md:pt-[50px]">
 
                     <?php while (have_rows('speaker_group')) : the_row();
                         $group_title = get_sub_field('speaker_group_title');
                     ?>
 
-                    <div class="flex flex-col justify-center items-center gap-16">
+                    <div class="flex flex-col justify-center items-center">
 
                         <?php if ($group_title) : ?>
-                            <h2 class="text-4xl text-black font-bold mb-2"><?php echo esc_html($group_title); ?></h2>
+                            <h2 class="text-[24px] md:text-[36px] text-[#1F773A] font-bold"><?php echo esc_html($group_title); ?></h2>
                         <?php endif; ?>
 
                         <?php if (have_rows('speaker')) : ?>
@@ -52,7 +54,7 @@
                                     <div
                                         role="button"
                                         tabindex="0"
-                                        class="speaker-card flex flex-col justify-between pt-[50px] relative w-[303px] h-[373px] text-center items-center cursor-pointer bg-[#ffffff] overflow-hidden rounded-lg"
+                                        class="speaker-card flex flex-col justify-center md:justify-between pt-[30px] md:pt-[50px] relative w-[90%] sm:w-[303px] h-[280px] md:h-[373px] text-center items-center cursor-pointer bg-[#ffffff] overflow-hidden rounded-lg"
                                         data-image="<?php echo esc_url($img); ?>"
                                         data-name="<?php echo esc_attr($name); ?>"
                                         data-position="<?php echo esc_attr($position); ?>"
@@ -60,12 +62,12 @@
                                         data-url="<?php echo esc_url($url); ?>"
                                     >
 
-                                        <div class="absolute h-[150px] w-[100%] overflow-hidden top-0">
+                                        <div class="absolute h-[100px] md:h-[150px] w-[100%] overflow-hidden top-0">
                                             <img src="<?php echo esc_url($tribal); ?>" alt="" class="inset-0 w-full h-fit z-0 top-0">
                                         </div>
 
                                         <?php if ($img) : ?>
-                                            <div class="relative rounded-full w-[180px] h-[180px] overflow-hidden bg-[#ECECEC] border border-[4px] border-[#ffffff]">
+                                            <div class="relative rounded-full w-[120px] md:w-[180px] h-[120px] md:h-[180px] overflow-hidden bg-[#ECECEC] border border-[4px] border-[#ffffff]">
                                                 <img
                                                     src="<?php echo esc_url($img); ?>"
                                                     alt="<?php echo esc_attr($name); ?>"
@@ -77,10 +79,10 @@
                                         <div class="flex flex-col gap-[20px] bottom-0 justify-between items-center w-full">
                                             <div class="px-[10px]">
                                                 <?php if ($name) : ?>
-                                                    <h3 class="text-[18px] font-bold text-[#0A8E3D]"><?php echo esc_html($name); ?></h3>
+                                                    <h3 class="text-[14px] md:text-[18px] font-bold text-[#0A8E3D]"><?php echo esc_html($name); ?></h3>
                                                 <?php endif; ?>
                                                 <?php if ($position) : ?>
-                                                    <p class="text-[16px] text-[#2B2B2B]"><?php echo esc_html($position); ?></p>
+                                                    <p class="text-[12px] md:text-[16px] text-[#2B2B2B]"><?php echo esc_html($position); ?></p>
                                                 <?php endif; ?>
                                             </div>
 
