@@ -93,7 +93,8 @@
                     </div>
                 </div>
             </div>
-            <a class="flex items-center justify-center bg-[#0A8E3D] rounded-lg w-[100%] sm:w-auto px-0 sm:px-[110px] py-[10px] cursor-pointer hover:bg-[#d3af36] transition-all duration-200 ease-out"  href="">
+            <a class="flex items-center justify-center bg-[#0A8E3D] rounded-lg w-[100%] sm:w-auto px-0 sm:px-[110px] py-[10px] cursor-pointer hover:bg-[#d3af36] transition-all duration-200 ease-out"  
+                href="https://philsan.org/39th-annual-convention/verify-email/">
                 <p class="text-[#ffffff]">Register Now</p>
             </a>
         </div>
