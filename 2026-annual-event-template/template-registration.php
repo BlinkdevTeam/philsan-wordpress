@@ -153,6 +153,19 @@ get_header();
                             <label for="agri_license" class="text-[12.5px] text-[#344054] block mb-[4px]">Agriculturist license number <span class="italic text-[#888780]">(enter "N/A" if not applicable)</span></label>
                             <input id="agri_license" name="agri_license" type="text" required placeholder="License number" class="w-full p-[10px] rounded-md border-[1px] border-[#339544]" />
                         </div>
+                        <div class="mb-[20px]">
+                            <label for="age" class="text-[12.5px] text-[#344054] block mb-[4px]">Age</label>
+                            <select id="age" name="age" required class="w-full p-[10px] rounded-md border-[1px] border-[#339544] text-[14px]">
+                                <option value="">Select age range</option>
+                                <option value="20_and_below">20 and below</option>
+                                <option value="21_30">21 – 30</option>
+                                <option value="31_40">31 – 40</option>
+                                <option value="41_50">41 – 50</option>
+                                <option value="51_60">51 – 60</option>
+                                <option value="61_70">61 – 70</option>
+                                <option value="71_and_above">71 and above</option>
+                            </select>
+                        </div>
 
                         <!-- Attendance preferences -->
                         <div class="border-t border-[#e5e3da] pt-[18px] mb-[18px]">
@@ -475,6 +488,7 @@ function showFormPanel(email) {
                     company:            document.getElementById('company').value,
                     position:           document.getElementById('position').value,
                     agri_license:       document.getElementById('agri_license').value,
+                    age:                document.getElementById('age').value,
                     membership:         document.querySelector('input[name="membership"]:checked')?.value || null,
                     souvenir:           document.querySelector('input[name="souvenir"]:checked')?.value || null,
                     certificate_needed: document.querySelector('input[name="certificate_needed"]:checked')?.value || null,
