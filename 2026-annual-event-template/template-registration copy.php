@@ -1,6 +1,6 @@
 <?php 
 /*
-*Template Name: Complete Registration Test
+*Template Name: Complete Registration
 *Template Post Type: page, 39th-convention
 */
 
@@ -246,20 +246,6 @@ get_header();
                                         <strong class="font-[600]">Rates are exclussive of tax</strong>
                                     </p>
                                 </div>
-                                <div class="mb-[20px]">
-                                    <label class="flex items-center gap-[8px] text-[13px] text-[#344054]">
-                                        <input id="is_student" name="is_student" type="checkbox" class="w-auto border-[#339544]" />
-                                        I am a student registering at the student rate
-                                    </label>
-                                </div>
-                                <div id="student-id-field" class="hidden mb-[20px]">
-                                    <label for="student_id_file" class="text-[12.5px] text-[#344054] block mb-[4px]">Upload your student ID</label>
-                                    <label for="student_id_file" id="student-upload-area" class="flex flex-col items-center justify-center gap-[6px] w-full p-[18px] rounded-md border-dashed border-[1.5px] border-[#339544] bg-white cursor-pointer text-center">
-                                        <i class="ti ti-upload text-[20px] text-[#339544]"></i>
-                                        <span id="student-upload-text" class="text-[13px] text-[#344054]">Upload your student ID (front, clearly showing your name and school)</span>
-                                    </label>
-                                    <input name="student_id_file" id="student_id_file" type="file" class="hidden" accept="image/*,.pdf" />
-                                </div>
                                 <div class="bg-[#f7f6f1] rounded-md p-[14px] mb-[14px]">
                                     <p class="text-[12.5px] font-[700] text-[#344054] mb-[6px]">Convetion Registration Fee Includes:<span class="italic font-[300] text-[11px]">(exclusive of tax)</span></p>
                                     <p class="text-[12px] text-[#5f5e5a] leading-[1.7]">
@@ -387,30 +373,6 @@ function showFormPanel(email) {
     const sponsorSelect    = document.getElementById('sponsor_name');
     const sponsorOther     = document.getElementById('sponsor_name_other');
     const spinner          = document.getElementById('spinner');
-    const isStudentCheckbox = document.getElementById('is_student');
-    const studentIdField     = document.getElementById('student-id-field');
-    const studentIdInput     = document.getElementById('student_id_file');
-
-    // Student ID upload toggle
-    function updateStudentState() {
-        if (isStudentCheckbox && isStudentCheckbox.checked) {
-            studentIdField.classList.remove('hidden');
-            studentIdInput.setAttribute('required', 'true');
-        } else {
-            studentIdField.classList.add('hidden');
-            studentIdInput.removeAttribute('required');
-            studentIdInput.value = '';
-            document.getElementById('student-upload-text').textContent =
-                'Upload your student ID (front, clearly showing your name and school)';
-        }
-    }
-    isStudentCheckbox?.addEventListener('change', updateStudentState);
-    updateStudentState();
-
-    studentIdInput?.addEventListener('change', () => {
-        document.getElementById('student-upload-text').textContent =
-            studentIdInput.files.length > 0 ? `Selected: ${studentIdInput.files[0].name}` : 'Upload your student ID (front, clearly showing your name and school)';
-    });
 
     // Sponsor toggle
     function updateSponsorState() {
@@ -509,34 +471,6 @@ function showFormPanel(email) {
                 payment_proof = filePath;
             }
 
-            let student_id_photo = null;
-            const isStudent = !!(isStudentCheckbox && isStudentCheckbox.checked);
-            const studentFile = studentIdInput?.files[0];
-
-            if (isStudent) {
-                if (!studentFile) {
-                    alert('Please upload your student ID.');
-                    spinner?.classList.add('hidden');
-                    return;
-                }
-                const studentFilePath = `student_ids/${Date.now()}_${studentFile.name.replace(/\s+/g, '_')}`;
-                const studentUploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/student_ids/${studentFilePath}`, {
-                    method: 'POST',
-                    headers: {
-                        'apikey': SUPABASE_KEY,
-                        'Authorization': `Bearer ${SUPABASE_KEY}`,
-                        'Content-Type': studentFile.type
-                    },
-                    body: studentFile
-                });
-                if (!studentUploadRes.ok) {
-                    alert('Student ID upload failed. Please try again.');
-                    spinner?.classList.add('hidden');
-                    return;
-                }
-                student_id_photo = studentFilePath;
-            }
-
             const insertRes = await fetch(`${SUPABASE_URL}/rest/v1/participants`, {
                 method: 'POST',
                 headers: {
@@ -561,8 +495,6 @@ function showFormPanel(email) {
                     sponsored,
                     sponsor,
                     payment_proof,
-                    is_student: isStudent,
-                    student_id_photo,
                     reg_status: 'pending'
                 })
             });
