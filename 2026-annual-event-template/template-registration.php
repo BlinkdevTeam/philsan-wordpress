@@ -187,6 +187,7 @@ get_header();
                                 <div class="flex flex-wrap gap-[14px] text-[13px] text-[#344054]">
                                     <label class="flex items-center gap-[6px]"><input type="radio" name="souvenir" value="no" class="w-auto border-[#339544]" required>No</label>
                                     <label class="flex items-center gap-[6px]"><input type="radio" name="souvenir" value="digital" class="w-auto border-[#339544]">Digital copy (USB drive, limited slots)</label>
+                                    <label class="flex items-center gap-[6px]"><input type="radio" name="souvenir" value="printed" class="w-auto border-[#339544]">Printed (limited slots)</label>
                                 </div>
                             </div>
                             <div>
@@ -291,11 +292,34 @@ get_header();
                         </div>
 
                         <!-- Agreement -->
-                        <div class="flex items-start gap-[10px] mb-[20px]">
-                            <input id="agreement" name="agreement" type="checkbox" required class="w-[18px] h-[18px] mt-[2px] border-[1px] border-[#339544]" />
-                            <label for="agreement" class="text-[11.5px] text-[#5f5e5a] leading-[1.6]">
-                                I confirm my participation is voluntary and that the information provided is true and correct. I agree to the processing of my personal data under the PHILSAN Data Privacy Statement and the Data Privacy Act of 2012, and I allow PHILSAN to use photos and videos of me taken during the event for convention-related purposes only.
-                            </label>
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="flex flex-col gap-[10px] text-[11.5px] leading-[1.6]">
+                                <div class="flex flex-col gap-[5px]">
+                                    <strong>Processing of Personal Data</strong>
+                                    
+                                    <span>The personal information being collected, which may include your name, contact numbers, email address, home and office address, photos, and the like, may be used for (1) sending notifications/updates; and (2) other similar activities, in connection with the events and upcoming events that the <span class="font-semibold">Philippine Society of Animal Nutritionists Inc</span>. will organize. For the purpose of informing and/or inviting the data subject to any other events, promotions, and other activities of the **Philippine Society of Animal Nutritionists Inc.**</span>
+                                </div>
+
+                                <div class="flex flex-col gap-[5px]">
+                                    <strong>Data Protection</strong>
+
+                                    <span>We shall implement reasonable and appropriate organizational, physical, and technical security measures for the protection of personal information which we collected. Only authorized personnel are permitted and have access to the collected information, who will treat any confidential information under strict confidentiality.</br> In case of breach, <span> class="font-semibold"Philippine Society of Animal Nutritionists Inc</span>. shall notify you and inform the National Privacy Commission (NPC) in accordance with the NPC Circular 16-03 or Personal Data Breach Management. Personal information collected are stored and later on disposed of via shredding and permanently deleted in our electronic files in accordance with R.A. No. 9470, otherwise known as the National Archives of the Philippines Act of 2007.</span>
+                                </div>
+
+                                <div class="flex flex-col gap-[5px]">
+                                    <strong>Rights of the Data Subject</strong>
+
+                                    <span>As the Data Subject, you have the right to be informed of the personal information being collected, processed, and stored by the <span class="font-semibold">Philippine Society of Animal Nutritionists Inc</span>., as well as to access, object, rectify, and block the same. For questions or concerns, you may contact our company officer through the following details: <span class="font-semibold">admin@philsan.org</span>.</span>
+
+                                    <span>I have read this form, understood its contents, and consent to the processing of my personal data. I understand that my consent does not preclude the existence of other criteria for lawful processing of personal data and does not waive any of my rights under the Data Privacy Act of 2012 and other applicable laws. Checking the "I agree" box below means you agree and you consent to the <span class="font-semibold">Philippine Society of Animal Nutritionists Inc</span>. collecting your data:</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[10px] mb-[20px]">
+                                <input id="agreement" name="agreement" type="checkbox" required class="w-[18px] h-[18px] mt-[2px] border-[1px] border-[#339544]" />
+                                <label for="agreement" class="text-[11.5px] text-[#5f5e5a] leading-[1.6]">
+                                    <span>I Agree</span>
+                                </label>
+                            </div>
                         </div>
 
                         <button id="submit-button" type="submit"
@@ -711,3 +735,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 get_footer(); 
 
 ?>
+
+

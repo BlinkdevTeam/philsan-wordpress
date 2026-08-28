@@ -1469,6 +1469,10 @@ video {
   display: grid;
 }
 
+.contents {
+  display: contents;
+}
+
 .hidden {
   display: none;
 }
@@ -1513,6 +1517,10 @@ video {
   height: 100vh;
 }
 
+.h-\[120px\] {
+  height: 120px;
+}
+
 .h-\[150px\] {
   height: 150px;
 }
@@ -1527,6 +1535,10 @@ video {
 
 .h-\[18px\] {
   height: 18px;
+}
+
+.h-\[20\%\] {
+  height: 20%;
 }
 
 .h-\[200px\] {
@@ -1631,18 +1643,6 @@ video {
   height: 100vh;
 }
 
-.h-\[36px\] {
-  height: 36px;
-}
-
-.h-\[20\%\] {
-  height: 20%;
-}
-
-.h-\[120px\] {
-  height: 120px;
-}
-
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -1701,6 +1701,10 @@ video {
 
 .w-\[120\%\] {
   width: 120%;
+}
+
+.w-\[120px\] {
+  width: 120px;
 }
 
 .w-\[1280px\] {
@@ -1849,14 +1853,6 @@ video {
   width: 1px;
 }
 
-.w-\[120px\] {
-  width: 120px;
-}
-
-.w-\[150px\] {
-  width: 150px;
-}
-
 .min-w-\[180px\] {
   min-width: 180px;
 }
@@ -1864,10 +1860,6 @@ video {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
-}
-
-.min-w-\[150px\] {
-  min-width: 150px;
 }
 
 .max-w-4xl {
@@ -2164,10 +2156,6 @@ video {
 
 .gap-\[8px\] {
   gap: 8px;
-}
-
-.gap-\[100px\] {
-  gap: 100px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -3389,6 +3377,10 @@ video {
   padding-top: 3px;
 }
 
+.pt-\[40px\] {
+  padding-top: 40px;
+}
+
 .pt-\[4px\] {
   padding-top: 4px;
 }
@@ -3411,10 +3403,6 @@ video {
 
 .pt-\[8px\] {
   padding-top: 8px;
-}
-
-.pt-\[40px\] {
-  padding-top: 40px;
 }
 
 .text-left {
@@ -3580,10 +3568,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[36px\] {
-  font-size: 36px;
 }
 
 .font-\[200\] {
@@ -3917,11 +3901,6 @@ video {
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
-}
-
-.text-\[\#FFFFFF\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -4310,11 +4289,6 @@ p, a, li {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-\[\#155c2a\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 92 42 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-opacity-70:hover {
   --tw-bg-opacity: 0.7;
 }
@@ -4422,6 +4396,10 @@ p, a, li {
     width: 280px;
   }
 
+  .sm\:w-\[303px\] {
+    width: 303px;
+  }
+
   .sm\:w-\[50\%\] {
     width: 50%;
   }
@@ -4436,10 +4414,6 @@ p, a, li {
 
   .sm\:w-auto {
     width: auto;
-  }
-
-  .sm\:w-\[303px\] {
-    width: 303px;
   }
 
   .sm\:grid-cols-2 {
@@ -4527,6 +4501,14 @@ p, a, li {
     height: 2.5rem;
   }
 
+  .md\:h-\[150px\] {
+    height: 150px;
+  }
+
+  .md\:h-\[180px\] {
+    height: 180px;
+  }
+
   .md\:h-\[250px\] {
     height: 250px;
   }
@@ -4537,6 +4519,10 @@ p, a, li {
 
   .md\:h-\[320px\] {
     height: 320px;
+  }
+
+  .md\:h-\[373px\] {
+    height: 373px;
   }
 
   .md\:h-\[400px\] {
@@ -4563,18 +4549,6 @@ p, a, li {
     height: auto;
   }
 
-  .md\:h-\[373px\] {
-    height: 373px;
-  }
-
-  .md\:h-\[150px\] {
-    height: 150px;
-  }
-
-  .md\:h-\[180px\] {
-    height: 180px;
-  }
-
   .md\:min-h-\[600px\] {
     min-height: 600px;
   }
@@ -4589,6 +4563,10 @@ p, a, li {
 
   .md\:w-\[100px\] {
     width: 100px;
+  }
+
+  .md\:w-\[180px\] {
+    width: 180px;
   }
 
   .md\:w-\[200px\] {
@@ -4637,14 +4615,6 @@ p, a, li {
 
   .md\:w-\[90\%\] {
     width: 90%;
-  }
-
-  .md\:w-\[180px\] {
-    width: 180px;
-  }
-
-  .md\:w-\[303px\] {
-    width: 303px;
   }
 
   .md\:min-w-\[150px\] {
@@ -4699,6 +4669,10 @@ p, a, li {
     gap: 3rem;
   }
 
+  .md\:gap-\[10px\] {
+    gap: 10px;
+  }
+
   .md\:gap-\[20px\] {
     gap: 20px;
   }
@@ -4717,10 +4691,6 @@ p, a, li {
 
   .md\:gap-\[80px\] {
     gap: 80px;
-  }
-
-  .md\:gap-\[10px\] {
-    gap: 10px;
   }
 
   .md\:rounded-none {
@@ -4852,8 +4822,16 @@ p, a, li {
     padding-bottom: 50px;
   }
 
+  .md\:pb-\[80px\] {
+    padding-bottom: 80px;
+  }
+
   .md\:pl-6 {
     padding-left: 1.5rem;
+  }
+
+  .md\:pl-\[10px\] {
+    padding-left: 10px;
   }
 
   .md\:pr-6 {
@@ -4892,20 +4870,8 @@ p, a, li {
     padding-top: 70px;
   }
 
-  .md\:pb-\[80px\] {
-    padding-bottom: 80px;
-  }
-
   .md\:pt-\[80px\] {
     padding-top: 80px;
-  }
-
-  .md\:pl-\[10px\] {
-    padding-left: 10px;
-  }
-
-  .md\:pb-\[10px\] {
-    padding-bottom: 10px;
   }
 
   .md\:text-center {
@@ -4946,6 +4912,10 @@ p, a, li {
     font-size: 32px;
   }
 
+  .md\:text-\[36px\] {
+    font-size: 36px;
+  }
+
   .md\:text-\[38px\] {
     font-size: 38px;
   }
@@ -4974,10 +4944,6 @@ p, a, li {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[36px\] {
-    font-size: 36px;
   }
 
   .md\:text-\[\#ffffff\] {
