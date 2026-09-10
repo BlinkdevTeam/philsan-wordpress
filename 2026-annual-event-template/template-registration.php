@@ -689,12 +689,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             const checkRes = await fetch(
-                `${SUPABASE_URL}/rest/v1/participants?select=email&email=ilike.${encodeURIComponent(email)}`,
+                `${SUPABASE_URL}/rest/v1/participants?select=email,reg_status&email=ilike.${encodeURIComponent(email)}`,
                 { headers: { 'apikey': SUPABASE_KEY, 'Content-Type': 'application/json' } }
             );
             const existing = await checkRes.json();
             if (existing && existing.length > 0) {
-                document.getElementById('email-exist-msg').classList.remove('hidden');
+                const msgEl = document.getElementById('email-exist-msg');
+
+                // Prefer surfacing a pending/approved match if one exists;
+                // otherwise fall back to whatever status the most recent row has.
+                const activeMatch = existing.find(
+                    (row) => row.reg_status === 'pending' || row.reg_status === 'approved'
+                );
+                const status = activeMatch ? activeMatch.reg_status : existing[0].reg_status;
+
+                if (status === 'pending') {
+                    msgEl.textContent = 'This email has already been used and is currently under review.';
+                } else if (status === 'approved') {
+                    msgEl.textContent = 'This email is already registered and approved.';
+                } else if (status === 'rejected' || status === 'canceled') {
+                    msgEl.textContent = 'This email has already been used, but the registration was rejected or canceled. Please contact PHILSAN for more info.';
+                } else {
+                    msgEl.textContent = 'This email is already registered.';
+                }
+
+                msgEl.classList.remove('hidden');
                 return;
             }
 
@@ -735,5 +754,3 @@ document.addEventListener('DOMContentLoaded', async () => {
 get_footer(); 
 
 ?>
-
-
