@@ -14,7 +14,7 @@
                         <p class="text-[16px] md:text-[22px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
                     </div>
                     <div class="flex pt-[10px] md:pt-[30px]">
-                        <?php echo theme_button("More Topics", "/"); ?>
+                        <?php echo theme_button("More Topics", "/news"); ?>
                     </div>
             </div>
 

@@ -1,192 +1,149 @@
 <?php
-    $events = new WP_Query(array(
-        "post_type" => "event",
-        "posts_per_page" => 5,
-        'order' => 'ASC',     
-    ));
+$today = date('Ymd');
+
+// Upcoming event — next 1 future event
+$upcoming_query = new WP_Query(array(
+    'post_type'      => 'event',
+    'posts_per_page' => 1,
+    'meta_key'       => 'date',
+    'meta_value'     => $today,
+    'meta_compare'   => '>=',
+    'orderby'        => 'meta_value',
+    'order'          => 'ASC',
+    'meta_type'      => 'DATE',
+));
+
+// Recent events — 3 most recent past events
+$recent_query = new WP_Query(array(
+    'post_type'      => 'event',
+    'posts_per_page' => 3,
+    'meta_key'       => 'date',
+    'meta_value'     => $today,
+    'meta_compare'   => '<',
+    'orderby'        => 'meta_value',
+    'order'          => 'DESC',
+    'meta_type'      => 'DATE',
+));
+
+$title_icon = wp_get_attachment_url(1220);
 ?>
-<div class="bg-[#ffffff]">
-    <div class="custom-container mx-auto event-section pt-[50px] md:pt-[100px] pb-[50px]">
-        <div class="">
-            <div class="gsap-container flex flex-col md:flex-row justify-between items-start">
-                <div class="gsap-fade-up">
-                    <h2 class="text-[24px] md:text-[48px] text-[#1F773A] font-[700]">Our Recent Events</h2>
-                    <p class="text-[16px] md:text-[22px] font-[400] text-left md:text-center">Find stories through a selection of our key strategic topics</p>
+
+<div class="w-full py-[80px]">
+    <div class="w-[90%] xl:w-[1240px] mx-auto flex flex-col gap-[60px]">
+
+        <!-- Upcoming Event -->
+        <?php if ($upcoming_query->have_posts()) : ?>
+            <div class="flex flex-col gap-[20px]">
+                <div class="flex items-center gap-[10px]">
+                    <h2 class="text-[28px] md:text-[32px] font-[700] text-[#1F773A] leading-snug">Upcoming event</h2>
                 </div>
-                 <div class="gsap-fade-up flex pt-[10px]">
-                    <?php echo theme_button("See More", "/"); ?>
-                </div>
-            </div>
 
-            <!-- desktop  -->
-            <div class="gsap-container hidden lg:flex flex-col gap-[50px] pt-[50px]">
-                <?php if ($events->have_posts()) : ?>
-                    <?php $count = 0; ?>
-                    
-                    <div class="gsap-fade-up flex gap-[50px]"> <!-- First row -->
-                    <?php while ($events->have_posts()) : $events->the_post(); ?>
-                        <?php
-                            $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                            $description    = get_the_content();
-                            $description    = wp_strip_all_tags($description);
-                            $location       = get_field("location");
-                            $date           = get_field("date");
-                            $max_length     = 10;
+                <?php while ($upcoming_query->have_posts()) : $upcoming_query->the_post();
+                    $event_date     = get_field('date');
+                    $event_location = get_field('event_location');
+                    $event_time     = get_field('event_time');
+                    $thumbnail      = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                ?>
+                    <a href="<?php echo esc_url(get_permalink()); ?>"
+                       class="group flex flex-col md:flex-row gap-[24px] bg-white rounded-xl overflow-hidden shadow-sm border border-[#e5e3da] hover:shadow-md transition-shadow">
 
-                            // Reformat the date
-                            if ($date) {
-                                $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
-                            } else {
-                                $formatted_date = '';
-                            }
-
-                            if (strlen($location) > $max_length) {
-                                $short_location = substr($location, 0, $max_length) . '...';
-                            } else {
-                                $short_location = $location;
-                            }
-                        ?>
-
-                        <div class="flex flex-col gap-[20px] <?php echo $count < 2 ? 'w-1/2' : 'w-1/3'; ?>">
-                            <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
+                        <?php if ($thumbnail) : ?>
+                            <div class="md:w-[380px] h-[220px] md:h-auto flex-shrink-0 overflow-hidden">
+                                <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php the_title_attribute(); ?>"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
-                            <div class="flex gap-[10px]">
-                                <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                    <div class="w-fit">
-                                        <svg width="22" height="23" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="#646464"/>
-                                            <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
-                                        </svg>
-                                    </div>
-                                    
-                                    <!-- Shortened text -->
-                                    <p class="text-[16px] font-[300] text-[#646464]">
-                                        <?php echo esc_html($short_location); ?>
-                                    </p>
+                        <?php endif; ?>
 
-                                    <!-- Tooltip on hover -->
-                                    <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-white text-black text-sm px-3 py-2 rounded-lg shadow-lg w-max max-w-[300px]">
-                                        <?php echo esc_html($location); ?>
+                        <div class="flex flex-col justify-center gap-[12px] p-[24px] md:pl-0">
+                            <span class="text-[12px] font-[500] text-[#1F773A] bg-[#EAF3DE] px-[12px] py-[4px] rounded-full w-fit">
+                                Upcoming
+                            </span>
+                            <h3 class="text-[22px] md:text-[26px] font-[700] text-[#1F773A] leading-snug group-hover:underline">
+                                <?php the_title(); ?>
+                            </h3>
+                            <div class="flex flex-col gap-[6px] text-[13.5px] text-[#5f5e5a]">
+                                <?php if ($event_date) : ?>
+                                    <div class="flex items-center gap-[8px]">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#1F773A] flex-shrink-0"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                        <span><?php echo esc_html(date('F j, Y', strtotime($event_date))); ?></span>
                                     </div>
-                                </div>
-                                <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                    <div class="w-fit">
-                                        <svg width="22" height="23" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+                                <?php endif; ?>
+                                <?php if ($event_time) : ?>
+                                    <div class="flex items-center gap-[8px]">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#1F773A] flex-shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        <span><?php echo esc_html($event_time); ?></span>
                                     </div>
-                                    <p class="text-[16px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-[10px]">
-                                <h2 class="text-[18px] font-[800]"><?php the_title(); ?></h2>
-                                <?php if($count > 1 ) : ?>
-                                    <p class="text-[18px] font-[300]"><?php echo esc_html($description); ?></p>
-                                <?php else: ?>
-                                    <p class="text-[22px] font-[300]"><?php echo esc_html($description); ?></p>
+                                <?php endif; ?>
+                                <?php if ($event_location) : ?>
+                                    <div class="flex items-center gap-[8px]">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#1F773A] flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                        <span><?php echo esc_html($event_location); ?></span>
+                                    </div>
+                                <?php endif; ?>
+                                <?php
+                                $content = get_the_content();
+                                if ($content) : ?>
+                                    <div class="text-[13.5px] text-[#5f5e5a] leading-[1.7]">
+                                        <?php echo wp_kses_post(wpautop($content)); ?>
+                                    </div>
                                 <?php endif; ?>
                             </div>
-                            <a href="" class="flex items-center w-fit text-[#EDB221] font-[800]">
-                                Explore More
-                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 13L7 7L1 1" stroke="#EDB221" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
+                            <span class="text-[13px] font-[500] text-[#1F773A] mt-[4px]">View details →</span>
                         </div>
-
-                        <?php
-                            $count++;
-                            // Close first row after 2 items and open second row
-                            if ($count === 2) {
-                                echo '</div>'; // close first row
-                                echo '<div class="flex gap-[50px] pt-[20px]">'; // open second row
-                            }
-                        ?>
-                    <?php endwhile; ?>
-                    </div> <!-- Close second row -->
-
-                    <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
+                    </a>
+                <?php endwhile; wp_reset_postdata(); ?>
             </div>
+        <?php endif; ?>
 
-            <!-- mobile -->
-            <div class="gsap-container block  pt-[20px] lg:hidden">
-                <?php if ($events->have_posts()) : ?>
-                    <div class="gsap-fade-up swiper mobile-swiper">
-                        <div class="swiper-wrapper">
-                            <?php while ($events->have_posts()) : $events->the_post(); ?>
-                                <?php
-                                    $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                                    $description    = get_the_content();
-                                    $description    = wp_strip_all_tags($description);
-                                    $location       = get_field("location");
-                                    $date           = get_field("date");
-                                    $max_length     = 10;
+        <!-- Recent Events -->
+        <?php if ($recent_query->have_posts()) : ?>
+            <div class="flex flex-col gap-[20px]">
+                <div class="flex items-center justify-between gap-[10px]">
+                    <h2 class="text-[28px] md:text-[32px] font-[700] text-[#1F773A] leading-snug">Recent events</h2>
+                    <?php echo theme_button("More Events", "/events"); ?>
+                </div>
 
-                                    // Reformat the date
-                                    if ($date) {
-                                        $formatted_date = DateTime::createFromFormat('m/d/Y', $date)->format('F j, Y');
-                                    } else {
-                                        $formatted_date = '';
-                                    }
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+                    <?php while ($recent_query->have_posts()) : $recent_query->the_post();
+                        $event_date     = get_field('date');
+                        $event_location = get_field('event_location');
+                        $thumbnail      = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
+                    ?>
+                        <a href="<?php echo esc_url(get_permalink()); ?>"
+                           class="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-[#e5e3da] hover:shadow-md transition-shadow">
 
-                                    if (strlen($location) > $max_length) {
-                                        $short_location = substr($location, 0, $max_length) . '...';
-                                    } else {
-                                        $short_location = $location;
-                                    }
-                                ?>
-                                <div class="swiper-slide">
-                                    <div class="flex flex-col gap-[20px]">
-                                        <div class="relative w-full h-[200px] md:h-[280px] lg:h-[350px] overflow-hidden rounded-tl-2xl rounded-br-2xl">
-                                            <div class="bg-[#000000] opacity-[0.4] w-full h-full absolute top-0 left-0 z-[1]"></div>
-                                            <img class="w-full h-full object-cover" src="<?php echo esc_url($featured_image_url); ?>" alt="event image">
-                                        </div>
-                                        <div class="flex gap-[5px]">
-                                            <div class="group relative flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                                <div class="w-fit">
-                                                    <svg width="20" height="21" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M6.00009 7.6281C6.99926 7.6281 7.80926 6.81811 7.80926 5.81894C7.80926 4.81976 6.99926 4.00977 6.00009 4.00977C5.00091 4.00977 4.19092 4.81976 4.19092 5.81894C4.19092 6.81811 5.00091 7.6281 6.00009 7.6281Z" stroke="#646464"/>
-                                                        <path d="M1.14076 4.76331C2.28309 -0.258299 9.72272 -0.252501 10.8593 4.7691C11.5261 7.7148 9.69373 10.2082 8.08751 11.7506C6.92199 12.8756 5.07803 12.8756 3.90671 11.7506C2.30629 10.2082 0.473924 7.70901 1.14076 4.76331Z" stroke="#646464"/>
-                                                    </svg>
-                                                </div>
-                                                
-                                                <!-- Shortened text -->
-                                                <p class="text-[14px] font-[300] text-[#646464]">
-                                                    <?php echo esc_html($short_location); ?>
-                                                </p>
-                                            </div>
-                                            <div class="flex items-center gap-[10px] w-fit py-[10px] px-[20px] rounded-full bg-[#F3F3F3]">
-                                                <div class="w-fit">
-                                                    <svg width="20" height="21" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.22222 1V3.2M3.77778 1V3.2M1 5.4H11M2.11111 2.1H9.88889C10.5025 2.1 11 2.59249 11 3.2V10.9C11 11.5075 10.5025 12 9.88889 12H2.11111C1.49746 12 1 11.5075 1 10.9V3.2C1 2.59249 1.49746 2.1 2.11111 2.1Z" stroke="#646464" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </div>
-                                                <p class="text-[14px] font-[300] text-[#646464]"><?php echo esc_html($formatted_date); ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col gap-[10px] items-left">
-                                            <h2 class="text-[14px] font-[800] text-left"><?php the_title(); ?></h2>
-                                            <p class="text-[16px] font-[300] text-left"><?php echo esc_html($description); ?></p>
-                                        </div>
-                                        <a href="" class="flex items-center gap-[10px] w-fit text-[#EDB221] font-[800]">
-                                            <span class="text-[14px]">Explore More</span>
-                                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 13L7 7L1 1" stroke="#EDB221" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </a>
+                            <div class="h-[180px] overflow-hidden bg-[#EAF3DE]">
+                                <?php if ($thumbnail) : ?>
+                                    <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php the_title_attribute(); ?>"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <?php else : ?>
+                                    <div class="w-full h-full flex items-center justify-center">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1F773A" stroke-width="1.5" opacity="0.4"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                     </div>
-                                </div>
-                            <?php endwhile; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="flex flex-col gap-[8px] p-[20px]">
+                                <?php if ($event_date) : ?>
+                                    <span class="text-[11.5px] text-[#888780]">
+                                        <?php echo esc_html(date('F j, Y', strtotime($event_date))); ?>
+                                    </span>
+                                <?php endif; ?>
+                                <h3 class="text-[22px] font-[600] text-[#1F773A] leading-snug group-hover:underline line-clamp-2">
+                                    <?php the_title(); ?>
+                                </h3>
+                                <?php if ($event_location) : ?>
+                                    <p class="text-[12.5px] text-[#5f5e5a] flex items-center gap-[6px]">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                        <?php echo esc_html($event_location); ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                        </a>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
+
     </div>
 </div>
-
-
-    
