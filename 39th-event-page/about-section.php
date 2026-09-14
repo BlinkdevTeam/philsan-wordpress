@@ -85,9 +85,9 @@
 
                 <!-- Body content -->
                 <div class="flex flex-col gap-[12px] text-[12px] md:text-[14px] text-[#444444] leading-[1.75]">
-                    <p>The Philippine Society of Animal Nutritionists will hold its <strong class="text-[#1F773A]">38th Annual Convention</strong> on September 30, 2025, from 8:00am to 6:00pm at Okada Manila, Parañaque City, Metro Manila.</p>
-                    <p>Theme: <span class="text-[#0A8E3D] italic">"Innovating for a Sustainable Future: Harnessing Technologies and Alternative Solutions in Animal Nutrition and Health."</span></p>
-                    <p>This year's theme focuses on continuous innovation tied with sustainability, cutting-edge technologies and alternative approaches to improve animal nutrition and health — attended by nutritionists, agriculturists, academicians, veterinarians, and stakeholders in livestock, poultry, ruminants, pets and aquatic industries.</p>
+                    <p>The Philippine Society of Animal Nutritionists will hold its <strong class="text-[#1F773A]">39th Annual Convention</strong> on 𝐎𝐜𝐭𝐨𝐛𝐞𝐫 6, 2026, at the Grand Ballroom of Okada Manila, Parañaque City, Metro Manila.</p>
+                    <p>Theme: <span class="text-[#0A8E3D] italic">"Fueling Progress: Shaping Animal Nutrition for a Competitive and Sustainable Future."</span></p>
+                    <p>Elevate your knowledge, connect with industry leaders, and boost your competence to tackle tomorrow's challenges.</p>
                 </div>
 
                 <!-- Stats -->

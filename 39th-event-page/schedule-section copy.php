@@ -20,158 +20,47 @@
             <p class="w-[100%] md:w-[70%] text-[#ffffff] text-[12px] md:text-[16px]">At PHILSAN, you will find inspiring speakers, exciting activities, and unique experiences that are sure to leave a lasting impression. We invite you to join us in our mission of connecting people and fostering meaningful conversations.</p>
         </div>
 
-        <?php
-            // Collect all groups first while ACF context is active
-            $program_groups = [];
-            if (have_rows('program_group')) :
-                while (have_rows('program_group')) : the_row();
-                    $programs = [];
-                    if (have_rows('program')) :
-                        while (have_rows('program')) : the_row();
-                            $titles = [];
-                            if (have_rows('program_title')) :
-                                while (have_rows('program_title')) : the_row();
-                                    $titles[] = get_sub_field('title');
-                                endwhile;
-                            endif;
-                            $speakers = [];
-                            if (have_rows('program_speaker')) :
-                                while (have_rows('program_speaker')) : the_row();
-                                    $speakers[] = get_sub_field('speaker');
-                                endwhile;
-                            endif;
-                            $descriptions = [];
-                            if (have_rows('program_description')) :
-                                while (have_rows('program_description')) : the_row();
-                                    $descriptions[] = get_sub_field('description');
-                                endwhile;
-                            endif;
-                            $programs[] = [
-                                'time'         => get_sub_field('program_time'),
-                                'titles'       => $titles,
-                                'speakers'     => $speakers,
-                                'descriptions' => $descriptions,
-                            ];
-                        endwhile;
-                    endif;
-                    $program_groups[] = [
-                        'tab'      => get_sub_field('tab'),
-                        'title'    => get_sub_field('program_group_title'),
-                        'programs' => $programs,
-                    ];
-                endwhile;
-            endif;
-
-            // Group consecutive tab groups into tab sets, preserving order
-            // Result: array of items, each either a normal group or a tab_set (array of tab groups)
-            $ordered = [];
-            $i = 0;
-            while ($i < count($program_groups)) {
-                $group = $program_groups[$i];
-                if ($group['tab']) {
-                    // Collect all consecutive tab groups into one tab set
-                    $tab_set = [];
-                    while ($i < count($program_groups) && $program_groups[$i]['tab']) {
-                        $tab_set[] = $program_groups[$i];
-                        $i++;
-                    }
-                    $ordered[] = ['type' => 'tab_set', 'groups' => $tab_set];
-                } else {
-                    $ordered[] = ['type' => 'normal', 'group' => $group];
-                    $i++;
-                }
-            }
-
-            $tab_set_counter = 0;
-            ?>
-
-            <?php foreach ($ordered as $item) : ?>
-
-                <?php if ($item['type'] === 'normal') :
-                    $group = $item['group']; ?>
-                    <div class="pt-[20px] md:pt-[50px]">
-                        <?php if ($group['title']) : ?>
-                            <h3 class="text-[18px] md:text-[24px] font-[700] text-[#ffffff] leading-snug mb-[10px]">
-                                <?php echo esc_html($group['title']); ?>
+        <?php if (have_rows('program_group')) : ?>
+            <?php while (have_rows('program_group')) : the_row(); ?>
+                <div class="pt-[20px] md:pt-[50px]">
+                        <?php if(get_sub_field('program_group_title')) : ?>
+                            <h3 class="text-[18px] md:text-[24px] font-[700] text-[#ffffff] leading-snug">
+                                <?php echo esc_html(get_sub_field('program_group_title')); ?>
                             </h3>
                         <?php endif; ?>
-                        <?php if (!empty($group['programs'])) : ?>
+                        <?php if (have_rows('program')) : ?>
                             <div class="flex flex-col gap-[5px] md:gap-[10px]">
-                                <?php foreach ($group['programs'] as $program) : ?>
+                                <?php while (have_rows('program')) : the_row(); ?>
                                     <div class="bg-[#0F4D91] border-[1px] border-[#ffffff] rounded-lg">
                                         <div class="flex flex-col md:flex-row items-left md:items-center w-[100%] py-[10px] px-[20px]">
                                             <div class="flex items-center md:min-w-[150px] pr-[10px] pb-[10px] md:pb-[0px]">
-                                                <p class="text-center font-bold text-[14px] text-[#ffffff]"><?php echo esc_html($program['time']); ?></p>
+                                                <p class="text-center font-bold text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
                                             </div>
                                             <div class="md:pl-[10px] md:border-l-[1px] border-[#ffffff]">
-                                                <?php foreach ($program['titles'] as $title) : ?>
-                                                    <p class="font-bold text-[16px] md:text-[18px] text-[#ffffff]"><?php echo esc_html($title); ?></p>
-                                                <?php endforeach; ?>
-                                                <?php foreach ($program['speakers'] as $speaker) : ?>
-                                                    <p class="font-bold text-[12px] md:text-[14px] text-[#ffedc0]"><?php echo esc_html($speaker); ?></p>
-                                                <?php endforeach; ?>
-                                                <?php foreach ($program['descriptions'] as $desc) : ?>
-                                                    <p class="font-[200] text-[12px] md:text-[14px] text-[#ffffff]"><?php echo esc_html($desc); ?></p>
-                                                <?php endforeach; ?>
+                                                <?php if (have_rows('program_title')) : ?>
+                                                    <?php while (have_rows('program_title')) : the_row(); ?>
+                                                        <p class="font-bold text-[16px] md:text-[18px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?> 
+                                                <?php if (have_rows('program_speaker')) : ?>
+                                                    <?php while (have_rows('program_speaker')) : the_row(); ?>
+                                                        <p class="font-bold text-[12px] md:text-[14px] text-[#ffedc0]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?> 
+                                                <?php if (have_rows('program_description')) : ?>
+                                                    <?php while (have_rows('program_description')) : the_row(); ?>
+                                                        <p class="font-[200] text-[12px] md:text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?> 
                                             </div>
                                         </div>
                                     </div>
-                                <?php endforeach; ?>
+                                <?php endwhile; ?>
                             </div>
-                        <?php endif; ?>
-                    </div>
-
-                <?php elseif ($item['type'] === 'tab_set') :
-                    $set_id = 'tabset-' . $tab_set_counter++;
-                ?>
-                    <div class="pt-[20px] md:pt-[50px]">
-                        <!-- Tab buttons -->
-                        <div class="flex flex-wrap gap-[8px] mb-[20px]">
-                            <?php foreach ($item['groups'] as $tab_index => $group) : ?>
-                                <button
-                                    class="program-tab-btn px-[16px] py-[8px] rounded-lg text-[14px] font-[600] border-[1px] transition-colors duration-200 <?php echo $tab_index === 0 ? 'bg-white text-[#0F4D91] border-white' : 'bg-transparent text-white border-white/50 hover:border-white'; ?>"
-                                    data-target="<?php echo $set_id . '-panel-' . $tab_index; ?>"
-                                    data-set="<?php echo $set_id; ?>">
-                                    <?php echo esc_html($group['title']); ?>
-                                </button>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <!-- Tab panels -->
-                        <?php foreach ($item['groups'] as $tab_index => $group) : ?>
-                            <div id="<?php echo $set_id . '-panel-' . $tab_index; ?>"
-                                class="program-tab-panel <?php echo $tab_index !== 0 ? 'hidden' : ''; ?>">
-                                <?php if (!empty($group['programs'])) : ?>
-                                    <div class="flex flex-col gap-[5px] md:gap-[10px]">
-                                        <?php foreach ($group['programs'] as $program) : ?>
-                                            <div class="bg-[#0F4D91] border-[1px] border-[#ffffff] rounded-lg">
-                                                <div class="flex flex-col md:flex-row items-left md:items-center w-[100%] py-[10px] px-[20px]">
-                                                    <div class="flex items-center md:min-w-[150px] pr-[10px] pb-[10px] md:pb-[0px]">
-                                                        <p class="text-center font-bold text-[14px] text-[#ffffff]"><?php echo esc_html($program['time']); ?></p>
-                                                    </div>
-                                                    <div class="md:pl-[10px] md:border-l-[1px] border-[#ffffff]">
-                                                        <?php foreach ($program['titles'] as $title) : ?>
-                                                            <p class="font-bold text-[16px] md:text-[18px] text-[#ffffff]"><?php echo esc_html($title); ?></p>
-                                                        <?php endforeach; ?>
-                                                        <?php foreach ($program['speakers'] as $speaker) : ?>
-                                                            <p class="font-bold text-[12px] md:text-[14px] text-[#ffedc0]"><?php echo esc_html($speaker); ?></p>
-                                                        <?php endforeach; ?>
-                                                        <?php foreach ($program['descriptions'] as $desc) : ?>
-                                                            <p class="font-[200] text-[12px] md:text-[14px] text-[#ffffff]"><?php echo esc_html($desc); ?></p>
-                                                        <?php endforeach; ?>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-
-                <?php endif; ?>
-
-        <?php endforeach; ?>
+                        <?php endif; ?> 
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?> 
     </div>
     <div class="absolute w-[100%] top-0">
         <svg width="100%" height="auto" viewBox="0 0 1728 1519" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -195,30 +84,3 @@
         class="hidden lg:block absolute bottom-0 left-0 w-fit h-[20%] object-cover z-0"
     >
 </div>
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.program-tab-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            const target  = this.dataset.target;
-            const setId   = this.dataset.set;
-
-            // Update buttons within this tab set only
-            document.querySelectorAll('[data-set="' + setId + '"]').forEach(function (b) {
-                b.classList.remove('bg-white', 'text-[#0F4D91]', 'border-white');
-                b.classList.add('bg-transparent', 'text-white', 'border-white/50');
-            });
-            this.classList.add('bg-white', 'text-[#0F4D91]', 'border-white');
-            this.classList.remove('bg-transparent', 'text-white', 'border-white/50');
-
-            // Show/hide panels within this tab set only
-            document.querySelectorAll('[id^="' + setId + '-panel-"]').forEach(function (panel) {
-                panel.classList.add('hidden');
-            });
-            document.getElementById(target).classList.remove('hidden');
-        });
-    });
-});
-</script>

@@ -2525,6 +2525,15 @@ video {
   border-color: transparent;
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.border-white\/50 {
+  border-color: rgb(255 255 255 / 0.5);
+}
+
 .border-b-\[\#CCCCCC\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(204 204 204 / var(--tw-border-opacity, 1));
@@ -2750,6 +2759,10 @@ video {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-opacity-50 {
@@ -3922,6 +3935,11 @@ video {
   color: rgb(255 255 255 / 0.8);
 }
 
+.text-\[\#0F4D91\] {
+  --tw-text-opacity: 1;
+  color: rgb(15 77 145 / var(--tw-text-opacity, 1));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -4287,6 +4305,11 @@ p, a, li {
   .wpforms-field {
     margin-bottom: 0px !important;
   }
+}
+
+.hover\:border-white:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-\[\#17452A\]:hover {
