@@ -43,8 +43,10 @@ $title_icon = wp_get_attachment_url(1220);
                     $event_location = get_field('event_location');
                     $event_time     = get_field('event_time');
                     $thumbnail      = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                    $button_link    = get_field('button_link');
+                    $link           = $button_link ? $button_link : "/events";
                 ?>
-                    <a href="<?php echo esc_url(get_permalink()); ?>"
+                    <a href="<?php echo esc_url($link); ?>"
                        class="group flex flex-col md:flex-row gap-[24px] bg-white rounded-xl overflow-hidden shadow-sm border border-[#e5e3da] hover:shadow-md transition-shadow">
 
                         <?php if ($thumbnail) : ?>

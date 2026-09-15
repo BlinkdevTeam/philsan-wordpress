@@ -1,111 +1,25 @@
 <div class="relative flex flex-col justify-center relative w-full pt-[150px] pb-[220px] overflow-hidden">
-    <?php $bg_url = wp_get_attachment_url(1216); ?>
-    <?php $gear_1_url = wp_get_attachment_url(1293); // biggest gear ?>
-    <?php $gear_2_url = wp_get_attachment_url(1295); // mid gear ?>
-    <?php $gear_3_url = wp_get_attachment_url(1294); // smallest gear ?>
+    <?php $bg_url = wp_get_attachment_url(1216); ?> 
+    <?php $bg_no_gear = wp_get_attachment_url(1218); ?> 
+    <?php $tribal_bg_url = wp_get_attachment_url(1186); ?>
 
      <?php if ($bg_url) : ?>
         <img src="<?php echo esc_url($bg_url); ?>" alt="" class="absolute inset-0 w-full h-full object-cover z-[0]">
     <?php endif; ?>
+    
+    <!-- <?php //if ($bg_url) : ?>
+        <img src="<?php //echo esc_url($bg_url); ?>" alt="" class="hidden sm:block absolute inset-0 w-full h-full object-cover z-[0]">
+    <?php //endif; ?> -->
 
-    <!-- Rotating gears — positioned as % of the hero container so they scale
-    with responsive/object-cover background sizing. Adjust top/left/width
-    per gear to line them up exactly over the artwork. -->
-   <div class="absolute inset-0 w-full h-full z-[0] pointer-events-none">
-        <?php if ($gear_1_url) : // biggest gear, top-center of cluster ?>
-            <img src="<?php echo esc_url($gear_1_url); ?>" alt=""
-                class="absolute gear-spin gear-spin-cw big-gear">
-        <?php endif; ?>
+    <!-- <?php //if ($bg_no_gear) : ?>
+        <img src="<?php //echo esc_url($bg_no_gear); ?>" alt="" class="sm:hidden absolute inset-0 w-full h-full object-cover z-[0]">
+    <?php //endif; ?> -->
 
-        <?php if ($gear_2_url) : // mid gear, lower-left of cluster ?>
-            <img src="<?php echo esc_url($gear_2_url); ?>" alt=""
-                class="absolute gear-spin gear-spin-ccw mid-gear">
-        <?php endif; ?>
 
-        <?php if ($gear_3_url) : // smallest gear, bottom-right of cluster ?>
-            <img src="<?php echo esc_url($gear_3_url); ?>" alt=""
-                class="absolute gear-spin gear-spin-cw small-gear">
-        <?php endif; ?>
-    </div>
 
-    <style>
-        .gear-spin {
-            transform-origin: center center;
-            will-change: transform;
-        }
-        .gear-spin-cw {
-            animation: gear-rotate-cw 16s linear infinite;
-        }
-        .gear-spin-ccw {
-            animation: gear-rotate-ccw 12s linear infinite;
-        }
-        .big-gear {
-            top: 6%;
-            right: 40%;
-            width: 12%;
-        }
-        .mid-gear {
-            top: 17%;
-            right: 35%;
-            width: 11%;
-        }
-        .small-gear {
-            top: 24%;
-            right: 45%;
-            width: 10%;
-            animation-duration: 9s;
-        }
-        @keyframes gear-rotate-cw {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
-        }
-        @keyframes gear-rotate-ccw {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(-360deg); }
-        }
-        @media (max-width: 1080px) {
-            .big-gear {
-                top: 13%;
-                right: 40%;
-            }
-            .mid-gear {
-                top: 24%;
-                right: 35%;
-            }
-            .small-gear {
-                top: 28%;
-                right: 45%;
-            }
-        }
-        @media (max-width: 720px) {
-            .big-gear {
-                top: 63%;
-                right: 85%;
-            }
-            .mid-gear {
-                top: 68%;
-                right: 77%;
-            }
-            .small-gear {
-                top: 70%;
-                right: 88%;
-            }
-        }
-        @media (max-width: 480px) {
-            .big-gear {
-                top: 63%;
-                right: 85%;
-            }
-            .mid-gear {
-                top: 68%;
-                right: 77%;
-            }
-            .small-gear {
-                top: 70%;
-                right: 88%;
-            }
-        }
-    </style>
+    <!-- <?php //if ($tribal_bg_url) : ?>
+        <img src="<?php //echo esc_url($tribal_bg_url); ?>" alt="" class="absolute inset-0 w-full h-full object-cover z-[1] w-[85%] ml-auto">
+    <?php //endif; ?> -->
 
     <div class="flex w-[90%] xl:w-[1240px] lg:px-[20px] mx-auto relative gap-[10px]">
         <div class="relative z-[2] flex flex-col justify-center items-start text-start gap-[35px] md:gap-[40px] xl:gap-[60px] w-[100%] xl:w-[45%] drop-shadow-[2px_4px_6px_#333333] mt-[-80px]">
