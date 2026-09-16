@@ -23,41 +23,47 @@
         <?php if (have_rows('program_group')) : ?>
             <?php while (have_rows('program_group')) : the_row(); ?>
                 <div class="pt-[20px] md:pt-[50px]">
-                        <?php if(get_sub_field('program_group_title')) : ?>
-                            <h3 class="text-[18px] md:text-[24px] font-[700] text-[#ffffff] leading-snug">
-                                <?php echo esc_html(get_sub_field('program_group_title')); ?>
-                            </h3>
-                        <?php endif; ?>
-                        <?php if (have_rows('program')) : ?>
-                            <div class="flex flex-col gap-[5px] md:gap-[10px]">
-                                <?php while (have_rows('program')) : the_row(); ?>
-                                    <div class="bg-[#0F4D91] border-[1px] border-[#ffffff] rounded-lg">
-                                        <div class="flex flex-col md:flex-row items-left md:items-center w-[100%] py-[10px] px-[20px]">
-                                            <div class="flex items-center md:min-w-[150px] pr-[10px] pb-[10px] md:pb-[0px]">
-                                                <p class="text-center font-bold text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
+                        <?php if(get_sub_field('tab')) : ?>
+                            <!-- I want all the program_group_title to be in tab form make the group title as button so meanning the programs will on appear if that tab clicks -->
+                        <?php else: ?>
+                            <div>
+                                <?php if(get_sub_field('program_group_title')) : ?>
+                                    <h3 class="text-[18px] md:text-[24px] font-[700] text-[#ffffff] leading-snug">
+                                        <?php echo esc_html(get_sub_field('program_group_title')); ?>
+                                    </h3>
+                                <?php endif; ?>
+                                <?php if (have_rows('program')) : ?>
+                                    <div class="flex flex-col gap-[5px] md:gap-[10px]">
+                                        <?php while (have_rows('program')) : the_row(); ?>
+                                            <div class="bg-[#0F4D91] border-[1px] border-[#ffffff] rounded-lg">
+                                                <div class="flex flex-col md:flex-row items-left md:items-center w-[100%] py-[10px] px-[20px]">
+                                                    <div class="flex items-center md:min-w-[150px] pr-[10px] pb-[10px] md:pb-[0px]">
+                                                        <p class="text-center font-bold text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('program_time')); ?></p>
+                                                    </div>
+                                                    <div class="md:pl-[10px] md:border-l-[1px] border-[#ffffff]">
+                                                        <?php if (have_rows('program_title')) : ?>
+                                                            <?php while (have_rows('program_title')) : the_row(); ?>
+                                                                <p class="font-bold text-[16px] md:text-[18px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
+                                                            <?php endwhile; ?>
+                                                        <?php endif; ?> 
+                                                        <?php if (have_rows('program_speaker')) : ?>
+                                                            <?php while (have_rows('program_speaker')) : the_row(); ?>
+                                                                <p class="font-bold text-[12px] md:text-[14px] text-[#ffedc0]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
+                                                            <?php endwhile; ?>
+                                                        <?php endif; ?> 
+                                                        <?php if (have_rows('program_description')) : ?>
+                                                            <?php while (have_rows('program_description')) : the_row(); ?>
+                                                                <p class="font-[200] text-[12px] md:text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
+                                                            <?php endwhile; ?>
+                                                        <?php endif; ?> 
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="md:pl-[10px] md:border-l-[1px] border-[#ffffff]">
-                                                <?php if (have_rows('program_title')) : ?>
-                                                    <?php while (have_rows('program_title')) : the_row(); ?>
-                                                        <p class="font-bold text-[16px] md:text-[18px] text-[#ffffff]"><?php echo esc_html(get_sub_field('title')); ?></p>           
-                                                    <?php endwhile; ?>
-                                                <?php endif; ?> 
-                                                <?php if (have_rows('program_speaker')) : ?>
-                                                    <?php while (have_rows('program_speaker')) : the_row(); ?>
-                                                        <p class="font-bold text-[12px] md:text-[14px] text-[#ffedc0]"><?php echo esc_html(get_sub_field('speaker')); ?></p>
-                                                    <?php endwhile; ?>
-                                                <?php endif; ?> 
-                                                <?php if (have_rows('program_description')) : ?>
-                                                    <?php while (have_rows('program_description')) : the_row(); ?>
-                                                        <p class="font-[200] text-[12px] md:text-[14px] text-[#ffffff]"><?php echo esc_html(get_sub_field('description')); ?></p>
-                                                    <?php endwhile; ?>
-                                                <?php endif; ?> 
-                                            </div>
-                                        </div>
+                                        <?php endwhile; ?>
                                     </div>
-                                <?php endwhile; ?>
+                                <?php endif; ?> 
                             </div>
-                        <?php endif; ?> 
+                        <?php endif; ?>
                 </div>
             <?php endwhile; ?>
         <?php endif; ?> 
