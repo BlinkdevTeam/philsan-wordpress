@@ -183,6 +183,11 @@
                 href="https://philsan.org/39th-annual-convention/verify-email/">
                 <p class="text-[#ffffff]">Register Now</p>
             </a>
+            <a href="#program-section"
+                class="inline-flex items-center gap-[8px] py-[10px] px-[24px] border-[1.5px] border-white text-white rounded-lg text-[14px] font-[500] hover:bg-white hover:text-[#1F773A] w-[100%] sm:w-auto transition-colors">
+                    View the program
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
         </div>
         <div class="hidden sm:block absolute right-0 brightness-[.85] drop-shadow-[10px_#333333] z-[1] sm:w-[70%] md:w-[55%] bottom-0 xl:bottom-auto">
             <?php $main_element_url = wp_get_attachment_url(1187); ?>

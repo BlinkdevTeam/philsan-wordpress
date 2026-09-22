@@ -67,7 +67,7 @@
 
                 <div class="flex md:hidden flex-col justify-center items-end gap-[10px]">
                     <!-- Group title — updates as slider changes -->
-                    <p id="sponsorGroupTitlemd" class="text-[16px] font-[700] text-[#1F773A]"></p>
+                    <p id="sponsorGroupTitlemd" class="text-[16px] font-[700] text-[#1F773A] w-max"></p>
 
                     <!-- Prev / pagination / next -->
                     <div class="flex items-center gap-[12px] min-w-max">
