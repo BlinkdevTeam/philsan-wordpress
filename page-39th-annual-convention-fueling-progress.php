@@ -11,7 +11,7 @@
         <?php get_template_part('39th-event-page/hero-section'); ?>
     </div>
     <?php get_template_part('39th-event-page/about-section'); ?>
-    <?php get_template_part('39th-event-page/speakers-section'); ?>
+    <?php //get_template_part('39th-event-page/speakers-section'); ?>
     <?php get_template_part('39th-event-page/sponsors-section'); ?>
     <?php get_template_part('39th-event-page/schedule-section'); ?>
     <?php wp_footer(); ?>
