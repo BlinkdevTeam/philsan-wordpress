@@ -1136,6 +1136,26 @@ video {
   top: 20px;
 }
 
+.bottom-\[10px\] {
+  bottom: 10px;
+}
+
+.right-\[10px\] {
+  right: 10px;
+}
+
+.top-\[0px\] {
+  top: 0px;
+}
+
+.bottom-\[-20px\] {
+  bottom: -20px;
+}
+
+.right-\[0px\] {
+  right: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1590,6 +1610,10 @@ video {
 
 .h-\[330px\] {
   height: 330px;
+}
+
+.h-\[36px\] {
+  height: 36px;
 }
 
 .h-\[373px\] {
@@ -3973,6 +3997,10 @@ video {
   opacity: 0;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -4456,6 +4484,10 @@ p, a, li {
   text-decoration-line: underline;
 }
 
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
 .group:hover .group-hover\:brightness-0 {
   --tw-brightness: brightness(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -4474,6 +4506,10 @@ p, a, li {
 
   .sm\:block {
     display: block;
+  }
+
+  .sm\:inline-flex {
+    display: inline-flex;
   }
 
   .sm\:hidden {
@@ -4579,6 +4615,10 @@ p, a, li {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:inline-flex {
+    display: inline-flex;
   }
 
   .md\:hidden {
