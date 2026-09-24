@@ -124,6 +124,7 @@
                             <div class="flex flex-col gap-[40px] p-[20px] bg-white rounded-xl">
                                 <div class="flex flex-col gap-[10px] pt-[20px]">
                                     <h3 id="modalName" class="text-[24px] font-bold text-[#0A8E3D]"></h3>
+                                    //this p tag puts every filed inside one p tag, so even though there are three texts fields which makes three paragraphs, it shows only one paragraph
                                     <p id="modalPosition" class="text-[18px] font-bold text-[#2B2B2B]"></p>
                                 </div>
                                 <p id="modalDetails" class="text-[18px] text-[#2B2B2B]"></p>

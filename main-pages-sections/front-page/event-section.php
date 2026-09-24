@@ -47,9 +47,11 @@ $title_icon = wp_get_attachment_url(1220);
                                 $event_time     = get_field('event_time');
                                 $thumbnail      = get_the_post_thumbnail_url(get_the_ID(), 'large');
                                 $content        = get_the_content();
+                                $button_link     = get_field('button_link');
+
                             ?>
                                 <div class="swiper-slide">
-                                    <a href="<?php echo esc_url(get_permalink()); ?>"
+                                    <a href="<?php echo esc_url($button_link); ?>"
                                     class="group flex flex-col md:flex-row gap-[24px] bg-white rounded-xl overflow-hidden shadow-sm border border-[#e5e3da] hover:shadow-md transition-shadow">
                                         <?php if ($thumbnail) : ?>
                                             <div class="md:w-[380px] h-[220px] md:h-auto flex-shrink-0 overflow-hidden">
@@ -122,7 +124,7 @@ $title_icon = wp_get_attachment_url(1220);
                         $event_location = get_field('event_location');
                         $thumbnail      = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
                     ?>
-                        <a href="<?php echo esc_url(get_permalink()); ?>"
+                        <a href="<?php echo esc_url($button_link); ?>"
                            class="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-[#e5e3da] hover:shadow-md transition-shadow">
 
                             <div class="h-[180px] overflow-hidden bg-[#EAF3DE]">
